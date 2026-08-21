@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.2
+Version : 1.3
 
 ---
 
@@ -15,6 +15,8 @@ HATAKITI.com initially uses three principal content types.
 3. FilmViewingRecord
 
 Theatre-related thoughts are not required to use a separate structured content type. They are ordinary posts with tags.
+
+The first planned theatre essay is a general discussion of who a theatre performance belongs to, establishing the author's basic view that a performance is the director's work and that actors serve the work rather than using the stage primarily to make themselves stand out.
 
 The implementation should favor simplicity. Supporting entities may be introduced where they make data entry or retrieval genuinely easier, but HATAKITI.com should not become an unnecessarily complex relational database.
 
@@ -143,6 +145,38 @@ The content itself should remain personal, practical, and concise. Examples incl
 - voice volume and emotional intensity are different things
 
 These are HATAKITI's own practical viewpoints. They do not need to be presented as universal academic theory.
+
+### Initial essay concept: 演劇公演とは誰のものか
+
+The first planned theatre essay establishes the general principle from which later acting discussions can branch.
+
+Core ideas:
+
+- A theatre performance is the director's work.
+- The director gives the performance its overall artistic direction and determines how its elements become one work.
+- Actors are parts of the work whose role is to express and realize what the director is creating.
+- An actor's job is not to make themselves stand out for its own sake, but to prepare sufficiently for the expression the work requires and use their abilities for the work.
+- Making an actor shine is fundamentally part of the directing side's responsibility; an actor should not unilaterally decide to make themselves the focus.
+- At the same time, a director cannot know 100% of an actor's expressive possibilities in advance.
+- Therefore, actors should actively show their abilities and possibilities during rehearsals.
+- Rehearsal is a place to offer possibilities; the director decides what belongs in the final work.
+- The basic distinction is: actors can actively present themselves in rehearsal, but in performance they serve the work.
+
+The article should be written as HATAKITI's personal theatre viewpoint, not as an objective universal theory.
+
+### Planned follow-up essay: 演技をしろ＞するな＞しろ
+
+This title intentionally uses the established internet-slang-style structure "しろ＞するな＞しろ".
+
+The concept describes a progression in acting practice:
+
+1. **演技をしろ** — beginners are told to act, and often produce conspicuously theatrical speech, exaggerated expression, and the feeling of "performing acting".
+2. **演技をするな** — because this is far from natural dramatic expression, the actor is told not to "act" but simply to be the character.
+3. **演技をしろ** — once the actor can genuinely exist as the character, they can then act the character's behavior: not merely showing an emotion, but expressing what that person does in the situation.
+
+The article should preserve this progression and the wording rather than replacing it with a more generic acting-theory title.
+
+These essays form the beginning of the general-to-specific development of HATAKITI's theatre thoughts. Later topics may naturally extend into individual expression, emotion, body expression, movement and stillness, dialogue, timing, and relationships with other actors.
 
 ---
 
