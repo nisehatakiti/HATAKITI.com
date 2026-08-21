@@ -73,13 +73,21 @@ require get_template_directory() . '/inc/customizer.php';
  * in wp-admin. Mirrors the blueprint's fixed main navigation.
  */
 function hatakiti_fallback_menu() {
+    // StageArt is an independent site (docs/01-Vision.md §5); until its
+    // URL is set in the Customizer, point at the home page's StageArt
+    // teaser instead of a non-existent internal page.
+    $stageart_url = hatakiti_get_stageart_url();
+    if ( ! $stageart_url ) {
+        $stageart_url = home_url( '/#stageart' );
+    }
+
     $items = array(
         array( 'label' => 'HATAKITIとは', 'url' => home_url( '/about/' ) ),
         array( 'label' => '日々の所感', 'url' => home_url( '/category/nikki/' ) ),
         array( 'label' => '演劇について', 'url' => home_url( '/category/engeki/' ) ),
         array( 'label' => '観劇記録', 'url' => get_post_type_archive_link( 'theatre_record' ) ),
         array( 'label' => '映画記録', 'url' => get_post_type_archive_link( 'film_record' ) ),
-        array( 'label' => 'StageArt', 'url' => home_url( '/stageart/' ) ),
+        array( 'label' => 'StageArt', 'url' => $stageart_url ),
     );
     echo '<ul>';
     foreach ( $items as $item ) {

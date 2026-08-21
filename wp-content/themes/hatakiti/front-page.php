@@ -64,7 +64,7 @@ get_header();
         </div>
     </section>
 
-    <section class="hk-section">
+    <section class="hk-section" id="stageart">
         <?php
         $hk_stageart_url = hatakiti_get_stageart_url();
         ?>
