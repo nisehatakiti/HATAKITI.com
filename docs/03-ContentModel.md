@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.7
+Version : 1.8
 
 ---
 
@@ -217,6 +217,101 @@ This principle can be summarized as:
 The article should treat the dialogue as the visible tip of something larger. The actor's work begins by reading what lies underneath the words rather than immediately deciding how the words should sound.
 
 This is an early practical principle in HATAKITI's acting theory and can later connect naturally to emotion, character objectives, action, body expression, timing, and relationships between actors.
+
+### Planned essay: 身体表現①「動くより、止める」
+
+A basic principle of body expression for both acting and dance is to consciously focus not only on movement but on stopping.
+
+From the audience's perspective, continuous movement is difficult to perceive as a series of distinct expressive moments. Movement tends to flow past the eye, while a clear stop creates a moment that can be strongly recognized and remembered.
+
+In dance, deliberately alternating movement and stillness in accordance with the count creates sharpness:
+
+```text
+動く → 止める → 動く → 止める
+```
+
+The same principle applies to acting. When a scene requires movement, the actor should move sufficiently and clearly. But when there is a moment that needs to be delivered to the audience, the actor should deliberately stop so the audience has time to recognize it.
+
+Stopping does not simply mean becoming inactive. A full-body stop creates a stable foundation from which very small movements can become expressive.
+
+For example:
+
+```text
+全身を止める
+   ↓
+首だけ動かす
+   ↓
+視線を変える
+   ↓
+表情を変える
+```
+
+If the whole body is continuously moving, a small movement of the head, eyes, or face is easily buried in the larger movement. Once the body is genuinely still, even a small change can become a clear piece of acting.
+
+Therefore, body-expression skill is not only the ability to move the whole body dramatically. It is also the ability to switch cleanly between large movement, complete stillness, and small movement.
+
+The basic idea is:
+
+> **動くことを考える前に、止まることを考える。**
+
+And more specifically:
+
+> **全身を止められるからこそ、身体の一部分を動かして表現できる。**
+
+This principle applies across dance and acting and can later connect to stage position, body direction, gaze, facial expression, and emotional vectors.
+
+### Planned essay: 感情のベクトル
+
+When two or more people are on stage, each person has feelings toward the other people. Those feelings can be usefully organized as vectors for physical expression.
+
+Two basic factors are especially useful:
+
+- the strength of the person's interest / attention toward the other person
+- the positive or negative direction of the emotion
+
+These factors create tendencies in distance, body direction, movement, and gaze.
+
+For example:
+
+```text
+強い好意
+   ↓
+相手に近づきたい
+   ↓
+相手へ向かう身体のベクトル
+
+強い嫌悪
+   ↓
+相手から離れたい
+   ↓
+相手から離れる身体のベクトル
+```
+
+However, human emotions are often contradictory, and this is where the concept becomes useful for finer expression.
+
+If a person wants to talk to someone but feels guilty, they may move toward the other person while their eyes turn away:
+
+```text
+身体 → 相手へ
+視線 → 相手から
+```
+
+If a person likes someone but feels too embarrassed to approach, they may keep their physical distance while their gaze remains directed toward the person:
+
+```text
+身体 → 相手から離れる
+視線 → 相手へ
+```
+
+The more detailed emotions are added, the more detailed the physical expression can become. Instead of treating "liking someone" or "disliking someone" as a single acting instruction, the actor can separate the different physical vectors created by conflicting feelings.
+
+This makes emotional expression more concrete. Rather than asking only "How should I show this feeling?", the actor can ask:
+
+> 「この感情なら、身体はどちらへ向かい、視線はどちらへ向かい、距離はどう変化するのか？」
+
+The concept of emotional vectors should be treated as a practical tool for constructing physical expression, not as a rigid scientific formula.
+
+The relationship with stillness is important. When the whole body is stable, a vector can be expressed through a small part of the body: the eyes, head, shoulders, or hands. Thus, **emotional vectors** and **movement / stillness** work together to create finer physical acting.
 
 ### Authorship / responsibility
 
