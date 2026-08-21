@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.8
+Version : 1.9
 
 ---
 
@@ -312,6 +312,62 @@ This makes emotional expression more concrete. Rather than asking only "How shou
 The concept of emotional vectors should be treated as a practical tool for constructing physical expression, not as a rigid scientific formula.
 
 The relationship with stillness is important. When the whole body is stable, a vector can be expressed through a small part of the body: the eyes, head, shoulders, or hands. Thus, **emotional vectors** and **movement / stillness** work together to create finer physical acting.
+
+### Planned essay: 表現論①「どう見られたいか」より「どう見えるか」
+
+An actor's intention about how they want the character to appear is not the same thing as what the audience actually sees.
+
+Actors often build detailed internal settings for a role and then explain their choices in terms such as:
+
+- 「この人物はこういう人間だから、こう演じた」
+- 「この人物にはこういう過去があると考えた」
+- 「だからこの場面ではこういう気持ちで動いた」
+
+Building such an internal image is not inherently wrong. Imagining the character's past, daily life, values, relationships, and experiences can be an important way of deepening the role.
+
+However, the actor must distinguish between what exists inside their own imagination and what actually appears as a stage performance.
+
+The audience cannot see the actor's private settings. The audience sees only what reaches the stage and can be perceived through voice, body, movement, gaze, facial expression, timing, distance, and other observable elements.
+
+Therefore, the important question is not only:
+
+> 「自分はこの役をどう見せたいのか？」
+
+but also:
+
+> **「実際に客席からはどう見えているのか？」**
+
+A carefully constructed inner setting is useful only when it supports the character and eventually becomes meaningful stage expression. A setting that exists only inside the actor's head cannot, by itself, communicate anything to the audience.
+
+There is also an important distinction between **deepening a role through imagination** and **inventing a private role that contradicts the script**.
+
+Imagining an unstated past or personal history can be useful when it helps explain the character's behavior while remaining consistent with the role provided by the script and direction.
+
+By contrast, if an actor creates a personal setting that is substantially different from the character's actual circumstances and then uses that private setting to justify their performance, the actor may no longer be deepening the given role. They may be creating a different character.
+
+The principle can be summarized as:
+
+> **役を深めるために設定を作るのであって、設定を作るために役を変えてはいけない。**
+
+The actor's private interpretation is a tool, not the final product. The final test is whether the intended character and expression can actually be perceived by the audience and whether they remain consistent with the work.
+
+This connects directly to the broader HATAKITI principle that the actor serves the work. The actor is not creating a private performance for themselves; they are using their internal preparation, body, voice, and imagination to make the director's work visible to the audience.
+
+A useful practical sequence is:
+
+```text
+役を理解する
+   ↓
+内面を作り込む
+   ↓
+身体・声・行動に変換する
+   ↓
+客席からどう見えるか確認する
+   ↓
+必要に応じて修正する
+```
+
+The key is to judge the result from the audience's perspective, not solely from the actor's intention.
 
 ### Authorship / responsibility
 
