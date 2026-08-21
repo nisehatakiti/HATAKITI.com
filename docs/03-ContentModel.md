@@ -2,18 +2,19 @@
 
 # 03 - Content Model
 
-Version : 1.1
+Version : 1.2
 
 ---
 
 ## 1. Content types
 
-HATAKITI.com initially uses four principal content types.
+HATAKITI.com initially uses three principal content types.
 
 1. DailyThought / BlogPost
 2. TheatreViewingRecord
 3. FilmViewingRecord
-4. TheatreNote / TheatreKnowledgeArticle
+
+Theatre-related thoughts are not required to use a separate structured content type. They are ordinary posts with tags.
 
 The implementation should favor simplicity. Supporting entities may be introduced where they make data entry or retrieval genuinely easier, but HATAKITI.com should not become an unnecessarily complex relational database.
 
@@ -109,24 +110,31 @@ There is no requirement to maintain a normalized film / performer database merel
 
 ---
 
-# 5. TheatreNote / TheatreKnowledgeArticle
+# 5. Theatre-related thoughts
 
-The theatre section is a collection of practical notes and personal observations rather than a formal textbook.
+Theatre-related writing should normally be ordinary posts rather than a separate structured content type.
 
-Possible topics include:
+The author should be able to write thoughts freely, without first deciding whether the article belongs to "Acting", "Voice", "Body", "Script", "Direction", or another predefined section.
 
-- Acting
-- Voice and breathing
-- Body and movement
-- Script / dialogue
-- Direction
-- Rehearsal
-- Stagecraft
-- Small-theatre practice
+Tags are used to organize the material after it has been written.
 
-The content should focus on simple ideas that can be understood and used by actors or people interested in theatre.
+For example, an article may be tagged with:
 
-Examples of the intended level and character:
+- 演技
+- セリフ
+- 身体
+- 感情
+- 演出
+- 台本
+- 稽古
+
+A single article can have multiple tags.
+
+As the number of articles grows, tag archives can naturally form useful collections and reveal recurring themes in HATAKITI's thinking.
+
+This approach is intentionally lightweight. The site does not need a complete theatre curriculum or a rigid hierarchy of topics at the beginning.
+
+The content itself should remain personal, practical, and concise. Examples include:
 
 - dialogue comes from emotion
 - stage position and body direction can be understood as vectors of emotion
@@ -136,21 +144,13 @@ Examples of the intended level and character:
 
 These are HATAKITI's own practical viewpoints. They do not need to be presented as universal academic theory.
 
-Articles may reference another article when genuinely useful, but extensive cross-linking is not a design requirement.
-
 ---
 
 # 6. Supporting data
 
 Categories and tags should be used where they make browsing or searching easier.
 
-Examples:
-
-- Theatre categories
-- Film categories
-- Tags
-- Viewing methods
-- Theatre note topics
+Tags are especially important for theatre-related thoughts because they allow the site to grow organically before a clear classification is known.
 
 Named entities such as theatre groups, performers, directors, or venues may remain ordinary text fields unless there is a clear benefit to making them reusable data.
 
@@ -165,9 +165,9 @@ The primary relationship is between HATAKITI and each piece of content.
 ```text
 HATAKITI
   ├─ 日々の所感
+  ├─ 演劇についての文章（タグで整理）
   ├─ 観劇記録
   ├─ 映画記録
-  ├─ 演劇・演技についてのメモ
   └─ 活動・制作
 ```
 
@@ -184,9 +184,9 @@ The final implementation target is WordPress.
 The expected implementation pattern is:
 
 - Normal WordPress Posts for DailyThought / BlogPost
+- Normal WordPress Posts with tags for theatre-related thoughts
 - Custom Post Types for TheatreViewingRecord and FilmViewingRecord where this improves input and archive UX
-- Theatre notes may use normal Posts with a dedicated category or Custom Post Type depending on the final UX
-- Custom Fields for structured record data
+- Custom Fields for structured viewing data
 - Categories / tags for lightweight organization
 - Custom archive / search templates where useful
 
