@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.5
+Version : 1.6
 
 ---
 
@@ -208,7 +208,101 @@ This is intentionally a light, humorous statement of the site's co-creation styl
 
 ---
 
-# 7. Supporting data
+# 7. ChatGPT → WordPress draft integration
+
+HATAKITI.com should be designed so that ChatGPT can, when explicitly instructed by HATAKITI, create WordPress content as a **draft** through an authenticated API connection.
+
+The intended workflow is:
+
+```text
+HATAKITI
+   ↓
+ChatGPT
+   ↓
+ChatGPT Action / authenticated API connection
+   ↓
+HATAKITI-specific WordPress API endpoint
+   ↓
+WordPress REST API
+   ↓
+WordPress draft
+   ↓
+HATAKITI reviews
+   ↓
+HATAKITI publishes manually
+```
+
+### Authentication / authorization principle
+
+The connection should not give ChatGPT full WordPress administrator access.
+
+Recommended approach:
+
+1. Create a dedicated WordPress user for the integration, e.g. `chatgpt-editor`.
+2. Grant only the minimum capabilities required for creating and editing drafts.
+3. Use WordPress Application Passwords for the integration credential.
+4. Keep the connection HTTPS-only.
+5. Do not grant permission to manage users, plugins, themes, site settings, or other administrator functions.
+6. Do not grant automatic publishing permission in the initial implementation.
+
+The goal is a least-privilege integration in which ChatGPT can prepare content but HATAKITI retains final publication control.
+
+### HATAKITI-specific API layer
+
+Rather than exposing the entire WordPress REST API to ChatGPT, the preferred design is a small custom WordPress plugin that provides a limited endpoint such as:
+
+```text
+/wp-json/hatakiti/v1/draft
+```
+
+The endpoint should accept only the fields HATAKITI.com actually needs, for example:
+
+- content type
+- title
+- body
+- tags
+- categories
+- optional featured image information
+
+The plugin then validates the request, adds content-specific defaults, and creates a WordPress draft through WordPress's own REST / application APIs.
+
+For theatre essays, the integration should automatically append or otherwise ensure the required:
+
+> 文責：チャッピー
+
+credit.
+
+### Content-specific workflow
+
+**Theatre essays**
+
+```text
+HATAKITI gives rough idea
+   ↓
+ChatGPT writes / organizes article
+   ↓
+ChatGPT adds 文責：チャッピー
+   ↓
+Create WordPress draft
+   ↓
+HATAKITI reviews
+   ↓
+Publish manually
+```
+
+**Theatre viewing records / film records / daily thoughts**
+
+HATAKITI remains the content owner and normal updater. ChatGPT may assist with structuring or data entry when explicitly requested, but publication remains under HATAKITI's control.
+
+### Security principle
+
+The initial integration must be **draft-only** from ChatGPT's perspective. Publishing remains a deliberate human action until there is a future reason to expand permissions.
+
+The exact ChatGPT Action configuration, OpenAPI schema, custom WordPress plugin implementation, user capabilities, and credential handling should be finalized during implementation after the actual WordPress environment is available.
+
+---
+
+# 8. Supporting data
 
 Categories and tags should be used where they make browsing or searching easier.
 
@@ -220,7 +314,7 @@ The implementation should avoid introducing a separate entity model simply becau
 
 ---
 
-# 8. Relationship principle
+# 9. Relationship principle
 
 The primary relationship is between HATAKITI and each piece of content.
 
@@ -239,7 +333,7 @@ The site should prioritize easy creation, easy reading, and easy future retrieva
 
 ---
 
-# 9. WordPress implementation direction
+# 10. WordPress implementation direction
 
 The final implementation target is WordPress.
 
@@ -253,7 +347,12 @@ The expected implementation pattern is:
 - Custom archive / search templates where useful
 - Site-wide footer containing the co-creation statement
 - Theatre essay template containing the "文責：チャッピー" credit
+- Dedicated integration user with least-privilege capabilities
+- WordPress Application Password for the integration credential
+- HATAKITI-specific REST endpoint for draft creation
+- ChatGPT Action / authenticated API connection to the dedicated endpoint
+- Draft-only permission for the initial integration
 
 The exact plugins and implementation stack should be decided during implementation after reviewing the current WordPress environment, plugin constraints, and performance requirements.
 
-The guiding principle is to use the simplest WordPress structure that provides the required user experience.
+The guiding principle is to use the simplest WordPress structure that provides the required user experience while keeping the ChatGPT integration narrow, auditable, and safe.
