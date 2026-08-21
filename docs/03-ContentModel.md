@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.3
+Version : 1.4
 
 ---
 
@@ -177,6 +177,18 @@ The concept describes a progression in acting practice:
 The article should preserve this progression and the wording rather than replacing it with a more generic acting-theory title.
 
 These essays form the beginning of the general-to-specific development of HATAKITI's theatre thoughts. Later topics may naturally extend into individual expression, emotion, body expression, movement and stillness, dialogue, timing, and relationships with other actors.
+
+### Authorship / responsibility
+
+The theatre essays are based on HATAKITI's own ideas and spoken / written rough concepts. HATAKITI provides the original thought and viewpoint; ChatGPT organizes and turns those ideas into readable articles.
+
+To make this distinction clear, published theatre essays should include a small credit such as:
+
+> 文責：チャッピー
+
+This indicates that the final wording and article composition are ChatGPT's responsibility, while the underlying ideas and viewpoints originate from HATAKITI.
+
+The credit should not imply that ChatGPT is the source of HATAKITI's theatre philosophy. It is a writing / editorial responsibility marker.
 
 ---
 
