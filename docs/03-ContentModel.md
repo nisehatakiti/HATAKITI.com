@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.4
+Version : 1.5
 
 ---
 
@@ -36,6 +36,8 @@ Daily thoughts use a free-form blog format.
 - Featured image (optional)
 
 There is intentionally no rigid form beyond the normal post structure.
+
+DailyThought / BlogPost content is written and maintained by HATAKITI. ChatGPT may assist when explicitly requested, but it is not the default authoring workflow.
 
 ---
 
@@ -71,6 +73,8 @@ Viewing date: 2026-08-23
 This distinction is useful for preserving the author's actual viewing history.
 
 The viewing record does not need to be automatically connected to every performer, theatre group, venue, or other related record.
+
+TheatreViewingRecord content is written and maintained by HATAKITI.
 
 ---
 
@@ -109,6 +113,8 @@ Film categories may include:
 The list can grow naturally as needed.
 
 There is no requirement to maintain a normalized film / performer database merely for the sake of cross-linking.
+
+FilmViewingRecord content is written and maintained by HATAKITI.
 
 ---
 
@@ -182,7 +188,7 @@ These essays form the beginning of the general-to-specific development of HATAKI
 
 The theatre essays are based on HATAKITI's own ideas and spoken / written rough concepts. HATAKITI provides the original thought and viewpoint; ChatGPT organizes and turns those ideas into readable articles.
 
-To make this distinction clear, published theatre essays should include a small credit such as:
+Every published theatre essay should include a small credit:
 
 > 文責：チャッピー
 
@@ -192,7 +198,17 @@ The credit should not imply that ChatGPT is the source of HATAKITI's theatre phi
 
 ---
 
-# 6. Supporting data
+# 6. Site-wide footer / co-creation statement
+
+The site footer should contain the following statement on all pages:
+
+> このページは、友達の少ないHATAKITIが、チャッピー（ChatGPT）とともに作成しています。
+
+This is intentionally a light, humorous statement of the site's co-creation style. It should be presented unobtrusively in the footer rather than as a prominent promotional element.
+
+---
+
+# 7. Supporting data
 
 Categories and tags should be used where they make browsing or searching easier.
 
@@ -204,16 +220,16 @@ The implementation should avoid introducing a separate entity model simply becau
 
 ---
 
-# 7. Relationship principle
+# 8. Relationship principle
 
 The primary relationship is between HATAKITI and each piece of content.
 
 ```text
 HATAKITI
-  ├─ 日々の所感
-  ├─ 演劇についての文章（タグで整理）
-  ├─ 観劇記録
-  ├─ 映画記録
+  ├─ 日々の所感（HATAKITIが更新）
+  ├─ 演劇についての文章（HATAKITI原案＋チャッピー文章化／文責：チャッピー）
+  ├─ 観劇記録（HATAKITIが更新）
+  ├─ 映画記録（HATAKITIが更新）
   └─ 活動・制作
 ```
 
@@ -223,7 +239,7 @@ The site should prioritize easy creation, easy reading, and easy future retrieva
 
 ---
 
-# 8. WordPress implementation direction
+# 9. WordPress implementation direction
 
 The final implementation target is WordPress.
 
@@ -235,6 +251,8 @@ The expected implementation pattern is:
 - Custom Fields for structured viewing data
 - Categories / tags for lightweight organization
 - Custom archive / search templates where useful
+- Site-wide footer containing the co-creation statement
+- Theatre essay template containing the "文責：チャッピー" credit
 
 The exact plugins and implementation stack should be decided during implementation after reviewing the current WordPress environment, plugin constraints, and performance requirements.
 
