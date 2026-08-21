@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.6
+Version : 1.7
 
 ---
 
@@ -182,7 +182,41 @@ The concept describes a progression in acting practice:
 
 The article should preserve this progression and the wording rather than replacing it with a more generic acting-theory title.
 
-These essays form the beginning of the general-to-specific development of HATAKITI's theatre thoughts. Later topics may naturally extend into individual expression, emotion, body expression, movement and stillness, dialogue, timing, and relationships with other actors.
+### Planned essay: 台本の読み方①「セリフから感情を作らない」
+
+The first principle of script reading is that the dialogue written in a script should be understood as the final output produced by the character's internal emotion and situation, not as a line onto which the actor should simply add a matching emotion.
+
+The natural causal direction is:
+
+```text
+状況・出来事
+   ↓
+人物の感情
+   ↓
+人物の欲求・行動
+   ↓
+セリフ
+```
+
+Many actors initially approach a line in the opposite direction. They see an angry line and speak it angrily, a sad line and speak it sadly, or a happy line and speak it happily. In other words, they put an emotion that "looks right" onto the already-written dialogue.
+
+The intended approach is the reverse: create the emotional and situational conditions from which that line naturally comes out.
+
+The central question when reading a line should therefore be:
+
+> 「なぜこの人物は、このセリフを言わなければならなくなったのか？」
+
+The actor should examine what happened, what the character is feeling, what the character wants from the other person, and why this particular line is necessary at this particular moment.
+
+The goal is not to demonstrate the emotion attached to the line. The goal is to create the emotion and circumstances from which the line emerges.
+
+This principle can be summarized as:
+
+> **セリフは感情から出てくる。感情をセリフに乗せるのではない。**
+
+The article should treat the dialogue as the visible tip of something larger. The actor's work begins by reading what lies underneath the words rather than immediately deciding how the words should sound.
+
+This is an early practical principle in HATAKITI's acting theory and can later connect naturally to emotion, character objectives, action, body expression, timing, and relationships between actors.
 
 ### Authorship / responsibility
 
