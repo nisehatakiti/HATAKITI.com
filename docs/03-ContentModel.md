@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 2.0
+Version : 2.1
 
 ---
 
@@ -332,6 +332,62 @@ Core statement:
 > **自分自身が持っている身体という武器で、何を表現できるのかを突き詰める。**
 
 This principle connects naturally with movement / stillness and emotional vectors.
+
+---
+
+## 5.8 熱量は感情の強さであって、動きの大きさではない
+
+Emotional heat should be understood primarily as the **strength and magnitude of the emotion**, not simply the size of the actor's movement, voice, or outward expression.
+
+Actors who are comfortable with outward, expansive emotions such as laughter or anger may be able to raise the heat by making the expression large and energetic. However, actors sometimes assume that inward emotions such as crying, grief, or sadness should be expressed more weakly or quietly simply because they turn inward.
+
+That is a mistake.
+
+An inward emotion can have extremely high heat. The difference is not necessarily the strength of the emotion, but the direction in which that emotional energy is expressed.
+
+For example:
+
+```text
+発散型の感情
+   ↓
+熱量を上げる
+   ↓
+外側へ大きく出る
+   ↓
+笑う・怒るなどの表現として見える
+```
+
+Whereas:
+
+```text
+内向型の感情
+   ↓
+熱量を上げる
+   ↓
+感情を身体の内側へ強く引き込む
+   ↓
+身体の内側から発する空気そのものが変わる
+```
+
+Therefore, a highly emotional sad or crying scene does not have to mean a small or weak performance. The actor can intensify the feeling as much as possible while directing that intensity inward rather than simply making the outward movement larger.
+
+This distinction is important:
+
+> **「小さく動く」と「感情が小さい」は同じではない。**
+
+A quiet body can contain enormous emotional heat. If the actor genuinely raises the internal intensity, the audience can perceive a change in the atmosphere of the body even when the external action remains restrained.
+
+The actor should therefore avoid the shortcut:
+
+> 「悲しい場面だから、弱く演じる。」
+
+Instead, consider:
+
+> **「悲しみの熱量を最大まで高め、その感情を外へ発散せず、強く内側へ引き込む。」**
+
+This principle connects directly to the earlier body-expression principles. A still body can contain high emotional heat, and because the body is still, subtle changes in gaze, facial expression, breath, posture, or small movement can carry that heat to the audience.
+
+The practical distinction is between **emotional intensity** and **external amplitude**. They are related, but they are not the same thing.
 
 ---
 
