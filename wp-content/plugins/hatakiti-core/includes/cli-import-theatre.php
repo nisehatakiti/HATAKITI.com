@@ -15,8 +15,8 @@
  * removed, or reworded.
  *
  * Usage:
- *   wp hatakiti import-theatre-essays --dir=/absolute/path/to/content/theatre
- *   wp hatakiti import-theatre-essays --dry-run
+ *   wp hatakiti import_theatre_essays --dir=/absolute/path/to/content/theatre
+ *   wp hatakiti import_theatre_essays --dry-run
  *
  * Note: the option is --dir, not --path — wp-cli reserves --path as a
  * global flag for the WordPress install location, and reusing it here

@@ -69,7 +69,7 @@ was found — this is a first implementation, not a rebuild.
    "Coming Soon".
 7. Import the 8 existing theatre essays as drafts:
    ```text
-   wp hatakiti import-theatre-essays --dir=/path/to/content/theatre
+   wp hatakiti import_theatre_essays --dir=/path/to/content/theatre
    ```
    (If this repo's checkout *is* the WordPress `wp-content`'s parent
    directory, the default path already resolves correctly with no
