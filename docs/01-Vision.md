@@ -2,7 +2,7 @@
 
 # 01 - Vision
 
-Version : 1.1
+Version : 1.2
 
 ---
 
@@ -16,29 +16,49 @@ StageArt is a separate product and system. HATAKITI.com may introduce and link t
 
 ---
 
-## 2. What the site records
+## 2. Brand / Logo
+
+The HATAKITI.com main logo is confirmed as the theatrical equipment wordmark concept developed during the project.
+
+The logo expresses the name HATAKITI using familiar stage / theatre equipment and backstage materials, including items such as ladders, stage pipes, curtains, stands, apple boxes, and gaffer tape.
+
+The confirmed main visual treatment uses opposing stage lighting from the left and right sides, creating a theatrical atmosphere and emphasizing the backstage / stagecraft character of HATAKITI.
+
+The main logo does not use a subtitle or tagline.
+
+The logo should be treated as the primary HATAKITI.com visual identity unless a future explicit design decision replaces it.
+
+Recommended repository asset path:
+
+```text
+assets/logo/hatakiti-main.png
+```
+
+---
+
+## 3. What the site records
 
 HATAKITI.com combines four kinds of content.
 
-### 2.1 Free-form thought
+### 3.1 Free-form thought
 
 Daily observations, ideas, essays, opinions, notes, and other writing are recorded in a conventional blog format.
 
 This area should remain flexible. The author should be able to write without being forced into a structured data-entry form.
 
-### 2.2 Theatre viewing records
+### 3.2 Theatre viewing records
 
 Viewing experiences are recorded in a simple, consistent format so that the author can look back on what was watched.
 
 The purpose is primarily personal record and readability, not building a comprehensive theatre database.
 
-### 2.3 Film viewing records
+### 3.3 Film viewing records
 
 Film viewing experiences are recorded in a simple, consistent format for later reference.
 
 Again, the purpose is to preserve the author's own viewing history and thoughts rather than to construct a large external film database.
 
-### 2.4 Theatre notes / acting thoughts
+### 3.4 Theatre notes / acting thoughts
 
 The theatre section records the author's own practical observations and ideas about theatre and acting.
 
@@ -56,7 +76,7 @@ The section should remain concise, practical, personal, and easy to read.
 
 ---
 
-## 3. Core principle
+## 4. Core principle
 
 HATAKITI.com should feel like a record of a person rather than a database built for its own sake.
 
@@ -74,7 +94,7 @@ Content does not need to be heavily cross-linked. A viewing record can stand on 
 
 ---
 
-## 4. StageArt positioning
+## 5. StageArt positioning
 
 StageArt should appear on HATAKITI.com as one of the author's activities and creations.
 
@@ -107,7 +127,7 @@ StageArt should have a clear link from HATAKITI.com, while remaining technically
 
 ---
 
-## 5. Long-term character
+## 6. Long-term character
 
 The site should feel personal rather than corporate.
 
