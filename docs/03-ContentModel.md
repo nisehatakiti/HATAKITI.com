@@ -2,7 +2,7 @@
 
 # 03 - Content Model
 
-Version : 1.0
+Version : 1.1
 
 ---
 
@@ -13,9 +13,9 @@ HATAKITI.com initially uses four principal content types.
 1. DailyThought / BlogPost
 2. TheatreViewingRecord
 3. FilmViewingRecord
-4. TheatreKnowledgeArticle
+4. TheatreNote / TheatreKnowledgeArticle
 
-Additional supporting entities such as TheatreGroup, Performer, FilmDirector, Screenwriter, Venue, Category, Tag, and Work may be introduced where useful for search and relationships.
+The implementation should favor simplicity. Supporting entities may be introduced where they make data entry or retrieval genuinely easier, but HATAKITI.com should not become an unnecessarily complex relational database.
 
 ---
 
@@ -31,7 +31,6 @@ Daily thoughts use a free-form blog format.
 - Categories
 - Tags
 - Featured image (optional)
-- Related records (optional)
 
 There is intentionally no rigid form beyond the normal post structure.
 
@@ -39,19 +38,19 @@ There is intentionally no rigid form beyond the normal post structure.
 
 # 3. TheatreViewingRecord
 
-Theatre / performance viewing records use a fixed form so that records can be compared, searched, and archived consistently.
+Theatre / performance viewing records use a fixed but simple form so that the author's viewing history can be recorded consistently.
 
 ### Fields
 
 | Field | Type | Notes |
 |---|---|---|
-| Theatre Group | text / related entity | Group name | 
+| Theatre Group | text | Group name |
 | Production Title | text | Title of the production / performance activity |
 | Viewing Date | date | The date the author actually watched it |
 | Viewing Method | enum | Theatre / Streaming / Recording / Other |
-| Production Start Date | date | Scheduled run start |
-| Production End Date | date | Scheduled run end |
-| Venue | text / related entity | Venue name or other location |
+| Production Start Date | date | Scheduled run start, when known |
+| Production End Date | date | Scheduled run end, when known |
+| Venue | text | Venue name or location |
 | Review / Thoughts | rich text | Free-form response |
 | Tags | taxonomy | Optional |
 
@@ -66,13 +65,15 @@ Production: 2026-08-20 ～ 2026-08-25
 Viewing date: 2026-08-23
 ```
 
-This distinction is required because the author may watch one performance within a longer production run.
+This distinction is useful for preserving the author's actual viewing history.
+
+The viewing record does not need to be automatically connected to every performer, theatre group, venue, or other related record.
 
 ---
 
 # 4. FilmViewingRecord
 
-Film records use a fixed form.
+Film records use a fixed but simple form.
 
 ### Fields
 
@@ -80,18 +81,16 @@ Film records use a fixed form.
 |---|---|---|
 | Viewing Date | date | Date the author watched the film |
 | Title | text | Film title |
-| Director | text / person tag | Director name |
-| Screenwriter | text / person tag | Screenwriter name |
+| Director | text | Director name |
+| Screenwriter | text | Screenwriter name, when known |
 | Release Year | year | Original release year |
 | Categories | multi-select taxonomy | Multiple values allowed |
-| Cast | multiple person tags | Multiple performers allowed |
+| Cast | text | Main cast, when useful |
 | Viewing Method | enum | Theatre / Streaming / Recording / Other |
 | Review / Thoughts | rich text | Free-form response |
 | Tags | taxonomy | Optional |
 
-### Film categories
-
-Categories are multi-select. Examples include:
+Film categories may include:
 
 - Animation
 - Horror
@@ -104,101 +103,93 @@ Categories are multi-select. Examples include:
 - Documentary
 - Science fiction
 
-The initial list is expandable.
+The list can grow naturally as needed.
 
-### Cast
-
-Cast members should be stored as reusable person tags rather than a single free-text field where practical. This enables future queries such as:
-
-> Show me films featuring a specific performer.
+There is no requirement to maintain a normalized film / performer database merely for the sake of cross-linking.
 
 ---
 
-# 5. TheatreKnowledgeArticle
+# 5. TheatreNote / TheatreKnowledgeArticle
 
-The theatre section is a structured knowledge base / textbook rather than a simple blog category.
+The theatre section is a collection of practical notes and personal observations rather than a formal textbook.
 
-Articles should be organized by topic and learning path.
+Possible topics include:
 
-Initial topics may include:
-
-- What is theatre?
 - Acting
 - Voice and breathing
 - Body and movement
-- Script / playwriting
+- Script / dialogue
 - Direction
 - Rehearsal
 - Stagecraft
-- Lighting
-- Sound
-- Costume
-- Scenic design
 - Small-theatre practice
 
-Articles may link to related articles, viewing records, and daily thoughts.
+The content should focus on simple ideas that can be understood and used by actors or people interested in theatre.
 
-The knowledge section should support gradual growth. It does not need to be completed before launch.
+Examples of the intended level and character:
+
+- dialogue comes from emotion
+- stage position and body direction can be understood as vectors of emotion
+- consciously considering when to stop can make physical movement more expressive
+- distance and orientation can express relationships
+- voice volume and emotional intensity are different things
+
+These are HATAKITI's own practical viewpoints. They do not need to be presented as universal academic theory.
+
+Articles may reference another article when genuinely useful, but extensive cross-linking is not a design requirement.
 
 ---
 
-# 6. Supporting reusable data
+# 6. Supporting data
 
-Where practical, repeated data should be normalized or implemented as reusable taxonomies / reference records.
+Categories and tags should be used where they make browsing or searching easier.
 
 Examples:
 
-- Theatre groups
-- Performers
-- Venues
-- Film directors
-- Screenwriters
-- Film performers
-- Categories
+- Theatre categories
+- Film categories
 - Tags
-- Genres / themes
+- Viewing methods
+- Theatre note topics
 
-The implementation should favor easy data entry while still making later search and archive functions possible.
+Named entities such as theatre groups, performers, directors, or venues may remain ordinary text fields unless there is a clear benefit to making them reusable data.
+
+The implementation should avoid introducing a separate entity model simply because it is technically possible.
 
 ---
 
-# 7. Relationship examples
+# 7. Relationship principle
+
+The primary relationship is between HATAKITI and each piece of content.
 
 ```text
-TheatreViewingRecord
-  ├─ TheatreGroup
-  ├─ Production
-  ├─ Venue
-  ├─ ViewingMethod
-  └─ Tags
-
-FilmViewingRecord
-  ├─ Film
-  ├─ Director
-  ├─ Screenwriter
-  ├─ Cast[*]
-  ├─ Category[*]
-  └─ ViewingMethod
-
-TheatreKnowledgeArticle
-  ├─ Topic[*]
-  ├─ RelatedArticle[*]
-  ├─ RelatedViewingRecord[*]
-  └─ RelatedBlogPost[*]
+HATAKITI
+  ├─ 日々の所感
+  ├─ 観劇記録
+  ├─ 映画記録
+  ├─ 演劇・演技についてのメモ
+  └─ 活動・制作
 ```
+
+Content may be cross-linked where useful, but relationships are optional rather than mandatory.
+
+The site should prioritize easy creation, easy reading, and easy future retrieval over building a complex knowledge graph.
 
 ---
 
 # 8. WordPress implementation direction
 
-The final implementation target is WordPress, but this document describes the content model rather than a specific plugin implementation.
+The final implementation target is WordPress.
 
 The expected implementation pattern is:
 
 - Normal WordPress Posts for DailyThought / BlogPost
-- Custom Post Types for TheatreViewingRecord, FilmViewingRecord, and TheatreKnowledgeArticle
-- Custom taxonomies / fields for structured attributes
-- Reusable person / group / venue terms or entities where appropriate
-- Search / archive screens built around the structured data
+- Custom Post Types for TheatreViewingRecord and FilmViewingRecord where this improves input and archive UX
+- Theatre notes may use normal Posts with a dedicated category or Custom Post Type depending on the final UX
+- Custom Fields for structured record data
+- Categories / tags for lightweight organization
+- Custom archive / search templates where useful
 
-The existing WordPress site should not constrain this model. The implementation may be rebuilt from the current design rather than preserving the existing information architecture.
+The exact plugins and implementation stack should be decided during implementation after reviewing the current WordPress environment, plugin constraints, and performance requirements.
+
+The guiding principle is to use the simplest WordPress structure that provides the required user experience.
