@@ -2,7 +2,7 @@
 
 # 04 - UX / WordPress Implementation Guidance
 
-Version : 1.1
+Version : 1.2
 
 ---
 
@@ -18,29 +18,78 @@ The top-level experience should make it easy to understand:
 
 The site should be simple enough that the author can continue adding content without feeling that every post is data maintenance.
 
+The visual design should be primarily black / very dark, with white or light-gray typography and theatrical lighting as a visual motif. The site should feel closer to a dark theatre space than to a conventional corporate website.
+
 ---
 
 # 2. Home page direction
 
-The home page should prioritize recent and meaningful content rather than presenting a generic corporate landing page.
+The current home page concept is:
 
-Potential sections:
+1. Large centered HATAKITI main logo
+2. Horizontal navigation menu
+3. Short introductory statement
+4. Three latest articles as cards
+5. A simple entrance to theatre-related writing
+6. A modest StageArt introduction / link
+7. Footer
+
+### Main navigation
 
 - HATAKITIとは
-- 最新の日々の所感
-- 最近の観劇記録
-- 最近の映画記録
-- 演劇・演技について
-- 活動・制作
-- Search / Archive
+- 日々の所感
+- 演劇について
+- 観劇記録
+- 映画記録
+- StageArt
 
-The exact visual design remains open, but the overall impression should be personal and approachable.
+The logo should be the visual focus at the top of the page.
 
-StageArt may appear as a modest activity / creation item rather than as the main promotional element of the site.
+The introductory text should retain the following tone:
+
+> HATAKITIは演劇をこよなく愛する個人である。
+> 
+> ここはHATAKITI個人が演劇のことを考えたりする場所である。
+> 
+> 観てきたものや考えたことが雑多に並べられている場所だと思ってほしい。
+
+The exact typography can be refined during visual design, but the deliberately personal and slightly informal tone should be preserved.
+
+The home page should not be overloaded with category blocks or large corporate-style cards.
 
 ---
 
-# 3. Theatre viewing form UX
+# 3. Theatre-related writing UX
+
+The theatre section should **not** begin with a detailed predefined curriculum.
+
+The author should simply write about whatever theatre-related thought is worth writing down at the time.
+
+Articles are then organized primarily through tags.
+
+Examples:
+
+- 演技
+- セリフ
+- 身体
+- 感情
+- 演出
+- 台本
+- 稽古
+
+The "演劇について" page may show a simple list or a small number of representative tags, but it should not require a detailed hierarchy.
+
+As content accumulates, tag archives can naturally become the site's de facto index.
+
+This is intentionally more flexible and realistic than deciding the complete classification in advance.
+
+### Coming Soon
+
+If a future topic has not yet been written, it may be shown as `Coming Soon`, but this should be used sparingly. There is no need to manufacture a full table of contents before content exists.
+
+---
+
+# 4. Theatre viewing form UX
 
 The viewing-record form should be explicit and consistent, while remaining quick to enter.
 
@@ -68,7 +117,7 @@ Do not require the author to select or maintain a separate database record for t
 
 ---
 
-# 4. Film viewing form UX
+# 5. Film viewing form UX
 
 Suggested input order:
 
@@ -95,7 +144,7 @@ Cast can initially be entered as ordinary text. A reusable performer database is
 
 ---
 
-# 5. Search / archive UX
+# 6. Search / archive UX
 
 Search should focus on practical retrieval of the author's own content.
 
@@ -112,30 +161,12 @@ Useful search / archive dimensions include:
 - release year
 - film category
 - tags
-- theatre note topic
+
+Tags should be especially useful for theatre-related writing, where they serve as the lightweight way to group thoughts after publication.
 
 The site should support both keyword search and browsable archives.
 
 There is no requirement for a sophisticated relationship browser between every person, work, group, and article.
-
----
-
-# 6. Theatre notes UX
-
-The theatre section should be navigable as a collection of short, practical ideas.
-
-It should not feel like an academic textbook.
-
-A typical article may simply contain:
-
-- one idea
-- an explanation in HATAKITI's own words
-- a practical example
-- an observation from theatre experience
-
-Topics can gradually grow as the author has something worth saying.
-
-The content should preserve personal perspective and should not be padded merely to create a complete curriculum.
 
 ---
 
@@ -148,7 +179,7 @@ The promotion should be subtle.
 Possible locations:
 
 - HATAKITIとは / 活動・制作
-- a small StageArt section on the home page
+- a modest StageArt section on the home page
 - relevant personal posts
 - a footer or other persistent but unobtrusive link
 
@@ -171,8 +202,8 @@ The existing WordPress site can be rebuilt around this blueprint rather than pre
 Likely implementation building blocks include:
 
 - WordPress Posts for free-form thoughts
+- WordPress Posts with tags for theatre-related writing
 - Custom Post Types for theatre viewing and film viewing if they improve the input/archive experience
-- Normal Posts with categories for theatre notes, unless a Custom Post Type is clearly better
 - Custom Fields for structured viewing data
 - Categories and tags for lightweight organization
 - Custom archive / search templates
