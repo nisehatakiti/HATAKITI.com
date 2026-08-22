@@ -87,6 +87,14 @@ was found — this is a first implementation, not a rebuild.
    that user an Application Password. Nothing else needs to change on the
    ChatGPT side is built here; only the receiving endpoint exists.
 
+## 3.1. Later additions
+
+- `activity_record` CPT (活動履歴) + `activity_type` taxonomy + a
+  ブクログ-backed 本棚 page were added afterward, migrating HATAKITI's
+  activity history off `nisehatakiti.online`. See
+  `docs/06-Migration-ActivityHistory.md` for that migration's field
+  mapping, URL map, and redirect setup — it is not repeated here.
+
 ## 4. Known follow-ups (not blockers for going live)
 
 - No live WordPress instance was available in this environment, so this
