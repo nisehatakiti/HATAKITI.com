@@ -57,7 +57,7 @@ add_filter( 'comments_array', '__return_empty_array', 10 );
  */
 function hatakiti_search_post_types( $query ) {
     if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
-        $query->set( 'post_type', array( 'post', 'page', 'theatre_record', 'film_record' ) );
+        $query->set( 'post_type', array( 'post', 'page', 'theatre_record', 'film_record', 'activity_record' ) );
     }
 }
 add_action( 'pre_get_posts', 'hatakiti_search_post_types' );
@@ -67,6 +67,7 @@ add_action( 'pre_get_posts', 'hatakiti_search_post_types' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/booklog.php';
 
 /**
  * Fallback menu markup when no "primary" menu has been registered yet

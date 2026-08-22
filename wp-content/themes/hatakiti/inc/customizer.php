@@ -41,6 +41,19 @@ function hatakiti_customize_register( $wp_customize ) {
         'label'   => __( 'トップページ紹介文', 'hatakiti' ),
         'type'    => 'textarea',
     ) );
+
+    $wp_customize->add_setting( 'hatakiti_booklog_user', array(
+        'default'           => 'nisehatakiti',
+        'sanitize_callback' => 'sanitize_text_field',
+        'transport'         => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'hatakiti_booklog_user', array(
+        'section'     => 'hatakiti_links',
+        'label'       => __( 'ブクログ ユーザーID', 'hatakiti' ),
+        'description' => __( 'https://booklog.jp/users/【ここ】。本棚ページと「ブクログの本棚を見る」リンクに使われます。', 'hatakiti' ),
+        'type'        => 'text',
+    ) );
 }
 add_action( 'customize_register', 'hatakiti_customize_register' );
 
@@ -50,6 +63,15 @@ add_action( 'customize_register', 'hatakiti_customize_register' );
 function hatakiti_get_stageart_url() {
     $url = get_theme_mod( 'hatakiti_stageart_url', '' );
     return is_string( $url ) ? trim( $url ) : '';
+}
+
+/**
+ * Returns the configured Booklog user ID (default: HATAKITI's own,
+ * confirmed via the nisehatakiti.online site's existing 本棚 menu link).
+ */
+function hatakiti_get_booklog_user() {
+    $user = get_theme_mod( 'hatakiti_booklog_user', 'nisehatakiti' );
+    return is_string( $user ) ? trim( $user ) : '';
 }
 
 /**

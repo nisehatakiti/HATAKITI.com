@@ -30,6 +30,7 @@ require_once HATAKITI_CORE_DIR . 'includes/capabilities.php';
 require_once HATAKITI_CORE_DIR . 'includes/taxonomies.php';
 require_once HATAKITI_CORE_DIR . 'includes/cpt-theatre-record.php';
 require_once HATAKITI_CORE_DIR . 'includes/cpt-film-record.php';
+require_once HATAKITI_CORE_DIR . 'includes/cpt-activity-record.php';
 require_once HATAKITI_CORE_DIR . 'includes/meta-boxes.php';
 require_once HATAKITI_CORE_DIR . 'includes/admin-forms.php';
 require_once HATAKITI_CORE_DIR . 'includes/rest-draft-endpoint.php';
@@ -38,8 +39,11 @@ require_once HATAKITI_CORE_DIR . 'includes/cli-import-theatre.php';
 function hatakiti_core_activate() {
     hatakiti_register_theatre_record_cpt();
     hatakiti_register_film_record_cpt();
+    hatakiti_register_activity_record_cpt();
     hatakiti_register_film_genre_taxonomy();
+    hatakiti_register_activity_type_taxonomy();
     hatakiti_seed_default_terms();
+    hatakiti_seed_activity_type_terms();
     hatakiti_install_capabilities();
     flush_rewrite_rules();
 }

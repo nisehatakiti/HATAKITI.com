@@ -29,6 +29,17 @@ get_header();
                 }
                 ?>
             </div>
+
+            <?php if ( is_page( 'about' ) ) : ?>
+                <div class="hk-tile-grid hk-about-subnav">
+                    <a class="hk-tile" href="<?php echo esc_url( get_post_type_archive_link( 'activity_record' ) ); ?>">
+                        <span class="hk-tile-label">活動履歴を見る</span>
+                    </a>
+                    <a class="hk-tile" href="<?php echo esc_url( home_url( '/bookshelf/' ) ); ?>">
+                        <span class="hk-tile-label">本棚を見る</span>
+                    </a>
+                </div>
+            <?php endif; ?>
         </article>
     <?php endwhile; ?>
 </main>

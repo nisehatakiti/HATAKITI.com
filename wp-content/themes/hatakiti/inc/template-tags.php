@@ -34,6 +34,9 @@ function hatakiti_content_type_label( $post_id = null ) {
     if ( 'film_record' === $type ) {
         return '映画記録';
     }
+    if ( 'activity_record' === $type ) {
+        return '活動履歴';
+    }
     if ( has_category( HATAKITI_CAT_ENGEKI, $post_id ) ) {
         return '演劇について';
     }
