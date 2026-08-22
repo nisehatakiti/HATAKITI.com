@@ -111,11 +111,18 @@ add_action( 'init', 'hatakiti_register_activity_record_meta' );
  * is entered after the fact.
  */
 function hatakiti_order_activity_record_archive( $query ) {
-    if ( ! is_admin() && $query->is_main_query() &&
-        ( is_post_type_archive( 'activity_record' ) || is_tax( 'activity_type' ) ) ) {
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+    if ( is_post_type_archive( 'activity_record' ) || is_tax( 'activity_type' ) ) {
         $query->set( 'meta_key', 'hatakiti_activity_date' );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'order', 'DESC' );
+    }
+    // The 活動履歴一覧 template groups everything by tag on one page rather
+    // than paginating, so it needs the full set, not just one page of it.
+    if ( is_post_type_archive( 'activity_record' ) ) {
+        $query->set( 'posts_per_page', -1 );
     }
 }
 add_action( 'pre_get_posts', 'hatakiti_order_activity_record_archive' );

@@ -295,16 +295,24 @@ function hatakiti_render_tags( $post_id = null, $with_divider = false ) {
 function hatakiti_render_record_list_item( $post_id = null ) {
     $post_id = $post_id ? $post_id : get_the_ID();
     $type    = get_post_type( $post_id );
-    $viewing = get_post_meta( $post_id, 'hatakiti_viewing_date', true );
 
     if ( 'theatre_record' === $type ) {
-        $sub = get_post_meta( $post_id, 'hatakiti_troupe', true );
+        $date = get_post_meta( $post_id, 'hatakiti_viewing_date', true );
+        $sub  = get_post_meta( $post_id, 'hatakiti_troupe', true );
+    } elseif ( 'film_record' === $type ) {
+        $date = get_post_meta( $post_id, 'hatakiti_viewing_date', true );
+        $sub  = get_post_meta( $post_id, 'hatakiti_director', true );
+    } elseif ( 'activity_record' === $type ) {
+        $date  = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $types = get_the_terms( $post_id, 'activity_type' );
+        $sub   = ( $types && ! is_wp_error( $types ) ) ? implode( ' / ', wp_list_pluck( $types, 'name' ) ) : '';
     } else {
-        $sub = get_post_meta( $post_id, 'hatakiti_director', true );
+        $date = '';
+        $sub  = '';
     }
     ?>
     <li>
-        <div class="hk-record-date"><?php echo esc_html( $viewing ? $viewing : get_the_date( 'Y.m.d', $post_id ) ); ?></div>
+        <div class="hk-record-date"><?php echo esc_html( $date ? $date : get_the_date( 'Y.m.d', $post_id ) ); ?></div>
         <div class="hk-record-info">
             <div class="hk-record-title"><a href="<?php echo esc_url( get_permalink( $post_id ) ); ?>"><?php echo esc_html( get_the_title( $post_id ) ); ?></a></div>
             <?php if ( $sub ) : ?>

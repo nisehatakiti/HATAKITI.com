@@ -1,9 +1,14 @@
 <?php
 /**
- * 活動履歴一覧. Newest first (WordPress's default post_date ordering — no
- * custom sort needed, unlike 観劇記録/映画記録 which sort by a separate
- * viewing-date field). A simple 活動種別 filter row is offered; nothing
- * more elaborate than that.
+ * 活動履歴一覧. List display (not the card grid used elsewhere), grouped
+ * by tag — each tag's own entries newest first. Entries with no tag are
+ * grouped under a "タグなし" heading at the end so nothing is silently
+ * dropped from the listing.
+ *
+ * The main query is already ordered newest-first by 活動日 and fetches
+ * every record in one page (see hatakiti_order_activity_record_archive in
+ * the plugin) — grouping by tag doesn't paginate well otherwise, and the
+ * total is small enough that this stays simple.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,6 +16,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+
+$hk_groups   = array(); // tag name => array of post IDs, in encounter (= newest-first) order
+$hk_untagged = array();
+
+if ( have_posts() ) {
+    while ( have_posts() ) {
+        the_post();
+        $hk_post_id = get_the_ID();
+        $hk_tags    = get_the_terms( $hk_post_id, 'post_tag' );
+
+        if ( $hk_tags && ! is_wp_error( $hk_tags ) ) {
+            foreach ( $hk_tags as $hk_tag ) {
+                $hk_groups[ $hk_tag->name ][] = $hk_post_id;
+            }
+        } else {
+            $hk_untagged[] = $hk_post_id;
+        }
+    }
+    wp_reset_postdata();
+    ksort( $hk_groups, SORT_STRING );
+    if ( $hk_untagged ) {
+        $hk_groups['タグなし'] = $hk_untagged;
+    }
+}
 ?>
 <main id="main" class="hk-container">
     <div class="hk-archive-header">
@@ -29,16 +58,26 @@ get_header();
         </ul>
     <?php endif; ?>
 
-    <?php if ( have_posts() ) : ?>
-        <div class="hk-card-grid">
-            <?php
-            while ( have_posts() ) :
-                the_post();
-                hatakiti_render_card( get_the_ID() );
-            endwhile;
-            ?>
-        </div>
-        <?php hatakiti_pagination(); ?>
+    <?php if ( $hk_groups ) : ?>
+        <?php foreach ( $hk_groups as $hk_tag_name => $hk_post_ids ) : ?>
+            <?php $hk_tag_obj = 'タグなし' === $hk_tag_name ? null : get_term_by( 'name', $hk_tag_name, 'post_tag' ); ?>
+            <section class="hk-section">
+                <div class="hk-section-head">
+                    <h2>
+                        <?php if ( $hk_tag_obj ) : ?>
+                            <a href="<?php echo esc_url( get_tag_link( $hk_tag_obj ) ); ?>">#<?php echo esc_html( $hk_tag_name ); ?></a>
+                        <?php else : ?>
+                            #<?php echo esc_html( $hk_tag_name ); ?>
+                        <?php endif; ?>
+                    </h2>
+                </div>
+                <ul class="hk-record-list">
+                    <?php foreach ( $hk_post_ids as $hk_post_id ) : ?>
+                        <?php hatakiti_render_record_list_item( $hk_post_id ); ?>
+                    <?php endforeach; ?>
+                </ul>
+            </section>
+        <?php endforeach; ?>
     <?php else : ?>
         <?php hatakiti_coming_soon( 'まだ活動履歴がありません。' ); ?>
     <?php endif; ?>
