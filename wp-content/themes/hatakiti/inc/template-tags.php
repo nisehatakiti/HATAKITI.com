@@ -82,6 +82,9 @@ function hatakiti_render_card( $post_id = null ) {
     } elseif ( 'film_record' === $type ) {
         $director = get_post_meta( $post_id, 'hatakiti_director', true );
         $meta_line = $director ? esc_html( $director ) : '';
+    } elseif ( 'activity_record' === $type ) {
+        $activity_date = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $meta_line = $activity_date ? esc_html( $activity_date ) : get_the_date( 'Y.m.d', $post_id );
     } else {
         $meta_line = get_the_date( 'Y.m.d', $post_id );
     }

@@ -32,6 +32,17 @@
     margin-top: 10px;
 }
 
+.hatakiti-current-thumb {
+    margin-bottom: 10px;
+}
+
+.hatakiti-current-thumb img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    border: 1px solid #dcdcde;
+}
+
 .hatakiti-review-textarea {
     max-width: 800px;
     font-size: 14px;

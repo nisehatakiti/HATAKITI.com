@@ -33,6 +33,7 @@ require_once HATAKITI_CORE_DIR . 'includes/cpt-film-record.php';
 require_once HATAKITI_CORE_DIR . 'includes/cpt-activity-record.php';
 require_once HATAKITI_CORE_DIR . 'includes/meta-boxes.php';
 require_once HATAKITI_CORE_DIR . 'includes/admin-forms.php';
+require_once HATAKITI_CORE_DIR . 'includes/admin-form-activity.php';
 require_once HATAKITI_CORE_DIR . 'includes/rest-draft-endpoint.php';
 require_once HATAKITI_CORE_DIR . 'includes/cli-import-theatre.php';
 

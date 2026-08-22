@@ -3,10 +3,11 @@
  * 活動履歴 (ActivityRecord) — HATAKITI's own performance/activity history,
  * as distinct from 観劇記録/映画記録 (things HATAKITI watched).
  *
- * Deliberately NOT a rigid fixed form like theatre_record/film_record —
- * this uses WordPress's normal title + editor + featured image + tags,
- * plus one lightweight taxonomy (活動種別) and one custom field (関連
- * リンク). No dedicated admin screen, no block-editor lockout.
+ * Entered through a dedicated form (includes/admin-form-activity.php),
+ * same pattern as 観劇記録/映画記録: no native title/editor screen. 活動日
+ * is a required custom field, independent of WordPress's own post_date,
+ * so it can never go missing the way it did when this only used the
+ * native "Published on" date.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -32,7 +33,10 @@ function hatakiti_register_activity_record_cpt() {
         'rewrite'       => array( 'slug' => 'katsudo', 'with_front' => false ),
         'menu_icon'     => 'dashicons-groups',
         'menu_position' => 7,
-        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+        // No 'title' or 'editor' support: entered exclusively through the
+        // dedicated form, never WordPress's native title field / block
+        // editor screen (same reasoning as 観劇記録/映画記録).
+        'supports'      => array( 'thumbnail' ),
         'taxonomies'    => array( 'post_tag', 'activity_type' ),
         'show_in_rest'  => true,
     ) );
@@ -57,9 +61,6 @@ function hatakiti_register_activity_type_taxonomy() {
         'show_admin_column' => true,
         'show_in_rest'      => true,
         'rewrite'           => array( 'slug' => 'katsudo-shubetsu' ),
-        // Checkbox list, same as film_genre — a fixed-ish starter list that
-        // can still grow, not free tagging.
-        'meta_box_cb'       => 'post_categories_meta_box',
     ) );
 }
 add_action( 'init', 'hatakiti_register_activity_type_taxonomy' );
@@ -74,49 +75,25 @@ function hatakiti_seed_activity_type_terms() {
 }
 
 /**
- * 関連リンク (related link) — the one custom field this content type
- * needs. A plain native meta box, not the dedicated-form treatment used
- * for theatre_record/film_record.
+ * Field definitions for the dedicated 活動履歴 form
+ * (includes/admin-form-activity.php).
  */
-function hatakiti_add_activity_link_meta_box() {
-    add_meta_box(
-        'hatakiti_activity_link',
-        '関連リンク',
-        'hatakiti_render_activity_link_meta_box',
-        'activity_record',
-        'side',
-        'default'
-    );
-}
-add_action( 'add_meta_boxes', 'hatakiti_add_activity_link_meta_box' );
-
-function hatakiti_render_activity_link_meta_box( $post ) {
-    wp_nonce_field( 'hatakiti_save_activity_link', 'hatakiti_activity_link_nonce' );
-    $value = get_post_meta( $post->ID, 'hatakiti_related_link', true );
-    printf(
-        '<label for="hatakiti_related_link" class="screen-reader-text">関連リンクURL</label><input type="url" class="widefat" id="hatakiti_related_link" name="hatakiti_related_link" value="%s" placeholder="https://...">',
-        esc_attr( $value )
+function hatakiti_activity_record_fields() {
+    return array(
+        'hatakiti_activity_date' => array( 'label' => '活動日', 'type' => 'date', 'required' => true ),
+        'hatakiti_related_link'  => array( 'label' => '関連リンク', 'type' => 'url' ),
     );
 }
 
-function hatakiti_save_activity_link_meta( $post_id ) {
-    if ( ! isset( $_POST['hatakiti_activity_link_nonce'] ) ||
-        ! wp_verify_nonce( $_POST['hatakiti_activity_link_nonce'], 'hatakiti_save_activity_link' ) ) {
-        return;
-    }
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-        return;
-    }
-    if ( ! current_user_can( 'edit_post', $post_id ) ) {
-        return;
-    }
-    if ( isset( $_POST['hatakiti_related_link'] ) ) {
-        update_post_meta( $post_id, 'hatakiti_related_link', esc_url_raw( wp_unslash( $_POST['hatakiti_related_link'] ) ) );
-    }
-}
-add_action( 'save_post_activity_record', 'hatakiti_save_activity_link_meta' );
-
-function hatakiti_register_activity_link_meta() {
+function hatakiti_register_activity_record_meta() {
+    register_post_meta( 'activity_record', 'hatakiti_activity_date', array(
+        'type'          => 'string',
+        'single'        => true,
+        'show_in_rest'  => true,
+        'auth_callback' => function () {
+            return current_user_can( 'edit_posts' );
+        },
+    ) );
     register_post_meta( 'activity_record', 'hatakiti_related_link', array(
         'type'          => 'string',
         'single'        => true,
@@ -126,4 +103,19 @@ function hatakiti_register_activity_link_meta() {
         },
     ) );
 }
-add_action( 'init', 'hatakiti_register_activity_link_meta' );
+add_action( 'init', 'hatakiti_register_activity_record_meta' );
+
+/**
+ * 活動履歴一覧 is ordered by 活動日 rather than WordPress's own post_date,
+ * same reasoning as 観劇記録/映画記録 — the two can differ once a record
+ * is entered after the fact.
+ */
+function hatakiti_order_activity_record_archive( $query ) {
+    if ( ! is_admin() && $query->is_main_query() &&
+        ( is_post_type_archive( 'activity_record' ) || is_tax( 'activity_type' ) ) ) {
+        $query->set( 'meta_key', 'hatakiti_activity_date' );
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'order', 'DESC' );
+    }
+}
+add_action( 'pre_get_posts', 'hatakiti_order_activity_record_archive' );

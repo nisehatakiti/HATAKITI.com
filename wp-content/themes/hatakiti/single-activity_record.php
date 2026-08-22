@@ -16,8 +16,13 @@ get_header();
                 <div class="hk-card-type">活動履歴</div>
                 <h1><?php the_title(); ?></h1>
                 <div class="hk-article-meta">
-                    <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
                     <?php
+                    $activity_date = get_post_meta( get_the_ID(), 'hatakiti_activity_date', true );
+                    if ( $activity_date ) {
+                        printf( '<time datetime="%s">%s</time>', esc_attr( $activity_date ), esc_html( $activity_date ) );
+                    } else {
+                        printf( '<time datetime="%s">%s</time>', esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
+                    }
                     $types = get_the_terms( get_the_ID(), 'activity_type' );
                     if ( $types && ! is_wp_error( $types ) ) {
                         echo ' ・ ' . esc_html( implode( ' / ', wp_list_pluck( $types, 'name' ) ) );
