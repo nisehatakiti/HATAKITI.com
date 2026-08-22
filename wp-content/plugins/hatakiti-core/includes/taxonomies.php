@@ -29,6 +29,11 @@ function hatakiti_register_film_genre_taxonomy() {
         'show_admin_column' => true,
         'show_in_rest'      => true,
         'rewrite'           => array( 'slug' => 'film-genre' ),
+        // Checkbox list (same UI WordPress uses for Categories) instead of
+        // the default tag-style autocomplete box — this is a fixed-choice
+        // multi-select field, not free-form tagging. Still includes an
+        // "add new" control, so the list can grow later.
+        'meta_box_cb'       => 'post_categories_meta_box',
     ) );
 }
 add_action( 'init', 'hatakiti_register_film_genre_taxonomy' );
@@ -40,7 +45,7 @@ add_action( 'init', 'hatakiti_register_film_genre_taxonomy' );
  */
 function hatakiti_seed_default_terms() {
     $genres = array(
-        'アニメ', 'ホラー', 'ラブコメ', 'ドラマ', 'コメディ',
+        'アニメ', 'ホラー', '恋愛コメディ', 'ドラマ', 'コメディ',
         'アクション', 'スリラー', 'サスペンス', 'ドキュメンタリー', 'SF',
     );
     foreach ( $genres as $genre ) {

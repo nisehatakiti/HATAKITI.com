@@ -216,9 +216,6 @@ function hatakiti_render_film_record_box( $post_id = null ) {
     ?>
     <div class="hk-record-box">
         <dl>
-            <?php if ( $viewing ) : ?>
-                <dt>鑑賞日</dt><dd><?php echo esc_html( $viewing ); ?></dd>
-            <?php endif; ?>
             <?php if ( $director ) : ?>
                 <dt>監督</dt><dd><?php echo esc_html( $director ); ?></dd>
             <?php endif; ?>
@@ -228,14 +225,17 @@ function hatakiti_render_film_record_box( $post_id = null ) {
             <?php if ( $year ) : ?>
                 <dt>公開年</dt><dd><?php echo esc_html( $year ); ?></dd>
             <?php endif; ?>
-            <?php if ( $genres && ! is_wp_error( $genres ) ) : ?>
-                <dt>ジャンル</dt><dd><?php echo esc_html( implode( ' / ', wp_list_pluck( $genres, 'name' ) ) ); ?></dd>
-            <?php endif; ?>
             <?php if ( $cast ) : ?>
-                <dt>出演者</dt><dd><?php echo esc_html( $cast ); ?></dd>
+                <dt>出演</dt><dd><?php echo esc_html( $cast ); ?></dd>
+            <?php endif; ?>
+            <?php if ( $viewing ) : ?>
+                <dt>鑑賞日</dt><dd><?php echo esc_html( $viewing ); ?></dd>
             <?php endif; ?>
             <?php if ( $method ) : ?>
                 <dt>鑑賞方法</dt><dd><?php hatakiti_render_method_badge( $method ); ?></dd>
+            <?php endif; ?>
+            <?php if ( $genres && ! is_wp_error( $genres ) ) : ?>
+                <dt>ジャンル</dt><dd><?php echo esc_html( implode( ' / ', wp_list_pluck( $genres, 'name' ) ) ); ?></dd>
             <?php endif; ?>
         </dl>
     </div>
@@ -243,14 +243,34 @@ function hatakiti_render_film_record_box( $post_id = null ) {
 }
 
 /**
+ * Section divider used between the record info box, the review body, and
+ * the tag list on 観劇記録 / 映画記録 single pages.
+ */
+function hatakiti_render_divider() {
+    echo '<hr class="hk-divider">';
+}
+
+/**
+ * "HATAKITIの感想" heading, shown above the review body on 観劇記録 /
+ * 映画記録 single pages so the free-form text reads as its own section
+ * rather than just more form fields.
+ */
+function hatakiti_render_review_heading() {
+    echo '<h2 class="hk-review-heading">HATAKITIの感想</h2>';
+}
+
+/**
  * Tag list for the current post.
  */
-function hatakiti_render_tags( $post_id = null ) {
+function hatakiti_render_tags( $post_id = null, $with_divider = false ) {
     $post_id = $post_id ? $post_id : get_the_ID();
     $tags    = get_the_terms( $post_id, 'post_tag' );
 
     if ( ! $tags || is_wp_error( $tags ) ) {
         return;
+    }
+    if ( $with_divider ) {
+        hatakiti_render_divider();
     }
     ?>
     <div class="hk-article-tags">

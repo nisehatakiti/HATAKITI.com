@@ -22,12 +22,14 @@ get_header();
             <?php endif; ?>
 
             <?php hatakiti_render_theatre_record_box(); ?>
+            <?php hatakiti_render_divider(); ?>
+            <?php hatakiti_render_review_heading(); ?>
 
             <div class="hk-article-body">
                 <?php the_content(); ?>
             </div>
 
-            <?php hatakiti_render_tags(); ?>
+            <?php hatakiti_render_tags( get_the_ID(), true ); ?>
         </article>
     <?php endwhile; ?>
 </main>

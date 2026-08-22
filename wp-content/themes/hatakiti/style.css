@@ -416,6 +416,19 @@ ul, ol { padding-left: 1.4em; }
 .hk-record-box dt { color: var(--hk-fg-faint); font-size: 13px; }
 .hk-record-box dd { margin: 0; color: var(--hk-fg); font-size: 14px; }
 
+.hk-divider {
+    border: none;
+    border-top: 1px dashed var(--hk-border);
+    margin: 32px 0;
+}
+
+.hk-review-heading {
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: var(--hk-fg-faint);
+    margin-bottom: 20px;
+}
+
 .hk-method-badge {
     display: inline-block;
     font-size: 11px;
