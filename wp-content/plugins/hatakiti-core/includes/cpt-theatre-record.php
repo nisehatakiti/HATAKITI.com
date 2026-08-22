@@ -27,7 +27,10 @@ function hatakiti_register_theatre_record_cpt() {
         'rewrite'       => array( 'slug' => 'kangeki', 'with_front' => false ),
         'menu_icon'     => 'dashicons-tickets-alt',
         'menu_position' => 5,
-        'supports'      => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+        // No 'title' or 'editor' support: 観劇記録 is entered exclusively
+        // through the dedicated form in includes/admin-forms.php, never
+        // through WordPress's native title field / block editor screen.
+        'supports'      => array( 'thumbnail' ),
         'taxonomies'    => array( 'post_tag' ),
         'show_in_rest'  => true,
     ) );

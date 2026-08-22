@@ -27,7 +27,10 @@ function hatakiti_register_film_record_cpt() {
         'rewrite'       => array( 'slug' => 'eiga', 'with_front' => false ),
         'menu_icon'     => 'dashicons-format-video',
         'menu_position' => 6,
-        'supports'      => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+        // No 'title' or 'editor' support: 映画記録 is entered exclusively
+        // through the dedicated form in includes/admin-forms.php, never
+        // through WordPress's native title field / block editor screen.
+        'supports'      => array( 'thumbnail' ),
         'taxonomies'    => array( 'post_tag', 'film_genre' ),
         'show_in_rest'  => true,
     ) );
