@@ -598,13 +598,15 @@ add_filter( 'manage_theatre_record_posts_columns', function ( $columns ) {
         $new[ $key ] = $label;
         if ( 'title' === $key ) {
             $new['hatakiti_troupe']       = '劇団名';
+            $new['hatakiti_direction']    = '演出';
+            $new['hatakiti_script']       = '脚本';
             $new['hatakiti_viewing_date'] = '観劇日';
         }
     }
     return $new;
 } );
 add_action( 'manage_theatre_record_posts_custom_column', function ( $column, $post_id ) {
-    if ( in_array( $column, array( 'hatakiti_troupe', 'hatakiti_viewing_date' ), true ) ) {
+    if ( in_array( $column, array( 'hatakiti_troupe', 'hatakiti_direction', 'hatakiti_script', 'hatakiti_viewing_date' ), true ) ) {
         echo esc_html( get_post_meta( $post_id, $column, true ) );
     }
 }, 10, 2 );
