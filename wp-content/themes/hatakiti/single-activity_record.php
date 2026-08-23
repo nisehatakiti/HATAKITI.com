@@ -44,7 +44,8 @@ get_header();
             <?php
             $direction = get_post_meta( get_the_ID(), 'hatakiti_direction', true );
             $script    = get_post_meta( get_the_ID(), 'hatakiti_script', true );
-            if ( $direction || $script ) :
+            $venue     = get_post_meta( get_the_ID(), 'hatakiti_venue', true );
+            if ( $direction || $script || $venue ) :
                 ?>
                 <div class="hk-record-box">
                     <dl>
@@ -53,6 +54,9 @@ get_header();
                         <?php endif; ?>
                         <?php if ( $script ) : ?>
                             <dt>脚本</dt><dd><?php echo esc_html( $script ); ?></dd>
+                        <?php endif; ?>
+                        <?php if ( $venue ) : ?>
+                            <dt>会場</dt><dd><?php echo esc_html( $venue ); ?></dd>
                         <?php endif; ?>
                     </dl>
                 </div>

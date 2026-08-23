@@ -110,6 +110,12 @@ function hatakiti_handle_activity_record_submit( $post_id ) {
     $script = isset( $_POST['hatakiti_script'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_script'] ) ) : '';
     update_post_meta( $post_id, 'hatakiti_script', $script );
 
+    // 会場 — same meta key theatre_record uses for 劇場; already registered
+    // globally (empty subtype) by meta-boxes.php, so no re-registration
+    // needed here.
+    $venue = isset( $_POST['hatakiti_venue'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_venue'] ) ) : '';
+    update_post_meta( $post_id, 'hatakiti_venue', $venue );
+
     // カテゴリ checkboxes (ダンス/舞台/...), plus an optional inline
     // "add a new category" field — same pattern as 活動種別 below.
     $category_ids = isset( $_POST['hatakiti_activity_category'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_category'] ) : array();
@@ -181,6 +187,7 @@ function hatakiti_render_activity_record_form() {
     $related_link      = '';
     $direction         = '';
     $script            = '';
+    $venue             = '';
     $tags              = array();
     $selected_ids      = array();
     $selected_cat_ids  = array();
@@ -198,6 +205,7 @@ function hatakiti_render_activity_record_form() {
         $related_link     = get_post_meta( $post_id, 'hatakiti_related_link', true );
         $direction        = get_post_meta( $post_id, 'hatakiti_direction', true );
         $script           = get_post_meta( $post_id, 'hatakiti_script', true );
+        $venue            = get_post_meta( $post_id, 'hatakiti_venue', true );
         $tags             = wp_list_pluck( wp_get_post_tags( $post_id ), 'name' );
         $selected_ids     = wp_get_object_terms( $post_id, 'activity_type', array( 'fields' => 'ids' ) );
         $selected_cat_ids = wp_get_object_terms( $post_id, 'activity_category', array( 'fields' => 'ids' ) );
@@ -212,6 +220,7 @@ function hatakiti_render_activity_record_form() {
         $related_link     = isset( $_POST['hatakiti_related_link'] ) ? wp_unslash( $_POST['hatakiti_related_link'] ) : $related_link;
         $direction        = isset( $_POST['hatakiti_direction'] ) ? wp_unslash( $_POST['hatakiti_direction'] ) : $direction;
         $script           = isset( $_POST['hatakiti_script'] ) ? wp_unslash( $_POST['hatakiti_script'] ) : $script;
+        $venue            = isset( $_POST['hatakiti_venue'] ) ? wp_unslash( $_POST['hatakiti_venue'] ) : $venue;
         $tags             = isset( $_POST['hatakiti_tags'] ) ? array_filter( array_map( 'trim', explode( ',', wp_unslash( $_POST['hatakiti_tags'] ) ) ) ) : $tags;
         $selected_ids     = isset( $_POST['hatakiti_activity_type'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_type'] ) : $selected_ids;
         $selected_cat_ids = isset( $_POST['hatakiti_activity_category'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_category'] ) : $selected_cat_ids;
@@ -262,6 +271,7 @@ function hatakiti_render_activity_record_form() {
                 <?php
                 hatakiti_form_text_row( '演出', 'hatakiti_direction', $direction, '舞台の場合' );
                 hatakiti_form_text_row( '脚本', 'hatakiti_script', $script, '舞台の場合' );
+                hatakiti_form_text_row( '会場', 'hatakiti_venue', $venue );
                 ?>
                 <tr>
                     <th scope="row">活動種別</th>
@@ -321,6 +331,7 @@ add_filter( 'manage_activity_record_posts_columns', function ( $columns ) {
             $new['hatakiti_activity_date'] = '活動日';
             $new['hatakiti_direction']     = '演出';
             $new['hatakiti_script']        = '脚本';
+            $new['hatakiti_venue']         = '会場';
         }
     }
     return $new;
@@ -331,7 +342,7 @@ add_action( 'manage_activity_record_posts_custom_column', function ( $column, $p
             get_post_meta( $post_id, 'hatakiti_activity_date', true ),
             get_post_meta( $post_id, 'hatakiti_activity_date_end', true )
         ) );
-    } elseif ( in_array( $column, array( 'hatakiti_direction', 'hatakiti_script' ), true ) ) {
+    } elseif ( in_array( $column, array( 'hatakiti_direction', 'hatakiti_script', 'hatakiti_venue' ), true ) ) {
         echo esc_html( get_post_meta( $post_id, $column, true ) );
     }
 }, 10, 2 );
