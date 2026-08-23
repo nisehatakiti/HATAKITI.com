@@ -20,6 +20,8 @@ const HATAKITI_FILM_METHOD_OPTIONS    = array( '映画館', '配信', '録画', 
 function hatakiti_theatre_record_fields() {
     return array(
         'hatakiti_troupe'       => array( 'label' => '劇団名', 'type' => 'text' ),
+        'hatakiti_direction'    => array( 'label' => '演出', 'type' => 'text' ),
+        'hatakiti_script'       => array( 'label' => '脚本', 'type' => 'text' ),
         'hatakiti_viewing_date' => array( 'label' => '観劇日', 'type' => 'date' ),
         'hatakiti_run_start'    => array( 'label' => '公演開始日', 'type' => 'date' ),
         'hatakiti_run_end'      => array( 'label' => '公演終了日', 'type' => 'date' ),

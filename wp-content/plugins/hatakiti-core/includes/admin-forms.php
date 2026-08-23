@@ -369,6 +369,8 @@ function hatakiti_render_theatre_record_form() {
                 <?php
                 hatakiti_form_text_row( '劇団名', 'hatakiti_troupe', $meta['hatakiti_troupe'] );
                 hatakiti_form_text_row( '公演タイトル', 'post_title', $title, '', true );
+                hatakiti_form_text_row( '演出', 'hatakiti_direction', $meta['hatakiti_direction'] );
+                hatakiti_form_text_row( '脚本', 'hatakiti_script', $meta['hatakiti_script'] );
                 hatakiti_form_date_row( '観劇日', 'hatakiti_viewing_date', $meta['hatakiti_viewing_date'] );
                 hatakiti_form_date_row( '公演開始日', 'hatakiti_run_start', $meta['hatakiti_run_start'] );
                 hatakiti_form_date_row( '公演終了日', 'hatakiti_run_end', $meta['hatakiti_run_end'] );

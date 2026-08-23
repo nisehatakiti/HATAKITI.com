@@ -173,6 +173,8 @@ function hatakiti_render_theatre_record_box( $post_id = null ) {
     $post_id = $post_id ? $post_id : get_the_ID();
 
     $troupe    = get_post_meta( $post_id, 'hatakiti_troupe', true );
+    $direction = get_post_meta( $post_id, 'hatakiti_direction', true );
+    $script    = get_post_meta( $post_id, 'hatakiti_script', true );
     $viewing   = get_post_meta( $post_id, 'hatakiti_viewing_date', true );
     $run_start = get_post_meta( $post_id, 'hatakiti_run_start', true );
     $run_end   = get_post_meta( $post_id, 'hatakiti_run_end', true );
@@ -188,6 +190,12 @@ function hatakiti_render_theatre_record_box( $post_id = null ) {
         <dl>
             <?php if ( $troupe ) : ?>
                 <dt>劇団名</dt><dd><?php echo esc_html( $troupe ); ?></dd>
+            <?php endif; ?>
+            <?php if ( $direction ) : ?>
+                <dt>演出</dt><dd><?php echo esc_html( $direction ); ?></dd>
+            <?php endif; ?>
+            <?php if ( $script ) : ?>
+                <dt>脚本</dt><dd><?php echo esc_html( $script ); ?></dd>
             <?php endif; ?>
             <?php if ( $viewing ) : ?>
                 <dt>観劇日</dt><dd><?php echo esc_html( $viewing ); ?></dd>
