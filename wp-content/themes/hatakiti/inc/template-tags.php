@@ -83,8 +83,10 @@ function hatakiti_render_card( $post_id = null ) {
         $director = get_post_meta( $post_id, 'hatakiti_director', true );
         $meta_line = $director ? esc_html( $director ) : '';
     } elseif ( 'activity_record' === $type ) {
-        $activity_date = get_post_meta( $post_id, 'hatakiti_activity_date', true );
-        $meta_line = $activity_date ? esc_html( $activity_date ) : get_the_date( 'Y.m.d', $post_id );
+        $activity_date     = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $activity_date_end = get_post_meta( $post_id, 'hatakiti_activity_date_end', true );
+        $range = hatakiti_format_date_range( $activity_date, $activity_date_end );
+        $meta_line = $range ? esc_html( $range ) : get_the_date( 'Y.m.d', $post_id );
     } else {
         $meta_line = get_the_date( 'Y.m.d', $post_id );
     }
@@ -164,6 +166,17 @@ function hatakiti_render_method_badge( $method ) {
         return;
     }
     printf( '<span class="hk-method-badge">%s</span>', esc_html( $method ) );
+}
+
+/**
+ * Formats a start/end date pair as "start ～ end", or just "start" when
+ * there is no end date (or vice versa). Used for 活動履歴's 活動日.
+ */
+function hatakiti_format_date_range( $start, $end ) {
+    if ( ! $start && ! $end ) {
+        return '';
+    }
+    return trim( $start . ' ～ ' . $end, ' ～' );
 }
 
 /**
@@ -311,7 +324,10 @@ function hatakiti_render_record_list_item( $post_id = null ) {
         $date = get_post_meta( $post_id, 'hatakiti_viewing_date', true );
         $sub  = get_post_meta( $post_id, 'hatakiti_director', true );
     } elseif ( 'activity_record' === $type ) {
-        $date       = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $date       = hatakiti_format_date_range(
+            get_post_meta( $post_id, 'hatakiti_activity_date', true ),
+            get_post_meta( $post_id, 'hatakiti_activity_date_end', true )
+        );
         $types      = get_the_terms( $post_id, 'activity_type' );
         $categories = get_the_terms( $post_id, 'activity_category' );
         $sub_parts  = array();

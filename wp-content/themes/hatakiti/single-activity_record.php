@@ -17,9 +17,11 @@ get_header();
                 <h1><?php the_title(); ?></h1>
                 <div class="hk-article-meta">
                     <?php
-                    $activity_date = get_post_meta( get_the_ID(), 'hatakiti_activity_date', true );
-                    if ( $activity_date ) {
-                        printf( '<time datetime="%s">%s</time>', esc_attr( $activity_date ), esc_html( $activity_date ) );
+                    $activity_date     = get_post_meta( get_the_ID(), 'hatakiti_activity_date', true );
+                    $activity_date_end = get_post_meta( get_the_ID(), 'hatakiti_activity_date_end', true );
+                    $activity_range    = hatakiti_format_date_range( $activity_date, $activity_date_end );
+                    if ( $activity_range ) {
+                        printf( '<time datetime="%s">%s</time>', esc_attr( $activity_date ), esc_html( $activity_range ) );
                     } else {
                         printf( '<time datetime="%s">%s</time>', esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date() ) );
                     }

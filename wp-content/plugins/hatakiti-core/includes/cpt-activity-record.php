@@ -116,13 +116,25 @@ function hatakiti_seed_activity_category_terms() {
  */
 function hatakiti_activity_record_fields() {
     return array(
-        'hatakiti_activity_date' => array( 'label' => '活動日', 'type' => 'date', 'required' => true ),
-        'hatakiti_related_link'  => array( 'label' => '関連リンク', 'type' => 'url' ),
+        'hatakiti_activity_date'     => array( 'label' => '活動日', 'type' => 'date', 'required' => true ),
+        'hatakiti_activity_date_end' => array( 'label' => '活動日（終了）', 'type' => 'date' ),
+        'hatakiti_related_link'      => array( 'label' => '関連リンク', 'type' => 'url' ),
     );
 }
 
 function hatakiti_register_activity_record_meta() {
     register_post_meta( 'activity_record', 'hatakiti_activity_date', array(
+        'type'          => 'string',
+        'single'        => true,
+        'show_in_rest'  => true,
+        'auth_callback' => function () {
+            return current_user_can( 'edit_posts' );
+        },
+    ) );
+    // Optional — when set, 活動日 is treated as the start of a range
+    // (see hatakiti_format_date_range() in the theme). Left empty, the
+    // activity is a single day, same as it always was.
+    register_post_meta( 'activity_record', 'hatakiti_activity_date_end', array(
         'type'          => 'string',
         'single'        => true,
         'show_in_rest'  => true,

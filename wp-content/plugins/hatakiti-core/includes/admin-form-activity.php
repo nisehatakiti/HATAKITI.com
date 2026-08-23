@@ -63,6 +63,10 @@ function hatakiti_handle_activity_record_submit( $post_id ) {
         return new WP_Error( 'hatakiti_missing_date', '活動日を入力してください。' );
     }
 
+    // Optional — leaving it blank means a single-day activity, same as before.
+    $activity_date_end_raw = isset( $_POST['hatakiti_activity_date_end'] ) ? wp_unslash( $_POST['hatakiti_activity_date_end'] ) : '';
+    $activity_date_end     = preg_match( '/^\d{4}-\d{2}-\d{2}$/', $activity_date_end_raw ) ? $activity_date_end_raw : '';
+
     $body   = isset( $_POST['hatakiti_review'] ) ? wp_kses_post( wp_unslash( $_POST['hatakiti_review'] ) ) : '';
     $status = ( isset( $_POST['hatakiti_action'] ) && 'publish' === $_POST['hatakiti_action'] ) ? 'publish' : 'draft';
 
@@ -92,6 +96,7 @@ function hatakiti_handle_activity_record_submit( $post_id ) {
     $post_id = $result;
 
     update_post_meta( $post_id, 'hatakiti_activity_date', $activity_date );
+    update_post_meta( $post_id, 'hatakiti_activity_date_end', $activity_date_end );
 
     $related_link = isset( $_POST['hatakiti_related_link'] ) ? esc_url_raw( wp_unslash( $_POST['hatakiti_related_link'] ) ) : '';
     update_post_meta( $post_id, 'hatakiti_related_link', $related_link );
@@ -171,6 +176,7 @@ function hatakiti_render_activity_record_form() {
 
     $title             = '';
     $activity_date     = '';
+    $activity_date_end = '';
     $body              = '';
     $related_link      = '';
     $direction         = '';
@@ -187,7 +193,8 @@ function hatakiti_render_activity_record_form() {
         }
         $title            = $post->post_title;
         $body             = $post->post_content;
-        $activity_date    = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $activity_date     = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $activity_date_end = get_post_meta( $post_id, 'hatakiti_activity_date_end', true );
         $related_link     = get_post_meta( $post_id, 'hatakiti_related_link', true );
         $direction        = get_post_meta( $post_id, 'hatakiti_direction', true );
         $script           = get_post_meta( $post_id, 'hatakiti_script', true );
@@ -199,7 +206,8 @@ function hatakiti_render_activity_record_form() {
 
     if ( $error && 'POST' === $_SERVER['REQUEST_METHOD'] ) {
         $title            = isset( $_POST['post_title'] ) ? wp_unslash( $_POST['post_title'] ) : $title;
-        $activity_date    = isset( $_POST['hatakiti_activity_date'] ) ? wp_unslash( $_POST['hatakiti_activity_date'] ) : $activity_date;
+        $activity_date     = isset( $_POST['hatakiti_activity_date'] ) ? wp_unslash( $_POST['hatakiti_activity_date'] ) : $activity_date;
+        $activity_date_end = isset( $_POST['hatakiti_activity_date_end'] ) ? wp_unslash( $_POST['hatakiti_activity_date_end'] ) : $activity_date_end;
         $body             = isset( $_POST['hatakiti_review'] ) ? wp_unslash( $_POST['hatakiti_review'] ) : $body;
         $related_link     = isset( $_POST['hatakiti_related_link'] ) ? wp_unslash( $_POST['hatakiti_related_link'] ) : $related_link;
         $direction        = isset( $_POST['hatakiti_direction'] ) ? wp_unslash( $_POST['hatakiti_direction'] ) : $direction;
@@ -231,6 +239,7 @@ function hatakiti_render_activity_record_form() {
             <table class="form-table" role="presentation"><tbody>
                 <?php
                 hatakiti_form_date_row( '活動日', 'hatakiti_activity_date', $activity_date );
+                hatakiti_form_date_row( '活動日（終了）', 'hatakiti_activity_date_end', $activity_date_end );
                 hatakiti_form_text_row( 'タイトル', 'post_title', $title, '', true );
                 ?>
                 <tr>
@@ -317,7 +326,12 @@ add_filter( 'manage_activity_record_posts_columns', function ( $columns ) {
     return $new;
 } );
 add_action( 'manage_activity_record_posts_custom_column', function ( $column, $post_id ) {
-    if ( in_array( $column, array( 'hatakiti_activity_date', 'hatakiti_direction', 'hatakiti_script' ), true ) ) {
+    if ( 'hatakiti_activity_date' === $column ) {
+        echo esc_html( hatakiti_format_date_range(
+            get_post_meta( $post_id, 'hatakiti_activity_date', true ),
+            get_post_meta( $post_id, 'hatakiti_activity_date_end', true )
+        ) );
+    } elseif ( in_array( $column, array( 'hatakiti_direction', 'hatakiti_script' ), true ) ) {
         echo esc_html( get_post_meta( $post_id, $column, true ) );
     }
 }, 10, 2 );
