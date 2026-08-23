@@ -43,8 +43,10 @@ function hatakiti_core_activate() {
     hatakiti_register_activity_record_cpt();
     hatakiti_register_film_genre_taxonomy();
     hatakiti_register_activity_type_taxonomy();
+    hatakiti_register_activity_category_taxonomy();
     hatakiti_seed_default_terms();
     hatakiti_seed_activity_type_terms();
+    hatakiti_seed_activity_category_terms();
     hatakiti_install_capabilities();
     flush_rewrite_rules();
 }

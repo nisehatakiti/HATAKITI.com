@@ -37,7 +37,7 @@ function hatakiti_register_activity_record_cpt() {
         // dedicated form, never WordPress's native title field / block
         // editor screen (same reasoning as 観劇記録/映画記録).
         'supports'      => array( 'thumbnail' ),
-        'taxonomies'    => array( 'post_tag', 'activity_type' ),
+        'taxonomies'    => array( 'post_tag', 'activity_type', 'activity_category' ),
         'show_in_rest'  => true,
     ) );
 }
@@ -65,11 +65,47 @@ function hatakiti_register_activity_type_taxonomy() {
 }
 add_action( 'init', 'hatakiti_register_activity_type_taxonomy' );
 
+/**
+ * カテゴリ (activity_category) — what kind of activity it was (ダンス,
+ * 舞台, ...), distinct from 活動種別 which is HATAKITI's role in it
+ * (出演/演出/制作/脚本). Open-ended, same pattern as film_genre.
+ */
+function hatakiti_register_activity_category_taxonomy() {
+    register_taxonomy( 'activity_category', array( 'activity_record' ), array(
+        'labels' => array(
+            'name'          => 'カテゴリ',
+            'singular_name' => 'カテゴリ',
+            'search_items'  => 'カテゴリを検索',
+            'all_items'     => 'すべてのカテゴリ',
+            'edit_item'     => 'カテゴリを編集',
+            'update_item'   => 'カテゴリを更新',
+            'add_new_item'  => '新規カテゴリを追加',
+            'new_item_name' => '新規カテゴリ名',
+            'menu_name'     => 'カテゴリ',
+        ),
+        'hierarchical'      => false,
+        'public'            => true,
+        'show_admin_column' => true,
+        'show_in_rest'      => true,
+        'rewrite'           => array( 'slug' => 'katsudo-category' ),
+    ) );
+}
+add_action( 'init', 'hatakiti_register_activity_category_taxonomy' );
+
 function hatakiti_seed_activity_type_terms() {
     $types = array( '出演', '演出', '制作', '脚本', 'その他' );
     foreach ( $types as $type ) {
         if ( ! term_exists( $type, 'activity_type' ) ) {
             wp_insert_term( $type, 'activity_type' );
+        }
+    }
+}
+
+function hatakiti_seed_activity_category_terms() {
+    $categories = array( 'ダンス', '舞台' );
+    foreach ( $categories as $category ) {
+        if ( ! term_exists( $category, 'activity_category' ) ) {
+            wp_insert_term( $category, 'activity_category' );
         }
     }
 }
@@ -114,7 +150,7 @@ function hatakiti_order_activity_record_archive( $query ) {
     if ( is_admin() || ! $query->is_main_query() ) {
         return;
     }
-    if ( is_post_type_archive( 'activity_record' ) || is_tax( 'activity_type' ) ) {
+    if ( is_post_type_archive( 'activity_record' ) || is_tax( 'activity_type' ) || is_tax( 'activity_category' ) ) {
         $query->set( 'meta_key', 'hatakiti_activity_date' );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'order', 'DESC' );

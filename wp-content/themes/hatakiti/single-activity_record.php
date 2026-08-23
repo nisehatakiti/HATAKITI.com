@@ -27,12 +27,33 @@ get_header();
                     if ( $types && ! is_wp_error( $types ) ) {
                         echo ' ・ ' . esc_html( implode( ' / ', wp_list_pluck( $types, 'name' ) ) );
                     }
+                    $categories = get_the_terms( get_the_ID(), 'activity_category' );
+                    if ( $categories && ! is_wp_error( $categories ) ) {
+                        echo ' ・ ' . esc_html( implode( ' / ', wp_list_pluck( $categories, 'name' ) ) );
+                    }
                     ?>
                 </div>
             </header>
 
             <?php if ( has_post_thumbnail() ) : ?>
                 <div class="hk-article-thumb"><?php the_post_thumbnail( 'large' ); ?></div>
+            <?php endif; ?>
+
+            <?php
+            $direction = get_post_meta( get_the_ID(), 'hatakiti_direction', true );
+            $script    = get_post_meta( get_the_ID(), 'hatakiti_script', true );
+            if ( $direction || $script ) :
+                ?>
+                <div class="hk-record-box">
+                    <dl>
+                        <?php if ( $direction ) : ?>
+                            <dt>演出</dt><dd><?php echo esc_html( $direction ); ?></dd>
+                        <?php endif; ?>
+                        <?php if ( $script ) : ?>
+                            <dt>脚本</dt><dd><?php echo esc_html( $script ); ?></dd>
+                        <?php endif; ?>
+                    </dl>
+                </div>
             <?php endif; ?>
 
             <div class="hk-article-body">

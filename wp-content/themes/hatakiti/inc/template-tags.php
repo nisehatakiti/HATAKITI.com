@@ -311,9 +311,17 @@ function hatakiti_render_record_list_item( $post_id = null ) {
         $date = get_post_meta( $post_id, 'hatakiti_viewing_date', true );
         $sub  = get_post_meta( $post_id, 'hatakiti_director', true );
     } elseif ( 'activity_record' === $type ) {
-        $date  = get_post_meta( $post_id, 'hatakiti_activity_date', true );
-        $types = get_the_terms( $post_id, 'activity_type' );
-        $sub   = ( $types && ! is_wp_error( $types ) ) ? implode( ' / ', wp_list_pluck( $types, 'name' ) ) : '';
+        $date       = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $types      = get_the_terms( $post_id, 'activity_type' );
+        $categories = get_the_terms( $post_id, 'activity_category' );
+        $sub_parts  = array();
+        if ( $categories && ! is_wp_error( $categories ) ) {
+            $sub_parts[] = implode( ' / ', wp_list_pluck( $categories, 'name' ) );
+        }
+        if ( $types && ! is_wp_error( $types ) ) {
+            $sub_parts[] = implode( ' / ', wp_list_pluck( $types, 'name' ) );
+        }
+        $sub = implode( ' ・ ', $sub_parts );
     } else {
         $date = '';
         $sub  = '';

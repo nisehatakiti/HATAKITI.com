@@ -48,6 +48,17 @@ if ( have_posts() ) {
     </div>
 
     <?php
+    $hk_categories = get_terms( array( 'taxonomy' => 'activity_category', 'hide_empty' => true ) );
+    if ( $hk_categories && ! is_wp_error( $hk_categories ) && count( $hk_categories ) > 1 ) :
+        ?>
+        <ul class="hk-tag-list hk-activity-filter">
+            <?php foreach ( $hk_categories as $hk_category ) : ?>
+                <li><a href="<?php echo esc_url( get_term_link( $hk_category ) ); ?>"><?php echo esc_html( $hk_category->name ); ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+    <?php
     $hk_types = get_terms( array( 'taxonomy' => 'activity_type', 'hide_empty' => true ) );
     if ( $hk_types && ! is_wp_error( $hk_types ) && count( $hk_types ) > 1 ) :
         ?>

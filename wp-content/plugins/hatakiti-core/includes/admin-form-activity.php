@@ -96,6 +96,33 @@ function hatakiti_handle_activity_record_submit( $post_id ) {
     $related_link = isset( $_POST['hatakiti_related_link'] ) ? esc_url_raw( wp_unslash( $_POST['hatakiti_related_link'] ) ) : '';
     update_post_meta( $post_id, 'hatakiti_related_link', $related_link );
 
+    // 演出/脚本 — only meaningful for 舞台-type activities, but shown as
+    // plain optional fields rather than conditionally hidden per category
+    // (keeps the form simple; blank is fine for a dance activity etc).
+    $direction = isset( $_POST['hatakiti_direction'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_direction'] ) ) : '';
+    update_post_meta( $post_id, 'hatakiti_direction', $direction );
+
+    $script = isset( $_POST['hatakiti_script'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_script'] ) ) : '';
+    update_post_meta( $post_id, 'hatakiti_script', $script );
+
+    // カテゴリ checkboxes (ダンス/舞台/...), plus an optional inline
+    // "add a new category" field — same pattern as 活動種別 below.
+    $category_ids = isset( $_POST['hatakiti_activity_category'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_category'] ) : array();
+
+    $new_category = isset( $_POST['hatakiti_new_activity_category'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_new_activity_category'] ) ) : '';
+    if ( '' !== trim( $new_category ) ) {
+        $existing = term_exists( $new_category, 'activity_category' );
+        if ( $existing ) {
+            $category_ids[] = (int) $existing['term_id'];
+        } else {
+            $inserted = wp_insert_term( $new_category, 'activity_category' );
+            if ( ! is_wp_error( $inserted ) ) {
+                $category_ids[] = (int) $inserted['term_id'];
+            }
+        }
+    }
+    wp_set_object_terms( $post_id, array_unique( $category_ids ), 'activity_category', false );
+
     // 活動種別 checkboxes, plus an optional inline "add a new type" field.
     $type_ids = isset( $_POST['hatakiti_activity_type'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_type'] ) : array();
 
@@ -142,38 +169,48 @@ function hatakiti_render_activity_record_form() {
     $post_id = isset( $_GET['post_id'] ) ? absint( $_GET['post_id'] ) : 0;
     $is_edit = $post_id > 0;
 
-    $title         = '';
-    $activity_date = '';
-    $body          = '';
-    $related_link  = '';
-    $tags          = array();
-    $selected_ids  = array();
-    $thumbnail_id  = 0;
+    $title             = '';
+    $activity_date     = '';
+    $body              = '';
+    $related_link      = '';
+    $direction         = '';
+    $script            = '';
+    $tags              = array();
+    $selected_ids      = array();
+    $selected_cat_ids  = array();
+    $thumbnail_id      = 0;
 
     if ( $is_edit ) {
         $post = get_post( $post_id );
         if ( ! $post || 'activity_record' !== $post->post_type ) {
             wp_die( '指定された活動履歴が見つかりません。' );
         }
-        $title         = $post->post_title;
-        $body          = $post->post_content;
-        $activity_date = get_post_meta( $post_id, 'hatakiti_activity_date', true );
-        $related_link  = get_post_meta( $post_id, 'hatakiti_related_link', true );
-        $tags          = wp_list_pluck( wp_get_post_tags( $post_id ), 'name' );
-        $selected_ids  = wp_get_object_terms( $post_id, 'activity_type', array( 'fields' => 'ids' ) );
-        $thumbnail_id  = get_post_thumbnail_id( $post_id );
+        $title            = $post->post_title;
+        $body             = $post->post_content;
+        $activity_date    = get_post_meta( $post_id, 'hatakiti_activity_date', true );
+        $related_link     = get_post_meta( $post_id, 'hatakiti_related_link', true );
+        $direction        = get_post_meta( $post_id, 'hatakiti_direction', true );
+        $script           = get_post_meta( $post_id, 'hatakiti_script', true );
+        $tags             = wp_list_pluck( wp_get_post_tags( $post_id ), 'name' );
+        $selected_ids     = wp_get_object_terms( $post_id, 'activity_type', array( 'fields' => 'ids' ) );
+        $selected_cat_ids = wp_get_object_terms( $post_id, 'activity_category', array( 'fields' => 'ids' ) );
+        $thumbnail_id     = get_post_thumbnail_id( $post_id );
     }
 
     if ( $error && 'POST' === $_SERVER['REQUEST_METHOD'] ) {
-        $title         = isset( $_POST['post_title'] ) ? wp_unslash( $_POST['post_title'] ) : $title;
-        $activity_date = isset( $_POST['hatakiti_activity_date'] ) ? wp_unslash( $_POST['hatakiti_activity_date'] ) : $activity_date;
-        $body          = isset( $_POST['hatakiti_review'] ) ? wp_unslash( $_POST['hatakiti_review'] ) : $body;
-        $related_link  = isset( $_POST['hatakiti_related_link'] ) ? wp_unslash( $_POST['hatakiti_related_link'] ) : $related_link;
-        $tags          = isset( $_POST['hatakiti_tags'] ) ? array_filter( array_map( 'trim', explode( ',', wp_unslash( $_POST['hatakiti_tags'] ) ) ) ) : $tags;
-        $selected_ids  = isset( $_POST['hatakiti_activity_type'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_type'] ) : $selected_ids;
+        $title            = isset( $_POST['post_title'] ) ? wp_unslash( $_POST['post_title'] ) : $title;
+        $activity_date    = isset( $_POST['hatakiti_activity_date'] ) ? wp_unslash( $_POST['hatakiti_activity_date'] ) : $activity_date;
+        $body             = isset( $_POST['hatakiti_review'] ) ? wp_unslash( $_POST['hatakiti_review'] ) : $body;
+        $related_link     = isset( $_POST['hatakiti_related_link'] ) ? wp_unslash( $_POST['hatakiti_related_link'] ) : $related_link;
+        $direction        = isset( $_POST['hatakiti_direction'] ) ? wp_unslash( $_POST['hatakiti_direction'] ) : $direction;
+        $script           = isset( $_POST['hatakiti_script'] ) ? wp_unslash( $_POST['hatakiti_script'] ) : $script;
+        $tags             = isset( $_POST['hatakiti_tags'] ) ? array_filter( array_map( 'trim', explode( ',', wp_unslash( $_POST['hatakiti_tags'] ) ) ) ) : $tags;
+        $selected_ids     = isset( $_POST['hatakiti_activity_type'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_type'] ) : $selected_ids;
+        $selected_cat_ids = isset( $_POST['hatakiti_activity_category'] ) ? array_map( 'absint', (array) $_POST['hatakiti_activity_category'] ) : $selected_cat_ids;
     }
 
-    $types = get_terms( array( 'taxonomy' => 'activity_type', 'hide_empty' => false ) );
+    $types      = get_terms( array( 'taxonomy' => 'activity_type', 'hide_empty' => false ) );
+    $categories = get_terms( array( 'taxonomy' => 'activity_category', 'hide_empty' => false ) );
     ?>
     <div class="wrap hatakiti-record-form">
         <h1><?php echo $is_edit ? '活動履歴を編集' : '活動履歴を追加'; ?></h1>
@@ -195,6 +232,27 @@ function hatakiti_render_activity_record_form() {
                 <?php
                 hatakiti_form_date_row( '活動日', 'hatakiti_activity_date', $activity_date );
                 hatakiti_form_text_row( 'タイトル', 'post_title', $title, '', true );
+                ?>
+                <tr>
+                    <th scope="row">カテゴリ</th>
+                    <td>
+                        <div class="hatakiti-checkbox-group">
+                            <?php foreach ( $categories as $category ) : ?>
+                                <label>
+                                    <input type="checkbox" name="hatakiti_activity_category[]" value="<?php echo esc_attr( $category->term_id ); ?>"<?php checked( in_array( (int) $category->term_id, array_map( 'intval', (array) $selected_cat_ids ), true ) ); ?>>
+                                    <?php echo esc_html( $category->name ); ?>
+                                </label>
+                            <?php endforeach; ?>
+                        </div>
+                        <p class="hatakiti-add-genre">
+                            <label for="hatakiti_new_activity_category">新しいカテゴリを追加：</label>
+                            <input type="text" id="hatakiti_new_activity_category" name="hatakiti_new_activity_category" class="regular-text" placeholder="例：音楽">
+                        </p>
+                    </td>
+                </tr>
+                <?php
+                hatakiti_form_text_row( '演出', 'hatakiti_direction', $direction, '舞台の場合' );
+                hatakiti_form_text_row( '脚本', 'hatakiti_script', $script, '舞台の場合' );
                 ?>
                 <tr>
                     <th scope="row">活動種別</th>
@@ -252,12 +310,14 @@ add_filter( 'manage_activity_record_posts_columns', function ( $columns ) {
         $new[ $key ] = $label;
         if ( 'title' === $key ) {
             $new['hatakiti_activity_date'] = '活動日';
+            $new['hatakiti_direction']     = '演出';
+            $new['hatakiti_script']        = '脚本';
         }
     }
     return $new;
 } );
 add_action( 'manage_activity_record_posts_custom_column', function ( $column, $post_id ) {
-    if ( 'hatakiti_activity_date' === $column ) {
-        echo esc_html( get_post_meta( $post_id, 'hatakiti_activity_date', true ) );
+    if ( in_array( $column, array( 'hatakiti_activity_date', 'hatakiti_direction', 'hatakiti_script' ), true ) ) {
+        echo esc_html( get_post_meta( $post_id, $column, true ) );
     }
 }, 10, 2 );
