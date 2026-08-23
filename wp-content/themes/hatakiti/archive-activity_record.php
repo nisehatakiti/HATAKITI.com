@@ -9,6 +9,14 @@
  * every record in one page (see hatakiti_order_activity_record_archive in
  * the plugin) — grouping by tag doesn't paginate well otherwise, and the
  * total is small enough that this stays simple.
+ *
+ * Groups themselves are NOT alphabetised — that would put e.g. a group
+ * whose newest entry is from 2 years ago ahead of a group whose newest
+ * entry is from last week, defeating "newest first" for anyone reading
+ * top to bottom. Instead groups keep the order their first (= most
+ * recent, since the query is already sorted) post was encountered in,
+ * which PHP's associative arrays preserve automatically — no explicit
+ * sort needed.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -35,7 +43,6 @@ if ( have_posts() ) {
         }
     }
     wp_reset_postdata();
-    ksort( $hk_groups, SORT_STRING );
     if ( $hk_untagged ) {
         $hk_groups['タグなし'] = $hk_untagged;
     }
