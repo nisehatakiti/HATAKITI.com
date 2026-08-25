@@ -37,6 +37,9 @@ function hatakiti_content_type_label( $post_id = null ) {
     if ( 'activity_record' === $type ) {
         return '活動履歴';
     }
+    if ( 'folktale' === $type ) {
+        return '日本民話';
+    }
     if ( has_category( HATAKITI_CAT_ENGEKI, $post_id ) ) {
         return '演劇について';
     }
@@ -87,6 +90,9 @@ function hatakiti_render_card( $post_id = null ) {
         $activity_date_end = get_post_meta( $post_id, 'hatakiti_activity_date_end', true );
         $range = hatakiti_format_date_range( $activity_date, $activity_date_end );
         $meta_line = $range ? esc_html( $range ) : get_the_date( 'Y.m.d', $post_id );
+    } elseif ( 'folktale' === $type ) {
+        $prefecture = get_post_meta( $post_id, 'hatakiti_folktale_region_prefecture', true );
+        $meta_line = $prefecture ? esc_html( $prefecture ) : '';
     } else {
         $meta_line = get_the_date( 'Y.m.d', $post_id );
     }
@@ -389,4 +395,16 @@ function hatakiti_coming_soon( $message = '' ) {
         <?php endif; ?>
     </div>
     <?php
+}
+
+/**
+ * Decodes one of 日本民話's JSON-blob meta fields (locations/characters/
+ * beings/sources/related_records/ai_processing — see cpt-folktale.php).
+ * Always returns an array, even for missing/invalid JSON, so callers never
+ * need their own is_array() guard.
+ */
+function hatakiti_folktale_json_meta( $post_id, $key ) {
+    $raw     = get_post_meta( $post_id, $key, true );
+    $decoded = json_decode( (string) $raw, true );
+    return is_array( $decoded ) ? $decoded : array();
 }
