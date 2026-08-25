@@ -34,9 +34,13 @@ require_once HATAKITI_CORE_DIR . 'includes/cpt-activity-record.php';
 require_once HATAKITI_CORE_DIR . 'includes/cpt-folktale.php';
 require_once HATAKITI_CORE_DIR . 'includes/folktale-meta-boxes.php';
 require_once HATAKITI_CORE_DIR . 'includes/folktale-json-import.php';
+require_once HATAKITI_CORE_DIR . 'includes/occult-cpt.php';
+require_once HATAKITI_CORE_DIR . 'includes/occult-meta-boxes.php';
+require_once HATAKITI_CORE_DIR . 'includes/occult-rss-fetch.php';
 require_once HATAKITI_CORE_DIR . 'includes/meta-boxes.php';
 require_once HATAKITI_CORE_DIR . 'includes/admin-forms.php';
 require_once HATAKITI_CORE_DIR . 'includes/admin-form-activity.php';
+require_once HATAKITI_CORE_DIR . 'includes/occult-weekly-admin-form.php';
 require_once HATAKITI_CORE_DIR . 'includes/rest-draft-endpoint.php';
 require_once HATAKITI_CORE_DIR . 'includes/cli-import-theatre.php';
 
@@ -45,14 +49,17 @@ function hatakiti_core_activate() {
     hatakiti_register_film_record_cpt();
     hatakiti_register_activity_record_cpt();
     hatakiti_register_folktale_cpt();
+    hatakiti_register_occult_cpts();
     hatakiti_register_film_genre_taxonomy();
     hatakiti_register_activity_type_taxonomy();
     hatakiti_register_activity_category_taxonomy();
     hatakiti_register_folktale_taxonomies();
+    hatakiti_register_occult_taxonomy();
     hatakiti_seed_default_terms();
     hatakiti_seed_activity_type_terms();
     hatakiti_seed_activity_category_terms();
     hatakiti_seed_folktale_story_type_terms();
+    hatakiti_seed_occult_category_terms();
     hatakiti_install_capabilities();
     flush_rewrite_rules();
 }

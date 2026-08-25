@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * even if 'editor' support were ever re-added by mistake.
  */
 add_filter( 'use_block_editor_for_post_type', function ( $use_block_editor, $post_type ) {
-    if ( in_array( $post_type, array( 'theatre_record', 'film_record', 'activity_record' ), true ) ) {
+    if ( in_array( $post_type, array( 'theatre_record', 'film_record', 'activity_record', 'occult_weekly' ), true ) ) {
         return false;
     }
     return $use_block_editor;
@@ -161,6 +161,9 @@ function hatakiti_record_form_page_for_type( $post_type ) {
     if ( 'activity_record' === $post_type ) {
         return 'hatakiti-activity-record-form';
     }
+    if ( 'occult_weekly' === $post_type ) {
+        return 'hatakiti-occult-weekly-form';
+    }
     return '';
 }
 
@@ -182,7 +185,7 @@ add_filter( 'get_edit_post_link', function ( $link, $post_id ) {
  * remove it for these two post types so it can't be used by mistake.
  */
 add_filter( 'post_row_actions', function ( $actions, $post ) {
-    if ( in_array( $post->post_type, array( 'theatre_record', 'film_record', 'activity_record' ), true ) ) {
+    if ( in_array( $post->post_type, array( 'theatre_record', 'film_record', 'activity_record', 'occult_weekly' ), true ) ) {
         unset( $actions['inline hide-if-no-js'] );
     }
     return $actions;

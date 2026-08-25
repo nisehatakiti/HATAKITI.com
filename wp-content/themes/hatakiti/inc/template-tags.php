@@ -40,6 +40,9 @@ function hatakiti_content_type_label( $post_id = null ) {
     if ( 'folktale' === $type ) {
         return '日本民話';
     }
+    if ( 'occult_weekly' === $type ) {
+        return '週刊オカルト新聞';
+    }
     if ( has_category( HATAKITI_CAT_ENGEKI, $post_id ) ) {
         return '演劇について';
     }
@@ -93,6 +96,11 @@ function hatakiti_render_card( $post_id = null ) {
     } elseif ( 'folktale' === $type ) {
         $prefecture = get_post_meta( $post_id, 'hatakiti_folktale_region_prefecture', true );
         $meta_line = $prefecture ? esc_html( $prefecture ) : '';
+    } elseif ( 'occult_weekly' === $type ) {
+        $week_start = get_post_meta( $post_id, 'hatakiti_occult_week_start', true );
+        $week_end   = get_post_meta( $post_id, 'hatakiti_occult_week_end', true );
+        $range = hatakiti_format_date_range( $week_start, $week_end );
+        $meta_line = $range ? esc_html( $range ) : '';
     } else {
         $meta_line = get_the_date( 'Y.m.d', $post_id );
     }
@@ -344,6 +352,12 @@ function hatakiti_render_record_list_item( $post_id = null ) {
             $sub_parts[] = implode( ' / ', wp_list_pluck( $types, 'name' ) );
         }
         $sub = implode( ' ・ ', $sub_parts );
+    } elseif ( 'occult_weekly' === $type ) {
+        $date = get_post_meta( $post_id, 'hatakiti_occult_issue_date', true );
+        $sub  = hatakiti_format_date_range(
+            get_post_meta( $post_id, 'hatakiti_occult_week_start', true ),
+            get_post_meta( $post_id, 'hatakiti_occult_week_end', true )
+        );
     } else {
         $date = '';
         $sub  = '';
@@ -398,13 +412,67 @@ function hatakiti_coming_soon( $message = '' ) {
 }
 
 /**
- * Decodes one of 日本民話's JSON-blob meta fields (locations/characters/
- * beings/sources/related_records/ai_processing — see cpt-folktale.php).
- * Always returns an array, even for missing/invalid JSON, so callers never
- * need their own is_array() guard.
+ * Decodes any of this theme's JSON-blob meta fields — 日本民話's
+ * locations/characters/beings/sources/related_records/ai_processing
+ * (cpt-folktale.php) and 週刊オカルト新聞's articles (occult-cpt.php)
+ * all use this same "structured array stored as a JSON string" shape.
+ * Always returns an array, even for missing/invalid JSON, so callers
+ * never need their own is_array() guard.
  */
-function hatakiti_folktale_json_meta( $post_id, $key ) {
+function hatakiti_json_meta( $post_id, $key ) {
     $raw     = get_post_meta( $post_id, $key, true );
     $decoded = json_decode( (string) $raw, true );
     return is_array( $decoded ) ? $decoded : array();
+}
+
+/**
+ * One 週刊オカルト新聞 article (a merged group of one or more source
+ * news items — see occult-weekly-admin-form.php). $tier only changes the
+ * heading level; body/sources rendering is identical for 大見出し/主要.
+ * 小記事 is rendered separately (a compact list) in single-occult_weekly.php.
+ */
+function hatakiti_render_occult_article( $article, $tier ) {
+    ?>
+    <div class="hk-record-box">
+        <?php if ( 'large' === $tier ) : ?>
+            <h3><?php echo esc_html( $article['headline'] ); ?></h3>
+        <?php else : ?>
+            <h4><?php echo esc_html( $article['headline'] ); ?></h4>
+        <?php endif; ?>
+        <?php if ( ! empty( $article['body'] ) ) : ?>
+            <div class="hk-article-body"><?php echo wpautop( esc_html( $article['body'] ) ); ?></div>
+        <?php endif; ?>
+        <div class="hk-record-sub"><?php hatakiti_render_occult_sources( $article ); ?></div>
+    </div>
+    <?php
+}
+
+/**
+ * "情報源：媒体名「元記事タイトル」" for every news item behind one
+ * article — required on every article, not just a footer list
+ * (docs/07-OccultWeekly.md 情報源の明示).
+ */
+function hatakiti_render_occult_sources( $article ) {
+    $item_ids = isset( $article['news_item_ids'] ) ? (array) $article['news_item_ids'] : array();
+    if ( ! $item_ids ) {
+        return;
+    }
+    echo '情報源: ';
+    $links = array();
+    foreach ( $item_ids as $item_id ) {
+        $name = get_post_meta( $item_id, 'hatakiti_occult_source_name', true );
+        $url  = get_post_meta( $item_id, 'hatakiti_occult_original_url', true );
+        $title = get_the_title( $item_id );
+        if ( $url ) {
+            $links[] = sprintf(
+                '<a href="%s" target="_blank" rel="noopener nofollow">%s「%s」</a>',
+                esc_url( $url ),
+                esc_html( $name ),
+                esc_html( $title )
+            );
+        } else {
+            $links[] = esc_html( $name . '「' . $title . '」' );
+        }
+    }
+    echo wp_kses_post( implode( ' / ', $links ) );
 }

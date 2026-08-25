@@ -57,7 +57,7 @@ add_filter( 'comments_array', '__return_empty_array', 10 );
  */
 function hatakiti_search_post_types( $query ) {
     if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
-        $query->set( 'post_type', array( 'post', 'page', 'theatre_record', 'film_record', 'activity_record', 'folktale' ) );
+        $query->set( 'post_type', array( 'post', 'page', 'theatre_record', 'film_record', 'activity_record', 'folktale', 'occult_weekly' ) );
     }
 }
 add_action( 'pre_get_posts', 'hatakiti_search_post_types' );
@@ -85,6 +85,7 @@ function hatakiti_fallback_menu() {
     $items = array(
         array( 'label' => 'HATAKITIとは', 'url' => home_url( '/about/' ) ),
         array( 'label' => '日本民話', 'url' => get_post_type_archive_link( 'folktale' ) ),
+        array( 'label' => '週刊オカルト新聞', 'url' => get_post_type_archive_link( 'occult_weekly' ) ),
         array( 'label' => '日々の所感', 'url' => home_url( '/category/nikki/' ) ),
         array( 'label' => '演劇について', 'url' => home_url( '/category/engeki/' ) ),
         array( 'label' => '観劇記録', 'url' => get_post_type_archive_link( 'theatre_record' ) ),

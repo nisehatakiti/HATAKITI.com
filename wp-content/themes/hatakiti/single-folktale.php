@@ -28,12 +28,12 @@ get_header();
             $region_label = $region_source;
         }
 
-        $locations = hatakiti_folktale_json_meta( $post_id, 'hatakiti_folktale_locations_json' );
-        $characters = hatakiti_folktale_json_meta( $post_id, 'hatakiti_folktale_characters_json' );
-        $beings     = hatakiti_folktale_json_meta( $post_id, 'hatakiti_folktale_beings_json' );
-        $related    = hatakiti_folktale_json_meta( $post_id, 'hatakiti_folktale_related_records_json' );
-        $sources    = hatakiti_folktale_json_meta( $post_id, 'hatakiti_folktale_sources_json' );
-        $ai         = hatakiti_folktale_json_meta( $post_id, 'hatakiti_folktale_ai_processing_json' );
+        $locations = hatakiti_json_meta( $post_id, 'hatakiti_folktale_locations_json' );
+        $characters = hatakiti_json_meta( $post_id, 'hatakiti_folktale_characters_json' );
+        $beings     = hatakiti_json_meta( $post_id, 'hatakiti_folktale_beings_json' );
+        $related    = hatakiti_json_meta( $post_id, 'hatakiti_folktale_related_records_json' );
+        $sources    = hatakiti_json_meta( $post_id, 'hatakiti_folktale_sources_json' );
+        $ai         = hatakiti_json_meta( $post_id, 'hatakiti_folktale_ai_processing_json' );
 
         $story_types = get_the_terms( $post_id, 'folktale_story_type' );
         $themes      = get_the_terms( $post_id, 'folktale_theme' );

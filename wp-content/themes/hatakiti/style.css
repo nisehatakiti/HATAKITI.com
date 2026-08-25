@@ -341,6 +341,14 @@ ul, ol { padding-left: 1.4em; }
 
 .hk-article-meta a { color: var(--hk-fg-faint); }
 
+.hk-occult-subtitle {
+    margin: 10px 0 0;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--hk-accent-warm);
+    text-transform: uppercase;
+}
+
 .hk-article-thumb { margin: 0 0 32px; }
 
 .hk-article-body { font-size: 16px; }
