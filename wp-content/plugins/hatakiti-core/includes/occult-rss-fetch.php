@@ -173,18 +173,37 @@ function hatakiti_fetch_all_occult_sources() {
 }
 
 /**
+ * Some feeds (confirmed: TOCANA) emit titles that are entity-encoded
+ * more than once at the source — e.g. a real curly quote gets encoded
+ * to "&#8220;" and then THAT gets escaped again as "&amp;#8220;" before
+ * being written into the feed's XML. SimplePie's XML parsing only
+ * undoes the outer layer, leaving literal "&#8220;" text behind.
+ * Decoding once is not enough in that case, so decode repeatedly until
+ * a pass makes no further change (capped so a malformed string can't
+ * loop forever). A normally single-encoded or plain title is unaffected
+ * — the second pass is simply a no-op.
+ */
+function hatakiti_fully_decode_entities( $text ) {
+    for ( $i = 0; $i < 5; $i++ ) {
+        $decoded = html_entity_decode( $text, ENT_QUOTES, 'UTF-8' );
+        if ( $decoded === $text ) {
+            break;
+        }
+        $text = $decoded;
+    }
+    return $text;
+}
+
+/**
  * Saves one feed item as occult_news_item, or skips it if already
  * present. Dedup priority per 指示書 §8: original_url first, then
  * content_hash.
  */
 function hatakiti_save_occult_news_item( $source_post, $item ) {
     $original_url = esc_url_raw( (string) $item->get_permalink() );
-    // Some feeds (confirmed: TOCANA) emit already-HTML-entity-encoded
-    // titles (e.g. a literal "&#8220;" for a curly quote) — decode once
-    // here so the DB holds plain text, not markup. esc_html() at output
-    // time re-encodes correctly; skipping this step doubles the encoding
-    // instead (a literal "&amp;#8220;" was confirmed on a real fetch).
-    $title = html_entity_decode( (string) $item->get_title(), ENT_QUOTES, 'UTF-8' );
+    // esc_html() at output time re-encodes correctly, so the DB should
+    // hold plain text, not markup — see hatakiti_fully_decode_entities().
+    $title = hatakiti_fully_decode_entities( (string) $item->get_title() );
     $title = sanitize_text_field( $title );
 
     if ( ! $original_url || ! $title ) {
@@ -220,7 +239,7 @@ function hatakiti_save_occult_news_item( $source_post, $item ) {
     // RSS summary only — never the full content:encoded body (指示書 §14).
     $summary = (string) $item->get_description();
     $summary = wp_strip_all_tags( $summary );
-    $summary = html_entity_decode( $summary, ENT_QUOTES, 'UTF-8' );
+    $summary = hatakiti_fully_decode_entities( $summary );
     $summary = wp_trim_words( $summary, 60, '…' );
 
     $published = $item->get_date( 'Y-m-d H:i:s' );
