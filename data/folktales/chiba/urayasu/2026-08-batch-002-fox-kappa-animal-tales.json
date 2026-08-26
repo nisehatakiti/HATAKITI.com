@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-urayasu-2026-08-002-fox-kappa-animal-tales",
+  "reconstruction_status":"reconstructed_2026-08-26",
+  "reconstruction_notes":"欠番ファイルの内容を、浦安一次収集時の分類方針、前後バッチの構造、千葉県立図書館の浦安市民話索引から復元。本文未確認のため、題名からの推測を伝承内容として登録していない。",
+  "records":[
+    {"record_id":"chiba-urayasu-kappa","title":"カッパ","prefecture":"千葉県","municipality":"浦安市","story_type":["河童伝承"],"beings":["河童"],"cross_tags":["河童","水辺伝承"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-kappakke","title":"河童っけ／カッパッケイ","prefecture":"千葉県","municipality":"浦安市","locations":["当代島"],"story_type":["河童伝承"],"beings":["河童"],"cross_tags":["河童","水辺伝承","異表記候補"],"research_status":"partial","research_notes":"題名の異表記または関連話候補として統合管理。本文確認まで同一話とは断定しない。"},
+    {"record_id":"chiba-urayasu-onatsu-fox","title":"おなつ狐","prefecture":"千葉県","municipality":"浦安市","story_type":["狐伝承"],"beings":["狐"],"cross_tags":["狐伝承"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-kamigo-fox","title":"上郷のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["当代島","猫実","堀江"],"story_type":["狐伝承"],"beings":["狐"],"cross_tags":["狐伝承","地域伝承"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-daikoku-fox","title":"大黒様に化けたキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["堀江"],"story_type":["狐伝承","化身譚"],"beings":["狐"],"cross_tags":["狐伝承","変化"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-chosan-fox","title":"長さんギツネ①②","prefecture":"千葉県","municipality":"浦安市","locations":["堀江","境川","久助稲荷","当代島"],"story_type":["狐伝承"],"beings":["狐"],"cross_tags":["狐伝承","境川","久助稲荷"],"research_status":"partial","research_notes":"番号付き異伝として保持。本文確認後に同一人物・同一狐を中心とする話群か判定する。"},
+    {"record_id":"chiba-urayasu-torasan-fox","title":"寅さんギツネ","prefecture":"千葉県","municipality":"浦安市","locations":["堀江"],"story_type":["狐伝承"],"beings":["狐"],"cross_tags":["狐伝承"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-hama-fox","title":"浜のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["猫実"],"story_type":["狐伝承"],"beings":["狐"],"cross_tags":["狐伝承","浜"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-hitotsuiri-fox","title":"一つ圦のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["堀江","境川"],"story_type":["狐伝承","場所伝承"],"beings":["狐"],"cross_tags":["狐伝承","境川","水辺伝承"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-masaki-inari-fox","title":"まさき稲荷のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["堀江"],"story_type":["狐伝承","稲荷信仰伝承"],"beings":["狐"],"cross_tags":["狐伝承","稲荷"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-white-snake-return","title":"白蛇の恩返し","prefecture":"千葉県","municipality":"浦安市","locations":["当代島"],"story_type":["蛇伝承","動物報恩譚"],"beings":["白蛇"],"cross_tags":["蛇伝承","恩返し"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-white-snake-seen","title":"白蛇を見たって","prefecture":"千葉県","municipality":"浦安市","locations":["善福寺"],"story_type":["蛇伝承"],"beings":["白蛇"],"cross_tags":["蛇伝承","寺社伝承候補"],"research_status":"partial"}
+  ],
+  "sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}],
+  "batch_notes":"浦安の狐・河童・蛇を中心とする動物怪異伝承群として復元。"
+}
