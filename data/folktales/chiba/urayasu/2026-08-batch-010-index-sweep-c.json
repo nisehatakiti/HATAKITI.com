@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-urayasu-2026-08-010-index-sweep-c",
+  "source_index":"千葉県立図書館 千葉県の民話 浦安市",
+  "records":[
+    {"record_id":"chiba-urayasu-mame-shita","title":"豆をまいた話","story_type":["世間話"],"cross_tags":["世間話","生活文化"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-mochi-yome","title":"餅を焼いた嫁","story_type":["世間話"],"cross_tags":["世間話","食文化"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-mukashi-no-haka","title":"昔の墓","story_type":["地域史","死者伝承"],"cross_tags":["幽霊・死者","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-mujina-mane-goe","title":"狢のまね声","story_type":["怪異譚","動物伝承"],"beings":["ムジナ"],"cross_tags":["狐狸貉","怪異"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-moon-mujina","title":"月に化けた狢","story_type":["怪異譚","変身譚"],"beings":["ムジナ"],"cross_tags":["狐狸貉","変身譚","月に化ける"],"research_status":"researching","related_records":["chiba-urayasu-moon-tanuki","chiba-urayasu-moon-mujina"]},
+    {"record_id":"chiba-urayasu-mujina-no-on","title":"狢の恩返し","story_type":["動物伝承"],"beings":["ムジナ"],"cross_tags":["狐狸貉","恩返し"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-yakko-sanjuro","title":"やっこ三十郎","story_type":["人物伝承"],"cross_tags":["人物ハブ候補"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-yotaro","title":"与太郎ばなし","story_type":["世間話","笑い話"],"cross_tags":["世間話","笑い話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-yonaoshi","title":"世直し","story_type":["世間話","地域史"],"cross_tags":["世間話","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-rakuda","title":"らくだの話","story_type":["世間話"],"cross_tags":["世間話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-rainy-day","title":"雨の日の話","story_type":["生活文化"],"cross_tags":["生活文化","天候"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-washizawa","title":"鷲沢の由来","story_type":["地名由来"],"cross_tags":["地名由来","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-urayasu-name-origin","title":"浦安の地名由来","story_type":["地名由来"],"cross_tags":["地名由来","地域史"],"research_status":"researching"}
+  ],
+  "batch_notes":"浦安市民話索引後半の未対応候補を一次登録。狐狸貉関連は既存の上位類型に統合し、月に化ける類は別話の可能性を保持したまま関連レコード接続を付与。本文未確認項目は内容を推測せず researching とする。"
+}
