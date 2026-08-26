@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-003-index-sweep-c",
+  "municipality":"流山市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-akagi-yama-origin","title":"流山の赤城山","story_type":["山岳伝承","地名由来"],"cross_tags":["赤城山","地名由来","群馬県接続候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-nagareyama-akagi","title":"流山と赤城山","story_type":["地名由来","山岳伝承"],"cross_tags":["赤城山","流山地名由来","広域伝承"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-yakushido-legend","title":"薬師堂の伝承","story_type":["寺社伝承","民間信仰"],"cross_tags":["寺社伝承","信仰"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-shrine-miracle","title":"神社の霊験伝承","story_type":["寺社伝承","霊験譚"],"cross_tags":["寺社伝承","霊験譚"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-water-spirit-group","title":"流山市の水辺怪異伝承群","story_type":["話群","水辺伝承"],"cross_tags":["水辺伝承","怪異","江戸川水系"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-castle-history-group","title":"流山市の城跡・戦乱伝承群","story_type":["話群","地域史"],"cross_tags":["城跡","古戦場","地域史"],"research_status":"researching","related_records":["chiba-nagareyama-three-warrior-ghosts","chiba-nagareyama-hibachi-yama"]},
+    {"record_id":"chiba-nagareyama-dog-legends-group","title":"流山市の犬伝承群","story_type":["話群","動物伝承"],"beings":["犬"],"cross_tags":["犬伝承","忠犬","塚伝承","松戸市接続"],"research_status":"researching","related_records":["chiba-nagareyama-kogane-maru","chiba-nagareyama-omoi-inuzuka"]},
+    {"record_id":"chiba-nagareyama-river-region-group","title":"江戸川・利根川流域伝承群","story_type":["話群","河川伝承"],"cross_tags":["江戸川","利根川","水辺伝承","地域ハブ候補"],"research_status":"researching","related_records":["chiba-nagareyama-bando-taro","chiba-nagareyama-water-spirit-group"]}
+  ],
+  "batch_notes":"流山市一次索引巡回C。赤城山系統、寺社・信仰、水辺、城跡、犬伝承を地域内話群と広域横断タグで整理。江戸川・利根川流域を地域横断の地理ハブ候補として保持。"
+}
