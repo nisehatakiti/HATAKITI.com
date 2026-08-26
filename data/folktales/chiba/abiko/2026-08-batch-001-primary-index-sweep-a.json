@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-001-primary-index-sweep-a",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "route_position":"野田市→我孫子市→柏市→南下",
+  "initial_hubs":[
+    {"hub":"利根川","tag_type":"river_and_geography","notes":"野田市から連続する北総・東葛の河川伝承軸として接続する。"},
+    {"hub":"手賀沼","tag_type":"river_and_geography","notes":"我孫子市固有の強い水辺・地理ハブ候補。"},
+    {"hub":"水辺伝承","tag_type":"motif","notes":"河童など特定名称の伝承とは区別し、まず水辺という場所・モチーフ軸で保持する。"},
+    {"hub":"人物タグ候補","tag_type":"person","notes":"全国・広域伝承人物は名称を確認できた時点で人物タグ化するが、内容上の関係は後続比較とする。"}
+  ],
+  "cross_region_connections":[
+    {"region":"野田市","themes":["利根川","河川伝承","水辺伝承"]},
+    {"region":"柏市","themes":["手賀沼","利根川水系","東葛地域伝承"]}
+  ],
+  "data_policy":"名称タグ、人物タグ、地理タグ、話型・モチーフタグを混同しない。題名や名称が一致する伝承はまず横断接続し、同一性・存在分類・話型判定は本文資料確認後に行う。",
+  "research_status":"active",
+  "summary":"我孫子市の一次収集を開始。野田市から利根川の軸を引き継ぎつつ、手賀沼を我孫子市の主要地理ハブ候補として設定し、次の柏市への連続性を確保する。"
+}
