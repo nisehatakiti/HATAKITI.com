@@ -1,0 +1,56 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-kateba-kangun-deep-dive",
+  "municipality":"白井市",
+  "title":"勝てば官軍",
+  "source_status":"index_only_crossregional",
+  "story_type":["歴史伝承候補","広域伝承"],
+  "cross_tags":["勝てば官軍","鎌ケ谷市","白井市","船橋市","市川市","東葛地方","戊辰戦争候補"],
+  "sources":[
+    {
+      "source_id":"SRC-KAMAGAYA-MINWA-1986",
+      "title":"鎌ヶ谷の民話",
+      "author_or_publisher":"文京書房",
+      "publication_year_or_date":"1986",
+      "source_type":"local_folktale_book",
+      "url_or_identifier":"千葉県立図書館『千葉県の民話』索引掲載書誌情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"伝承本文の直接確認は未了。題名・収録書誌の確認に使用。"
+    },
+    {
+      "source_id":"SRC-CHIBA-LIB-SHIROI-INDEX",
+      "title":"千葉県の民話 白井市",
+      "author_or_publisher":"千葉県立図書館",
+      "publication_year_or_date":"web",
+      "source_type":"library_index",
+      "url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"白井が地域根拠として同一伝承項目に接続することを確認する索引。"
+    },
+    {
+      "source_id":"SRC-CHIBA-LIB-KAMAGAYA-INDEX",
+      "title":"千葉県の民話 鎌ケ谷市",
+      "author_or_publisher":"千葉県立図書館",
+      "publication_year_or_date":"web",
+      "source_type":"library_index",
+      "url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/kamagaya.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"鎌ケ谷・東葛地方上山新田を地域根拠として確認。本文そのものではない。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"「勝てば官軍」は『鎌ヶ谷の民話』（文京書房、1986）に収録され、千葉県立図書館の民話索引では白井市と鎌ケ谷市の双方に地域的な接続が示されている。",
+      "source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX","SRC-CHIBA-LIB-KAMAGAYA-INDEX","SRC-KAMAGAYA-MINWA-1986"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"白井市・鎌ケ谷市以外にも船橋市・市川市の索引で同一題名が確認できるため、現段階では単独自治体の伝承として固定せず、東葛・下総方面にまたがる広域接続候補として扱う。",
+      "source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX","SRC-CHIBA-LIB-KAMAGAYA-INDEX"],
+      "interpretation":true
+    }
+  ],
+  "research_notes":"本文未確認。題名から戊辰戦争や新政府軍・旧幕府軍に関する話と推測して内容を補完しない。鎌ケ谷市の近代史・文化財資料には慶応4年（1868年）の市川・船橋周辺の戦闘と新政府軍・旧幕府軍の関係を示す資料があるが、それを本伝承の内容や直接の出典とは現段階で結び付けない。今後は『鎌ヶ谷の民話』本文、または本文を引用・再録する公的資料を確認してから更新する。"
+}
