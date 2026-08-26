@@ -14,7 +14,7 @@
     {"record_id":"chiba-urayasu-hama-fox","title":"浜のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["猫実"],"story_type":["狐伝承"],"beings":["狐"],"cross_tags":["狐伝承","浜"],"research_status":"partial"},
     {"record_id":"chiba-urayasu-hitotsuiri-fox","title":"一つ圦のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["堀江","境川"],"story_type":["狐伝承","場所伝承"],"beings":["狐"],"cross_tags":["狐伝承","境川","水辺伝承"],"research_status":"partial"},
     {"record_id":"chiba-urayasu-masaki-inari-fox","title":"まさき稲荷のキツネ","prefecture":"千葉県","municipality":"浦安市","locations":["堀江"],"story_type":["狐伝承","稲荷信仰伝承"],"beings":["狐"],"cross_tags":["狐伝承","稲荷"],"research_status":"partial"},
-    {"record_id":"chiba-urayasu-white-snake-return","title":"白蛇の恩返し","prefecture":"千葉県","municipality":"浦安市","locations":["当代島"],"story_type":["蛇伝承","動物報恩譚"],"beings":["白蛇"],"cross_tags":["蛇伝承","恩返し"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-white-snake-return","title":"白蛇の恩返し","prefecture":"千葉県","municipality":"浦安市","locations":["当代島"],"story_type":["蛇伝承","動物報恩譚"],"beings":["白蛇"],"cross_tags":["蛇伝承","恩返し"],"research_status":"partial","related_records":[{"record_id":"chiba-urayasu-hakushebi-no-ongaeshi","relationship":"variant_candidate","note":"市川バッチ006（ichikawa/2026-08-batch-006）に同題の深掘りrecord（出典2件・NDL資料含む）あり。本文未照合のため統合しない。"}]},
     {"record_id":"chiba-urayasu-white-snake-seen","title":"白蛇を見たって","prefecture":"千葉県","municipality":"浦安市","locations":["善福寺"],"story_type":["蛇伝承"],"beings":["白蛇"],"cross_tags":["蛇伝承","寺社伝承候補"],"research_status":"partial"}
   ],
   "sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}],

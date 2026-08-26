@@ -4,13 +4,40 @@
 
 ## 現在の到達点
 
-市川市民話の深掘り調査は、**バッチ6まで一巡完了**。
+市川市民話の深掘り調査は、**バッチ6まで一巡完了**。バッチ6と、並行して進んでいた浦安市の一次収集（urayasu/batch-001〜011）との重複解消も完了。
 次回は **市川バッチ7の先頭から再開**する。
 
 ## 完了済みバッチ
 
 - バッチ1〜5: 深掘り・整理済み
-- バッチ6: 全7件を一巡完了
+- バッチ6: 全7件を一巡完了（重複解消済み、下記参照）
+
+## バッチ6と浦安市一次収集の重複解消（2026-08-26実施）
+
+市川バッチ6（`ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json`）は「市川・浦安の水辺接続」テーマで浦安市域の伝承も深掘りしていたが、これとは独立に進んでいた浦安市の一次収集（`urayasu/2026-08-batch-001`, `-002`, `-008`）が同じ千葉県立図書館索引（市川市・浦安市）を別々に拾っており、確認の結果、以下の重複が判明した。
+
+**record_id完全衝突（→ 市川バッチ6側に統合、浦安側はdeduplicated_records化）**
+
+| record_id | 統合先 |
+|---|---|
+| `chiba-urayasu-hebi-no-hashi`（蛇の橋） | ichikawa/batch-006を正本とし、urayasu/batch-001の重複recordを削除・`deduplicated_records`に記録 |
+| `chiba-urayasu-hebi-no-awatori`（蛇の泡とり） | 同上 |
+
+判断根拠：両ファイルとも`research_status: partial`で優劣がつけにくかったため、(1) 先に作成されたのはichikawa/batch-006（2026-08-26 10:41、urayasu/batch-001は11:04）、(2) 内容もichikawa/batch-006側がsources件数・research_missing・verification_locations等でより詳細、の2点から市川側を正本とした。地点情報（locations）自体は両者で矛盾なし。
+
+**同一タイトル・別record_id（本文未照合のため統合せず、related_records: variant_candidateで相互接続のみ）**
+
+| タイトル | 市川側ID | 浦安側ID |
+|---|---|---|
+| 蛇の目玉に手え突っこんだ | `chiba-ichikawa-hebi-no-medama-ni-tee-tsukkonda` | `chiba-urayasu-hebi-no-medama`（batch-001） |
+| 白蛇の恩返し | `chiba-urayasu-hakushebi-no-ongaeshi` | `chiba-urayasu-white-snake-return`（batch-002） |
+| 大正六年の大津波（津波から守った鎮守さま） | `chiba-urayasu-taisho6-otsunami-tsunami-chinju` | `chiba-urayasu-taisho6-tsunami-04`（batch-001、連作四番目） |
+
+**索引段階の軽微な重複（浦安側の未着手スタブに参照ノートを追記のみ）**
+
+- 古井戸の障り：`urayasu/2026-08-batch-008`のインデックス行（record_id無し）に、市川側`chiba-ichikawa-furui-do-no-sawari`への参照ノートを追加。
+
+いずれもタイトルからの本文推測・内容の統合は行っていない。詳細はhatakiti.comとのチャット記録、および該当ファイルの`research_notes`/`related_records`を参照。
 
 ## 現在の管理方針
 

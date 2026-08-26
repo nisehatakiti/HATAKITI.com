@@ -21,7 +21,7 @@
     {"title":"弁天様の恩返し","region":"浦安市","type":["寺社伝承","恩返し"],"status":"researching"},
     {"title":"ヤヘイの弁天さま","region":"浦安市当代島","type":["寺社伝承","人物関連"],"status":"researching"},
     {"title":"白蛇を見たって","region":"浦安市","place":"善福寺","type":["蛇伝承","寺社伝承"],"status":"researching"},
-    {"title":"古井戸の障り","region":"浦安市","place":"旧浦安役場関連地","type":["水辺伝承","怪異"],"status":"researching"},
+    {"title":"古井戸の障り","region":"浦安市","place":"旧浦安役場関連地","type":["水辺伝承","怪異"],"status":"researching","note":"市川バッチ006（ichikawa/2026-08-batch-006, record_id: chiba-ichikawa-furui-do-no-sawari）に同題recordあり。市川市新井・八幡を地域根拠とする。本文未照合・地点未確定のため統合はせず、要照合候補として保持。"},
     {"title":"水番殺し","region":"浦安市","type":["事件伝承","水辺伝承"],"status":"researching"},
     {"title":"道路の真ん中に爆弾落っこった","region":"浦安市","type":["戦争伝承","地域史"],"status":"researching"},
     {"title":"火つけの親玉","region":"浦安市","type":["事件伝承","世間話"],"status":"researching"},
