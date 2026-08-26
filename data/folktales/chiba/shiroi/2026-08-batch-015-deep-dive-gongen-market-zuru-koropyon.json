@@ -1,0 +1,62 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-gongen-market-zuru-koropyon-deep-dive",
+  "municipality":"白井市",
+  "title":"権現様の市と「ずるコロピョン」",
+  "source_status":"researching",
+  "story_type":["寺社伝承","市・縁日伝承","広域接続伝承候補"],
+  "cross_tags":["ずるコロピョン","権現様の市","飯綱権現","飯綱神社","萱田","白井","八千代"],
+  "sources":[
+    {
+      "source_id":"SRC-YACHIYO-MUKASHIBANASHI-2017",
+      "title":"八千代の昔話 : 四十三話",
+      "author_or_publisher":"小林千代美／美術の杜出版（星雲社発売）",
+      "publication_year_or_date":"2017-10",
+      "source_type":"local_history_book",
+      "url_or_identifier":"CiNii Books NCID: BB24811847 / ISBN: 9784434238925",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"伝承本文の直接確認が必要な一次的な収録資料。現段階では書誌と索引情報を確認。"
+    },
+    {
+      "source_id":"SRC-CHIBA-LIB-YACHIYO-INDEX",
+      "title":"千葉県の民話 八千代市",
+      "author_or_publisher":"千葉県立図書館",
+      "publication_year_or_date":"web",
+      "source_type":"library_index",
+      "url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/yachiyo.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"題名、収録資料、地域名・関連事物を確認する索引。本文そのものではない。"
+    },
+    {
+      "source_id":"SRC-YACHIYO-BUNKAZAI-2023-08",
+      "title":"財やちよ No.8 特集 飯綱神社の文化財①",
+      "author_or_publisher":"八千代市教育委員会",
+      "publication_year_or_date":"2023-08-03",
+      "source_type":"official_archive",
+      "url_or_identifier":"https://www.city.yachiyo.lg.jp/uploaded/attachment/24460.pdf",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"飯綱神社と「権現様の市」の歴史的背景を確認する公的資料。ずるコロピョンの本文は未確認。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"「権現様の市と『ずるコロピョン』」は『八千代の昔話 : 四十三話』に収録され、索引上は萱田を舞台とし、飯綱権現（飯綱神社）・白井・萱田が関連事物として示されている。",
+      "source_ids":["SRC-CHIBA-LIB-YACHIYO-INDEX","SRC-YACHIYO-MUKASHIBANASHI-2017"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"萱田の飯綱神社では、昭和30年代頃まで毎月24日の縁日に市が立ち、「権現様の市」が開かれていたと八千代市教育委員会資料に記されている。",
+      "source_ids":["SRC-YACHIYO-BUNKAZAI-2023-08"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-003",
+      "text":"「ずるコロピョン」は白井・萱田をまたぐ地域伝承として扱う価値があるが、語義・登場人物・具体的な筋は収録本文を直接確認するまで確定しない。",
+      "source_ids":["SRC-CHIBA-LIB-YACHIYO-INDEX","SRC-YACHIYO-MUKASHIBANASHI-2017"],
+      "interpretation":true
+    }
+  ],
+  "research_notes":"今回は書誌情報・県立図書館索引・八千代市教育委員会の飯綱神社資料まで確認。「権現様の市」の実在的背景は確認できた一方、「ずるコロピョン」の意味や伝承本文は未確認。現段階で怪異・人物・事件内容を推測して登録しない。次段階では『八千代の昔話 : 四十三話』本文または同話を採録した別資料を確認する。Wikipedia等は探索経路として利用しても最終 sources には実際の書籍・公的資料等を登録する。"
+}
