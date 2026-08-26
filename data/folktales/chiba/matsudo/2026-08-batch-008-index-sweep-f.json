@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-008-index-sweep-f",
+  "municipality":"松戸市",
+  "source":"千葉県立図書館 千葉県の民話 松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-wind-corn","title":"風にそよぐトウモロコシ","story_type":["世間話","生活伝承"],"cross_tags":["生活話","広域伝承候補"],"related_places":["小金"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-konodai-battlefield","title":"国府台の古戦場","story_type":["歴史伝承","古戦場伝承"],"cross_tags":["古戦場","歴史怪談候補","市川・松戸伝承圏"],"related_places":["矢切の渡し"],"related_regions":["市川市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-komagata-horse","title":"駒形の暴れ馬","story_type":["動物伝承","地域史"],"beings":["馬"],"cross_tags":["馬伝承","小金ヶ原牧場","広域伝承候補"],"related_places":["小金ヶ原牧場","松戸宿"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-korean-massacre-1923","title":"自警団による朝鮮人虐殺事件","story_type":["近現代史","地域史"],"cross_tags":["関東大震災","松戸地域史","近現代の記憶"],"research_status":"researching","research_notes":"民話・怪談とは性質が異なる近現代史資料。伝承DB内での扱いは本文・出典確認後に歴史記録系との境界を整理する。"},
+    {"record_id":"chiba-matsudo-tanaka-treasure","title":"田中三左衛門の埋蔵金","story_type":["埋蔵金伝説","人物伝承"],"cross_tags":["埋蔵金","人物伝承候補","広域伝承候補"],"related_places":["松戸の渡し"],"related_regions":["市川市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-hatsutomi-reclamation","title":"初富の開墾","story_type":["開拓伝承","地域史"],"cross_tags":["小金ヶ原牧場","開拓史","地域史"],"related_places":["五香","六実","小金ヶ原牧場"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-temples-wisteria-hydrangea","title":"フジの寺の妙福寺、アジサイ寺の本土寺","story_type":["寺社伝承","地域史"],"cross_tags":["寺社伝承","樹木・植物","本土寺"],"related_places":["平賀","本土寺"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-mikogami-swordsman-grave","title":"御子神典膳に殺された旅の剣客の墓","story_type":["人物伝承","墓伝承","歴史怪談候補"],"cross_tags":["剣豪伝説","墓伝承","小金ヶ原"],"related_places":["小金ヶ原"],"research_status":"researching"}
+  ],
+  "batch_notes":"松戸市索引の残存タイトルを追加。市川との接続、国府台・矢切・小金ヶ原など隣接地域にまたがる伝承圏を明示。史実事件は民話化の有無を本文確認するまでresearchingとする。"
+}
