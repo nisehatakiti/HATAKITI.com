@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-001-primary-index-sweep-a",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "route_position":"我孫子市→柏市→南下",
+  "initial_hubs":[
+    {"hub":"手賀沼","tag_type":"river_and_geography","notes":"我孫子市から引き継ぐ市域横断の主要水辺ハブ。柏市側の伝承を同一水域で比較可能にする。"},
+    {"hub":"利根川水系","tag_type":"river_and_geography","notes":"野田・我孫子から連続する広域地理軸として保持する。"},
+    {"hub":"水辺伝承","tag_type":"motif","notes":"河童など特定名称と混同せず、沼・川・池に関する伝承の比較軸として保持する。"},
+    {"hub":"人物・名称横断タグ","tag_type":"cross_region","notes":"将門・火車など既存広域タグは柏市内に該当伝承が確認された時点で接続し、同一性判定は本文確認後とする。"}
+  ],
+  "cross_region_connections":[
+    {"region":"我孫子市","themes":["手賀沼","水辺伝承","利根川水系"]},
+    {"region":"松戸市","themes":["南下ルート","下総伝承圏"]},
+    {"region":"流山市","themes":["東葛地域伝承圏","河川・水辺伝承"]}
+  ],
+  "data_policy":"名称タグ、人物タグ、地理タグ、話型・モチーフタグを混同しない。題名・名称一致は横断接続の入口とし、同一人物・同一存在・同一話型の判定は資料本文確認後に行う。",
+  "research_status":"active",
+  "summary":"柏市の索引ベース一次収集を開始。我孫子市から手賀沼を主要地理ハブとして引き継ぎ、利根川水系と東葛地域の連続性を維持しながら個別伝承を収集する。"
+}
