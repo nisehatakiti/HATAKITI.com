@@ -4,13 +4,32 @@
 
 ## 現在の到達点
 
-市川市民話の深掘り調査は、**バッチ6まで一巡完了**。バッチ6と、並行して進んでいた浦安市の一次収集（urayasu/batch-001〜011）との重複解消も完了。
-次回は **市川バッチ7の先頭から再開**する。
+市川市民話の深掘り調査は、**バッチ7まで完了**。
+次回は **市川バッチ8の先頭から再開**する（新規テーマは未選定。千葉県立図書館の市川市民話索引 https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html を再確認し、バッチ1〜7・records/ichikawa/で未着手の題名から選定する）。
 
 ## 完了済みバッチ
 
-- バッチ1〜5: 深掘り・整理済み
+- バッチ1〜5: 深掘り・整理済み（バッチ1・2は2026-08-26に重複解消、下記参照）
 - バッチ6: 全7件を一巡完了（重複解消済み、下記参照）
+- バッチ7: 全13件を一巡完了（印内の重右衛門伝承群の個別話、下記参照）
+
+## バッチ7の処理内容（2026-08-26実施）
+
+千葉県立図書館の市川市民話索引を直接確認し（WebFetchで取得、推測なし）、既存の調査ハブrecord（`chiba-ichikawa-innai-juemon-traditions`、「個別話は統合せず共通タグで横断接続する」と定義済み）に対応する個別話13件を新規登録した。
+
+| record_id | タイトル | 状態 |
+|---|---|---|
+| chiba-ichikawa-innai-no-jiimu-san | 印内のじいむさん | partial（重右衛門との関係は未確定のため断定せず） |
+| chiba-ichikawa-juemon-uma-no-suki-na-aomon | 印内の重右衛門　馬のすきな青いもんのこと | partial |
+| chiba-ichikawa-juemon-sannenkan-mo-isoro | 印内の重右衛門　三年間も居候したこと | partial |
+| chiba-ichikawa-innee-no-juemudon | いんねえのじゅえむどんの話 | partial |
+| chiba-ichikawa-juemon-9wa-01〜09 | 印内の重右衛門ばなし九話　その一〜その九（計9件） | partial |
+
+全件、本文未確認・出典（房総の民話／千葉県の民話　続／読みがたり千葉のむかし話）と索引上の題名のみを記録し、題名からの筋・オチの推測補完は行っていない。九話シリーズおよび2話は`related_records`（relationship: same_tradition）でハブrecordへ接続した。
+
+**対象外として保留した2件**（バッチ7ファイル内`out_of_scope_notes`に記録）：
+- 生食と七次の八幡溜：出典が白井市の資料で、既に`records/shiroi/ikezuki-nanatsugi-hachimandame.json`としてcanonical化済み。市川側に重複recordは作成しない。
+- 池和田落城の哀話：「池和田」は市原市の地名の可能性が高く、市川市の伝承と断定できないため今回は対象外。将来、市原市収集時に別途確認する。
 
 ## バッチ6と浦安市一次収集の重複解消（2026-08-26実施）
 
