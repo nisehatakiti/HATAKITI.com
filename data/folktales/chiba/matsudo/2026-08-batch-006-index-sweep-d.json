@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-006-index-sweep-d",
+  "municipality":"松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-satomi-hime-night-crying-stone","title":"里見の姫の夜泣き石","story_type":["怪異譚","石伝承","人物伝承"],"cross_tags":["泣く石・夜泣き石類型","石の怪異","人物伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-blood-stained-reeds","title":"血染めの茅","story_type":["歴史伝承","植物伝承","怪異譚"],"cross_tags":["広域伝承候補","悲劇の記憶","植物伝承"],"research_status":"researching","related_regions":["市川市","船橋市","柏市","流山市","野田市","佐倉市"]},
+    {"record_id":"chiba-matsudo-eternal-beauty-mermaid","title":"人魚を食った永遠の美少女","story_type":["人物伝承","怪異譚"],"cross_tags":["八百比丘尼","人魚伝説","長寿伝説"],"related_person_id":"happyaku-bikuni","research_status":"researching"},
+    {"record_id":"chiba-matsudo-happyaku-bikuni-story","title":"八尾比丘尼の話","story_type":["人物伝承","長寿伝説"],"cross_tags":["八百比丘尼","人物ハブ","表記揺れ候補"],"related_person_id":"happyaku-bikuni","research_status":"researching"},
+    {"record_id":"chiba-matsudo-kannyo-ghost","title":"官女のおばけ","story_type":["怪談","死者伝承"],"cross_tags":["幽霊・死者","地域怪異"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-narita-ofuda","title":"成田のお札","story_type":["寺社伝承","霊験譚"],"cross_tags":["寺社伝承","信仰","護符"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-historical-head","title":"井伊大老の首","story_type":["歴史伝承","怪談"],"cross_tags":["歴史人物","幽霊・死者","歴史怪談"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kaya-no-yurai","title":"生食と七次の八幡溜","story_type":["地域史","由来話"],"cross_tags":["地域史","地名由来候補"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-osho-snake","title":"和尚と大蛇","story_type":["蛇伝承","寺社伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-issa-fuse-benten","title":"恋人に似た布施弁天によく通った一茶","story_type":["人物伝承","寺社伝承"],"cross_tags":["人物ハブ候補","俳人伝説","寺社伝承"],"research_status":"researching","related_regions":["柏市"]},
+    {"record_id":"chiba-matsudo-bakuchi-tatsuya","title":"バクチぶち辰っあ","story_type":["世間話","人物伝承候補"],"cross_tags":["世間話"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kazahaya-sugi","title":"風早神社の大杉","story_type":["寺社伝承","樹木伝承"],"cross_tags":["寺社伝承","樹木伝承"],"research_status":"researching"}
+  ],
+  "batch_notes":"松戸市索引巡回D。夜泣き石を泣く石・夜泣き石類型へ接続し、八尾比丘尼・人魚長寿譚を八百比丘尼人物ハブへ接続。広域伝承候補と人物ハブ候補は本文確認前の断定を避けresearchingとして保持。"
+}
