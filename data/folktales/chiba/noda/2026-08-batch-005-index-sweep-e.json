@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-005-index-sweep-e",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-sarukani-story","title":"さるかに","story_type":["昔話"],"cross_tags":["さるかに","昔話","全国比較候補"],"research_status":"researching","research_notes":"全国的な昔話類型との関係は、本文・採録地・内容確認後に比較する。"},
+    {"record_id":"chiba-noda-tsuunmaru","title":"通運丸","story_type":["河川伝承","地域史"],"cross_tags":["通運丸","水運","利根川","江戸川","舟運"],"research_status":"researching"},
+    {"record_id":"chiba-noda-bakuchi-buchi-tatsua","title":"バクチぶち辰っあ","story_type":["人物伝承候補","世間話候補"],"cross_tags":["バクチぶち辰っあ"],"research_status":"researching","research_notes":"題名から人物・実在性・話型を断定せず、名称タグとして保持する。"},
+    {"record_id":"chiba-noda-sarukani-wide-review","title":"さるかに・全国昔話比較候補","story_type":["話群","比較候補"],"cross_tags":["さるかに","昔話類型","広域比較"],"research_status":"researching","related_records":["chiba-noda-sarukani-story"]},
+    {"record_id":"chiba-noda-river-transport-network","title":"野田市の河川・舟運伝承ネットワーク","story_type":["話群","河川伝承","地域史"],"cross_tags":["利根川","江戸川","水運","舟運","関宿"],"research_status":"researching","related_records":["chiba-noda-tsuunmaru","chiba-noda-sekiyado-legends-network","chiba-noda-river-confluence-network"]}
+  ],
+  "batch_notes":"野田市一次索引巡回E。昔話系として『さるかに』を独立保持し、通運丸を河川・舟運の地域史ハブへ接続。題名だけでは性格を確定できない伝承は名称タグ先行・本文確認待ちとする。"
+}
