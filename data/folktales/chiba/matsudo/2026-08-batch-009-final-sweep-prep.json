@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-009-final-sweep-prep",
+  "municipality":"松戸市",
+  "phase":"final_sweep_preparation",
+  "status":"primary_collection_nearing_completion",
+  "review_buckets":[
+    {"name":"狐狸貉","action":"既存の狐狸貉話群に個別伝承・表記揺れを再接続し、本文確認待ちはresearchingとして保持"},
+    {"name":"蛇・大蛇・水辺","action":"馬橋・根木内・井戸・清水・おいてけ堀等を地域別recordのまま横断タグ整理"},
+    {"name":"幽霊・死者","action":"小金城・古戦場・官女・亡者・鐘などを歴史怪談群と接続"},
+    {"name":"人物ハブ","action":"徳川光圀、八百比丘尼、小林一茶候補などを全国横断ハブと照合"},
+    {"name":"類型ハブ","action":"ダイダラボッチ、おいてけ堀、泣く石・夜泣き石、血染めの茅候補などを確認"},
+    {"name":"寺社・地域史","action":"本土寺、妙福寺、一月寺、風早神社、小金城、小金ヶ原牧場などを現地確認可能なresearching候補として整理"}
+  ],
+  "cross_region_review":["市川市","浦安市","柏市","流山市","鎌ケ谷市","船橋市","野田市"],
+  "final_status_rule":"索引上の一次収集完了と本文・原典確認完了を区別する。本文未確認または現地確認候補はresearchingとして残し、松戸市全体の一次収集完了判定を妨げない。"
+}
