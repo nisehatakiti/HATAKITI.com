@@ -83,7 +83,20 @@ get_header();
             <?php hatakiti_render_divider(); ?>
             <h2 class="hk-review-heading">民話の概要</h2>
             <div class="hk-article-body">
-                <?php the_content(); ?>
+                <?php
+                // Deliberately NOT the_content(): post_content may hold the
+                // raw research summary/notes, which is internal working
+                // text (research status, dedup reasoning, etc.), not a
+                // visitor-facing description. public_summary is generated
+                // from structured, confirmed fields only — see
+                // hatakiti_generate_folktale_public_summary().
+                $public_summary = get_post_meta( $post_id, 'hatakiti_folktale_public_summary', true );
+                if ( $public_summary ) {
+                    echo wpautop( esc_html( $public_summary ) );
+                } else {
+                    echo '<p class="hk-card-excerpt">この民話についての紹介文はまだ準備中です。</p>';
+                }
+                ?>
             </div>
             <?php if ( ! empty( $ai['summary_generated'] ) ) : ?>
                 <p class="hk-credit-badge">本ページの概要は、出典資料を参考にAIが整理・要約したものです。文責：チャッピー</p>
@@ -117,8 +130,9 @@ get_header();
                                         <?php echo esc_html( $rel_id ); ?> <span class="hk-badge-soon">未登録</span>
                                     <?php endif; ?>
                                 </div>
-                                <?php if ( ! empty( $rel['note'] ) ) : ?>
-                                    <div class="hk-record-sub"><?php echo esc_html( $rel['note'] ); ?></div>
+                                <?php $rel_label = hatakiti_folktale_relationship_label( isset( $rel['relationship'] ) ? $rel['relationship'] : '' ); ?>
+                                <?php if ( $rel_label ) : ?>
+                                    <div class="hk-record-sub"><?php echo esc_html( $rel_label ); ?></div>
                                 <?php endif; ?>
                             </div>
                         </li>

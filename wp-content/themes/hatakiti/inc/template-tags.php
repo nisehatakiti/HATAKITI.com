@@ -114,13 +114,48 @@ function hatakiti_render_card( $post_id = null ) {
         <div class="hk-card-body">
             <div class="hk-card-type"><?php echo esc_html( $label ); ?></div>
             <h3 class="hk-card-title"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a></h3>
-            <div class="hk-card-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt( $post_id ), 40 ) ); ?></div>
+            <div class="hk-card-excerpt"><?php echo esc_html( wp_trim_words( hatakiti_card_excerpt( $post_id, $type ), 40 ) ); ?></div>
             <?php if ( $meta_line ) : ?>
                 <div class="hk-card-meta"><?php echo esc_html( $meta_line ); ?></div>
             <?php endif; ?>
         </div>
     </article>
     <?php
+}
+
+/**
+ * Card excerpt text, branched per post type. folktale is special-cased:
+ * its post_content may hold the raw research summary/notes (internal
+ * working text — research status, dedup reasoning, "本文未確認" etc.),
+ * which must never reach a public card. public_summary is generated from
+ * confirmed structured fields only — see
+ * hatakiti_generate_folktale_public_summary() in cpt-folktale.php.
+ */
+function hatakiti_card_excerpt( $post_id, $type ) {
+    if ( 'folktale' === $type ) {
+        $public_summary = get_post_meta( $post_id, 'hatakiti_folktale_public_summary', true );
+        return $public_summary ? $public_summary : '';
+    }
+    return get_the_excerpt( $post_id );
+}
+
+/**
+ * Public-facing phrasing for a folktale's related_records relationship
+ * type (docs/12 §14) — never the record's own internal `note` text, which
+ * may describe HATAKITI's data-management reasoning rather than something
+ * a visitor needs to read. Unconfirmed relationships are phrased as
+ * tentative, never asserted as fact.
+ */
+function hatakiti_folktale_relationship_label( $relationship ) {
+    $labels = array(
+        'same_tradition'   => '同じ伝承群に伝わる話です。',
+        'regional_variant' => '地域による異伝の可能性がある伝承です。',
+        'similar_theme'    => '似たテーマを持つ伝承です。',
+        'same_being'       => '同じ存在が登場する伝承です。',
+        'related_place'    => '関連する場所に伝わる伝承です。',
+        'variant_candidate' => '同じ話の可能性がある伝承です（内容が同じかどうかはまだ確認されていません）。',
+    );
+    return isset( $labels[ $relationship ] ) ? $labels[ $relationship ] : '関連する伝承です。';
 }
 
 /**

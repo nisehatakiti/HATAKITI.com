@@ -282,6 +282,16 @@ function hatakiti_import_folktale_record( $record ) {
 
     hatakiti_sync_folktale_being_terms( $post_id );
 
+    // Public-facing description, kept separate from post_content (which
+    // may hold AI's raw research summary/notes — internal, not for public
+    // display). An explicit "public_summary" in the JSON always wins;
+    // otherwise generate one from the structured fields just saved above.
+    if ( ! empty( $record['public_summary'] ) && is_string( $record['public_summary'] ) ) {
+        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', sanitize_textarea_field( $record['public_summary'] ) );
+    } else {
+        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', hatakiti_generate_folktale_public_summary( $post_id ) );
+    }
+
     return array(
         'record_id' => $record_id,
         'title'     => $title,

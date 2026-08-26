@@ -212,6 +212,7 @@ function hatakiti_register_folktale_meta() {
         'hatakiti_folktale_related_records_json',
         'hatakiti_folktale_ai_processing_json',
         'hatakiti_folktale_summary_based_on_json',
+        'hatakiti_folktale_public_summary',
     );
 
     foreach ( $string_fields as $key ) {
@@ -226,6 +227,68 @@ function hatakiti_register_folktale_meta() {
     }
 }
 add_action( 'init', 'hatakiti_register_folktale_meta' );
+
+/**
+ * Builds a visitor-facing description from already-stored STRUCTURED
+ * fields only (region / locations / story_type / beings / sources) —
+ * never from research_notes, research_status, or other internal
+ * reasoning text, which describes HATAKITI's data-management process
+ * ("本文未確認", "統合しない", "record" etc.) rather than the tradition
+ * itself and must not appear on public pages.
+ *
+ * Called automatically on import (see folktale-json-import.php) so every
+ * record gets a safe default; a human can always overwrite the result by
+ * hand later via the meta box.
+ */
+function hatakiti_generate_folktale_public_summary( $post_id ) {
+    $prefecture   = get_post_meta( $post_id, 'hatakiti_folktale_region_prefecture', true );
+    $municipality = get_post_meta( $post_id, 'hatakiti_folktale_region_municipality', true );
+    $area_name    = get_post_meta( $post_id, 'hatakiti_folktale_region_area_name', true );
+    $region_label = implode( '', array_filter( array( $prefecture, $municipality, $area_name ) ) );
+
+    $locations = json_decode( (string) get_post_meta( $post_id, 'hatakiti_folktale_locations_json', true ), true );
+    if ( ! is_array( $locations ) ) {
+        $locations = array();
+    }
+    $location_names = wp_list_pluck( array_filter( $locations, function ( $l ) { return ! empty( $l['name'] ); } ), 'name' );
+
+    $beings = json_decode( (string) get_post_meta( $post_id, 'hatakiti_folktale_beings_json', true ), true );
+    if ( ! is_array( $beings ) ) {
+        $beings = array();
+    }
+    $being_names = array_values( array_filter( array_map( function ( $b ) {
+        return ! empty( $b['name'] ) ? $b['name'] : ( ! empty( $b['normalized_name'] ) ? $b['normalized_name'] : '' );
+    }, $beings ) ) );
+
+    $story_type_terms = wp_get_object_terms( $post_id, 'folktale_story_type', array( 'fields' => 'names' ) );
+    $story_type_label = ( ! is_wp_error( $story_type_terms ) && $story_type_terms ) ? implode( '・', $story_type_terms ) : '';
+
+    $sources = json_decode( (string) get_post_meta( $post_id, 'hatakiti_folktale_sources_json', true ), true );
+    if ( ! is_array( $sources ) ) {
+        $sources = array();
+    }
+    $source_titles = wp_list_pluck( array_filter( $sources, function ( $s ) { return ! empty( $s['title'] ); } ), 'title' );
+
+    $place = $region_label ? $region_label : '日本各地';
+
+    $opening = $place . 'に伝わる';
+    if ( $being_names ) {
+        $opening .= implode( '・', array_slice( $being_names, 0, 3 ) ) . 'にまつわる';
+    }
+    $opening .= $story_type_label ? ( $story_type_label . 'です。' ) : '民話・伝承です。';
+
+    $sentences = array( $opening );
+
+    if ( $location_names ) {
+        $sentences[] = implode( '・', array_slice( array_values( $location_names ), 0, 4 ) ) . 'に関わる話として伝えられています。';
+    }
+
+    if ( $source_titles ) {
+        $sentences[] = array_values( $source_titles )[0] . 'などの資料に収録が確認されています。';
+    }
+
+    return implode( '', $sentences );
+}
 
 /**
  * 地域（都道府県）で絞り込む — see archive-folktale.php.
