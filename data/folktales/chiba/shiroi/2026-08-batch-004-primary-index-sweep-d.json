@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-004-primary-index-sweep-d",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-kiyoto-water-faith-network","title":"清戸の泉・龍神・弁財天伝承群","story_type":["水辺伝承","寺社伝承","民間信仰"],"cross_tags":["清戸","泉","龍神","弁財天","薬王寺","水辺伝承"],"research_status":"researching","research_notes":"清戸を地域地理ハブとして、泉・龍神・弁財天・寺院関連を横断接続。龍神と大蛇等の既存名称タグは本文確認後に比較する。"},
+    {"record_id":"chiba-shiroi-awashima-shrine-youth","title":"粟島神社と若者たち","story_type":["寺社伝承","民間信仰候補"],"cross_tags":["粟島神社","若者","信仰","祭礼候補"],"research_status":"researching","research_notes":"寺社名称と地域行事・若者集団の関係を本文確認対象として保持。"},
+    {"record_id":"chiba-shiroi-komori-castle","title":"板ばさみの小森城主","story_type":["歴史伝承候補"],"cross_tags":["小森城","城主","板ばさみ","城郭伝承"],"research_status":"researching","research_notes":"史実と伝承を分離して後続確認。城主の人物名が確認された場合のみ人物横断タグへ接続する。"},
+    {"record_id":"chiba-shiroi-fox-fire","title":"狐火・白井関連伝承","story_type":["怪異伝承候補"],"cross_tags":["狐火","狐","怪火","異光"],"research_status":"researching","research_notes":"狐の存在伝承とは別に現象名称として保持。柏市の狐・異光タグとの比較候補。"},
+    {"record_id":"chiba-shiroi-ichiku-nanatsugi-reservoir","title":"生食と七次の八幡溜","story_type":["地域伝承候補","地理伝承"],"cross_tags":["生食","七次","八幡溜","溜池","水辺伝承"],"research_status":"researching","research_notes":"地名・溜池を保持し、内容本文確認後に八幡信仰や水辺伝承の詳細タグを追加する。"}
+  ],
+  "batch_notes":"白井市一次索引巡回D。清戸の泉・龍神・弁財天を地域ハブとして整理し、粟島神社、小森城主、狐火、八幡溜関連を個別伝承候補として追加。"
+}
