@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"person_or_legendary_figure",
+  "person_id":"happyaku-bikuni",
+  "canonical_name":"八百比丘尼",
+  "aliases":["八百姫","八百比丘尼様"],
+  "hub_tags":["人物ハブ","伝説上の人物","広域伝承","長寿伝説"],
+  "historical_note":"各地に伝わる長寿女性の伝説的人物。地域ごとの八百比丘尼・八百姫伝承は同一人物とするか、類型上の人物像とするかを本文・伝承系統に応じて判定する。",
+  "linking_rule":"『八百比丘尼』『八百姫』および明確に対応する長寿伝説の人物はこのハブへ関連付ける。地域固有の異伝は個別recordを保持する。",
+  "known_connections":[{"prefecture":"千葉県","municipality":"松戸市","title":"八百比丘尼・八百姫伝承","status":"researching","related_place":"風早神社"}]
+}
