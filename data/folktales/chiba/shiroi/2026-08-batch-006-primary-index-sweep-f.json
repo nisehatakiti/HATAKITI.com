@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-006-primary-index-sweep-f",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "source":"千葉県立図書館『千葉県の民話 白井市』索引",
+  "records":[
+    {"record_id":"chiba-shiroi-imai-name-origin","title":"今井の名の由来","story_type":["地名由来伝承"],"cross_tags":["今井","地名由来"]},
+    {"record_id":"chiba-shiroi-okame-stone","title":"おかめ石","story_type":["石伝承候補"],"cross_tags":["おかめ","石","駒形大明神"]},
+    {"record_id":"chiba-shiroi-cut-koshin","title":"切られ庚申","story_type":["信仰伝承","石造物伝承候補"],"cross_tags":["庚申","鳥見神社","富塚"]},
+    {"record_id":"chiba-shiroi-gonbei-inari","title":"ごんべい稲荷の話","story_type":["稲荷伝承","寺社伝承候補"],"cross_tags":["稲荷","中","てがっぱら"]},
+    {"record_id":"chiba-shiroi-saifukuji-child-rearing-nyorai","title":"西福寺の子育如来","story_type":["寺社伝承","信仰伝承"],"cross_tags":["西福寺","子育如来","谷田"]},
+    {"record_id":"chiba-shiroi-sawayama-kamakura-bridge","title":"沢山と鎌倉橋","story_type":["地理伝承候補","地名伝承"],"cross_tags":["沢山","鎌倉橋","谷田","清戸","草薙神社","宗像神社"]}
+  ],
+  "batch_notes":"白井市索引から次の個別伝承を追加。地名由来、石、庚申、稲荷、寺社信仰、橋・地形伝承が中心。"
+}
