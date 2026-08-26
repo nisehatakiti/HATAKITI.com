@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-shiroi-ikezuki-nanatsugi-hachimandame",
+  "municipality": "白井市",
+  "title": "生食と七次の八幡溜",
+  "alternate_titles": ["生食と八幡溜", "生食", "池月", "生接", "生月", "生喰"],
+  "research_status": "deep_dived",
+  "story_type": ["動物伝承", "名馬伝承", "地名・場所伝承", "信仰伝承"],
+  "cross_tags": ["生食", "池月", "名馬", "七次", "八幡溜", "八幡神社", "天神八幡神社", "中野牧", "野馬", "根", "野中清水"],
+  "sources": [
+    {
+      "source_id": "SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
+      "author_or_publisher": "白井市郷土資料館",
+      "publication_year_or_date": "2002",
+      "source_type": "local_history_book",
+      "url_or_identifier": "千葉県立図書館民話索引掲載書誌情報",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "「生食と七次の八幡溜」の収録資料として確認。本文は未直接確認。"
+    },
+    {
+      "source_id": "SRC-CHIBA-LIB-SHIROI-INDEX",
+      "title": "千葉県の民話 白井市",
+      "author_or_publisher": "千葉県立図書館",
+      "publication_year_or_date": "web",
+      "source_type": "library_index",
+      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "題名、地域、関連地、収録資料の索引確認。本文そのものではない。"
+    },
+    {
+      "source_id": "SRC-INBA-GUNSHI-1913",
+      "title": "千葉県印旛郡誌 後篇（第十九 白井村誌）",
+      "author_or_publisher": "千葉県印旛郡役所",
+      "publication_year_or_date": "1913",
+      "source_type": "local_history",
+      "url_or_identifier": "白井市郷土史の会が引用する資料情報",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "生食と七次周辺の伝承・天神八幡神社に関する記述の参照資料として確認。"
+    },
+    {
+      "source_id": "SRC-SHIROI-CITY-HACHIMANDAME",
+      "title": "八幡溜野馬除土手（市指定文化財）",
+      "author_or_publisher": "白井市",
+      "publication_year_or_date": "web",
+      "source_type": "municipal_cultural_property",
+      "url_or_identifier": "https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun004/1521792781678.html",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "八幡溜周辺と中野牧・野馬除土手の歴史的背景を確認。"
+    },
+    {
+      "source_id": "SRC-SHIROI-KYODO-MUSEUM-IKEZUKI",
+      "title": "白井市郷土資料館 展示：生食に関連した浮世絵",
+      "author_or_publisher": "白井市郷土資料館",
+      "publication_year_or_date": "2020-2021",
+      "source_type": "museum_exhibition",
+      "url_or_identifier": "https://www.center.shiroi.chiba.jp/kyoudo/exhibition.html",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "白井市内で伝えられる生食の場所的伝承を確認。"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "text": "「生食と七次の八幡溜」は、白井市根を地域とし、七次新田の字野中清水（西白井駅付近）、八幡溜、七次村を関連地として千葉県立図書館の索引に記録されている。",
+      "source_ids": ["SRC-CHIBA-LIB-SHIROI-INDEX", "SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-002",
+      "text": "白井市郷土資料館は、『平家物語』の宇治川の先陣争いに登場する名馬「生食」について、現在の西白井駅付近で遊んでいたという伝説が残るとしている。",
+      "source_ids": ["SRC-SHIROI-KYODO-MUSEUM-IKEZUKI"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-003",
+      "text": "白井市郷土史の会は『千葉県印旛郡誌』を参照し、生食が源頼朝から佐々木高綱に与えられる以前、白井市周辺を駆け回り、根字野中清水から八幡溜周辺で見かけられたことから「八幡様の使い」と信じられたと紹介している。",
+      "source_ids": ["SRC-INBA-GUNSHI-1913"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-004",
+      "text": "天神八幡神社は現在大日神社境内にあり、白井市郷土史の会が『千葉県印旛郡誌』を引用して紹介するところでは、祭神として菅原道真と生食が伝えられている。",
+      "source_ids": ["SRC-INBA-GUNSHI-1913"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-005",
+      "text": "白井市は、八幡溜野馬除土手を市指定文化財としており、この周辺が江戸時代の中野牧に関係する地域であることを説明している。",
+      "source_ids": ["SRC-SHIROI-CITY-HACHIMANDAME"],
+      "interpretation": false
+    }
+  ],
+  "related_regions": ["柏市周辺（深井村小袋）", "市川市国分付近", "松戸市高塚新田", "安房地域"],
+  "related_items": [
+    {
+      "relation_type": "text_comparison_needed",
+      "target": "白井の伝説と文化財に収録された本文",
+      "note": "本文そのものを直接確認していないため、現在のrecordは複数の確認資料から裏付けられる事項を中心に構成している。"
+    }
+  ],
+  "research_notes": "生食の伝承は白井市だけで閉じず、出生地・活動地・最期の地など複数地域に関連づけられている。白井の民話索引上の関連地と、市川・松戸・柏・南房総の索引上の関連地が同じ題名で参照されることは確認できるが、各地域の記述を一つの本文として勝手に統合してはいない。事実として確認できる場所伝承、信仰、史跡の情報と、原典本文未確認の部分を区別して保存する。"
+}
