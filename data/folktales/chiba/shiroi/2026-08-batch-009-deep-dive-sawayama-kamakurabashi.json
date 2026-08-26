@@ -1,0 +1,44 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-009-deep-dive-sawayama-kamakurabashi",
+  "municipality":"白井市",
+  "phase":"deep_dive",
+  "source_status":"deep_researched",
+  "records":[
+    {
+      "record_id":"chiba-shiroi-sawayama-kamakurabashi-deep",
+      "title":"沢山と鎌倉橋（沢山の泉と日本武尊伝承）",
+      "story_type":["地理伝承","水辺伝承","英雄伝承","神社伝承"],
+      "cross_tags":["沢山","沢山の泉","鎌倉橋","草薙神社","日本武尊","泉","谷田","清戸"],
+      "sources":[
+        {"source_id":"SRC-SHIROI-009-001","title":"白井の伝説と文化財　平成13年度企画展記録集","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2002","source_type":"local_history_book","url_or_identifier":"千葉県立図書館民話索引に書誌情報掲載","accessed_date":"2026-08-26","reliability_notes":"一次的な地域資料集。本文の詳細確認は今後の原資料確認対象。"},
+        {"source_id":"SRC-SHIROI-009-002","title":"沢山の泉と日本武尊の伝説","author_or_publisher":"白井市郷土史の会","publication_year_or_date":"2026","source_type":"community_source","url_or_identifier":"https://ameblo.jp/shiroi-kyoudo/entry-12948241124.html","accessed_date":"2026-08-26","reliability_notes":"地域郷土史団体による解説。本文中で1913年『千葉縣印旛郡誌』および2002年『白井の伝説と文化財』を参考・引用文献として明示。"},
+        {"source_id":"SRC-SHIROI-009-003","title":"千葉県の民話　白井市","author_or_publisher":"千葉県立図書館","publication_year_or_date":"現行ウェブ資料","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html","accessed_date":"2026-08-26","reliability_notes":"伝承の存在・書誌・地域根拠の確認用。本文そのものの典拠ではない。"}
+      ],
+      "claims":[
+        {"claim_id":"claim-001","text":"『沢山と鎌倉橋』は白井市谷田・清戸に関係する伝承として、白井市郷土資料館の『白井の伝説と文化財』に収録されている。","source_ids":["SRC-SHIROI-009-001","SRC-SHIROI-009-003"],"interpretation":false},
+        {"claim_id":"claim-002","text":"沢山の泉には日本武尊を祀る草薙神社があり、泉と神社を中心に日本武尊伝承が結び付けられている。","source_ids":["SRC-SHIROI-009-002"],"interpretation":false},
+        {"claim_id":"claim-003","text":"白井市郷土史の会の解説では、この伝承は下総地域では比較的少ない日本武尊伝承の一例として位置付けられている。","source_ids":["SRC-SHIROI-009-002"],"interpretation":true},
+        {"claim_id":"claim-004","text":"現段階では、沢山の泉・草薙神社・日本武尊を一つの伝承クラスターとして扱い、鎌倉橋の個別由来や伝承本文の細部は原資料確認後に追加する。","source_ids":["SRC-SHIROI-009-001","SRC-SHIROI-009-002"],"interpretation":true}
+      ],
+      "research_notes":"Wikipedia型の出典付き深掘りの最初の適用例。地域資料集・県立図書館索引・地域郷土史団体の解説を区別して保存。次段階で『千葉縣印旛郡誌』および『白井の伝説と文化財』本文の確認を行う。"
+    },
+    {
+      "record_id":"chiba-shiroi-saifukuji-child-rearing-deep-prep",
+      "title":"西福寺の子育如来／子育て信仰",
+      "story_type":["寺社伝承","民間信仰","子育て信仰"],
+      "cross_tags":["西福寺","谷田","子育如来","子育て観音","乳房公孫樹","母乳信仰"],
+      "sources":[
+        {"source_id":"SRC-SHIROI-009-010","title":"西福寺の公孫樹（市指定文化財）","author_or_publisher":"白井市","publication_year_or_date":"現行ウェブ資料","source_type":"official_archive","url_or_identifier":"https://www.city.shiroi.chiba.jp/manabu/rekishi/r03/1421924329812.html","accessed_date":"2026-08-26","reliability_notes":"実物文化財と子育て信仰の説明について高信頼。"},
+        {"source_id":"SRC-SHIROI-009-011","title":"白井の伝説と文化財　平成13年度企画展記録集","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2002","source_type":"local_history_book","url_or_identifier":"千葉県立図書館民話索引に書誌情報掲載","accessed_date":"2026-08-26","reliability_notes":"索引上で『西福寺の子育如来』の収録を確認。本文詳細は原資料確認待ち。"}
+      ],
+      "claims":[
+        {"claim_id":"claim-010","text":"谷田の西福寺には、母乳の出を願う人々が信仰した『乳房公孫樹』があり、近郷や戦前には東京からも参詣者が訪れたと白井市が説明している。","source_ids":["SRC-SHIROI-009-010"],"interpretation":false},
+        {"claim_id":"claim-011","text":"『西福寺の子育如来』は『白井の伝説と文化財』に収録された白井市の伝承題名として確認できる。","source_ids":["SRC-SHIROI-009-011"],"interpretation":false},
+        {"claim_id":"claim-012","text":"現段階では『子育如来』の本文と市指定文化財の『子育て観音／乳房公孫樹』を完全に同一の伝承として断定せず、同じ西福寺の子育て信仰クラスターとして保持する。","source_ids":["SRC-SHIROI-009-010","SRC-SHIROI-009-011"],"interpretation":true}
+      ],
+      "research_notes":"実物文化財を伴うため深掘り優先度を上げる。次段階で『子育如来』本文と観音・公孫樹信仰の関係を確認する。"
+    }
+  ],
+  "batch_notes":"白井市深掘り第1弾。Wikipedia型の sources / claims 形式を適用し、沢山と鎌倉橋、および西福寺の子育如来を出典付きで整理。"
+}
