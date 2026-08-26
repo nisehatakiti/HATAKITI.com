@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"motif_or_story_type",
+  "motif_id":"oiteke-bori",
+  "canonical_name":"おいてけ堀",
+  "aliases":["置いてけ堀","置いてけぼり"],
+  "hub_tags":["類型ハブ","水辺伝承","怪異譚","魚を置いていけ"],
+  "classification_note":"本所を代表例とする『おいてけ堀』型の水辺怪異。地域ごとの伝承は個別recordとして保持し、同名・同系統の怪異譚をこの類型ハブへ接続する。名称が異なる場合でも、漁獲物や持ち物を『置いていけ』と要求する水辺の怪異は本文確認後に類型接続候補とする。",
+  "linking_rule":"『おいてけ堀』と明示される伝承は原則このハブへ接続する。別名・異名の場合は、水辺・怪異の性質・要求内容・結末を確認してから関連付ける。",
+  "known_connections":[
+    {"prefecture":"東京都","municipality":"墨田区","title":"本所おいてけ堀","status":"representative_tradition"},
+    {"prefecture":"千葉県","municipality":"松戸市","record_id":"chiba-matsudo-oiteke-bori","title":"おいてけ堀","status":"researching","related_places":["根木内"],"related_regions":["柏市"]}
+  ],
+  "research_status":"hub_ready"
+}
