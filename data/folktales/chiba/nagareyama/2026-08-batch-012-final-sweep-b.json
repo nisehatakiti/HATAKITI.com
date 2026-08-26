@@ -1,0 +1,28 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-012-final-sweep-b",
+  "municipality":"流山市",
+  "phase":"final_sweep",
+  "completion_state":"index_based_primary_collection_complete",
+  "hub_review":{
+    "person_tags":["小林一茶","左甚五郎","平時忠"],
+    "name_tags":["火車"],
+    "river_and_geography_tags":["江戸川","利根川","坂東太郎","赤城山"],
+    "motif_tags":["血染めの茅","鞍掛けの松"],
+    "being_tags":["犬","鴨","幽霊・死者"],
+    "regional_hubs":["思井・小金城周辺","鰭ヶ崎・東福寺","江戸川・利根川流域"]
+  },
+  "cross_region_connections":[
+    {"region":"松戸市","themes":["思井","小金城伝承圏","忠犬小金丸","犬塚","江戸川"]},
+    {"region":"柏市","themes":["布施弁天","小林一茶","利根川流域"]},
+    {"region":"野田市","themes":["江戸川・利根川流域","血染めの茅"]},
+    {"region":"群馬県","themes":["赤城山・赤城神社伝承接続"]}
+  ],
+  "verification_queue":[
+    "本文・原典確認",
+    "同名伝承の比較",
+    "人物タグの広域照合",
+    "現地の寺社・碑・城跡確認"
+  ],
+  "summary":"流山市について、索引ベースの一次収集、名称・人物・地理・類型・存在タグの一次整理、および周辺地域との接続整理を完了。内容分類や同一系統判定は検証キューへ分離し、後続研究で更新する。"
+}
