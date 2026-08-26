@@ -1,0 +1,63 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-awashima-shrine-young-men",
+  "municipality":"白井市",
+  "location":"名内",
+  "title":"粟島神社と若者たち（粟島さま）",
+  "source_status":"researched",
+  "story_type":["寺社伝承","信仰伝承"],
+  "cross_tags":["粟島神社","粟島さま","名内","淡島信仰","針供養候補"],
+  "sources":[
+    {
+      "source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title":"白井の伝説と文化財 平成十三年度企画展記録集",
+      "author_or_publisher":"白井市郷土資料館",
+      "publication_year_or_date":"2002",
+      "source_type":"local_history_book",
+      "url_or_identifier":"千葉県立図書館『千葉県の民話 白井市』掲載書誌情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"「粟島神社と若者たち（粟島さま）」の収録資料として確認。本文は未確認。"
+    },
+    {
+      "source_id":"SRC-SHIROI-CITY-KOHO-AWASHIMA",
+      "title":"名内の粟島神社",
+      "author_or_publisher":"白井市（広報資料PDF）",
+      "publication_year_or_date":"公開PDF",
+      "source_type":"official_archive",
+      "url_or_identifier":"https://www.city.shiroi.chiba.jp/material/files/group/1/20140625111355.pdf",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"名内地区の粟島神社について確認できる白井市公開資料。"
+    },
+    {
+      "source_id":"SRC-SHIROI-CITY-MEETING-NAUCHI",
+      "title":"白井第二小学校区まちづくり協議会設立準備会第2回会議事録（概要）",
+      "author_or_publisher":"白井市",
+      "publication_year_or_date":"2021頃公開",
+      "source_type":"official_archive",
+      "url_or_identifier":"https://www.city.shiroi.chiba.jp/material/files/group/11/dainikaigijiroku.pdf",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"名内の粟島神社で1月3日の祭事と3月3日の人形供養が行われ、地元・近隣から人形やひな人形が持ち込まれることを確認。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"「粟島神社と若者たち（粟島さま）」は、白井市名内を地域として『白井の伝説と文化財 平成十三年度企画展記録集』に収録されている。",
+      "source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"名内地区には粟島神社が現存し、地域の史跡・文化資源として扱われている。",
+      "source_ids":["SRC-SHIROI-CITY-KOHO-AWASHIMA","SRC-SHIROI-CITY-MEETING-NAUCHI"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-003",
+      "text":"名内の粟島神社では、1月3日の祭事および3月3日の節句に人形供養が行われ、地元や近隣から人形・ひな人形が持ち込まれると白井市資料に記録されている。",
+      "source_ids":["SRC-SHIROI-CITY-MEETING-NAUCHI"],
+      "interpretation":false
+    }
+  ],
+  "research_notes":"伝承題名に含まれる「若者たち」の具体的行為・登場人物・伝承の筋は、収録資料本文を直接確認するまで補完しない。神社の現存・祭事情報と、伝承本文の内容は別情報として管理する。民間サイト等で確認できる針供養・淡島信仰の情報は比較候補に留め、正式な本文主張には採用していない。"
+}
