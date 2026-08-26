@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-009-index-sweep-i",
+  "municipality":"流山市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-bando-taro-river-tag","title":"坂東太郎（利根川）関連伝承","story_type":["河川伝承","地理伝承"],"cross_tags":["坂東太郎","利根川","河川伝承","江戸川水系"],"research_status":"researching","research_notes":"坂東太郎は人名ではなく利根川の異称として扱う。名称一致の横断タグではあるが人物分類には入れない。"},
+    {"record_id":"chiba-nagareyama-akagi-cross-region-group","title":"赤城山・流山地名由来接続","story_type":["地名由来","山岳伝承","広域伝承"],"cross_tags":["赤城山","流山","地名由来","群馬県接続候補"],"research_status":"researching","related_records":["chiba-nagareyama-akagi-yama-origin","chiba-nagareyama-nagareyama-akagi"]},
+    {"record_id":"chiba-nagareyama-blood-kaya-network","title":"血染めの茅・江戸川北部接続","story_type":["広域伝承","植物伝承"],"cross_tags":["血染めの茅","下総伝承圏","植物伝承"],"related_regions":["松戸市","流山市","柏市","野田市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-name-geography-policy","title":"名称タグの地理・人物・存在分離方針","story_type":["データ整理"],"cross_tags":["タグ設計","分類保留"],"research_status":"active","research_notes":"同名語を横断タグ化する際も、その語が人物名・地名・河川名・異称・存在名のどれかを資料上確認できる場合はその基本属性を保持する。不明な内容分類のみを後続判断に保留する。坂東太郎は河川異称として扱う。"}
+  ],
+  "batch_notes":"流山市一次索引巡回I。坂東太郎の誤分類を修正し、利根川の異称として河川タグへ移行。名称タグ先行方針について、基本的な指示対象の属性と内容分類を区別するルールを追加。"
+}
