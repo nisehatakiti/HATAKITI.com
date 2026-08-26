@@ -1,0 +1,62 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-kirare-koshin-deep-dive",
+  "municipality":"白井市",
+  "title":"切られ庚申",
+  "source_status":"deep_researched",
+  "story_type":["怪異伝承","道中伝承","文化財伝承"],
+  "cross_tags":["切られ庚申","鳥見神社","富塚","鮮魚道","火の玉","鮮魚師","庚申塔"],
+  "sources":[
+    {
+      "source_id":"SRC-SHIROI-CITY-KIRARE-KOSHIN",
+      "title":"鳥見神社の切られ庚申（市指定文化財）",
+      "author_or_publisher":"白井市",
+      "publication_year_or_date":"web",
+      "source_type":"official_archive",
+      "url_or_identifier":"https://www.city.shiroi.chiba.jp/manabu/rekishi/r03/1421915406687.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"白井市公式の市指定文化財解説。伝承内容と文化財の現況を確認。"
+    },
+    {
+      "source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title":"白井の伝説と文化財　平成十三年度企画展記録集",
+      "author_or_publisher":"白井市郷土資料館",
+      "publication_year_or_date":"2002",
+      "source_type":"local_history_book",
+      "url_or_identifier":"千葉県立図書館『千葉県の民話 白井市』収録資料情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"「切られ庚申」の収録資料として確認。本文は現段階では直接未確認。"
+    },
+    {
+      "source_id":"SRC-CHIBA-LIB-SHIROI-INDEX",
+      "title":"千葉県の民話 白井市",
+      "author_or_publisher":"千葉県立図書館",
+      "publication_year_or_date":"web",
+      "source_type":"library_index",
+      "url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"題名、収録資料、地域名、鳥見神社との関係を確認する索引。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"富塚地区の鳥見神社参道脇には複数の庚申塔があり、「切られ庚申」と呼ばれる庚申塔は安山岩製の板碑型三猿庚申塔である。",
+      "source_ids":["SRC-SHIROI-CITY-KIRARE-KOSHIN"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"庚申塔の背側面右側には大きくえぐられた部分があり、伝承では夜中に火の玉に襲われた鮮魚師が刀で切り付けた刃跡だとされる。",
+      "source_ids":["SRC-SHIROI-CITY-KIRARE-KOSHIN"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-003",
+      "text":"この庚申塔は、我孫子から白井を経て松戸へ続いた鮮魚道の脇に建っていたとされる。",
+      "source_ids":["SRC-SHIROI-CITY-KIRARE-KOSHIN"],
+      "interpretation":false
+    }
+  ],
+  "research_notes":"公式文化財解説で伝承の骨格を確認できたため deep_researched とした。火の玉の正体や狐火との関係について、公式資料は同一視していないため関連付けない。『白井の伝説と文化財』本文を直接確認できた場合は、異同を追記する。"
+}
