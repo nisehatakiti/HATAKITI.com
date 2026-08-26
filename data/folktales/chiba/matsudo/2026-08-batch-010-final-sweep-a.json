@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-010-final-sweep-a",
+  "municipality":"松戸市",
+  "phase":"final_sweep",
+  "records":[
+    {"record_id":"chiba-matsudo-kokudai-battlefield-group","title":"国府台・江戸川沿岸の古戦場伝承接続","story_type":["地域史","古戦場伝承"],"cross_tags":["古戦場","地域ハブ候補","市川市接続"],"related_regions":["市川市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-komagata-wild-horse","title":"駒形の暴れ馬","story_type":["動物伝承","地域史"],"beings":["馬"],"cross_tags":["動物伝承","馬伝承","小金ヶ原牧場"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-koganehara-development","title":"小金ヶ原開拓・牧場伝承群","story_type":["地域史","開拓伝承"],"cross_tags":["地域ハブ候補","開拓","牧場"],"research_status":"researching","related_records":["chiba-matsudo-komagata-wild-horse","chiba-matsudo-local-history-ghost-group"]},
+    {"record_id":"chiba-matsudo-buried-treasure","title":"田中三左衛門の埋蔵金","story_type":["人物伝承","埋蔵金伝説"],"cross_tags":["人物伝承候補","埋蔵金伝説"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-journey-swordsman-grave","title":"御子神典膳に殺された旅の剣客の墓","story_type":["人物伝承","墓伝承","歴史伝承"],"cross_tags":["人物ハブ候補","墓伝承","剣客伝説"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-temple-flowers","title":"本土寺・妙福寺の花寺伝承","story_type":["寺社伝承","植物伝承"],"cross_tags":["寺社伝承","地域史","花の名所"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-corn-wind","title":"風にそよぐトウモロコシ","story_type":["生活伝承","世間話"],"cross_tags":["生活伝承","農耕民俗"],"research_status":"researching"}
+  ],
+  "deduplication_policy":"同じ題名でも地域・人物・伝承内容が異なる場合は統合しない。明確な表記揺れまたは同一伝承と確認できる場合のみ統合する。",
+  "completion_state":"final_sweep_in_progress"
+}
