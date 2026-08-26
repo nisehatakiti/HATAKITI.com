@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-onbu-sareta-mujina",
+  "municipality":"市川市",
+  "title":"おんぶされたムジナ",
+  "research_status":"story_matched",
+  "tags":["ムジナ","狸","動物怪異","化かし","赤子","行徳","本行徳","市川市"],
+  "sources":[
+    {"title":"お母さんがきいたむかしばなし","publication_year_or_date":"1986","source_type":"book","note":"千葉県立図書館民話索引で市川市・行徳の収録題名として確認。"},
+    {"title":"現代民話考 11 狸・むじな","author_or_publisher":"松谷みよ子","source_type":"book","note":"本行徳の、赤子の泣き声に化けたムジナを老人が背負って帰る話として確認。"}
+  ],
+  "story_identity":{"status":"treated_as_same_story","matched_source":"現代民話考 11 狸・むじな","reason":"題名は完全一致しないが、行徳／本行徳という伝承圏と『背負われたムジナ』という中心的筋が一致するため、同一伝承として扱う。"},
+  "research_notes":"ユーザー判断により、松谷みよ子『現代民話考 11 狸・むじな』掲載の本行徳のムジナ話を『おんぶされたムジナ』と同一伝承として正本に採用。今後、原典本文が確認できた場合は異同比較を追記する。"
+}
