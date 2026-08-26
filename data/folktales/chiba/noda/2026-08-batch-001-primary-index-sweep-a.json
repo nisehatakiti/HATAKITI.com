@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-001-primary-index-sweep-a",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "source":"千葉県立図書館・千葉県の民話 野田市",
+  "records":[
+    {"record_id":"chiba-noda-kappa-pond","title":"河童池","story_type":["水辺伝承"],"cross_tags":["河童","河童池"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kappa-pond-master","title":"カッパ池の主","story_type":["水辺伝承"],"cross_tags":["河童","河童池"],"research_status":"researching","related_regions":["野田市","柏市"]},
+    {"record_id":"chiba-noda-kappa-pond-strange","title":"カッパの池の怪","story_type":["水辺伝承","怪異譚"],"cross_tags":["河童","河童池"],"research_status":"researching","location_notes":"野田の下河岸"},
+    {"record_id":"chiba-noda-kappa-tail","title":"河童のしっぽ","story_type":["動物・存在伝承候補"],"cross_tags":["河童"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kasha-jigenin","title":"火車・却刃","story_type":["名称タグ保留"],"cross_tags":["火車"],"research_status":"researching","location_notes":"木間ヶ瀬・慈眼院","research_notes":"火車は名称タグのみで横断接続し、妖怪・猫・葬送などの内容分類は後続確認に保留。"},
+    {"record_id":"chiba-noda-kasha-neko-otra","title":"火車猫おトラ","story_type":["名称タグ保留"],"cross_tags":["火車"],"research_status":"researching","related_regions":["柏市","市川市","野田市","旧本埜村"],"research_notes":"題名に猫が明示されるが、火車タグとの接続のみを先行し、他の火車伝承との同一系統判定は後続確認に保留。"},
+    {"record_id":"chiba-noda-masakado-story","title":"将門さま語り伝え","story_type":["人物伝承","歴史伝承"],"cross_tags":["平将門","将門","人物タグ","木間ヶ瀬"],"research_status":"researching"},
+    {"record_id":"chiba-noda-bando-taro","title":"関東第一のあばれ川、坂東太郎と流山","story_type":["河川伝承","地理伝承"],"cross_tags":["坂東太郎","利根川","河川伝承","流山市接続"],"research_status":"researching","research_notes":"坂東太郎は利根川の異称として扱い、人物タグには入れない。"}
+  ],
+  "hub_candidates":["河童","火車","平将門","利根川・坂東太郎","木間ヶ瀬"],
+  "batch_notes":"野田市一次巡回A。河童伝承が複数まとまって出現するため、河童を強い名称・存在タグとして先行接続。火車は流山市と同様に名称タグのみで整理。木間ヶ瀬は将門・火車など複数伝承が集まる地域ハブ候補として保留。"
+}
