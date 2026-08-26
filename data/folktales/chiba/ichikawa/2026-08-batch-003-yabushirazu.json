@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "batch_id": "chiba-ichikawa-2026-08-batch-003-yabushirazu",
   "area": {
     "prefecture": "千葉県",
@@ -10,16 +10,34 @@
     {
       "record_id": "chiba-ichikawa-yawata-yabushirazu-001",
       "title": "八幡のやぶしらず",
-      "research_status": "reviewed",
+      "research_status": "deep_researched",
       "story_group": "八幡不知森伝承群",
-      "story_type": ["伝説", "怪異", "場所伝承"],
-      "subjects": ["禁足地", "森", "怪異"],
-      "cross_tags": ["禁足地", "祟り", "迷い", "歴史伝説", "平将門", "平貞盛"],
-      "summary": "市川市八幡に残る八幡不知森を中心とする禁足地伝承。立ち入りを禁じる理由について、日本武尊、葛飾八幡宮、平将門、平貞盛の八門遁甲、地域の入会地など複数の説明が伝えられる。単一の由来に固定せず、場所に歴史・信仰・怪異の説明が重層した伝承として扱う。",
-      "places": ["市川市八幡", "八幡不知森"],
-      "research_missing": ["異伝ごとの成立関係", "各由来の典拠整理"],
-      "verification_locations": [{"type":"library","name":"市川市立図書館","reason":"地域資料・民話資料の確認"},{"type":"local_site","name":"八幡不知森","reason":"現地伝承地の確認"}],
-      "sources": [{"title":"市川市公式資料：八幡不知森関連資料","publisher":"市川市","url":"https://www.city.ichikawa.lg.jp/page/3954.html","source_status":"confirmed"}]
+      "story_type": ["伝説", "怪異", "場所伝承", "禁足地伝承"],
+      "subjects": ["禁足地", "森", "怪異", "不知森神社"],
+      "cross_tags": ["禁足地", "祟り", "迷い", "歴史伝説", "平将門", "平貞盛", "葛飾八幡宮", "入会地"],
+      "summary": "市川市八幡の八幡不知森を中心とする禁足地伝承。『成田参詣記』『下総名勝図絵』など江戸期の地誌・紀行にも、森に入れば神の祟りがあるため立入を禁じる場所として記録される。由来は単一ではなく、日本武尊の陣所跡、葛飾八幡宮の旧鎮座地、平将門軍の鬼門、平貞盛の八門遁甲と死門、将門方の近習が土人形となった地、行徳の入会地で八幡の住民が入れなかったための『八幡知らず』など、複数の説明が重層している。単一の起源を採用せず、歴史的土地利用・八幡信仰・将門伝説・怪異譚が重なって形成された場所伝承として扱う。",
+      "places": ["市川市八幡", "八幡不知森", "不知森神社", "葛飾八幡宮"],
+      "historical_layers": [
+        {"layer": "江戸期以前からの禁足地認識", "evidence": "『成田参詣記』『下総名勝図絵』等に、森へ入れば神の祟りがあるため立入を禁じる場所として記録される。"},
+        {"layer": "地名・土地利用説", "evidence": "森のみが行徳側の入会地で八幡の住民がみだりに入れなかったため『八幡知らず』と呼ばれ、それが藪知らずになったとする説明が伝わる。"},
+        {"layer": "八幡信仰説", "evidence": "往古の葛飾八幡宮鎮座地・勧請地とする伝承がある。"},
+        {"layer": "将門・貞盛伝説", "evidence": "将門軍の鬼門、将門方近習の土人形、平貞盛の八門遁甲と死門など、天慶の乱に関わる複数の説明が伝わる。史実と伝承は分離して扱う。"},
+        {"layer": "近世以降の名所化", "evidence": "安政4年（1857）建立の『不知八幡森』碑があり、江戸後期には訪問地として知られていたことが市川市資料で確認できる。"}
+      ],
+      "research_missing": ["各由来説の初出年代比較", "日本武尊説・将門近習土人形説・八門遁甲説の系譜整理", "入会地説を裏付ける一次史料の追加確認"],
+      "verification_locations": [
+        {"type": "library", "name": "市川市立図書館", "reason": "『市川のむかし話』『市川市史』等の地域資料・民話資料の確認"},
+        {"type": "local_site", "name": "八幡不知森", "reason": "現地伝承地・石碑・不知森神社の確認"}
+      ],
+      "sources": [
+        {"title": "市川のむかし話 改訂新版", "author_or_editor": "市川民話の会 編著", "publisher": "市川民話の会", "year": 2012, "role": "modern_folktale_collection"},
+        {"title": "市川市立図書館 地域資料レファレンス 2 八幡のやぶ知らず", "publisher": "市川市立図書館", "role": "source_guide_and_excerpt", "url": "https://www.city.ichikawa.lg.jp/common/000276588.pdf"},
+        {"title": "市川市公式資料：葛飾八幡宮と文化財", "publisher": "市川市", "role": "official_local_history_summary", "url": "https://www.city.ichikawa.lg.jp/page/7428.html"},
+        {"title": "市川市公式資料：八幡・菅野界隈", "publisher": "市川市", "role": "official_local_history_summary", "url": "https://www.city.ichikawa.lg.jp/page/3954.html"},
+        {"title": "成田参詣記", "role": "historical_text", "note": "『市川市史 第六巻下』に引用・収録された八幡不知森関連記述を参照。"},
+        {"title": "下総名勝図絵", "role": "historical_text", "note": "『房総叢書』第8巻『紀行及日記』（房総叢書刊行会編、1942）収録の八幡不知森記述を参照。"}
+      ],
+      "research_notes": "Wikipedia等の二次まとめではなく、市川市公式資料、市川市立図書館のレファレンス資料、およびそこで特定される『市川のむかし話』『成田参詣記』『下総名勝図絵』を参照情報として整理。複数の由来説は相互に排他的な『正解』としてではなく、同じ禁足地に後世まで重層した説明として記録する。"
     },
     {
       "record_id": "chiba-ichikawa-yawata-yabushirazu-002",
