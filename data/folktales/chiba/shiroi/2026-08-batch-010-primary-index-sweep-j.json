@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-010-primary-index-sweep-j",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-gongen-market-zurukoropyon","title":"権現様の市と「ずるコロピョン」","story_type":["地域伝承","市場伝承候補","信仰伝承候補"],"cross_tags":["権現様","市","ずるコロピョン","飯綱権現","飯綱神社","八千代市","萱田"],"research_status":"researching","research_notes":"白井と八千代側をまたぐ索引上の横断伝承として保持。固有語「ずるコロピョン」は表記を独立タグ化し、意味や話型を本文確認後に確定する。"},
+    {"record_id":"chiba-shiroi-okame-stone","title":"おかめ石","story_type":["石の伝承","信仰伝承候補"],"cross_tags":["おかめ石","石","駒形大明神","白井"],"research_status":"researching","research_notes":"駒形大明神との関係を深掘り対象として保持。石そのものの由来・祭祀・人物との関連は本文確認待ち。"},
+    {"record_id":"chiba-shiroi-kateba-kangun","title":"勝てば官軍","story_type":["歴史伝承候補","地域伝承候補"],"cross_tags":["勝てば官軍","鎌ケ谷市","白井市"],"research_status":"researching","research_notes":"鎌ケ谷市資料に白井への地理的接続がある横断候補。事件・人物・時代背景を本文確認後に追加する。"},
+    {"record_id":"chiba-shiroi-ikedzuki-network","title":"生食（池月）・白井広域伝承ネットワーク","story_type":["動物伝承","人物史伝承候補","広域伝承"],"cross_tags":["生食","池月","佐々木高綱","八幡溜","白井市","柏市","松戸市","市川市"],"research_status":"researched","research_notes":"県立図書館の市町村別索引上で同じ白井起点の伝承が柏・松戸・市川にも地理的根拠を伴って掲載される。千葉県内の広域伝承ネットワークとして保持し、各地域での具体的内容の異同は別途本文比較する。"}
+  ],
+  "batch_notes":"白井市一次索引巡回J。八千代・鎌ケ谷との横断候補を追加し、生食（池月）の広域伝承接続を柏・松戸・市川まで明示。深掘り候補は固有語・石・歴史背景を優先する。"
+}
