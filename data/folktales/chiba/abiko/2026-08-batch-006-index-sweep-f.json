@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-006-index-sweep-f",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-abiko-fujihime-network","title":"藤姫関連伝承","story_type":["人物伝承候補","悲恋伝承候補"],"cross_tags":["藤姫"],"research_status":"researching","research_notes":"人物名としての横断タグを保持するが、史実上の人物・伝説上の人物・地域固有名称かは本文確認後に判断する。"},
+    {"record_id":"chiba-abiko-bennai-shonin-network","title":"弁内上人関連伝承","story_type":["人物伝承","寺社伝承候補"],"cross_tags":["弁内上人","人物タグ","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-abiko-yoritomo-network","title":"源頼朝・我孫子関連伝承","story_type":["人物伝承","広域伝承"],"cross_tags":["源頼朝","人物タグ","関東広域"],"research_status":"researching","research_notes":"全国的な人物伝承との横断比較対象として保持。個別話の歴史的事実性は別工程。"},
+    {"record_id":"chiba-abiko-teganuma-being-separation","title":"手賀沼・水辺存在タグ整理","story_type":["データ整理"],"cross_tags":["手賀沼","沼の主","鯉","鰻","河童","水辺伝承"],"research_status":"active","research_notes":"鯉・鰻・河童・沼の主を同一存在として統合せず、場所タグとして手賀沼で横断接続する。"},
+    {"record_id":"chiba-abiko-kashiwa-handoff-review","title":"柏市接続前レビュー","story_type":["地域横断","データ整理"],"cross_tags":["手賀沼","柏市","利根川水系","水辺伝承"],"research_status":"active","research_notes":"我孫子側の一次収集結果を柏市の索引収集へ接続する準備として、手賀沼・利根川水系を共通地理タグとして固定する。"}
+  ],
+  "batch_notes":"我孫子市一次索引巡回F。藤姫・弁内上人・源頼朝の人物伝承候補を整理し、手賀沼内の存在タグを統合しすぎないルールを再確認。柏市への地理ハンドオフを準備。"
+}
