@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-002-index-sweep-b",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-kappa-pond","title":"河童池","story_type":["水辺伝承"],"cross_tags":["河童","河童池","池","水辺伝承"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kappa-pond-master","title":"カッパ池の主","story_type":["水辺伝承","怪異譚候補"],"cross_tags":["河童","河童池","池の主"],"research_status":"researching","research_notes":"河童以外の存在分類は本文確認まで保留。"},
+    {"record_id":"chiba-noda-kappa-pond-mystery","title":"カッパの池の怪","story_type":["水辺伝承","怪異譚"],"cross_tags":["河童","河童池","水辺"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kappa-tail","title":"河童のしっぽ","story_type":["河童伝承"],"cross_tags":["河童"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kappa-network","title":"野田市河童伝承群","story_type":["話群","水辺伝承"],"cross_tags":["河童","水辺伝承","地域ハブ候補"],"research_status":"researching","related_records":["chiba-noda-kappa-pond","chiba-noda-kappa-pond-master","chiba-noda-kappa-pond-mystery","chiba-noda-kappa-tail"]},
+    {"record_id":"chiba-noda-kimasagase-local-network","title":"木間ヶ瀬伝承群","story_type":["話群","地域伝承"],"cross_tags":["木間ヶ瀬","利根川流域","将門","火車"],"research_status":"researching","research_notes":"将門と火車は名称タグとして横断接続。人物・存在分類や内容上の関係は本文確認後に判定。"},
+    {"record_id":"chiba-noda-masakado-legends","title":"将門さま語り伝え","story_type":["人物伝承"],"cross_tags":["平将門","将門","人物タグ","広域伝承候補"],"research_status":"researching"},
+    {"record_id":"chiba-noda-fire-cart","title":"火車・却刃","story_type":["名称伝承"],"cross_tags":["火車","却刃"],"research_status":"researching","research_notes":"火車は名称タグとしてのみ接続し、妖怪・猫・仏教的存在などの分類は後続研究に保留する。"},
+    {"record_id":"chiba-noda-fire-cart-cat-otra","title":"火車猫おトラ","story_type":["名称伝承"],"cross_tags":["火車","猫","おトラ"],"research_status":"researching","research_notes":"題名上の猫という情報は保持するが、火車との系統関係や存在分類は本文確認後に判断する。"},
+    {"record_id":"chiba-noda-bando-taro-river","title":"坂東太郎関連伝承","story_type":["河川伝承","地理伝承"],"cross_tags":["坂東太郎","利根川","河川異称"],"research_status":"researching"}
+  ],
+  "batch_notes":"野田市一次索引巡回B。河童を名称タグ・水辺伝承として地域内話群に整理。木間ヶ瀬では将門・火車を名称タグで保持し、利根川流域の地理的接続を優先。火車の内容分類は保留。"
+}
