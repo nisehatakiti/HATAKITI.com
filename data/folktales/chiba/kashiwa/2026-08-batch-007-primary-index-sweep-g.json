@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-007-primary-index-sweep-g",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "source":"千葉県立図書館『千葉県の民話 柏市』",
+  "records":[
+    {"record_id":"chiba-kashiwa-bloodstained-reed","title":"血染めの茅","story_type":["怪異伝承候補","横断伝承"],"cross_tags":["血","茅","横断伝承","沼南町"],"research_status":"researching","related_regions":["松戸市","流山市","野田市","船橋市","市川市","佐倉市"],"research_notes":"複数市町村にまたがる題名として記録。本文比較前に同一話型とは判定しない。"},
+    {"record_id":"chiba-kashiwa-mugen-no-kane","title":"無間の鐘","story_type":["怪異伝承候補","音響伝承候補"],"cross_tags":["鐘","無間","松戸市","沼南町"],"research_status":"researching","related_regions":["松戸市"],"research_notes":"松戸市との地域横断題材として保持。名称タグとモチーフタグを分離して後続確認。"},
+    {"record_id":"chiba-kashiwa-karasu-tengu","title":"カラス天狗と祭り見物","story_type":["天狗伝承"],"cross_tags":["天狗","カラス天狗","祭り","増尾"],"research_status":"researching"},
+    {"record_id":"chiba-kashiwa-northern-forest-light","title":"北の森の光りもの","story_type":["怪異伝承","光る怪異候補"],"cross_tags":["光りもの","森","中新宿"],"research_status":"researching"},
+    {"record_id":"chiba-kashiwa-fox-network","title":"柏市狐伝承群","story_type":["話群","狐伝承"],"cross_tags":["狐","狐いっぴょ","きつねつき","狐の嫁入り","キツネの嫁どり","藤心"],"research_status":"researching","research_notes":"狐に関する複数題名を名称共有で話群として保持するが、個別話は統合しない。"},
+    {"record_id":"chiba-kashiwa-mujina-washiyama","title":"鷲山のむじな","story_type":["狢伝承"],"cross_tags":["むじな","鷲山","増尾村"],"research_status":"researching"}
+  ],
+  "batch_notes":"柏市一次索引巡回G。県立図書館索引から、血染めの茅・無間の鐘・カラス天狗・光りもの・狐群・むじなを追加。既存の市町村横断タグは本文比較前の接続のみ行う。"
+}
