@@ -23,18 +23,37 @@
 - ...
 - CHB-004067
 
-## ディレクトリ構成
+## データ構成（2026-08-26改訂）
 
 ```text
 data/folktales/chiba/
 ├── README.md
 ├── master/
-│   └── README.md
 ├── registry/
-│   └── collection_status.csv
-└── ichikawa/
-    └── README.md
+├── batches/
+│   └── <municipality>/
+└── records/
+    └── <municipality>/
 ```
+
+- `batches/<municipality>/`：調査時点の候補・索引・収集結果を保存する調査ログ。原則として深掘り結果で上書きしない。
+- `records/<municipality>/`：1伝承＝1ファイルの正本。サイト・検索・集計は原則こちらを参照する。
+
+### 深掘りの扱い
+
+深掘りは新しい伝承を追加することではなく、同一 `record_id` の情報を更新することとする。
+
+標準的な `research_status`：
+- `index_only`：索引等で存在確認のみ
+- `source_confirmed`：出典資料を特定
+- `text_confirmed`：本文または一次的な記述を確認
+- `deep_dived`：複数資料を照合し、出典付きの確認事項を整理
+
+資料に書かれていない内容を伝承本文として補完しない。解釈・仮説を保存する場合は確認済み事実とは別フィールドに明示する。
+
+### 移行方針
+
+既存の自治体別バッチは段階的に `batches/<municipality>/` へ移動する。白井市については既存の深掘り済みデータを優先して `records/shiroi/` に移し、今後の深掘りは既存レコードの更新として扱う。
 
 ## registry の status
 - `pending`: 未確認
