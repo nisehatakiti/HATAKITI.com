@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-009-primary-index-sweep-i",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-kashiwa-kitsune-marriage-cluster","title":"柏市・狐の嫁入り伝承群","story_type":["動物怪異伝承","婚姻モチーフ"],"cross_tags":["狐","狐の嫁入り","嫁取り","婚姻","異類婚姻候補"],"research_status":"researching","research_notes":"狐の嫁入り・嫁どりを名称／モチーフの両面で保持。全国の同名伝承と接続可能だが本文確認前に同一話型とは判定しない。"},
+    {"record_id":"chiba-kashiwa-kitsune-possession-cluster","title":"柏市・狐憑き伝承群","story_type":["動物怪異伝承","憑きもの候補"],"cross_tags":["狐","狐憑き","憑きもの","民間信仰"],"research_status":"researching","research_notes":"狐の存在伝承と狐憑きの現象伝承を別レコードとして比較可能にする。"},
+    {"record_id":"chiba-kashiwa-karasu-tengu","title":"カラス天狗関連伝承","story_type":["怪異伝承候補"],"cross_tags":["天狗","烏天狗","山","異形"],"research_status":"researching","research_notes":"天狗の広域名称タグへ接続候補。カラス天狗を一般天狗と統合せず名称表記を保持する。"},
+    {"record_id":"chiba-kashiwa-mujina-network","title":"鷲山のむじな・柏関連伝承","story_type":["動物怪異伝承"],"cross_tags":["むじな","鷲山","化けもの候補"],"research_status":"researching","research_notes":"狐系とは独立した名称タグとして保持。地域名・地形名の横断接続は後続確認。"},
+    {"record_id":"chiba-kashiwa-final-hub-review-prep","title":"柏市・最終巡回前ハブレビュー","story_type":["データ整理"],"cross_tags":["手賀沼","利根川水系","平将門","藤姫","弁内上人","河童","火車","ダイダラボッチ系","大蛇","狐","むじな","天狗"],"research_status":"active","research_notes":"一次収集終盤の横断整理。人物・名称・地理・モチーフを別軸で保持し、本文確認前の過剰統合を避ける。"}
+  ],
+  "batch_notes":"柏市一次索引巡回I。狐の嫁入り／狐憑き、カラス天狗、鷲山のむじなを整理し、柏市の一次収集を最終巡回前段階へ移行。"
+}
