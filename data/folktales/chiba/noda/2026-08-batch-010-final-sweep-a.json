@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-010-final-sweep-a",
+  "municipality":"野田市",
+  "phase":"final_sweep",
+  "records":[
+    {"record_id":"chiba-noda-kappa-hub-final-review","title":"野田市河童伝承・最終横断レビュー","story_type":["話群","水辺伝承"],"cross_tags":["河童","河童池","池","水辺伝承","利根川流域"],"research_status":"researching","related_records":["chiba-noda-kappa-pond","chiba-noda-kappa-pond-master","chiba-noda-kappa-pond-mystery","chiba-noda-kappa-tail"],"research_notes":"名称タグとしての河童を維持。個別伝承の同一話型判定、河童の性格分類、他地域との系統関係は本文比較後に行う。"},
+    {"record_id":"chiba-noda-kimasagase-final-review","title":"木間ヶ瀬伝承・最終レビュー","story_type":["地域伝承","広域接続"],"cross_tags":["木間ヶ瀬","平将門","将門","火車","利根川流域"],"research_status":"researching","research_notes":"将門は人物タグ、火車は名称タグとして独立保持。木間ヶ瀬という地理タグを介して同一地域内に共存する伝承として記録するが、内容上の関係は断定しない。"},
+    {"record_id":"chiba-noda-sekiyado-final-review","title":"関宿伝承圏・最終レビュー","story_type":["地域伝承","河川伝承","地域史"],"cross_tags":["関宿","利根川","江戸川","県境","水運","城下町候補"],"research_status":"researching","research_notes":"野田市域を越える河川・県境接続を保持し、茨城県・埼玉県側の伝承資料と後続比較できる構造にする。"},
+    {"record_id":"chiba-noda-cross-region-review","title":"野田市・広域伝承接続レビュー","story_type":["データ整理"],"cross_tags":["河童","平将門","火車","利根川","江戸川","関宿"],"research_status":"active","research_notes":"一次収集段階では名称・人物・地理の横断接続を優先。全国的類型や同一伝承の判定は、資料本文の蓄積後に別工程で実施する。"}
+  ],
+  "verification_queue":[
+    {"priority":"high","target":"河童伝承の個別本文","reason":"野田市内の複数河童話の場所・内容・相互関係を比較する"},
+    {"priority":"high","target":"木間ヶ瀬の将門伝承","reason":"下総・関東各地の将門伝承との接続を確認する"},
+    {"priority":"medium","target":"火車・却刃／火車猫おトラ","reason":"同名タグ内の内容差を保持したまま資料比較する"},
+    {"priority":"medium","target":"関宿の首・塚・怨念伝承","reason":"地域史・城下町・河川交通との関係を確認する"},
+    {"priority":"medium","target":"水辺の引き込み伝承","reason":"河童と独立した水辺怪異の類型として比較する"}
+  ],
+  "completion_state":"index_based_primary_collection_near_complete",
+  "summary":"野田市の索引ベース一次収集を最終巡回段階へ移行。河童、木間ヶ瀬、関宿、利根川・江戸川を主要地域ハブとし、将門・火車などの横断タグは分類を急がず検証キューへ分離する。"
+}
