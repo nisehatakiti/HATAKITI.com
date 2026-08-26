@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-009-primary-index-sweep-i",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-ikazuchi-name-origin","title":"今井の名の由来","story_type":["地名由来伝承"],"cross_tags":["今井","地名由来"],"research_status":"researching","research_notes":"地名由来の構造を本文確認対象とし、人物・怪異を安易に補わない。"},
+    {"record_id":"chiba-shiroi-okame-stone","title":"おかめ石","story_type":["石神伝承候補","信仰伝承"],"cross_tags":["おかめ石","石","駒形大明神","白井"],"research_status":"researching","research_notes":"石そのもの、駒形大明神との関係、由来話を分けて確認する。"},
+    {"record_id":"chiba-shiroi-kirare-koshin","title":"切られ庚申","story_type":["石仏伝承","怪異伝承候補","信仰伝承"],"cross_tags":["庚申","切られ庚申","富塚","鳥見神社","傷ついた石仏候補"],"research_status":"researching","research_notes":"村雨丸と同じ富塚地域に位置するため地理接続を保持。切られた経緯は本文を確認してから怪異・事件・由来に分類する。"},
+    {"record_id":"chiba-shiroi-gongen-market-zuru-koropyon","title":"権現様の市とずるコロピョン","story_type":["市伝承候補","信仰伝承候補","広域伝承"],"cross_tags":["飯綱権現","飯綱神社","市","ずるコロピョン","八千代市","白井市"],"research_status":"researching","research_notes":"萱田・白井をまたぐ広域伝承として保持。白井単独の話に閉じず、市場・権現信仰・地名の横断で比較する。"},
+    {"record_id":"chiba-shiroi-kateba-kangun","title":"勝てば官軍","story_type":["歴史伝承候補","広域伝承"],"cross_tags":["勝てば官軍","鎌ケ谷市","白井市","歴史人物候補"],"research_status":"researching","research_notes":"鎌ケ谷側資料に白井への接続が示されるため横断候補として保持。人物・事件の特定は本文確認後。"},
+    {"record_id":"chiba-shiroi-ikezuki-network","title":"生食と七次の八幡溜","story_type":["馬伝承候補","地理伝承","広域伝承"],"cross_tags":["池月","名馬","八幡溜","七次","白井市","市川市","松戸市","柏市"],"research_status":"researching","research_notes":"白井の索引項目だが、市川・松戸・柏にも地名・伝承上の接続根拠がある。名馬池月の広域人物／動物タグ候補として本文比較を優先する。"}
+  ],
+  "batch_notes":"白井市一次索引巡回I。既存項目の取りこぼしを補完し、切られ庚申・おかめ石・権現様の市とずるコロピョン・勝てば官軍・生食と七次の八幡溜を追加。深掘り対象は本文確認が必要なため、推測による詳細化は避け、地理・名称・広域接続を先に固定した。"
+}
