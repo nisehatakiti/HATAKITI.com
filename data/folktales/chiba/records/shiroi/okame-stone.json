@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-okame-stone",
+  "municipality":"白井市",
+  "title":"おかめ石",
+  "research_status":"source_confirmed",
+  "source_status":"partially_verified",
+  "legacy_source":"data/folktales/chiba/shiroi/2026-08-batch-019-deep-dive-okame-stone.json",
+  "story_type":["石伝承","雨乞い伝承候補","民間信仰"],
+  "cross_tags":["おかめ石","駒形明神","白井庚申塚群","雨乞い","白井字鳥居前"],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-SHIROI-INDEX","title":"千葉県の民話 白井市","author_or_publisher":"千葉県立図書館","publication_year_or_date":"web","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html","accessed_date":"2026-08-26","reliability_notes":"伝承題名・地域・収録資料の確認用。本文ではない。"},
+    {"source_id":"SRC-SHIROI-WATER-GODS-SURVEY","title":"白井の水神様","author_or_publisher":"白井市生物多様性調査（東邦大学理学部生物学科関連公開資料）","publication_year_or_date":"web","source_type":"field_survey_webpage","url_or_identifier":"https://www.mnc.toho-u.ac.jp/v-lab/bioltop/shiroi/03yousei/521.htm","accessed_date":"2026-08-26","reliability_notes":"現地調査形式の公開資料。おかめ石の位置、駒形明神碑、文政3年銘、雨乞いに関する伝承を記載するが、記述中に個人教示を含むため一次史料そのものではない。"},
+    {"source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002","title":"白井の伝説と文化財 平成十三年度企画展記録集","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2002","source_type":"local_history_book","url_or_identifier":"千葉県立図書館民話索引の収録資料情報","accessed_date":"2026-08-26","reliability_notes":"「おかめ石」の本文確認対象資料。今回、本文自体は未確認。"}
+  ],
+  "claims":[
+    {"claim_id":"claim-001","text":"白井市の民話索引には「おかめ石」が伝承項目として収録され、関連地として白井の駒形大明神が示されている。","source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX"],"interpretation":false},
+    {"claim_id":"claim-002","text":"公開されている現地調査資料では、おかめ石は白井字鳥居前の白井庚申塚群の最南に位置し、駒形明神碑の扉として記録されている。","source_ids":["SRC-SHIROI-WATER-GODS-SURVEY"],"interpretation":false},
+    {"claim_id":"claim-003","text":"同資料では駒形明神の碑に文政3年（1820年）の年代が記され、石をひっくり返すと雨が降るといわれ、日照りの年には村人が雨乞いをしたと伝えられている。","source_ids":["SRC-SHIROI-WATER-GODS-SURVEY"],"interpretation":false}
+  ],
+  "research_notes":"『白井の伝説と文化財』本文は未確認のため、今回確認できた雨乞い伝承を同書の本文そのものとしては扱わない。おかめ石が駒形明神のどのような信仰・由緒と結び付くか、また「おかめ」の名称由来については現時点で未確認。"
+}
