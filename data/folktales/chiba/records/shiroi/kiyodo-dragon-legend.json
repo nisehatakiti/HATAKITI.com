@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-shiroi-kiyodo-dragon-legend",
+  "title": "清戸の泉／清戸の龍神",
+  "alternate_titles": [
+    "清戸の泉",
+    "清戸の泉（清竜山薬王寺）",
+    "清戸の龍神"
+  ],
+  "municipality": "白井市",
+  "locality": "清戸",
+  "canonical_slug": "kiyodo-dragon-legend",
+  "research_status": "deep_dived",
+  "source_status": "multiple_sources_confirmed",
+  "summary": "白井市清戸にある県指定史跡「清戸の泉」に伝わる竜神信仰の伝説。平安時代初期の大同年間に旱魃があり、村人が飢えに苦しんだ際、旅の僧の勧めによる竜神への祈りの後、大雨とともに小さな青竜が落ちてきたと伝えられる。竜神を祀る信仰と、近くの薬王寺に伝わる版木「青龍山薬王寺并に堂作弁財天女縁起」が結び付いている。",
+  "claims": [
+    {
+      "claim": "清戸の泉は白井市清戸に所在する千葉県指定史跡である。",
+      "source_ids": ["source-chiba-pref-kiyodo"]
+    },
+    {
+      "claim": "大同年間（806年から810年）に旱魃があり、村人が飢えに苦しんだ際、旅の僧が竜神に雨乞いをした後、雨とともに小さな青竜が落ちてきたという伝説が伝えられている。",
+      "source_ids": ["source-shiroi-city-kiyodo", "source-chiba-pref-kiyodo"]
+    },
+    {
+      "claim": "竜神伝説と清戸地区の地名の由来を記した版木「青龍山薬王寺并に堂作弁財天女縁起」が薬王寺で保管され、文政11年（1828年）再版の銘が確認されている。",
+      "source_ids": ["source-shiroi-city-kiyodo", "source-chiba-pref-kiyodo"]
+    },
+    {
+      "claim": "千葉県立図書館の民話索引では、「清戸の泉」が『房総の伝説』（1976）および『ふるさと印西地方の民話・伝説』（1980）に、「清戸の泉（清竜山薬王寺）」が『千葉の伝説』（1981）に、「清戸の龍神」が『房総昔話散歩』（1973）に収録されている。",
+      "source_ids": ["source-chiba-pref-library-index"]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "source-chiba-pref-kiyodo",
+      "title": "清戸の泉 附 版木（文政十一年九月在銘）",
+      "publisher": "千葉県",
+      "source_type": "official_cultural_property_record",
+      "url": "https://www.pref.chiba.lg.jp/kyouiku/bunkazai/bunkazai/p411-034.html"
+    },
+    {
+      "source_id": "source-shiroi-city-kiyodo",
+      "title": "清戸の泉（附）版木（県指定文化財）",
+      "publisher": "白井市",
+      "source_type": "official_cultural_property_record",
+      "url": "https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun004/1423036289322.html"
+    },
+    {
+      "source_id": "source-chiba-pref-library-index",
+      "title": "千葉県の民話 白井市",
+      "publisher": "千葉県立図書館",
+      "source_type": "bibliographic_index",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html"
+    }
+  ],
+  "interpretations": [],
+  "research_notes": [
+    "本文未確認の書籍については、索引から確認できる書名・収録事実のみを記録した。",
+    "日本武尊など他地域伝承との関係は、本レコードでは確認できる資料がないため補完していない。",
+    "既存の『清戸の龍神／清戸の泉』深掘りを、one_folktale_one_canonical_record方針に基づき正本レコードとして整理した。"
+  ],
+  "related_places": ["清戸", "清戸の泉", "薬王寺"],
+  "tags": ["竜神", "龍", "雨乞い", "湧水", "弁財天", "水辺", "信仰"],
+  "updated_by": "ChatGPT research consolidation",
+  "last_updated": "2026-08-26"
+}
