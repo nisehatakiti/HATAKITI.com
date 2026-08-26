@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-005-primary-index-sweep-e",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "source":"千葉県立図書館・千葉県の民話 柏市索引",
+  "records":[
+    {"record_id":"chiba-kashiwa-fujihime-network","title":"藤姫／藤姫の恋","story_type":["人物伝承候補","恋愛伝承候補"],"cross_tags":["藤姫","手賀沼","戸張","我孫子市","柏市"],"research_status":"researching","research_notes":"我孫子市でも藤姫が確認されるため人物・名称横断タグへ接続。柏側では戸張村・手賀沼との地理情報を保持し、同一話か本文比較後に判断する。"},
+    {"record_id":"chiba-kashiwa-bennai-serpent-network","title":"弁内上人の大蛇退治","story_type":["人物伝承","大蛇伝承","寺社伝承候補"],"cross_tags":["弁内上人","大蛇","人物タグ"],"research_status":"researching","related_regions":["我孫子市"],"research_notes":"我孫子市側の弁内上人タグと接続。大蛇退治は話型・存在タグとして別軸保持する。"},
+    {"record_id":"chiba-kashiwa-fuse-benten-network","title":"布施弁天伝承群","story_type":["寺社伝承","地域伝承"],"cross_tags":["布施弁天","弁天","布施","柏市"],"research_status":"researching","related_records":["chiba-kashiwa-fuse-benten-origin","chiba-kashiwa-benten-issa"],"research_notes":"寺社を地理・信仰ハブとして保持。始まり・人物逸話などは個別話として分離する。"},
+    {"record_id":"chiba-kashiwa-teganuma-koi-network","title":"鯉の願い／手賀沼の主","story_type":["水辺伝承","話群"],"cross_tags":["手賀沼","鯉","沼の主","我孫子市","柏市"],"research_status":"researching","research_notes":"我孫子側の鯉・沼の主タグと横断接続。場所共有と題名上の一致を入口とし、同一存在・同一話型は断定しない。"},
+    {"record_id":"chiba-kashiwa-kobiki-kappa","title":"木びきの爺さまとカッパ","story_type":["河童伝承"],"cross_tags":["河童","手賀沼","職業者","木びき"],"research_status":"researching","research_notes":"既存の河童タグと手賀沼地理タグへ接続。柏市内のカッパの立ち聞きとは別recordとして保持する。"},
+    {"record_id":"chiba-kashiwa-teganuma-handoff-review","title":"手賀沼伝承圏・柏側追加レビュー","story_type":["地域横断","データ整理"],"cross_tags":["手賀沼","我孫子市","柏市","河童","鯉","沼の主","藤姫"],"research_status":"active","research_notes":"我孫子から引き継いだ手賀沼ハブに柏側の鯉・沼の主・河童・藤姫を追加。行政境界ではなく水域と採話地を併記して横断比較可能にする。"}
+  ],
+  "batch_notes":"柏市一次索引巡回E。手賀沼伝承圏を我孫子との共有ハブとして拡張し、藤姫、弁内上人、大蛇、布施弁天、木びきの爺さまとカッパを追加。"
+}
