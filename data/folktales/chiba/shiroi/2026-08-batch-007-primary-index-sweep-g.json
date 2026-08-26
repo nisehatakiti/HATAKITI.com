@@ -8,8 +8,8 @@
     {"record_id":"chiba-shiroi-two-three-teahouses","title":"二軒茶屋・三軒茶屋","story_type":["地名伝承候補","街道伝承候補"],"cross_tags":["二軒茶屋","三軒茶屋","印西牧","十余一"],"research_status":"researching"},
     {"record_id":"chiba-shiroi-roadside-dosojin","title":"魔除けの道祖神","story_type":["信仰伝承","道祖神"],"cross_tags":["道祖神","魔除け","境界信仰"],"research_status":"researching"},
     {"record_id":"chiba-shiroi-mitarashi-pond","title":"みたらしの池","story_type":["水辺伝承","信仰伝承候補"],"cross_tags":["池","みたらし","鳥見神社","水辺伝承"],"research_status":"researching"},
-    {"record_id":"chiba-shiroi-murasame-maru-prince-shotoku","title":"村雨丸の聖徳太子像","story_type":["人物伝承候補","寺社伝承"],"cross_tags":["村雨丸","聖徳太子","西輪寺","富塚"],"research_status":"researching"},
-    {"record_id":"chiba-shiroi-murasame-maru-story","title":"村雨丸のはなし","story_type":["人物伝承候補","地域伝承"],"cross_tags":["村雨丸","芦椛橋","矢ノ橋","富塚"],"research_status":"researching"}
+    {"record_id":"chiba-shiroi-murasame-maru-prince-shotoku","title":"村雨丸の聖徳太子像","story_type":["人物伝承","寺社伝承","仇討ち伝承候補"],"cross_tags":["村雨丸延乗","村雨丸","聖徳太子","聖徳太子像","西輪寺","富塚","夢告","観音","父の仇","仇討ち","赦し","供養"],"research_status":"researched","research_notes":"伝承上の村雨丸は父の仇を討つため旅をする少年。病で倒れた後、夢告を受けて聖徳太子像を作る。後に父の仇と出会うが、仇討ちではなく恨みを捨てる方向へ物語が展開し、死後に仇側が出家・供養する筋として整理する。史実性・人物同定と仏像の制作年代は別途検証対象。"},
+    {"record_id":"chiba-shiroi-murasame-maru-story","title":"村雨丸のはなし","story_type":["人物伝承","悲劇伝承","仇討ち伝承候補"],"cross_tags":["村雨丸延乗","村雨丸","父の仇","仇討ち","旅","病","夢告","観音","聖徳太子像","富塚","西輪寺","赦し","出家","供養"],"research_status":"researched","research_notes":"話型の中心は「父の仇を追う少年が、神仏の夢告を経て仇と遭遇するが、復讐を果たさず赦しへ転じる悲劇」。仇討ち・夢告・神仏造像・赦し・死後供養を主要モチーフとして保持する。"}
   ],
-  "batch_notes":"白井市一次索引巡回G。名内の由来、二軒茶屋・三軒茶屋、魔除けの道祖神、みたらしの池、村雨丸関連2件を追加。村雨丸は人物名・伝承名として保持し、人物同定は本文確認後に行う。"
+  "batch_notes":"白井市一次索引巡回G。名内の由来、二軒茶屋・三軒茶屋、魔除けの道祖神、みたらしの池、村雨丸関連2件を追加。村雨丸は人物名として保持し、父の仇討ち・夢告・聖徳太子像・赦し・供養を主要モチーフとして詳細化。"
 }
