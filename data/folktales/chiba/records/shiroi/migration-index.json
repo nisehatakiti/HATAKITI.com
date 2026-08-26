@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "municipality":"白井市",
+  "migration_policy":"legacy_batches_to_canonical_records",
+  "canonical_root":"data/folktales/chiba/records/shiroi/",
+  "legacy_root":"data/folktales/chiba/shiroi/",
+  "legacy_handling":"retain_as_research_log_until_batch_move_is_completed",
+  "deep_dive_policy":"one_folktale_one_canonical_record",
+  "known_deep_dive_records":[
+    {"title":"沢山と鎌倉橋","canonical_slug":"sawayama-kamakurabashi","legacy_file":"2026-08-batch-009-deep-dive-sawayama-kamakurabashi.json"},
+    {"title":"五兵衛稲荷","canonical_slug":"gonbei-inari","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"権現市とズルコロピョン","canonical_slug":"gongen-market-zuru-koropyon","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"清戸の龍神／清戸の泉","canonical_slug":"kiyodo-dragon-legend","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"板ばさみの小森城主","canonical_slug":"komori-castle-lord","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"今井の名の由来","canonical_slug":"imai-name-origin","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"切られ庚申","canonical_slug":"kirare-koshin","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"みたらしの池","canonical_slug":"mitarashi-no-ike","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"おかめ石","canonical_slug":"okame-stone","legacy_file":"2026-08-batch-019-deep-dive-okame-stone.json"},
+    {"title":"西福寺の子育如来","canonical_slug":"saifukuji-child-rearing-nyorai","legacy_file":"2026-08-batch-025-deep-dive-saifukuji-child-rearing-nyorai.json"}
+  ],
+  "next_action":"Copy verified legacy deep-dive content into one canonical file per item, normalize record_id by removing transient '-deep-dive' suffix, then retain legacy batch files only as collection history."
+}
