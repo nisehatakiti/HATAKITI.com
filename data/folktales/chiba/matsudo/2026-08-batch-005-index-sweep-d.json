@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-005-index-sweep-d",
+  "municipality":"松戸市",
+  "source_index":"千葉県立図書館 千葉県の民話 松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-ii-tairo-kubi","title":"井伊大老の首","story_type":["歴史怪談"],"cross_tags":["歴史人物","怪談"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-ikezuki-hachiman","title":"生食と七次の八幡溜","story_type":["地名伝承","水辺伝承"],"cross_tags":["水辺伝承","地域接続候補"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-oshou-orochi","title":"和尚と大蛇","story_type":["蛇伝承","寺社伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","寺社伝承"],"related_places":["馬橋"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-issa-fuse-benten","title":"恋人に似た布施弁天によく通った一茶","story_type":["人物伝承","寺社伝承"],"cross_tags":["人物ハブ候補","小林一茶","寺社伝承"],"related_regions":["柏市","流山市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-satomi-nightcry-stone","title":"里見の姫の夜泣き石","story_type":["石伝承","人物伝承"],"cross_tags":["石伝承","夜泣き石","人物ハブ候補"],"related_regions":["市川市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-chizome-kaya","title":"血染めの茅","story_type":["怪談","地域史"],"cross_tags":["怪談","血染め","広域伝承"],"related_regions":["流山市","野田市","柏市","船橋市","市川市","佐倉市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-ningyo-eternal-girl","title":"人魚を食った永遠の美少女","story_type":["人物伝承","長寿伝説"],"related_person_id":"happyaku-bikuni","beings":["人魚"],"cross_tags":["八百比丘尼","人物ハブ","長寿伝説","人魚伝承"],"related_places":["上本郷","風早神社","千駄堀"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-bakuchi-tatsuya","title":"バクチぶち辰っあ","story_type":["世間話"],"cross_tags":["世間話","広域伝承候補"],"related_regions":["柏市","野田市","市川市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-narita-ofuda","title":"成田のお札","story_type":["信仰伝承"],"cross_tags":["信仰","寺社伝承","広域伝承候補"],"related_regions":["成田市","船橋市"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kazahaya-sugi","title":"風早神社の大杉","story_type":["樹木伝承","寺社伝承"],"cross_tags":["樹木伝承","寺社伝承"],"related_places":["風早神社","二ツ木"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kanjo-ghost","title":"官女のおばけ","story_type":["怪談","幽霊伝承"],"cross_tags":["幽霊・死者","女性の怪異"],"related_places":["新松戸駅","雷神社","竜善寺"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-yao-bikuni-alias","title":"八尾比丘尼の話","story_type":["人物伝承","長寿伝説"],"related_person_id":"happyaku-bikuni","cross_tags":["八百比丘尼","人物ハブ","長寿伝説","表記揺れ候補"],"related_places":["風早神社","上本郷"],"research_status":"researching"}
+  ],
+  "batch_notes":"千葉県立図書館の松戸市民話索引に基づく追加回収。地域横断で確認できる話は関連地域を保持し、八百比丘尼系は人物ハブへ接続。本文未確認の内容は推測せずresearching。"
+}
