@@ -1,0 +1,31 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-011-final-sweep-b",
+  "municipality":"松戸市",
+  "phase":"final_sweep",
+  "completion_state":"source_index_review_completed_pending_content_verification",
+  "cross_region_connections":[
+    {"region":"市川市","themes":["国府台古戦場","江戸川沿岸","血染めの茅","水戸黄門"]},
+    {"region":"柏市","themes":["根木内・水辺伝承","布施弁天","おいてけ堀伝承圏"]},
+    {"region":"流山市","themes":["血染めの茅","江戸川流域","広域民話圏"]},
+    {"region":"野田市","themes":["血染めの茅","広域伝承候補"]},
+    {"region":"船橋市","themes":["血染めの茅","下総地域伝承圏"]}
+  ],
+  "hub_review":{
+    "person_hubs":["徳川光圀（水戸黄門）","八百比丘尼"],
+    "person_hub_candidates":["小林一茶","御子神典膳"],
+    "motif_hubs":["おいてけ堀","泣く石・夜泣き石類型"],
+    "motif_hub_candidates":["血染めの茅"],
+    "being_tags":["狐狸貉","蛇・大蛇","天狗","幽霊・死者"],
+    "regional_hub_candidates":["小金ヶ原","小金城・根木内城周辺","国府台・江戸川沿岸"]
+  },
+  "verification_queue":[
+    {"priority":"high","target":"狐狸貉個別伝承","reason":"索引題名・話群からの一次整理が中心で本文確認が不足"},
+    {"priority":"high","target":"八尾比丘尼と八百比丘尼の表記・系統","reason":"同一人物判定の根拠確認が必要"},
+    {"priority":"medium","target":"血染めの茅","reason":"広域同系統か地域別伝承かの本文比較が必要"},
+    {"priority":"medium","target":"おいてけ堀松戸系統","reason":"本所型との具体的モチーフ比較が必要"},
+    {"priority":"medium","target":"小林一茶関連伝承","reason":"人物ハブ正式化のため他地域事例の蓄積が必要"},
+    {"priority":"medium","target":"寺社・墓・石などの現地確認候補","reason":"出典と現存確認を分離して記録する"}
+  ],
+  "summary":"松戸市の索引ベース一次収集を完了扱いとし、今後は本文・原典・現地確認による精査をresearchingキューで継続する。一次収集完了と事実確認完了を明確に区別する。"
+}
