@@ -1,0 +1,57 @@
+{
+  "record_id": "chiba-shiroi-imai-name-origin",
+  "title": "今井の名の由来",
+  "aliases": [],
+  "region": {
+    "prefecture": "千葉県",
+    "municipality": "白井市",
+    "locality": "今井"
+  },
+  "research_status": "text_confirmed",
+  "source_status": "source_confirmed",
+  "summary": "白井市今井の地名由来に関する伝承。千葉県立図書館の民話索引では『白井の伝説と文化財 平成十三年度企画展記録集』に収録されている。別系統の地名資料では、当地が江戸時代に今井新田と呼ばれ、江戸深川から来た今井孫四郎にちなみ改称されたと伝える資料が確認できる。",
+  "claims": [
+    {
+      "text": "「今井の名の由来」は白井市今井の伝承として『白井の伝説と文化財 平成十三年度企画展記録集』に収録されている。",
+      "source_ids": ["s1"]
+    },
+    {
+      "text": "現在の白井市今井は、江戸時代には今井新田と呼ばれたとする地名資料がある。",
+      "source_ids": ["s2"]
+    },
+    {
+      "text": "今井新田は名内村の持添新田として寛文から延宝期に開発されたとする記録がある。",
+      "source_ids": ["s2"]
+    },
+    {
+      "text": "享保年中に江戸深川から今井孫四郎という者が来て高請し、享保15年の検地以来、今井新田に改名したという記録がある。",
+      "source_ids": ["s2"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
+      "publisher": "白井市郷土資料館",
+      "year": 2002,
+      "role": "伝承の収録資料",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "verification": "千葉県立図書館民話索引で収録を確認。伝承本文そのものは未直接確認。"
+    },
+    {
+      "id": "s2",
+      "title": "日本歴史地名大系『今井新田』",
+      "publisher": "平凡社",
+      "role": "白井市今井の地名由来を確認する歴史地名資料",
+      "url": "https://kotobank.jp/word/%E4%BB%8A%E4%BA%95%E6%96%B0%E7%94%B0-3040104",
+      "verification": "コトバンク掲載の日本歴史地名大系解説で確認。今井新田の改称伝承を記載。"
+    }
+  ],
+  "research_notes": [
+    "『白井の伝説と文化財』の「今井の名の由来」本文は未直接確認。",
+    "今井孫四郎にちなむ今井新田への改称記録は、伝承題名と整合するが、現時点では同書の本文内容と完全に同一であることを確認していない。",
+    "したがって、歴史地名資料で確認できた改称記録を伝承本文そのものとして断定しない。"
+  ],
+  "interpretations": [],
+  "updated_policy": "deep_dive_updates_existing_record"
+}
