@@ -1,14 +1,14 @@
 {
-  "schema_version":"1.1",
+  "schema_version":"1.2",
   "policy_name":"HATAKITI Folktale Source Citation Policy",
   "effective_from":"2026-08-26",
-  "purpose":"深掘りされた伝承レコードについて、Wikipediaの脚注のように記述と参照元の対応を明確化する。",
+  "purpose":"深掘りされた伝承レコードについて、Wikipediaの脚注のように記述と参照元の対応を明確化する。Wikipediaは原則として探索経路であり、最終的な引用元はWikipedia内で特定された書籍・論文・公的資料などの実際の参照情報を使用する。",
   "rules":{
     "basic":"深掘り済みの記述には参照元を必須とする。索引だけで存在確認した未深掘りレコードは source_status=index_only と明示する。",
     "claim_level_citation":"伝承の筋、人物情報、年代、地名由来、実物文化財、比較・解釈など重要な記述は、可能な限り claim 単位で source_id を紐付ける。",
     "source_fields":["source_id","title","author_or_publisher","publication_year_or_date","source_type","url_or_identifier","accessed_date","reliability_notes"],
-    "source_types":["primary_document","official_archive","library_index","museum_material","local_history_book","academic_work","newspaper","wikipedia","reputable_web","community_source"],
-    "wikipedia_policy":"Wikipediaに当該項目があり、脚注・参考文献から原典または信頼できる二次資料を特定できる場合、Wikipediaを探索の入口として利用し、可能な限り元の参照元を個別 source として登録する。Wikipedia本文そのものを参照する場合は source_type=wikipedia と明示し、版の閲覧日または固定版情報を記録する。",
+    "source_types":["primary_document","official_archive","library_index","museum_material","local_history_book","academic_work","newspaper","reputable_web","community_source"],
+    "wikipedia_policy":"Wikipediaに当該項目がある場合、本文を最終出典として引用するのではなく、脚注・参考文献・外部リンクに記載された実際の出典を特定し、その書籍・論文・公的資料などを source として登録する。Wikipediaは探索経路として利用するが、通常は公開データの sources 一覧に登録しない。Wikipediaから参照情報を特定した場合も、可能な限り実際の資料の書誌情報または公式公開ページを確認する。",
     "citation_display":"公開画面では本文末尾または該当記述の脚注として [1] [2] 形式で表示し、レコード末尾に参考文献一覧を置く。",
     "interpretation":"複数資料をもとにした整理・推定は source_id とともに interpretation=true を付与し、資料本文の直接記述と区別する。",
     "conflicts":"資料間で筋・人物名・年代などが異なる場合は統合せず、各説と出典を併記する。"
@@ -18,11 +18,11 @@
     "sources":[
       {
         "source_id":"SRC-EXAMPLE-001",
-        "title":"資料名またはWikipedia項目名",
+        "title":"実際の資料名",
         "author_or_publisher":"著者・発行者",
         "publication_year_or_date":"年月日または刊行年",
-        "source_type":"official_archive | wikipedia | other",
-        "url_or_identifier":"URL、固定版URLまたは書誌情報",
+        "source_type":"local_history_book | academic_work | official_archive | other",
+        "url_or_identifier":"URLまたは書誌情報",
         "accessed_date":"YYYY-MM-DD",
         "reliability_notes":"資料の性格・注意点"
       }
