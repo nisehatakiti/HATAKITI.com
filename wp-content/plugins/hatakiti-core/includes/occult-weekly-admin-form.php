@@ -168,7 +168,39 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
             );
         }
         $groups[ $key ]['news_item_ids'][] = $item_id;
+    }
 
+    // Apply body-text edits submitted for existing groups.
+    foreach ( $groups as $key => &$group_data ) {
+        if ( isset( $body_map[ $key ] ) ) {
+            $group_data['body'] = wp_kses_post( wp_unslash( $body_map[ $key ] ) );
+        }
+    }
+    unset( $group_data );
+
+    hatakiti_finalize_occult_weekly_groups( $post_id, array_values( $groups ), $include );
+}
+
+/**
+ * Shared tail for both the manual form save and the AI-generated draft
+ * path (occult-weekly-ai-edit.php): sorts articles, stores articles_json,
+ * links/unlinks occult_news_item posts to this issue, and recomputes the
+ * summary counts. $relevant_item_ids is the full set of item ids that
+ * SHOULD end up linked to this issue once saved — anything previously
+ * linked but not in this set gets unlinked.
+ */
+function hatakiti_finalize_occult_weekly_groups( $post_id, $groups, $relevant_item_ids ) {
+    $tier_rank = array( 'large' => 0, 'medium' => 1, 'small' => 2 );
+    usort( $groups, function ( $a, $b ) use ( $tier_rank ) {
+        if ( $a['order'] !== $b['order'] ) {
+            return $a['order'] <=> $b['order'];
+        }
+        return $tier_rank[ $a['tier'] ] <=> $tier_rank[ $b['tier'] ];
+    } );
+
+    update_post_meta( $post_id, 'hatakiti_occult_articles_json', wp_json_encode( $groups, JSON_UNESCAPED_UNICODE ) );
+
+    foreach ( $relevant_item_ids as $item_id ) {
         update_post_meta( $item_id, 'hatakiti_occult_issue_post_id', $post_id );
     }
 
@@ -182,29 +214,10 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
         'fields'         => 'ids',
     ) );
     foreach ( $previously_linked as $linked_id ) {
-        if ( ! in_array( $linked_id, $include, true ) ) {
+        if ( ! in_array( $linked_id, $relevant_item_ids, true ) ) {
             update_post_meta( $linked_id, 'hatakiti_occult_issue_post_id', '' );
         }
     }
-
-    // Apply body-text edits submitted for existing groups.
-    foreach ( $groups as $key => &$group_data ) {
-        if ( isset( $body_map[ $key ] ) ) {
-            $group_data['body'] = wp_kses_post( wp_unslash( $body_map[ $key ] ) );
-        }
-    }
-    unset( $group_data );
-
-    $tier_rank = array( 'large' => 0, 'medium' => 1, 'small' => 2 );
-    $groups    = array_values( $groups );
-    usort( $groups, function ( $a, $b ) use ( $tier_rank ) {
-        if ( $a['order'] !== $b['order'] ) {
-            return $a['order'] <=> $b['order'];
-        }
-        return $tier_rank[ $a['tier'] ] <=> $tier_rank[ $b['tier'] ];
-    } );
-
-    update_post_meta( $post_id, 'hatakiti_occult_articles_json', wp_json_encode( $groups, JSON_UNESCAPED_UNICODE ) );
 
     $source_ids       = array();
     $article_count    = count( $groups );
@@ -224,6 +237,46 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
     update_post_meta( $post_id, 'hatakiti_occult_article_count', $article_count );
     update_post_meta( $post_id, 'hatakiti_occult_main_topic_count', $main_topic_count );
     update_post_meta( $post_id, 'hatakiti_occult_generated_at', current_time( 'mysql' ) );
+}
+
+/**
+ * The "candidate" news items for a period: already linked to $post_id (if
+ * editing an existing issue), or unlinked and published within
+ * [$week_start, $week_end]. Shared by the manual edit form and the AI
+ * draft generator so both ever agree on what "this week's news" means.
+ */
+function hatakiti_get_occult_weekly_candidates( $week_start, $week_end, $post_id = 0 ) {
+    $meta_query = array( 'relation' => 'OR' );
+    if ( $post_id ) {
+        $meta_query[] = array( 'key' => 'hatakiti_occult_issue_post_id', 'value' => $post_id );
+    }
+    $unlinked_clause = array(
+        'relation' => 'AND',
+        array(
+            'relation' => 'OR',
+            array( 'key' => 'hatakiti_occult_issue_post_id', 'value' => '', 'compare' => '=' ),
+            array( 'key' => 'hatakiti_occult_issue_post_id', 'compare' => 'NOT EXISTS' ),
+        ),
+    );
+    if ( $week_start && $week_end ) {
+        $unlinked_clause[] = array(
+            'key'     => 'hatakiti_occult_published_at',
+            'value'   => array( $week_start . ' 00:00:00', $week_end . ' 23:59:59' ),
+            'compare' => 'BETWEEN',
+            'type'    => 'DATETIME',
+        );
+    }
+    $meta_query[] = $unlinked_clause;
+
+    return get_posts( array(
+        'post_type'      => 'occult_news_item',
+        'post_status'    => 'any',
+        'posts_per_page' => -1,
+        'meta_query'     => $meta_query,
+        'orderby'        => 'meta_value',
+        'meta_key'       => 'hatakiti_occult_published_at',
+        'order'          => 'DESC',
+    ) );
 }
 
 function hatakiti_render_occult_weekly_form() {
