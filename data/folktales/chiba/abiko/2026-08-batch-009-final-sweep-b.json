@@ -1,0 +1,33 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-009-final-sweep-b",
+  "municipality":"我孫子市",
+  "phase":"final_sweep",
+  "completion_state":"index_based_primary_collection_complete",
+  "hub_review":{
+    "person_tags":["平将門","源頼朝","藤姫","弁内上人"],
+    "name_tags":["河童","火車","火車猫おトラ","沼の主"],
+    "river_and_geography_tags":["利根川","手賀沼"],
+    "motif_tags":["水辺伝承","水辺怪異","引き込み"],
+    "regional_hubs":["手賀沼伝承圏","利根川沿岸","寺社伝承地点"]
+  },
+  "cross_region_connections":[
+    {"region":"野田市","themes":["利根川","河童","火車","平将門"]},
+    {"region":"柏市","themes":["手賀沼","水辺伝承","利根川水系"]},
+    {"region":"松戸市","themes":["平将門","下総伝承圏"]},
+    {"region":"全国","themes":["河童","平将門","源頼朝","火車"]}
+  ],
+  "verification_queue":[
+    "手賀沼の河童・沼の主・鯉・鰻の個別本文確認",
+    "火車猫おトラの本文と他地域同名伝承の比較",
+    "平将門伝承の下総広域比較",
+    "藤姫・弁内上人の人物同定と地域史確認",
+    "手賀沼と柏市側の伝承の連続性確認"
+  ],
+  "handoff":{
+    "next_municipality":"柏市",
+    "primary_hubs":["手賀沼","利根川水系","水辺伝承"],
+    "route":"我孫子市→柏市→南下"
+  },
+  "summary":"我孫子市の索引ベース一次収集を完了。手賀沼を最大の地理ハブとして、水辺伝承・河童・沼の主・鯉・鰻を場所共有で横断接続し、将門・頼朝等は人物タグとして分離保持。次工程は柏市へ進み、手賀沼伝承圏を市境を越えて追跡する。"
+}
