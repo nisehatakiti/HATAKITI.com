@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-006-primary-index-sweep-f",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-kashiwa-fujihime-network","title":"藤姫の恋・柏関連伝承","story_type":["人物伝承候補","恋愛伝承候補"],"cross_tags":["藤姫","手賀沼","我孫子市","柏市"],"research_status":"researching","research_notes":"我孫子市側の藤姫タグへ接続。手賀沼伝承圏を共有するが、同一人物・同一話の判定は本文比較後に行う。"},
+    {"record_id":"chiba-kashiwa-bennai-shonin-serpent","title":"弁内上人の大蛇退治","story_type":["人物伝承","寺社伝承候補","大蛇伝承"],"cross_tags":["弁内上人","大蛇","退治","寺社伝承"],"research_status":"researching","research_notes":"弁内上人は我孫子市の人物タグへ、大蛇は名称タグへ接続。人物と怪異名称の横断比較を可能にする。"},
+    {"record_id":"chiba-kashiwa-fuse-benzaiten-hub","title":"布施弁天・信仰伝承ハブ","story_type":["寺社伝承","民間信仰"],"cross_tags":["布施弁天","弁財天","寺社伝承","手賀沼伝承圏"],"research_status":"researching","research_notes":"柏市側の寺社・信仰伝承の地域ハブ候補。周辺の藤姫・大蛇・水辺伝承との地理的関係は後続確認。"},
+    {"record_id":"chiba-kashiwa-carp-network","title":"鯉の願い・柏関連伝承","story_type":["動物伝承候補","水辺伝承"],"cross_tags":["鯉","手賀沼","水辺伝承","我孫子市","柏市"],"research_status":"researching","research_notes":"我孫子市側の鯉伝承と名称・場所軸で接続。内容上の同一性は断定しない。"},
+    {"record_id":"chiba-kashiwa-kappa-woodcutter","title":"木びきの爺さまとカッパ","story_type":["河童伝承"],"cross_tags":["河童","木びき","水辺伝承"],"research_status":"researching","research_notes":"河童名称タグへ接続し、全国的な河童伝承との話型比較対象として保持する。"}
+  ],
+  "batch_notes":"柏市一次索引巡回F。藤姫、弁内上人、大蛇、布施弁天、鯉、河童を追加し、我孫子市との手賀沼伝承圏および人物タグの横断接続を強化。"
+}
