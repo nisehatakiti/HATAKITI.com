@@ -1,0 +1,24 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-001-index-sweep-a",
+  "municipality":"流山市",
+  "source":"千葉県立図書館 千葉県の民話 流山市",
+  "phase":"primary_collection_started",
+  "records":[
+    {"record_id":"chiba-nagareyama-kurakake-matsu","title":"鞍掛けの松","story_type":["樹木伝承","由来話"],"related_place":"旧八木・諏訪神社","cross_tags":["樹木伝承","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-akagiyama","title":"赤城山","story_type":["山岳・地名伝承","寺社伝承"],"related_place":"赤城山・赤城神社","cross_tags":["地域史","地名由来候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-chuken-koganemaru","title":"犬の伝説 三話 その一 忠犬小金丸","story_type":["動物伝承","人物伝承"],"cross_tags":["犬伝承","忠犬小金丸","松戸市接続"],"related_regions":["松戸市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-omoide-inuzuka","title":"思井の犬塚","story_type":["犬伝承","墓・塚伝承"],"cross_tags":["犬伝承","忠犬小金丸候補","墓伝承"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-kasha-kasha","title":"火車・却刃","story_type":["妖怪伝承","怪異譚"],"cross_tags":["妖怪","怪異"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-bandotaro","title":"関東第一のあばれ川、坂東太郎と流山","story_type":["河川伝承","地域史"],"related_place":"利根川","cross_tags":["水辺伝承","河川伝承","地域ハブ候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-issa-fuse-benten","title":"恋人に似た布施弁天によく通った一茶","story_type":["人物伝承","寺社伝承"],"cross_tags":["小林一茶","人物ハブ候補","柏市接続","松戸市接続"],"related_regions":["柏市","松戸市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-koganemaru-story","title":"小金丸の話","story_type":["犬伝承","地域伝承"],"related_place":"思井","cross_tags":["犬伝承","忠犬小金丸","松戸市接続"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-old-castle-warriors","title":"古城址に古武士三人の幽霊","story_type":["怪談","城郭伝承"],"related_place":"前ヶ崎城址・名都借城","cross_tags":["幽霊・死者","城郭伝承","歴史怪談"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-nebosuke-kamisama","title":"寝ぼすけ神様","story_type":["民間信仰","世間話"],"cross_tags":["神様伝承","なんじゃもんじゃ候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-hidari-jingoro-kamo","title":"左甚五郎の眼つぶしの鴨","story_type":["人物伝承","動物伝承","怪異譚"],"related_person":"左甚五郎","cross_tags":["人物ハブ候補","鴨伝承","目つぶしの鴨類型候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-battlefield-cries","title":"人の泣き叫ぶ声の聞こえる古戦場","story_type":["怪談","古戦場伝承"],"related_places":["八木","深井","前ヶ崎"],"cross_tags":["幽霊・死者","古戦場","松戸市接続"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-metsubushi-kamo","title":"目つぶしの鴨","story_type":["動物伝承","怪異譚"],"related_place":"鰭ヶ崎・東福寺","cross_tags":["鴨伝承","目つぶしの鴨類型候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-tobichiyama","title":"早稲米のふるさとと飛血山の怪奇","story_type":["地域史","怪異譚","農耕伝承"],"related_place":"西深井・飛血山","cross_tags":["地域史","怪異","農耕民俗"],"research_status":"researching"}
+  ],
+  "batch_notes":"流山市一次収集開始。松戸市との共通伝承として忠犬小金丸、古戦場の泣き声、一茶伝承を優先接続。人物・類型は本文確認前のため候補扱いを維持する。"
+}
