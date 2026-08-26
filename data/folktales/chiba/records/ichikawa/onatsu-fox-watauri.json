@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-onatsu-fox-watauri",
+  "municipality": "市川市",
+  "title": "おなつギツネとわたうり",
+  "alternate_titles": ["お夏狐と綿売り"],
+  "research_status": "source_confirmed",
+  "story_type": ["狐伝承"],
+  "cross_tags": ["狐", "お夏狐", "綿売り", "了善寺", "相之川", "行徳", "市川市"],
+  "sources": [
+    {
+      "source_id": "SRC-CHIBA-LIB-ICHIKAWA-INDEX",
+      "title": "千葉県の民話 市川市",
+      "author_or_publisher": "千葉県立図書館",
+      "publication_year_or_date": "web",
+      "source_type": "library_index",
+      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "伝承題名、収録資料、地域・関連地を確認するための索引。本文そのものではない。"
+    },
+    {
+      "source_id": "SRC-OKASAN-MUKASHIBANASHI-1986",
+      "title": "お母さんがきいたむかしばなし",
+      "author_or_publisher": "エピック",
+      "publication_year_or_date": "1986",
+      "source_type": "book",
+      "url_or_identifier": "千葉県立図書館民話索引掲載書誌情報",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "「おなつギツネとわたうり」の収録資料として確認。本文未確認。"
+    }
+  ],
+  "related_items": [
+    {
+      "relation_type": "linked_by_shared_subject_and_probable_variant",
+      "target_title": "綿売りと狐",
+      "target_scope": "市川市行徳の狐伝承",
+      "note": "題名中の「わたうり」と、市川市行徳で確認される「綿売りと狐」を関連伝承として紐づける。現時点では同一本文と断定せず、本文確認後に同一話・異題・別話の判定を更新する。"
+    },
+    {
+      "relation_type": "linked_by_shared_subject",
+      "target_subject": "お夏狐",
+      "note": "市川市・行徳周辺に複数確認されるお夏狐伝承とタグで横断接続する。"
+    }
+  ],
+  "research_notes": "「綿売りと狐」は題名・語義・地域が近接するため関連項目として紐づけた。ただし現段階では本文同一性を確認していないため、同一recordへの統合は行わず、個別伝承として保持する。今後本文または原資料を確認できた場合に関係種別を再判定する。"
+}
