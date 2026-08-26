@@ -39,6 +39,28 @@
 
 いずれもタイトルからの本文推測・内容の統合は行っていない。詳細はhatakiti.comとのチャット記録、および該当ファイルの`research_notes`/`related_records`を参照。
 
+## 市川バッチ1・2の重複解消（2026-08-26追加実施）
+
+上記の確認作業中に、`ichikawa/2026-08-batch-001-researching.json`（7件）と`ichikawa/2026-08-batch-002.json`（4件）が、いずれも既に`data/folktales/chiba/records/ichikawa/`へ**別のrecord_idで**canonical record化済みであるにもかかわらず、バッチ側に完全な重複recordとして残っていたことが判明した（バッチ5は既にdeduplication済みだったが、バッチ1・2は未処理だった）。
+
+内容を突き合わせ、canonical record側がバッチ側の情報を全て含む（またはそれ以上に詳しい）ことを確認した上で、バッチ1・2側の全11件を`deduplicated_records`化し、`records`は空配列とした。バッチ側にしかない独自情報の消失はない。
+
+| バッチ側タイトル | バッチ側ID | canonical ID |
+|---|---|---|
+| 印内の重右衛門伝承群（調査ハブ） | chiba-ichikawa-innai-juemon-group | chiba-ichikawa-innai-juemon-traditions |
+| お稲荷さんと子どもたち | chiba-ichikawa-gyotoku-inari-children | chiba-ichikawa-oinari-san-to-kodomo-tachi |
+| かまたきとキツネ | chiba-ichikawa-gyotoku-kamataiki-kitsune | chiba-ichikawa-kamataki-to-kitsune |
+| 新場のキツネ | chiba-ichikawa-gyotoku-shinba-kitsune | chiba-ichikawa-shinba-no-kitsune |
+| 拾ったきつねの子 | chiba-ichikawa-gyotoku-picked-fox-cub | chiba-ichikawa-hirota-kitsune-no-ko |
+| おなつギツネとわたうり | chiba-ichikawa-gyotoku-onatsu-fox-watauri | chiba-ichikawa-onatsu-fox-watauri |
+| おんぶされたムジナ | chiba-ichikawa-gyotoku-carried-mujina | chiba-ichikawa-onbu-sareta-mujina |
+| お月さまがべーえ | chiba-ichikawa-otsukisama-ga-bee | chiba-ichikawa-otsukisama-ga-bee（同一） |
+| サルとりょうし | chiba-ichikawa-saru-to-ryoshi | chiba-ichikawa-saru-to-ryoshi（同一） |
+| 清水がにと、蛙の恩返し | chiba-ichikawa-shimizu-gani-to-kaeru | chiba-ichikawa-shimizu-gani-to-kaeru-no-ongaeshi |
+| 女化のキツネ | chiba-ichikawa-onnabake-no-kitsune | chiba-ichikawa-nyoke-no-kitsune |
+
+バッチ3（八幡不知森伝承群）・バッチ4（八幡拡張）は個別に確認し、canonical recordとの重複なし（record自体がそのままcanonical）。バッチ6は上記の通り解消済み。これでバッチ1〜6はすべて重複なしの状態になった。
+
 ## 現在の管理方針
 
 ### 1伝承1正本

@@ -1,6 +1,7 @@
 {
   "schema_version": "1.1",
   "batch_id": "chiba-ichikawa-2026-08-001",
+  "batch_role": "research_queue",
   "scope": "市川市民話の深掘り調査バッチ。人物・寺社・妖怪等の共通主体は親record化せず、各話を個別recordとして扱い、共通主体はタグ／エンティティ参照で横断整理する。",
   "modeling_policy": {
     "one_story_one_record": true,
@@ -8,107 +9,15 @@
     "no_parent_record_for_shared_subject": true,
     "examples": ["印内の重右衛門", "同一の狐", "同一神社に関する複数伝承"]
   },
-  "records": [
-    {
-      "record_id": "chiba-ichikawa-innai-juemon-group",
-      "title": "印内の重右衛門伝承群（調査ハブ）",
-      "record_type": "research_hub",
-      "tags": ["印内の重右衛門", "人物伝承", "笑話"],
-      "research_status": "partial",
-      "research_notes": "調査ハブのみ。正本では個別話をそれぞれ独立record化し、共通タグ「印内の重右衛門」で横断する。"
-    },
-    {
-      "record_id": "chiba-ichikawa-gyotoku-inari-children",
-      "title": "お稲荷さんと子どもたち",
-      "record_type": "folktale",
-      "municipality": ["市川市"],
-      "local_areas": ["行徳", "行徳三丁目"],
-      "related_places": ["横町稲荷"],
-      "tags": ["寺社伝承", "地域伝承", "稲荷", "横町稲荷", "狐"],
-      "research_status": "source_confirmed",
-      "sources": [
-        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "role": "primary_listed_source"}
-      ],
-      "research_notes": "千葉県立図書館民話索引で市川市・行徳の伝承として確認。関連地として行徳三丁目・横町稲荷まで追跡した。本文は未確認のため、周辺の狐伝承と同一視しない。",
-      "research_missing": ["story_content", "source_text", "exact_story_relationship_to_yokomachi_inari"]
-    },
-    {
-      "record_id": "chiba-ichikawa-gyotoku-kamataiki-kitsune",
-      "title": "かまたきとキツネ",
-      "record_type": "folktale",
-      "municipality": ["市川市"],
-      "local_areas": ["行徳"],
-      "tags": ["狐狸貉", "狐", "動物伝承"],
-      "research_status": "source_confirmed",
-      "sources": [
-        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "role": "primary_listed_source"}
-      ],
-      "research_notes": "伝承地は行徳まで確認。「かまたき」の人物・職業上の意味や製塩との関係は本文未確認のため断定しない。",
-      "research_missing": ["story_content", "source_text", "exact_location", "meaning_of_kamataiki"]
-    },
-    {
-      "record_id": "chiba-ichikawa-gyotoku-shinba-kitsune",
-      "title": "新場のキツネ",
-      "record_type": "folktale",
-      "municipality": ["市川市"],
-      "local_areas": ["行徳", "塩焼"],
-      "tags": ["狐狸貉", "狐", "行徳"],
-      "research_status": "research_pending_retry",
-      "research_notes": "調査対象として確認済みだが、本文・地名史・塩焼との具体的関係は未確定。推測による補完は行わず再調査対象として残す。",
-      "research_missing": ["story_content", "source_text", "exact_location", "shinba_toponym_history", "relationship_to_shioyaki"]
-    },
-    {
-      "record_id": "chiba-ichikawa-gyotoku-picked-fox-cub",
-      "title": "拾ったきつねの子",
-      "record_type": "folktale",
-      "municipality": ["市川市"],
-      "local_areas": ["香取", "行徳"],
-      "tags": ["狐狸貉", "狐", "動物伝承", "香取", "行徳"],
-      "research_status": "source_confirmed",
-      "sources": [
-        {"title": "ふるさと千葉県の民話", "publisher": "千秋社", "year": 1980, "role": "primary_listed_source"}
-      ],
-      "research_notes": "書誌上、香取・行徳の伝承として確認。本文未確認のため、恩返し・化かし・香取神社との関係などは記録しない。",
-      "research_missing": ["story_content", "source_text", "exact_location", "group_relationship"]
-    },
-    {
-      "record_id": "chiba-ichikawa-gyotoku-onatsu-fox-watauri",
-      "title": "おなつギツネとわたうり",
-      "record_type": "folktale",
-      "municipality": ["市川市"],
-      "local_areas": ["行徳", "相之川"],
-      "related_places": ["了善寺"],
-      "tags": ["狐狸貉", "狐", "お夏狐", "綿売り", "了善寺", "相之川", "行徳"],
-      "research_status": "source_confirmed",
-      "sources": [
-        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "role": "primary_listed_source"}
-      ],
-      "related_traditions": [
-        {"title": "綿売りと狐", "relationship": "related_tradition", "status": "linked_pending_text_comparison", "reason": "題材・地域・お夏狐伝承との近接性から関連伝承としてリンク。本文同一性は未確定。"},
-        {"title": "お夏狐", "relationship": "shared_subject_tag", "status": "linked"}
-      ],
-      "research_notes": "市川の関連資料で、お夏狐と了善寺の結び付き、および複数のお夏狐伝承の存在を確認。本文未確認のため、個別話は統合せずタグと関連リンクで横断する。",
-      "research_missing": ["story_content", "source_text", "exact_story_identity_with_watauri_to_kitsune"]
-    },
-    {
-      "record_id": "chiba-ichikawa-gyotoku-carried-mujina",
-      "title": "おんぶされたムジナ",
-      "record_type": "folktale",
-      "municipality": ["市川市"],
-      "local_areas": ["行徳", "本行徳"],
-      "tags": ["狐狸貉", "貉", "ムジナ", "狸", "動物怪異", "化かし", "赤子", "本行徳"],
-      "research_status": "story_matched",
-      "sources": [
-        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "role": "primary_listed_source"},
-        {"title": "現代民話考 11 狸・むじな", "author": "松谷みよ子", "role": "matched_story_source"}
-      ],
-      "story_identity": {
-        "status": "treated_as_same_story",
-        "matched_source": "現代民話考 11 狸・むじな",
-        "reason": "ユーザー判断により、本行徳の赤子の泣き声に化けたムジナを老人が背負って帰る話を本伝承と同一として扱う。"
-      },
-      "research_notes": "本行徳のムジナ話との一致を採用。将来、原典本文が確認できた場合は異同比較を追記する。",
-      "research_missing": ["original_source_text_comparison"]
-    }
-  ]
+  "deduplication_policy": "Each tradition is managed as a single canonical record across the repository. A batch must not retain duplicate full records after canonicalization. Removed duplicates are preserved only as lightweight deduplication history so downstream AI can determine that they were intentionally removed rather than overlooked.",
+  "deduplicated_records": [
+    {"title": "印内の重右衛門伝承群（調査ハブ）", "canonical_record_id": "chiba-ichikawa-innai-juemon-traditions", "canonical_file": "data/folktales/chiba/records/ichikawa/innai-juemon-traditions.json", "reason": "research hub promoted to a standalone canonical record under a new id; queue entry removed to avoid duplicate content under two ids (2026-08-26)"},
+    {"title": "お稲荷さんと子どもたち", "canonical_record_id": "chiba-ichikawa-oinari-san-to-kodomo-tachi", "canonical_file": "data/folktales/chiba/records/ichikawa/oinari-san-to-kodomo-tachi.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"},
+    {"title": "かまたきとキツネ", "canonical_record_id": "chiba-ichikawa-kamataki-to-kitsune", "canonical_file": "data/folktales/chiba/records/ichikawa/kamataki-to-kitsune.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"},
+    {"title": "新場のキツネ", "canonical_record_id": "chiba-ichikawa-shinba-no-kitsune", "canonical_file": "data/folktales/chiba/records/ichikawa/shinba-no-kitsune.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"},
+    {"title": "拾ったきつねの子", "canonical_record_id": "chiba-ichikawa-hirota-kitsune-no-ko", "canonical_file": "data/folktales/chiba/records/ichikawa/hirota-kitsune-no-ko.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"},
+    {"title": "おなつギツネとわたうり", "canonical_record_id": "chiba-ichikawa-onatsu-fox-watauri", "canonical_file": "data/folktales/chiba/records/ichikawa/onatsu-fox-watauri.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"},
+    {"title": "おんぶされたムジナ", "canonical_record_id": "chiba-ichikawa-onbu-sareta-mujina", "canonical_file": "data/folktales/chiba/records/ichikawa/onbu-sareta-mujina.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"}
+  ],
+  "records": []
 }

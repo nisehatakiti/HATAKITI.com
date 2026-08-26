@@ -1,81 +1,13 @@
 {
   "schema_version": "1.1",
   "batch_id": "chiba-ichikawa-2026-08-002",
-  "records": [
-    {
-      "record_id": "chiba-ichikawa-otsukisama-ga-bee",
-      "title": "お月さまがべーえ",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["行徳"],
-      "story_type": ["民話"],
-      "beings": ["月"],
-      "themes": ["自然"],
-      "research_status": "source_confirmed",
-      "research_priority": "high",
-      "research_missing": ["full_story_text", "direct_variant_comparison"],
-      "research_notes": "千葉県立図書館の民話リストで市川市の民話として確認。千葉県公式の『語り継ごう千葉の民話集 第2巻』にも『お月様がべーえ』として収録され、伝承地は市川市行徳。本文は未確定。浦安の『月に化けたタヌキ』『月に化けた狢』『月に化けたムジナ』を比較候補としてリンクし、本文確認時に最優先で照合する。",
-      "sources": [
-        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"},
-        {"title": "語り継ごう千葉の民話集 第2巻", "publisher": "千葉県", "year": 2009, "url": "https://www.pref.chiba.lg.jp/kkbunka/b-shinkou/jigyou/minwa-cd.html"}
-      ],
-      "related_traditions": [
-        {"title": "月に化けたタヌキ（浦安）", "relationship": "comparison_candidate", "reason": "月への変身を扱う近接伝承圏の比較候補。本文未確認のため同一伝承とは断定しない。"},
-        {"title": "月に化けた狢（浦安）", "relationship": "comparison_candidate", "reason": "月への変身を扱う近接伝承圏の比較候補。本文未確認のため同一伝承とは断定しない。"},
-        {"title": "月に化けたムジナ（浦安）", "relationship": "comparison_candidate", "reason": "月への変身を扱う近接伝承圏の比較候補。本文未確認のため同一伝承とは断定しない。"}
-      ]
-    },
-    {
-      "record_id": "chiba-ichikawa-saru-to-ryoshi",
-      "title": "サルとりょうし",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["行徳"],
-      "story_type": ["民話"],
-      "beings": ["猿", "人間"],
-      "themes": ["動物", "殺生", "因果"],
-      "research_status": "partial_story_confirmed",
-      "research_priority": "normal",
-      "research_missing": ["full_story_text", "ending", "exact_variant_relationship"],
-      "research_notes": "市川民話の会の資料で『サルとりょうし（行徳）』として伝承地を補強。確認できた筋では、猟師が身重の猿を仕留め、その後、猟師の家系の男子に耳が聞こえない者が生まれるという因果が語られる。祟り・供養等は本文全体未確認のため断定しない。",
-      "sources": [
-        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}
-      ]
-    },
-    {
-      "record_id": "chiba-ichikawa-shimizu-gani-to-kaeru",
-      "title": "清水がにと、蛙の恩返し",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": [],
-      "story_type": ["民話"],
-      "beings": ["蟹", "蛙"],
-      "themes": ["動物", "恩返し"],
-      "research_status": "source_confirmed",
-      "research_priority": "normal",
-      "research_missing": ["story_content", "exact_location", "meaning_of_shimizu_gani", "source_text"],
-      "research_notes": "『千葉県の民話 続』（千秋社、1981年）収録として確認。『清水がに』が地名・蟹の呼称・水辺の蟹のいずれを指すかは本文未確認のため断定しない。君津などの『蟹の恩返し』とは現時点で直接リンクしない。",
-      "sources": [{"title": "千葉県の民話 続", "publisher": "千秋社", "year": 1981, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}]
-    },
-    {
-      "record_id": "chiba-ichikawa-onnabake-no-kitsune",
-      "title": "女化のキツネ",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": [],
-      "story_type": ["民話"],
-      "beings": ["狐"],
-      "themes": ["化かし"],
-      "cross_tags": ["狐狸貉", "狐"],
-      "research_status": "source_confirmed",
-      "research_priority": "high",
-      "research_missing": ["story_content", "exact_location", "direct_variant_relationship"],
-      "research_notes": "市川市の『女化のキツネ』と、茨城県の『女化原の白狐』は題名・主題が近いが、現時点では同一伝承と断定しない。比較候補としてリンクする。市川側の本文確認後に異伝・移入伝承の可能性を再検討する。",
-      "sources": [{"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
-      "related_traditions": [
-        {"title": "女化原の白狐（茨城）", "relationship": "comparison_candidate", "status": "not_same_story_confirmed", "reason": "題名・狐女房系主題の近接性はあるが、市川側本文未確認のため同一視しない。"},
-        {"title": "女化神社（茨城）の話（市川市内関連伝承）", "relationship": "regional_reference_candidate", "status": "contextual_link_only"}
-      ]
-    }
-  ]
+  "batch_role": "research_queue",
+  "deduplication_policy": "Each tradition is managed as a single canonical record across the repository. A batch must not retain duplicate full records after canonicalization. Removed duplicates are preserved only as lightweight deduplication history so downstream AI can determine that they were intentionally removed rather than overlooked.",
+  "deduplicated_records": [
+    {"title": "お月さまがべーえ", "canonical_record_id": "chiba-ichikawa-otsukisama-ga-bee", "canonical_file": "data/folktales/chiba/records/ichikawa/otsukisama-ga-bee.json", "reason": "already researched and canonicalized (same record_id); remove duplicate queue entry (2026-08-26)"},
+    {"title": "サルとりょうし", "canonical_record_id": "chiba-ichikawa-saru-to-ryoshi", "canonical_file": "data/folktales/chiba/records/ichikawa/saru-to-ryoshi.json", "reason": "already researched and canonicalized (same record_id); remove duplicate queue entry (2026-08-26)"},
+    {"title": "清水がにと、蛙の恩返し", "canonical_record_id": "chiba-ichikawa-shimizu-gani-to-kaeru-no-ongaeshi", "canonical_file": "data/folktales/chiba/records/ichikawa/shimizu-gani-to-kaeru-no-ongaeshi.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"},
+    {"title": "女化のキツネ", "canonical_record_id": "chiba-ichikawa-nyoke-no-kitsune", "canonical_file": "data/folktales/chiba/records/ichikawa/nyoke-no-kitsune.json", "reason": "already researched and canonicalized under a renamed record_id; remove duplicate queue entry (2026-08-26)"}
+  ],
+  "records": []
 }
