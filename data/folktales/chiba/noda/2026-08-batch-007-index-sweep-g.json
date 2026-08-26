@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-007-index-sweep-g",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-kappa-final-network","title":"野田市河童伝承・一次統合ハブ","story_type":["話群","水辺伝承"],"cross_tags":["河童","水辺伝承","池","利根川流域"],"research_status":"researching","related_records":["chiba-noda-kappa-pond","chiba-noda-kappa-pond-master","chiba-noda-kappa-pond-mystery","chiba-noda-kappa-tail"],"research_notes":"河童の名称タグによる一次接続。個別話の存在・類型・相互関係は本文確認後に比較する。"},
+    {"record_id":"chiba-noda-sekiyado-historical-legends","title":"関宿・歴史怪異伝承群","story_type":["話群","地域史","怪談"],"cross_tags":["関宿","首","塚","怨念","古戦場候補"],"research_status":"researching","related_records":["chiba-noda-ii-tairo-head","chiba-noda-yagozuka-resentment","chiba-noda-cutting-jizo"]},
+    {"record_id":"chiba-noda-water-transport-network","title":"野田・関宿水運伝承ネットワーク","story_type":["話群","河川伝承"],"cross_tags":["利根川","江戸川","関宿","水運","通運丸","高瀬船"],"research_status":"researching"},
+    {"record_id":"chiba-noda-religious-legends-network","title":"野田市寺社・信仰伝承群","story_type":["話群","民間信仰"],"cross_tags":["寺社伝承","明神","観音","地蔵","親鸞"],"research_status":"researching","related_records":["chiba-noda-maria-kannon","chiba-noda-toge-nuki-jizo","chiba-noda-oyorokuchiina-myojin","chiba-noda-shinran-bodhi-tree"]},
+    {"record_id":"chiba-noda-name-tag-hold-review","title":"野田市名称タグ保留レビュー","story_type":["データ整理"],"cross_tags":["名称タグ先行","分類保留"],"research_status":"active","research_notes":"河童・火車・お松など、題名や名称が一致する事例は先に横断接続する。同一人物・同一存在・同一話型であるかは本文・原典確認後に判定する。"}
+  ],
+  "batch_notes":"野田市一次索引巡回G。河童、関宿の歴史怪異、水運、寺社信仰を市内の主要ハブとして再整理。名称一致による早期統合を避け、横断タグと同一性判定を分離する方針を適用。"
+}
