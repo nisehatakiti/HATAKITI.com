@@ -1,0 +1,30 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-001-initial-sweep",
+  "municipality":"松戸市",
+  "source_index":"千葉県立図書館 千葉県の民話 松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-kogane-maru","title":"忠犬小金丸","story_type":["動物伝承","人物・歴史伝承"],"beings":["犬"],"cross_tags":["動物伝承","地域の有名存在"],"locations":["黄金城","小金城"],"story_hub":"忠犬小金丸話群","research_status":"partial"},
+    {"record_id":"chiba-matsudo-yaohime","title":"風早神社に伝わる八百姫伝説／八百比丘尼","story_type":["人物伝承","寺社伝承"],"cross_tags":["人物ハブ候補","寺社伝承","不老不死"],"locations":["上本郷","風早神社"],"research_status":"partial"},
+    {"record_id":"chiba-matsudo-oshou-orochi","title":"和尚と大蛇","story_type":["怪異譚","蛇伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","寺社伝承"],"locations":["馬橋"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-koumon-orochi","title":"水戸黄門の大蛇退治","story_type":["人物伝承","蛇伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","人物ハブ候補"],"locations":["根木内"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-oitakebori","title":"おいてけ堀","story_type":["怪異譚","水辺伝承"],"cross_tags":["水辺伝承","怪異"],"locations":["根木内"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-deidarabocchi-otafuku","title":"デーダラボッチとお多福弁天","story_type":["巨人伝承","寺社伝承"],"beings":["ダイダラボッチ"],"cross_tags":["ダイダラボッチ類型","巨人伝承","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-nanjamonja","title":"謎のなんじゃもんじゃ／なんじゃもんじゃの木","story_type":["植物伝承","怪異譚"],"cross_tags":["植物伝承","怪異"],"locations":["上本郷"],"story_hub":"なんじゃもんじゃ話群","research_status":"researching"},
+    {"record_id":"chiba-matsudo-ningyo-bishoujo","title":"人魚を食った永遠の美少女","story_type":["怪異譚","人物伝承"],"beings":["人魚"],"cross_tags":["人魚伝承","不老不死","怪異"],"locations":["上本郷","風早神社","千駄堀"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kami-hongou-seven-wonders","title":"上本郷の七不思議","story_type":["怪異譚","地域伝承"],"cross_tags":["七不思議","怪異"],"locations":["上本郷"],"story_hub":"上本郷の七不思議","research_status":"researching"},
+    {"record_id":"chiba-matsudo-old-battlefield-ghosts","title":"人の泣き叫ぶ声の聞こえる古戦場","story_type":["怪談","歴史伝承"],"cross_tags":["幽霊・死者","古戦場"],"locations":["小金","根木内城","行人台古戦場","東漸寺"],"research_status":"partial"},
+    {"record_id":"chiba-matsudo-kowashimizu","title":"子和清水","story_type":["清水伝承","地域伝承"],"cross_tags":["水辺伝承","地名・場所伝承"],"locations":["常盤平","金ケ作"],"story_hub":"子和清水話群","research_status":"partial"},
+    {"record_id":"chiba-matsudo-kaza-haya-sacred-tree","title":"風早神社の大杉","story_type":["寺社伝承","樹木伝承"],"cross_tags":["寺社伝承","巨木伝承"],"locations":["風早神社","二ツ木"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kannjo-ghost","title":"官女のおばけ","story_type":["怪談"],"cross_tags":["幽霊・死者","怪異"],"locations":["新松戸駅","雷神社","竜善寺"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kirare-jizo","title":"切られ地蔵","story_type":["寺社伝承","怪異譚"],"cross_tags":["寺社伝承","地蔵伝承"],"locations":["明治神社","本福寺"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kozo-benten","title":"小僧弁天","story_type":["寺社伝承"],"cross_tags":["寺社伝承","弁天伝承"],"locations":["馬橋","万満寺","古ヶ崎"],"research_status":"partial"},
+    {"record_id":"chiba-matsudo-futatsuido","title":"二つ井戸","story_type":["井戸伝承","怪異譚"],"cross_tags":["水辺伝承","怪異"],"locations":["上本郷","明治神社"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-yurugi-fujimi-matsu","title":"ゆるぎの松・富士見の松","story_type":["樹木伝承","地域伝承"],"cross_tags":["巨木伝承","地域史"],"locations":["本覚寺"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-sairenji-amida","title":"西蓮寺本尊阿弥陀如来の霊験","story_type":["寺社伝承"],"cross_tags":["寺社伝承","霊験譚"],"locations":["下矢切","西蓮寺"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kogane-ghosts","title":"古城址に古武士三人の幽霊","story_type":["怪談","歴史伝承"],"cross_tags":["幽霊・死者","城伝承"],"locations":["小金城"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-dogyo-wedding","title":"ドジョウの祝言","story_type":["動物伝承"],"beings":["ドジョウ"],"cross_tags":["動物伝承"],"research_status":"researching"}
+  ],
+  "sources":[{"title":"千葉県立図書館 千葉県の民話 松戸市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/matsudo.html"}],
+  "batch_notes":"松戸市一次収集の開始バッチ。広域重複・異伝候補は既存地域の記録と安易に統合せず、地域接続・人物ハブ・類型タグで関連付ける。本文未確認はresearchingとして保持。"
+}
