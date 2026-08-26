@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-002-index-sweep-b",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-abiko-teganuma-master-network","title":"手賀沼の主関連伝承群","story_type":["話群","水辺伝承"],"cross_tags":["手賀沼","沼の主","鯉","水辺伝承"],"research_status":"researching","related_titles":["雨の夜の托鉢僧と手賀沼の鯉","鯉の願い","コイの願い－手賀沼の主","手賀沼の主　その一　托鉢僧の涙","手賀沼の主　その二　魂を食った男","手賀沼の主　その三　沼に消えた牛"]},
+    {"record_id":"chiba-abiko-eel-mound-network","title":"鰻塚・手賀沼の大鰻関連伝承群","story_type":["話群","水辺伝承","塚伝承"],"cross_tags":["鰻塚","大鰻","手賀沼","水辺伝承"],"research_status":"researching","related_titles":["ウナギ塚","鰻塚","手賀沼の大鰻","手賀沼のほとりの鰻塚と大ウナギ"]},
+    {"record_id":"chiba-abiko-kappa-network","title":"我孫子市河童伝承群","story_type":["話群","水辺伝承"],"cross_tags":["河童","手賀沼","水辺伝承"],"research_status":"researching","related_titles":["カッパの立ち聞き","木びきの爺さまとカッパ"],"research_notes":"河童という名称タグで接続。個別話の類型・性格・他地域との同一系統判定は本文確認後に行う。"},
+    {"record_id":"chiba-abiko-fire-cart-cat-otra","title":"火車猫おトラ","story_type":["名称伝承"],"cross_tags":["火車","猫","おトラ"],"research_status":"researching","research_notes":"流山・野田・柏の火車関連記録と名称タグで横断接続。火車との系統関係や存在分類は保留する。"},
+    {"record_id":"chiba-abiko-teganuma-water-hub","title":"我孫子市・手賀沼水辺伝承ハブ","story_type":["地域伝承","地理伝承"],"cross_tags":["手賀沼","鯉","鰻","河童","水辺伝承"],"research_status":"researching","research_notes":"我孫子市内の水辺伝承を手賀沼という地理タグで接続し、名称タグ・存在タグ・モチーフタグとは別軸で保持する。"}
+  ],
+  "batch_notes":"我孫子市一次索引巡回B。手賀沼を中心に鯉・沼の主・鰻塚・河童を地理ハブへ接続。火車猫おトラは火車名称タグを維持し、野田・柏方面との横断比較対象として保留する。"
+}
