@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-komori-castle-lord-deep-dive",
+  "municipality":"白井市",
+  "title":"板ばさみの小森城主",
+  "source_status":"deep_researched",
+  "story_type":["城郭伝承","悲恋伝承","人物伝承"],
+  "cross_tags":["小森城","平塚","手賀沼","手賀城","千葉氏","女城主","恋","自害"],
+  "sources":[
+    {"source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002","title":"白井の伝説と文化財 平成十三年度企画展記録集","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2002","source_type":"local_history_book","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html","accessed_date":"2026-08-26","reliability_notes":"伝承本文の出典。公開ウェブ上では二次的な抜粋確認もあるため、今後は原冊子本文の直接確認を優先する。"},
+    {"source_id":"SRC-SHIROI-HIKING-HIRATSUKA","title":"文化・歴史の里コース〈平塚地区〉","author_or_publisher":"白井市","publication_year_or_date":"web公開資料","source_type":"official_archive","url_or_identifier":"https://www.city.shiroi.chiba.jp/material/files/group/46/0000000086_0000001377.pdf","accessed_date":"2026-08-26","reliability_notes":"小森城跡の現地説明。城主は不明と明記。"},
+    {"source_id":"SRC-SHIROI-CULTURAL-HISTORY","title":"白井市の地理と歴史（抄）","author_or_publisher":"白井市","publication_year_or_date":"web","source_type":"official_archive","url_or_identifier":"https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun003/1423036471895.html","accessed_date":"2026-08-26","reliability_notes":"白井市の歴史的背景確認用。伝承本文そのものの直接出典ではない。"}
+  ],
+  "claims":[
+    {"claim_id":"claim-001","text":"伝承では、平塚の小森に城があり、その城主は千葉氏の家来とされる。","source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],"interpretation":false},
+    {"claim_id":"claim-002","text":"城主は手賀城攻略を命じられたが、手賀側の美しい女城主に恋していたため攻撃をためらったと語られる。","source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],"interpretation":false},
+    {"claim_id":"claim-003","text":"命令と恋情の板ばさみとなった城主は手賀沼に身を投げ、千葉方は最終的に手賀城を攻略できなかったという筋で伝わる。","source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],"interpretation":false},
+    {"claim_id":"claim-004","text":"小森城跡は現存し、土塁や空堀などの遺構が残る一方、白井市の公式資料では実際の城主は不明とされる。","source_ids":["SRC-SHIROI-HIKING-HIRATSUKA"],"interpretation":false},
+    {"claim_id":"claim-005","text":"この伝承は、実在する城跡を舞台にした『城主不明の史実空白を悲恋譚で埋めるタイプ』の伝承として比較研究できる可能性がある。","source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002","SRC-SHIROI-HIKING-HIRATSUKA"],"interpretation":true}
+  ],
+  "research_notes":"伝承の物語内容と史実として確認できる城跡情報を分離。小森城主の実名・実在は現段階で確認できないため、伝承上の人物として扱う。手賀城側の女城主についても史実人物として断定しない。"
+}
