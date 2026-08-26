@@ -4,89 +4,50 @@
   "batch_role": "research_queue",
   "deduplication_policy": "Each tradition is managed as a single canonical record across the repository. A batch must not retain duplicate full records after canonicalization. Removed duplicates are preserved only as lightweight deduplication history so downstream AI can determine that they were intentionally removed rather than overlooked.",
   "deduplicated_records": [
-    {
-      "title": "おなつ狐",
-      "canonical_record_id": "chiba-ichikawa-onatsu-gitsune",
-      "reason": "already researched and canonicalized in an earlier batch; remove duplicate queue entry"
-    },
-    {
-      "title": "新場のキツネ",
-      "canonical_record_id": "chiba-ichikawa-shinba-no-kitsune",
-      "reason": "already researched and canonicalized in an earlier batch; remove duplicate queue entry"
-    },
-    {
-      "title": "おんぶされたムジナ",
-      "canonical_record_id": "chiba-ichikawa-onbu-sareta-mujina",
-      "reason": "already researched and canonicalized in an earlier batch; remove duplicate queue entry"
-    }
+    {"title":"おなつ狐","canonical_record_id":"chiba-ichikawa-onatsu-gitsune","reason":"already researched and canonicalized in an earlier batch; remove duplicate queue entry"},
+    {"title":"新場のキツネ","canonical_record_id":"chiba-ichikawa-shinba-no-kitsune","reason":"already researched and canonicalized in an earlier batch; remove duplicate queue entry"},
+    {"title":"おんぶされたムジナ","canonical_record_id":"chiba-ichikawa-onbu-sareta-mujina","reason":"already researched and canonicalized in an earlier batch; remove duplicate queue entry"}
   ],
   "records": [
     {
-      "record_id": "chiba-ichikawa-yokomachi-inari-no-kitsune",
-      "title": "横町稲荷のきつね",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["本行徳", "横町稲荷"],
-      "story_type": ["民話", "伝説"],
-      "beings": ["狐"],
-      "cross_tags": ["狐狸貉", "行徳狐伝承", "稲荷信仰"],
-      "themes": ["稲荷信仰", "怪異", "地域伝承", "化かし"],
-      "research_status": "partial",
-      "research_priority": "high",
-      "research_missing": ["full_story_text", "variant_texts", "specific_shrine_history_and_exact_location"],
-      "research_notes": "市川民話の会が2023年・2024年・2026年の複数の公開演目で、本行徳の伝承『横町稲荷のきつね』として継続的に採用していることを確認。市川市の伝承一覧では横町稲荷を舞台とする『横町稲荷の狐 (1)』『横町稲荷の狐 (2)』の複数異伝が存在することを確認した。ただし公開確認できた範囲では各異伝の本文を直接確定できていないため、複数異伝を一つの本文に統合・補完しない。横町稲荷周辺には既存canonical record『お稲荷さんと子供達』および『狐に化かされた話（油揚げ）』が存在するが、現時点では同一話とは扱わず、同一地点を中心とする伝承群として関連付け候補に留める。",
-      "related_records": [
-        {"record_id": "chiba-ichikawa-on-inari-san-to-kodomo-tachi", "relation": "same_location_tradition_cluster", "confidence": "medium"},
-        {"title": "狐に化かされた話（油揚げ）", "relation": "same_location_tradition_cluster", "confidence": "medium"}
-      ],
-      "sources": [
-        {"title": "市川民話の会『第46回市川の民話のつどい』", "url": "https://ichikawa.genki365.jp/G0000286/event/5447.html", "note": "2023年の演目として『横町稲荷のきつね（本行徳）』を確認"},
-        {"title": "市川民話の会『第7回市川の昔ばなし「行徳のこわい話」』", "url": "https://ichikawa.genki365.jp/G0000286/event/6016.html", "note": "2024年の行徳地域の怪異譚として確認"},
-        {"title": "市川民話の会『第17回市川のむかし話』", "url": "https://ichikawa.genki365.jp/G0000286/event/7099.html", "note": "2026年にも本行徳の話として継続的に語られていることを確認"},
-        {"title": "市川市のむかし話", "url": "https://www.city.ichikawa.lg.jp/site/library/4572.html", "note": "市川市公式の昔話・伝説・民話検索入口"},
-        {"title": "市川市の伝承一覧", "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82", "note": "横町稲荷を舞台とする複数異伝の存在確認用。本文確定の一次資料としては未採用"}
-      ],
-      "verification_locations": [
-        {"type": "library", "name": "市川市立図書館", "reason": "市川のむかし話正・続および地域資料から横町稲荷関連の本文・異伝を確認する候補"},
-        {"type": "field", "name": "横町稲荷周辺（本行徳）", "reason": "伝承地点・神社の正確な位置と周辺伝承群の現地照合候補"}
-      ],
-      "field_research": {"visit_candidate": true, "priority": "high", "places": ["本行徳", "横町稲荷周辺"], "local_leads": ["横町稲荷", "市川民話の会", "市川市立図書館地域資料"]}
+      "record_id":"chiba-ichikawa-yokomachi-inari-no-kitsune",
+      "title":"横町稲荷のきつね","prefecture":"千葉県","municipality":"市川市","locations":["本行徳","横町稲荷"],
+      "story_type":["民話","伝説"],"beings":["狐"],"cross_tags":["狐狸貉","行徳狐伝承","稲荷信仰"],"themes":["稲荷信仰","怪異","地域伝承","化かし"],
+      "research_status":"partial","research_priority":"high","research_missing":["full_story_text","variant_texts","specific_shrine_history_and_exact_location"],
+      "research_notes":"市川民話の会が2023年・2024年・2026年の複数の公開演目で、本行徳の伝承『横町稲荷のきつね』として継続的に採用していることを確認。市川市の伝承一覧では横町稲荷を舞台とする『横町稲荷の狐 (1)』『横町稲荷の狐 (2)』の複数異伝が存在することを確認した。ただし公開確認できた範囲では各異伝の本文を直接確定できていないため、複数異伝を一つの本文に統合・補完しない。横町稲荷周辺には既存canonical record『お稲荷さんと子供達』および『狐に化かされた話（油揚げ）』が存在するが、現時点では同一話とは扱わず、同一地点を中心とする伝承群として関連付け候補に留める。",
+      "related_records":[{"record_id":"chiba-ichikawa-on-inari-san-to-kodomo-tachi","relation":"same_location_tradition_cluster","confidence":"medium"},{"title":"狐に化かされた話（油揚げ）","relation":"same_location_tradition_cluster","confidence":"medium"}],
+      "sources":[{"title":"市川民話の会『第46回市川の民話のつどい』","url":"https://ichikawa.genki365.jp/G0000286/event/5447.html","note":"2023年の演目として『横町稲荷のきつね（本行徳）』を確認"},{"title":"市川民話の会『第7回市川の昔ばなし「行徳のこわい話」』","url":"https://ichikawa.genki365.jp/G0000286/event/6016.html","note":"2024年の行徳地域の怪異譚として確認"},{"title":"市川民話の会『第17回市川のむかし話』","url":"https://ichikawa.genki365.jp/G0000286/event/7099.html","note":"2026年にも本行徳の話として継続的に語られていることを確認"},{"title":"市川市のむかし話","url":"https://www.city.ichikawa.lg.jp/site/library/4572.html","note":"市川市公式の昔話・伝説・民話検索入口"},{"title":"市川市の伝承一覧","url":"https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82","note":"横町稲荷を舞台とする複数異伝の存在確認用。本文確定の一次資料としては未採用"}],
+      "verification_locations":[{"type":"library","name":"市川市立図書館","reason":"市川のむかし話正・続および地域資料から横町稲荷関連の本文・異伝を確認する候補"},{"type":"field","name":"横町稲荷周辺（本行徳）","reason":"伝承地点・神社の正確な位置と周辺伝承群の現地照合候補"}],
+      "field_research":{"visit_candidate":true,"priority":"high","places":["本行徳","横町稲荷周辺"],"local_leads":["横町稲荷","市川民話の会","市川市立図書館地域資料"]}
     },
     {
-      "record_id": "chiba-ichikawa-kitsune-to-oihagi",
-      "title": "キツネと追いはぎ",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["行徳"],
-      "story_type": ["民話"],
-      "beings": ["狐"],
-      "cross_tags": ["狐狸貉"],
-      "themes": ["化かし", "怪異"],
-      "research_status": "researching",
-      "research_priority": "normal",
-      "research_missing": ["story_content", "source_text", "variant_relationship"],
-      "research_notes": "市川民話の会の公開演目から候補登録。本文確認後に詳細類型を確定する。",
-      "sources": [{"title": "市川民話の会 公開資料", "url": "https://ichikawa.genki365.jp/G0000286/information/200.html"}],
-      "verification_locations": [{"type": "library", "name": "市川市立図書館", "reason": "本文・地域資料確認候補"}],
-      "field_research": {"visit_candidate": false, "priority": "normal", "places": ["市川市立図書館"], "local_leads": []}
+      "record_id":"chiba-ichikawa-kitsune-to-oihagi",
+      "title":"キツネと追いはぎ",
+      "prefecture":"千葉県","municipality":"市川市","locations":["行徳"],
+      "story_type":["民話"],"beings":["狐"],"cross_tags":["狐狸貉","行徳狐伝承"],"themes":["化かし","怪異","人間と狐"],
+      "research_status":"partial","research_priority":"high",
+      "research_missing":["full_story_text","source_text_or_transcript","variant_relationship"],
+      "research_notes":"市川民話の会の公開資料および動画一覧で、固有題名『キツネと追いはぎ（行徳）』として確認。現時点で公開検索から本文を直接確定できる文献・文字起こしは確認できていないため、題名から『狐が追いはぎをする』『追いはぎを狐が化かす』などの筋を推測して採用しない。現在確認できる確実な情報は、市川市行徳の民話として継続公開されていることと、動画資料が存在することまで。本文確認後に類型・登場人物・既存行徳狐伝承との関係を確定する。",
+      "sources":[
+        {"title":"市川民話の会『動画で市川の民話を聴こう』","url":"https://ichikawa.genki365.jp/G0000286/information/200.html","note":"『キツネと追いはぎ（行徳）』の公開動画を確認"},
+        {"title":"ichikawa-hakkenden『市川の民話を動画で聴こう』","url":"https://ichikawahakkenden.jimdofree.com/20210125/","note":"同題の行徳民話とYouTube動画への案内を確認"},
+        {"title":"市川市『市川のむかし話』","url":"https://www.city.ichikawa.lg.jp/site/library/4572.html","note":"市川市公式の本文・朗読確認入口"}
+      ],
+      "verification_locations":[
+        {"type":"library","name":"市川市立図書館","reason":"『市川のむかし話』検索および地域資料から本文・収録文献を確認する候補"},
+        {"type":"media","name":"市川民話の会 公開動画","reason":"語りの内容を直接確認し、文字資料と照合する候補"}
+      ],
+      "field_research":{"visit_candidate":false,"priority":"normal","places":["市川市立図書館"],"local_leads":["市川民話の会","市川市立図書館地域資料"]}
     },
     {
-      "record_id": "chiba-ichikawa-bakematsu-no-mujina",
-      "title": "化け松のムジナ",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["本行徳"],
-      "story_type": ["民話", "伝説"],
-      "beings": ["ムジナ"],
-      "cross_tags": ["狐狸貉"],
-      "themes": ["化かし", "樹木伝承", "怪異"],
-      "research_status": "partial",
-      "research_priority": "high",
-      "research_missing": ["full_story_text", "tree_location"],
-      "research_notes": "本行徳の『化け松のムジナ』として市川民話の会資料で確認。狐・狸・ムジナを上位類型『狐狸貉』として横断接続する。",
-      "sources": [{"title": "市川民話の会 公開資料", "url": "https://ichikawa.genki365.jp/G0000286/activity/772.html"}],
-      "verification_locations": [{"type": "library", "name": "市川市立図書館", "reason": "本行徳の地域資料・本文確認候補"}],
-      "field_research": {"visit_candidate": true, "priority": "normal", "places": ["本行徳"], "local_leads": ["化け松"]}
+      "record_id":"chiba-ichikawa-bakematsu-no-mujina",
+      "title":"化け松のムジナ","prefecture":"千葉県","municipality":"市川市","locations":["本行徳"],
+      "story_type":["民話","伝説"],"beings":["ムジナ"],"cross_tags":["狐狸貉"],"themes":["化かし","樹木伝承","怪異"],
+      "research_status":"partial","research_priority":"high","research_missing":["full_story_text","tree_location"],
+      "research_notes":"本行徳の『化け松のムジナ』として市川民話の会資料で確認。狐・狸・ムジナを上位類型『狐狸貉』として横断接続する。",
+      "sources":[{"title":"市川民話の会 公開資料","url":"https://ichikawa.genki365.jp/G0000286/activity/772.html"}],
+      "verification_locations":[{"type":"library","name":"市川市立図書館","reason":"本行徳の地域資料・本文確認候補"}],
+      "field_research":{"visit_candidate":true,"priority":"normal","places":["本行徳"],"local_leads":["化け松"]}
     }
   ]
 }
