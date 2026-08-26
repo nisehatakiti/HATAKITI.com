@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-006-index-sweep-f",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-shimizu","title":"清水","story_type":["地名伝承候補"],"cross_tags":["清水","野田市清水"],"research_status":"researching","research_notes":"題名のみでは伝承内容を断定せず、地名タグを先行付与。"},
+    {"record_id":"chiba-noda-doronko-festival","title":"野田のどろんこまつり","story_type":["行事伝承"],"cross_tags":["どろんこまつり","祭り","野田市"],"research_status":"researching"},
+    {"record_id":"chiba-noda-maria-kannon","title":"マリア観音","story_type":["寺社伝承候補"],"cross_tags":["マリア観音","観音","名称タグ"],"research_status":"researching","research_notes":"内容分類は資料本文確認後に行う。"},
+    {"record_id":"chiba-noda-mikogami-tensen","title":"御子神典膳に殺された旅の剣客の墓","story_type":["人物伝承候補","墓伝承"],"cross_tags":["御子神典膳","旅の剣客","墓"],"research_status":"researching","research_notes":"索引の市町村根拠が丸山町・小金ヶ原であるため、野田市への直接接続は再確認対象。"},
+    {"record_id":"chiba-noda-shimizu-omatsu-network","title":"清水・お松伝承接続候補","story_type":["地域伝承"],"cross_tags":["清水","お松","金乗院"],"research_status":"researching","related_records":["chiba-noda-shimizu","chiba-noda-kijin-omatsu","chiba-noda-omatsu-hiren"]},
+    {"record_id":"chiba-noda-sekiyado-transport-network","title":"関宿・舟運伝承群","story_type":["話群","河川伝承"],"cross_tags":["関宿","通運丸","高瀬船","利根川","江戸川","舟運"],"research_status":"researching"}
+  ],
+  "batch_notes":"野田市一次索引巡回F。清水、どろんこまつり、マリア観音、御子神典膳関連を追加。地域根拠が野田市外・旧地名の場合は無理に野田伝承として固定せず検証対象に保持。"
+}
