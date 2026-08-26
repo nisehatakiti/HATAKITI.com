@@ -1,70 +1,11 @@
 {
   "schema_version": "1.1",
   "batch_id": "2026-08-batch-004-yawata-expanded",
-  "region": {
-    "prefecture": "千葉県",
-    "municipality": "市川市",
-    "area": "八幡"
-  },
+  "region": {"prefecture": "千葉県", "municipality": "市川市", "area": "八幡"},
   "research_policy": "八幡不知森伝承群の外側にある八幡地域の伝承候補を、本文未確認のものは内容を推測せず researching として登録する。歴史的・文化的背景は folklore_content と分離する。Wikipedia等の二次まとめを直接の典拠とせず、確認できる場合はその背後にある書籍・古文献・自治体資料をsourcesに記録する。",
   "records": [
-    {
-      "record_id": "folktale-chiba-ichikawa-yawata-historical-context-001",
-      "title": "八幡不知森の由来諸説",
-      "status": "reviewed",
-      "region": ["市川市", "八幡"],
-      "tradition_group": "八幡不知森伝承群",
-      "story_type": ["場所伝承", "由来伝承"],
-      "themes": ["禁足地", "怪異", "歴史伝説", "信仰", "地名由来", "土地境界"],
-      "summary": "八幡不知森は、江戸期の地誌・紀行類にも、入れば神の祟りがあるとして立入りを禁じる小森として記録されている。由来は単一ではなく、八幡宮の旧鎮座地・神聖地説、行徳の入会地であったため八幡の住民が自由に入れなかったとする『八幡知らず』説、平将門の近習や土偶人に関する説、日本武尊の陣所跡説、平貞盛が八門遁甲の陣を敷き死門を残したとする説、古墳・墓域説などが重層している。これらを単一の史実として統合せず、同一場所に複数の説明が積み重なった伝承として管理する。",
-      "story_layers": [
-        {"layer": "禁足地としての伝承", "status": "documented", "description": "『成田参詣記』『下総名勝図絵』等に、森へ入れば神の祟りがあるため立入りを禁じる場所として記録される。"},
-        {"layer": "八幡宮旧鎮座地・神聖地説", "status": "documented_as_tradition", "description": "往古に八幡宮が鎮座した土地であったため禁足とされたとする説。"},
-        {"layer": "行徳入会地・八幡知らず説", "status": "documented_as_tradition", "description": "周囲は八幡の地だが森だけ行徳側の持分で、八幡の住民が自由に入れなかったことから『八幡知らず』と呼ばれたとする説。"},
-        {"layer": "平将門関係説", "status": "documented_as_tradition", "description": "将門の近習六人が森に入り土偶人となった、将門軍の鬼門に当たった等の説明が伝わる。"},
-        {"layer": "日本武尊陣所跡説", "status": "documented_as_tradition", "description": "日本武尊の東征時の陣所跡であるため畏れられたとする説。"},
-        {"layer": "平貞盛・八門遁甲・死門説", "status": "documented_as_tradition", "description": "天慶の乱で平貞盛が八門遁甲の陣を敷き、死門の一角を残したため禁足となったとする説。後世の水戸光圀伝承とも結び付く。"},
-        {"layer": "古墳・墓域説", "status": "documented_as_tradition", "description": "貴人の古墳・墓域であるため穢すことを避けた、土偶人の伝承は墳墓や埴輪に由来する可能性があるとする解釈。"}
-      ],
-      "research_missing": ["各由来説の最初期確認資料の系統整理", "各説が史実として成立するかの検証（伝承本文とは分離）"],
-      "verification_locations": ["市川市立図書館", "八幡不知森", "葛飾八幡宮"],
-      "sources": [
-        {"title": "市川市立図書館 地域資料レファレンス 2『八幡のやぶ知らず』", "publisher": "市川市立図書館", "source_type": "reference_compilation", "note": "『葛飾記』『葛飾誌略』『勝鹿図志手繰舟』『成田参詣記』『下総名勝図絵』『十方庵遊歴雑記』等の記載を転載・紹介。", "url": "https://www.city.ichikawa.lg.jp/common/000276588.pdf"},
-        {"title": "市川市公式『八幡・菅野界隈』", "publisher": "市川市", "source_type": "municipal_history", "note": "平貞盛の八門遁甲説と行徳入会地説を紹介。", "url": "https://www.city.ichikawa.lg.jp/page/3954.html"},
-        {"title": "市川市公式『葛飾八幡宮と文化財』", "publisher": "市川市", "source_type": "municipal_cultural_property", "note": "日本武尊、八幡宮旧鎮座地、平将門、平貞盛の各伝承を併記。", "url": "https://www.city.ichikawa.lg.jp/page/7428.html"},
-        {"title": "市川市史 第六巻下『成田参詣記』", "source_type": "historical_document", "note": "八幡不知森を八幡宮旧鎮座地とし、神の祟りによる禁足および行徳持分説を記す。"},
-        {"title": "房総叢書 第8巻『紀行及日記』", "publisher": "房総叢書刊行会", "publication_year_or_date": "1942", "source_type": "historical_compilation", "note": "『葛飾記』『下総名勝図絵』等を収録。"},
-        {"title": "房総叢書 第6巻『地誌其一』", "publisher": "房総叢書刊行会", "publication_year_or_date": "1941", "source_type": "historical_compilation", "note": "『葛飾誌略』を収録。"},
-        {"title": "千葉県東葛飾郡誌", "publisher": "千葉県東葛飾郡教育会", "source_type": "regional_history", "note": "『十方庵遊歴雑記』由来諸説を紹介。千秋社1988年復刻版の該当ページが市川市立図書館レファレンスで示される。"}
-      ],
-      "research_notes": "今回の深掘りでは、禁足地そのものは複数の江戸期資料で確認できる一方、禁足理由は資料ごとに異なる説明が併存することを確認した。したがって『八幡不知森の本当の由来』を一つに決めず、documented_as_traditionとして各層を併存管理する。"
-    },
-    {
-      "record_id": "folktale-chiba-ichikawa-yawata-candidate-001",
-      "title": "葛飾八幡宮周辺の伝承候補",
-      "status": "researching",
-      "region": ["市川市", "八幡"],
-      "tradition_group": "八幡伝承圏",
-      "story_type": ["寺社伝承候補"],
-      "themes": ["神社", "信仰", "地域史"],
-      "summary": "市川市公式『市川のむかし話』では葛飾八幡宮が地域伝承の検索地点として設定されている。現段階では個別民話の本文と題名の対応を未確認のため、内容を推測せず調査候補として管理する。",
-      "research_missing": ["個別伝承名", "本文", "伝承の地域的範囲", "出典ページ"],
-      "verification_locations": ["市川市立図書館", "葛飾八幡宮"],
-      "research_leads": ["市川のむかし話データベースの葛飾八幡宮検索", "市川民話の会『市川のむかし話』正・続"],
-      "sources": [{"title": "市川のむかし話", "publisher": "市川市立図書館", "url": "https://www.city.ichikawa.lg.jp/site/library/4572.html"}]
-    },
-    {
-      "record_id": "folktale-chiba-ichikawa-yawata-candidate-002",
-      "title": "八幡地域の場所伝承・地名伝承候補",
-      "status": "researching",
-      "region": ["市川市", "八幡"],
-      "tradition_group": "八幡伝承圏",
-      "story_type": ["場所伝承候補", "地名伝承候補"],
-      "themes": ["地名", "地域史", "場所"],
-      "summary": "市川市公式『市川のむかし話』では八幡地域自体が伝承検索の単位として設定されている。県立図書館の市川市民話リストで八幡を明示する主要項目は現時点で八幡不知森関係が中心のため、追加の個別伝承は本文確認後に追加する。",
-      "research_missing": ["個別伝承名", "本文", "出典"],
-      "verification_locations": ["市川市立図書館"],
-      "sources": [{"title": "千葉県の民話 市川市", "publisher": "千葉県立図書館", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa_ichikawa.html"}, {"title": "市川のむかし話", "publisher": "市川市立図書館", "url": "https://www.city.ichikawa.lg.jp/site/library/4572.html"}]
-    }
+    {"record_id":"folktale-chiba-ichikawa-yawata-historical-context-001","title":"八幡不知森の由来諸説","status":"reviewed","region":["市川市","八幡"],"tradition_group":"八幡不知森伝承群","story_type":["場所伝承","由来伝承"],"themes":["禁足地","怪異","歴史伝説","信仰","地名由来","土地境界"],"summary":"八幡不知森は、江戸期の地誌・紀行類にも、入れば神の祟りがあるとして立入りを禁じる小森として記録されている。由来は単一ではなく、八幡宮の旧鎮座地・神聖地説、行徳の入会地であったため八幡の住民が自由に入れなかったとする『八幡知らず』説、平将門の近習や土偶人に関する説、日本武尊の陣所跡説、平貞盛が八門遁甲の陣を敷き死門を残したとする説、古墳・墓域説などが重層している。これらを単一の史実として統合せず、同一場所に複数の説明が積み重なった伝承として管理する。","sources":[{"title":"市川市立図書館 地域資料レファレンス 2『八幡のやぶ知らず』","publisher":"市川市立図書館","source_type":"reference_compilation","url":"https://www.city.ichikawa.lg.jp/common/000276588.pdf"},{"title":"市川市公式『八幡・菅野界隈』","publisher":"市川市","source_type":"municipal_history","url":"https://www.city.ichikawa.lg.jp/page/3954.html"}]},
+    {"record_id":"folktale-chiba-ichikawa-yawata-ichou-001","title":"葛飾八幡宮の千本公孫樹","status":"reviewed","region":["市川市","八幡","葛飾八幡宮"],"tradition_group":"八幡伝承圏","story_type":["巨樹伝説","寺社伝承","動物怪異","信仰伝承"],"themes":["千本公孫樹","蛇","白蛇","神木","祭礼","幸福","長寿","育児守護","縁結び"],"summary":"葛飾八幡宮の御神木・千本公孫樹にまつわる伝承。江戸後期刊行の『江戸名所図会』には、樹のうつろに小蛇が棲み、毎年八月十五日の祭礼で音楽が奏されると数万の小蛇が枝上に現れ、人々がこれを奇としたという記述がある。また古来、白蛇が棲み、その姿を見た者は幸福や長寿を授かるとする言い伝えがある。さらに気根の瘤を乳房になぞらえ、乳の出ない母親がそれを煎じて飲むと乳が出るという育児守護の信仰も伝えられる。","story_layers":[{"layer":"小蛇の群れ","status":"documented_in_historical_source","description":"『江戸名所図会』に、祭礼の音楽に合わせ数万の小蛇が枝上に現れるという記述がある。"},{"layer":"白蛇","status":"documented_as_tradition","description":"白蛇の姿を見ると幸福・長寿を授かるとする伝承。"},{"layer":"乳・育児守護","status":"documented_as_tradition","description":"気根を乳房になぞらえ、乳の出ない母親がこれを煎じて飲むと乳が出るとする信仰。"},{"layer":"縁結び","status":"documented_as_local_belief","description":"多数の幹が寄り添う姿から縁結びの御神徳があると伝えられる。"}],"research_notes":"『房総の伝説』（暁書房、1975年）に市川市・葛飾八幡宮の個別伝承として題名が確認できる。本文直接確認前のため、同書の内容を推測して追加しない。公開資料で確認できる蛇・白蛇・乳の信仰は、それぞれ出典を分けて記録する。","sources":[{"title":"房総の伝説","publisher":"暁書房","publication_year_or_date":"1975","source_type":"book","note":"千葉県立図書館民話索引に『葛飾八幡宮の千本公孫樹』として市川市・葛飾八幡宮の伝承を収録。"},{"title":"江戸名所図会","source_type":"historical_topography","note":"千本公孫樹のうつろに棲む小蛇と、祭礼時に枝上へ現れる数万の小蛇を記す。市川市公式資料が引用。"},{"title":"葛飾八幡宮千本公孫樹","publisher":"市川市文化財課","source_type":"municipal_cultural_property","url":"https://www.city.ichikawa.lg.jp/culture/24242.html","note":"白蛇、育児守護の信仰を紹介。"},{"title":"文化財（国指定）千本公孫樹","publisher":"市川市文化財課","source_type":"municipal_cultural_property","url":"https://www.city.ichikawa.lg.jp/page/6560.html","note":"『江戸名所図会』の小蛇伝承を紹介。"},{"title":"解説 - キッズサイト","publisher":"市川市","source_type":"municipal_education","url":"https://www.city.ichikawa.lg.jp/site/kids/karuta-explanation.html","note":"縁結びの御神徳を紹介。"}]},
+    {"record_id":"folktale-chiba-ichikawa-yawata-candidate-002","title":"八幡地域の場所伝承・地名伝承候補","status":"researching","region":["市川市","八幡"],"tradition_group":"八幡伝承圏","story_type":["場所伝承候補","地名伝承候補"],"themes":["地名","地域史","場所"],"summary":"市川市公式『市川のむかし話』では八幡地域自体が伝承検索の単位として設定されている。県立図書館の市川市民話リストで八幡を明示する主要項目は現時点で八幡不知森関係と葛飾八幡宮の千本公孫樹が中心のため、追加の個別伝承は本文確認後に追加する。","research_missing":["個別伝承名","本文","出典"],"verification_locations":["市川市立図書館"],"sources":[{"title":"千葉県の民話 市川市","publisher":"千葉県立図書館","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"},{"title":"市川のむかし話","publisher":"市川市立図書館","url":"https://www.city.ichikawa.lg.jp/site/library/4572.html"}]}
   ]
 }
