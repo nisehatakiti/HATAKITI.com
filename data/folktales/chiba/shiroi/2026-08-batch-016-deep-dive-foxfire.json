@@ -1,0 +1,40 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-foxfire-deep-dive",
+  "municipality":"白井市",
+  "title":"狐火",
+  "source_status":"index_only",
+  "story_type":["怪異伝承候補","狐伝承候補"],
+  "cross_tags":["狐火","狐","怪火","火の玉","夜道"],
+  "sources":[
+    {
+      "source_id":"SRC-CHIBA-LIB-SHIROI-INDEX",
+      "title":"千葉県の民話 白井市",
+      "author_or_publisher":"千葉県立図書館",
+      "publication_year_or_date":"web",
+      "source_type":"library_index",
+      "url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"伝承題名と収録資料の存在確認用。本文内容は未確認。"
+    },
+    {
+      "source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title":"白井の伝説と文化財",
+      "author_or_publisher":"白井市郷土資料館",
+      "publication_year_or_date":"2002",
+      "source_type":"local_history_book",
+      "url_or_identifier":"千葉県立図書館民話索引の収録資料情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"「狐火」関連項目の本文確認対象資料。現時点では書誌情報のみ確認。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"白井市の民話・伝承資料に「狐火」として扱われる伝承項目が存在する。",
+      "source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX","SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation":false
+    }
+  ],
+  "research_notes":"現時点では題名・収録資料のみ確認。狐が原因とする怪火なのか、怪火を狐火と呼ぶ地域語なのか、具体的な目撃場所・話型・登場人物は本文確認まで確定しない。白井市の「切られ庚申」に見られる火の玉伝承との同一視・関連付けも、現段階では行わない。"
+}
