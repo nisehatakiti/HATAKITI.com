@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"person",
+  "person_id":"tokugawa-mitsukuni",
+  "canonical_name":"徳川光圀",
+  "aliases":["水戸黄門","黄門さま"],
+  "hub_tags":["人物ハブ","歴史人物","伝説上の登場人物"],
+  "historical_note":"史実上の徳川光圀と、各地の民話・伝説に登場する『水戸黄門』像は分離して扱う。伝承上の行動や出来事を史実として確定しない。",
+  "known_connections":[
+    {"prefecture":"千葉県","municipality":"市川市","record_id":"chiba-ichikawa-yawata-yabushirazu-005","title":"やぶしらずに入った水戸黄門","story_group":"八幡不知森伝承群"},
+    {"prefecture":"千葉県","municipality":"松戸市","title":"黄門さまといたずら雷","status":"researching"},
+    {"prefecture":"千葉県","municipality":"松戸市","title":"ヘビと黄門さま","status":"researching"},
+    {"prefecture":"千葉県","municipality":"松戸市","title":"水戸黄門の大蛇退治","status":"researching"}
+  ],
+  "linking_rule":"民話・伝説内で『水戸黄門』『黄門さま』が徳川光圀を指すと判断できる場合、この人物ハブへ接続する。曖昧な黄門表現は本文確認後に判定する。"
+}
