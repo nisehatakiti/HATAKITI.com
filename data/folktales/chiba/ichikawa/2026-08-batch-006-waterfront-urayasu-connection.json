@@ -36,12 +36,12 @@
       "research_status": "partial",
       "research_priority": "high",
       "research_missing": ["full_story_text", "site_relationship"],
-      "research_notes": "浦安資料に収録されながら市川市新井・八幡の地名と御岳山講元が索引根拠として確認できる。市川・浦安の行政境界をまたぐ関連伝承として保持する。",
+      "research_notes": "本文未確認のため、現段階では出典・地域根拠のみを保持する。浦安資料に収録されながら市川市新井・八幡の地名と御岳山講元が索引根拠として確認できる。",
       "sources": [
         {"title": "千葉県立図書館 千葉県の民話資料一覧 市川市", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"},
         {"title": "千葉県立図書館 千葉県の民話資料一覧 浦安市", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}
       ],
-      "verification_locations": [{"type": "library", "name": "市川市立図書館・浦安市立図書館", "reason": "市川側・浦安側の本文と異伝確認候補"}],
+      "verification_locations": [{"type": "library", "name": "市川市立図書館・浦安市立図書館", "reason": "本文と異伝確認候補"}],
       "field_research": {"visit_candidate": true, "priority": "normal", "places": ["新井", "御岳山講元周辺"], "local_leads": ["古井戸"]}
     },
     {
