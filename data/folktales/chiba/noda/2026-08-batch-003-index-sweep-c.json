@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-003-index-sweep-c",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-sekiyado-legends-network","title":"関宿・利根川伝承圏","story_type":["話群","河川伝承","地域史"],"cross_tags":["関宿","利根川","江戸川","水運","地域ハブ候補"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kappa-wide-tag","title":"河童・広域比較タグ","story_type":["データ整理"],"cross_tags":["河童","水辺伝承","広域比較"],"research_status":"active","research_notes":"野田市内の河童伝承をまず名称タグで接続し、松戸・流山・利根川流域・全国の河童伝承との比較は資料蓄積後に行う。"},
+    {"record_id":"chiba-noda-river-confluence-network","title":"江戸川・利根川水系接続","story_type":["地理伝承","河川伝承"],"cross_tags":["江戸川","利根川","河川合流域","水辺伝承"],"research_status":"researching","research_notes":"流山市から野田市へ連続する河川沿い伝承圏として保持する。"},
+    {"record_id":"chiba-noda-kimasagase-kappa-candidate","title":"木間ヶ瀬・水辺伝承接続候補","story_type":["地域伝承"],"cross_tags":["木間ヶ瀬","水辺","河童","利根川流域"],"research_status":"researching","research_notes":"木間ヶ瀬の河童との直接関係は本文確認まで保留し、地理的近接のみを接続候補として保持。"}
+  ],
+  "batch_notes":"野田市一次索引巡回C。関宿と江戸川・利根川水系を地理ハブとして整理し、河童伝承は名称タグによる広域比較対象として保持。直接の伝承関係は本文確認前に断定しない。"
+}
