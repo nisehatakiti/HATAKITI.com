@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-shiroi-awashima-shrine-and-young-men",
+  "title": "粟島神社と若者たち",
+  "alternate_titles": ["粟島さま"],
+  "municipality": "白井市",
+  "locality": "名内",
+  "canonical_slug": "awashima-shrine-and-young-men",
+  "research_status": "source_confirmed",
+  "source_status": "index_and_related_site_confirmed",
+  "summary": "白井市名内の粟嶋神社に関する伝承項目。千葉県立図書館の民話索引では『白井の伝説と文化財 平成十三年度企画展記録集』（白井市郷土資料館、2002）に「粟島神社と若者たち（粟島さま）」として収録されている。神社自体は白井市名内586番地に宗教法人として確認できるが、当該伝承本文は未確認であるため、若者たちに関する具体的な物語内容は記録していない。",
+  "claims": [
+    {
+      "claim": "「粟島神社と若者たち（粟島さま）」は『白井の伝説と文化財 平成十三年度企画展記録集』（白井市郷土資料館、2002）に収録され、千葉県立図書館の民話索引では白井市名内の伝承として整理されている。",
+      "source_ids": ["source-chiba-pref-library-index"]
+    },
+    {
+      "claim": "粟嶋神社は千葉県白井市名内586番地に所在する宗教法人として千葉県の宗教法人一覧に記載されている。",
+      "source_ids": ["source-chiba-pref-religious-corporations"]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "source-chiba-pref-library-index",
+      "title": "千葉県の民話 白井市",
+      "publisher": "千葉県立図書館",
+      "source_type": "bibliographic_index",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html"
+    },
+    {
+      "source_id": "source-primary-book-reference",
+      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
+      "publisher": "白井市郷土資料館",
+      "publication_year": 2002,
+      "source_type": "local_history_exhibition_catalog",
+      "verification_status": "bibliographically_confirmed_text_not_directly_confirmed"
+    },
+    {
+      "source_id": "source-chiba-pref-religious-corporations",
+      "title": "白井市｜宗教法人一覧",
+      "publisher": "千葉県",
+      "source_type": "official_registry",
+      "url": "https://www.pref.chiba.lg.jp/gakuji/shuukyou/houjin/shiroi.html"
+    }
+  ],
+  "interpretations": [],
+  "research_notes": [
+    "「若者たち」に関する伝承本文を直接確認できていないため、題名から内容を推測していない。",
+    "粟嶋神社の一般的な祭神・由緒に関する第三者資料は存在するが、本レコードの伝承内容と直接結び付ける根拠がないためclaimsには採用していない。",
+    "今後『白井の伝説と文化財 平成十三年度企画展記録集』本文または原資料を確認できた場合、同一record_idを維持して更新する。"
+  ],
+  "related_places": ["名内", "粟嶋神社"],
+  "tags": ["神社", "地域伝承", "名内"],
+  "updated_by": "ChatGPT research consolidation",
+  "last_updated": "2026-08-26"
+}
