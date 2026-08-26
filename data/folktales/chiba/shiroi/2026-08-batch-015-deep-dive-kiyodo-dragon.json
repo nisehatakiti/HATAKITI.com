@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-kiyodo-dragon-deep-dive",
+  "municipality":"白井市",
+  "title":"清戸の龍神／清戸の泉",
+  "source_status":"deep_researched",
+  "story_type":["龍神伝承","雨乞い伝承","水辺伝承","寺社伝承"],
+  "cross_tags":["清戸","清戸の泉","龍神","青龍","旱魃","雨乞い","薬王寺","弁財天","青龍山薬王寺","北総"],
+  "sources":[
+    {"source_id":"SRC-SHIROI-KIYODO-SPRING","title":"清戸の泉（附）版木（県指定文化財）","author_or_publisher":"白井市","publication_year_or_date":"web","source_type":"official_archive","url_or_identifier":"https://www.city.shiroi.chiba.jp/manabu/rekishi/r03/1423037000080.html","accessed_date":"2026-08-26","reliability_notes":"県指定文化財と現地伝承を紹介する自治体公式資料。"},
+    {"source_id":"SRC-CHIBA-MINWA-SHIROI","title":"千葉県の民話 白井市","author_or_publisher":"千葉県立図書館","publication_year_or_date":"web","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html","accessed_date":"2026-08-26","reliability_notes":"「清戸の龍神」の収録資料と地域根拠を確認する索引。"},
+    {"source_id":"SRC-FUSO-MUKASHIBANASHI-SANPO-1973","title":"房総昔話散歩","author_or_publisher":"創樹社","publication_year_or_date":"1973","source_type":"local_history_book","url_or_identifier":"千葉県立図書館民話索引掲載書誌情報","accessed_date":"2026-08-26","reliability_notes":"「清戸の龍神」の収録資料。本文未直接確認。"},
+    {"source_id":"SRC-CHIBA-NO-DENSETSU-1981","title":"千葉の伝説","author_or_publisher":"日本標準","publication_year_or_date":"1981","source_type":"local_history_book","url_or_identifier":"千葉県立図書館民話索引掲載書誌情報","accessed_date":"2026-08-26","reliability_notes":"「清戸の泉（清竜山薬王寺）」の収録資料。本文未直接確認。"}
+  ],
+  "claims":[
+    {"claim_id":"claim-001","text":"清戸の泉には、平安時代初期の大同年間（806-810年）に旱魃が起き、僧の勧めで竜神へ祈祷したところ、大雨とともに小さな青竜が落ちてきたという伝説が伝えられている。","source_ids":["SRC-SHIROI-KIYODO-SPRING"],"interpretation":false},
+    {"claim_id":"claim-002","text":"近くの薬王寺には、竜神伝説と清戸地区の地名由来を記した版木「青龍山薬王寺并堂作辯財天女縁記」が保管され、版木には文政11年（1828年）再版の記載がある。","source_ids":["SRC-SHIROI-KIYODO-SPRING"],"interpretation":false},
+    {"claim_id":"claim-003","text":"清戸の泉は、北総地域に伝わる竜神信仰系の伝説・遺跡の代表例として自治体資料で紹介されている。","source_ids":["SRC-SHIROI-KIYODO-SPRING"],"interpretation":false},
+    {"claim_id":"claim-004","text":"「清戸の龍神」は『房総昔話散歩』（1973）に収録され、千葉県立図書館の索引では白井市清戸に位置づけられている。","source_ids":["SRC-CHIBA-MINWA-SHIROI","SRC-FUSO-MUKASHIBANASHI-SANPO-1973"],"interpretation":false},
+    {"claim_id":"claim-005","text":"清戸では、泉・龍神・薬王寺・弁財天が相互に関連する水辺信仰の伝承クラスターを形成している可能性がある。","source_ids":["SRC-SHIROI-KIYODO-SPRING","SRC-CHIBA-MINWA-SHIROI"],"interpretation":true}
+  ],
+  "research_notes":"本文確認できた自治体公式資料を中心に深掘り。『房総昔話散歩』『千葉の伝説』については収録確認のみで、本文内容は未確認。今後、実際の本文・書誌資料を確認できれば龍神と清戸地名由来、弁財天・薬王寺との関係をさらに詳細化する。"
+}
