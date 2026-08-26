@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-004-index-sweep-d",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-abiko-teganuma-water-network","title":"手賀沼・水辺伝承群","story_type":["話群","水辺伝承"],"cross_tags":["手賀沼","水辺伝承","沼の主","鯉","鰻","河童"],"research_status":"researching","research_notes":"個別の存在や話型は混同せず、手賀沼という地理ハブを介して接続する。"},
+    {"record_id":"chiba-abiko-fuji-hime-name-review","title":"藤姫関連伝承","story_type":["人物伝承候補"],"cross_tags":["藤姫","人物候補","名称タグ"],"research_status":"researching","research_notes":"同名人物伝承が広域に存在する可能性があるため、現段階では名称と個別伝承を分離して保持する。"},
+    {"record_id":"chiba-abiko-bennai-shonin-network","title":"弁内上人関連伝承","story_type":["人物伝承","寺社伝承候補"],"cross_tags":["弁内上人","人物タグ","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-abiko-masakado-toneri-network","title":"将門・利根川流域接続","story_type":["人物伝承","広域伝承"],"cross_tags":["平将門","将門","利根川","下総","関東広域"],"research_status":"researching","research_notes":"野田・松戸方面の将門タグと接続しつつ、我孫子固有の本文内容は別recordで比較する。"},
+    {"record_id":"chiba-abiko-teganuma-to-kashiwa-bridge","title":"手賀沼・柏市接続ハブ","story_type":["地理伝承","地域横断"],"cross_tags":["手賀沼","我孫子市","柏市","水辺伝承"],"research_status":"active","research_notes":"次工程の柏市一次収集へ連続する地理ハブとして保持する。"}
+  ],
+  "batch_notes":"我孫子市一次索引巡回D。手賀沼を中心に水辺伝承を統合し、藤姫・弁内上人・平将門など人物系は名称・人物タグを分離。柏市への連続性として手賀沼横断ハブを追加。"
+}
