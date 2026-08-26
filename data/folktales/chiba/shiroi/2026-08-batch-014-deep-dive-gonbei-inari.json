@@ -1,0 +1,46 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-gonbei-inari-deep-dive",
+  "municipality":"白井市",
+  "title":"ごんべい稲荷の話",
+  "source_status":"researching",
+  "story_type":["稲荷信仰伝承","寺社伝承候補"],
+  "cross_tags":["ごんべい稲荷","稲荷","中","てがっぱら","猪鼻","千葉市"],
+  "sources":[
+    {
+      "source_id":"SRC-CHIBA-LIB-SHIROI-INDEX",
+      "title":"千葉県の民話 白井市",
+      "author_or_publisher":"千葉県立図書館",
+      "publication_year_or_date":"web",
+      "source_type":"library_index",
+      "url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"伝承題名と収録資料を確認するための索引。本文そのものではない。"
+    },
+    {
+      "source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title":"白井の伝説と文化財",
+      "author_or_publisher":"白井市郷土資料館",
+      "publication_year_or_date":"2002",
+      "source_type":"local_history_book",
+      "url_or_identifier":"千葉県立図書館索引掲載書誌情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"ごんべい稲荷の話の収録資料として索引で確認。本文未確認。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"白井市には「ごんべい稲荷の話」という伝承題名が収録資料上確認できる。",
+      "source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX","SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"索引上、白井市外の猪鼻に関係する比較・接続の可能性があるため、千葉市側の伝承との照合を継続する。",
+      "source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX"],
+      "interpretation":true
+    }
+  ],
+  "research_notes":"現段階では題名と収録資料を確認した段階。伝承本文、由来となった人物・稲荷社・場所の詳細は未確認であり、本文確認後に深掘りする。Wikipedia等を探索経路として利用する場合も、最終的な sources には同記事の脚注・参考文献から特定できる実資料を登録する。"
+}
