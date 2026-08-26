@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-008-primary-index-sweep-h",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-kashiwa-serpent-network","title":"柏市・大蛇伝承群","story_type":["怪異伝承","退治伝承候補"],"cross_tags":["大蛇","水辺伝承","退治","弁内上人","水戸黄門"],"research_status":"researching","research_notes":"大蛇を名称タグとして横断接続。弁内上人・水戸黄門との関係は個別話ごとに保持し、同一の大蛇とは統合しない。"},
+    {"record_id":"chiba-kashiwa-blood-stained-thatch-network","title":"血染めの茅・柏関連伝承","story_type":["歴史伝承候補","怨念伝承候補"],"cross_tags":["血染めの茅","血","茅","横断伝承候補"],"research_status":"researching","related_regions":["市川市","松戸市","流山市","野田市"],"research_notes":"同名・類似題名の広域接続候補。名称タグで接続し、本文比較までは同一話と断定しない。"},
+    {"record_id":"chiba-kashiwa-muken-bell-network","title":"無間の鐘・柏関連伝承","story_type":["怪異伝承候補","寺社伝承候補"],"cross_tags":["無間の鐘","鐘","寺社伝承","地獄候補"],"research_status":"researching","related_regions":["松戸市"],"research_notes":"鐘の名称・モチーフで横断接続。地獄・無間との関係は本文確認後に整理する。"},
+    {"record_id":"chiba-kashiwa-fox-mujina-network","title":"柏市・狐／むじな伝承群","story_type":["動物怪異伝承","話群"],"cross_tags":["狐","狐憑き","狐の嫁入り","嫁取り","むじな","化けもの候補"],"research_status":"researching","research_notes":"狐とむじなを同一存在として扱わず、動物・怪異名称ごとにタグを保持。話型比較用に嫁入り・憑きなどのモチーフも併記する。"},
+    {"record_id":"chiba-kashiwa-strange-lights-network","title":"北の森の光りもの・異光伝承","story_type":["怪異伝承候補"],"cross_tags":["怪火候補","光るもの","森","異光"],"research_status":"researching","research_notes":"現時点では正体を怪火等に確定せず、題名・現象タグで保持する。"}
+  ],
+  "batch_notes":"柏市一次索引巡回H。大蛇、血染めの茅、無間の鐘、狐・むじな、異光伝承を整理。既存市との同名接続は維持しつつ、本文確認前の同一話型・同一存在判定を避ける。"
+}
