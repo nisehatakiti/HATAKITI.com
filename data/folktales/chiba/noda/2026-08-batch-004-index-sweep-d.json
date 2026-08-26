@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-004-index-sweep-d",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-ii-naosuke-head","title":"井伊大老の首","story_type":["歴史伝承","怪異譚候補"],"cross_tags":["井伊直弼","井伊大老","関宿","首・身体部位伝承候補"],"research_status":"researching"},
+    {"record_id":"chiba-noda-yagozuka-curse","title":"死傷者の続出する弥五塚二百年の怨念","story_type":["塚伝承","怪異譚"],"cross_tags":["弥五塚","怨念","塚伝承","関宿"],"research_status":"researching"},
+    {"record_id":"chiba-noda-hikiroku-pond","title":"池に引きずり込まれた彦六","story_type":["水辺伝承"],"cross_tags":["池","水辺","彦六"],"research_status":"researching","research_notes":"河童との関係は題名だけでは断定せず本文確認まで保留。"},
+    {"record_id":"chiba-noda-ohara-kuchiina-myojin","title":"おお腹くちいな明神","story_type":["神社伝承","民間信仰"],"cross_tags":["おお腹くちいな明神","三ツ堀","どろんこ祭り"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kijin-omatsu","title":"鬼神のお松","story_type":["人物伝承候補","怪異譚候補"],"cross_tags":["お松","鬼神"],"research_status":"researching"},
+    {"record_id":"chiba-noda-omatsu-tragic-love","title":"桜並木に散ったお松の悲恋","story_type":["人物伝承","悲恋伝承"],"cross_tags":["お松","悲恋","野田市清水","金乗院"],"research_status":"researching","research_notes":"鬼神のお松との同一人物・関連性は本文確認まで保留。"},
+    {"record_id":"chiba-noda-shinran-bodhi-tree","title":"親鸞の菩提樹","story_type":["人物伝承","寺社伝承","樹木伝承"],"cross_tags":["親鸞","人物タグ","菩提樹","野田市桜台"],"research_status":"researching"},
+    {"record_id":"chiba-noda-maria-kannon","title":"マリア観音","story_type":["宗教伝承"],"cross_tags":["マリア観音","キリシタン関連候補","観音"],"research_status":"researching"},
+    {"record_id":"chiba-noda-kubikiri-jizo","title":"首きり地蔵","story_type":["地蔵伝承","寺社伝承"],"cross_tags":["首きり地蔵","関宿"],"research_status":"researching"},
+    {"record_id":"chiba-noda-thorn-removing-jizo","title":"トゲ抜き地蔵","story_type":["地蔵伝承","民間信仰"],"cross_tags":["トゲ抜き地蔵","地蔵"],"research_status":"researching"},
+    {"record_id":"chiba-noda-mud-festival-network","title":"三ツ堀・どろんこ祭り伝承群","story_type":["祭礼伝承","民間信仰"],"cross_tags":["三ツ堀","どろんこ祭り","地域ハブ候補"],"research_status":"researching","related_records":["chiba-noda-ohara-kuchiina-myojin"]}
+  ],
+  "batch_notes":"野田市一次索引巡回D。関宿の歴史怪異、池の水辺伝承、お松の同名伝承、親鸞、マリア観音、地蔵、三ツ堀どろんこ祭りを追加。題名上の一致だけで人物同定や河童との関連は確定しない。"
+}
