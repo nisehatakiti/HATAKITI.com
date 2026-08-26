@@ -8,7 +8,7 @@
   "deep_dive_policy":"one_folktale_one_canonical_record",
   "known_deep_dive_records":[
     {"title":"沢山と鎌倉橋","canonical_slug":"sawayama-kamakurabashi","legacy_file":"2026-08-batch-009-deep-dive-sawayama-kamakurabashi.json"},
-    {"title":"五兵衛稲荷","canonical_slug":"gonbei-inari","status":"legacy_file_mapped_by_commit_history"},
+    {"title":"五兵衛稲荷","canonical_slug":"gonbei-inari","legacy_file":"2026-08-batch-014-deep-dive-gonbei-inari.json","status":"migrated_to_canonical_record","canonical_record":"gonbei-inari.json"},
     {"title":"権現市とズルコロピョン","canonical_slug":"gongen-market-zuru-koropyon","status":"legacy_file_mapped_by_commit_history"},
     {"title":"清戸の龍神／清戸の泉","canonical_slug":"kiyodo-dragon-legend","status":"legacy_file_mapped_by_commit_history"},
     {"title":"板ばさみの小森城主","canonical_slug":"komori-castle-lord","status":"legacy_file_mapped_by_commit_history"},
