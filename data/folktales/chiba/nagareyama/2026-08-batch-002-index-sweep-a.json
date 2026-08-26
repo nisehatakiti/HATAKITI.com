@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-002-index-sweep-a",
+  "municipality":"流山市",
+  "phase":"primary_collection",
+  "records":[
+    {"record_id":"chiba-nagareyama-akagi-yama","title":"赤城山","story_type":["山岳伝承","地名由来","地域史"],"cross_tags":["山の伝承","地名由来","群馬県接続候補"],"related_regions":["群馬県"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-nagareyama-akagi","title":"流山と赤城山","story_type":["地名由来","山岳伝承"],"cross_tags":["山の伝承","地名由来","赤城山"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-sadokumaru","title":"忠犬小金丸の話","story_type":["動物伝承","犬伝承","人物伝承候補"],"beings":["犬"],"cross_tags":["犬伝承","忠犬","松戸市接続"],"related_regions":["松戸市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-omoi-dog-mound","title":"思井の犬塚","story_type":["墓伝承","犬伝承"],"beings":["犬"],"cross_tags":["犬伝承","塚伝承","松戸市接続"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-kasha-kyakujin","title":"火車・却刃","story_type":["怪異譚"],"cross_tags":["怪異","火車"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-kobushi-ghosts","title":"古城址に古武士三人の幽霊","story_type":["怪談","城郭伝承"],"cross_tags":["幽霊・死者","城郭伝承","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-nebosuke-kami","title":"寝ぼすけ神様","story_type":["神仏伝承","世間話"],"cross_tags":["神仏伝承","民俗"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-hayamai-hichiyama","title":"早稲米のふるさとと飛血山の怪奇","story_type":["農耕民俗","山岳伝承","怪異譚"],"cross_tags":["農耕民俗","山の伝承","怪異"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-saddle-pine","title":"鞍掛けの松","story_type":["樹木伝承","人物伝承候補"],"cross_tags":["樹木伝承","人物伝承候補"],"research_status":"researching"}
+  ],
+  "batch_notes":"流山市一次巡回A。江戸川沿いの松戸接続を優先しつつ、赤城山・犬塚・古城址・山岳怪異などを個別recordとして整理。本文未確認のものはresearchingを維持する。"
+}
