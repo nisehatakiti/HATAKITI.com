@@ -1,0 +1,39 @@
+{
+  "schema_version":"1.0",
+  "policy_name":"HATAKITI Folktale Source Citation Policy",
+  "effective_from":"2026-08-26",
+  "purpose":"深掘りされた伝承レコードについて、Wikipediaの脚注のように記述と参照元の対応を明確化する。",
+  "rules":{
+    "basic":"深掘り済みの記述には参照元を必須とする。索引だけで存在確認した未深掘りレコードは source_status=index_only と明示する。",
+    "claim_level_citation":"伝承の筋、人物情報、年代、地名由来、実物文化財、比較・解釈など重要な記述は、可能な限り claim 単位で source_id を紐付ける。",
+    "source_fields":["source_id","title","author_or_publisher","publication_year_or_date","source_type","url_or_identifier","accessed_date","reliability_notes"],
+    "source_types":["primary_document","official_archive","library_index","museum_material","local_history_book","academic_work","newspaper","reputable_web","community_source"],
+    "citation_display":"公開画面では本文末尾または該当記述の脚注として [1] [2] 形式で表示し、レコード末尾に参考文献一覧を置く。",
+    "interpretation":"複数資料をもとにした整理・推定は source_id とともに interpretation=true を付与し、資料本文の直接記述と区別する。",
+    "conflicts":"資料間で筋・人物名・年代などが異なる場合は統合せず、各説と出典を併記する。"
+  },
+  "recommended_record_shape":{
+    "source_status":"deep_researched | researched | index_only",
+    "sources":[
+      {
+        "source_id":"SRC-EXAMPLE-001",
+        "title":"資料名",
+        "author_or_publisher":"著者・発行者",
+        "publication_year_or_date":"年月日または刊行年",
+        "source_type":"official_archive",
+        "url_or_identifier":"URLまたは書誌情報",
+        "accessed_date":"YYYY-MM-DD",
+        "reliability_notes":"資料の性格・注意点"
+      }
+    ],
+    "claims":[
+      {
+        "claim_id":"claim-001",
+        "text":"本文中の検証可能な記述",
+        "source_ids":["SRC-EXAMPLE-001"],
+        "interpretation":false
+      }
+    ]
+  },
+  "migration_policy":"既存の深掘り済みレコードは第二次深掘り再巡回時に順次 source_status、sources、claims を追加する。既存データを無出典のまま深掘り済み扱いにはしない。"
+}
