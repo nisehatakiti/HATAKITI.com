@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-007-index-sweep-g",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-abiko-fire-cart-cat-otra","title":"火車猫おトラ","story_type":["名称伝承"],"cross_tags":["火車","猫","おトラ"],"research_status":"researching","research_notes":"火車は既存の名称タグへ接続。猫という題名上の情報は保持するが、他地域の火車伝承との同一性・存在分類は保留する。"},
+    {"record_id":"chiba-abiko-water-death-network","title":"我孫子市・水辺怪異伝承群","story_type":["話群","水辺伝承"],"cross_tags":["手賀沼","利根川","水辺","引き込み","水難候補"],"research_status":"researching","research_notes":"河童と明示されない水辺怪異は河童タグへ自動統合せず、独立した比較軸として保持する。"},
+    {"record_id":"chiba-abiko-temple-faith-network","title":"我孫子市寺社・信仰伝承群","story_type":["話群","民間信仰"],"cross_tags":["寺社伝承","上人","観音候補","供養候補"],"research_status":"researching","related_records":["chiba-abiko-bennai-shonin-network"]},
+    {"record_id":"chiba-abiko-river-teganuma-structure","title":"利根川・手賀沼水系伝承ハブ","story_type":["地理伝承","地域横断"],"cross_tags":["利根川","手賀沼","水辺伝承","我孫子市","柏市"],"research_status":"active","research_notes":"野田市から続く利根川軸と、柏市へ連続する手賀沼軸を我孫子市内で接続する地理ハブ。"},
+    {"record_id":"chiba-abiko-primary-review","title":"我孫子市主要ハブ・一次レビュー","story_type":["データ整理"],"cross_tags":["手賀沼","利根川","河童","火車","平将門","源頼朝","藤姫","弁内上人"],"research_status":"active","research_notes":"一次収集終盤レビュー。人物・名称・地理・水辺モチーフを別軸で保持し、本文確認前の過剰な統合を避ける。"}
+  ],
+  "batch_notes":"我孫子市一次索引巡回G。火車猫おトラを既存の火車名称タグへ接続しつつ、手賀沼・利根川を主要地理ハブとして再整理。水辺怪異を河童と安易に統合しない比較ルールを適用。"
+}
