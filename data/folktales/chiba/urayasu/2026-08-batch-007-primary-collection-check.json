@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "chiba-urayasu-2026-08-007-primary-collection-check",
+  "municipality": "浦安市",
+  "purpose": "一次収集済みデータの棚卸しと次回調査対象の明示",
+  "collection_policy": {
+    "same_region_same_entity": "同一地域で同じ人物・存在に関する複数話は話群として関連付ける",
+    "wide_area_person": "広域で同一人物とみなせる場合は人物ハブに接続する",
+    "fox_tanuki_mujina": "狐・狸・ムジナは上位横断タグ『狐狸貉』でまとめる",
+    "unknown_content": "本文未確認は researching として登録し、内容を推測で補わない",
+    "verification": "出典・図書館・寺社・伝承地など確認可能な場所を可能な限り残す"
+  },
+  "coverage": [
+    {"category":"狐狸貉","status":"collected","note":"堀江・猫実・当代島を中心に話群化"},
+    {"category":"蛇・白蛇","status":"collected","note":"水辺伝承と横断接続"},
+    {"category":"海・水辺","status":"collected","note":"海坊主・海の怪・水辺の死者伝承を含む"},
+    {"category":"災害","status":"collected","note":"大正六年の大津波を共通コンテキストとして複数話を接続"},
+    {"category":"寺社・信仰","status":"collected_partial","note":"本文未確認の候補を researching として保持"},
+    {"category":"幽霊・死者","status":"collected_partial","note":"水辺・戦争・家伝説を横断接続"},
+    {"category":"人物・歴史","status":"collected_partial","note":"人物ハブ候補を含む"},
+    {"category":"生活・世間話","status":"collected_partial","note":"船・漁業・地域生活文化を含む"},
+    {"category":"動物・変身","status":"collected_partial","note":"猫などを横断タグ化"}
+  ],
+  "next_research": [
+    {"priority":"high","task":"浦安市民話索引と登録済み record_id の照合","goal":"索引タイトルの未登録・重複候補を抽出"},
+    {"priority":"high","task":"researching レコードの本文・書誌情報確認","goal":"内容、異伝、同一話群判定を更新"},
+    {"priority":"normal","task":"市川市との境界伝承の相互参照確認","goal":"相之川・新井・行徳と浦安の重複伝承圏を接続"},
+    {"priority":"normal","task":"現地確認候補の整理","goal":"寺社、旧河川・水路、地蔵、伝承地を訪問可能な一覧にする"}
+  ],
+  "completion_definition": "浦安市民話索引に確認できるタイトルが全件について record または story_hub に対応し、未確認本文は researching として残り、重複・異伝候補が関連付けられた状態を一次収集完了とする"
+}
