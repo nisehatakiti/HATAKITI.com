@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-008-primary-index-sweep-h",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-murasame-maru-hub","title":"村雨丸伝承ハブ","story_type":["人物伝承","悲劇伝承","仇討ち伝承候補"],"cross_tags":["村雨丸延乗","父の仇","仇討ち","夢告","聖徳太子像","赦し","供養","富塚","西輪寺"],"research_status":"researched","research_notes":"白井市内では重要度の高い個別人物伝承として保持。復讐の旅から赦しへの転換という話型を広域比較対象にする。"},
+    {"record_id":"chiba-shiroi-boundary-faith-cluster","title":"白井市・境界信仰伝承群","story_type":["民間信仰","境界伝承"],"cross_tags":["道祖神","魔除け","橋","街道","境界"],"research_status":"researching","research_notes":"道祖神・橋・茶屋などの地理的境界要素を比較するための地域ハブ。個別伝承との関係は本文確認後に整理。"},
+    {"record_id":"chiba-shiroi-water-network-review","title":"白井市・水辺伝承横断レビュー","story_type":["水辺伝承","地理伝承"],"cross_tags":["清戸の泉","龍神","みたらしの池","八幡溜","池","泉"],"research_status":"active","research_notes":"白井市の水辺伝承を存在名ではなく地理・水域軸で整理。龍神、弁財天、寺社との接続を後続確認する。"},
+    {"record_id":"chiba-shiroi-faith-local-cluster","title":"白井市・寺社信仰伝承群","story_type":["寺社伝承","民間信仰"],"cross_tags":["粟島神社","鳥見神社","西福寺","薬王寺","弁財天","如来","聖徳太子"],"research_status":"researching","research_notes":"個別寺社の伝承を一括統合せず、地域内の比較ハブとして保持する。"}
+  ],
+  "batch_notes":"白井市一次索引巡回H。村雨丸伝承を詳細化した内容を地域ハブへ反映し、水辺・境界信仰・寺社信仰の横断整理を追加。"
+}
