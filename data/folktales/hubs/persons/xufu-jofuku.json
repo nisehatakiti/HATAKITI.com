@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"legendary_person",
+  "person_id":"xufu-jofuku",
+  "canonical_name":"徐福",
+  "aliases":["徐巿","じょふく"],
+  "hub_tags":["人物ハブ","伝説上の登場人物","広域伝承","渡来伝承","不老不死伝説"],
+  "historical_note":"中国の秦代の人物として伝えられる徐福と、日本各地に存在する徐福渡来・滞在・開拓伝説を区別して扱う。地域伝承上の足跡や功績を史実として確定しない。",
+  "linking_rule":"民話・伝説内で『徐福』『徐巿』が明確に登場する場合、この人物ハブへ接続する。渡来地・上陸地・墓・居住地・開拓・薬草・不老不死など地域固有の伝承は個別recordとして保持する。",
+  "motif_tags":["渡来人伝説","海を渡る","不老不死","仙薬","始皇帝"],
+  "known_connections":[],
+  "research_status":"hub_ready"
+}
