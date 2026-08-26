@@ -6,8 +6,8 @@
   "records":[
     {"record_id":"chiba-nagareyama-omoi-local-legends-group","title":"思井・小金城周辺伝承群","story_type":["話群","地域史"],"cross_tags":["松戸市接続","小金城伝承圏","犬伝承","城跡"],"research_status":"researching","related_records":["chiba-nagareyama-kogane-maru","chiba-nagareyama-omoi-inuzuka","chiba-nagareyama-three-warrior-ghosts"]},
     {"record_id":"chiba-nagareyama-hiragasaki-legends-network","title":"鰭ヶ崎伝承ネットワーク","story_type":["話群","地域伝承"],"cross_tags":["鰭ヶ崎","東福寺","寺社伝承","動物伝承"],"research_status":"researching","related_records":["chiba-nagareyama-tofukuji-legends-group","chiba-nagareyama-jingoro-candidate"]},
-    {"record_id":"chiba-nagareyama-name-tag-review","title":"名称タグ保留レビュー","story_type":["データ整理"],"cross_tags":["名称タグ先行","分類保留"],"research_status":"active","research_notes":"火車と同様、名称が一致する伝承はまず名称タグで横断接続する。存在分類・類型分類・同一系統判定は資料蓄積後に行う。対象例：火車、左甚五郎、時忠、坂東太郎など。"},
+    {"record_id":"chiba-nagareyama-name-tag-review","title":"名称タグ保留レビュー","story_type":["データ整理"],"cross_tags":["名称タグ先行","分類保留"],"research_status":"active","research_notes":"名称が一致する伝承は、対象が同じ種類のものとは限らないため、まず名称タグで横断接続する。存在分類・人物分類・類型分類・同一系統判定は資料蓄積後に行う。例：火車、左甚五郎、時忠。坂東太郎は人名ではなく利根川の異称として河川・地理タグで扱う。"},
     {"record_id":"chiba-nagareyama-edogawa-route-group","title":"江戸川沿い伝承圏・流山区間","story_type":["話群","地理横断"],"cross_tags":["江戸川","河川伝承","松戸市接続","野田市接続"],"research_status":"researching","research_notes":"市境による分断を避け、江戸川沿岸の地理的連続性を優先して横断検索できるようにする。"}
   ],
-  "batch_notes":"流山市一次索引巡回H。個別伝承の追加と並行して、思井・小金城、鰭ヶ崎、江戸川沿岸を地理ハブとして整理。名称一致は先にタグ接続し、妖怪・人物・類型などの分類判断を後続研究に保留するデータ方針を明文化。"
+  "batch_notes":"流山市一次索引巡回H。個別伝承の追加と並行して、思井・小金城、鰭ヶ崎、江戸川沿岸を地理ハブとして整理。名称一致は先にタグ接続し、分類判断を後続研究に保留する。ただし坂東太郎は利根川の異称として河川・地理タグで扱う。"
 }
