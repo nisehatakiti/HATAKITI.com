@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "chiba-ichikawa-2026-08-batch-003-yabushirazu",
+  "area": {
+    "prefecture": "千葉県",
+    "municipality": "市川市",
+    "local_area": "八幡"
+  },
+  "records": [
+    {
+      "record_id": "chiba-ichikawa-yawata-yabushirazu-001",
+      "title": "八幡のやぶしらず",
+      "research_status": "reviewed",
+      "story_group": "八幡不知森伝承群",
+      "story_type": ["伝説", "怪異", "場所伝承"],
+      "subjects": ["禁足地", "森", "怪異"],
+      "cross_tags": ["禁足地", "祟り", "迷い", "歴史伝説", "平将門", "平貞盛"],
+      "summary": "市川市八幡に残る八幡不知森を中心とする禁足地伝承。立ち入りを禁じる理由について、日本武尊、葛飾八幡宮、平将門、平貞盛の八門遁甲、地域の入会地など複数の説明が伝えられる。単一の由来に固定せず、場所に歴史・信仰・怪異の説明が重層した伝承として扱う。",
+      "places": ["市川市八幡", "八幡不知森"],
+      "research_missing": ["異伝ごとの成立関係", "各由来の典拠整理"],
+      "verification_locations": [{"type":"library","name":"市川市立図書館","reason":"地域資料・民話資料の確認"},{"type":"local_site","name":"八幡不知森","reason":"現地伝承地の確認"}],
+      "sources": [{"title":"市川市公式資料：八幡不知森関連資料","publisher":"市川市","url":"https://www.city.ichikawa.lg.jp/page/3954.html","source_status":"confirmed"}]
+    },
+    {
+      "record_id": "chiba-ichikawa-yawata-yabushirazu-002",
+      "title": "八幡のやぶしらずの竹は何本あるか",
+      "research_status": "reviewed",
+      "story_group": "八幡不知森伝承群",
+      "story_type": ["昔話", "動物報恩"],
+      "subjects": ["虻", "旅人", "竹"],
+      "cross_tags": ["動物報恩", "虻", "禁足地", "恩返し", "知恵"],
+      "summary": "旅人が子どもたちに捕らわれた大きな虻を助ける。後に八幡のやぶしらずの竹の本数を数える者への褒美の話を聞き、旅人は制止を聞かず森へ入る。以前助けた虻が恩返しとして竹の本数を知らせるという話。",
+      "places": ["市川市八幡", "八幡不知森"],
+      "verification_locations": [{"type":"library","name":"市川市立図書館","reason":"収録資料・本文確認"}],
+      "sources": [{"title":"市川市立図書館地域資料レファレンス：やぶしらず関連資料","publisher":"市川市立図書館","url":"https://www.city.ichikawa.lg.jp/common/000276588.pdf","source_status":"confirmed"}]
+    },
+    {
+      "record_id": "chiba-ichikawa-yawata-yabushirazu-003",
+      "title": "やぶしらずの機織り娘",
+      "research_status": "partial",
+      "story_group": "八幡不知森伝承群",
+      "story_type": ["怪談", "怪異譚"],
+      "subjects": ["謎の娘", "機織り"],
+      "cross_tags": ["怪異", "女性怪異", "機織り", "血", "禁足地"],
+      "summary": "やぶしらずの中から機を織る音が聞こえる。近所の農家に美しい娘が機織り道具を借りに来て、数日後に返却した際、その道具には血のりが付いていたとされる。娘の正体は現段階では確定しない。",
+      "subject_identity": "unconfirmed",
+      "research_missing": ["本文詳細", "娘の正体に関する記述", "異伝"],
+      "verification_locations": [{"type":"library","name":"市川市立図書館","reason":"本文・収録資料確認"}],
+      "sources": [{"title":"市川市立図書館地域資料レファレンス：やぶしらず関連資料","publisher":"市川市立図書館","url":"https://www.city.ichikawa.lg.jp/common/000276588.pdf","source_status":"confirmed"}]
+    },
+    {
+      "record_id": "chiba-ichikawa-yawata-yabushirazu-004",
+      "title": "やぶしらずのきつね",
+      "research_status": "reviewed",
+      "story_group": "八幡不知森伝承群",
+      "story_type": ["民話", "狐憑き", "信仰譚"],
+      "subjects": ["狐", "狼", "三峰信仰"],
+      "cross_tags": ["狐狸貉", "狐", "狐憑き", "憑依", "民間信仰", "三峰信仰", "禁足地"],
+      "summary": "男の子が狐憑きになり、狼を祀る三峰山の掛軸を掛けることで狐を怖がらせ、追い払うという伝承。狐憑きと、それを祓う信仰的要素が結びついた話として扱う。",
+      "places": ["市川市八幡", "八幡不知森"],
+      "verification_locations": [{"type":"library","name":"市川市立図書館","reason":"収録資料・本文確認"}],
+      "sources": [{"title":"市川市立図書館地域資料レファレンス：やぶしらず関連資料","publisher":"市川市立図書館","url":"https://www.city.ichikawa.lg.jp/common/000276588.pdf","source_status":"confirmed"}]
+    },
+    {
+      "record_id": "chiba-ichikawa-yawata-yabushirazu-005",
+      "title": "やぶしらずに入った水戸黄門",
+      "research_status": "reviewed",
+      "story_group": "八幡不知森伝承群",
+      "story_type": ["人物伝説", "怪異譚", "歴史伝説"],
+      "subjects": ["徳川光圀", "白髪の老人"],
+      "related_persons": ["徳川光圀", "平将門", "平貞盛"],
+      "cross_tags": ["水戸黄門", "怪異", "老人", "禁足地", "八門遁甲", "平将門", "平貞盛", "歴史伝説"],
+      "summary": "水戸黄門が供を連れず八幡のやぶしらずへ入り、白髪の老人から平貞盛が平将門討伐時に築いた八門遁甲の陣と、死門の一角が残ったため人々の出入りを禁じたという説明を受ける。老人は今回だけ許すとして黄門を森の外へ返す。",
+      "places": ["市川市八幡", "八幡不知森"],
+      "historical_context": "史実としての人物・事件と、民話内での語りを分離して扱う。",
+      "verification_locations": [{"type":"library","name":"市川市立図書館","reason":"関連民話・錦絵・歌舞伎資料の確認"},{"type":"local_site","name":"八幡不知森","reason":"伝承地確認"}],
+      "sources": [{"title":"市川市公式資料：八幡不知森関連資料","publisher":"市川市","url":"https://www.city.ichikawa.lg.jp/page/3954.html","source_status":"confirmed"},{"title":"市川市立図書館地域資料レファレンス：やぶしらず関連資料","publisher":"市川市立図書館","url":"https://www.city.ichikawa.lg.jp/common/000276588.pdf","source_status":"confirmed"}]
+    }
+  ]
+}
