@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-005-index-sweep-e",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-abiko-teganuma-aquatic-network","title":"手賀沼・水生生物伝承群","story_type":["話群","水辺伝承"],"cross_tags":["手賀沼","鯉","鰻","沼の主","水辺伝承"],"research_status":"researching","research_notes":"鯉・大鰻・沼の主を名称・場所の両軸で保持し、同一伝承体系かは本文比較後に判断する。"},
+    {"record_id":"chiba-abiko-kappa-teganuma-network","title":"手賀沼周辺・河童伝承接続","story_type":["河童伝承","水辺伝承"],"cross_tags":["河童","手賀沼","水辺伝承","利根川水系"],"research_status":"researching","related_regions":["野田市","柏市"],"research_notes":"河童は名称タグとして野田市側のデータと横断接続するが、同一話型判定は行わない。"},
+    {"record_id":"chiba-abiko-masakado-person-hub","title":"平将門・我孫子関連伝承","story_type":["人物伝承","広域伝承"],"cross_tags":["平将門","将門","人物タグ","下総伝承圏"],"research_status":"researching","related_regions":["松戸市","野田市"],"research_notes":"人物タグとして既存の将門ハブへ接続。個別伝承の歴史的事実性や同一系統判定は保留。"},
+    {"record_id":"chiba-abiko-teganuma-abiko-kashiwa-hub","title":"手賀沼・我孫子柏横断ハブ","story_type":["地理伝承","地域横断"],"cross_tags":["手賀沼","我孫子市","柏市","水辺伝承"],"research_status":"active","research_notes":"次工程の柏市収集に接続する地理ハブ。市境で伝承圏を切断しない。"},
+    {"record_id":"chiba-abiko-name-tag-review","title":"我孫子市名称・人物タグ一次レビュー","story_type":["データ整理"],"cross_tags":["河童","火車","平将門","源頼朝","藤姫","弁内上人"],"research_status":"active","research_notes":"人物タグと名称タグを分離し、同名・同一人物・同一存在の判定は本文資料確認後に行う。"}
+  ],
+  "batch_notes":"我孫子市一次索引巡回E。手賀沼を中心に水生生物・河童・人物伝承を整理し、柏市への地理的接続ハブを明確化。市境を越える手賀沼伝承圏を保持する。"
+}
