@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-004-index-sweep-d",
+  "municipality":"流山市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-blood-stained-reeds","title":"血染めの茅","story_type":["広域伝承","歴史伝承","植物伝承"],"cross_tags":["血染めの茅類型候補","広域伝承","松戸市接続"],"related_regions":["松戸市","野田市","柏市旧沼南","船橋市","市川市","佐倉市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-loyal-dog","title":"忠義な犬","story_type":["動物伝承","犬伝承"],"beings":["犬"],"cross_tags":["犬伝承","忠犬","思井"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-tofukuji-duck","title":"東福寺の鴨","story_type":["動物伝承","寺社伝承"],"beings":["鴨"],"cross_tags":["鴨伝承","寺社伝承","鰭ヶ崎"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-tofukuji-origin","title":"東福寺の由来","story_type":["寺社伝承","由来話"],"cross_tags":["寺社伝承","由来話","鰭ヶ崎"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-hidari-jingoro-duck","title":"左甚五郎の眼つぶしの鴨","story_type":["人物伝承","動物伝承","寺社伝承"],"beings":["鴨"],"cross_tags":["人物ハブ候補","左甚五郎","鴨伝承","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-nio-scolds-thief","title":"泥棒をしかった仁王さま","story_type":["寺社伝承","怪異譚"],"cross_tags":["仁王伝承","寺社伝承","怪異"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-tokitada-tenjin","title":"時忠天神","story_type":["人物伝承","神社伝承"],"cross_tags":["人物伝承候補","天神伝承","八木村"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-temple-animal-group","title":"鰭ヶ崎・東福寺の鴨伝承群","story_type":["話群","寺社伝承","動物伝承"],"beings":["鴨"],"cross_tags":["寺社伝承","鴨伝承","左甚五郎候補"],"research_status":"researching","related_records":["chiba-nagareyama-tofukuji-duck","chiba-nagareyama-tofukuji-origin","chiba-nagareyama-hidari-jingoro-duck","chiba-nagareyama-me-tsubushi-duck"]}
+  ],
+  "batch_notes":"流山市一次索引巡回D。県立図書館索引の未登録タイトルを回収。血染めの茅は広域接続、鰭ヶ崎・東福寺の鴨は同一地域内の複数資料を話群として整理。左甚五郎・時忠の人物接続は本文確認前のため候補扱い。"
+}
