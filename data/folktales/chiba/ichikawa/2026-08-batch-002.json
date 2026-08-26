@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "chiba-ichikawa-2026-08-002",
+  "records": [
+    {
+      "record_id": "chiba-ichikawa-otsukisama-ga-bee",
+      "title": "お月さまがべーえ",
+      "prefecture": "千葉県",
+      "municipality": "市川市",
+      "locations": ["行徳"],
+      "story_type": ["民話"],
+      "beings": ["月"],
+      "themes": ["自然"],
+      "research_status": "partial",
+      "research_priority": "high",
+      "research_missing": ["full_story_text", "variant_comparison"],
+      "research_notes": "千葉県立図書館の民話リストで市川市の民話として確認。千葉県公式の『語り継ごう千葉の民話集』第2巻にも『お月様がべーえ』として収録され、伝承地は市川市行徳、収録時間は3分21秒。本文・詳細なあらすじは本バッチでは未確定。",
+      "sources": [
+        {
+          "title": "お母さんがきいたむかしばなし",
+          "publisher": "エピック",
+          "year": 1986,
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"
+        },
+        {
+          "title": "語り継ごう千葉の民話集 第2巻",
+          "publisher": "千葉県",
+          "year": 2009,
+          "url": "https://www.pref.chiba.lg.jp/kkbunka/b-shinkou/jigyou/minwa-cd.html"
+        }
+      ],
+      "verification_locations": [
+        {"type": "library", "name": "千葉県立中央図書館", "reason": "県の民話資料および関連書籍の確認候補"},
+        {"type": "library", "name": "市川市立図書館", "reason": "市川の地域民話・朗読資料の確認候補"}
+      ],
+      "field_research": {"visit_candidate": true, "priority": "high", "places": ["市川市立図書館", "行徳地域"], "local_leads": ["行徳"]}
+    },
+    {
+      "record_id": "chiba-ichikawa-saru-to-ryoshi",
+      "title": "サルとりょうし",
+      "prefecture": "千葉県",
+      "municipality": "市川市",
+      "locations": [],
+      "story_type": ["民話"],
+      "beings": ["猿", "人間"],
+      "themes": ["動物"],
+      "research_status": "researching",
+      "research_priority": "normal",
+      "research_missing": ["story_content", "exact_location", "variant_relationship"],
+      "research_notes": "千葉県立図書館の市川市民話リストで書誌情報を確認。本文と詳細伝承地は未確認。",
+      "sources": [{"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
+      "verification_locations": [{"type": "library", "name": "千葉県立中央図書館", "reason": "収録資料の所蔵確認候補"}, {"type": "library", "name": "市川市立図書館", "reason": "郷土資料・関連民話資料の確認候補"}],
+      "field_research": {"visit_candidate": false, "priority": "normal", "places": ["市川市立図書館"], "local_leads": []}
+    },
+    {
+      "record_id": "chiba-ichikawa-shimizu-gani-to-kaeru",
+      "title": "清水がにと、蛙の恩返し",
+      "prefecture": "千葉県",
+      "municipality": "市川市",
+      "locations": [],
+      "story_type": ["民話"],
+      "beings": ["蟹", "蛙"],
+      "themes": ["動物", "恩返し"],
+      "research_status": "researching",
+      "research_priority": "normal",
+      "research_missing": ["story_content", "exact_location", "source_text"],
+      "research_notes": "千葉県立図書館の市川市民話リストで書誌情報を確認。タイトルから推測せず、本文確認後に詳細な類型・要約を確定する。",
+      "sources": [{"title": "千葉県の民話 続", "publisher": "千秋社", "year": 1981, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
+      "verification_locations": [{"type": "library", "name": "千葉県立中央図書館", "reason": "収録資料の所蔵確認候補"}, {"type": "library", "name": "市川市立図書館", "reason": "郷土資料確認候補"}],
+      "field_research": {"visit_candidate": false, "priority": "normal", "places": ["市川市立図書館"], "local_leads": []}
+    },
+    {
+      "record_id": "chiba-ichikawa-onnabake-no-kitsune",
+      "title": "女化のキツネ",
+      "prefecture": "千葉県",
+      "municipality": "市川市",
+      "locations": [],
+      "story_type": ["民話"],
+      "beings": ["狐"],
+      "themes": ["化かし"],
+      "cross_tags": ["狐狸貉", "狐"],
+      "research_status": "researching",
+      "research_priority": "high",
+      "research_missing": ["story_content", "exact_location", "variant_relationship"],
+      "research_notes": "狐狸貉横断タグに接続。市川市内の正確な伝承地および他地域の同名・類似伝承との関係は未確定。",
+      "sources": [{"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
+      "verification_locations": [{"type": "library", "name": "千葉県立中央図書館", "reason": "本文・収録資料確認候補"}, {"type": "library", "name": "市川市立図書館", "reason": "地域伝承の詳細確認候補"}],
+      "field_research": {"visit_candidate": false, "priority": "high", "places": ["市川市立図書館"], "local_leads": []}
+    }
+  ]
+}
