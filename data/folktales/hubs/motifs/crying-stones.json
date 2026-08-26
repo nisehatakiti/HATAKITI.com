@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"motif_or_story_type",
+  "motif_id":"crying-stones",
+  "canonical_name":"泣く石・夜泣き石類型",
+  "aliases":["夜泣き石","泣き石","涙石","泣石","夜泣石"],
+  "hub_tags":["類型ハブ","石の怪異","怪異譚","幽霊・死者","音を出す石"],
+  "classification_note":"石が泣く・夜に声を出す・涙を流す、あるいは人の死や怨念・悲劇と結び付けられる伝承を横断する類型。地域ごとに原因・人物・石の性質が異なるため、個別伝承は統合せず関連付ける。",
+  "sub_motifs":["夜に泣く石","涙を流す石","死者や怨念と結び付く石","子どもの泣き声がする石","悲劇の記憶を持つ石"],
+  "linking_rule":"題名に夜泣き石・泣き石・涙石等がある場合は原則この類型ハブへ接続する。名称が異なる場合でも、石が泣く・声を出す・涙を流すという核心モチーフが確認できれば本文確認後に接続候補とする。",
+  "known_connections":[
+    {"prefecture":"千葉県","municipality":"松戸市","title":"里見の姫の夜泣き石","status":"researching"}
+  ],
+  "research_status":"hub_ready"
+}
