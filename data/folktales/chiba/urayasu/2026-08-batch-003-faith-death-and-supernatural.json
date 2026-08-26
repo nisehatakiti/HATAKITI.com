@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-urayasu-2026-08-003-faith-death-and-supernatural",
+  "reconstruction_status":"reconstructed_2026-08-26",
+  "reconstruction_notes":"欠番ファイルを浦安一次収集時の分類方針、前後バッチの構造、千葉県立図書館の浦安市民話索引から復元。伝承本文が未確認の項目については題名から詳細な筋を補完していない。",
+  "records":[
+    {"record_id":"chiba-urayasu-kyusuke-inari","title":"久助稲荷のはなし","prefecture":"千葉県","municipality":"浦安市","locations":["堀江","大連寺","久助稲荷"],"story_type":["稲荷信仰伝承"],"cross_tags":["稲荷","寺社伝承"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-izumi-no-kami","title":"泉の守","prefecture":"千葉県","municipality":"浦安市","locations":["善福寺"],"story_type":["寺社伝承候補","人物伝承候補"],"cross_tags":["善福寺"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-izumi-no-kami-geothermal","title":"泉の守の地熱","prefecture":"千葉県","municipality":"浦安市","story_type":["怪異伝承候補"],"cross_tags":["泉の守"],"research_status":"researching","research_notes":"「泉の守」との関連話候補だが本文確認まで関係を断定しない。"},
+    {"record_id":"chiba-urayasu-okuman-master","title":"オクマンさまの主","prefecture":"千葉県","municipality":"浦安市","story_type":["信仰伝承候補","怪異伝承候補"],"cross_tags":["オクマンさま"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-osan-sama","title":"おサンさま","prefecture":"千葉県","municipality":"浦安市","story_type":["信仰伝承候補"],"cross_tags":["民間信仰候補"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-kamisama-possession","title":"カミさまがのりうつった","prefecture":"千葉県","municipality":"浦安市","story_type":["憑依譚","信仰伝承"],"cross_tags":["神","憑依"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-kanashibari","title":"かなしばり","prefecture":"千葉県","municipality":"浦安市","story_type":["怪異譚"],"cross_tags":["怪異"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-shisha-no-tanomi","title":"死者からの頼み","prefecture":"千葉県","municipality":"浦安市","story_type":["死者伝承","怪談"],"cross_tags":["幽霊・死者"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-shi-no-shirase","title":"死の知らせ","prefecture":"千葉県","municipality":"浦安市","story_type":["死者伝承","怪談"],"cross_tags":["幽霊・死者"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-sanzu-fare","title":"三途の川の渡し賃","prefecture":"千葉県","municipality":"浦安市","story_type":["死者伝承","信仰伝承"],"cross_tags":["死者","三途の川"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-jizo-attached","title":"地蔵さまがついた","prefecture":"千葉県","municipality":"浦安市","story_type":["寺社伝承","憑依譚候補"],"cross_tags":["地蔵","怪異"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-jihi-jizo-benefit","title":"慈悲地蔵の御利益","prefecture":"千葉県","municipality":"浦安市","locations":["浦安町"],"story_type":["地蔵信仰","寺社伝承"],"cross_tags":["地蔵","御利益"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-myoshin-curse","title":"明神様のたたり","prefecture":"千葉県","municipality":"浦安市","locations":["堀江"],"story_type":["神罰譚","寺社伝承"],"cross_tags":["明神","祟り"],"research_status":"partial"},
+    {"record_id":"chiba-urayasu-muenbotoke","title":"無縁仏","prefecture":"千葉県","municipality":"浦安市","story_type":["死者伝承","怪談"],"cross_tags":["無縁仏","幽霊・死者"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-matsugo-no-mizu","title":"末期の水","prefecture":"千葉県","municipality":"浦安市","story_type":["死者伝承","民俗"],"cross_tags":["死","民俗"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-tamashii-collision","title":"魂と魂がぶつかった","prefecture":"千葉県","municipality":"浦安市","story_type":["怪談","霊魂伝承"],"cross_tags":["魂","怪異"],"research_status":"researching"}
+  ],
+  "sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}],
+  "batch_notes":"浦安の信仰・死者・霊魂・怪異伝承を中心に復元。Batch 004の寺社・幽霊・水辺死者伝承と重複しないよう、Batch 003は索引上の個別題名を一次候補として保持した。"
+}
