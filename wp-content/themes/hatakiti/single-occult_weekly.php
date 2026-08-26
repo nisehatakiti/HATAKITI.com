@@ -69,15 +69,17 @@ get_header();
 
             <?php if ( $tiers['medium'] ) : ?>
                 <h2 class="hk-review-heading">今週の注目情報</h2>
-                <?php foreach ( $tiers['medium'] as $article ) : ?>
-                    <?php hatakiti_render_occult_article( $article, 'medium' ); ?>
-                <?php endforeach; ?>
+                <div class="hk-occult-grid">
+                    <?php foreach ( $tiers['medium'] as $article ) : ?>
+                        <?php hatakiti_render_occult_article( $article, 'medium' ); ?>
+                    <?php endforeach; ?>
+                </div>
                 <?php hatakiti_render_divider(); ?>
             <?php endif; ?>
 
             <?php if ( $tiers['small'] ) : ?>
                 <h2 class="hk-review-heading">その他の奇妙な話</h2>
-                <ul class="hk-record-list">
+                <ul class="hk-record-list hk-record-list--grid">
                     <?php foreach ( $tiers['small'] as $article ) : ?>
                         <li>
                             <div class="hk-record-info">

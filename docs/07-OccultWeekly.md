@@ -153,4 +153,7 @@ WordPressアクセス依存のWP-Cronだけでなく、ConoHa側のcron等、安
 
 Claudeへの最終実装指示時には、上記仕様をベースとして、情報源の取得条件確認、AI処理方式、WordPress実装、ConoHa cron、GitHubから本番への反映、テスト方法までをまとめて指示する。
 
-現時点では本ファイルは**構想・設計の記録**であり、実装そのものはまだ開始しない。
+本ファイルは構想・設計の記録。実装状況・実際のWordPressマッピングは
+docs/15-OccultWeekly-Implementation.md（手動運用できる状態までの実装
+記録）と docs/16-OccultWeekly-AutomationDesign.md（毎日の自動取得・
+週次AI編集処理の設計、未決定事項の記録）を参照。

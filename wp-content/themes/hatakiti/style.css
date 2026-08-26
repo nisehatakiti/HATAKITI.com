@@ -349,6 +349,29 @@ ul, ol { padding-left: 1.4em; }
     text-transform: uppercase;
 }
 
+/* Newspaper-style multi-column layout for 週刊オカルト新聞 (docs/07
+   "新聞レイアウト" — PC: 複数カラム / スマートフォン: 自然に1カラム).
+   The 大見出し stays full-width (front-page lead treatment); only
+   中記事・小記事 go into columns, reusing the existing 900px breakpoint
+   already used elsewhere in this stylesheet. */
+.hk-occult-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.hk-record-list--grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+.hk-record-list--grid li { border-bottom: 1px solid var(--hk-border); }
+
+@media (min-width: 901px) {
+    .hk-occult-grid { grid-template-columns: 1fr 1fr; }
+    .hk-record-list--grid { grid-template-columns: 1fr 1fr; column-gap: 32px; }
+}
+
 .hk-article-thumb { margin: 0 0 32px; }
 
 .hk-article-body { font-size: 16px; }
