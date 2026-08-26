@@ -22,6 +22,7 @@ get_header();
         $week_end   = get_post_meta( $post_id, 'hatakiti_occult_week_end', true );
         $issue_date = get_post_meta( $post_id, 'hatakiti_occult_issue_date', true );
         $issue_id   = get_post_meta( $post_id, 'hatakiti_occult_issue_id', true );
+        $editorial_summary = get_post_meta( $post_id, 'hatakiti_occult_editorial_summary', true );
         $articles   = hatakiti_json_meta( $post_id, 'hatakiti_occult_articles_json' );
 
         $tiers = array( 'large' => array(), 'medium' => array(), 'small' => array() );
@@ -110,6 +111,12 @@ get_header();
                         </li>
                     <?php endforeach; ?>
                 </ul>
+                <?php hatakiti_render_divider(); ?>
+            <?php endif; ?>
+
+            <?php if ( $editorial_summary ) : ?>
+                <h2 class="hk-review-heading">編集後記</h2>
+                <div class="hk-article-body"><?php echo wpautop( wp_kses_post( $editorial_summary ) ); ?></div>
                 <?php hatakiti_render_divider(); ?>
             <?php endif; ?>
 

@@ -143,6 +143,8 @@ function hatakiti_register_occult_meta() {
         'hatakiti_occult_source_count',
         'hatakiti_occult_article_count',
         'hatakiti_occult_main_topic_count',
+        'hatakiti_occult_editorial_summary',
+        'hatakiti_occult_generated_at',
         // occult_news_item
         'hatakiti_occult_source_post_id',
         'hatakiti_occult_source_name',
@@ -151,6 +153,7 @@ function hatakiti_register_occult_meta() {
         'hatakiti_occult_fetched_at',
         'hatakiti_occult_content_hash',
         'hatakiti_occult_issue_post_id',
+        'hatakiti_occult_raw_metadata',
         // occult_news_source
         'hatakiti_occult_rss_url',
         'hatakiti_occult_website_url',

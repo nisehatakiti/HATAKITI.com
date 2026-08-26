@@ -86,6 +86,7 @@ function hatakiti_handle_occult_weekly_submit( $post_id ) {
     $issue_id   = isset( $_POST['hatakiti_occult_issue_id'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_occult_issue_id'] ) ) : '';
     $issue_date_raw = isset( $_POST['hatakiti_occult_issue_date'] ) ? wp_unslash( $_POST['hatakiti_occult_issue_date'] ) : '';
     $issue_date = preg_match( '/^\d{4}-\d{2}-\d{2}$/', $issue_date_raw ) ? $issue_date_raw : $week_end;
+    $editorial_summary = isset( $_POST['hatakiti_occult_editorial_summary'] ) ? wp_kses_post( wp_unslash( $_POST['hatakiti_occult_editorial_summary'] ) ) : '';
 
     $status = ( isset( $_POST['hatakiti_action'] ) && 'publish' === $_POST['hatakiti_action'] ) ? 'publish' : 'draft';
 
@@ -115,6 +116,7 @@ function hatakiti_handle_occult_weekly_submit( $post_id ) {
     update_post_meta( $post_id, 'hatakiti_occult_week_start', $week_start );
     update_post_meta( $post_id, 'hatakiti_occult_week_end', $week_end );
     update_post_meta( $post_id, 'hatakiti_occult_issue_date', $issue_date );
+    update_post_meta( $post_id, 'hatakiti_occult_editorial_summary', $editorial_summary );
 
     hatakiti_save_occult_weekly_articles( $post_id );
 
@@ -221,6 +223,7 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
     update_post_meta( $post_id, 'hatakiti_occult_source_count', count( $source_ids ) );
     update_post_meta( $post_id, 'hatakiti_occult_article_count', $article_count );
     update_post_meta( $post_id, 'hatakiti_occult_main_topic_count', $main_topic_count );
+    update_post_meta( $post_id, 'hatakiti_occult_generated_at', current_time( 'mysql' ) );
 }
 
 function hatakiti_render_occult_weekly_form() {
@@ -237,6 +240,7 @@ function hatakiti_render_occult_weekly_form() {
     $week_start = '';
     $week_end   = '';
     $issue_date = '';
+    $editorial_summary = '';
     $articles   = array();
 
     if ( $is_edit ) {
@@ -249,6 +253,7 @@ function hatakiti_render_occult_weekly_form() {
         $week_start = get_post_meta( $post_id, 'hatakiti_occult_week_start', true );
         $week_end   = get_post_meta( $post_id, 'hatakiti_occult_week_end', true );
         $issue_date = get_post_meta( $post_id, 'hatakiti_occult_issue_date', true );
+        $editorial_summary = get_post_meta( $post_id, 'hatakiti_occult_editorial_summary', true );
         $articles   = json_decode( (string) get_post_meta( $post_id, 'hatakiti_occult_articles_json', true ), true );
         if ( ! is_array( $articles ) ) {
             $articles = array();
@@ -261,6 +266,7 @@ function hatakiti_render_occult_weekly_form() {
         $week_start = isset( $_POST['hatakiti_occult_week_start'] ) ? wp_unslash( $_POST['hatakiti_occult_week_start'] ) : $week_start;
         $week_end   = isset( $_POST['hatakiti_occult_week_end'] ) ? wp_unslash( $_POST['hatakiti_occult_week_end'] ) : $week_end;
         $issue_date = isset( $_POST['hatakiti_occult_issue_date'] ) ? wp_unslash( $_POST['hatakiti_occult_issue_date'] ) : $issue_date;
+        $editorial_summary = isset( $_POST['hatakiti_occult_editorial_summary'] ) ? wp_unslash( $_POST['hatakiti_occult_editorial_summary'] ) : $editorial_summary;
     }
 
     // Map item_id -> its current group, so the selection table can be
@@ -330,6 +336,13 @@ function hatakiti_render_occult_weekly_form() {
                 hatakiti_form_date_row( '対象期間（終了）', 'hatakiti_occult_week_end', $week_end );
                 hatakiti_form_date_row( '発行日', 'hatakiti_occult_issue_date', $issue_date );
                 ?>
+                <tr>
+                    <th scope="row"><label for="hatakiti_occult_editorial_summary">編集後記／編集サマリー</label></th>
+                    <td>
+                        <textarea id="hatakiti_occult_editorial_summary" name="hatakiti_occult_editorial_summary" rows="4" class="large-text"><?php echo esc_textarea( $editorial_summary ); ?></textarea>
+                        <p class="description">この号全体についての一言（今週の傾向、編集後記など）。任意項目。</p>
+                    </td>
+                </tr>
             </tbody></table>
 
             <?php if ( $is_edit ) : ?>
