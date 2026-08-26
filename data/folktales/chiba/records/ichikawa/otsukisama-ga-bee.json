@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-otsukisama-ga-bee",
+  "municipality":"市川市",
+  "title":"お月さまがべーえ",
+  "research_status":"source_confirmed",
+  "tags":["月","行徳","市川市"],
+  "sources":[
+    {"title":"お母さんがきいたむかしばなし","publication_year_or_date":"1986","source_type":"book","note":"千葉県立図書館民話索引で市川市の収録題名として確認。"},
+    {"title":"語り継ごう千葉の民話・民謡・童謡 第2巻","author_or_publisher":"千葉県","source_type":"audio_collection","note":"伝承地を市川市行徳として収録。語り手：荒石かつえ。"}
+  ],
+  "related_traditions":[
+    {"relationship":"comparison_candidate","theme":"月に化ける怪異","records":["月に化けたタヌキ（浦安）","月に化けた狢（浦安）","月に化けたムジナ（浦安）"],"reason":"行徳と浦安は近接する旧江戸川河口の伝承圏であり、題名から月に関する怪異伝承との関連を検討する価値がある。ただし本伝承の本文未確認のため、同一伝承・異伝とは断定しない。"}
+  ],
+  "research_notes":"浦安の月に化けたタヌキ／狢／ムジナを比較候補として明示的に紐づけ。本文確認時には月への変身・動物怪異の要素を最優先で照合する。"
+}
