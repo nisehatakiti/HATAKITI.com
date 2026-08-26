@@ -1,0 +1,28 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-urayasu-2026-08-009-index-sweep-b",
+  "source_index":"千葉県立図書館 千葉県の民話 浦安市",
+  "records":[
+    {"record_id":"chiba-urayasu-kitanohoshi-hoka","title":"キタノホシほか","story_type":["世間話","民俗"],"cross_tags":["世間話","民俗"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-kochinei","title":"コチねい","story_type":["世間話"],"cross_tags":["世間話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-komenomeshi-bento","title":"米の飯の弁当","story_type":["世間話","生活文化"],"cross_tags":["世間話","生活文化"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-saizenbako-nanaya","title":"賽銭箱あけて『ななや』から出した","story_type":["世間話","寺社伝承"],"cross_tags":["世間話","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-sattsura-miyagare","title":"さっつらみやがれ","story_type":["世間話"],"locations":["海楽園"],"cross_tags":["世間話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-sawara-ohachi-omaru","title":"椹で作ったお鉢とおまる","story_type":["生活文化","世間話"],"locations":["富岡","堀江","猫実","向島"],"cross_tags":["生活文化","地域横断"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-jii-name","title":"爺おめえの名は？","story_type":["世間話","笑い話"],"cross_tags":["世間話","笑い話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-jouha-kaketeba","title":"ジョウは書けてば書かねだよ","aliases":["じょうは書けてば書かねだよ……"],"story_type":["世間話"],"cross_tags":["世間話","表記異同候補"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-kakkakka-meno-kon","title":"かっかっかっかっ…めのこん出た","story_type":["世間話"],"locations":["当代島"],"cross_tags":["世間話","当代島"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-shiratori-chouchin","title":"白提灯の効果","story_type":["怪談","世間話"],"cross_tags":["怪異","世間話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-shirohebi-mita","title":"白蛇を見たって","story_type":["蛇伝承"],"locations":["善福寺"],"beings":["白蛇"],"cross_tags":["蛇伝承","水辺伝承候補"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-bakuchi-nigeshari","title":"博打の逃げしゃり","story_type":["世間話"],"locations":["当代島"],"cross_tags":["世間話","当代島"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-nenkiake-namida","title":"年季明けの涙","story_type":["生活文化","世間話"],"cross_tags":["生活文化","世間話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-hamakichi-tatsugoro","title":"浜吉名前の辰五郎","story_type":["人物伝承"],"cross_tags":["人物ハブ候補","世間話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-hikkoshi-nenbutsu","title":"引越し念仏","story_type":["信仰伝承","生活文化"],"cross_tags":["信仰伝承","生活文化"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-hitogamitara-geero","title":"人が見たらゲエロになあれ","story_type":["世間話","怪異譚候補"],"cross_tags":["世間話","怪異候補"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-buootoko-no-tsura","title":"ぶおとこのつら","story_type":["世間話","笑い話"],"cross_tags":["世間話","笑い話"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-maachi","title":"まあち","story_type":["世間話"],"locations":["猫実","堀江"],"cross_tags":["世間話","猫実","堀江"],"research_status":"researching"},
+    {"record_id":"chiba-urayasu-maachi-mae","title":"マーチ前","story_type":["世間話"],"cross_tags":["世間話","表記・関連候補"],"related_candidates":["まあち"],"research_status":"researching"}
+  ],
+  "sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}],
+  "batch_notes":"浦安市民話索引の第2巡回。既存バッチで未対応だった題名を一次登録。本文未確認のため、題名・索引上の地域情報から過剰な内容推定はせず researching とした。表記違い・同一話候補は統合せず関連候補として保持。"
+}
