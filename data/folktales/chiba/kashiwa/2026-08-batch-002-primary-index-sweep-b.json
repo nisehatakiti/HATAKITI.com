@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-002-primary-index-sweep-b",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-kashiwa-teganuma-legend-hub","title":"手賀沼・柏側伝承ハブ","story_type":["話群","水辺伝承","地理伝承"],"cross_tags":["手賀沼","水辺伝承","我孫子市","柏市"],"research_status":"researching","research_notes":"我孫子市から引き継ぐ共通地理タグ。柏側の個別伝承は同一水域の伝承圏として接続するが、我孫子側の個別話と同一とは決めない。"},
+    {"record_id":"chiba-kashiwa-water-being-network","title":"柏市・水辺存在伝承群","story_type":["話群","水辺伝承"],"cross_tags":["池","沼","川","水辺","主","河童候補"],"research_status":"researching","research_notes":"水辺に現れる存在は名称が確認されるまで独立記録とし、河童等の既存タグへ自動統合しない。"},
+    {"record_id":"chiba-kashiwa-teganuma-cross-region","title":"手賀沼・我孫子柏横断レビュー","story_type":["地域横断","データ整理"],"cross_tags":["手賀沼","我孫子市","柏市","水辺伝承","利根川水系"],"research_status":"active","research_notes":"行政境界ではなく水域共有を優先する横断ハブ。次工程の個別伝承は採話地・伝承地を保持する。"},
+    {"record_id":"chiba-kashiwa-primary-tag-review","title":"柏市一次タグ整理B","story_type":["データ整理"],"cross_tags":["地理タグ","名称タグ","人物タグ","モチーフタグ"],"research_status":"active","research_notes":"柏市の一次収集開始段階。既存広域タグとの接続は題名・本文上の明示を確認してから行う。"}
+  ],
+  "batch_notes":"柏市一次索引巡回B。手賀沼を我孫子市との市域横断ハブとして固定し、柏側の水辺伝承を独立収集するための構造を追加。"
+}
