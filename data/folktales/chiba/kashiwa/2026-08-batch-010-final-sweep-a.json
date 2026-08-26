@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-010-final-sweep-a",
+  "municipality":"柏市",
+  "phase":"final_sweep",
+  "records":[
+    {"record_id":"chiba-kashiwa-teganuma-final-review","title":"手賀沼伝承圏・柏側最終レビュー","story_type":["話群","水辺伝承","地理伝承"],"cross_tags":["手賀沼","我孫子市","柏市","牛","白牛","鯉","沼の主","河童","水辺伝承"],"research_status":"researching","research_notes":"我孫子・柏の市境では分断せず手賀沼を共通地理ハブとして保持。個別話・存在・話型の同一性は本文比較後に判定する。"},
+    {"record_id":"chiba-kashiwa-masakado-final-review","title":"平将門・柏市最終レビュー","story_type":["人物伝承","広域伝承"],"cross_tags":["平将門","影武者","七天王塚","居住跡","砦跡","下総伝承圏"],"research_status":"researching","research_notes":"松戸・流山・野田・我孫子など既存の将門人物タグと横断接続。史跡説明と伝説本文は資料種別を分けて後続検証する。"},
+    {"record_id":"chiba-kashiwa-person-network-final-review","title":"藤姫・弁内上人・水戸黄門最終レビュー","story_type":["人物伝承","広域伝承"],"cross_tags":["藤姫","弁内上人","水戸黄門","人物タグ","大蛇"],"research_status":"researching","research_notes":"人物名を広域横断タグとして保持し、大蛇退治等の個別モチーフは別軸で接続する。"},
+    {"record_id":"chiba-kashiwa-name-being-final-review","title":"柏市怪異・名称タグ最終レビュー","story_type":["データ整理"],"cross_tags":["河童","火車","火車猫おトラ","ダイダラボッチ系","デーダラボッチ","大蛇","狐","むじな","天狗","烏天狗","異光"],"research_status":"active","research_notes":"名称一致を横断接続の入口とし、妖怪分類・存在同定・異表記統合は後続の本文比較へ留保する。"},
+    {"record_id":"chiba-kashiwa-cross-city-review","title":"柏市横断伝承・最終比較候補","story_type":["地域横断","データ整理"],"cross_tags":["血染めの茅","無間の鐘","火車","手賀沼","平将門"],"research_status":"active","research_notes":"既収集の市川・松戸・流山・野田・我孫子との比較候補を維持。題名一致のみでは同一話と断定しない。"}
+  ],
+  "verification_queue":[
+    {"priority":"high","target":"手賀沼の牛・白牛・鯉・沼の主・河童伝承本文","reason":"市域横断の話型・存在関係を比較する"},
+    {"priority":"high","target":"平将門の影武者・七天王塚・居住跡・砦跡","reason":"史跡情報と民間伝承の層を分離する"},
+    {"priority":"high","target":"藤姫・弁内上人関連本文","reason":"我孫子市側との人物・物語接続を比較する"},
+    {"priority":"medium","target":"火車猫おトラ","reason":"我孫子・他地域の火車タグとの本文比較を行う"},
+    {"priority":"medium","target":"血染めの茅・無間の鐘","reason":"他市の同名・類似伝承との比較を行う"},
+    {"priority":"medium","target":"デーダラボッチとお多福弁天","reason":"ダイダラボッチ系の地域異表記・地形伝承として比較する"}
+  ],
+  "completion_state":"index_based_primary_collection_near_complete",
+  "summary":"柏市の索引ベース一次収集を最終巡回段階へ移行。手賀沼を最大の地理ハブ、平将門を広域人物ハブ、河童・火車・ダイダラボッチ系・大蛇・狐・むじな・天狗を名称横断タグとして保持する。"
+}
