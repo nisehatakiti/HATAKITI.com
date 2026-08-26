@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-002-index-sweep-b",
+  "municipality":"流山市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-kogane-maru","title":"忠犬小金丸・小金丸の話","story_type":["動物伝承","犬伝承"],"beings":["犬"],"cross_tags":["犬伝承","松戸市接続","小金城伝承圏"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-omoi-inuzuka","title":"思井の犬塚","story_type":["墓伝承","動物伝承"],"beings":["犬"],"cross_tags":["犬伝承","塚伝承","松戸市接続"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-me-tsubushi-duck","title":"目つぶしの鴨","story_type":["動物伝承","怪異譚"],"beings":["鴨"],"cross_tags":["動物伝承","怪異","寺社伝承候補"],"research_status":"researching","research_notes":"左甚五郎など著名人物伝承との接続可能性は本文確認後に判定。"},
+    {"record_id":"chiba-nagareyama-bando-taro","title":"坂東太郎と流山","story_type":["地域由来","河川伝承"],"cross_tags":["利根川","江戸川水系","地域由来"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-kurakake-matsu","title":"鞍掛けの松","story_type":["樹木伝承","人物伝承候補"],"cross_tags":["樹木伝承","鞍掛け伝承類型候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-hibachi-yama","title":"飛血山の怪奇","story_type":["怪異譚","地名伝承"],"cross_tags":["怪異","地名由来候補","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-wasemai","title":"早稲米のふるさと","story_type":["農耕伝承","由来話"],"cross_tags":["農耕民俗","地域由来"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-fire-cart","title":"火車・却刃","story_type":["怪異譚","宗教伝承候補"],"cross_tags":["怪異","死者・冥界候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-three-warrior-ghosts","title":"古城址に古武士三人の幽霊","story_type":["怪談","城跡伝承"],"cross_tags":["幽霊・死者","城跡","古戦場候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-sleepy-deity","title":"寝ぼすけ神様","story_type":["民間信仰","世間話"],"cross_tags":["神様伝承","民間信仰"],"research_status":"researching"}
+  ],
+  "batch_notes":"流山市一次索引巡回B。江戸川・利根川流域、松戸市との小金城伝承圏、犬伝承、城跡怪談、農耕・樹木伝承を横断タグで一次整理。本文未確認の人物・類型接続はresearchingとして保持。"
+}
