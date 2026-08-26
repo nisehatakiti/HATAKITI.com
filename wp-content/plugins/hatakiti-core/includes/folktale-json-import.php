@@ -282,14 +282,29 @@ function hatakiti_import_folktale_record( $record ) {
 
     hatakiti_sync_folktale_being_terms( $post_id );
 
-    // Public-facing description, kept separate from post_content (which
-    // may hold AI's raw research summary/notes — internal, not for public
-    // display). An explicit "public_summary" in the JSON always wins;
-    // otherwise generate one from the structured fields just saved above.
-    if ( ! empty( $record['public_summary'] ) && is_string( $record['public_summary'] ) ) {
-        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', sanitize_textarea_field( $record['public_summary'] ) );
+    // Public-facing content, kept separate from post_content (which may
+    // hold AI's raw research summary/notes — internal, not for public
+    // display). story_content (本文・あらすじの詳しい内容) takes priority
+    // — a record with it is content_confirmed. story_summary (or the
+    // older public_summary key, kept for back-compat) without
+    // story_content is summary_confirmed. Neither present means no
+    // confirmed story content exists yet: researching, with an honest
+    // notice rather than a manufactured description built from region/
+    // locations/sources.
+    if ( ! empty( $record['story_content'] ) && is_string( $record['story_content'] ) ) {
+        update_post_meta( $post_id, 'hatakiti_folktale_story_status', 'content_confirmed' );
+        update_post_meta( $post_id, 'hatakiti_folktale_story_content', wp_kses_post( $record['story_content'] ) );
+        $summary_text = ! empty( $record['story_summary'] ) ? $record['story_summary'] : ( ! empty( $record['public_summary'] ) ? $record['public_summary'] : '' );
+        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', sanitize_textarea_field( $summary_text ) );
+    } elseif ( ( ! empty( $record['story_summary'] ) && is_string( $record['story_summary'] ) ) || ( ! empty( $record['public_summary'] ) && is_string( $record['public_summary'] ) ) ) {
+        update_post_meta( $post_id, 'hatakiti_folktale_story_status', 'summary_confirmed' );
+        update_post_meta( $post_id, 'hatakiti_folktale_story_content', '' );
+        $summary_text = ! empty( $record['story_summary'] ) ? $record['story_summary'] : $record['public_summary'];
+        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', sanitize_textarea_field( $summary_text ) );
     } else {
-        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', hatakiti_generate_folktale_public_summary( $post_id ) );
+        update_post_meta( $post_id, 'hatakiti_folktale_story_status', 'researching' );
+        update_post_meta( $post_id, 'hatakiti_folktale_story_content', '' );
+        update_post_meta( $post_id, 'hatakiti_folktale_public_summary', hatakiti_generate_folktale_researching_notice( $post_id ) );
     }
 
     return array(

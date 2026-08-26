@@ -81,25 +81,37 @@ get_header();
             <?php endif; ?>
 
             <?php hatakiti_render_divider(); ?>
-            <h2 class="hk-review-heading">民話の概要</h2>
+            <h2 class="hk-review-heading">民話の内容</h2>
             <div class="hk-article-body">
                 <?php
                 // Deliberately NOT the_content(): post_content may hold the
                 // raw research summary/notes, which is internal working
                 // text (research status, dedup reasoning, etc.), not a
-                // visitor-facing description. public_summary is generated
-                // from structured, confirmed fields only — see
-                // hatakiti_generate_folktale_public_summary().
-                $public_summary = get_post_meta( $post_id, 'hatakiti_folktale_public_summary', true );
-                if ( $public_summary ) {
-                    echo wpautop( esc_html( $public_summary ) );
+                // visitor-facing description.
+                //
+                // story_status決めるのは「内容として何を出せるか」であり、
+                // 地域・分類・出典から機械的に作った薄い紹介文はもう使わ
+                // ない — 未確認のものは正直に「調査中」と表示する。
+                $story_status  = get_post_meta( $post_id, 'hatakiti_folktale_story_status', true );
+                $story_summary = get_post_meta( $post_id, 'hatakiti_folktale_public_summary', true );
+                $story_content = get_post_meta( $post_id, 'hatakiti_folktale_story_content', true );
+
+                if ( 'content_confirmed' === $story_status && $story_content ) {
+                    if ( $story_summary ) {
+                        echo '<p><strong>【あらすじ】</strong></p>';
+                        echo wpautop( esc_html( $story_summary ) );
+                    }
+                    echo '<p><strong>【民話の内容】</strong></p>';
+                    echo wpautop( esc_html( $story_content ) );
+                } elseif ( 'summary_confirmed' === $story_status && $story_summary ) {
+                    echo wpautop( esc_html( $story_summary ) );
                 } else {
-                    echo '<p class="hk-card-excerpt">この民話についての紹介文はまだ準備中です。</p>';
+                    echo wpautop( esc_html( $story_summary ? $story_summary : 'この民話は現在、詳しい内容を調査中です。' ) );
                 }
                 ?>
             </div>
-            <?php if ( ! empty( $ai['summary_generated'] ) ) : ?>
-                <p class="hk-credit-badge">本ページの概要は、出典資料を参考にAIが整理・要約したものです。文責：チャッピー</p>
+            <?php if ( ! empty( $ai['summary_generated'] ) && in_array( $story_status, array( 'summary_confirmed', 'content_confirmed' ), true ) ) : ?>
+                <p class="hk-credit-badge">本ページの内容は、出典資料を参考にAIが整理・要約したものです。文責：チャッピー</p>
             <?php endif; ?>
 
             <?php hatakiti_render_divider(); ?>

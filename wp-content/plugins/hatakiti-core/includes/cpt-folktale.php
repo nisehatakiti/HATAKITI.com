@@ -213,6 +213,8 @@ function hatakiti_register_folktale_meta() {
         'hatakiti_folktale_ai_processing_json',
         'hatakiti_folktale_summary_based_on_json',
         'hatakiti_folktale_public_summary',
+        'hatakiti_folktale_story_status',
+        'hatakiti_folktale_story_content',
     );
 
     foreach ( $string_fields as $key ) {
@@ -229,65 +231,41 @@ function hatakiti_register_folktale_meta() {
 add_action( 'init', 'hatakiti_register_folktale_meta' );
 
 /**
- * Builds a visitor-facing description from already-stored STRUCTURED
- * fields only (region / locations / story_type / beings / sources) —
- * never from research_notes, research_status, or other internal
- * reasoning text, which describes HATAKITI's data-management process
- * ("本文未確認", "統合しない", "record" etc.) rather than the tradition
- * itself and must not appear on public pages.
+ * The three public content levels a folktale record can be at
+ * (docs/12 §5.3の方針を反映: "内容が分かっているか" と "サイト表示" を
+ * 分離する):
  *
- * Called automatically on import (see folktale-json-import.php) so every
- * record gets a safe default; a human can always overwrite the result by
- * hand later via the meta box.
+ *   researching        伝承の存在・出典は確認できているが、物語内容は
+ *                       未確認。あらすじ・内容を書けるだけの材料がない。
+ *   summary_confirmed   物語の一部または概要が確認できている。
+ *   content_confirmed   本文または信頼できる詳細な再話まで確認できて
+ *                       いる。あらすじ＋内容の両方を表示できる。
+ *
+ * story_status に応じて、hatakiti_folktale_public_summary が実際に
+ * 何を意味するかが変わる: researching では正直な「調査中」通知、それ
+ * 以外では本物のあらすじ。region/locations/beings/sourcesから機械的に
+ * 組み立てた「○○に伝わる…資料に収録されています」という文は、もはや
+ * 生成しない — 内容を説明していないため、これ自体が「薄い代替説明文」
+ * になってしまうと判断した。
  */
-function hatakiti_generate_folktale_public_summary( $post_id ) {
-    $prefecture   = get_post_meta( $post_id, 'hatakiti_folktale_region_prefecture', true );
-    $municipality = get_post_meta( $post_id, 'hatakiti_folktale_region_municipality', true );
-    $area_name    = get_post_meta( $post_id, 'hatakiti_folktale_region_area_name', true );
-    $region_label = implode( '', array_filter( array( $prefecture, $municipality, $area_name ) ) );
+function hatakiti_folktale_story_statuses() {
+    return array( 'researching', 'summary_confirmed', 'content_confirmed' );
+}
 
-    $locations = json_decode( (string) get_post_meta( $post_id, 'hatakiti_folktale_locations_json', true ), true );
-    if ( ! is_array( $locations ) ) {
-        $locations = array();
-    }
-    $location_names = wp_list_pluck( array_filter( $locations, function ( $l ) { return ! empty( $l['name'] ); } ), 'name' );
-
-    $beings = json_decode( (string) get_post_meta( $post_id, 'hatakiti_folktale_beings_json', true ), true );
-    if ( ! is_array( $beings ) ) {
-        $beings = array();
-    }
-    $being_names = array_values( array_filter( array_map( function ( $b ) {
-        return ! empty( $b['name'] ) ? $b['name'] : ( ! empty( $b['normalized_name'] ) ? $b['normalized_name'] : '' );
-    }, $beings ) ) );
-
-    $story_type_terms = wp_get_object_terms( $post_id, 'folktale_story_type', array( 'fields' => 'names' ) );
-    $story_type_label = ( ! is_wp_error( $story_type_terms ) && $story_type_terms ) ? implode( '・', $story_type_terms ) : '';
-
+/**
+ * Fallback for records with no confirmed story content yet: a plainly
+ * honest notice, never a manufactured description. Only mentions that a
+ * source exists (not what it says) when sources are actually on file.
+ */
+function hatakiti_generate_folktale_researching_notice( $post_id ) {
     $sources = json_decode( (string) get_post_meta( $post_id, 'hatakiti_folktale_sources_json', true ), true );
-    if ( ! is_array( $sources ) ) {
-        $sources = array();
+    $has_sources = is_array( $sources ) && count( array_filter( $sources, function ( $s ) { return ! empty( $s['title'] ); } ) ) > 0;
+
+    $text = 'この民話は現在、詳しい内容を調査中です。';
+    if ( $has_sources ) {
+        $text .= '資料に収録されていることは確認されています。';
     }
-    $source_titles = wp_list_pluck( array_filter( $sources, function ( $s ) { return ! empty( $s['title'] ); } ), 'title' );
-
-    $place = $region_label ? $region_label : '日本各地';
-
-    $opening = $place . 'に伝わる';
-    if ( $being_names ) {
-        $opening .= implode( '・', array_slice( $being_names, 0, 3 ) ) . 'にまつわる';
-    }
-    $opening .= $story_type_label ? ( $story_type_label . 'です。' ) : '民話・伝承です。';
-
-    $sentences = array( $opening );
-
-    if ( $location_names ) {
-        $sentences[] = implode( '・', array_slice( array_values( $location_names ), 0, 4 ) ) . 'に関わる話として伝えられています。';
-    }
-
-    if ( $source_titles ) {
-        $sentences[] = array_values( $source_titles )[0] . 'などの資料に収録が確認されています。';
-    }
-
-    return implode( '', $sentences );
+    return $text;
 }
 
 /**
