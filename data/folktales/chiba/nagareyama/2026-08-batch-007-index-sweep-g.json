@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-007-index-sweep-g",
+  "municipality":"流山市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-kurakake-matsu-group","title":"鞍掛けの松類型候補","story_type":["樹木伝承","類型候補"],"cross_tags":["鞍掛け伝承","樹木伝承","人物伝承候補"],"research_status":"researching","research_notes":"武将・旅人などが鞍を掛けた松という全国的な地名・樹木伝承との比較対象。人物の特定は本文確認後に行う。"},
+    {"record_id":"chiba-nagareyama-early-rice-group","title":"早稲米・農耕由来伝承群","story_type":["話群","農耕伝承"],"cross_tags":["農耕民俗","稲作伝承","由来話"],"research_status":"researching","related_records":["chiba-nagareyama-wasemai"]},
+    {"record_id":"chiba-nagareyama-fire-cart-death-group","title":"火車・死者怪異伝承群","story_type":["話群","怪異譚"],"cross_tags":["火車","死者・冥界","怪異"],"research_status":"researching","related_records":["chiba-nagareyama-fire-cart"]},
+    {"record_id":"chiba-nagareyama-ghost-castle-group","title":"古城・古武士幽霊伝承群","story_type":["話群","怪談","城跡伝承"],"cross_tags":["幽霊・死者","城跡","古戦場"],"research_status":"researching","related_records":["chiba-nagareyama-three-warrior-ghosts","chiba-nagareyama-castle-history-group"]},
+    {"record_id":"chiba-nagareyama-deity-folk-group","title":"流山市の神様・民間信仰伝承群","story_type":["話群","民間信仰"],"cross_tags":["神様伝承","民間信仰","寺社伝承"],"research_status":"researching","related_records":["chiba-nagareyama-sleepy-deity","chiba-nagareyama-yakushido-legend","chiba-nagareyama-shrine-miracle"]}
+  ],
+  "batch_notes":"流山市一次索引巡回G。既存個別recordの横断接続を補強し、鞍掛けの松・火車・農耕由来・城跡幽霊・民間信仰を全国比較可能な類型候補として整理。"
+}
