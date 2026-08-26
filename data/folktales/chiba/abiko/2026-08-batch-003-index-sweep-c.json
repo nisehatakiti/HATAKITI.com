@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-abiko-2026-08-003-index-sweep-c",
+  "municipality":"我孫子市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-abiko-masakado-wide-hub","title":"平将門・我孫子市関連伝承ハブ","story_type":["人物伝承","広域伝承"],"cross_tags":["平将門","将門","人物タグ","下総","関東広域"],"research_status":"researching","research_notes":"野田・松戸など既存の将門人物タグと接続。個別伝承の内容上の系統関係は本文確認後に判定する。"},
+    {"record_id":"chiba-abiko-fujihime-name-hub","title":"藤姫関連伝承","story_type":["名称伝承","人物伝承候補"],"cross_tags":["藤姫"],"research_status":"researching","research_notes":"人物名とみられる題名だが、伝承内での人物像・他地域伝承との同一性は本文確認まで保留。"},
+    {"record_id":"chiba-abiko-yoritomo-wide-hub","title":"源頼朝・我孫子市関連伝承ハブ","story_type":["人物伝承","広域伝承"],"cross_tags":["源頼朝","頼朝","人物タグ","鎌倉期伝承候補"],"research_status":"researching","research_notes":"全国的な頼朝伝承との横断比較対象として人物タグ化。史実との対応や伝承内容の系統判定は別工程。"},
+    {"record_id":"chiba-abiko-ben-nai-shonin-hub","title":"弁内上人関連伝承","story_type":["人物伝承","宗教伝承"],"cross_tags":["弁内上人","上人","人物タグ候補","寺社伝承"],"research_status":"researching","research_notes":"人物の実在性・別地域の同名人物との同一性は資料本文・寺社資料確認後に判定する。"},
+    {"record_id":"chiba-abiko-person-tag-review","title":"我孫子市人物タグ・一次レビュー","story_type":["データ整理"],"cross_tags":["人物タグ","広域伝承","分類保留"],"research_status":"active","research_notes":"平将門・源頼朝のような広域人物は既存横断タグへ接続。藤姫・弁内上人などは名称・人物候補として記録し、同一人物判定を急がない。"}
+  ],
+  "batch_notes":"我孫子市一次索引巡回C。手賀沼の水辺伝承に続き、将門・頼朝などの広域人物伝承と藤姫・弁内上人などの地域人物候補を整理。人物タグ化と同一人物判定を分離する既存方針を適用。"
+}
