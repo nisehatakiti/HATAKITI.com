@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "batch_id": "chiba-ichikawa-2026-08-002",
   "records": [
     {
@@ -11,46 +11,36 @@
       "story_type": ["民話"],
       "beings": ["月"],
       "themes": ["自然"],
-      "research_status": "partial",
+      "research_status": "source_confirmed",
       "research_priority": "high",
-      "research_missing": ["full_story_text", "variant_comparison"],
-      "research_notes": "千葉県立図書館の民話リストで市川市の民話として確認。千葉県公式の『語り継ごう千葉の民話集』第2巻にも『お月様がべーえ』として収録され、伝承地は市川市行徳、収録時間は3分21秒。本文・詳細なあらすじは本バッチでは未確定。",
+      "research_missing": ["full_story_text", "direct_variant_comparison"],
+      "research_notes": "千葉県立図書館の民話リストで市川市の民話として確認。千葉県公式の『語り継ごう千葉の民話集 第2巻』にも『お月様がべーえ』として収録され、伝承地は市川市行徳。本文は未確定。浦安の『月に化けたタヌキ』『月に化けた狢』『月に化けたムジナ』を比較候補としてリンクし、本文確認時に最優先で照合する。",
       "sources": [
-        {
-          "title": "お母さんがきいたむかしばなし",
-          "publisher": "エピック",
-          "year": 1986,
-          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"
-        },
-        {
-          "title": "語り継ごう千葉の民話集 第2巻",
-          "publisher": "千葉県",
-          "year": 2009,
-          "url": "https://www.pref.chiba.lg.jp/kkbunka/b-shinkou/jigyou/minwa-cd.html"
-        }
+        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"},
+        {"title": "語り継ごう千葉の民話集 第2巻", "publisher": "千葉県", "year": 2009, "url": "https://www.pref.chiba.lg.jp/kkbunka/b-shinkou/jigyou/minwa-cd.html"}
       ],
-      "verification_locations": [
-        {"type": "library", "name": "千葉県立中央図書館", "reason": "県の民話資料および関連書籍の確認候補"},
-        {"type": "library", "name": "市川市立図書館", "reason": "市川の地域民話・朗読資料の確認候補"}
-      ],
-      "field_research": {"visit_candidate": true, "priority": "high", "places": ["市川市立図書館", "行徳地域"], "local_leads": ["行徳"]}
+      "related_traditions": [
+        {"title": "月に化けたタヌキ（浦安）", "relationship": "comparison_candidate", "reason": "月への変身を扱う近接伝承圏の比較候補。本文未確認のため同一伝承とは断定しない。"},
+        {"title": "月に化けた狢（浦安）", "relationship": "comparison_candidate", "reason": "月への変身を扱う近接伝承圏の比較候補。本文未確認のため同一伝承とは断定しない。"},
+        {"title": "月に化けたムジナ（浦安）", "relationship": "comparison_candidate", "reason": "月への変身を扱う近接伝承圏の比較候補。本文未確認のため同一伝承とは断定しない。"}
+      ]
     },
     {
       "record_id": "chiba-ichikawa-saru-to-ryoshi",
       "title": "サルとりょうし",
       "prefecture": "千葉県",
       "municipality": "市川市",
-      "locations": [],
+      "locations": ["行徳"],
       "story_type": ["民話"],
       "beings": ["猿", "人間"],
-      "themes": ["動物"],
-      "research_status": "researching",
+      "themes": ["動物", "殺生", "因果"],
+      "research_status": "partial_story_confirmed",
       "research_priority": "normal",
-      "research_missing": ["story_content", "exact_location", "variant_relationship"],
-      "research_notes": "千葉県立図書館の市川市民話リストで書誌情報を確認。本文と詳細伝承地は未確認。",
-      "sources": [{"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
-      "verification_locations": [{"type": "library", "name": "千葉県立中央図書館", "reason": "収録資料の所蔵確認候補"}, {"type": "library", "name": "市川市立図書館", "reason": "郷土資料・関連民話資料の確認候補"}],
-      "field_research": {"visit_candidate": false, "priority": "normal", "places": ["市川市立図書館"], "local_leads": []}
+      "research_missing": ["full_story_text", "ending", "exact_variant_relationship"],
+      "research_notes": "市川民話の会の資料で『サルとりょうし（行徳）』として伝承地を補強。確認できた筋では、猟師が身重の猿を仕留め、その後、猟師の家系の男子に耳が聞こえない者が生まれるという因果が語られる。祟り・供養等は本文全体未確認のため断定しない。",
+      "sources": [
+        {"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}
+      ]
     },
     {
       "record_id": "chiba-ichikawa-shimizu-gani-to-kaeru",
@@ -61,13 +51,11 @@
       "story_type": ["民話"],
       "beings": ["蟹", "蛙"],
       "themes": ["動物", "恩返し"],
-      "research_status": "researching",
+      "research_status": "source_confirmed",
       "research_priority": "normal",
-      "research_missing": ["story_content", "exact_location", "source_text"],
-      "research_notes": "千葉県立図書館の市川市民話リストで書誌情報を確認。タイトルから推測せず、本文確認後に詳細な類型・要約を確定する。",
-      "sources": [{"title": "千葉県の民話 続", "publisher": "千秋社", "year": 1981, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
-      "verification_locations": [{"type": "library", "name": "千葉県立中央図書館", "reason": "収録資料の所蔵確認候補"}, {"type": "library", "name": "市川市立図書館", "reason": "郷土資料確認候補"}],
-      "field_research": {"visit_candidate": false, "priority": "normal", "places": ["市川市立図書館"], "local_leads": []}
+      "research_missing": ["story_content", "exact_location", "meaning_of_shimizu_gani", "source_text"],
+      "research_notes": "『千葉県の民話 続』（千秋社、1981年）収録として確認。『清水がに』が地名・蟹の呼称・水辺の蟹のいずれを指すかは本文未確認のため断定しない。君津などの『蟹の恩返し』とは現時点で直接リンクしない。",
+      "sources": [{"title": "千葉県の民話 続", "publisher": "千秋社", "year": 1981, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}]
     },
     {
       "record_id": "chiba-ichikawa-onnabake-no-kitsune",
@@ -79,13 +67,15 @@
       "beings": ["狐"],
       "themes": ["化かし"],
       "cross_tags": ["狐狸貉", "狐"],
-      "research_status": "researching",
+      "research_status": "source_confirmed",
       "research_priority": "high",
-      "research_missing": ["story_content", "exact_location", "variant_relationship"],
-      "research_notes": "狐狸貉横断タグに接続。市川市内の正確な伝承地および他地域の同名・類似伝承との関係は未確定。",
+      "research_missing": ["story_content", "exact_location", "direct_variant_relationship"],
+      "research_notes": "市川市の『女化のキツネ』と、茨城県の『女化原の白狐』は題名・主題が近いが、現時点では同一伝承と断定しない。比較候補としてリンクする。市川側の本文確認後に異伝・移入伝承の可能性を再検討する。",
       "sources": [{"title": "お母さんがきいたむかしばなし", "publisher": "エピック", "year": 1986, "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
-      "verification_locations": [{"type": "library", "name": "千葉県立中央図書館", "reason": "本文・収録資料確認候補"}, {"type": "library", "name": "市川市立図書館", "reason": "地域伝承の詳細確認候補"}],
-      "field_research": {"visit_candidate": false, "priority": "high", "places": ["市川市立図書館"], "local_leads": []}
+      "related_traditions": [
+        {"title": "女化原の白狐（茨城）", "relationship": "comparison_candidate", "status": "not_same_story_confirmed", "reason": "題名・狐女房系主題の近接性はあるが、市川側本文未確認のため同一視しない。"},
+        {"title": "女化神社（茨城）の話（市川市内関連伝承）", "relationship": "regional_reference_candidate", "status": "contextual_link_only"}
+      ]
     }
   ]
 }
