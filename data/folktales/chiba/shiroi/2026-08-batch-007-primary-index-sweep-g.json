@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-007-primary-index-sweep-g",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-nauchi-name-origin","title":"名内の（名の）由来","story_type":["地名由来伝承"],"cross_tags":["名内","地名由来","小名内"],"research_status":"researching"},
+    {"record_id":"chiba-shiroi-two-three-teahouses","title":"二軒茶屋・三軒茶屋","story_type":["地名伝承候補","街道伝承候補"],"cross_tags":["二軒茶屋","三軒茶屋","印西牧","十余一"],"research_status":"researching"},
+    {"record_id":"chiba-shiroi-roadside-dosojin","title":"魔除けの道祖神","story_type":["信仰伝承","道祖神"],"cross_tags":["道祖神","魔除け","境界信仰"],"research_status":"researching"},
+    {"record_id":"chiba-shiroi-mitarashi-pond","title":"みたらしの池","story_type":["水辺伝承","信仰伝承候補"],"cross_tags":["池","みたらし","鳥見神社","水辺伝承"],"research_status":"researching"},
+    {"record_id":"chiba-shiroi-murasame-maru-prince-shotoku","title":"村雨丸の聖徳太子像","story_type":["人物伝承候補","寺社伝承"],"cross_tags":["村雨丸","聖徳太子","西輪寺","富塚"],"research_status":"researching"},
+    {"record_id":"chiba-shiroi-murasame-maru-story","title":"村雨丸のはなし","story_type":["人物伝承候補","地域伝承"],"cross_tags":["村雨丸","芦椛橋","矢ノ橋","富塚"],"research_status":"researching"}
+  ],
+  "batch_notes":"白井市一次索引巡回G。名内の由来、二軒茶屋・三軒茶屋、魔除けの道祖神、みたらしの池、村雨丸関連2件を追加。村雨丸は人物名・伝承名として保持し、人物同定は本文確認後に行う。"
+}
