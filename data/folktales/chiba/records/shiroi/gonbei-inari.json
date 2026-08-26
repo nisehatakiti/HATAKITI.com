@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-shiroi-gonbei-inari",
+  "municipality": "白井市",
+  "title": "ごんべい稲荷の話",
+  "alternate_titles": ["五兵衛稲荷", "権兵衛稲荷"],
+  "research_status": "source_confirmed",
+  "story_type": ["稲荷信仰伝承", "寺社伝承候補"],
+  "cross_tags": ["ごんべい稲荷", "権兵衛稲荷", "稲荷", "中", "てがっぱら", "白井工業団地", "名内の台", "猪鼻", "千葉市"],
+  "legacy_sources": [
+    {
+      "legacy_file": "data/folktales/chiba/shiroi/2026-08-batch-014-deep-dive-gonbei-inari.json",
+      "legacy_record_id": "chiba-shiroi-gonbei-inari-deep-dive",
+      "migration_note": "旧deep-diveを調査履歴として保持し、確認済み内容を正本へ移行した。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHIBA-LIB-SHIROI-INDEX",
+      "title": "千葉県の民話 白井市",
+      "author_or_publisher": "千葉県立図書館",
+      "publication_year_or_date": "web",
+      "source_type": "library_index",
+      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "伝承題名と収録資料を確認するための索引。本文そのものではない。"
+    },
+    {
+      "source_id": "SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
+      "author_or_publisher": "白井市郷土資料館",
+      "publication_year_or_date": "2002",
+      "source_type": "local_history_book",
+      "url_or_identifier": "千葉県立図書館索引掲載書誌情報",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "「ごんべい稲荷の話」の収録資料として索引で確認。本文未確認。"
+    },
+    {
+      "source_id": "SRC-SHIROI-PR-GONBEI-INARI",
+      "title": "白井市広報資料（権兵衛稲荷に関する地域史記述）",
+      "author_or_publisher": "白井市",
+      "publication_year_or_date": "web/PDF",
+      "source_type": "municipal_publication",
+      "url_or_identifier": "https://www.city.shiroi.chiba.jp/material/files/group/1/20110912150209.pdf",
+      "accessed_date": "2026-08-26",
+      "reliability_notes": "名内の台と権兵衛稲荷に関する地域史記述を確認する資料。索引上の民話本文と同一内容であることは未確認。"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "text": "白井市には「ごんべい稲荷の話」という伝承題名が収録資料上確認できる。",
+      "source_ids": ["SRC-CHIBA-LIB-SHIROI-INDEX", "SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-002",
+      "text": "索引上、この伝承は白井市中に分類され、関連地として「てがっぱら（白井工業団地付近）」が示されている。",
+      "source_ids": ["SRC-CHIBA-LIB-SHIROI-INDEX"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-003",
+      "text": "白井市の広報資料には、白井工業団地ができる以前から「名内の台」と呼ばれていた台地の一角に、権兵衛稲荷を祭って隠れ住んだ人たちがいたと伝えられているという記述がある。",
+      "source_ids": ["SRC-SHIROI-PR-GONBEI-INARI"],
+      "interpretation": false
+    }
+  ],
+  "related_items": [
+    {
+      "relation_type": "requires_text_comparison",
+      "target": "白井市の権兵衛稲荷に関する地域史記述",
+      "note": "公式資料上の権兵衛稲荷の伝承と、「ごんべい稲荷の話」の本文が同一内容であることは未確認。"
+    },
+    {
+      "relation_type": "future_comparison",
+      "target": "千葉市猪鼻側の関連伝承候補",
+      "note": "旧deep-diveで比較候補として記録されているが、同一伝承・直接的関連は未確認。"
+    }
+  ],
+  "research_notes": "旧deep-diveを正本化した。現段階では題名・収録資料・関連地の索引情報、および白井市公式資料における権兵衛稲荷の地域史記述を確認済み。民話本文、由来となった人物、稲荷社の由緒、千葉市猪鼻側との関係は未確認であり、資料にない内容は補完していない。Wikipedia等を探索経路として利用する場合も、最終的なsourcesには脚注・参考文献から特定できる実資料を優先して登録する。"
+}
