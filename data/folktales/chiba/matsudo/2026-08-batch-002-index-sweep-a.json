@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-002-index-sweep-a",
+  "municipality":"松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-fox-group","title":"松戸市の狐狸貉伝承群","story_type":["話群"],"cross_tags":["狐狸貉"],"research_status":"researching","research_notes":"松戸市民話索引から狐・狸・ムジナ関連を地域内で集約する上位話群。本文確認後に個別recordを増補。"},
+    {"record_id":"chiba-matsudo-matsudo-inari-fox","title":"稲荷と狐の伝承","story_type":["動物伝承","寺社伝承"],"beings":["狐"],"cross_tags":["狐狸貉","稲荷信仰"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kogane-castle-ghosts","title":"小金城・古戦場の幽霊伝承群","story_type":["怪談","歴史伝承"],"cross_tags":["幽霊・死者","城郭伝承","古戦場"],"research_status":"researching","related_places":["小金城跡"]},
+    {"record_id":"chiba-matsudo-cut-jizo","title":"切られ地蔵","story_type":["寺社伝承","怪談"],"cross_tags":["寺社伝承","幽霊・死者"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kozo-benten","title":"小僧弁天","story_type":["寺社伝承","人物伝承"],"cross_tags":["寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-futatsuido","title":"二つ井戸","story_type":["井戸伝承","水辺伝承"],"cross_tags":["水辺伝承","井戸伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-mabashi-snake","title":"馬橋の大蛇伝承","story_type":["蛇伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","水辺伝承"],"research_status":"researching","related_places":["馬橋"]},
+    {"record_id":"chiba-matsudo-neguchi-snake","title":"根木内の大蛇伝承","story_type":["蛇伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","水辺伝承"],"research_status":"researching","related_places":["根木内"]},
+    {"record_id":"chiba-matsudo-daidarabocchi","title":"デーダラボッチとお多福弁天","story_type":["巨人伝承","寺社伝承"],"beings":["巨人"],"cross_tags":["ダイダラボッチ類型","巨人伝承","寺社伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-nanjamonja","title":"なんじゃもんじゃ話群","story_type":["話群","世間話"],"cross_tags":["世間話","上本郷"],"research_status":"researching","related_places":["上本郷"]},
+    {"record_id":"chiba-matsudo-kowake-shimizu","title":"子和清水","story_type":["清水伝承","水辺伝承"],"cross_tags":["水辺伝承","清水伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-shichifushigi","title":"上本郷の七不思議","story_type":["七不思議","怪異譚"],"cross_tags":["七不思議","怪異"],"research_status":"researching","related_places":["上本郷"]},
+    {"record_id":"chiba-matsudo-hachihime","title":"八百比丘尼・八百姫伝承","story_type":["人物伝承","寺社伝承"],"cross_tags":["人物ハブ","長寿伝説","寺社伝承"],"research_status":"researching","related_places":["風早神社"]},
+    {"record_id":"chiba-matsudo-koganemaru","title":"忠犬小金丸","story_type":["動物伝承","人物伝承"],"beings":["犬"],"cross_tags":["動物伝承","人物ハブ候補","広域伝承"],"research_status":"researching","related_regions":["流山市"],"related_places":["小金城"]}
+  ],
+  "batch_notes":"松戸市第2バッチ。松戸固有の地域・存在は地域話群として整理し、ダイダラボッチ・八百比丘尼・忠犬小金丸など広域接続可能な存在は横断タグ／人物ハブ候補として保持。本文未確認はresearching。"
+}
