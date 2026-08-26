@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-004-index-sweep-c",
+  "municipality":"松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-kofun-zawameki","title":"古墳から古代人のざわめき","story_type":["怪異譚","古墳伝承"],"cross_tags":["怪異","地域史","古墳伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-battlefield-cries","title":"人の泣き叫ぶ声の聞こえる古戦場","story_type":["怪談","古戦場伝承"],"cross_tags":["幽霊・死者","古戦場","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-dojo-wedding","title":"ドジョウの祝言","story_type":["動物伝承","世間話"],"beings":["ドジョウ"],"cross_tags":["動物伝承","水辺伝承","祝言"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kitsune-fox-fire","title":"狐火伝承","story_type":["怪異譚","動物伝承"],"beings":["狐"],"cross_tags":["狐狸貉","狐火"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-tanuki-disguise","title":"狸の化かし伝承","story_type":["怪異譚","動物伝承"],"beings":["狸"],"cross_tags":["狐狸貉","変身譚"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-kitsune-group-note","title":"松戸市狐狸貉伝承追加群","story_type":["話群"],"cross_tags":["狐狸貉"],"research_status":"researching","research_notes":"索引上の狐・狸・ムジナ関連の表記揺れおよび個別話を既存狐狸貉話群へ接続するための作業用record。本文確認後に個別recordへ分割・統合する。"},
+    {"record_id":"chiba-matsudo-tree-legend","title":"松戸市の樹木伝承群","story_type":["話群"],"cross_tags":["樹木伝承","地域史"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-well-water-group","title":"松戸市の井戸・清水伝承群","story_type":["話群"],"cross_tags":["水辺伝承","井戸伝承","清水伝承"],"research_status":"researching","related_records":["chiba-matsudo-futatsuido","chiba-matsudo-kowake-shimizu","chiba-matsudo-fushigi-shimizu"]},
+    {"record_id":"chiba-matsudo-seven-wonders-hub","title":"松戸市の七不思議・地域怪異群","story_type":["話群","七不思議"],"cross_tags":["七不思議","怪異","地域怪異"],"research_status":"researching","related_records":["chiba-matsudo-shichifushigi","chiba-matsudo-kogane-castle-ghosts"]}
+  ],
+  "batch_notes":"松戸市索引巡回C。地域固有の題名が本文未確認のものは上位話群と横断タグを先に整備し、狐狸貉・水辺・古戦場・七不思議など全国横断で検索可能な構造へ接続。"
+}
