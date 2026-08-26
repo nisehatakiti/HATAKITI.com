@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"person",
+  "person_id":"saigyo",
+  "canonical_name":"西行",
+  "aliases":["西行法師","佐藤義清"],
+  "hub_tags":["人物ハブ","歴史人物","伝説上の登場人物","広域伝承"],
+  "historical_note":"史実上の西行と、各地の寺社・地名・奇瑞譚・旅の伝説に登場する西行像を区別して扱う。伝承上の訪問・詠歌・出来事は本文確認後に史実性を判断する。",
+  "linking_rule":"民話・伝説内で『西行』『西行法師』が登場する場合、この人物ハブへ接続する。西行作と伝わる歌・地名由来・寺社縁起は個別recordを保持しつつ関連付ける。",
+  "known_connections":[],
+  "research_status":"hub_ready"
+}
