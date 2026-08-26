@@ -1,0 +1,74 @@
+{
+  "record_id": "chiba-shiroi-nauchi-name-origin",
+  "title": "名内の（名の）由来",
+  "aliases": ["名内の由来", "名の由来"],
+  "location": {
+    "prefecture": "千葉県",
+    "municipality": "白井市",
+    "area": ["名内", "小名内"]
+  },
+  "research_status": "source_confirmed",
+  "summary": "白井市名内・小名内に関わる地名由来の伝承項目。千葉県立図書館の民話索引で、『白井の伝説と文化財 平成十三年度企画展記録集』（白井市郷土資料館、2002年）への収録が確認できる。現時点では同資料の伝承本文を直接確認できていないため、題名から具体的な由来を補完していない。",
+  "claims": [
+    {
+      "text": "「名内の（名の）由来」は、白井市名内を対象地域とする民話・伝承項目として千葉県立図書館の民話索引に掲載されている。",
+      "source_ids": ["s1"]
+    },
+    {
+      "text": "索引では、市町村名の根拠となる事柄として「名内」「小名内」の地名が示されている。",
+      "source_ids": ["s1"]
+    },
+    {
+      "text": "白井市名内は、近世の名内村に対応する地域として歴史地理データ上でも確認できる。",
+      "source_ids": ["s2"]
+    },
+    {
+      "text": "白井市の資料には小名内について別系統の地名説明が掲載されているが、これを「名内の（名の）由来」の伝承本文と同一視する根拠は現時点で確認できていない。",
+      "source_ids": ["s3"]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "s1",
+      "title": "千葉県の民話 白井市",
+      "publisher": "千葉県立図書館",
+      "source_type": "public_index",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
+      "notes": "伝承項目、収録書籍、地域・地名根拠の確認に使用。"
+    },
+    {
+      "source_id": "s2",
+      "title": "名内 [K05G07S00014] 幕末期近世村領域データセット",
+      "publisher": "ROIS-DS Center for Open Data in the Humanities / Geoshape Repository",
+      "source_type": "historical_geography_dataset",
+      "url": "https://geoshape.ex.nii.ac.jp/av/resource/K05/K05G07S00014.html",
+      "notes": "近世村としての名内の確認に使用。伝承本文の根拠ではない。"
+    },
+    {
+      "source_id": "s3",
+      "title": "第二小学校区 宝物マップ",
+      "publisher": "白井市公民センター",
+      "source_type": "local_public_material",
+      "url": "https://www.city.shiroi.chiba.jp/material/files/group/11/konauchi-nakachiku.pdf",
+      "notes": "小名内に関する地名説明の存在確認に使用。民話索引の伝承本文とは別資料として扱う。"
+    },
+    {
+      "source_id": "s4",
+      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
+      "publisher": "白井市郷土資料館",
+      "year": 2002,
+      "source_type": "book",
+      "notes": "千葉県立図書館民話索引で収録書籍として確認。現時点では当該本文未確認。"
+    }
+  ],
+  "unconfirmed": [
+    "「名内」という地名がどのような出来事・人物・語義に由来すると伝えられているか",
+    "「小名内」が伝承本文中でどのような位置付けで扱われるか",
+    "小名内に関する別資料の地名説明と、本伝承項目との直接的な関係"
+  ],
+  "import_notes": {
+    "canonical": true,
+    "batch_policy": "batchesは調査履歴として保持し、このrecordsファイルを正本とする。追加資料の確認は同一record_idへの更新として行う。",
+    "no_unsourced_inference": true
+  }
+}
