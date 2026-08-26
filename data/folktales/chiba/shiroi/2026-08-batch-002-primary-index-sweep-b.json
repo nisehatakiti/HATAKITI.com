@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-002-primary-index-sweep-b",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "route_position":"柏市→白井市→南下",
+  "records":[
+    {"record_id":"chiba-shiroi-geography-hub","title":"白井市・地理伝承ハブ","story_type":["地理伝承","データ整理"],"cross_tags":["下総伝承圏","印旛沼水系","谷津","水辺伝承"],"research_status":"active","research_notes":"柏・我孫子側の手賀沼伝承圏とは区別しつつ、白井市の水系・谷津環境を広域比較可能な地理軸として保持する。"},
+    {"record_id":"chiba-shiroi-water-being-network","title":"白井市・水辺怪異伝承群","story_type":["話群","水辺伝承"],"cross_tags":["川","池","沼","水辺怪異","河童候補"],"research_status":"researching","research_notes":"名称が確認されるまでは河童など既存存在タグへ自動統合しない。"},
+    {"record_id":"chiba-shiroi-person-history-network","title":"白井市・人物史跡伝承群","story_type":["人物伝承候補","歴史伝承候補"],"cross_tags":["平将門候補","下総伝承圏","史跡伝承"],"research_status":"researching","research_notes":"将門等の既存広域人物タグは、白井市内で明示的な伝承が確認された場合のみ接続する。"},
+    {"record_id":"chiba-shiroi-name-motif-review","title":"白井市・名称横断タグ準備","story_type":["データ整理"],"cross_tags":["河童","狐","大蛇","ダイダラボッチ系","火車","夜泣き石","泣き石"],"research_status":"active","research_notes":"既存横断タグを候補として準備するが、題名・本文上の該当確認前に白井市伝承として登録しない。"}
+  ],
+  "batch_notes":"白井市一次索引巡回B。地理軸と水辺・人物・名称タグの収集枠を整備し、柏市から南下する下総伝承圏の連続性を保持。次工程から白井市の個別伝承を追加する。"
+}
