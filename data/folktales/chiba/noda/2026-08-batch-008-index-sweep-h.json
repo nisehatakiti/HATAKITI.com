@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-008-index-sweep-h",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-masakado-wide-hub","title":"平将門・野田市関連伝承ハブ","story_type":["人物伝承","広域伝承"],"cross_tags":["平将門","将門","人物タグ","下総","関東広域"],"research_status":"researching","related_records":["chiba-noda-masakado-legends"],"research_notes":"全国・関東各地の将門伝承と横断比較する人物タグ。野田市内の個別伝承との内容上の同一性は本文確認後に判断する。"},
+    {"record_id":"chiba-noda-kappa-waterway-hub","title":"河童・野田水辺伝承ハブ","story_type":["話群","水辺伝承"],"cross_tags":["河童","池","川","水辺伝承","利根川流域"],"research_status":"researching","related_records":["chiba-noda-kappa-final-network","chiba-noda-kappa-wide-tag"],"research_notes":"河童を名称タグとして集約し、水辺の具体的な場所・存在形態・話型は個別記録として保持する。"},
+    {"record_id":"chiba-noda-grave-mound-legends-network","title":"野田市の塚・墓伝承ネットワーク","story_type":["話群","墓碑伝承"],"cross_tags":["塚","墓","首","怨念","供養"],"research_status":"researching","related_records":["chiba-noda-yagozuka-resentment","chiba-noda-cutting-jizo"],"research_notes":"歴史上の事件との関係は資料確認まで保留し、まず塚・墓という景観・場所要素で横断接続する。"},
+    {"record_id":"chiba-noda-names-and-place-review","title":"野田市の名称・地名横断レビュー","story_type":["データ整理"],"cross_tags":["名称タグ","地名タグ","分類保留"],"research_status":"active","research_notes":"河童、火車、将門などは名称タグ、関宿・木間ヶ瀬・清水などは地名タグとして別軸で保持。名称一致と地理的一致を混同しない。"}
+  ],
+  "batch_notes":"野田市一次索引巡回H。将門、河童、塚・墓を主要横断ハブとして再整理し、名称タグと地名タグを分離。個別伝承の同一性・存在分類は後続検証へ保留。"
+}
