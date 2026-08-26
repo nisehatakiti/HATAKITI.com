@@ -1,0 +1,58 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-imai-name-origin-deep-dive",
+  "municipality":"白井市",
+  "title":"今井の名の由来",
+  "source_status":"researched",
+  "story_type":["地名由来","開発史"],
+  "cross_tags":["今井","今井新田","名内村","金山落","新田開発","今井孫四郎","深川"],
+  "sources":[
+    {
+      "source_id":"SRC-NIHON-REKISHI-CHIMEI-TAIKEI-IMAI-SHINDEN",
+      "title":"日本歴史地名大系 第12巻 千葉県の地名（今井新田）",
+      "author_or_publisher":"平凡社",
+      "publication_year_or_date":"1996",
+      "source_type":"local_history_book",
+      "url_or_identifier":"Kotobank掲載「今井新田」項目に書誌・本文抜粋あり",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"原典は平凡社『日本歴史地名大系』。Web掲載は原典探索・確認経路として利用。"
+    },
+    {
+      "source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title":"白井の伝説と文化財 平成十三年度企画展記録集",
+      "author_or_publisher":"白井市郷土資料館",
+      "publication_year_or_date":"2002",
+      "source_type":"local_history_book",
+      "url_or_identifier":"千葉県立図書館『千葉県の民話 白井市』索引掲載書誌情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"「今井の名の由来」の収録資料として確認。本文未直接確認。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"現在の白井市今井は、江戸時代には今井新田と呼ばれた。",
+      "source_ids":["SRC-NIHON-REKISHI-CHIMEI-TAIKEI-IMAI-SHINDEN"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"今井新田は名内村の北に位置し、金山落の開削に伴って寛文から延宝期に名内村の持添新田として開発されたとされる。",
+      "source_ids":["SRC-NIHON-REKISHI-CHIMEI-TAIKEI-IMAI-SHINDEN"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-003",
+      "text":"享保年間に江戸深川から今井孫四郎が来て高請し、享保15年の検地以来「今井新田」に改称されたとされる。",
+      "source_ids":["SRC-NIHON-REKISHI-CHIMEI-TAIKEI-IMAI-SHINDEN"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-004",
+      "text":"「今井の名の由来」という伝承題名は、白井市郷土資料館の『白井の伝説と文化財』に収録されている。",
+      "source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation":false
+    }
+  ],
+  "research_notes":"今回の深掘りでは伝承本文ではなく地名史側から由来の骨格を確認。『白井の伝説と文化財』に収録された話の本文が、今井孫四郎による改称説とどの程度一致するかは未直接確認のため、両者を同一本文とは断定しない。"
+}
