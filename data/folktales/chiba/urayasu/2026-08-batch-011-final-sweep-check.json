@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-urayasu-2026-08-011-final-sweep-check",
+  "municipality":"浦安市",
+  "purpose":"浦安市民話一次収集の最終巡回・照合状態記録",
+  "collection_status":"primary_collection_near_complete",
+  "completion_definition":"索引タイトルが個別recordまたはstory_hubに対応し、本文未確認項目はresearchingとして残し、異表記・重複・異伝候補を関連付ける",
+  "final_sweep_checks":[
+    {"area":"狐狸貉","status":"reviewed","note":"狐・狸・ムジナは上位タグ『狐狸貉』へ統合。月に化ける類は別話候補のまま関連付け。"},
+    {"area":"蛇・白蛇・水辺","status":"reviewed","note":"蛇伝承と水辺伝承を横断タグで接続。市川境界の関連候補は地域接続を保持。"},
+    {"area":"海・災害","status":"reviewed","note":"海坊主・海の怪異と大正六年の大津波関連をイベント／モチーフ単位で整理。"},
+    {"area":"寺社・信仰","status":"reviewed_partial","note":"寺社名のみ確認済みで本文未確認のものはresearching継続。現地・図書館確認候補を優先。"},
+    {"area":"幽霊・死者","status":"reviewed_partial","note":"水辺の死者、兵隊の幽霊、家伝説を別recordとして保持し上位タグで接続。"},
+    {"area":"人物・話群","status":"reviewed_partial","note":"同一人物と判断できるものは話群／人物ハブ候補へ。広域人物は断定せず接続候補として保持。"},
+    {"area":"生活・世間話","status":"reviewed_partial","note":"本文未確認の題名を一次登録済み。内容確定後に笑い話・生活文化・地域史等へ細分化。"},
+    {"area":"地名由来・地域史","status":"reviewed_partial","note":"浦安の地名由来、鷲沢等をrecord化。本文確認待ち。"}
+  ],
+  "remaining_priority":[
+    {"priority":"high","task":"浦安市民話索引の原典・本文確認","goal":"researchingレコードへstory_summaryとvariant情報を追加"},
+    {"priority":"high","task":"タイトル表記揺れ照合","goal":"同一話・別話・異表記を判定"},
+    {"priority":"normal","task":"市川市との境界伝承再照合","goal":"相之川・新井・行徳・浦安の伝承圏接続を強化"},
+    {"priority":"normal","task":"現地確認リスト作成","goal":"寺社・地蔵・旧河川・水路・伝承地を訪問可能な形に整理"}
+  ],
+  "next_municipality_ready":true,
+  "notes":"浦安は一次収集データの骨格形成を完了段階とし、以後は本文確認・出典追加・現地調査による深化フェーズへ移行可能。"
+}
