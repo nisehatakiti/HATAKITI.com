@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-003-primary-index-sweep-c",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "source_index":"千葉県立図書館『千葉県の民話　白井市』",
+  "records":[
+    {"record_id":"chiba-shiroi-kiyodo-spring","title":"清戸の泉","story_type":["泉伝承","地理伝承"],"cross_tags":["清戸","泉","薬王寺候補"],"research_status":"indexed"},
+    {"record_id":"chiba-shiroi-kiyodo-dragon-god","title":"清戸の龍神","story_type":["龍神伝承","水辺伝承"],"cross_tags":["龍神","清戸","水","水辺伝承"],"research_status":"indexed"},
+    {"record_id":"chiba-shiroi-awashima-shrine-youth","title":"粟島神社と若者たち（粟島さま）","story_type":["寺社伝承","信仰伝承"],"cross_tags":["粟島神社","若者","民間信仰"],"research_status":"indexed"},
+    {"record_id":"chiba-shiroi-ikezuki-hachiman-dam","title":"生食と七次の八幡溜","story_type":["人物・動物伝承候補","地理伝承"],"cross_tags":["生食","八幡溜","白井市","松戸市","柏市","市川市","南房総市"],"research_status":"indexed","research_notes":"県立図書館索引上、同一資料由来の関連地名が複数市の索引にも現れるため、広域比較候補として保持。"},
+    {"record_id":"chiba-shiroi-komori-castle-lord","title":"板ばさみの小森城主","story_type":["城郭伝承","歴史伝承候補"],"cross_tags":["小森城主","城","平塚"],"research_status":"indexed"},
+    {"record_id":"chiba-shiroi-fox-fire","title":"狐火","story_type":["怪異伝承"],"cross_tags":["狐火","狐","怪火候補","異光"],"research_status":"indexed"},
+    {"record_id":"chiba-shiroi-kiyodo-benzaiten-yakuoji","title":"清戸の弁財天と薬王寺","story_type":["寺社伝承","信仰伝承"],"cross_tags":["弁財天","薬王寺","清戸","水辺候補"],"research_status":"indexed"}
+  ],
+  "batch_notes":"白井市一次索引巡回C。県立図書館の市別民話索引から、清戸の泉・清戸の龍神を中心に、寺社、城主、狐火などの個別伝承を初回収集。"
+}
