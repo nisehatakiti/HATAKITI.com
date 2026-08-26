@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-003-index-sweep-b",
+  "municipality":"松戸市",
+  "source_index":"千葉県立図書館 千葉県の民話 松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-iki-kaetta-mouja","title":"生き返った亡者","story_type":["怪談","死者伝承"],"cross_tags":["幽霊・死者","怪異"],"research_status":"researching","related_places":["栗ヶ沢"],"related_regions":["木更津市"]},
+    {"record_id":"chiba-matsudo-ichigatsuji-komuso","title":"一月寺虚無僧の反逆","story_type":["寺社伝承","歴史伝承"],"cross_tags":["寺社伝承","人物・歴史"],"research_status":"researching","related_places":["一月寺","小金宿"]},
+    {"record_id":"chiba-matsudo-oiteke-bori","title":"おいてけ堀","story_type":["怪異譚","水辺伝承"],"cross_tags":["水辺伝承","怪異"],"research_status":"researching","related_places":["根木内"],"related_regions":["柏市"]},
+    {"record_id":"chiba-matsudo-karasu-tengu","title":"カラス天狗と祭り見物","story_type":["天狗伝承","怪異譚"],"beings":["天狗"],"cross_tags":["天狗伝承","怪異"],"research_status":"researching","related_regions":["柏市","酒々井町","佐原市"]},
+    {"record_id":"chiba-matsudo-komon-kaminari","title":"黄門さまといたずら雷","story_type":["人物伝承","雷伝承"],"beings":["雷"],"cross_tags":["水戸黄門","人物ハブ","雷伝承"],"research_status":"researching","related_places":["竹ヶ花"]},
+    {"record_id":"chiba-matsudo-koro-zuka","title":"香炉塚","story_type":["塚伝承","地域史"],"cross_tags":["塚伝承","地域史"],"research_status":"researching","related_places":["馬橋"]},
+    {"record_id":"chiba-matsudo-kofun-zawameki","title":"古墳から古代人のざわめき","story_type":["怪談","古墳伝承"],"cross_tags":["古墳伝承","怪異","地域史"],"research_status":"researching","related_places":["八ヶ崎","八原台","八柱","竜房台","熊野神社","八坂神社","子安神社","小金原団地","貝の塚団地","八柱霊園"]},
+    {"record_id":"chiba-matsudo-koban-no-kane","title":"小判の鐘","story_type":["怪異譚","宝伝承"],"cross_tags":["怪異","宝伝承"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-hitono-nakigoe-kosenjo","title":"人の泣き叫ぶ声の聞こえる古戦場","story_type":["怪談","古戦場伝承"],"cross_tags":["幽霊・死者","古戦場","城郭伝承"],"research_status":"researching","related_places":["小金","根木内城","行人台古戦場","東漸寺"]},
+    {"record_id":"chiba-matsudo-fushigi-shimizu","title":"ふしぎな清水","story_type":["清水伝承","水辺伝承"],"cross_tags":["清水伝承","水辺伝承"],"research_status":"researching","related_places":["金ケ崎","常盤平"]},
+    {"record_id":"chiba-matsudo-hebi-komon","title":"ヘビと黄門さま","story_type":["蛇伝承","人物伝承"],"beings":["蛇"],"cross_tags":["蛇伝承","水戸黄門","人物ハブ"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-mito-orochi","title":"水戸黄門の大蛇退治","story_type":["蛇伝承","人物伝承"],"beings":["大蛇"],"cross_tags":["蛇伝承","水戸黄門","人物ハブ","広域伝承"],"research_status":"researching","related_places":["根木内"],"related_regions":["柏市"]},
+    {"record_id":"chiba-matsudo-muken-kane","title":"無間の鐘","story_type":["怪異譚","寺社伝承"],"cross_tags":["怪異","寺社伝承","広域伝承"],"research_status":"researching","related_regions":["柏市"]},
+    {"record_id":"chiba-matsudo-dojo-shugen","title":"ドジョウの祝言","story_type":["動物伝承","世間話"],"beings":["ドジョウ"],"cross_tags":["動物伝承","世間話"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-nio-matakuguri","title":"仁王様の股くぐり","story_type":["寺社伝承","民俗"],"cross_tags":["寺社伝承","民俗"],"research_status":"researching"},
+    {"record_id":"chiba-matsudo-hirakata-yukaku","title":"平潟遊郭発祥の由来","story_type":["地名由来","地域史"],"cross_tags":["地名由来","地域史","生活文化"],"research_status":"researching","related_places":["平潟","納屋川岸"]},
+    {"record_id":"chiba-matsudo-yurugi-fujimi-matsu","title":"ゆるぎの松・富士見の松","story_type":["樹木伝承","地域史"],"cross_tags":["樹木伝承","地域史"],"research_status":"researching","related_places":["本覚寺"]},
+    {"record_id":"chiba-matsudo-sairenji-amida","title":"西蓮寺本尊阿弥陀如来の霊験","story_type":["寺社伝承","霊験譚"],"cross_tags":["寺社伝承","霊験"],"research_status":"researching","related_places":["下矢切","西蓮寺"]}
+  ],
+  "batch_notes":"松戸市民話索引の中盤を一次回収。水戸黄門は人物ハブとして、蛇・雷などのモチーフを横断接続。古戦場・小金城周辺は幽霊／歴史／城郭タグで接続。本文未確認はresearching。"
+}
