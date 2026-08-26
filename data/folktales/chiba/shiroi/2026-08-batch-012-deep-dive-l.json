@@ -1,0 +1,43 @@
+{
+  "schema_version":"1.2",
+  "batch_id":"chiba-shiroi-2026-08-012-deep-dive-l",
+  "municipality":"白井市",
+  "phase":"deep_research",
+  "records":[
+    {
+      "record_id":"chiba-shiroi-western-temple-child-rearing-cluster",
+      "title":"西福寺の子育如来／乳房公孫樹関連伝承",
+      "story_type":["寺社伝承","子育て信仰","民間信仰"],
+      "cross_tags":["西福寺","谷田","子育如来","子育て観音","乳房公孫樹","母乳信仰","谷田弁天","蛇塚"],
+      "source_status":"researched",
+      "sources":[
+        {"source_id":"SRC-SHIROI-001","title":"白井の伝説と文化財 平成十三年度企画展記録集","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2002","source_type":"local_history_book","url_or_identifier":"千葉県立図書館『千葉県の民話 白井市』索引に収録情報あり","accessed_date":"2026-08-26","reliability_notes":"『西福寺の子育如来』の存在と所在地を確認するための書誌・索引情報。本文内容は未確認。"},
+        {"source_id":"SRC-SHIROI-002","title":"西福寺の公孫樹（市指定文化財）","author_or_publisher":"白井市","publication_year_or_date":"公開ページ参照","source_type":"official_archive","url_or_identifier":"https://www.city.shiroi.chiba.jp/manabu/rekishi/r03/1421924329812.html","accessed_date":"2026-08-26","reliability_notes":"西福寺の『乳房公孫樹』と母乳祈願・子育て観音信仰を確認。"},
+        {"source_id":"SRC-SHIROI-003","title":"企画展『伝説と信仰をたどる－白井東部の風土－』展示概要","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2015-07-18","source_type":"museum_material","url_or_identifier":"https://www.center.shiroi.chiba.jp/kyoudo/exhibition_back.html","accessed_date":"2026-08-26","reliability_notes":"谷田・清戸地区に水や子育てに関する伝説・信仰が残ることを確認。西福寺の乳房公孫樹を具体例として掲載。"},
+        {"source_id":"SRC-SHIROI-004","title":"白井の水神様：白井市生物多様性調査","author_or_publisher":"東邦大学メディアネットセンター","publication_year_or_date":"公開ページ参照","source_type":"reputable_web","url_or_identifier":"https://www.mnc.toho-u.ac.jp/v-lab/bioltop/shiroi/03yousei/521.htm","accessed_date":"2026-08-26","reliability_notes":"谷田弁天が西福寺に関係する水辺信仰として記録され、蛇塚との近接も記載。現地調査系資料として利用。"}
+      ],
+      "claims":[
+        {"claim_id":"claim-001","text":"『白井の伝説と文化財』には『西福寺の子育如来』が白井市谷田・西福寺の伝承として収録されている。","source_ids":["SRC-SHIROI-001"],"interpretation":false},
+        {"claim_id":"claim-002","text":"西福寺の境内には『乳房公孫樹』と呼ばれるイチョウがあり、子育て観音への祈願や母乳信仰と結び付いていたとされる。","source_ids":["SRC-SHIROI-002"],"interpretation":false},
+        {"claim_id":"claim-003","text":"谷田・清戸地区には、水や子育てに関する伝説・信仰が残る地域的特徴があり、西福寺の乳房公孫樹もその例として紹介されている。","source_ids":["SRC-SHIROI-003"],"interpretation":false},
+        {"claim_id":"claim-004","text":"『西福寺の子育如来』の物語本文と、乳房公孫樹・子育て観音信仰の具体的な関係は、現時点では同一伝承と断定せず、同寺に集まる子育て信仰の関連クラスターとして整理する。","source_ids":["SRC-SHIROI-001","SRC-SHIROI-002","SRC-SHIROI-003"],"interpretation":true}
+      ]
+    },
+    {
+      "record_id":"chiba-shiroi-yatsu-shrine-water-faith-network",
+      "title":"谷田・清戸の水辺信仰ネットワーク",
+      "story_type":["水辺伝承","信仰伝承","地域伝承ハブ"],
+      "cross_tags":["沢山の泉","谷田弁天","清戸の泉","弁財天","蛇塚","西福寺","薬王寺","雨乞い"],
+      "source_status":"researched",
+      "sources":[
+        {"source_id":"SRC-SHIROI-003","title":"企画展『伝説と信仰をたどる－白井東部の風土－』展示概要","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2015-07-18","source_type":"museum_material","url_or_identifier":"https://www.center.shiroi.chiba.jp/kyoudo/exhibition_back.html","accessed_date":"2026-08-26","reliability_notes":"谷田・清戸地区の水・子育て・牧に関する地域的特徴を確認。"},
+        {"source_id":"SRC-SHIROI-004","title":"白井の水神様：白井市生物多様性調査","author_or_publisher":"東邦大学メディアネットセンター","publication_year_or_date":"公開ページ参照","source_type":"reputable_web","url_or_identifier":"https://www.mnc.toho-u.ac.jp/v-lab/bioltop/shiroi/03yousei/521.htm","accessed_date":"2026-08-26","reliability_notes":"沢山弁天、谷田弁天、清戸弁天など複数の水関連信仰の現地情報を収録。"}
+      ],
+      "claims":[
+        {"claim_id":"claim-001","text":"白井東部の谷田・清戸地区には、水に関する伝説や信仰が地域的に集中している。","source_ids":["SRC-SHIROI-003"],"interpretation":false},
+        {"claim_id":"claim-002","text":"沢山の泉、谷田弁天、西福寺周辺の水辺信仰、清戸の泉などは、個別伝承を保ったまま地域的な水辺信仰ネットワークとして比較できる。","source_ids":["SRC-SHIROI-003","SRC-SHIROI-004"],"interpretation":true}
+      ]
+    }
+  ],
+  "batch_notes":"白井市深掘りL。『西福寺の子育如来』を、公式文化財資料・郷土資料館展示資料・現地調査資料を用いて出典付きで整理。Wikipedia本文を最終出典には使用せず、実際の書誌・公的資料・調査資料をsourceとして登録。"
+}
