@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-004-primary-index-sweep-d",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-kashiwa-masakado-network","title":"平将門・柏市伝承群","story_type":["人物伝承","広域伝承"],"cross_tags":["平将門","将門","影武者","七天王塚","居住跡","砦跡","下総伝承圏"],"research_status":"researching","research_notes":"柏市内の将門関連伝承を人物タグで横断接続。史跡・伝説・後世の伝承を現段階で同一視せず、本文と資料種別を後続確認する。"},
+    {"record_id":"chiba-kashiwa-white-cow-network","title":"手賀沼の牛・白牛伝承群","story_type":["話群","水辺伝承"],"cross_tags":["手賀沼","牛","白牛","水辺伝承"],"research_status":"researching","related_regions":["我孫子市"],"research_notes":"手賀沼にもぐった牛と手賀沼の白牛を同一存在として統合せず、場所共有・動物モチーフによる話群として保持する。"},
+    {"record_id":"chiba-kashiwa-kappa-listening","title":"カッパの立ち聞き","story_type":["河童伝承"],"cross_tags":["河童","水辺伝承","聞き耳","柏市"],"research_status":"researching","research_notes":"河童名称タグへ接続。全国の河童伝承との話型比較は本文確認後に実施する。"},
+    {"record_id":"chiba-kashiwa-giant-otra-review","title":"柏市名称・存在タグレビュー","story_type":["データ整理"],"cross_tags":["ダイダラボッチ系","デーダラボッチ","お多福弁天","火車","火車猫おトラ","大蛇"],"research_status":"active","research_notes":"デーダラボッチはダイダラボッチ系の異表記・地域名候補として上位横断タグへ接続。火車猫おトラ、大蛇は名称タグとして保持し、存在分類は本文確認後とする。"},
+    {"record_id":"chiba-kashiwa-water-giant-history-hub","title":"柏市・水辺／巨人／歴史人物ハブ","story_type":["地域横断","データ整理"],"cross_tags":["手賀沼","河童","白牛","ダイダラボッチ系","平将門","水戸黄門","大蛇"],"research_status":"active","research_notes":"柏市一次収集の主要横断軸。水辺伝承、巨人伝承、歴史人物伝承を独立した分類軸として整理する。"}
+  ],
+  "batch_notes":"柏市一次索引巡回D。将門、手賀沼の牛・白牛、河童、デーダラボッチ／ダイダラボッチ系などを整理。名称一致による横断接続を優先し、存在・話型・史実性の判定は後続検証へ分離。"
+}
