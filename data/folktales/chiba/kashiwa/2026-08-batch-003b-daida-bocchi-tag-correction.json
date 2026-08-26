@@ -1,0 +1,10 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-003b-daida-bocchi-tag-correction",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "correction":"デーダラボッチを広域名称タグ『ダイダラボッチ系』へ接続する。地域ごとのデーダラボッチ／ダイダラボッチ等の表記差は統合せず個別表記を保持し、広域比較用の上位タグとしてのみ接続する。",
+  "records":[
+    {"record_id":"chiba-kashiwa-daiderabocchi-network","title":"デーダラボッチとお多福弁天","story_type":["巨人伝承候補","地形起源伝承候補"],"cross_tags":["デーダラボッチ","ダイダラボッチ系","巨人伝承","地形伝承","お多福弁天"],"research_status":"researching","research_notes":"デーダラボッチはダイダラボッチ系の異表記・地域名として横断接続する。ただし、各地域の具体的な存在像や地形形成譚の同一性は本文比較後に判定する。"}
+  ]
+}
