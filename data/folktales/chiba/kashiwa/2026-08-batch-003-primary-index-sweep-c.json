@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-kashiwa-2026-08-003-primary-index-sweep-c",
+  "municipality":"柏市",
+  "phase":"primary_index_sweep",
+  "source_basis":"千葉県立図書館『千葉県の民話 柏市』索引",
+  "records":[
+    {"record_id":"chiba-kashiwa-masakado-shadow-seven-heaven-kings-mound","title":"平将門の影武者－七天王塚－","story_type":["人物伝承","塚伝承"],"cross_tags":["平将門","将門","影武者","七天王塚","塚"],"location_tags":["旧沼南町"],"research_status":"indexed","research_notes":"将門人物タグへ接続。影武者・塚は独立モチーフとして保持。"},
+    {"record_id":"chiba-kashiwa-masakado-residence-site","title":"将門の居住跡","story_type":["人物伝承","史跡伝承"],"cross_tags":["平将門","将門","居住跡","史跡"],"location_tags":["旧沼南町岩井"],"research_status":"indexed"},
+    {"record_id":"chiba-kashiwa-masakado-fort-site","title":"将門さまの砦跡","story_type":["人物伝承","史跡伝承"],"cross_tags":["平将門","将門","砦","史跡"],"location_tags":["旧沼南町"],"research_status":"indexed"},
+    {"record_id":"chiba-kashiwa-teganuma-diving-cow","title":"手賀沼にもぐった牛","story_type":["水辺伝承"],"cross_tags":["手賀沼","牛","水辺伝承"],"location_tags":["松ヶ崎","覚王寺"],"research_status":"indexed","research_notes":"同じ題名が複数資料に収録されるため、本文比較は後続工程。"},
+    {"record_id":"chiba-kashiwa-teganuma-white-cow","title":"手賀沼の白牛","story_type":["水辺伝承","名称伝承"],"cross_tags":["手賀沼","白牛","牛"],"location_tags":["松ヶ崎","覚王寺"],"research_status":"indexed","research_notes":"『手賀沼にもぐった牛』との同一話型・関連性は未判定。"},
+    {"record_id":"chiba-kashiwa-kappa-eavesdropping","title":"カッパの立ち聞き","story_type":["河童伝承"],"cross_tags":["河童","手賀沼","立ち聞き"],"research_status":"indexed","research_notes":"我孫子・野田の河童タグへ横断接続するが、個別話型は独立保持。"},
+    {"record_id":"chiba-kashiwa-fire-cart-cat-otra","title":"火車猫おトラ／火車猫おとら","story_type":["名称伝承"],"cross_tags":["火車","猫","おトラ"],"research_status":"indexed","research_notes":"我孫子の同名記録と名称タグで接続。異同判定は本文比較後。"},
+    {"record_id":"chiba-kashiwa-data-lobuchi-otafuku-benten","title":"データラボッチとお多福弁天","story_type":["巨人伝承候補","寺社伝承候補"],"cross_tags":["デーダラボッチ","データラボッチ","お多福弁天","弁天"],"location_tags":["光が丘","東山"],"research_status":"indexed","research_notes":"表記揺れを名称タグとして統合候補化。全国的なデーダラボッチ伝承との比較対象。"},
+    {"record_id":"chiba-kashiwa-mito-komon-serpent","title":"水戸黄門の大蛇退治","story_type":["人物伝承","蛇伝承"],"cross_tags":["水戸黄門","徳川光圀","大蛇","退治"],"location_tags":["旧沼南町"],"research_status":"indexed"}
+  ],
+  "batch_notes":"柏市一次索引巡回C。将門伝承、手賀沼の牛・白牛、河童、火車猫おトラ、デーダラボッチ、お多福弁天、水戸黄門の大蛇退治を一次登録。名称一致と内容上の同一性は分離して保持。"
+}
