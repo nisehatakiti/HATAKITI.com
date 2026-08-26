@@ -1,0 +1,17 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-urayasu-2026-08-005-people-history-and-place",
+  "records":[
+    {"record_id":"chiba-urayasu-enomoto-chuhachi","title":"榎本忠八和泉の守","municipality":"浦安市","locations":["浦安"],"story_type":["人物伝承","世間話"],"person_tags":["榎本忠八和泉の守"],"cross_tags":["人物伝承"],"research_status":"researching","research_notes":"県立図書館索引で浦安の人物伝承として確認。実在人物・伝説的人物の別は本文確認後に確定。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-sangi-nin","title":"三義人","municipality":"浦安市","locations":["猫実村","堀江村"],"story_type":["人物伝承","歴史伝承"],"cross_tags":["人物伝承","地域史"],"research_status":"partial","research_notes":"猫実村・堀江村にまたがる人物群として索引確認。人物名は本文確認まで未確定。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-shogitai","title":"彰義隊","municipality":"浦安市","locations":["当代島","猫実"],"story_type":["歴史伝承","人物伝承"],"person_tags":["彰義隊"],"cross_tags":["歴史伝承","人物伝承"],"research_status":"partial","research_notes":"当代島・猫実に関連する彰義隊伝承として登録。地域との具体的接続は本文確認待ち。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-oomatoi-cycle","title":"オオマトイ話群","municipality":"浦安市","locations":["浦安","当代島"],"story_type":["人物伝承","世間話"],"person_tags":["オオマトイ"],"cross_tags":["人物ハブ","世間話"],"variants":["相撲取りになる","関東相撲","十両になる","喧嘩","大まといと七熊","大まといの力震い"],"research_status":"partial","research_notes":"単発話として分断せず、地域人物を中心とする話群として束ねる。本文確認後に人物ハブの属性を追加。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-takanashi-danna","title":"高梨のだんな","municipality":"浦安市","locations":["当代島","堀江村","猫実村","浦安村"],"story_type":["人物伝承","地域史"],"person_tags":["高梨のだんな"],"cross_tags":["人物伝承","地域史"],"research_status":"partial","research_notes":"複数旧村にまたがる地域人物伝承として保持。広域人物ハブ候補。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-kan-gama","title":"雁釜・ガンガマ","municipality":"浦安市","locations":["当代島","浦安"],"story_type":["地名由来","地域伝承"],"cross_tags":["地名由来","地域史"],"research_status":"researching","research_notes":"『雁釜』『ガンガマ』を同一語・異表記候補として関連管理。地名・地形との関係は本文確認待ち。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-gan-gan-iwa","title":"がんがん岩","municipality":"浦安市","locations":["猫実"],"story_type":["地名由来","地形伝承"],"cross_tags":["地名由来","地形伝承"],"research_status":"partial","research_notes":"猫実に紐づく地名・岩の伝承候補として登録。現地確認候補を残す。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-kintajii-sashiishi","title":"キンタジイのさし石","municipality":"浦安市","locations":["浦安"],"story_type":["人物伝承","石伝承"],"person_tags":["キンタジイ"],"cross_tags":["人物伝承","石伝承"],"research_status":"researching","research_notes":"人物＋石の組み合わせとして保持。人物ハブ化は本文確認後。","source":"千葉県立図書館 千葉県の民話 浦安市"},
+    {"record_id":"chiba-urayasu-tokyo-earthquake-1923","title":"大正十二年の震災","municipality":"浦安市","locations":["当代島"],"story_type":["災害伝承","地域史"],"cross_tags":["災害伝承","関東大震災"],"historical_context":"1923年関東大震災","research_status":"partial","research_notes":"大正六年の大津波群とは別の歴史災害コンテキストとして管理。","source":"千葉県立図書館 千葉県の民話 浦安市"}
+  ],
+  "source_url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+  "batch_notes":"浦安の人物・歴史・地名由来候補を一次構造化。人物は同一人物を中心に話群として束ね、全国・広域接続の可能性があるものは person_tags/cross_tags を保持。本文未確認は researching/partial とした。"
+}
