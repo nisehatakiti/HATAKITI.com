@@ -1,0 +1,46 @@
+{
+  "schema_version":"1.2",
+  "record_id":"chiba-shiroi-two-three-teahouses-deep-dive",
+  "municipality":"白井市",
+  "title":"二軒茶屋・三軒茶屋",
+  "source_status":"researched",
+  "story_type":["地名伝承候補","地域史"],
+  "cross_tags":["二軒茶屋","三軒茶屋","十余一","印西牧","印西牧場之真景図","白井橋本"],
+  "sources":[
+    {
+      "source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
+      "title":"白井の伝説と文化財 平成十三年度企画展記録集",
+      "author_or_publisher":"白井市郷土資料館",
+      "publication_year_or_date":"2002",
+      "source_type":"local_history_book",
+      "url_or_identifier":"千葉県立図書館『千葉県の民話 白井市』収録資料情報",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"「二軒茶屋・三軒茶屋」の収録資料。本文は未確認。"
+    },
+    {
+      "source_id":"SRC-SHIROI-INZAI-BOKUJO-SHINKEIZU",
+      "title":"印西牧場之真景図（市指定文化財）",
+      "author_or_publisher":"白井市",
+      "publication_year_or_date":"web",
+      "source_type":"official_archive",
+      "url_or_identifier":"https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun004/1423036298790.html",
+      "accessed_date":"2026-08-26",
+      "reliability_notes":"明治3年（1870年）の印西牧場之真景図に描かれた二軒の茶屋と、現在まで残る小字「二軒茶屋」についての白井市公式解説。"
+    }
+  ],
+  "claims":[
+    {
+      "claim_id":"claim-001",
+      "text":"「二軒茶屋・三軒茶屋」は、白井市十余一・印西牧を関連地とする伝承項目として『白井の伝説と文化財 平成十三年度企画展記録集』に収録されている。",
+      "source_ids":["SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
+      "interpretation":false
+    },
+    {
+      "claim_id":"claim-002",
+      "text":"明治3年（1870年）に描かれた「印西牧場之真景図」には二軒の茶屋が描かれており、白井市の公式解説では、その場所が現在も小字「二軒茶屋」として残るとされている。",
+      "source_ids":["SRC-SHIROI-INZAI-BOKUJO-SHINKEIZU"],
+      "interpretation":false
+    }
+  ],
+  "research_notes":"今回確認できた公的資料は「二軒茶屋」の実在と印西牧場之真景図との関係まで。『白井の伝説と文化財』本文未確認のため、「三軒茶屋」の具体的な位置・名称由来・二軒茶屋との関係は本文確認まで補完しない。"
+}
