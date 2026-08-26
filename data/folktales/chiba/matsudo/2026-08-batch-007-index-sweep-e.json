@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-matsudo-2026-08-007-index-sweep-e",
+  "municipality":"松戸市",
+  "records":[
+    {"record_id":"chiba-matsudo-blood-stained-kaya-group","title":"血染めの茅伝承群","story_type":["広域伝承","歴史伝承","植物伝承"],"cross_tags":["血染めの茅類型候補","悲劇の記憶","植物伝承"],"research_status":"researching","related_regions":["市川市","船橋市","柏市","流山市","野田市","佐倉市"]},
+    {"record_id":"chiba-matsudo-yoinaki-stone-group","title":"松戸市の泣く石伝承群","story_type":["話群","石伝承"],"cross_tags":["泣く石・夜泣き石類型","石の怪異"],"research_status":"researching","related_records":["chiba-matsudo-satomi-hime-night-crying-stone"]},
+    {"record_id":"chiba-matsudo-mermaid-long-life-group","title":"松戸市の人魚・長寿伝承群","story_type":["話群","怪異譚","人物伝承"],"cross_tags":["人魚伝説","八百比丘尼","長寿伝説"],"research_status":"researching","related_person_id":"happyaku-bikuni"},
+    {"record_id":"chiba-matsudo-issa-group","title":"小林一茶関連伝承候補","story_type":["人物伝承"],"cross_tags":["人物ハブ候補","俳人伝説","広域伝承候補"],"research_status":"researching","research_notes":"松戸・柏周辺の一茶伝承を一次整理。今後、他地域の伝承蓄積に応じて小林一茶人物ハブを正式化する。"},
+    {"record_id":"chiba-matsudo-local-history-ghost-group","title":"松戸市の歴史怪談群","story_type":["話群","怪談"],"cross_tags":["幽霊・死者","歴史怪談","地域史"],"research_status":"researching","related_records":["chiba-matsudo-kannyo-ghost","chiba-matsudo-historical-head","chiba-matsudo-battlefield-cries","chiba-matsudo-kofun-zawameki"]},
+    {"record_id":"chiba-matsudo-snake-group","title":"松戸市の蛇・大蛇伝承群","story_type":["話群","蛇伝承"],"beings":["蛇","大蛇"],"cross_tags":["蛇伝承","水辺伝承"],"research_status":"researching","related_records":["chiba-matsudo-mabashi-snake","chiba-matsudo-neguchi-snake","chiba-matsudo-osho-snake","chiba-matsudo-mito-komon-snake"]},
+    {"record_id":"chiba-matsudo-shrine-tree-group","title":"松戸市の寺社・巨木伝承群","story_type":["話群","寺社伝承","樹木伝承"],"cross_tags":["寺社伝承","樹木伝承"],"research_status":"researching","related_records":["chiba-matsudo-kazahaya-sugi","chiba-matsudo-yurugi-matsu","chiba-matsudo-sairenji-amida"]}
+  ],
+  "batch_notes":"松戸市索引巡回E。個別recordが増えてきたため、広域接続候補・人物候補・蛇伝承・歴史怪談・寺社巨木などを地域内話群として再整理。本文未確認の段階では無理な同一視を行わず、横断検索用の接続に留める。"
+}
