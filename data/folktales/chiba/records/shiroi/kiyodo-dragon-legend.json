@@ -5,14 +5,15 @@
   "alternate_titles": [
     "清戸の泉",
     "清戸の泉（清竜山薬王寺）",
-    "清戸の龍神"
+    "清戸の龍神",
+    "清戸の弁財天と薬王寺"
   ],
   "municipality": "白井市",
   "locality": "清戸",
   "canonical_slug": "kiyodo-dragon-legend",
   "research_status": "deep_dived",
   "source_status": "multiple_sources_confirmed",
-  "summary": "白井市清戸にある県指定史跡「清戸の泉」に伝わる竜神信仰の伝説。平安時代初期の大同年間に旱魃があり、村人が飢えに苦しんだ際、旅の僧の勧めによる竜神への祈りの後、大雨とともに小さな青竜が落ちてきたと伝えられる。竜神を祀る信仰と、近くの薬王寺に伝わる版木「青龍山薬王寺并に堂作弁財天女縁起」が結び付いている。",
+  "summary": "白井市清戸にある県指定史跡「清戸の泉」に伝わる竜神信仰の伝説。平安時代初期の大同年間に旱魃があり、村人が飢えに苦しんだ際、旅の僧の勧めによる竜神への祈りの後、大雨とともに小さな青竜が落ちてきたと伝えられる。雨とともに現れた竜神を祀る信仰は、泉・弁財天・薬王寺・版木「青龍山薬王寺并に堂作弁財天女縁起」と結び付いている。",
   "claims": [
     {
       "claim": "清戸の泉は白井市清戸に所在する千葉県指定史跡である。",
@@ -23,11 +24,23 @@
       "source_ids": ["source-shiroi-city-kiyodo", "source-chiba-pref-kiyodo"]
     },
     {
-      "claim": "竜神伝説と清戸地区の地名の由来を記した版木「青龍山薬王寺并に堂作弁財天女縁起」が薬王寺で保管され、文政11年（1828年）再版の銘が確認されている。",
+      "claim": "千葉県の公式文化財資料では、雨とともに落ちてきた竜神を祀って弁財天を建て、池を掘ったと伝えられている。",
+      "source_ids": ["source-chiba-pref-kiyodo"]
+    },
+    {
+      "claim": "薬王寺に保管される版木「青龍山薬王寺并に堂作弁財天女縁起」は、竜神伝説と清戸地区の地名の由来について記した資料であり、「文政11年（1828年）再版」の文字が確認されている。",
       "source_ids": ["source-shiroi-city-kiyodo", "source-chiba-pref-kiyodo"]
     },
     {
-      "claim": "千葉県立図書館の民話索引では、「清戸の泉」が『房総の伝説』（1976）および『ふるさと印西地方の民話・伝説』（1980）に、「清戸の泉（清竜山薬王寺）」が『千葉の伝説』（1981）に、「清戸の龍神」が『房総昔話散歩』（1973）に収録されている。",
+      "claim": "白井市郷土資料館は、谷田・清戸地区に清戸の泉など水に関する伝説・信仰が残ることを紹介し、企画展の主要資料として「青龍山薬王寺并堂作弁財天女縁記」の版木を挙げている。",
+      "source_ids": ["source-shiroi-museum-exhibition"]
+    },
+    {
+      "claim": "地域資料の現地調査記録では、清戸弁天は薬王寺が管理し、県指定文化財「清戸の泉」と雨乞い伝説・版木に関連するものとして記録されている。",
+      "source_ids": ["source-toho-shiroi-water-deities"]
+    },
+    {
+      "claim": "千葉県立図書館の民話索引では、「清戸の泉」が『房総の伝説』（1976）および『ふるさと印西地方の民話・伝説』（1980）に、「清戸の泉（清竜山薬王寺）」が『千葉の伝説』（1981）に、「清戸の龍神」が『房総昔話散歩』（1973）に、「清戸の弁財天と薬王寺」が『白井の伝説と文化財 平成十三年度企画展記録集』（2002）に収録されている。",
       "source_ids": ["source-chiba-pref-library-index"]
     }
   ],
@@ -44,7 +57,21 @@
       "title": "清戸の泉（附）版木（県指定文化財）",
       "publisher": "白井市",
       "source_type": "official_cultural_property_record",
-      "url": "https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun004/1423036289322.html"
+      "url": "https://www.city.shiroi.chiba.jp/manabu/rekishi/r03/1423037000080.html"
+    },
+    {
+      "source_id": "source-shiroi-museum-exhibition",
+      "title": "展示｜白井市郷土資料館（企画展『伝説と信仰をたどる－白井東部の風土－』）",
+      "publisher": "白井市郷土資料館",
+      "source_type": "official_museum_record",
+      "url": "https://www.center.shiroi.chiba.jp/kyoudo/exhibition_back.html"
+    },
+    {
+      "source_id": "source-toho-shiroi-water-deities",
+      "title": "白井の水神様",
+      "publisher": "東邦大学メディアネットセンター",
+      "source_type": "local_field_survey",
+      "url": "https://www.mnc.toho-u.ac.jp/v-lab/bioltop/shiroi/03yousei/521.htm"
     },
     {
       "source_id": "source-chiba-pref-library-index",
@@ -56,9 +83,9 @@
   ],
   "interpretations": [],
   "research_notes": [
-    "本文未確認の書籍については、索引から確認できる書名・収録事実のみを記録した。",
-    "日本武尊など他地域伝承との関係は、本レコードでは確認できる資料がないため補完していない。",
-    "既存の『清戸の龍神／清戸の泉』深掘りを、one_folktale_one_canonical_record方針に基づき正本レコードとして整理した。"
+    "『清戸の弁財天と薬王寺』は、公開資料で確認できる泉・竜神・弁財天・薬王寺・版木の関連が同一伝承圏を形成しているため、既存の清戸の竜神伝説レコードの別題・関連題名として統合した。",
+    "ただし、民話集『白井の伝説と文化財 平成十三年度企画展記録集』の当該本文そのものは未確認であり、索引から確認できる収録事実以外の本文内容は補完していない。",
+    "弁財天信仰の一般論から個別伝承の内容を推測していない。"
   ],
   "related_places": ["清戸", "清戸の泉", "薬王寺"],
   "tags": ["竜神", "龍", "雨乞い", "湧水", "弁財天", "水辺", "信仰"],
