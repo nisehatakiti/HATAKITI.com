@@ -125,6 +125,17 @@ function hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end ) 
         return $ai_text;
     }
 
+    return hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start, $week_end );
+}
+
+/**
+ * Everything after the AI call: parse, validate, build articles_json,
+ * create the draft. Split out from hatakiti_generate_occult_weekly_draft_via_ai()
+ * so this half — the part with no network dependency — can be exercised
+ * directly with a synthetic AI response (e.g. in testing, or if a
+ * response was captured from elsewhere).
+ */
+function hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start, $week_end ) {
     $data = hatakiti_extract_json_from_ai_text( $ai_text );
     if ( ! is_array( $data ) || empty( $data['articles'] ) || ! is_array( $data['articles'] ) ) {
         return new WP_Error(
