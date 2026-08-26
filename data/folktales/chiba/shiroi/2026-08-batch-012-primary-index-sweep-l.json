@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-012-primary-index-sweep-l",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-gonbei-inari-cross-region","title":"ごんべい稲荷の話・広域接続","story_type":["稲荷伝承","地域伝承"],"cross_tags":["ごんべい稲荷","白井市中","てがっぱら","千葉市猪鼻","稲荷信仰"],"research_status":"researched","research_notes":"千葉県立図書館の市町村別索引では白井市の伝承として掲載され、千葉市側の索引でも猪鼻を根拠地として再掲載される。白井ローカルに閉じず、猪鼻との地理的・伝承的接続を保持する。本文内容は別途一次資料確認待ち。"},
+    {"record_id":"chiba-shiroi-cross-boundary-network","title":"白井市・周辺市横断接続レビュー","story_type":["データ整理"],"cross_tags":["千葉市","鎌ケ谷市","八千代市","松戸市","生食","ごんべい稲荷","道祖神","茶屋"],"research_status":"active","research_notes":"現時点で確認できた横断接続は、ごんべい稲荷→千葉市猪鼻、生食と七次の八幡溜→松戸市高塚新田、二軒茶屋・三軒茶屋／魔除けの道祖神→鎌ケ谷市比較候補、権現様の市とずるコロピョン→八千代市萱田。索引上の地理根拠と本文の伝播経路は分けて扱う。"},
+    {"record_id":"chiba-shiroi-primary-index-completion-review","title":"白井市・一次索引収集完了前レビュー","story_type":["データ整理"],"cross_tags":["清戸","富塚","谷田","名内","十余一","白井","根"],"research_status":"active","research_notes":"県立図書館索引で確認できる白井市の主要題名群を一巡。重複掲載は統合候補として扱い、次段階では本文確認可能な伝承から深掘りする。特に村雨丸、切られ庚申、生食、ごんべい稲荷を優先する。"}
+  ],
+  "batch_notes":"白井市一次索引巡回L。市町村横断索引を再確認し、ごんべい稲荷の千葉市猪鼻接続、生食の松戸市高塚新田接続を整理。白井市の一次索引収集は完了前レビュー段階へ移行。"
+}
