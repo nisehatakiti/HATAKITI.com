@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-noda-2026-08-009-index-sweep-i",
+  "municipality":"野田市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-noda-sarukani-name-review","title":"さるかに関連伝承","story_type":["昔話候補"],"cross_tags":["さるかに"],"research_status":"researching","research_notes":"題名による名称タグ接続のみ。全国的な猿蟹合戦との同一話型判定は本文確認後に行う。"},
+    {"record_id":"chiba-noda-bakuchi-buchi-tatsu-name-review","title":"バクチぶち辰っあ関連伝承","story_type":["名称伝承"],"cross_tags":["バクチぶち辰っあ"],"research_status":"researching","research_notes":"人物名・呼称・話型のいずれかは資料本文確認まで保留する。"},
+    {"record_id":"chiba-noda-water-death-legends-network","title":"野田市の水辺・引き込み伝承群","story_type":["話群","水辺伝承"],"cross_tags":["池","川","水辺","引き込み"],"research_status":"researching","related_records":["chiba-noda-kappa-final-network","chiba-noda-waterway-hub"],"research_notes":"河童との関係は名称や本文上の明示が確認できるまで断定せず、水辺で人が引き込まれる話として別軸で保持する。"},
+    {"record_id":"chiba-noda-sekiyado-border-hub","title":"関宿・県境横断伝承ハブ","story_type":["地域伝承","地理横断"],"cross_tags":["関宿","利根川","江戸川","県境","河川交通"],"research_status":"researching","research_notes":"関宿は千葉・茨城・埼玉の境界的地理環境を持つため、市域単位だけで閉じず河川・交通・城下町の接続軸を保持する。"},
+    {"record_id":"chiba-noda-legend-hub-review","title":"野田市主要ハブ・一次レビュー","story_type":["データ整理"],"cross_tags":["河童","平将門","関宿","利根川","江戸川","水運","寺社伝承"],"research_status":"active","research_notes":"一次索引収集の終盤レビュー。名称タグ、人物タグ、地理タグ、話群タグを混同せず、各個別recordの関係を後続資料調査で更新する。"}
+  ],
+  "batch_notes":"野田市一次索引巡回I。残存する名称伝承を保留状態で追加し、水辺伝承を河童から独立した比較軸として整理。関宿は県境・河川交通の広域ハブとして保持し、最終巡回前の主要タグレビューを実施。"
+}
