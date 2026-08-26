@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-006-index-sweep-f",
+  "municipality":"流山市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-tokitada-tenjin-group","title":"時忠天神・平家関連伝承群","story_type":["話群","人物伝承","寺社伝承"],"cross_tags":["平家伝承","人物ハブ候補","天神伝承"],"research_status":"researching","related_records":["chiba-nagareyama-tokitada-tenjin"]},
+    {"record_id":"chiba-nagareyama-niou-group","title":"仁王・寺社怪異伝承群","story_type":["話群","寺社伝承","怪異譚"],"cross_tags":["仁王","寺社伝承","怪異"],"research_status":"researching","related_records":["chiba-nagareyama-scolded-thief-niou"]},
+    {"record_id":"chiba-nagareyama-jingoro-candidate","title":"左甚五郎関連伝承候補","story_type":["人物伝承"],"cross_tags":["人物ハブ候補","彫刻伝説","寺社伝承"],"research_status":"researching","related_records":["chiba-nagareyama-jingoro-duck"],"research_notes":"全国に広く分布する左甚五郎伝承との関係を確認するため、個別伝承は統合せず人物名タグで横断検索可能にする。"},
+    {"record_id":"chiba-nagareyama-blood-kaya-wide-review","title":"血染めの茅・下総広域伝承比較","story_type":["話群","広域伝承"],"cross_tags":["血染めの茅類型候補","下総伝承圏","植物伝承"],"related_regions":["市川市","松戸市","流山市","柏市","野田市","船橋市","佐倉市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-river-castle-network","title":"流山の河川・城跡伝承ネットワーク","story_type":["話群","地域史"],"cross_tags":["江戸川","利根川","城跡","古戦場","地域ハブ候補"],"research_status":"researching","related_records":["chiba-nagareyama-river-region-group","chiba-nagareyama-castle-history-group","chiba-nagareyama-three-warrior-ghosts"]},
+    {"record_id":"chiba-nagareyama-animal-legends-network","title":"流山市の動物伝承ネットワーク","story_type":["話群","動物伝承"],"cross_tags":["犬伝承","鴨伝承","動物伝承"],"research_status":"researching","related_records":["chiba-nagareyama-dog-legends-group","chiba-nagareyama-tofukuji-duck","chiba-nagareyama-faithful-dog","chiba-nagareyama-me-tsubushi-duck"]}
+  ],
+  "batch_notes":"流山市一次索引巡回F。個別タイトルの取りこぼし確認と並行して、人物ハブ候補、寺社怪異、下総広域伝承、江戸川・利根川沿岸の地域ネットワークを再整理。全国的伝承との同一視は本文確認まで行わない。"
+}
