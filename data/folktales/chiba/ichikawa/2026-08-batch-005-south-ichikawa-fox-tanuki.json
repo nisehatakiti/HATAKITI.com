@@ -1,34 +1,26 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "batch_id": "chiba-ichikawa-2026-08-005",
-  "records": [
+  "batch_role": "research_queue",
+  "deduplication_policy": "Each tradition is managed as a single canonical record across the repository. A batch must not retain duplicate full records after canonicalization. Removed duplicates are preserved only as lightweight deduplication history so downstream AI can determine that they were intentionally removed rather than overlooked.",
+  "deduplicated_records": [
     {
-      "record_id": "chiba-ichikawa-onatsu-gitsune",
       "title": "おなつ狐",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["相之川", "新井"],
-      "related_regions": ["浦安市"],
-      "related_locations": ["了善寺"],
-      "story_type": ["民話", "伝説"],
-      "beings": ["狐"],
-      "cross_tags": ["狐狸貉"],
-      "themes": ["化かし", "怪異", "地域伝承"],
-      "research_status": "partial",
-      "research_priority": "high",
-      "research_missing": ["full_story_text", "variant_relationship"],
-      "research_notes": "市川市相之川の『おなつぎつね』として語り継ぎ資料で確認。県立図書館の索引では浦安系資料との接続も確認できるため、行政区をまたぐ関連伝承として管理する。『おなつギツネとわたうり』は同一話・異伝の可能性があるため本文確認まで別候補として扱う。",
-      "sources": [
-        {"title": "千葉県立図書館 千葉県の民話資料一覧 市川市", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"},
-        {"title": "市川民話の会 公開資料", "url": "https://ichikawa.genki365.jp/G0000286/information/200.html"}
-      ],
-      "verification_locations": [
-        {"type": "temple_or_local_site", "name": "了善寺周辺", "reason": "伝承地・関連地の確認候補"},
-        {"type": "library", "name": "市川市立図書館", "reason": "地域資料と本文確認候補"},
-        {"type": "library", "name": "浦安市立図書館", "reason": "浦安側の関連資料・異伝確認候補"}
-      ],
-      "field_research": {"visit_candidate": true, "priority": "high", "places": ["相之川", "新井", "了善寺周辺", "浦安市立図書館"], "local_leads": ["おなつ狐"]}
+      "canonical_record_id": "chiba-ichikawa-onatsu-gitsune",
+      "reason": "already researched and canonicalized in an earlier batch; remove duplicate queue entry"
     },
+    {
+      "title": "新場のキツネ",
+      "canonical_record_id": "chiba-ichikawa-shinba-no-kitsune",
+      "reason": "already researched and canonicalized in an earlier batch; remove duplicate queue entry"
+    },
+    {
+      "title": "おんぶされたムジナ",
+      "canonical_record_id": "chiba-ichikawa-onbu-sareta-mujina",
+      "reason": "already researched and canonicalized in an earlier batch; remove duplicate queue entry"
+    }
+  ],
+  "records": [
     {
       "record_id": "chiba-ichikawa-yokomachi-inari-no-kitsune",
       "title": "横町稲荷のきつね",
@@ -46,24 +38,6 @@
       "sources": [{"title": "市川民話の会 公開資料", "url": "https://ichikawa.genki365.jp/G0000286/information/200.html"}],
       "verification_locations": [{"type": "library", "name": "市川市立図書館", "reason": "本行徳の地域資料確認候補"}],
       "field_research": {"visit_candidate": true, "priority": "normal", "places": ["本行徳"], "local_leads": ["横町稲荷"]}
-    },
-    {
-      "record_id": "chiba-ichikawa-shinba-no-kitsune",
-      "title": "新場のキツネ",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["行徳"],
-      "story_type": ["民話", "伝説"],
-      "beings": ["狐"],
-      "cross_tags": ["狐狸貉"],
-      "themes": ["化かし", "地域伝承", "塩田文化"],
-      "research_status": "partial",
-      "research_priority": "high",
-      "research_missing": ["full_story_text", "exact_location"],
-      "research_notes": "県立図書館の市川市民話索引で確認。行徳の塩焼・塩田文化との関連を示す資料情報があるため、地域文化タグを保持する。",
-      "sources": [{"title": "千葉県立図書館 千葉県の民話資料一覧 市川市", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
-      "verification_locations": [{"type": "library", "name": "市川市立図書館", "reason": "行徳の地域民話・塩田資料確認候補"}],
-      "field_research": {"visit_candidate": true, "priority": "normal", "places": ["行徳地域"], "local_leads": ["新場", "塩焼"]}
     },
     {
       "record_id": "chiba-ichikawa-kitsune-to-oihagi",
@@ -100,24 +74,6 @@
       "sources": [{"title": "市川民話の会 公開資料", "url": "https://ichikawa.genki365.jp/G0000286/activity/772.html"}],
       "verification_locations": [{"type": "library", "name": "市川市立図書館", "reason": "本行徳の地域資料・本文確認候補"}],
       "field_research": {"visit_candidate": true, "priority": "normal", "places": ["本行徳"], "local_leads": ["化け松"]}
-    },
-    {
-      "record_id": "chiba-ichikawa-onbu-sareta-mujina",
-      "title": "おんぶされたムジナ",
-      "prefecture": "千葉県",
-      "municipality": "市川市",
-      "locations": ["行徳"],
-      "story_type": ["民話"],
-      "beings": ["ムジナ"],
-      "cross_tags": ["狐狸貉"],
-      "themes": ["怪異", "化かし"],
-      "research_status": "researching",
-      "research_priority": "normal",
-      "research_missing": ["story_content", "source_text", "exact_location"],
-      "research_notes": "県立図書館の市川市民話索引で確認。地域固有の存在名は保持しつつ、狐狸貉の横断類型に接続する。",
-      "sources": [{"title": "千葉県立図書館 千葉県の民話資料一覧 市川市", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}],
-      "verification_locations": [{"type": "library", "name": "市川市立図書館", "reason": "本文・行徳地域資料確認候補"}],
-      "field_research": {"visit_candidate": false, "priority": "normal", "places": ["市川市立図書館"], "local_leads": []}
     }
   ]
 }
