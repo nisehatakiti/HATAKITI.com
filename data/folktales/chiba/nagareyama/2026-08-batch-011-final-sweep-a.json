@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-nagareyama-2026-08-011-final-sweep-a",
+  "municipality":"流山市",
+  "phase":"final_sweep",
+  "records":[
+    {"record_id":"chiba-nagareyama-war-cry-battlefield","title":"人の泣き叫ぶ声の聞こえる古戦場","story_type":["古戦場伝承","怪談"],"cross_tags":["古戦場","幽霊・死者","戦乱の記憶"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-ichcha-fuse-benten","title":"恋人に似た布施弁天によく通った一茶","story_type":["人物伝承","寺社伝承"],"cross_tags":["小林一茶","人物タグ","弁天","柏市接続候補"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-akagi-shrine-network","title":"赤城神社・赤城山伝承接続","story_type":["寺社伝承","山岳伝承","広域伝承"],"cross_tags":["赤城山","赤城神社","地名由来"],"related_regions":["群馬県","流山市"],"research_status":"researching"},
+    {"record_id":"chiba-nagareyama-waterway-final-review","title":"江戸川・利根川水辺伝承最終確認","story_type":["話群","河川伝承"],"cross_tags":["江戸川","利根川","坂東太郎","水辺伝承"],"research_status":"researching"}
+  ],
+  "verification_queue":[
+    {"priority":"high","target":"小林一茶関連伝承","reason":"人物タグ化して他地域事例を蓄積し本文比較する"},
+    {"priority":"high","target":"忠犬小金丸・思井の犬塚","reason":"松戸との地理的接続と同一話群の範囲を確認する"},
+    {"priority":"medium","target":"血染めの茅","reason":"下総各地の同名・類似伝承を比較する"},
+    {"priority":"medium","target":"火車","reason":"名称タグとして蓄積し内容分類は後続研究へ保留する"},
+    {"priority":"medium","target":"左甚五郎","reason":"人物名タグとして全国伝承との比較候補を蓄積する"}
+  ],
+  "completion_state":"index_based_primary_collection_near_complete",
+  "summary":"流山市の索引ベース一次収集は主要題名の回収と横断タグ整理を完了段階へ進め、残る作業を本文・原典・現地確認の検証キューとして分離する。"
+}
