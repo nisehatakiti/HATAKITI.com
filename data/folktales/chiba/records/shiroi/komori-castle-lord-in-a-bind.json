@@ -1,0 +1,69 @@
+{
+  "record_id": "chiba-shiroi-komori-castle-lord-in-a-bind",
+  "title": "板ばさみの小森城主",
+  "aliases": ["小森城主"],
+  "region": {
+    "prefecture": "千葉県",
+    "municipality": "白井市",
+    "locality": "平塚・小森"
+  },
+  "related_places": ["小森城", "手賀沼", "手賀城"],
+  "research_status": "text_confirmed",
+  "summary": "白井市平塚の小森城主が、主君から対岸の手賀城を攻めるよう命じられたが、手賀城の女城主に恋をしていたため攻めることができず、援軍到着の話まで出て板ばさみとなり、手賀沼に身を投げたとする伝承。",
+  "claims": [
+    {
+      "text": "千葉県立図書館の民話索引は、「板ばさみの小森城主」を白井市平塚・小森に関する伝承として、『白井の伝説と文化財 平成十三年度企画展記録集』（白井市郷土資料館、2002年）に収録されたものとしている。",
+      "source_ids": ["source_chiba_pref_library_index"]
+    },
+    {
+      "text": "公開されている小森城解説資料は、『白井の伝説と文化財』からの抜粋として、小森城主が千葉氏の家来で、手賀城攻略を命じられたものの、手賀城の賢く美しい女城主に恋をしていたため攻められず、援軍到着の話で板ばさみとなって手賀沼に身を投げたという伝承を紹介している。",
+      "source_ids": ["source_komori_castle_article"]
+    },
+    {
+      "text": "同伝承では、小森城主の死後、千葉軍は手賀城を攻め落とすことができなかったとされる。",
+      "source_ids": ["source_komori_castle_article"]
+    },
+    {
+      "text": "小森城について、白井市域の中世史を扱う資料では城主が不明であることが指摘されている。",
+      "source_ids": ["source_shiroi_local_history_association"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source_chiba_pref_library_index",
+      "title": "千葉県の民話 白井市",
+      "publisher": "千葉県立図書館",
+      "source_type": "library index",
+      "note": "伝承名、収録資料、地域、関連地の確認に使用。"
+    },
+    {
+      "id": "source_original_book",
+      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
+      "publisher": "白井市郷土資料館",
+      "year": 2002,
+      "source_type": "original compilation",
+      "note": "本伝承の収録資料。"
+    },
+    {
+      "id": "source_komori_castle_article",
+      "title": "船橋地域北部、白井地域の城",
+      "publisher": "個人運営の城郭資料サイト",
+      "source_type": "secondary transcription",
+      "note": "『白井の伝説と文化財』から「板ばさみの小森城主」の伝承本文を抜粋して掲載。原資料本文そのものではないため、引用経路を明示して使用。"
+    },
+    {
+      "id": "source_shiroi_local_history_association",
+      "title": "白井市郷土史の会令和4年11月例会報告",
+      "publisher": "白井市郷土史の会",
+      "source_type": "local history report",
+      "note": "小森城の城主が史料上不明であることの確認に使用。"
+    }
+  ],
+  "research_notes": [
+    "伝承本文は『白井の伝説と文化財』からの抜粋を掲載する二次資料経由で確認した。原本の直接閲覧による本文照合は未実施。",
+    "小森城の実在と遺構の存在と、伝承に登場する小森城主・手賀城女城主の関係は区別する。伝承上の人物関係を歴史的事実として扱わない。",
+    "城主の実名・所属については資料間で確定できないため、伝承本文の範囲を超える補完はしない。"
+  ],
+  "interpretations": [],
+  "updated_at": "2026-08-26"
+}
