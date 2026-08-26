@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "batch_id":"chiba-shiroi-2026-08-011-primary-index-sweep-k",
+  "municipality":"白井市",
+  "phase":"primary_index_sweep",
+  "records":[
+    {"record_id":"chiba-shiroi-gonbei-inari","title":"ごんべい稲荷の話","story_type":["稲荷伝承","地域伝承"],"cross_tags":["ごんべい稲荷","稲荷","白井中","てがっぱら","猪鼻"],"research_status":"researching","research_notes":"白井市郷土資料館『白井の伝説と文化財』掲載。市町村横断索引では猪鼻との地理的接続も示されるため、由来・人物名・稲荷信仰の本文を後続で深掘りする。"},
+    {"record_id":"chiba-shiroi-saifukuji-koyasunyorai","title":"西福寺の子育如来","story_type":["寺社伝承","如来信仰","子育て信仰"],"cross_tags":["西福寺","谷田","子育如来","如来","子育て信仰"],"research_status":"researching","research_notes":"単なる寺院由緒ではなく、子育て信仰の由来・霊験・具体的な祈願対象を本文確認する。県内の子育観音・子安信仰との比較候補。"},
+    {"record_id":"chiba-shiroi-sawayama-kamakura-bridge","title":"沢山と鎌倉橋","story_type":["地名伝承","橋伝承","寺社伝承候補"],"cross_tags":["沢山","鎌倉橋","谷田","清戸","草薙神社","宗像神社","橋"],"research_status":"researching","research_notes":"谷田・清戸をまたぐ地理伝承として保持。沢山という地名、鎌倉橋の由来、草薙神社・宗像神社との関係を本文確認する。"},
+    {"record_id":"chiba-shiroi-deep-dive-priority-review","title":"白井市・深掘り優先レビュー","story_type":["データ整理"],"cross_tags":["村雨丸","切られ庚申","生食","ごんべい稲荷","子育如来","鎌倉橋"],"research_status":"active","research_notes":"現時点の深掘り優先度は、村雨丸・切られ庚申・生食を上位、次点としてごんべい稲荷、西福寺の子育如来、沢山と鎌倉橋。索引だけで筋を推測せず、本文または郷土資料で確認できたものから詳細化する。"}
+  ],
+  "batch_notes":"白井市一次索引巡回K。ごんべい稲荷、西福寺の子育如来、沢山と鎌倉橋を個別候補として追加し、深掘り優先キューを整理。"
+}
