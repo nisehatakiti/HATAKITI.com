@@ -210,9 +210,20 @@ function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model )
         return new WP_Error( 'hatakiti_ai_http_error', 'Anthropic API エラー: ' . $message );
     }
 
-    $text = isset( $body['content'][0]['text'] ) ? $body['content'][0]['text'] : '';
+    // content is an array of blocks, not always just one — extended-
+    // thinking models put a "thinking" block first, so the text block is
+    // not reliably index 0 (confirmed against a live response: block[0]
+    // type "thinking", block[1] type "text"). Take the first block that
+    // is actually text, not the first block.
+    $text = '';
+    foreach ( (array) ( isset( $body['content'] ) ? $body['content'] : array() ) as $block ) {
+        if ( isset( $block['type'] ) && 'text' === $block['type'] && isset( $block['text'] ) ) {
+            $text = $block['text'];
+            break;
+        }
+    }
     if ( '' === $text ) {
-        return new WP_Error( 'hatakiti_ai_empty_response', 'Anthropic APIから空の応答が返されました。' );
+        return new WP_Error( 'hatakiti_ai_empty_response', 'Anthropic APIから空の応答が返されました（応答にtextブロックが含まれていません）。' );
     }
 
     return $text;
