@@ -84,7 +84,7 @@ function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
 説明文やMarkdownのコードフェンスを一切付けず、以下の構造のJSONオブジェクトのみを出力してください。
 
 {
-  "issue_title": "週刊オカルト新聞 の号タイトル案",
+  "issue_title": "その号の内容を表す短いタイトル案（号数・回数は含めない。実在しない号数を作らないこと。例: 週刊オカルト新聞 ― 終末予言と奇跡の遺物）",
   "editorial_summary": "今週全体を振り返る編集後記（2〜4文程度）",
   "articles": [
     {
