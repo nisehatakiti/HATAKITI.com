@@ -12,6 +12,44 @@ get_header();
 ?>
 
 <main id="main" class="hk-container">
+    <style>
+        .hk-occult-front-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            padding: 30px 32px;
+            border: 1px solid var(--hk-border);
+            border-left: 4px solid var(--hk-accent-warm);
+            background: var(--hk-bg-elevated);
+        }
+        .hk-occult-front-card h3 {
+            font-family: var(--hk-font-serif);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .hk-occult-front-card p {
+            margin: 0;
+            color: var(--hk-fg-dim);
+            line-height: 1.9;
+        }
+        .hk-occult-front-card .hk-btn {
+            flex-shrink: 0;
+        }
+        .hk-tile--occult {
+            border-color: rgba(232,163,61,0.55);
+        }
+        .hk-tile--occult .hk-tile-label {
+            color: var(--hk-accent-warm);
+        }
+        @media (max-width: 700px) {
+            .hk-occult-front-card {
+                align-items: stretch;
+                flex-direction: column;
+                padding: 24px 20px;
+            }
+        }
+    </style>
 
     <section class="hk-intro">
         <?php foreach ( hatakiti_get_intro_lines() as $line ) : ?>
