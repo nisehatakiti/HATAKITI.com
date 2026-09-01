@@ -192,8 +192,83 @@ function hatakiti_call_occult_ai_text( $prompt, $system = '' ) {
     }
 }
 
+/**
+ * Minimal logging for AI call attempts — provider, attempt number, HTTP
+ * status, error type, final outcome only. Never logs the API key,
+ * Authorization header, prompt text, or news body content (§11 of the
+ * instruction). Uses PHP's own error_log() rather than a new logging
+ * mechanism, so nothing new has to be built or maintained to read it.
+ */
+function hatakiti_occult_ai_log( $fields ) {
+    $parts = array();
+    foreach ( $fields as $key => $value ) {
+        $parts[] = $key . '=' . $value;
+    }
+    error_log( '[hatakiti_occult_ai] ' . implode( ' ', $parts ) );
+}
+
+/**
+ * A one-time-transient error worth retrying (rate limit / server-side
+ * trouble / network hiccup) vs. one that will just fail the same way
+ * again (bad auth, bad request, etc.) and shouldn't be retried.
+ */
+function hatakiti_occult_ai_is_retryable( $is_wp_error, $http_code ) {
+    if ( $is_wp_error ) {
+        return true; // network error / timeout — worth another attempt
+    }
+    return in_array( $http_code, array( 429, 500, 502, 503, 504 ), true );
+}
+
+/**
+ * Shared retry wrapper for both provider adapters — up to 3 attempts
+ * total, exponential backoff (2s, then 4s) between retryable failures.
+ * Not a general-purpose HTTP client: it only decides retry/no-retry and
+ * logs each attempt: the caller still does its own response-code and
+ * body handling exactly as before, using whatever this returns (a
+ * WP_Error or the last HTTP response, same shape wp_remote_post() itself
+ * returns).
+ */
+function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label ) {
+    $max_attempts = 3;
+    $backoff      = array( 2, 4 );
+    $response     = null;
+
+    for ( $attempt = 1; $attempt <= $max_attempts; $attempt++ ) {
+        $response = wp_remote_post( $url, $args );
+
+        $is_wp_error = is_wp_error( $response );
+        $http_code   = $is_wp_error ? 0 : wp_remote_retrieve_response_code( $response );
+        $success     = ! $is_wp_error && 200 === $http_code;
+
+        hatakiti_occult_ai_log( array(
+            'provider'    => $provider_label,
+            'attempt'     => $attempt . '/' . $max_attempts,
+            'http_status' => $is_wp_error ? 'n/a' : $http_code,
+            'error_type'  => $is_wp_error ? $response->get_error_code() : ( $success ? '' : 'http_error' ),
+            'outcome'     => $success ? 'success' : 'failed',
+        ) );
+
+        if ( $success ) {
+            return $response;
+        }
+
+        $retryable = hatakiti_occult_ai_is_retryable( $is_wp_error, $http_code );
+        if ( ! $retryable || $attempt === $max_attempts ) {
+            hatakiti_occult_ai_log( array(
+                'provider' => $provider_label,
+                'outcome'  => $retryable ? 'gave_up_after_max_attempts' : 'not_retryable',
+            ) );
+            return $response;
+        }
+
+        sleep( $backoff[ $attempt - 1 ] );
+    }
+
+    return $response;
+}
+
 function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model ) {
-    $response = wp_remote_post( 'https://api.anthropic.com/v1/messages', array(
+    $response = hatakiti_occult_ai_post_with_retry( 'https://api.anthropic.com/v1/messages', array(
         // A real 14-item run at the newspaper-length article targets
         // measured stop_reason:"max_tokens" at 8000 (thinking + text
         // together) after ~113s — both the budget and the HTTP timeout
@@ -213,7 +288,7 @@ function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model )
                 array( 'role' => 'user', 'content' => $prompt ),
             ),
         ) ),
-    ) );
+    ), 'anthropic' );
 
     if ( is_wp_error( $response ) ) {
         return $response;
@@ -253,10 +328,9 @@ function hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model ) {
     }
     $messages[] = array( 'role' => 'user', 'content' => $prompt );
 
-    $response = wp_remote_post( 'https://api.openai.com/v1/chat/completions', array(
+    $response = hatakiti_occult_ai_post_with_retry( 'https://api.openai.com/v1/chat/completions', array(
         // Matched to the Anthropic adapter's headroom (see there for the
-        // real measurement this is based on) — not independently
-        // verified against a live OpenAI call.
+        // real measurement this is based on).
         'timeout' => 280,
         'headers' => array(
             'Authorization' => 'Bearer ' . $api_key,
@@ -268,7 +342,7 @@ function hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model ) {
             'temperature' => 0.3,
             'max_tokens'  => 20000,
         ) ),
-    ) );
+    ), 'openai' );
 
     if ( is_wp_error( $response ) ) {
         return $response;
