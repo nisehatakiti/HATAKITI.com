@@ -27,18 +27,30 @@ function hatakiti_occult_ai_provider() {
     return get_option( 'hatakiti_occult_ai_provider', 'anthropic' );
 }
 
+/**
+ * Model/API key are stored per-provider (hatakiti_occult_ai_model_openai,
+ * hatakiti_occult_ai_model_anthropic, etc.) so switching the provider
+ * dropdown to test one doesn't overwrite the other's already-working
+ * credentials. Falls back to the older, unprefixed option name (from
+ * before per-provider storage existed) so an already-configured provider
+ * keeps working without needing to be re-entered.
+ */
 function hatakiti_occult_ai_model() {
     if ( defined( 'HATAKITI_OCCULT_AI_MODEL' ) && HATAKITI_OCCULT_AI_MODEL ) {
         return HATAKITI_OCCULT_AI_MODEL;
     }
-    return get_option( 'hatakiti_occult_ai_model', '' );
+    $provider = hatakiti_occult_ai_provider();
+    $value    = get_option( 'hatakiti_occult_ai_model_' . $provider, '' );
+    return $value ? $value : get_option( 'hatakiti_occult_ai_model', '' );
 }
 
 function hatakiti_occult_ai_api_key() {
     if ( defined( 'HATAKITI_OCCULT_AI_API_KEY' ) && HATAKITI_OCCULT_AI_API_KEY ) {
         return HATAKITI_OCCULT_AI_API_KEY;
     }
-    return get_option( 'hatakiti_occult_ai_api_key', '' );
+    $provider = hatakiti_occult_ai_provider();
+    $value    = get_option( 'hatakiti_occult_ai_api_key_' . $provider, '' );
+    return $value ? $value : get_option( 'hatakiti_occult_ai_api_key', '' );
 }
 
 function hatakiti_occult_ai_is_configured() {
@@ -76,17 +88,17 @@ function hatakiti_render_occult_ai_settings_page() {
         update_option( 'hatakiti_occult_ai_provider', $provider, false );
 
         $model = isset( $_POST['hatakiti_occult_ai_model'] ) ? sanitize_text_field( wp_unslash( $_POST['hatakiti_occult_ai_model'] ) ) : '';
-        update_option( 'hatakiti_occult_ai_model', $model, false );
+        update_option( 'hatakiti_occult_ai_model_' . $provider, $model, false );
 
         // Only overwrite the stored key if a new one was actually typed —
         // the field is left blank on reload so the key is never echoed
         // back into the page source.
         $new_key = isset( $_POST['hatakiti_occult_ai_api_key'] ) ? trim( wp_unslash( $_POST['hatakiti_occult_ai_api_key'] ) ) : '';
         if ( '' !== $new_key ) {
-            update_option( 'hatakiti_occult_ai_api_key', $new_key, false );
+            update_option( 'hatakiti_occult_ai_api_key_' . $provider, $new_key, false );
         }
         if ( isset( $_POST['hatakiti_occult_ai_clear_key'] ) ) {
-            update_option( 'hatakiti_occult_ai_api_key', '', false );
+            update_option( 'hatakiti_occult_ai_api_key_' . $provider, '', false );
         }
 
         $saved = true;
