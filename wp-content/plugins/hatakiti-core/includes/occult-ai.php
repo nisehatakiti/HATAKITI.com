@@ -182,7 +182,12 @@ function hatakiti_call_occult_ai_text( $prompt, $system = '' ) {
 
 function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model ) {
     $response = wp_remote_post( 'https://api.anthropic.com/v1/messages', array(
-        'timeout' => 120,
+        // A real 14-item run at the newspaper-length article targets
+        // measured stop_reason:"max_tokens" at 8000 (thinking + text
+        // together) after ~113s — both the budget and the HTTP timeout
+        // need real headroom for a full week's worth of items, not just
+        // the small batches used in earlier testing.
+        'timeout' => 280,
         'headers' => array(
             'x-api-key'         => $api_key,
             'anthropic-version' => '2023-06-01',
@@ -190,7 +195,7 @@ function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model )
         ),
         'body' => wp_json_encode( array(
             'model'      => $model,
-            'max_tokens' => 8000,
+            'max_tokens' => 20000,
             'system'     => $system,
             'messages'   => array(
                 array( 'role' => 'user', 'content' => $prompt ),
@@ -237,7 +242,10 @@ function hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model ) {
     $messages[] = array( 'role' => 'user', 'content' => $prompt );
 
     $response = wp_remote_post( 'https://api.openai.com/v1/chat/completions', array(
-        'timeout' => 120,
+        // Matched to the Anthropic adapter's headroom (see there for the
+        // real measurement this is based on) — not independently
+        // verified against a live OpenAI call.
+        'timeout' => 280,
         'headers' => array(
             'Authorization' => 'Bearer ' . $api_key,
             'content-type'  => 'application/json',
@@ -246,6 +254,7 @@ function hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model ) {
             'model'       => $model,
             'messages'    => $messages,
             'temperature' => 0.3,
+            'max_tokens'  => 20000,
         ) ),
     ) );
 
