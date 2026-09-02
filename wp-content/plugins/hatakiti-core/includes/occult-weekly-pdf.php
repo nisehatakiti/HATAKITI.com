@@ -390,110 +390,254 @@ function hatakiti_occult_pdf_source_lines( $news_item_ids ) {
 }
 
 /**
- * 1記事ぶん（見出し列＋本文列＋出典）を描画する。
- *
- * @return array array('used_width'=>mm, 'overflow_body'=>array|null, 'bottom_y'=>mm)
+ * 段落配列(units)の総ユニット数（段落区切りの字下げぶんも1として含む）。
  */
-function hatakiti_occult_pdf_draw_article( $pdf, $font_regular, $font_bold, $article, $tier, $c, $x_right, $y_top, $col_h_mm, $available_width_mm ) {
+function hatakiti_occult_pdf_count_units( $body_text ) {
+    $paragraphs = hatakiti_occult_pdf_build_units( $body_text );
+    $total = 0;
+    foreach ( $paragraphs as $p ) {
+        $total += count( $p ) + 1;
+    }
+    return array( $total, $paragraphs );
+}
+
+/**
+ * 見出し（横書き・箱の全幅で折り返し）に必要な高さ(mm)を、実際には
+ * 描画せず見積もる。
+ */
+function hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $font_pt, $text, $box_w ) {
+    if ( '' === (string) $text ) {
+        return 0.0;
+    }
+    $pdf->SetFont( $font_bold, '', $font_pt );
+    $line_h = $font_pt * 0.3528 * 1.3;
+    $h = $pdf->getStringHeight( $box_w, (string) $text );
+    return max( $line_h, $h );
+}
+
+/**
+ * 本文unit数と枠幅から、縦組みに必要な高さ(mm)を見積もる。
+ */
+function hatakiti_occult_pdf_estimate_body_height( $unit_count, $box_w_mm, $font_pt ) {
+    $char_h     = $font_pt * 0.3528;
+    $col_pitch  = $char_h * 1.08;
+    $n_cols_fit = max( 1, (int) floor( $box_w_mm / $col_pitch ) );
+    $rows       = max( 1, (int) ceil( $unit_count / $n_cols_fit ) );
+    // 実描画側は capacity = floor(h/char_h) - 1 （禁則の押し出し余裕）
+    // なので、見積もりも +1 行ぶん多めに確保して整合させる。
+    return ( $rows + 1 ) * $char_h;
+}
+
+/**
+ * 記事1本を、幅$box_wの箱に収めた場合に必要な全体の高さ(mm)を見積もる
+ * （見出し＋余白＋本文＋出典ストリップ）。ゾーン幅・高さを決める前の
+ * 事前見積もりに使う。
+ */
+function hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $box_w ) {
     $fonts    = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
     $headline = (string) ( $article['headline'] ?? '' );
     $body     = (string) ( $article['body'] ?? '' );
 
-    // 見出し列（最大2列まで）
-    $headline_units = array( mb_str_split( $headline, 1, 'UTF-8' ) );
-    $headline_units[0] = array_map( function ( $ch ) {
-        return array( 'type' => 'char', 'ch' => $ch );
-    }, $headline_units[0] );
+    $head_h = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $fonts['headline'], $headline, $box_w );
+    list( $unit_count, ) = hatakiti_occult_pdf_count_units( $body );
+    $body_h = hatakiti_occult_pdf_estimate_body_height( $unit_count, $box_w, $fonts['body'] );
 
-    $head_char_h    = $fonts['headline'] * 0.3528;
-    $head_col_pitch = $head_char_h * 1.08;
-    $head_max_cols  = max( 1, (int) floor( $available_width_mm / $head_col_pitch ) );
-    $head_max_cols  = min( 2, $head_max_cols );
+    $gap   = $head_h > 0 ? 1.8 : 0.5;
+    $src_h = $head_h > 0 ? 4.2 : 0.0;
+    return $head_h + $gap + $body_h + $src_h;
+}
 
-    if ( $head_max_cols < 1 ) {
-        return array( 'used_width' => 0, 'overflow_body' => hatakiti_occult_pdf_build_units( $body ), 'bottom_y' => $y_top );
-    }
+/**
+ * 指定した高さに収まる「自然な幅」を逆算する（大見出しゾーンの幅決定用）。
+ * 見出し高さは幅にあまり依存しないため、ラフな仮幅で一度だけ見積もる
+ * 近似で十分（最終的な描画幅は実際に割り当てた幅で改めて折り返される）。
+ */
+function hatakiti_occult_pdf_natural_width_for_height( $pdf, $font_bold, $article, $tier, $fixed_h ) {
+    $fonts    = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
+    $headline = (string) ( $article['headline'] ?? '' );
+    $body     = (string) ( $article['body'] ?? '' );
 
-    $head_result = hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $headline_units, $x_right, $y_top, $col_h_mm, $head_max_cols, $fonts['headline'], $font_bold );
-    $used_width  = $head_result['columns_used'] * $head_col_pitch;
+    $probe_w = 95.0;
+    $head_h  = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $fonts['headline'], $headline, $probe_w );
 
-    // 見出しが収まりきらなかった分は本文の先頭に差し戻す（情報を失わない）
-    $headline_leftover_text = '';
-    if ( $head_result['overflow'] ) {
-        foreach ( $head_result['remainder'] as $para ) {
-            foreach ( $para as $u ) {
-                $headline_leftover_text .= $u['ch'];
-            }
-        }
-    }
-
-    $gap = 1.3;
-    $used_width += $gap;
-    $x_after_head = $x_right - $used_width;
-
-    $remaining_for_body = $available_width_mm - $used_width;
-
-    $body_full_text = ( $headline_leftover_text ? '【続き】' . $headline_leftover_text . "\n\n" : '' ) . $body;
-    $body_paragraphs = hatakiti_occult_pdf_build_units( $body_full_text );
-
+    list( $unit_count, ) = hatakiti_occult_pdf_count_units( $body );
     $body_char_h    = $fonts['body'] * 0.3528;
     $body_col_pitch = $body_char_h * 1.08;
-    $body_capacity  = max( 1, (int) floor( $col_h_mm / $body_char_h ) - 1 );
+    $body_h_budget  = max( 10, $fixed_h - $head_h - 1.8 - 4.2 );
+    $capacity       = max( 1, (int) floor( $body_h_budget / $body_char_h ) - 1 );
+    $cols_needed    = max( 1, (int) ceil( $unit_count / $capacity ) );
 
-    // 本文が必要とする列数を先に見積もる（記事量に応じて紙面を組み替える）
-    $unit_count = 0;
-    foreach ( $body_paragraphs as $para ) {
-        $unit_count += count( $para ) + 1; // 段落区切り(字下げ)ぶんも1列消費見込みに含める
+    return $cols_needed * $body_col_pitch;
+}
+
+/**
+ * 1記事を「箱」(x=左端, y=上端, w=幅, h=高さ)の中に描画する。
+ *
+ * 指示書の核心：Article = 面積であり Article = 1列 ではない。見出しは
+ * 横書きで箱の全幅を使って上部に、本文は見出しの下で「箱の全幅を使った
+ * 縦書き複数列」として組む。これにより1記事が細い縦ストリップに閉じ
+ * こめられることを避ける。
+ *
+ * @return array array('overflow_body'=>array|null)
+ */
+function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box ) {
+    $fonts    = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
+    $headline = (string) ( $article['headline'] ?? '' );
+    $body     = (string) ( $article['body'] ?? '' );
+
+    $x = $box['x'];
+    $y = $box['y'];
+    $w = $box['w'];
+    $h = $box['h'];
+
+    // 見出し：横書き、箱の全幅で折り返し（新聞の見出し帯）。
+    // 続きの箱（headline=''）は見出し帯そのものを省略する。
+    if ( '' === $headline ) {
+        $head_h = 0.0;
+    } else {
+        $head_line_h = $fonts['headline'] * 0.3528 * 1.3;
+        $pdf->SetFont( $font_bold, '', $fonts['headline'] );
+        $head_h = max( $head_line_h, $pdf->getStringHeight( $w, $headline ) );
+        $pdf->SetXY( $x, $y );
+        $pdf->MultiCell( $w, $head_line_h, $headline, 0, 'L' );
     }
-    $needed_cols = max( 1, (int) ceil( $unit_count / $body_capacity ) );
-    $max_cols_by_width = max( 0, (int) floor( $remaining_for_body / $body_col_pitch ) );
-    $cols_to_use = min( $needed_cols, $max_cols_by_width );
+
+    // 続きの箱（headline=''）は出典ストリップも省略する
+    // （出典は記事の最初の箱にすでに表示済みのため、情報は失われない）。
+    $gap   = $head_h > 0 ? 1.8 : 0.5;
+    $src_h = $head_h > 0 ? 4.2 : 0.0;
+    $body_top = $y + $head_h + $gap;
+    $body_h   = $h - ( $head_h + $gap ) - $src_h;
 
     $overflow_body = null;
-    if ( $cols_to_use < 1 ) {
-        $overflow_body = $body_paragraphs;
-        $body_used_width = 0;
-    } else {
-        $body_result = hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $body_paragraphs, $x_after_head, $y_top, $col_h_mm, $cols_to_use, $fonts['body'], $font_regular );
-        $body_used_width = $body_result['columns_used'] * $body_col_pitch;
-        if ( $body_result['overflow'] ) {
-            $overflow_body = $body_result['remainder'];
+    if ( $body_h > 2.0 ) {
+        list( $unit_count, $body_paragraphs ) = hatakiti_occult_pdf_count_units( $body );
+
+        $body_char_h    = $fonts['body'] * 0.3528;
+        $body_col_pitch = $body_char_h * 1.08;
+        $body_capacity  = max( 1, (int) floor( $body_h / $body_char_h ) - 1 );
+        $needed_cols    = max( 1, (int) ceil( $unit_count / $body_capacity ) );
+        $max_cols_by_w  = max( 0, (int) floor( $w / $body_col_pitch ) );
+        $cols_to_use    = min( $needed_cols, $max_cols_by_w );
+
+        if ( $cols_to_use < 1 ) {
+            $overflow_body = $body_paragraphs;
+        } else {
+            $body_result = hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $body_paragraphs, $x + $w, $body_top, $body_h, $cols_to_use, $fonts['body'], $font_regular );
+            if ( $body_result['overflow'] ) {
+                $overflow_body = $body_result['remainder'];
+            }
         }
+    } else {
+        $overflow_body = hatakiti_occult_pdf_build_units( $body );
     }
 
-    $total_used_width = $used_width + $body_used_width;
-
-    // 出典（横書き、記事ブロック下端の専用ストリップ内に1行だけ）。
-    // 狭い記事幅でも隣の記事とぶつからないよう、割当幅に収まる文字数まで
-    // 短縮する（詳細な元記事タイトル・URLは紙面末尾の出典一覧に必ず載る
-    // ので、ここで削っても情報は失われない）。
+    // 出典（横書き、箱の下端の専用ストリップ内に1行）。狭い箱でも隣と
+    // ぶつからないよう割当幅に収まる文字数まで短縮する（詳細な元記事
+    // タイトル・URLは紙面末尾の出典一覧に必ず載るので情報は失われない）。
     $source_lines = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
-    if ( $source_lines && $total_used_width > 6 ) {
-        $src_font   = 6.0;
-        $block_left = $x_right - $total_used_width;
-        $src_y      = $y_top + $col_h_mm + 0.8;
-        $max_chars  = max( 2, (int) floor( $total_used_width / ( $src_font * 0.62 ) ) );
-        $sl         = $source_lines[0];
-        $text       = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
+    if ( $source_lines && $w > 12 && $src_h > 0 ) {
+        $src_font  = 6.3;
+        $src_y     = $y + $h - $src_h + 0.6;
+        $max_chars = max( 2, (int) floor( $w / ( $src_font * 0.55 ) ) );
+        $sl        = $source_lines[0];
+        $text      = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
 
         $pdf->SetFont( $font_regular, '', $src_font );
-        $pdf->SetXY( $block_left, $src_y );
-        $pdf->Cell( $total_used_width, 3.4, $text, 0, 0, 'C' );
+        $pdf->SetXY( $x, $src_y );
+        $pdf->Cell( $w, 3.4, $text, 0, 0, 'L' );
         if ( $sl['url'] ) {
-            $pdf->Link( $block_left, $src_y, $total_used_width, 3.4, $sl['url'] );
+            $pdf->Link( $x, $src_y, $w, 3.4, $sl['url'] );
         }
     }
 
-    // 記事間の縦罫線
-    $rule_x = $x_right - $total_used_width - 0.9;
-    $pdf->SetLineWidth( 'large' === $tier ? 0.5 : 0.2 );
-    $pdf->Line( $rule_x, $y_top, $rule_x, $y_top + $col_h_mm + 4.2 );
+    return array( 'overflow_body' => $overflow_body );
+}
 
-    return array(
-        'used_width'    => $total_used_width + 1.7, // 罫線ぶんの余白込み
-        'overflow_body' => $overflow_body,
-        'headline_overflowed' => (bool) $headline_leftover_text,
-    );
+/**
+ * キュー先頭から記事を取り出しては、指定ゾーン(zone_x, zone_y, zone_w)に
+ * 上から下へ積み上げる。1記事は常にゾーンの全幅を使う（Article=面積の
+ * 原則）。高さが記事本文量に収まりきらない場合は続きを次のゾーン/ページ
+ * のために先頭に差し戻す（articles_jsonそのものは一切変更しない）。
+ *
+ * @param array &$queue 先頭から処理。各要素に '_tier' が必須。
+ * @return array array('bottom_y'=>mm, 'drew_any'=>bool, 'debug'=>array)
+ */
+function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
+    $y         = $zone_y;
+    $remaining = $zone_h_budget;
+    $min_box_h = 16.0;
+    $row_gap   = 2.4;
+    $drew_any  = false;
+    $debug     = array();
+    $stall_key = null;
+    $stall_count = 0;
+
+    while ( ! empty( $queue ) && $remaining > $min_box_h ) {
+        $article = $queue[0];
+        $tier    = $article['_tier'];
+
+        // 安全弁：同じ記事が縮まないまま(=文字数が減らないまま)連続で
+        // 続き扱いになった場合、無限/準無限ループで紙面全体を消費して
+        // しまう不具合を将来にわたって防ぐ。3回連続で進捗が無ければ、
+        // その時点までの内容を確定させて次の記事へ進む（削除ではなく
+        // 「未掲載」として警告に回す — articles_jsonは変更しない）。
+        $body_len_now = mb_strlen( (string) ( $article['body'] ?? '' ) );
+        if ( $stall_key === $body_len_now ) {
+            $stall_count++;
+        } else {
+            $stall_key   = $body_len_now;
+            $stall_count = 0;
+        }
+        if ( $stall_count >= 3 ) {
+            break;
+        }
+
+        $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $zone_w );
+        $actual_h = min( $needed_h, $remaining );
+
+        $box    = array( 'x' => $zone_x, 'y' => $y, 'w' => $zone_w, 'h' => $actual_h );
+        $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box );
+        $drew_any = true;
+
+        $debug[] = array(
+            'page' => $page_no, 'tier' => $tier,
+            'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
+            'x' => round( $zone_x, 1 ), 'y' => round( $y, 1 ), 'w' => round( $zone_w, 1 ), 'h' => round( $actual_h, 1 ),
+            'overflow' => ! empty( $result['overflow_body'] ),
+        );
+
+        $pdf->SetLineWidth( 'large' === $tier ? 0.5 : 0.25 );
+        $pdf->Line( $zone_x, $y + $actual_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $actual_h + ( $row_gap / 2 ) );
+
+        if ( ! empty( $result['overflow_body'] ) ) {
+            $rebuilt = '';
+            foreach ( $result['overflow_body'] as $para ) {
+                $ptext = '';
+                foreach ( $para as $u ) {
+                    $ptext .= $u['ch'];
+                }
+                $rebuilt .= ( $rebuilt ? "\n\n" : '' ) . $ptext;
+            }
+            // 続きの箱は見出し帯を持たない（見出しの高さぶんが無駄になり、
+            // 残り予算が小さいほど本文がほぼ進まなくなるため）。テキスト
+            // マーカーで「続き」を示す方式は、列容量が1〜2文字しかない
+            // ほど詰まった状況でマーカー自体が一部しか収まらず、次周回で
+            // 再度マーカーを継ぎ足して無限に伸び続けるバグを起こしたため
+            // 採用しない（本文をそのまま続けるだけにする）。
+            $continuation             = $article;
+            $continuation['headline'] = '';
+            $continuation['body']     = $rebuilt;
+            $queue[0]                 = $continuation;
+        } else {
+            array_shift( $queue );
+        }
+
+        $y         += $actual_h + $row_gap;
+        $remaining -= ( $actual_h + $row_gap );
+    }
+
+    return array( 'bottom_y' => $y, 'drew_any' => $drew_any, 'debug' => $debug );
 }
 
 /**
@@ -576,10 +720,9 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
     $tiers = array( 'large' => array(), 'medium' => array(), 'small' => array() );
     foreach ( $articles as $a ) {
         $t = isset( $a['tier'] ) && isset( $tiers[ $a['tier'] ] ) ? $a['tier'] : 'small';
+        $a['_tier']  = $t;
         $tiers[ $t ][] = $a;
     }
-
-    $ordered_articles = array_merge( $tiers['large'], $tiers['medium'], $tiers['small'] );
 
     $all_sources = array();
     foreach ( $articles as $article ) {
@@ -605,137 +748,123 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
     $c = hatakiti_occult_pdf_layout_constants();
     $full_w = $c['page_w'] - $c['margin_l'] - $c['margin_r'];
 
-    $warnings = array();
+    $warnings   = array();
+    $debug_log  = array();
 
     // フッター（出典＋編集後記）に必要な高さを先に見積もる
     $pdf->AddPage();
     $footer_h = hatakiti_occult_pdf_footer_height( $pdf, $font_regular, $all_sources, $editorial_summary, $full_w );
 
-    // --- 試み1: 1ページに収まるか ---
-    $source_strip_h = 4.2; // 出典1行ぶんの専用スペース（記事ごとの列の下）
+    $page1_col_top  = $c['margin_t'] + $c['masthead_h'];
+    $page1_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page1_col_top;
 
-    $page1_col_top    = $c['margin_t'] + $c['masthead_h'];
-    $page1_col_bottom = $c['page_h'] - $c['margin_b'] - $footer_h - $source_strip_h;
-    $page1_col_h      = $page1_col_bottom - $page1_col_top;
+    // 紙面レイアウトの核心：まず紙面領域を「large記事ゾーン」（右側、
+    // 内容量から算出した幅、ページ全高）と「left記事ゾーン」（medium/
+    // small、残り幅すべて）に分割する。Article = 面積であり、
+    // Article = 1列 ではない — 各記事はゾーンの全幅を使って複数列の
+    // 縦書き本文を組む（指示書§7/§18）。
+    $large_zone_w = 0;
+    if ( $tiers['large'] ) {
+        $natural_w = 0;
+        foreach ( $tiers['large'] as $a ) {
+            $natural_w += hatakiti_occult_pdf_natural_width_for_height( $pdf, $font_bold, $a, 'large', $page1_col_h_full );
+        }
+        $large_zone_w = $natural_w * 1.6; // 見出し帯・余白ぶんの余裕
+        $large_zone_w = max( $full_w * 0.34, min( $full_w * 0.62, $large_zone_w ) );
+    }
+    $zone_gap    = $large_zone_w > 0 ? 3.5 : 0;
+    $left_zone_w = $full_w - $large_zone_w - $zone_gap;
 
-    $attempt_single_page = ( $page1_col_h > 60 ); // 最低限の高さがなければ最初から2ページ想定
+    // --- 試み1: footerぶんを引いた高さで、両ゾーンとも1ページに収まるか ---
+    $reserved_h_1page = $footer_h + 3.0;
+    $h_try1           = $page1_col_h_full - $reserved_h_1page;
 
     $fits_one_page = false;
-    if ( $attempt_single_page ) {
-        // ドライラン用に別インスタンスで試し、実際の描画はしない…と
-        // したいところだが、TCPDFは描画とレイアウト計算が一体のため、
-        // 実際に描画しながら overflow を判定し、だめなら作り直す。
+    if ( $h_try1 > 60 ) {
         list( $pdf, $font_regular, $font_bold ) = hatakiti_occult_pdf_new_tcpdf();
         $pdf->AddPage();
         hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c, $issue_subtitle, $issue_id, $issue_date );
 
-        $x_cursor   = $c['page_w'] - $c['margin_r'];
-        $left_limit = $c['margin_l'];
-        $any_overflow = false;
-        $prev_tier = null;
+        $large_queue = $tiers['large'];
+        $other_queue = array_merge( $tiers['medium'], $tiers['small'] );
 
-        foreach ( $ordered_articles as $article ) {
-            $tier = isset( $article['tier'] ) && isset( $tiers[ $article['tier'] ] ) ? $article['tier'] : 'small';
-            $available = $x_cursor - $left_limit;
-            if ( $available < 15 ) {
-                $any_overflow = true;
-                break;
-            }
-            $result = hatakiti_occult_pdf_draw_article( $pdf, $font_regular, $font_bold, $article, $tier, $c, $x_cursor, $page1_col_top, $page1_col_h, $available );
-            $x_cursor -= $result['used_width'];
-            if ( $result['overflow_body'] || $result['headline_overflowed'] ) {
-                $any_overflow = true;
-                break;
-            }
-            $prev_tier = $tier;
-        }
+        $large_x = $c['margin_l'] + $left_zone_w + $zone_gap;
+        $large_stack = $large_zone_w > 0
+            ? hatakiti_occult_pdf_stack_articles( $large_queue, $pdf, $font_regular, $font_bold, $large_x, $page1_col_top, $large_zone_w, $h_try1, 1 )
+            : array( 'bottom_y' => $page1_col_top, 'debug' => array() );
 
-        if ( ! $any_overflow ) {
+        $left_stack = hatakiti_occult_pdf_stack_articles( $other_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $left_zone_w, $h_try1, 1 );
+
+        $debug_log = array_merge( $large_stack['debug'], $left_stack['debug'] );
+
+        if ( empty( $large_queue ) && empty( $other_queue ) ) {
             $fits_one_page = true;
-            hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $all_sources, $editorial_summary, $page1_col_bottom + 2 );
+            if ( $large_zone_w > 0 ) {
+                $pdf->SetLineWidth( 0.6 );
+                $pdf->Line( $large_x - ( $zone_gap / 2 ), $page1_col_top, $large_x - ( $zone_gap / 2 ), $page1_col_top + $h_try1 );
+            }
+            $footer_y = max( $large_stack['bottom_y'], $left_stack['bottom_y'], $page1_col_top + 40 );
+            hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $all_sources, $editorial_summary, $footer_y + 2 );
         }
     }
 
-    // --- 試み2: 2ページ構成 ---
+    // --- 試み2: 2ページ構成（large記事はページ1でフル高さを使い、
+    //     medium/smallはページ1左ゾーン→ページ2の順に流れる） ---
     if ( ! $fits_one_page ) {
         list( $pdf, $font_regular, $font_bold ) = hatakiti_occult_pdf_new_tcpdf();
         $pdf->AddPage();
         hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c, $issue_subtitle, $issue_id, $issue_date );
 
-        $page1_col_top_full    = $c['margin_t'] + $c['masthead_h'];
-        $page1_col_bottom_full = $c['page_h'] - $c['margin_b'] - $source_strip_h;
-        $page1_col_h_full      = $page1_col_bottom_full - $page1_col_top_full;
+        $large_queue = $tiers['large'];
+        $other_queue = array_merge( $tiers['medium'], $tiers['small'] );
 
-        $x_cursor    = $c['page_w'] - $c['margin_r'];
-        $left_limit  = $c['margin_l'];
-        $page        = 1;
-        $page2_started = false;
-        $page2_col_top = 0;
-        $page2_col_h   = 0;
+        $large_x = $c['margin_l'] + $left_zone_w + $zone_gap;
+        $large_stack = $large_zone_w > 0
+            ? hatakiti_occult_pdf_stack_articles( $large_queue, $pdf, $font_regular, $font_bold, $large_x, $page1_col_top, $large_zone_w, $page1_col_h_full, 1 )
+            : array( 'bottom_y' => $page1_col_top, 'debug' => array() );
+        if ( $large_zone_w > 0 ) {
+            $pdf->SetLineWidth( 0.6 );
+            $pdf->Line( $large_x - ( $zone_gap / 2 ), $page1_col_top, $large_x - ( $zone_gap / 2 ), $page1_col_top + $page1_col_h_full );
+        }
+
+        $left_stack = hatakiti_occult_pdf_stack_articles( $other_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $left_zone_w, $page1_col_h_full, 1 );
+
+        $debug_log = array_merge( $large_stack['debug'], $left_stack['debug'] );
+
+        // ページ2：large残り（稀）＋medium/small残りを、紙面全幅の
+        // 単一ゾーンとして続きから積み上げる。
+        $page2_queue = array_merge( $large_queue, $other_queue );
         $unrecoverable = false;
 
-        $queue = $ordered_articles;
-        $i     = 0;
-        while ( $i < count( $queue ) ) {
-            $article = $queue[ $i ];
-            $tier    = isset( $article['tier'] ) && isset( $tiers[ $article['tier'] ] ) ? $article['tier'] : 'small';
+        if ( ! empty( $page2_queue ) ) {
+            $pdf->AddPage();
+            hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c );
+            $page2_col_top    = $c['margin_t'] + $c['page2_header_h'];
+            $page2_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page2_col_top;
+            $reserved_h_2page = $footer_h + 3.0;
+            $h_page2          = max( 40, $page2_col_h_full - $reserved_h_2page );
 
-            if ( 1 === $page ) {
-                $col_top = $page1_col_top_full;
-                $col_h   = $page1_col_h_full;
-            } else {
-                $col_top = $page2_col_top;
-                $col_h   = $page2_col_h;
+            $page2_stack = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page2_col_top, $full_w, $h_page2, 2 );
+            $debug_log   = array_merge( $debug_log, $page2_stack['debug'] );
+
+            if ( ! empty( $page2_queue ) ) {
+                $unrecoverable = true;
             }
 
-            $available = $x_cursor - $left_limit;
-            if ( $available < 15 ) {
-                if ( 1 === $page ) {
-                    $pdf->AddPage();
-                    hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c );
-                    $page2_col_top = $c['margin_t'] + $c['page2_header_h'];
-                    $page2_col_bottom = $c['page_h'] - $c['margin_b'] - $footer_h - $source_strip_h;
-                    $page2_col_h   = $page2_col_bottom - $page2_col_top;
-                    $x_cursor      = $c['page_w'] - $c['margin_r'];
-                    $page          = 2;
-                    continue;
-                } else {
-                    $unrecoverable = true;
-                    break;
-                }
-            }
-
-            $result = hatakiti_occult_pdf_draw_article( $pdf, $font_regular, $font_bold, $article, $tier, $c, $x_cursor, $col_top, $col_h, $available );
-            $x_cursor -= $result['used_width'];
-
-            if ( $result['overflow_body'] ) {
-                // 残りを次の記事として再キューに積む（本文を勝手に切り捨てない）
-                $rebuilt_text = '';
-                foreach ( $result['overflow_body'] as $para ) {
-                    $ptext = '';
-                    foreach ( $para as $u ) {
-                        $ptext .= $u['ch'];
-                    }
-                    $rebuilt_text .= ( $rebuilt_text ? "\n\n" : '' ) . $ptext;
-                }
-                $continuation = $article;
-                $continuation['headline'] = '（続き）';
-                $continuation['body']     = $rebuilt_text;
-                array_splice( $queue, $i + 1, 0, array( $continuation ) );
-            }
-
-            $i++;
+            $footer_y = max( $page2_stack['bottom_y'], $page2_col_top + 30 );
+        } else {
+            $footer_y = max( $large_stack['bottom_y'], $left_stack['bottom_y'], $page1_col_top + 40 );
         }
 
         if ( $unrecoverable ) {
             $remaining_headlines = array();
-            for ( $r = $i; $r < count( $queue ); $r++ ) {
-                $remaining_headlines[] = ( isset( $queue[ $r ]['headline'] ) ? mb_substr( $queue[ $r ]['headline'], 0, 20 ) : '' ) . '（' . mb_strlen( $queue[ $r ]['body'] ?? '' ) . '字）';
+            foreach ( $page2_queue as $r_article ) {
+                $remaining_headlines[] = mb_substr( (string) ( $r_article['headline'] ?? '' ), 0, 20 ) . '（' . mb_strlen( (string) ( $r_article['body'] ?? '' ) ) . '字）';
             }
             $warnings[] = '記事量が多く、2ページ以内に紙面へ収まりませんでした。記事本文は自動で削除していません（articles_jsonは無変更）。未掲載: ' . implode( ' / ', $remaining_headlines );
         }
 
-        hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $all_sources, $editorial_summary, ( 2 === $page ? $page2_col_top + $page2_col_h : $page1_col_bottom_full ) + 2 );
+        hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $all_sources, $editorial_summary, $footer_y + 2 );
     }
 
     $pages = $pdf->getNumPages();
@@ -747,6 +876,7 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         'path'     => $tmp_path,
         'pages'    => $pages,
         'warnings' => $warnings,
+        'debug'    => $debug_log,
     );
 }
 
