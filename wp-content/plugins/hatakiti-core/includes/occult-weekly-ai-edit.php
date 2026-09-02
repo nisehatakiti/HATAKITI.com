@@ -38,28 +38,6 @@ function hatakiti_occult_ai_importance_to_tier( $importance ) {
     return isset( $map[ $importance ] ) ? $map[ $importance ] : 'small';
 }
 
-/**
- * Observed, reproducible model quirk: on longer multi-article responses,
- * Claude sometimes emits the literal two characters "nn" where it clearly
- * intended a paragraph break (i.e. what should have been "\n\n" loses its
- * backslashes), always directly after a Japanese sentence-ending "。".
- * Confirmed against two real generations (14-item and 8-item batches, 24
- * and 28 occurrences respectively) — every single occurrence was
- * "。nn", never "nn" as part of real word/acronym content, and a real
- * newline never appeared alongside it. A short 3-item test run did not
- * reproduce it at all, so this looks length/complexity-correlated rather
- * than a fixed per-call bug — kept as a narrow, defensive normalization
- * here rather than a prompt change, since prompting harder for JSON
- * correctness risks side effects on unrelated behavior for a Claude-side
- * generation quirk this code has no direct control over.
- */
-function hatakiti_fix_occult_ai_paragraph_breaks( $body ) {
-    if ( ! is_string( $body ) ) {
-        return $body;
-    }
-    return str_replace( '。nn', "。\n\n", $body );
-}
-
 function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
     $lines           = array();
     $fetched_count   = 0;
@@ -219,7 +197,7 @@ function hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start,
         $importance = isset( $article['importance'] ) ? (string) $article['importance'] : 'minor';
         $tier       = hatakiti_occult_ai_importance_to_tier( $importance );
         $headline   = isset( $article['headline'] ) ? sanitize_text_field( $article['headline'] ) : '';
-        $body       = isset( $article['body'] ) ? wp_kses_post( hatakiti_fix_occult_ai_paragraph_breaks( $article['body'] ) ) : '';
+        $body       = isset( $article['body'] ) ? wp_kses_post( $article['body'] ) : '';
 
         $source_ids = array();
         foreach ( (array) ( isset( $article['source_item_ids'] ) ? $article['source_item_ids'] : array() ) as $sid ) {
@@ -274,7 +252,12 @@ function hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start,
     update_post_meta( $post_id, 'hatakiti_occult_week_start', $week_start );
     update_post_meta( $post_id, 'hatakiti_occult_week_end', $week_end );
     update_post_meta( $post_id, 'hatakiti_occult_issue_date', $week_end );
-    update_post_meta( $post_id, 'hatakiti_occult_editorial_summary', $editorial_summary );
+    // wp_slash(): see the comment on the articles_json save in
+    // hatakiti_finalize_occult_weekly_groups() — update_post_meta()
+    // unslashes string values internally, so anything not coming
+    // straight from $_POST needs to be pre-slashed or a literal
+    // backslash in the text gets silently stripped.
+    update_post_meta( $post_id, 'hatakiti_occult_editorial_summary', wp_slash( $editorial_summary ) );
 
     // Same save path the manual 号編集フォーム uses — the resulting draft
     // is a completely normal occult_weekly issue, editable by hand

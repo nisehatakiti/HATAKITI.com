@@ -116,7 +116,12 @@ function hatakiti_handle_occult_weekly_submit( $post_id ) {
     update_post_meta( $post_id, 'hatakiti_occult_week_start', $week_start );
     update_post_meta( $post_id, 'hatakiti_occult_week_end', $week_end );
     update_post_meta( $post_id, 'hatakiti_occult_issue_date', $issue_date );
-    update_post_meta( $post_id, 'hatakiti_occult_editorial_summary', $editorial_summary );
+    // wp_slash(): update_post_meta() internally unslashes string values
+    // before storing (WordPress's standard convention for data that
+    // hasn't come straight from $_POST) — passing already-unslashed text
+    // through unchanged causes it to be unslashed a second time, silently
+    // stripping any literal backslash the text legitimately contains.
+    update_post_meta( $post_id, 'hatakiti_occult_editorial_summary', wp_slash( $editorial_summary ) );
 
     hatakiti_save_occult_weekly_articles( $post_id );
 
@@ -198,7 +203,17 @@ function hatakiti_finalize_occult_weekly_groups( $post_id, $groups, $relevant_it
         return $tier_rank[ $a['tier'] ] <=> $tier_rank[ $b['tier'] ];
     } );
 
-    update_post_meta( $post_id, 'hatakiti_occult_articles_json', wp_json_encode( $groups, JSON_UNESCAPED_UNICODE ) );
+    // wp_slash() here is required, not optional: wp_json_encode() escapes
+    // every real newline in an article body as the two literal characters
+    // \ and n (valid JSON syntax) — without slashing, update_post_meta()
+    // strips that backslash on the way in, leaving orphaned "n" text
+    // where a paragraph break should be. This was the actual cause of a
+    // bug previously (mis)diagnosed as an AI text-generation quirk and
+    // patched with a narrow string-replace at the call site instead of
+    // here — confirmed via a direct before/after save round-trip test,
+    // and that workaround has been removed now that the real cause is
+    // fixed at the source.
+    update_post_meta( $post_id, 'hatakiti_occult_articles_json', wp_slash( wp_json_encode( $groups, JSON_UNESCAPED_UNICODE ) ) );
 
     foreach ( $relevant_item_ids as $item_id ) {
         update_post_meta( $item_id, 'hatakiti_occult_issue_post_id', $post_id );
