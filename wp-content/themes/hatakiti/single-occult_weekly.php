@@ -172,6 +172,11 @@ get_header();
                     <?php if ( $issue_date ) : ?> ・ 発行日: <?php echo esc_html( $issue_date ); ?><?php endif; ?>
                 </div>
                 <p class="hk-occult-subtitle">HATAKITI OCCULT WEEKLY</p>
+                <?php if ( $articles ) : ?>
+                    <p class="hk-occult-pdf-link">
+                        <a href="<?php echo esc_url( add_query_arg( 'hatakiti_pdf', '1', get_permalink() ) ); ?>">紙面PDF版を見る</a>
+                    </p>
+                <?php endif; ?>
             </header>
 
             <?php if ( $tiers['large'] ) : ?>

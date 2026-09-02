@@ -145,6 +145,8 @@ function hatakiti_register_occult_meta() {
         'hatakiti_occult_main_topic_count',
         'hatakiti_occult_editorial_summary',
         'hatakiti_occult_generated_at',
+        'hatakiti_occult_pdf_cache_key',
+        'hatakiti_occult_pdf_warnings',
         // occult_news_item
         'hatakiti_occult_source_post_id',
         'hatakiti_occult_source_name',
