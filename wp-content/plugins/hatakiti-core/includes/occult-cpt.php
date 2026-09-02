@@ -154,6 +154,10 @@ function hatakiti_register_occult_meta() {
         'hatakiti_occult_content_hash',
         'hatakiti_occult_issue_post_id',
         'hatakiti_occult_raw_metadata',
+        'hatakiti_occult_source_article_text',
+        'hatakiti_occult_source_article_fetch_status',
+        'hatakiti_occult_source_article_fetch_error',
+        'hatakiti_occult_source_article_fetched_at',
         // occult_news_source
         'hatakiti_occult_rss_url',
         'hatakiti_occult_website_url',
