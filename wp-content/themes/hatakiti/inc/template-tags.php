@@ -405,6 +405,9 @@ function hatakiti_render_record_list_item( $post_id = null ) {
             <?php if ( $sub ) : ?>
                 <div class="hk-record-sub"><?php echo esc_html( $sub ); ?></div>
             <?php endif; ?>
+            <?php if ( 'occult_weekly' === $type ) : ?>
+                <div class="hk-record-sub"><a href="<?php echo esc_url( add_query_arg( 'hatakiti_pdf', '1', get_permalink( $post_id ) ) ); ?>">PDFを見る</a></div>
+            <?php endif; ?>
         </div>
     </li>
     <?php
