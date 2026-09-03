@@ -261,8 +261,18 @@ function hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start,
 
     // Same save path the manual 号編集フォーム uses — the resulting draft
     // is a completely normal occult_weekly issue, editable by hand
-    // afterward with no special-casing needed anywhere else.
-    hatakiti_finalize_occult_weekly_groups( $post_id, $groups, array_values( array_unique( $used_ids ) ) );
+    // afterward with no special-casing needed anywhere else. This also
+    // means the same save guard (empty/degraded body protection) applies
+    // here: if the AI response parsed structurally but produced no real
+    // body text, finalize refuses to write it.
+    $finalize_result = hatakiti_finalize_occult_weekly_groups( $post_id, $groups, array_values( array_unique( $used_ids ) ) );
+    if ( is_wp_error( $finalize_result ) ) {
+        // This post was just created for this generation and never had
+        // any real content — safe to remove rather than leave a blank
+        // orphan draft behind.
+        wp_delete_post( $post_id, true );
+        return $finalize_result;
+    }
 
     return $post_id;
 }

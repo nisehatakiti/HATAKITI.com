@@ -100,7 +100,12 @@ function hatakiti_handle_occult_weekly_submit( $post_id ) {
             return new WP_Error( 'hatakiti_forbidden', 'この号を編集する権限がありません。' );
         }
         $postarr['ID'] = $post_id;
+        // Only this call is allowed to actually change an existing
+        // occult_weekly post's status — see the wp_insert_post_data
+        // guard in admin-forms.php.
+        $GLOBALS['hatakiti_occult_weekly_trusted_save'] = true;
         $result = wp_update_post( $postarr, true );
+        $GLOBALS['hatakiti_occult_weekly_trusted_save'] = false;
     } else {
         if ( ! current_user_can( 'edit_posts' ) ) {
             return new WP_Error( 'hatakiti_forbidden', '号を作成する権限がありません。' );
@@ -123,7 +128,10 @@ function hatakiti_handle_occult_weekly_submit( $post_id ) {
     // stripping any literal backslash the text legitimately contains.
     update_post_meta( $post_id, 'hatakiti_occult_editorial_summary', wp_slash( $editorial_summary ) );
 
-    hatakiti_save_occult_weekly_articles( $post_id );
+    $save_result = hatakiti_save_occult_weekly_articles( $post_id );
+    if ( is_wp_error( $save_result ) ) {
+        return $save_result;
+    }
 
     return $post_id;
 }
@@ -146,9 +154,24 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
         $existing = array();
     }
     $existing_by_key = array();
+    // item_id -> its existing article, used as the STABLE fallback for
+    // preserving body text. Matching by `key` alone silently lost every
+    // AI-generated draft's body text on the first manual save: the AI
+    // path keys articles "ai::N::hash" (occult-weekly-ai-edit.php), while
+    // this function has always synthesized "tier::group"/"single::id"
+    // keys of its own for grouping selected rows — those two schemes
+    // never intersect, so `$existing_by_key[$key]` (and the body_map
+    // lookup below, since the form renders textareas under the
+    // ORIGINAL stored key) always missed, and body defaulted to ''.
+    // news_item_ids are the one identity that's stable across both save
+    // paths, so preservation is keyed on that instead.
+    $item_to_existing_article = array();
     foreach ( $existing as $a ) {
         if ( ! empty( $a['key'] ) ) {
             $existing_by_key[ $a['key'] ] = $a;
+        }
+        foreach ( (array) ( $a['news_item_ids'] ?? array() ) as $existing_item_id ) {
+            $item_to_existing_article[ $existing_item_id ] = $a;
         }
     }
 
@@ -162,7 +185,7 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
         $key = ( '' !== $group ) ? ( $tier . '::' . $group ) : ( 'single::' . $item_id );
 
         if ( ! isset( $groups[ $key ] ) ) {
-            $prior = isset( $existing_by_key[ $key ] ) ? $existing_by_key[ $key ] : array();
+            $prior = isset( $item_to_existing_article[ $item_id ] ) ? $item_to_existing_article[ $item_id ] : array();
             $groups[ $key ] = array(
                 'key'           => $key,
                 'tier'          => $tier,
@@ -175,15 +198,100 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
         $groups[ $key ]['news_item_ids'][] = $item_id;
     }
 
-    // Apply body-text edits submitted for existing groups.
+    // Apply body-text edits submitted for this save. The textarea for a
+    // group that already existed is rendered (and therefore submitted)
+    // under its ORIGINAL key, which may not equal the key just computed
+    // above — so if the new key has no direct match, check whether any
+    // of the group's item_ids point back to an existing article and try
+    // that article's key too, before giving up and keeping whatever
+    // preservation default was set above.
     foreach ( $groups as $key => &$group_data ) {
         if ( isset( $body_map[ $key ] ) ) {
             $group_data['body'] = wp_kses_post( wp_unslash( $body_map[ $key ] ) );
+            continue;
+        }
+        foreach ( $group_data['news_item_ids'] as $iid ) {
+            if ( isset( $item_to_existing_article[ $iid ]['key'] ) && isset( $body_map[ $item_to_existing_article[ $iid ]['key'] ] ) ) {
+                $group_data['body'] = wp_kses_post( wp_unslash( $body_map[ $item_to_existing_article[ $iid ]['key'] ] ) );
+                break;
+            }
         }
     }
     unset( $group_data );
 
-    hatakiti_finalize_occult_weekly_groups( $post_id, array_values( $groups ), $include );
+    return hatakiti_finalize_occult_weekly_groups( $post_id, array_values( $groups ), $include );
+}
+
+/**
+ * Save guard: never let an AI (re-)generation or a manual form submit
+ * overwrite good existing article data with something empty or badly
+ * degraded. Added after real data loss on drafts 539/558/565 — tracing
+ * it back, the actual mechanism was a key-matching bug in
+ * hatakiti_save_occult_weekly_articles() (fixed above) that silently
+ * discarded body text on manual saves of AI-generated drafts; this
+ * function is the backstop that makes that class of bug (and any other
+ * future one with the same effect) fail safe instead of destroying data.
+ *
+ * @return array array('ok'=>bool, 'reason'=>string, 'existing_article_count'=>int,
+ *               'existing_body_chars'=>int, 'new_article_count'=>int, 'new_body_chars'=>int)
+ */
+function hatakiti_validate_occult_weekly_groups_for_save( $post_id, $groups ) {
+    $stats = array(
+        'existing_article_count' => 0,
+        'existing_body_chars'    => 0,
+        'new_article_count'      => is_array( $groups ) ? count( $groups ) : 0,
+        'new_body_chars'         => 0,
+    );
+
+    if ( ! is_array( $groups ) ) {
+        return array_merge( $stats, array( 'ok' => false, 'reason' => '記事データが配列ではありません。' ) );
+    }
+    if ( count( $groups ) < 1 ) {
+        return array_merge( $stats, array( 'ok' => false, 'reason' => '記事が1件もありません。' ) );
+    }
+
+    $empty_body_count = 0;
+    foreach ( $groups as $g ) {
+        if ( empty( $g['headline'] ) || ! isset( $g['tier'] ) || empty( $g['news_item_ids'] ) ) {
+            return array_merge( $stats, array( 'ok' => false, 'reason' => '見出し・扱い・出典ニュースidのいずれかが欠落した記事があります。' ) );
+        }
+        $blen = mb_strlen( (string) ( $g['body'] ?? '' ) );
+        $stats['new_body_chars'] += $blen;
+        if ( 0 === $blen ) {
+            $empty_body_count++;
+        }
+    }
+
+    if ( 0 === $stats['new_body_chars'] ) {
+        return array_merge( $stats, array( 'ok' => false, 'reason' => '全記事の本文が空です。' ) );
+    }
+    if ( $empty_body_count > 0 ) {
+        return array_merge( $stats, array( 'ok' => false, 'reason' => "本文が空の記事が{$empty_body_count}件あります。" ) );
+    }
+
+    $existing = json_decode( (string) get_post_meta( $post_id, 'hatakiti_occult_articles_json', true ), true );
+    if ( is_array( $existing ) ) {
+        $stats['existing_article_count'] = count( $existing );
+        foreach ( $existing as $a ) {
+            $stats['existing_body_chars'] += mb_strlen( (string) ( $a['body'] ?? '' ) );
+        }
+    }
+
+    // 既存に十分な本文があるのに、新しい結果が半分未満まで縮んでいる
+    // 場合は「明らかな劣化」とみなして保存しない（記事を1〜2件だけ
+    // 外すような通常の編集は、通常この比率までは落ちない）。
+    if ( $stats['existing_body_chars'] > 0 && $stats['new_body_chars'] < $stats['existing_body_chars'] * 0.5 ) {
+        return array_merge( $stats, array(
+            'ok'     => false,
+            'reason' => sprintf(
+                '新しい内容（%d字）が既存の内容（%d字）より大幅に少ないため、保存を中止しました。',
+                $stats['new_body_chars'],
+                $stats['existing_body_chars']
+            ),
+        ) );
+    }
+
+    return array_merge( $stats, array( 'ok' => true, 'reason' => '' ) );
 }
 
 /**
@@ -193,8 +301,25 @@ function hatakiti_save_occult_weekly_articles( $post_id ) {
  * summary counts. $relevant_item_ids is the full set of item ids that
  * SHOULD end up linked to this issue once saved — anything previously
  * linked but not in this set gets unlinked.
+ *
+ * @return int|WP_Error $post_id on success, WP_Error (nothing written) if
+ *         hatakiti_validate_occult_weekly_groups_for_save() rejects the result.
  */
 function hatakiti_finalize_occult_weekly_groups( $post_id, $groups, $relevant_item_ids ) {
+    $validation = hatakiti_validate_occult_weekly_groups_for_save( $post_id, $groups );
+    if ( ! $validation['ok'] ) {
+        error_log( sprintf(
+            '[hatakiti occult_weekly save guard] post #%d BLOCKED: %s (existing: %d articles / %d body chars, new: %d articles / %d body chars)',
+            $post_id,
+            $validation['reason'],
+            $validation['existing_article_count'],
+            $validation['existing_body_chars'],
+            $validation['new_article_count'],
+            $validation['new_body_chars']
+        ) );
+        return new WP_Error( 'hatakiti_occult_save_blocked', 'AI生成結果が不完全なため保存しませんでした： ' . $validation['reason'] );
+    }
+
     $tier_rank = array( 'large' => 0, 'medium' => 1, 'small' => 2 );
     usort( $groups, function ( $a, $b ) use ( $tier_rank ) {
         if ( $a['order'] !== $b['order'] ) {

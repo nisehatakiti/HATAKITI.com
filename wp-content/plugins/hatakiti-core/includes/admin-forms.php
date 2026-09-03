@@ -217,6 +217,50 @@ add_filter( 'bulk_actions-edit-occult_weekly', function ( $actions ) {
 } );
 
 /**
+ * Final backstop: even with Quick Edit, the Trash row action, and Bulk
+ * Edit removed above, WordPress's classic post-edit screen (post.php)
+ * still renders its core "Publish" submit box for ANY post type by
+ * default, regardless of 'supports' — occult_weekly never opted out of
+ * that box, only out of the block editor (use_block_editor_for_post_type
+ * above). That box's Publish/Save Draft/Move to Trash controls, and any
+ * other native path (XML-RPC, REST, a stray bookmark straight to
+ * post.php?action=edit), all funnel through wp_insert_post_data before
+ * anything reaches the database — so this hooks that single chokepoint
+ * and refuses to let an EXISTING occult_weekly post's status change
+ * unless the request came from hatakiti_handle_occult_weekly_submit()
+ * (which sets the trusted-save flag below around its own wp_update_post
+ * call). New posts (AI-generate's wp_insert_post, $postarr['ID'] unset)
+ * are unaffected — their status is whatever we explicitly set at
+ * creation, never user-influenced.
+ *
+ * Added after directly observing draft issues 558/565 flip to "publish"
+ * in real time while investigating the same pattern on 539/547 — the
+ * earlier Trash/Bulk-Edit removal alone did not stop it.
+ */
+$GLOBALS['hatakiti_occult_weekly_trusted_save'] = false;
+
+add_filter( 'wp_insert_post_data', function ( $data, $postarr ) {
+    if ( 'occult_weekly' !== $data['post_type'] ) {
+        return $data;
+    }
+    $post_id = isset( $postarr['ID'] ) ? (int) $postarr['ID'] : 0;
+    if ( ! $post_id || ! empty( $GLOBALS['hatakiti_occult_weekly_trusted_save'] ) ) {
+        return $data;
+    }
+    $current_status = get_post_status( $post_id );
+    if ( $current_status && $current_status !== $data['post_status'] ) {
+        error_log( sprintf(
+            '[hatakiti occult_weekly status guard] blocked status change for post #%d: %s -> %s (not via the custom 号を編集 form)',
+            $post_id,
+            $current_status,
+            $data['post_status']
+        ) );
+        $data['post_status'] = $current_status;
+    }
+    return $data;
+}, 10, 2 );
+
+/**
  * Admin-only stylesheet for the two form screens.
  */
 function hatakiti_admin_form_assets( $hook ) {
