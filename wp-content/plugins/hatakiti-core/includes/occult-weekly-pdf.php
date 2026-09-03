@@ -563,6 +563,36 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
  * @param array &$queue 先頭から処理。各要素に '_tier' が必須。
  * @return array array('bottom_y'=>mm, 'drew_any'=>bool, 'debug'=>array)
  */
+function hatakiti_occult_pdf_overflow_to_text( $overflow_body ) {
+    $rebuilt = '';
+    foreach ( $overflow_body as $para ) {
+        $ptext = '';
+        foreach ( $para as $u ) {
+            $ptext .= $u['ch'];
+        }
+        $rebuilt .= ( $rebuilt ? "\n\n" : '' ) . $ptext;
+    }
+    return $rebuilt;
+}
+
+/**
+ * overflow_bodyがあれば「続きの箱」(headline='')として同じキュー位置に
+ * 差し戻し、無ければキューから取り除く。続きの箱がテキストマーカー方式
+ * で無限に伸び続けたバグの反省から、マーカーは使わず本文をそのまま
+ * 続けるだけにしてある（詳細は関数上部のコメント参照）。
+ */
+function hatakiti_occult_pdf_requeue_or_shift( &$queue, $idx, $article, $overflow_body ) {
+    if ( ! empty( $overflow_body ) ) {
+        $continuation             = $article;
+        $continuation['headline'] = '';
+        $continuation['body']     = hatakiti_occult_pdf_overflow_to_text( $overflow_body );
+        $queue[ $idx ]            = $continuation;
+        return true;
+    }
+    array_splice( $queue, $idx, 1 );
+    return false;
+}
+
 function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
     $y         = $zone_y;
     $remaining = $zone_h_budget;
@@ -593,6 +623,47 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             break;
         }
 
+        // small記事は、2本並ぶ場合は横に並べて「小記事」らしくコンパクトに
+        // 組む（新聞の小記事の並びを模す）。1本だけ残っている場合や、次が
+        // small以外の場合は通常どおりゾーン全幅で処理する。横並びの方が
+        // 縦方向の消費が少ないため、紙面の利用効率も上がる。
+        if ( 'small' === $tier && isset( $queue[1] ) && 'small' === $queue[1]['_tier'] ) {
+            $pair_gap = 3.0;
+            $pair_w   = ( $zone_w - $pair_gap ) / 2;
+            $article2 = $queue[1];
+
+            $needed_h = max(
+                hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, 'small', $pair_w ),
+                hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article2, 'small', $pair_w )
+            );
+            $actual_h = min( $needed_h, $remaining );
+
+            // 右側（先に読む）＝queue[0]、左側＝queue[1]
+            $box_r = array( 'x' => $zone_x + $pair_w + $pair_gap, 'y' => $y, 'w' => $pair_w, 'h' => $actual_h );
+            $box_l = array( 'x' => $zone_x, 'y' => $y, 'w' => $pair_w, 'h' => $actual_h );
+            $r1 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, 'small', $box_r );
+            $r2 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article2, 'small', $box_l );
+            $drew_any = true;
+
+            $debug[] = array( 'page' => $page_no, 'tier' => 'small(pair-R)', 'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_r['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $actual_h, 1 ), 'overflow' => ! empty( $r1['overflow_body'] ) );
+            $debug[] = array( 'page' => $page_no, 'tier' => 'small(pair-L)', 'headline' => mb_substr( (string) ( $article2['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_l['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $actual_h, 1 ), 'overflow' => ! empty( $r2['overflow_body'] ) );
+
+            $pdf->SetLineWidth( 0.25 );
+            $pdf->Line( $zone_x + $pair_w + ( $pair_gap / 2 ), $y, $zone_x + $pair_w + ( $pair_gap / 2 ), $y + $actual_h );
+            $pdf->Line( $zone_x, $y + $actual_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $actual_h + ( $row_gap / 2 ) );
+
+            $still1 = hatakiti_occult_pdf_requeue_or_shift( $queue, 0, $article, $r1['overflow_body'] );
+            // queue[0]が続きとして残っている場合、2本目は元々queue[1]に
+            // いたので、続きが挿入された分インデックスがずれていない
+            // ことを確認して処理する。
+            $idx2 = $still1 ? 1 : 0;
+            hatakiti_occult_pdf_requeue_or_shift( $queue, $idx2, $article2, $r2['overflow_body'] );
+
+            $y         += $actual_h + $row_gap;
+            $remaining -= ( $actual_h + $row_gap );
+            continue;
+        }
+
         $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $zone_w );
         $actual_h = min( $needed_h, $remaining );
 
@@ -610,28 +681,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
         $pdf->SetLineWidth( 'large' === $tier ? 0.5 : 0.25 );
         $pdf->Line( $zone_x, $y + $actual_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $actual_h + ( $row_gap / 2 ) );
 
-        if ( ! empty( $result['overflow_body'] ) ) {
-            $rebuilt = '';
-            foreach ( $result['overflow_body'] as $para ) {
-                $ptext = '';
-                foreach ( $para as $u ) {
-                    $ptext .= $u['ch'];
-                }
-                $rebuilt .= ( $rebuilt ? "\n\n" : '' ) . $ptext;
-            }
-            // 続きの箱は見出し帯を持たない（見出しの高さぶんが無駄になり、
-            // 残り予算が小さいほど本文がほぼ進まなくなるため）。テキスト
-            // マーカーで「続き」を示す方式は、列容量が1〜2文字しかない
-            // ほど詰まった状況でマーカー自体が一部しか収まらず、次周回で
-            // 再度マーカーを継ぎ足して無限に伸び続けるバグを起こしたため
-            // 採用しない（本文をそのまま続けるだけにする）。
-            $continuation             = $article;
-            $continuation['headline'] = '';
-            $continuation['body']     = $rebuilt;
-            $queue[0]                 = $continuation;
-        } else {
-            array_shift( $queue );
-        }
+        hatakiti_occult_pdf_requeue_or_shift( $queue, 0, $article, $result['overflow_body'] );
 
         $y         += $actual_h + $row_gap;
         $remaining -= ( $actual_h + $row_gap );

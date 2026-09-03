@@ -183,13 +183,38 @@ add_filter( 'get_edit_post_link', function ( $link, $post_id ) {
 /**
  * Quick Edit only understands core fields, not this form's custom data —
  * remove it for these two post types so it can't be used by mistake.
+ *
+ * For occult_weekly specifically, also remove the native "ゴミ箱へ移動"
+ * row action. articles_json / editorial_summary only ever change through
+ * hatakiti_finalize_occult_weekly_groups() (the custom form / AI-generate
+ * path); the native list table's Trash link and Bulk Edit's status
+ * dropdown bypass that entirely and were the likely cause of occult_weekly
+ * drafts being trashed/published without anyone deliberately using the
+ * custom form (found while investigating repeated unexplained status
+ * changes on draft issues 539/547/558/565 — see also the bulk_actions
+ * filter below).
  */
 add_filter( 'post_row_actions', function ( $actions, $post ) {
     if ( in_array( $post->post_type, array( 'theatre_record', 'film_record', 'activity_record', 'occult_weekly' ), true ) ) {
         unset( $actions['inline hide-if-no-js'] );
     }
+    if ( 'occult_weekly' === $post->post_type ) {
+        unset( $actions['trash'] );
+    }
     return $actions;
 }, 10, 2 );
+
+/**
+ * Bulk Edit's status dropdown ("公開済み" / "ゴミ箱" etc.) can change
+ * occult_weekly status for many posts at once without ever touching the
+ * custom form. Remove Edit (bulk) and Trash from the bulk actions menu on
+ * the occult_weekly list table; "表示" of individual issues is unaffected.
+ */
+add_filter( 'bulk_actions-edit-occult_weekly', function ( $actions ) {
+    unset( $actions['edit'] );
+    unset( $actions['trash'] );
+    return $actions;
+} );
 
 /**
  * Admin-only stylesheet for the two form screens.
