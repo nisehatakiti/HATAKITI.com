@@ -41,7 +41,7 @@ function hatakiti_occult_pdf_layout_constants() {
         'margin_l'        => 7.0,
         'margin_r'        => 7.0,
         'margin_t'        => 9.0,
-        'margin_b'        => 9.0,
+        'margin_b'        => 7.0,
         'masthead_h'      => 25.0, // 1ページ目のみ
         'page2_header_h'  => 6.0,  // 2ページ目以降の簡易見出し
         'tier_fonts'      => array(
@@ -402,6 +402,16 @@ function hatakiti_occult_pdf_count_units( $body_text ) {
 }
 
 /**
+ * 続きの箱であることを示す小さなラベル。見出し帯を完全に省略すると、
+ * ページをまたいだ・ゾーンをまたいだ続きの本文が「何の記事か分からない
+ * 孤立したテキストの塊」に見えてしまう（実際の紙面画像で確認された
+ * 問題）。フルサイズの見出しにはせず、常に一定の小さいサイズで表示する
+ * ことで、続きだと分かるようにしつつ縦方向の消費は最小限に抑える。
+ */
+define( 'HATAKITI_OCCULT_PDF_CONTINUATION_LABEL', '（続き）' );
+define( 'HATAKITI_OCCULT_PDF_CONTINUATION_FONT_PT', 6.5 );
+
+/**
  * 見出し（横書き・箱の全幅で折り返し）に必要な高さ(mm)を、実際には
  * 描画せず見積もる。
  */
@@ -413,6 +423,14 @@ function hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $font_pt
     $line_h = $font_pt * 0.3528 * 1.3;
     $h = $pdf->getStringHeight( $box_w, (string) $text );
     return max( $line_h, $h );
+}
+
+/**
+ * 記事が「続きの箱」かどうかに応じて、見出しに使う実際のフォントサイズ
+ * を返す（続きは常に小さい固定サイズ、通常はtierの見出しサイズ）。
+ */
+function hatakiti_occult_pdf_headline_font_pt( $article, $tier_headline_pt ) {
+    return ! empty( $article['_continuation'] ) ? HATAKITI_OCCULT_PDF_CONTINUATION_FONT_PT : $tier_headline_pt;
 }
 
 /**
@@ -438,12 +456,14 @@ function hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $t
     $headline = (string) ( $article['headline'] ?? '' );
     $body     = (string) ( $article['body'] ?? '' );
 
-    $head_h = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $fonts['headline'], $headline, $box_w );
+    $head_pt = hatakiti_occult_pdf_headline_font_pt( $article, $fonts['headline'] );
+    $head_h = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $head_pt, $headline, $box_w );
     list( $unit_count, ) = hatakiti_occult_pdf_count_units( $body );
     $body_h = hatakiti_occult_pdf_estimate_body_height( $unit_count, $box_w, $fonts['body'] );
 
-    $gap   = $head_h > 0 ? 1.8 : 0.5;
-    $src_h = $head_h > 0 ? 4.2 : 0.0;
+    $is_continuation = ! empty( $article['_continuation'] );
+    $gap   = $is_continuation ? 0.4 : 1.8;
+    $src_h = $is_continuation ? 0.0 : 4.2;
     return $head_h + $gap + $body_h + $src_h;
 }
 
@@ -490,22 +510,29 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     $w = $box['w'];
     $h = $box['h'];
 
+    $is_continuation = ! empty( $article['_continuation'] );
+
     // 見出し：横書き、箱の全幅で折り返し（新聞の見出し帯）。
-    // 続きの箱（headline=''）は見出し帯そのものを省略する。
+    // 続きの箱は「（続き）」という小さな固定サイズのラベルにする —
+    // 見出し帯を完全に省略すると、ページ／ゾーンをまたいだ本文が
+    // 「どの記事の続きか分からない孤立したテキスト」に見えてしまう
+    // ことが実際の紙面画像で確認されたため。フルサイズの見出しにはせず
+    // 縦方向の消費は最小限に抑える。
     if ( '' === $headline ) {
         $head_h = 0.0;
     } else {
-        $head_line_h = $fonts['headline'] * 0.3528 * 1.3;
-        $pdf->SetFont( $font_bold, '', $fonts['headline'] );
+        $head_pt     = hatakiti_occult_pdf_headline_font_pt( $article, $fonts['headline'] );
+        $head_line_h = $head_pt * 0.3528 * 1.3;
+        $pdf->SetFont( $font_bold, '', $head_pt );
         $head_h = max( $head_line_h, $pdf->getStringHeight( $w, $headline ) );
         $pdf->SetXY( $x, $y );
         $pdf->MultiCell( $w, $head_line_h, $headline, 0, 'L' );
     }
 
-    // 続きの箱（headline=''）は出典ストリップも省略する
-    // （出典は記事の最初の箱にすでに表示済みのため、情報は失われない）。
-    $gap   = $head_h > 0 ? 1.8 : 0.5;
-    $src_h = $head_h > 0 ? 4.2 : 0.0;
+    // 続きの箱は出典ストリップを省略する（出典は記事の最初の箱に
+    // すでに表示済みのため、情報は失われない）。
+    $gap   = $is_continuation ? 0.4 : 1.8;
+    $src_h = $is_continuation ? 0.0 : 4.2;
     $body_top = $y + $head_h + $gap;
     $body_h   = $h - ( $head_h + $gap ) - $src_h;
 
@@ -576,17 +603,20 @@ function hatakiti_occult_pdf_overflow_to_text( $overflow_body ) {
 }
 
 /**
- * overflow_bodyがあれば「続きの箱」(headline='')として同じキュー位置に
- * 差し戻し、無ければキューから取り除く。続きの箱がテキストマーカー方式
- * で無限に伸び続けたバグの反省から、マーカーは使わず本文をそのまま
- * 続けるだけにしてある（詳細は関数上部のコメント参照）。
+ * overflow_bodyがあれば「続きの箱」として同じキュー位置に差し戻し、
+ * 無ければキューから取り除く。見出しは固定の小さな「（続き）」ラベル
+ * のみ（本文側に埋め込むテキストマーカー方式は、列容量が1〜2文字しか
+ * ないほど詰まった状況でマーカー自体が一部しか収まらず、次周回で
+ * 再度マーカーを継ぎ足して無限に伸び続けるバグを起こしたため採用しない
+ * — 本文そのものは一切変更せずそのまま続ける）。
  */
 function hatakiti_occult_pdf_requeue_or_shift( &$queue, $idx, $article, $overflow_body ) {
     if ( ! empty( $overflow_body ) ) {
-        $continuation             = $article;
-        $continuation['headline'] = '';
-        $continuation['body']     = hatakiti_occult_pdf_overflow_to_text( $overflow_body );
-        $queue[ $idx ]            = $continuation;
+        $continuation                  = $article;
+        $continuation['headline']      = HATAKITI_OCCULT_PDF_CONTINUATION_LABEL;
+        $continuation['_continuation'] = true;
+        $continuation['body']          = hatakiti_occult_pdf_overflow_to_text( $overflow_body );
+        $queue[ $idx ]                 = $continuation;
         return true;
     }
     array_splice( $queue, $idx, 1 );
@@ -596,8 +626,8 @@ function hatakiti_occult_pdf_requeue_or_shift( &$queue, $idx, $article, $overflo
 function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
     $y         = $zone_y;
     $remaining = $zone_h_budget;
-    $min_box_h = 16.0;
-    $row_gap   = 2.4;
+    $min_box_h = 12.0;
+    $row_gap   = 2.0;
     $drew_any  = false;
     $debug     = array();
     $stall_key = null;
@@ -628,7 +658,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
         // small以外の場合は通常どおりゾーン全幅で処理する。横並びの方が
         // 縦方向の消費が少ないため、紙面の利用効率も上がる。
         if ( 'small' === $tier && isset( $queue[1] ) && 'small' === $queue[1]['_tier'] ) {
-            $pair_gap = 3.0;
+            $pair_gap = 2.0;
             $pair_w   = ( $zone_w - $pair_gap ) / 2;
             $article2 = $queue[1];
 
@@ -891,19 +921,42 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
             hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c );
             $page2_col_top    = $c['margin_t'] + $c['page2_header_h'];
             $page2_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page2_col_top;
-            $reserved_h_2page = $footer_h + 3.0;
+            $reserved_h_2page = $footer_h + 1.5;
             $h_page2          = max( 40, $page2_col_h_full - $reserved_h_2page );
 
+            // footerぶんの余白を確保した高さで積む。ここで収まりきらな
+            // かった分（通常は数十字程度）は、footerと同じ3ページ目に
+            // 一緒に描く — footerだけが単独でほぼ白紙のページに孤立
+            // するより、実際の記事の続きと同居させたほうが紙面として
+            // 自然になる。
             $page2_stack = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page2_col_top, $full_w, $h_page2, 2 );
             $debug_log   = array_merge( $debug_log, $page2_stack['debug'] );
+            $footer_y    = max( $page2_stack['bottom_y'], $page2_col_top + 30 );
+        } else {
+            $footer_y = max( $large_stack['bottom_y'], $left_stack['bottom_y'], $page1_col_top + 40 );
+        }
+
+        // 3ページ目：2ページ目にfooterぶんの余白を確保してもなお記事が
+        // 収まらなかった場合のみ。「2ページに収めるため本文を削る」こと
+        // は禁止されているため、4000字級の分量でどうしても数文字〜
+        // 数十字だけ残るケースの正しい落とし所は3ページ目であり、余白や
+        // フォントの過度な圧縮ではない。
+        if ( ! empty( $page2_queue ) ) {
+            $pdf->AddPage();
+            hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c );
+            $page3_col_top    = $c['margin_t'] + $c['page2_header_h'];
+            $page3_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page3_col_top;
+            $reserved_h_3page = $footer_h + 1.5;
+            $h_page3          = max( 40, $page3_col_h_full - $reserved_h_3page );
+
+            $page3_stack = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page3_col_top, $full_w, $h_page3, 3 );
+            $debug_log   = array_merge( $debug_log, $page3_stack['debug'] );
 
             if ( ! empty( $page2_queue ) ) {
                 $unrecoverable = true;
             }
 
-            $footer_y = max( $page2_stack['bottom_y'], $page2_col_top + 30 );
-        } else {
-            $footer_y = max( $large_stack['bottom_y'], $left_stack['bottom_y'], $page1_col_top + 40 );
+            $footer_y = max( $page3_stack['bottom_y'], $page3_col_top + 30 );
         }
 
         if ( $unrecoverable ) {
@@ -911,7 +964,7 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
             foreach ( $page2_queue as $r_article ) {
                 $remaining_headlines[] = mb_substr( (string) ( $r_article['headline'] ?? '' ), 0, 20 ) . '（' . mb_strlen( (string) ( $r_article['body'] ?? '' ) ) . '字）';
             }
-            $warnings[] = '記事量が多く、2ページ以内に紙面へ収まりませんでした。記事本文は自動で削除していません（articles_jsonは無変更）。未掲載: ' . implode( ' / ', $remaining_headlines );
+            $warnings[] = '記事量が多く、3ページ以内に紙面へ収まりませんでした。記事本文は自動で削除していません（articles_jsonは無変更）。未掲載: ' . implode( ' / ', $remaining_headlines );
         }
 
         hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $all_sources, $editorial_summary, $footer_y + 2 );
