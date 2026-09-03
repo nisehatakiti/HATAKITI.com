@@ -190,6 +190,14 @@ function hatakiti_order_occult_weekly_archive( $query ) {
         $query->set( 'meta_key', 'hatakiti_occult_issue_date' );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'order', 'DESC' );
+        // 臨時発行の「テスト発行」（hatakiti_occult_run_type=manual_test）
+        // は常にdraftなので通常はこのクエリに出てこないが、多重防御として
+        // 明示的にも除外する — 一般ユーザーが正式発行号と混同しないため。
+        $query->set( 'meta_query', array(
+            'relation' => 'OR',
+            array( 'key' => 'hatakiti_occult_run_type', 'compare' => 'NOT EXISTS' ),
+            array( 'key' => 'hatakiti_occult_run_type', 'value' => 'manual_test', 'compare' => '!=' ),
+        ) );
     }
 }
 add_action( 'pre_get_posts', 'hatakiti_order_occult_weekly_archive' );

@@ -6,14 +6,28 @@
  * (hatakiti_generate_occult_weekly_draft_via_ai(), occult-weekly-ai-edit.php
  * で既存・無変更) -> DB再検証 -> PDF生成
  * (hatakiti_get_occult_weekly_pdf_path(), occult-weekly-pdf.php で既存・
- * 無変更) -> PDF検証 -> 公開ゲート -> (productionモードのみ)publish ->
+ * 無変更) -> PDF検証 -> 公開ゲート -> (publishできるrun_typeのみ)publish ->
  * 公開URL実検証、までを1回の呼び出しでまとめて実行するラッパー。
  *
- * mode='test'（管理画面の手動テスト実行）は必ずdraftのまま — 全ゲートを
- * 通過したかどうかはログ・画面表示で分かるが、実際にはpublishしない。
- * mode='production'（cronからの実行専用）は全ゲート通過時のみpublishする。
- * どちらのモードも判定ロジックは完全に同一 — テスト実行だけ甘い判定になる
- * ことはない。
+ * run_typeは3種類。cronからの本番実行と、管理画面からの臨時発行は、
+ * この同じ`hatakiti_run_occult_weekly_auto_pipeline()`を通る — 別実装を
+ * コピーして作らない。
+ *
+ *   - scheduled:       cron専用。新規ニュースのみを対象期間から選定し、
+ *                       今週すでにpublish済みならスキップする。全ゲート
+ *                       通過時のみpublishする。
+ *   - manual_test:      管理画面「臨時発行（テスト）」用。既存号で使用済み
+ *                       のニュースも含めて直近のものから候補を選び直す
+ *                       （新規ニュースが無くてもテストできるようにする
+ *                       ため）。今週の重複判定は適用しない。全ゲートを
+ *                       通過しても絶対にpublishしない（常にdraft）。
+ *   - manual_publish:   管理画面「臨時公開」用。候補選定はmanual_testと
+ *                       同じ（使用済みニュース可）だが、今週の重複判定は
+ *                       scheduledと同様に適用する（同週の二重公開を防ぐ）。
+ *                       全ゲート通過時のみpublishする。
+ *
+ * どのrun_typeも判定ロジック自体は完全に同一 — テスト実行だけ甘い判定に
+ * なることはない。
  *
  * AI呼び出し・保存経路・PDF生成そのものは一切変更しない。既存関数を
  * そのまま呼び出すだけ。
@@ -274,11 +288,33 @@ function hatakiti_occult_auto_publish_notify_admin( $stage, $reason, $context = 
 }
 
 /**
+ * manual_test / manual_publish 用の候補選定。新規ニュース判定
+ * （hatakiti_get_occult_weekly_candidates()、本番scheduled専用・無変更）
+ * とは別に、既存号で使用済みのニュースも含めて直近の投稿日時順に一定数を
+ * 選ぶ — 「新規ニュースが無いのでテストできない」状態を避けるための、
+ * 臨時発行専用の選定ロジック。
+ */
+function hatakiti_occult_auto_publish_test_candidates( $limit = 8 ) {
+    return get_posts( array(
+        'post_type'      => 'occult_news_item',
+        'post_status'    => 'any',
+        'posts_per_page' => $limit,
+        'orderby'        => 'meta_value',
+        'meta_key'       => 'hatakiti_occult_published_at',
+        'order'          => 'DESC',
+    ) );
+}
+
+/**
  * フルパイプライン本体。
  *
- * @param string $mode 'test'（常にdraftのまま。管理画面の手動実行用）か
- *                      'production'（全ゲート通過時のみpublishする。cron
- *                      専用）。判定ロジック自体はモードによらず同一。
+ * @param string $run_type 'scheduled'（cron専用。新規ニュースのみ・今週の
+ *   重複防止あり・全ゲート通過時にpublish） / 'manual_test'（管理画面の
+ *   臨時発行「テスト」用。使用済みニュースも候補にでき、今週の重複防止も
+ *   無視するが、絶対にpublishしない） / 'manual_publish'（管理画面の
+ *   「臨時公開」用。候補選定はmanual_testと同じだが、今週の重複防止は
+ *   scheduledと同様に適用し、全ゲート通過時にpublishする）。
+ *   不正な値はmanual_test（最も安全側）に丸める。
  *
  * 戻り値は常に配列（WP_Errorは返さない — 呼び出し側がそのまま表示できる
  * ように統一）:
@@ -288,11 +324,18 @@ function hatakiti_occult_auto_publish_notify_admin( $stage, $reason, $context = 
  *   'post_id' => 生成された号のID（該当する場合）
  *   'pdf'     => PDF生成結果（該当する場合）
  */
-function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
-    $mode = ( 'production' === $mode ) ? 'production' : 'test';
+function hatakiti_run_occult_weekly_auto_pipeline( $run_type = 'manual_test' ) {
+    if ( ! in_array( $run_type, array( 'scheduled', 'manual_test', 'manual_publish' ), true ) ) {
+        $run_type = 'manual_test';
+    }
+
+    $can_publish       = in_array( $run_type, array( 'scheduled', 'manual_publish' ), true );
+    $check_week_dedup  = in_array( $run_type, array( 'scheduled', 'manual_publish' ), true );
+    $use_test_candidates = ( 'scheduled' !== $run_type );
+    $notify_on_failure = ( 'scheduled' === $run_type ); // 手動実行は実行者が画面で直接結果を見るため、失敗メールはscheduledのみ。
 
     if ( ! hatakiti_occult_auto_publish_acquire_lock() ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'lock', 'outcome' => 'skipped_locked' ) );
+        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'lock', 'outcome' => 'skipped_locked' ) );
         return array(
             'status'  => 'skipped_locked',
             'message' => '既に自動発行処理が実行中のため、今回はスキップしました。',
@@ -300,23 +343,23 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
     }
 
     $started_at = microtime( true );
-    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'started', 'outcome' => 'running' ) );
+    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'started', 'outcome' => 'running' ) );
 
     // 1. RSS取得（新規ニュース検出）。1ソースの失敗で全体を止めない既存
     // 仕様はそのまま。全ソース失敗だけを異常として扱う。
     $rss_result = hatakiti_fetch_all_occult_sources();
     hatakiti_occult_ai_log( array(
-        'source'  => 'auto_publish',
-        'mode'    => $mode,
-        'step'    => 'rss_fetch',
-        'fetched' => (int) $rss_result['fetched_total'],
-        'created' => (int) $rss_result['created_total'],
-        'outcome' => 'done',
+        'source'   => 'auto_publish',
+        'run_type' => $run_type,
+        'step'     => 'rss_fetch',
+        'fetched'  => (int) $rss_result['fetched_total'],
+        'created'  => (int) $rss_result['created_total'],
+        'outcome'  => 'done',
     ) );
 
     if ( hatakiti_occult_auto_publish_rss_anomaly( $rss_result ) ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'rss_fetch', 'outcome' => 'anomaly_all_sources_failed' ) );
-        if ( 'production' === $mode ) {
+        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'rss_fetch', 'outcome' => 'anomaly_all_sources_failed' ) );
+        if ( $notify_on_failure ) {
             hatakiti_occult_auto_publish_notify_admin( 'rss_fetch', '有効な全ニュースソースの取得に失敗しました。' );
         }
         hatakiti_occult_auto_publish_release_lock();
@@ -325,30 +368,49 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
 
     list( $week_start, $week_end ) = hatakiti_occult_auto_publish_default_week_range();
 
-    // 7. 同週重複防止: 今週分が既にpublish済みなら何もしない。
-    $already_published_id = hatakiti_occult_auto_publish_already_published_this_week( $week_end );
-    if ( $already_published_id ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'week_check', 'existing_post_id' => $already_published_id, 'outcome' => 'skipped_already_published' ) );
-        hatakiti_occult_auto_publish_release_lock();
-        return array(
-            'status'  => 'skipped_already_published',
-            'message' => sprintf( '今週（%s〜%s）は既に号 #%d が公開済みのため、新しい号は作成しませんでした。', $week_start, $week_end, $already_published_id ),
-        );
+    // 7. 同週重複防止: scheduled/manual_publishのみ適用。manual_testは
+    // 何度でも実行できるよう無視する（指示書§6/§14）。
+    if ( $check_week_dedup ) {
+        $already_published_id = hatakiti_occult_auto_publish_already_published_this_week( $week_end );
+        if ( $already_published_id ) {
+            hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'week_check', 'existing_post_id' => $already_published_id, 'outcome' => 'skipped_already_published' ) );
+            hatakiti_occult_auto_publish_release_lock();
+            return array(
+                'status'  => 'skipped_already_published',
+                'message' => ( 'manual_publish' === $run_type )
+                    ? sprintf( '今週（%s〜%s）は既に号 #%d が公開済みのため、臨時公開は行いませんでした（安全のため同週の重複公開はできません）。', $week_start, $week_end, $already_published_id )
+                    : sprintf( '今週（%s〜%s）は既に号 #%d が公開済みのため、新しい号は作成しませんでした。', $week_start, $week_end, $already_published_id ),
+            );
+        }
     }
 
-    $candidates = hatakiti_get_occult_weekly_candidates( $week_start, $week_end, 0 );
-    if ( ! $candidates ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'candidates', 'count' => 0, 'outcome' => 'no_new_news' ) );
-        hatakiti_occult_auto_publish_release_lock();
-        return array(
-            'status'  => 'no_new_news',
-            'message' => sprintf( '対象期間（%s〜%s）に、まだどの号にも使われていない新規ニュースがありませんでした。号の生成は行いませんでした。', $week_start, $week_end ),
-        );
+    // 候補選定: scheduledは新規ニュースのみ。manual_test/manual_publishは
+    // 既存号で使用済みのニュースも含めて直近のものから選び直す。
+    if ( $use_test_candidates ) {
+        $candidates = hatakiti_occult_auto_publish_test_candidates();
+        if ( ! $candidates ) {
+            hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'candidates', 'count' => 0, 'outcome' => 'no_test_candidates' ) );
+            hatakiti_occult_auto_publish_release_lock();
+            return array(
+                'status'  => 'no_new_news',
+                'message' => 'テストに使用できるニュースが1件もありません。先にRSS取得（またはテストデータ投入）を行ってください。',
+            );
+        }
+    } else {
+        $candidates = hatakiti_get_occult_weekly_candidates( $week_start, $week_end, 0 );
+        if ( ! $candidates ) {
+            hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'candidates', 'count' => 0, 'outcome' => 'no_new_news' ) );
+            hatakiti_occult_auto_publish_release_lock();
+            return array(
+                'status'  => 'no_new_news',
+                'message' => sprintf( '対象期間（%s〜%s）に、まだどの号にも使われていない新規ニュースがありませんでした。号の生成は行いませんでした。', $week_start, $week_end ),
+            );
+        }
     }
 
     if ( hatakiti_occult_auto_publish_source_fetch_anomaly( $candidates ) ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'source_fetch', 'outcome' => 'anomaly_all_failed' ) );
-        if ( 'production' === $mode ) {
+        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'source_fetch', 'outcome' => 'anomaly_all_failed' ) );
+        if ( $notify_on_failure ) {
             hatakiti_occult_auto_publish_notify_admin( 'source_fetch', '対象ニュース全件で元記事本文の取得に失敗しました。' );
         }
         hatakiti_occult_auto_publish_release_lock();
@@ -357,22 +419,31 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
 
     // 2. AI週次編集（クラスタリング・重要度判定・執筆・JSON完全性チェック
     // 込みのリトライ・保存ガード）— 既存関数を無変更で呼び出すのみ。
-    $post_id = hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end );
+    // manual_test/manual_publishは選定済みの候補リストをそのまま渡す
+    // （$override_items）— hatakiti_get_occult_weekly_candidates()の
+    // 「新規ニュースのみ」判定はscheduledでのみ使われる。
+    $post_id = hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end, $use_test_candidates ? $candidates : null );
     if ( is_wp_error( $post_id ) ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'ai_generate', 'outcome' => 'error', 'code' => $post_id->get_error_code() ) );
-        if ( 'production' === $mode ) {
+        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'ai_generate', 'outcome' => 'error', 'code' => $post_id->get_error_code() ) );
+        if ( $notify_on_failure ) {
             hatakiti_occult_auto_publish_notify_admin( 'ai_generate', $post_id->get_error_message() );
         }
         hatakiti_occult_auto_publish_release_lock();
         return array( 'status' => 'error', 'message' => 'AI週次編集でエラーが発生しました： ' . $post_id->get_error_message() );
     }
-    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'ai_generate', 'post_id' => $post_id, 'outcome' => 'success' ) );
+    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'ai_generate', 'post_id' => $post_id, 'outcome' => 'success' ) );
+
+    // 臨時発行由来であることを識別できるようにする（指示書§7）。
+    // バックナンバー除外はmanual_testのみ（occult-cpt.php）。
+    if ( 'scheduled' !== $run_type ) {
+        update_post_meta( $post_id, 'hatakiti_occult_run_type', $run_type );
+    }
 
     // 3. 保存直後のDB再読込による独立検証。
     $db_check = hatakiti_occult_auto_publish_verify_db( $post_id );
-    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'db_verify', 'post_id' => $post_id, 'outcome' => $db_check['ok'] ? 'success' : 'failed' ) );
+    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'db_verify', 'post_id' => $post_id, 'outcome' => $db_check['ok'] ? 'success' : 'failed' ) );
     if ( ! $db_check['ok'] ) {
-        if ( 'production' === $mode ) {
+        if ( $notify_on_failure ) {
             hatakiti_occult_auto_publish_notify_admin( 'db_verify', $db_check['reason'], array( 'post_id' => $post_id ) );
         }
         hatakiti_occult_auto_publish_release_lock();
@@ -386,9 +457,9 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
     // 4. PDF生成（既存のキャッシュ付き生成関数を無変更で呼び出すのみ）。
     $pdf_result = hatakiti_get_occult_weekly_pdf_path( $post_id );
     $pdf_check  = hatakiti_occult_auto_publish_verify_pdf( $pdf_result );
-    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'pdf_verify', 'post_id' => $post_id, 'outcome' => $pdf_check['ok'] ? 'success' : 'failed' ) );
+    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'pdf_verify', 'post_id' => $post_id, 'outcome' => $pdf_check['ok'] ? 'success' : 'failed' ) );
     if ( ! $pdf_check['ok'] ) {
-        if ( 'production' === $mode ) {
+        if ( $notify_on_failure ) {
             hatakiti_occult_auto_publish_notify_admin( 'pdf_generate', $pdf_check['reason'], array( 'post_id' => $post_id ) );
         }
         hatakiti_occult_auto_publish_release_lock();
@@ -402,26 +473,27 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
 
     $elapsed = round( microtime( true ) - $started_at, 1 );
 
-    // 全ゲート通過。
-    if ( 'test' === $mode ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'gate', 'post_id' => $post_id, 'elapsed_s' => $elapsed, 'outcome' => 'gate_passed_would_publish_in_production' ) );
+    // 全ゲート通過。publishできないrun_type（manual_test）はここで終了 —
+    // 絶対にpublishしない。
+    if ( ! $can_publish ) {
+        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'gate', 'post_id' => $post_id, 'elapsed_s' => $elapsed, 'outcome' => 'gate_passed_would_publish_in_production' ) );
         hatakiti_occult_auto_publish_release_lock();
         return array(
             'status'      => 'success',
-            'message'     => sprintf( '週刊号の下書き（#%d）とPDFを生成しました。すべての公開ゲートを通過しています（本番実行なら公開されます）。テスト実行のため公開は行っていません。', $post_id ),
+            'message'     => sprintf( '週刊号の下書き（#%d）とPDFを生成しました。すべての公開ゲートを通過しています。テスト実行のため公開は行っていません。', $post_id ),
             'post_id'     => $post_id,
             'pdf'         => $pdf_result,
             'gate_passed' => true,
         );
     }
 
-    // 13. 全条件を満たした場合のみpublish（productionモードのみ）。
+    // 13. 全条件を満たした場合のみpublish（scheduled / manual_publish）。
     // 14. publish直前の最終確認 — ここまでの各ステップで既に post_id /
     // articles_count / body_total_chars / pdf_path をログしているため、
     // ここでは公開直前スナップショットとして改めて記録する。
     hatakiti_occult_ai_log( array(
         'source'           => 'auto_publish',
-        'mode'             => $mode,
+        'run_type'         => $run_type,
         'step'             => 'pre_publish_snapshot',
         'post_id'          => $post_id,
         'article_count'    => $db_check['stats']['article_count'],
@@ -434,7 +506,7 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
     $GLOBALS['hatakiti_occult_weekly_trusted_save'] = false;
 
     if ( is_wp_error( $publish_result ) ) {
-        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'publish', 'post_id' => $post_id, 'outcome' => 'error' ) );
+        hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'publish', 'post_id' => $post_id, 'outcome' => 'error' ) );
         hatakiti_occult_auto_publish_notify_admin( 'publish', $publish_result->get_error_message(), array( 'post_id' => $post_id ) );
         hatakiti_occult_auto_publish_release_lock();
         return array(
@@ -456,7 +528,7 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
         && 200 === wp_remote_retrieve_response_code( $url_check )
         && 0 === strpos( (string) wp_remote_retrieve_body( $url_check ), '%PDF-' );
 
-    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'pdf_url_verify', 'post_id' => $post_id, 'outcome' => $url_ok ? 'success' : 'failed' ) );
+    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'pdf_url_verify', 'post_id' => $post_id, 'outcome' => $url_ok ? 'success' : 'failed' ) );
 
     if ( ! $url_ok ) {
         // 15. PDFは正常だがpublishが機能的に失敗したケース。PDFファイルは
@@ -475,7 +547,7 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
         );
     }
 
-    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'mode' => $mode, 'step' => 'published', 'post_id' => $post_id, 'elapsed_s' => $elapsed, 'outcome' => 'success' ) );
+    hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'published', 'post_id' => $post_id, 'elapsed_s' => $elapsed, 'outcome' => 'success' ) );
     hatakiti_occult_auto_publish_release_lock();
 
     return array(
@@ -488,15 +560,17 @@ function hatakiti_run_occult_weekly_auto_pipeline( $mode = 'test' ) {
 }
 
 /**
- * 管理画面: 手動テスト実行。常にmode='test'で呼び出す — 全ゲートを通過
- * しても実際にはpublishしない。本番のpublishはcron（production mode）
- * からのみ行われる。
+ * 管理画面: 臨時発行（テスト／臨時公開）。
+ *
+ * デフォルトは常に「臨時発行（テスト）」— 誤クリックしてもpublishされない
+ * （指示書§4）。「臨時公開」は別フォーム・別nonce・より高い権限
+ * （manage_options）・確認ダイアログ付きで、明確に区別する。
  */
 function hatakiti_register_occult_auto_publish_page() {
     add_submenu_page(
         'edit.php?post_type=occult_weekly',
-        '自動発行（テスト実行）',
-        '自動発行（テスト実行）',
+        '臨時発行（テスト）',
+        '臨時発行（テスト）',
         'edit_posts',
         'hatakiti-occult-auto-publish',
         'hatakiti_render_occult_auto_publish_page'
@@ -510,19 +584,25 @@ function hatakiti_render_occult_auto_publish_page() {
     }
 
     $result = null;
-    if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['hatakiti_occult_auto_publish_nonce'] ) ) {
-        check_admin_referer( 'hatakiti_occult_auto_publish_run', 'hatakiti_occult_auto_publish_nonce' );
-        $result = hatakiti_run_occult_weekly_auto_pipeline( 'test' );
+
+    if ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['hatakiti_occult_manual_test_nonce'] ) ) {
+        check_admin_referer( 'hatakiti_occult_manual_test_run', 'hatakiti_occult_manual_test_nonce' );
+        $result = hatakiti_run_occult_weekly_auto_pipeline( 'manual_test' );
+    } elseif ( 'POST' === $_SERVER['REQUEST_METHOD'] && isset( $_POST['hatakiti_occult_manual_publish_nonce'] ) ) {
+        check_admin_referer( 'hatakiti_occult_manual_publish_run', 'hatakiti_occult_manual_publish_nonce' );
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_die( '臨時公開の実行には管理者権限が必要です。' );
+        }
+        $result = hatakiti_run_occult_weekly_auto_pipeline( 'manual_publish' );
     }
 
     list( $preview_start, $preview_end ) = hatakiti_occult_auto_publish_default_week_range();
     ?>
     <div class="wrap hatakiti-record-form">
-        <h1>週刊オカルト新聞 — 自動発行（テスト実行）</h1>
+        <h1>週刊オカルト新聞 — 臨時発行</h1>
         <p class="description">
-            RSS取得 → 新規ニュース判定 → AI週次編集 → DB検証 → PDF生成 → PDF検証 を1回の操作でまとめて実行します。<br>
-            この画面からの実行は<strong>常にテストモード</strong>です — 全ての公開ゲートを通過しても実際には公開しません（結果は必ず下書きのまま）。実際の週次自動公開は、サーバー側のcronから本番モードで実行されます。<br>
-            対象期間は実行時点から遡って7日間（本日実行した場合: <?php echo esc_html( $preview_start ); ?> 〜 <?php echo esc_html( $preview_end ); ?>）です。
+            レイアウト確認・AI記事生成確認・PDF確認・回帰テスト・本番発行前の事前確認などのために、任意のタイミングで1号分の生成を試せます。<br>
+            候補ニュースは、対象期間内の新規ニュースが無い場合でも、既存号で使用済みのものを含めて直近のニュースから自動選択されます（毎週月曜6:00の本番自動発行はこれとは別に、新規ニュースのみを対象にした従来どおりの判定で動作します）。
         </p>
 
         <?php if ( ! hatakiti_occult_ai_is_configured() ) : ?>
@@ -554,34 +634,47 @@ function hatakiti_render_occult_auto_publish_page() {
             </div>
         <?php endif; ?>
 
+        <h2>臨時発行（テスト）</h2>
+        <p class="description">最新ニュースを使って新聞PDFを生成します。<strong>公開はされません</strong>（結果は必ず下書きのまま）。何度でも実行でき、毎週月曜の本番自動発行には影響しません。</p>
         <form method="post">
-            <?php wp_nonce_field( 'hatakiti_occult_auto_publish_run', 'hatakiti_occult_auto_publish_nonce' ); ?>
+            <?php wp_nonce_field( 'hatakiti_occult_manual_test_run', 'hatakiti_occult_manual_test_nonce' ); ?>
             <p class="hatakiti-form-actions">
-                <button type="submit" class="button button-primary"<?php disabled( ! hatakiti_occult_ai_is_configured() ); ?>>今すぐ実行する（テストモード）</button>
+                <button type="submit" class="button button-primary"<?php disabled( ! hatakiti_occult_ai_is_configured() ); ?>>臨時発行（テスト）を実行する</button>
             </p>
         </form>
+
+        <?php if ( current_user_can( 'manage_options' ) ) : ?>
+            <h2 style="margin-top:40px; color:#a00;">臨時公開</h2>
+            <p class="description"><strong>公開すると一般公開されます。</strong>通常のテスト用途では使用しないでください。今週すでに正式号が公開済みの場合は実行できません（安全のため同週の重複公開はできない設計です）。</p>
+            <form method="post" onsubmit="return confirm('本当に臨時公開しますか？\nこの号は一般に公開されます。');">
+                <?php wp_nonce_field( 'hatakiti_occult_manual_publish_run', 'hatakiti_occult_manual_publish_nonce' ); ?>
+                <p class="hatakiti-form-actions">
+                    <button type="submit" class="button"<?php disabled( ! hatakiti_occult_ai_is_configured() ); ?>>臨時公開を実行する（一般公開されます）</button>
+                </p>
+            </form>
+        <?php endif; ?>
     </div>
     <?php
 }
 
 /**
  * WP-CLI: 本番用の実行入口。サーバー側crontabから直接呼び出す想定
- * （wp hatakiti-occult-auto-publish run）。production modeで実行するため
- * 全ゲート通過時は実際にpublishされる。
+ * （wp hatakiti-occult-auto-publish run）。run_type='scheduled'で実行する
+ * ため、新規ニュースのみを対象にし、全ゲート通過時は実際にpublishされる。
  */
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
     class Hatakiti_CLI_Occult_Auto_Publish {
 
         /**
-         * 週刊オカルト新聞の自動発行パイプラインを本番モードで実行する。
-         * 全ての公開ゲートを通過した場合のみpublishする。
+         * 週刊オカルト新聞の自動発行パイプラインを本番（scheduled）
+         * モードで実行する。全ての公開ゲートを通過した場合のみpublishする。
          *
          * ## EXAMPLES
          *
          *     wp hatakiti-occult-auto-publish run
          */
         public function run( $args, $assoc_args ) {
-            $result = hatakiti_run_occult_weekly_auto_pipeline( 'production' );
+            $result = hatakiti_run_occult_weekly_auto_pipeline( 'scheduled' );
 
             WP_CLI::log( 'status: ' . $result['status'] );
             WP_CLI::log( 'message: ' . $result['message'] );

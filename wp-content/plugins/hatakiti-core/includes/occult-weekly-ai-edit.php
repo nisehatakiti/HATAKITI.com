@@ -150,13 +150,20 @@ SYS;
 /**
  * The full pipeline. Returns the new occult_weekly post ID (always
  * draft), or WP_Error.
+ *
+ * @param array|null $override_items When non-empty, used as the candidate
+ *   news items instead of calling hatakiti_get_occult_weekly_candidates().
+ *   Existing callers (cron, the manual "AIで週刊号を作成" page) never pass
+ *   this and are completely unaffected. Introduced for 臨時発行
+ *   (occult-weekly-auto-publish.php) so a manual test run can reuse
+ *   already-linked news instead of being blocked by "no new news".
  */
-function hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end ) {
+function hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end, $override_items = null ) {
     if ( ! preg_match( '/^\d{4}-\d{2}-\d{2}$/', $week_start ) || ! preg_match( '/^\d{4}-\d{2}-\d{2}$/', $week_end ) ) {
         return new WP_Error( 'hatakiti_ai_bad_range', '対象期間（開始・終了）の形式が正しくありません。' );
     }
 
-    $items = hatakiti_get_occult_weekly_candidates( $week_start, $week_end, 0 );
+    $items = ! empty( $override_items ) ? $override_items : hatakiti_get_occult_weekly_candidates( $week_start, $week_end, 0 );
     if ( ! $items ) {
         return new WP_Error( 'hatakiti_ai_no_items', '対象期間内に、まだどの号にも使われていないニュースがありません。先にRSS取得（またはテストデータ投入）を行ってください。' );
     }
