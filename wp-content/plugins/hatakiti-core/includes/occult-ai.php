@@ -220,15 +220,97 @@ function hatakiti_occult_ai_is_retryable( $is_wp_error, $http_code ) {
 }
 
 /**
+ * Minimal structural check on the article JSON a provider is supposed to
+ * have returned (the payload hatakiti_extract_json_from_ai_text() decoded,
+ * not the provider's own response envelope). Deliberately shallow — this
+ * only asks "is this response usable at all", not "is every field valid
+ * for saving" (hatakiti_process_occult_ai_response() in
+ * occult-weekly-ai-edit.php already owns that, unchanged by this).
+ * A response that fails this check is exactly the shape a body cut off
+ * mid-stream produces: valid-looking JSON at the start, then missing or
+ * malformed structure — so it's routed back into the retry loop instead
+ * of being handed to the save path.
+ */
+function hatakiti_occult_ai_validate_response_structure( $decoded ) {
+    if ( ! is_array( $decoded ) ) {
+        return new WP_Error( 'hatakiti_ai_invalid_json', 'AI応答をJSONとして解析できませんでした。' );
+    }
+    if ( empty( $decoded['articles'] ) || ! is_array( $decoded['articles'] ) ) {
+        return new WP_Error( 'hatakiti_ai_no_articles', 'articlesが存在しないか空です。' );
+    }
+    foreach ( $decoded['articles'] as $i => $article ) {
+        if ( ! is_array( $article ) ) {
+            return new WP_Error( 'hatakiti_ai_bad_article', "articles[{$i}]が配列ではありません。" );
+        }
+        foreach ( array( 'headline', 'importance', 'body', 'source_item_ids' ) as $field ) {
+            if ( ! isset( $article[ $field ] ) ) {
+                return new WP_Error( 'hatakiti_ai_missing_field', "articles[{$i}]に{$field}がありません。" );
+            }
+        }
+    }
+    return true;
+}
+
+/**
+ * Anthropic-specific body_check for hatakiti_occult_ai_post_with_retry():
+ * extracts the text block from Anthropic's response envelope, runs the
+ * existing hatakiti_extract_json_from_ai_text() on it, and validates the
+ * result's structure. Also surfaces stop_reason/token usage so the retry
+ * wrapper can log them regardless of outcome — this is the diagnostic
+ * visibility that was missing when a truncated-but-HTTP-200 response was
+ * previously treated as a successful call.
+ */
+function hatakiti_occult_ai_anthropic_body_check( $decoded_response_body ) {
+    $diag = array();
+    if ( is_array( $decoded_response_body ) ) {
+        $diag['stop_reason']   = $decoded_response_body['stop_reason'] ?? 'n/a';
+        $diag['input_tokens']  = $decoded_response_body['usage']['input_tokens'] ?? 'n/a';
+        $diag['output_tokens'] = $decoded_response_body['usage']['output_tokens'] ?? 'n/a';
+    }
+
+    if ( ! is_array( $decoded_response_body ) ) {
+        return array( 'ok' => false, 'error_message' => 'Anthropicレスポンスの本体がJSONとして解析できません。', 'diag' => $diag );
+    }
+
+    $text = '';
+    foreach ( (array) ( $decoded_response_body['content'] ?? array() ) as $block ) {
+        if ( isset( $block['type'] ) && 'text' === $block['type'] && isset( $block['text'] ) ) {
+            $text = $block['text'];
+            break;
+        }
+    }
+    if ( '' === $text ) {
+        $diag['json'] = 'n/a';
+        return array( 'ok' => false, 'error_message' => 'Anthropicレスポンスにtextブロックがありません。', 'diag' => $diag );
+    }
+
+    $article_json = hatakiti_extract_json_from_ai_text( $text );
+    $structure_ok = hatakiti_occult_ai_validate_response_structure( $article_json );
+    if ( is_wp_error( $structure_ok ) ) {
+        $diag['json'] = 'failed';
+        return array( 'ok' => false, 'error_message' => $structure_ok->get_error_message(), 'diag' => $diag );
+    }
+
+    $diag['json'] = 'success';
+    return array( 'ok' => true, 'error_message' => null, 'diag' => $diag );
+}
+
+/**
  * Shared retry wrapper for both provider adapters — up to 3 attempts
  * total, exponential backoff (2s, then 4s) between retryable failures.
- * Not a general-purpose HTTP client: it only decides retry/no-retry and
- * logs each attempt: the caller still does its own response-code and
- * body handling exactly as before, using whatever this returns (a
- * WP_Error or the last HTTP response, same shape wp_remote_post() itself
- * returns).
+ * $body_check is optional: a callable(decoded_response_body_array): array
+ * returning array('ok'=>bool, 'error_message'=>string|null, 'diag'=>array)
+ * that inspects the response BODY, not just the HTTP status. Passing one
+ * (the Anthropic adapter does; the OpenAI adapter deliberately does not,
+ * to leave that untouched/untested code path exactly as it was) makes
+ * "HTTP 200 but the article JSON is incomplete or missing required
+ * fields" a retryable outcome instead of being treated as success purely
+ * because the transport layer succeeded — the actual gap this whole
+ * change addresses (found in the 580 full-flow test: HTTP 200, but the
+ * AI response's JSON was truncated partway through and nothing here
+ * caught that before it reached the save path).
  */
-function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label ) {
+function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label, $body_check = null ) {
     $max_attempts = 3;
     $backoff      = array( 2, 4 );
     $response     = null;
@@ -238,26 +320,55 @@ function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label ) {
 
         $is_wp_error = is_wp_error( $response );
         $http_code   = $is_wp_error ? 0 : wp_remote_retrieve_response_code( $response );
-        $success     = ! $is_wp_error && 200 === $http_code;
+        $http_ok     = ! $is_wp_error && 200 === $http_code;
 
-        hatakiti_occult_ai_log( array(
+        $check = array( 'ok' => $http_ok, 'error_message' => null, 'diag' => array() );
+        if ( $http_ok && null !== $body_check ) {
+            $decoded_body = json_decode( wp_remote_retrieve_body( $response ), true );
+            $check        = call_user_func( $body_check, $decoded_body );
+        }
+
+        $success = $http_ok && $check['ok'];
+
+        $log_fields = array(
             'provider'    => $provider_label,
             'attempt'     => $attempt . '/' . $max_attempts,
             'http_status' => $is_wp_error ? 'n/a' : $http_code,
             'error_type'  => $is_wp_error ? $response->get_error_code() : ( $success ? '' : 'http_error' ),
-            'outcome'     => $success ? 'success' : 'failed',
-        ) );
+        );
+        foreach ( $check['diag'] as $diag_key => $diag_value ) {
+            $log_fields[ $diag_key ] = $diag_value;
+        }
+        if ( null !== $body_check ) {
+            $log_fields['json'] = $http_ok ? ( $check['ok'] ? 'success' : 'failed' ) : 'n/a';
+        }
+        $log_fields['outcome'] = $success ? 'success' : 'failed';
+        hatakiti_occult_ai_log( $log_fields );
 
         if ( $success ) {
             return $response;
         }
 
-        $retryable = hatakiti_occult_ai_is_retryable( $is_wp_error, $http_code );
+        // JSON body validation failing on an otherwise-200 response is
+        // exactly as retryable as a transient network/server error — it's
+        // the failure mode this change exists to catch.
+        $retryable = $is_wp_error
+            ? true
+            : ( in_array( $http_code, array( 429, 500, 502, 503, 504 ), true ) || ( $http_ok && ! $check['ok'] ) );
+
         if ( ! $retryable || $attempt === $max_attempts ) {
             hatakiti_occult_ai_log( array(
                 'provider' => $provider_label,
                 'outcome'  => $retryable ? 'gave_up_after_max_attempts' : 'not_retryable',
             ) );
+            // On the final attempt, if transport succeeded but body
+            // validation didn't, return a specific WP_Error instead of the
+            // raw (invalid) response — otherwise the caller would silently
+            // re-extract the same bad text and produce a less useful
+            // generic "empty response" message.
+            if ( $http_ok && ! $check['ok'] && $check['error_message'] ) {
+                return new WP_Error( 'hatakiti_ai_invalid_response', $check['error_message'] );
+            }
             return $response;
         }
 
@@ -288,7 +399,7 @@ function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model )
                 array( 'role' => 'user', 'content' => $prompt ),
             ),
         ) ),
-    ), 'anthropic' );
+    ), 'anthropic', 'hatakiti_occult_ai_anthropic_body_check' );
 
     if ( is_wp_error( $response ) ) {
         return $response;
