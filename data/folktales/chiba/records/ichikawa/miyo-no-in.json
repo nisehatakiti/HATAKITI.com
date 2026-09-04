@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-miyo-no-in",
+  "status":"draft",
+  "title":"御代の院",
+  "title_normalized":"御代の院",
+  "title_origin":"source_title",
+  "summary":{"text":"平将門討伐のため関東に下った菅野氏と、将門の内室となって内情を探った御代の前、その後に建立された御代院をめぐる菅野の伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-MINWA","SRC-ICHIKAWA-MIYO-IN"]},
+  "story_summary":"天慶の乱のころ、京都から関東へ下った菅野氏の妻が御代の前と称して平将門の内室となり、大野城の内情を夫に知らせたため将門の勢力を討つ助けになったと伝えられている。夫妻は後に出家し、将門や戦死者を弔い、その墓標が御代の院になったという。",
+  "story_content":"天慶の乱のころ、京都の菅野氏は平将門を討つため妻とともに関東へ下り、現在の市川市菅野に居を構えたという。美しい妻は御代の前と称して将門の内室となり、将門の出城と伝えられる大野城に入って内情を探り、夫に知らせたことで大野の落城を早めたと伝えられている。戦いの後、菅野夫妻はともに出家してこの地に留まり、将門や戦で亡くなった将兵の後生を弔ったという。夫妻の死後、里人がその志をしのんで墓標を建てて祀ったのが御代の院の始まりとされる。また、風邪をひいたときに御代院から借りた茶碗で薬湯を飲み、治ると新しい茶碗を添えて返すという信仰も伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"菅野・大野","source_description":"千葉県立図書館の市川市民話索引、市川市公式系資料、市川民話の会などで菅野の御代院に結びつく将門伝承として確認。"},
+  "locations":[{"name":"御代院","type":"祠・墓所","description":"菅野夫妻を祀ったと伝えられる場所で、御代の前と将門をめぐる伝承の中心。","source_ids":["SRC-ICHIKAWA-MIYO-IN"]},{"name":"大野城","type":"城跡・伝承地","description":"御代の前が将門の内室として内情を探ったと伝えられる将門伝説上の城。","source_ids":["SRC-ICHIKAWA-MIYO-IN","SRC-ICHIKAWA-MINWA"]}],
+  "characters":[{"name":"御代の前","role":"主人公","attributes":["菅野氏の妻と伝えられる","将門の内室となり内情を探ったとされる"],"source_ids":["SRC-ICHIKAWA-MIYO-IN"]},{"name":"菅野氏","role":"御代の前の夫","attributes":["京都から関東へ下ったと伝えられる","将門討伐を志したとされる"],"source_ids":["SRC-ICHIKAWA-MIYO-IN"]},{"name":"平将門","role":"伝承上の武将","attributes":["御代の前の内室となったと伝えられる"],"source_ids":["SRC-ICHIKAWA-MIYO-IN"]}],
+  "beings":[],
+  "themes":["平将門","御代の前","菅野氏","女スパイ","大野城","御代院","供養","信仰"],
+  "story_type":["人物伝承","将門伝説","寺社・信仰伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa_ichikawa.html","accessed_date":"2026-09-04","relevant_section":"御代の院／房総の伝説／第一法規／1976年／市川市菅野・大野","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-MINWA","title":"第11回市川の昔ばなし『市川の北地域の話』","publisher":"市川民話の会","author":null,"publication_date":"2025-04-10","source_type":"local_storytelling_event","url":"https://ichikawa.genki365.jp/G0000286/event/6363.html","accessed_date":"2026-09-04","relevant_section":"平将門と御代の前（大野町・菅野）","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-MIYO-IN","title":"御代院（市川市菅野）伝承紹介","publisher":"市川市内地域資料・御代院案内伝承","author":null,"publication_date":"web","source_type":"local_history_web","url":"https://www.pasonisan.com/rvw_trip/15-05-sugano.html","accessed_date":"2026-09-04","relevant_section":"御代の前のスパイ活動・御代院の由緒","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"御代院の案内・地域資料に伝わる筋を整理。大野城を将門の出城とする点は伝承として扱い、史実として断定していない。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館の索引、市川民話の会の語りの案内、御代院の由緒紹介を照合。菅野夫妻、御代の前の潜入、夫妻の出家と供養、御代院の成立、茶碗を借りる信仰まで確認。"
+}
