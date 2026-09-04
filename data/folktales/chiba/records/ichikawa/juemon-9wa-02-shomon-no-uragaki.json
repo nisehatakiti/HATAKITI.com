@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-juemon-9wa-02-shomon-no-uragaki",
+  "status":"draft",
+  "title":"印内の重右衛門ばなし九話　その二　証文の裏書き",
+  "title_normalized":"印内の重右衛門ばなし九話 その二 証文の裏書き",
+  "title_origin":"source_title",
+  "summary":{"text":"奉公の証文の裏書きを利用して、仕事を休む重右衛門の笑話。","based_on_source_ids":["SRC-CHI-001","SRC-JFOLK-002"]},
+  "story_summary":"重右衛門は奉公に来た際、証文を書いた。ところが風のない日でも寝ているため起きて働けと言われると、証文の裏を見るよう答える。そこには東西南北どの風も嫌いだという趣旨が書かれており、重右衛門は風が吹くたびに仕事をしない口実にした。",
+  "story_content":"奉公に来た重右衛門は証文を書き、その裏に東西南北の風を嫌うことを書いておいた。風のない日にも寝ているので起きて働けと言われると、重右衛門は証文の裏を見るよう主人に言う。どの方角の風も嫌いと書いてあるため、たいていどこかから風が吹いていることを理由にして働かずに済ませた。言葉の隙を利用して仕事を逃れる重右衛門のとんちが笑いになっている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"北方・印内周辺","source_description":"市川市・船橋市の印内伝承として伝わる重右衛門話。"},
+  "locations":[{"name":"北方","location_type":"place","description":"千葉県立図書館の市川市民話索引で九話の地域根拠とされる地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-CHI-001"]},{"name":"印内","location_type":"place","description":"重右衛門伝承の故地。現在の船橋市印内。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-CHI-REGIONAL-001"]}],
+  "characters":[{"name":"印内の重右衛門","role":"主人公・奉公人","attributes":["言葉の裏を利用して仕事を逃れる","とんちを働かせる人物"],"source_ids":["SRC-JFOLK-002"]}],
+  "beings":[],"themes":["人物","重右衛門","奉公","証文","とんち","笑話","印内","北方"],"story_type":["民話","人物伝承","笑話"],
+  "related_records":[{"record_id":"chiba-ichikawa-innai-juemon-traditions","relationship":"same_tradition","note":"印内の重右衛門伝承群を構成する個別話。"}],
+  "sources":[{"source_id":"SRC-CHI-001","title":"千葉県の民話　市川市","publisher":"千葉県立図書館","author":null,"publication_date":"2026年閲覧","source_type":"library","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"印内の重右衛門ばなし九話　その二　証文の裏書き／千葉県の民話 続／北方","language":"ja"},{"source_id":"SRC-JFOLK-002","title":"重右衛門㉑ 証文の裏(1)","publisher":"日本伝承マップ","author":null,"publication_date":"2026年閲覧","source_type":"folklore_database","url":"https://j-folklore.com/l/book_456_ep_125","accessed_date":"2026-09-04","relevant_section":"証文の裏／東西南北どの風も嫌いと書いた証文／市川の伝承民話 第1集","language":"ja"}],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の九話の題名と地域根拠に、日本伝承マップの対応話『証文の裏』の具体的内容を照合した。"},
+  "confidence":"high","research_status":"deep_researched","research_notes":"九話そのものの1981年版本文ではなく、市川の伝承民話第1集に収録された対応話の本文情報を照合。"
+}
