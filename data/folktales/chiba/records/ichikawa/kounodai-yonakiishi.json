@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-kounodai-yonakiishi",
+  "status":"draft",
+  "title":"国府台と夜泣石",
+  "title_normalized":"国府台と夜泣石",
+  "title_origin":"source_title",
+  "summary":{"text":"国府台合戦で戦死した里見弘次を訪ねてきた娘が石にもたれて泣き、亡くなった後、その石から夜ごと泣き声が聞こえたという伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-YONAKIISHI-EXPLANATION"]},
+  "story_summary":"第二次国府台合戦で戦死した里見弘次の娘が、父を弔うため安房から国府台へ来たものの、戦場の惨状を目にして石にもたれて泣き続け、そのまま亡くなった。その後、石から夜ごと悲しい泣き声が聞こえるようになり、夜泣石と呼ばれたという。",
+  "story_content":"永禄7年（1564）の国府台合戦で里見弘次が戦死したと伝えられている。弘次の幼い娘は父の霊を弔うため安房から国府台の戦場を訪れたが、凄惨な戦場跡を目にして悲しみ、傍らの石にもたれて泣き続け、ついには息絶えたという。その後、夜になると石から娘の悲しい泣き声が聞こえるようになったため、里人はその石を「夜泣石」と呼んだ。別の伝えでは、通りかかった武士が娘を供養した後、泣き声が聞こえなくなったともいう。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"国府台","source_description":"市川市国府台・里見公園周辺および総寧寺に結びつく夜泣石伝承。"},
+  "locations":[{"name":"夜泣石","type":"石・伝承地","description":"国府台合戦で亡くなった娘の悲しみが伝わり、夜に泣き声を発するとされた石。","source_ids":["SRC-ICHIKAWA-YONAKIISHI-EXPLANATION"]},{"name":"国府台","type":"地域・合戦地","description":"第二次国府台合戦の舞台で、夜泣石伝承が結びつく地域。","source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX"]}],
+  "characters":[{"name":"里見弘次","role":"伝承上の武将","attributes":["国府台合戦で戦死したとされる"],"source_ids":["SRC-ICHIKAWA-YONAKIISHI-EXPLANATION"]},{"name":"里見弘次の娘","role":"伝承上の人物","attributes":["父を弔うため安房から国府台を訪れた少女","石にもたれて泣き続けたとされる"],"source_ids":["SRC-ICHIKAWA-YONAKIISHI-EXPLANATION"]}],
+  "beings":[],
+  "themes":["夜泣石","合戦伝承","里見氏","国府台","怪異","供養","石の伝承"],
+  "story_type":["怪異譚","合戦伝承","地名・伝承地伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"国府台と夜泣石／房総の伝説／1975年","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-YONAKIISHI-EXPLANATION","title":"国府台・堀之内界隈／夜泣石伝承に関する市川市周辺資料","publisher":"市川市・市川地域資料","author":null,"publication_date":"web","source_type":"local_history_reference","url":"https://www.city.ichikawa.lg.jp/page/4175.html","accessed_date":"2026-09-04","relevant_section":"国府台・里見公園周辺の夜泣石伝承","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の収録実績と、市川市周辺の地域資料で夜泣石の筋を確認。史実上の里見弘次に関する記録と伝承上の娘の物語は区別して扱う。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"夜泣石には里見弘次・娘に関する伝承がある一方、歴史資料上の人物像と伝承内容には差異があるため、物語として記録し史実とは断定しない。『鐘ヶ淵』とは同じ国府台伝承圏だが別話として管理する。"
+}
