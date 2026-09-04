@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-kataha-no-ashi",
+  "status":"draft",
+  "title":"方葉の芦",
+  "title_normalized":"方葉の芦",
+  "title_origin":"source_title",
+  "summary":{"text":"真間の井を通った手児奈にちなみ、片側だけに葉をつける芦の由来を伝える伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-FUKAGAWA-EDO-SHIRYOKAN-2013"]},
+  "story_summary":"市川市真間に伝わる片葉の芦の由来譚。真間の井へ水を汲みに通った手児奈に芦の葉が触れ、そのため芦が片側だけに葉をつけるようになったと伝えられる。",
+  "story_content":"真間の井には、手児奈が水を汲みに通ったという伝承がある。その井戸のあたりに生える芦は、手児奈が通るときに袖が葉に触れたため、その葉が十分に育たず、片側だけに葉をつけるようになったと伝えられている。こうして真間の井の周辺の芦は「方葉の芦」と呼ばれ、手児奈に結びつく土地の伝承として語り継がれてきた。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"真間","source_description":"千葉県立図書館の市川市民話索引では市川市真間（地名）に結びつく『房総の伝説』収録伝承として掲載。"},
+  "locations":[{"name":"真間の井戸","type":"井戸・伝承地","description":"手児奈が水を汲みに通ったと伝えられ、片葉の芦の由来と結びつく場所。","source_ids":["SRC-FUKAGAWA-EDO-SHIRYOKAN-2013"]},{"name":"真間","type":"地域","description":"手児奈伝承と片葉の芦が結びつく市川市の地域。","source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX"]}],
+  "characters":[{"name":"手児奈","role":"伝承上の人物","attributes":["真間に住んでいた女性","真間の井へ水を汲みに通ったとされる"],"source_ids":["SRC-FUKAGAWA-EDO-SHIRYOKAN-2013"]}],
+  "beings":[],
+  "themes":["植物伝承","片葉の芦","手児奈","真間の井","由来譚","市川市"],
+  "story_type":["植物伝承","由来譚","人物伝承"],
+  "related_records":[{"record_id":"chiba-ichikawa-mama-no-tecona","relation":"same_tradition_area","note":"真間の手児奈に関する伝承群の一つ"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"方葉の芦／房総の伝説／1976年／市川市真間","language":"ja"},
+    {"source_id":"SRC-FUKAGAWA-EDO-SHIRYOKAN-2013","title":"資料館ノート 第96号 七不思議の謎にせまる⑥ 片葉の葦","publisher":"江東区深川江戸資料館","author":null,"publication_date":"2013-03-16","source_type":"museum_bulletin","url":"https://www.kcf.or.jp/cms/files/pdf/original/7901_%E8%B3%87%E6%96%99%E9%A4%A8%E3%83%8E%E3%83%BC%E3%83%8896.pdf","accessed_date":"2026-09-04","relevant_section":"各地の片葉の葦／市川市真間","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川市真間の片葉の芦について、千葉県立図書館の索引で収録実績と地域を確認し、江東区深川江戸資料館の資料で手児奈・真間の井との由来関係を確認して整理。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"『房総の伝説』1976年の原典本文そのものはオンラインで直接確認できていないが、千葉県立図書館の索引と江東区深川江戸資料館の解説資料で、真間・手児奈・片葉の芦の伝承関係を確認した。全国各地の片葉の芦伝承とは混同しない。"
+}
