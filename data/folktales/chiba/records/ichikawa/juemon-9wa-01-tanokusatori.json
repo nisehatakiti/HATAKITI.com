@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-juemon-9wa-01-tanokusatori",
+  "status": "draft",
+  "title": "印内の重右衛門ばなし九話　その一　田の草取り",
+  "title_normalized": "印内の重右衛門ばなし九話 その一 田の草取り",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "印内の重右衛門を主人公とする、田の草取りを題材にした笑話。",
+    "based_on_source_ids": ["SRC-CHI-001", "SRC-CHI-FUNA-001", "SRC-ICHIKAWA-MINWA-001", "SRC-JFOLK-001"]
+  },
+  "story_summary": "印内の重右衛門を主人公とする笑話の一つで、1981年刊『千葉県の民話 続』に「印内の重右衛門ばなし九話　その一　田の草取り」として収録されている。田の草取りという農作業を題材に、重右衛門の仕事ぶりや、とんちのある人物像を描く話として伝えられている。市川民話の会でも「じゅえむどん話～田の草取り」として語られている。",
+  "story_content": "重右衛門は、田の草取りをする仕事をめぐって登場する人物である。田の草取りは、稲の間に生えた雑草を取り除く農作業で、この話ではその仕事を重右衛門がどう行うかが笑いの題材になっている。重右衛門は、単に働く人物としてではなく、仕事の言葉や状況を自分なりに受け取り、とんちや機転で周囲を困らせたり笑わせたりする人物として、さまざまな話に登場する。この「田の草取り」もその一つで、市川市北方周辺を含む地域で語り継がれてきた。市川民話の会は2025年の昔ばなしの会で、この話を「じゅえむどん話～田の草取り」として実演している。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "北方・印内周辺",
+    "source_description": "千葉県立図書館の市川市民話索引では北方を根拠として掲載。船橋市側の索引では印内を根拠として掲載され、市川市・船橋市にまたがる重右衛門伝承群の一話として確認できる。"
+  },
+  "locations": [
+    {
+      "name": "北方",
+      "location_type": "place",
+      "description": "千葉県立図書館の市川市民話索引で本話の地域根拠として示されている地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001", "SRC-ICHIKAWA-MINWA-001"]
+    },
+    {
+      "name": "印内",
+      "location_type": "place",
+      "description": "船橋市側の索引で本話の地域根拠として示される、重右衛門伝承の故地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-FUNA-001"]
+    }
+  ],
+  "characters": [
+    {
+      "name": "印内の重右衛門（じゅえむどん）",
+      "role": "主人公・奉公人",
+      "attributes": ["田の草取りの仕事に登場する", "とんちや機転で笑いを生む人物"],
+      "source_ids": ["SRC-CHI-001", "SRC-ICHIKAWA-MINWA-001", "SRC-JFOLK-001"]
+    }
+  ],
+  "beings": [],
+  "themes": ["人物", "重右衛門", "田の草取り", "農作業", "奉公", "とんち", "笑話", "印内", "北方"],
+  "story_type": ["民話", "人物伝承", "笑話"],
+  "related_records": [
+    {
+      "record_id": "chiba-ichikawa-innai-juemon-traditions",
+      "relationship": "same_tradition",
+      "note": "印内の重右衛門伝承群を構成する個別話。ハブと相互接続する。"
+    },
+    {
+      "record_id": "chiba-ichikawa-innai-no-jiimu-san",
+      "relationship": "same_tradition",
+      "note": "印内のじいむさんと同じ重右衛門伝承群に属する個別話。"
+    },
+    {
+      "record_id": "chiba-ichikawa-juemon-uma-no-suki-na-aomon",
+      "relationship": "same_tradition",
+      "note": "馬のすきな青いもんのことと同じ重右衛門伝承群に属する個別話。"
+    },
+    {
+      "record_id": "chiba-ichikawa-juemon-sannenkan-mo-isoro",
+      "relationship": "same_tradition",
+      "note": "三年間も居候したことと同じ重右衛門伝承群に属する個別話。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内の重右衛門ばなし九話　その一　田の草取り／千葉県の民話　続／1981年／北方",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-CHI-FUNA-001",
+      "title": "千葉県の民話　船橋市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/funabashi.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内の重右衛門ばなし九話　その一　田の草取り／千葉県の民話　続／1981年／印内",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-ICHIKAWA-MINWA-001",
+      "title": "第２回　市川の昔ばなしを聞いて、おしゃべりしませんか",
+      "publisher": "市川民話の会",
+      "author": null,
+      "publication_date": "2025年7月6日",
+      "source_type": "oral_tradition_event",
+      "url": "https://ichikawa.genki365.jp/G0000286/event/6534.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "じゅえむどん話～田の草取り／市内各地・北方",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-JFOLK-001",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "重右衛門③ 田の草取り(1) 北国分／いんねえのじゅえむどん (1) 田の草取り 下貝塚",
+      "language": "ja"
+    }
+  ],
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": true,
+    "translation_used": false,
+    "notes": "千葉県立図書館の市川市・船橋市索引で1981年『千葉県の民話 続』収録の対象題名と北方・印内の地域根拠を確認した。市川民話の会は2025年に「じゅえむどん話～田の草取り」を実演している。日本伝承マップにも「重右衛門③ 田の草取り(1)」「いんねえのじゅえむどん (1) 田の草取り」が掲載されている。公開本文は確認できた範囲に限定し、具体的な台詞や細部の展開は原典本文未確認のため創作していない。"
+  },
+  "confidence": "medium",
+  "research_status": "partial",
+  "research_notes": "対象題名・収録書籍・北方／印内の地域根拠は確認済み。市川民話の会による2025年の語りの実演も確認できる。日本伝承マップでは同題の伝承が複数地域に掲載されている。ただし1981年『千葉県の民話 続』の本文そのものはオンラインで直接確認できなかったため、田の草取りの具体的なオチや細かな行動は断定しない。本文が確認できる資料が得られた場合はstory_contentを更新する。"
+}
