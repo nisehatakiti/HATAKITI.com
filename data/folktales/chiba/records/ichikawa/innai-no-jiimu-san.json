@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-innai-no-jiimu-san",
+  "status": "draft",
+  "title": "印内のじいむさん",
+  "title_normalized": "印内のじいむさん",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "印内生まれと伝えられるじゅえむ（重右衛門）をめぐる、北方の久兵衛家への奉公と機転を描いた笑話。",
+    "based_on_source_ids": ["SRC-CHI-001", "SRC-BAYCHIBA-001", "SRC-JFOLK-001"]
+  },
+  "story_summary": "印内のじいむさんは、印内に生まれ、北方の久兵衛家で作男として奉公したと伝えられる人物をめぐる笑話である。市川では「いんねえのじゅえむどん」などの名でも語られ、奉公先での出来事を題材にした話が複数伝わっている。",
+  "story_content": "印内のじいむさんは、印内（いんねえ）に生まれたじゅえむどん（重右衛門）をめぐる昔話として伝えられている。じゅえむは隣村の北方にいた久兵衛の家で作男・奉公人として働いたとされ、北方の久兵衛に奉公した話が市川周辺に残っている。伝承には、主人の言葉を文字どおりに受け取って切り返すなど、じゅえむの機転や屁理屈を笑いにした話が含まれる。たとえば、三年間奉公したじゅえむが家に帰り、「三年も使われた」と泣いたという話が伝えられている。こうしたじゅえむの話は、印内・北方を中心に、現在の市川市と船橋市にまたがって語り継がれている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "北方・印内周辺",
+    "source_description": "千葉県立図書館の市川市民話索引では北方を地域根拠として掲載。印内は現在の船橋市印内で、北方は現在の市川市北方・本北方・北方町にあたる。"
+  },
+  "locations": [
+    {
+      "name": "北方",
+      "location_type": "place",
+      "description": "じゅえむが奉公したと伝えられる久兵衛の家があった地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001", "SRC-BAYCHIBA-001", "SRC-JFOLK-001"]
+    },
+    {
+      "name": "印内",
+      "location_type": "place",
+      "description": "じゅえむが生まれたと伝えられる地域。現在の船橋市印内。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-BAYCHIBA-001"]
+    }
+  ],
+  "characters": [
+    {
+      "name": "いんねえのじゅえむどん（重右衛門）",
+      "role": "主人公・奉公人",
+      "attributes": ["印内生まれと伝わる", "北方の久兵衛家で作男として働いたと伝わる", "機転や屁理屈を得意とする笑話の人物"],
+      "source_ids": ["SRC-BAYCHIBA-001", "SRC-JFOLK-001"]
+    },
+    {
+      "name": "北方の久兵衛",
+      "role": "じゅえむの奉公先の主人",
+      "attributes": [],
+      "source_ids": ["SRC-BAYCHIBA-001"]
+    }
+  ],
+  "beings": [],
+  "themes": ["人物", "奉公", "機転", "屁理屈", "笑話", "印内", "北方"],
+  "story_type": ["民話", "人物伝承", "笑話"],
+  "related_records": [
+    {
+      "record_id": "chiba-ichikawa-innai-juemon-traditions",
+      "relationship": "same_tradition",
+      "note": "印内の重右衛門をめぐる伝承群の個別題名。個別話は統合せず、同一人物・伝承群として横断接続する。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内のじいむさん／お母さんがきいたむかしばなし／市川市・北方",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-BAYCHIBA-001",
+      "title": "じゅえむばなしを追う 第15回・田中長吉・土佐ツタ親子語り②",
+      "publisher": "ベイちばinfo",
+      "author": "米屋陽一 編",
+      "publication_date": "2024年9月27日",
+      "source_type": "research_article",
+      "url": "https://www.baychiba.info/blog/news/24439/",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "北方の久兵衛／じゅえむが印内生まれで北方の久兵衛に奉公したという伝承",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-JFOLK-001",
+      "title": "いんねえのじゅえむどん (3) 三年使われて泣く",
+      "publisher": "日本伝承マップ",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/l/book_458_ep_022",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "北方のシチイムに三年奉公したじいむ／三年も使われたと泣く笑話／市川の伝承民話 第6集",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-CIIN-001",
+      "title": "読みがたり千葉のむかし話",
+      "publisher": "日本標準",
+      "author": "『千葉のむかし話』編集委員会 編",
+      "publication_date": "2005年",
+      "source_type": "book",
+      "url": "https://ci.nii.ac.jp/ncid/BA72764412",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "こっけいな話／いんねえのじゅえむどんの話",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-BOOK-001",
+      "title": "お母さんがきいたむかしばなし",
+      "publisher": "エピック",
+      "author": "行徳昔話の会 編",
+      "publication_date": "1986年5月",
+      "source_type": "book",
+      "url": "https://www.library.pref.chiba.lg.jp/licsxp-iopac/WOpacMsgNewListToTifTilDetailAction.do?tilcod=1000000591518",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内のじいむさん",
+      "language": "ja"
+    }
+  ],
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": true,
+    "translation_used": false,
+    "notes": "千葉県立図書館の索引で対象題名と収録資料を確認し、米屋陽一編の記事、日本伝承マップ、市川民話関連資料を照合した。『印内のじいむさん』は、表記違いを含む『いんねえのじゅえむどん／印内の重右衛門』伝承群との強い連続性が確認できるため、同一人物をめぐる個別伝承としてハブrecordへ接続した。公開本文には確認できた伝承事項のみを記載し、原典本文を確認していない部分を推測で補完していない。"
+  },
+  "confidence": "medium-high",
+  "research_status": "deep_researched",
+  "research_notes": "当初は『じいむさん』と『重右衛門』の同一性を保留していたが、2024年の米屋陽一編記事で、印内生まれの『じゅえむ』が北方の久兵衛に作男として働いたとされる伝承が確認でき、さらに市川の伝承資料では『いんねえのじゅえむどん』と『じいむ』の表記が同じ話群内で用いられている。したがって本recordは重右衛門伝承群の個別題名として関連付ける。ただし『お母さんがきいたむかしばなし』収録の対象話そのものの全文は未確認のため、三年奉公の挿話などは同系統伝承として確認できた範囲で記載し、1986年版の本文と完全同一とは断定しない。"
+}
