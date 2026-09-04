@@ -80,7 +80,10 @@ function hatakiti_occult_classify_unset_categories( $limit = 10 ) {
 
     foreach ( $items as $item ) {
         list( $system, $prompt ) = hatakiti_build_occult_category_only_prompt( $item );
-        $ai_text = hatakiti_call_occult_ai_text( $prompt, $system );
+        // hatakiti_occult_ai_category_body_check(): validates just
+        // {"category": "..."}, not the newspaper "articles" structure the
+        // default Anthropic body_check expects (occult-ai.php, unchanged).
+        $ai_text = hatakiti_call_occult_ai_text( $prompt, $system, 'hatakiti_occult_ai_category_body_check' );
 
         if ( is_wp_error( $ai_text ) ) {
             hatakiti_occult_ai_log( array( 'source' => 'category_classify', 'item_id' => $item->ID, 'outcome' => 'ai_error' ) );

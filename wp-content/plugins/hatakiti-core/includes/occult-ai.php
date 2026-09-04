@@ -170,7 +170,16 @@ function hatakiti_render_occult_ai_settings_page() {
  * Single entry point for calling the configured AI provider with a
  * system + user prompt. Returns the raw text response, or WP_Error.
  */
-function hatakiti_call_occult_ai_text( $prompt, $system = '' ) {
+/**
+ * @param callable|null $body_check Optional override for the Anthropic
+ *   body_check passed to hatakiti_occult_ai_post_with_retry(). Default
+ *   null preserves the exact existing behavior (the newspaper-article
+ *   structure check) for every existing caller. Only a caller expecting
+ *   a different JSON shape (e.g. occult-news-category-classify.php's
+ *   single-field category prompt) needs to pass one — the OpenAI adapter
+ *   ignores this entirely, unchanged.
+ */
+function hatakiti_call_occult_ai_text( $prompt, $system = '', $body_check = null ) {
     $api_key = hatakiti_occult_ai_api_key();
     $model   = hatakiti_occult_ai_model();
 
@@ -188,7 +197,9 @@ function hatakiti_call_occult_ai_text( $prompt, $system = '' ) {
             return hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model );
         case 'anthropic':
         default:
-            return hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model );
+            return null !== $body_check
+                ? hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model, $body_check )
+                : hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model );
     }
 }
 
@@ -296,6 +307,48 @@ function hatakiti_occult_ai_anthropic_body_check( $decoded_response_body ) {
 }
 
 /**
+ * Lightweight body_check for single-field classification calls (e.g. the
+ * occult-news-category-classify.php category-only prompt) — checks only
+ * that the decoded response has a non-empty "category" string, not the
+ * full newspaper "articles" structure hatakiti_occult_ai_anthropic_body_
+ * check() expects. Never used unless a caller explicitly passes it —
+ * hatakiti_call_occult_ai_anthropic()'s default is unchanged, so the
+ * newspaper pipeline's validation is completely unaffected by this.
+ */
+function hatakiti_occult_ai_category_body_check( $decoded_response_body ) {
+    $diag = array();
+    if ( is_array( $decoded_response_body ) ) {
+        $diag['stop_reason']   = $decoded_response_body['stop_reason'] ?? 'n/a';
+        $diag['output_tokens'] = $decoded_response_body['usage']['output_tokens'] ?? 'n/a';
+    }
+
+    if ( ! is_array( $decoded_response_body ) ) {
+        return array( 'ok' => false, 'error_message' => 'Anthropicレスポンスの本体がJSONとして解析できません。', 'diag' => $diag );
+    }
+
+    $text = '';
+    foreach ( (array) ( $decoded_response_body['content'] ?? array() ) as $block ) {
+        if ( isset( $block['type'] ) && 'text' === $block['type'] && isset( $block['text'] ) ) {
+            $text = $block['text'];
+            break;
+        }
+    }
+    if ( '' === $text ) {
+        $diag['json'] = 'n/a';
+        return array( 'ok' => false, 'error_message' => 'Anthropicレスポンスにtextブロックがありません。', 'diag' => $diag );
+    }
+
+    $data = hatakiti_extract_json_from_ai_text( $text );
+    if ( ! is_array( $data ) || empty( $data['category'] ) || ! is_string( $data['category'] ) ) {
+        $diag['json'] = 'failed';
+        return array( 'ok' => false, 'error_message' => 'categoryが存在しないか不正です。', 'diag' => $diag );
+    }
+
+    $diag['json'] = 'success';
+    return array( 'ok' => true, 'error_message' => null, 'diag' => $diag );
+}
+
+/**
  * Shared retry wrapper for both provider adapters — up to 3 attempts
  * total, exponential backoff (2s, then 4s) between retryable failures.
  * $body_check is optional: a callable(decoded_response_body_array): array
@@ -378,7 +431,7 @@ function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label, $body
     return $response;
 }
 
-function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model ) {
+function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model, $body_check = 'hatakiti_occult_ai_anthropic_body_check' ) {
     $response = hatakiti_occult_ai_post_with_retry( 'https://api.anthropic.com/v1/messages', array(
         // A real 14-item run at the newspaper-length article targets
         // measured stop_reason:"max_tokens" at 8000 (thinking + text
@@ -399,7 +452,7 @@ function hatakiti_call_occult_ai_anthropic( $prompt, $system, $api_key, $model )
                 array( 'role' => 'user', 'content' => $prompt ),
             ),
         ) ),
-    ), 'anthropic', 'hatakiti_occult_ai_anthropic_body_check' );
+    ), 'anthropic', $body_check );
 
     if ( is_wp_error( $response ) ) {
         return $response;
