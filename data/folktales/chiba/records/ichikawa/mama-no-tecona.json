@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-mama-no-tecona",
+  "status":"draft",
+  "title":"真間の手児奈",
+  "title_normalized":"真間の手児奈",
+  "title_origin":"source_title",
+  "summary":{"text":"多くの男性から求婚された美しい娘・手児奈が、争いを避けるため真間の入江に身を投げたと伝える、市川を代表する古い伝説。","based_on_source_ids":["SRC-ICHIKAWA-CITY-TEKONA","SRC-CHIBA-LIB-ICHIKAWA-INDEX"]},
+  "story_summary":"真間に住む美しい娘・手児奈は多くの男性から求婚され、男たちの間に争いが起こることを苦しんだ。誰か一人を選べば他の人を悲しませると考え、手児奈は真間の入江に身を投げたと伝えられている。",
+  "story_content":"むかしの真間には、手児奈という美しく心のやさしい娘がいた。手児奈は真間の井戸へ水をくみに通っていたが、その美しさを聞いた若者や国府の役人、都から来た旅人たちまでが妻にしたいと求婚するようになった。求婚する男たちの間には争いも起こり、手児奈は、自分が誰か一人の申し出を受ければ多くの人を悲しませると悩んだ。やがて手児奈は真間の入江へ行き、海に身を沈めたという。里人はその死を悲しんで墓をつくり、後に手児奈霊堂が建てられたと伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"真間","source_description":"市川市公式の昔話・文化紹介および千葉県立図書館の市川市民話索引で確認。"},
+  "locations":[{"name":"真間の井","type":"井戸","description":"手児奈が水をくみに通ったと伝えられる井戸。現在は亀井院の庭に伝承地が残る。","source_ids":["SRC-ICHIKAWA-CITY-TEKONA"]},{"name":"真間の入江","type":"伝承地","description":"手児奈が身を投げたと伝えられる場所。","source_ids":["SRC-ICHIKAWA-CITY-TEKONA"]},{"name":"手児奈霊堂","type":"寺社・霊堂","description":"手児奈をまつる霊堂。","source_ids":["SRC-ICHIKAWA-CITY-TEKONA"]}],
+  "characters":[{"name":"手児奈","role":"主人公","attributes":["真間の美しい娘","多くの男性から求婚された","真間の入江に身を投げたと伝えられる"],"source_ids":["SRC-ICHIKAWA-CITY-TEKONA"]}],
+  "beings":[],
+  "themes":["真間","手児奈","求婚","入水","悲話","万葉集","手児奈霊堂"],
+  "story_type":["人物伝説","悲話","地域伝承"],
+  "related_records":[{"record_id":"chiba-ichikawa-kataha-no-ashi","relation":"same_tradition_area","note":"手児奈が通った道の片葉の葦に関する伝承"},{"record_id":"chiba-ichikawa-asajigayado","relation":"literary_reuse","note":"『雨月物語』浅茅が宿の終盤で真間の手児奈伝承が語られる"}],
+  "sources":[
+    {"source_id":"SRC-ICHIKAWA-CITY-TEKONA","title":"市川のむかし話『真間の手児奈』","publisher":"市川市","author":"市川民話の会 編","publication_date":"web","source_type":"municipal_web","url":"https://www.city.ichikawa.lg.jp/page/4573.html","accessed_date":"2026-09-04","relevant_section":"市川のむかし話『真間の手児奈』","language":"ja"},
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"真間の手古奈／真間の手児奈のはなし等","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川市公式の民話本文を基礎に登録。万葉集に詠まれた古い伝説であることと、後世の民話として語られる筋を区別して扱う。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"市川市公式本文では、真間の井戸、水くみに通う手児奈、多数の求婚、男たちの争い、手児奈の苦悩、真間の入江への入水、里人による埋葬、手児奈霊堂が一連の昔話として確認できる。市川市公式の別ページでは万葉集に詠まれた伝説のヒロインとして紹介されている。"
+}
