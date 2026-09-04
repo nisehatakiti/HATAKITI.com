@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-ooku-ojoguchi-nyushouin",
+  "status": "draft",
+  "title": "大奥お錠口に勤めた柔昌院",
+  "title_normalized": "大奥お錠口に勤めた柔昌院",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "行徳・湊に結びつく柔昌院という人物が、江戸城大奥のお錠口に勤めたことを伝える人物伝承。",
+    "based_on_source_ids": ["SRC-CHI-001", "SRC-BOSO-HIME-001"]
+  },
+  "story_summary": "行徳・湊、善照寺と結びつく柔昌院について、大奥のお錠口に勤めたという経歴を伝える人物伝承である。千葉県立図書館の市川市民話索引では、市川市の伝承として『房総の秘められた話、奇々怪々な話』に収録された題名が確認できる。",
+  "story_content": "柔昌院は、行徳・湊と善照寺に結びついて伝えられる人物で、大奥のお錠口に勤めたとされている。お錠口は江戸城大奥と外側を隔てる出入口で、そこに勤めた人物の来歴を地域の寺社や土地と結びつけて伝えたのが、この話である。行徳に残る人物伝承の一つとして、江戸城の大奥と地元の人々とのつながりを語る形で伝えられている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "行徳・湊周辺",
+    "source_description": "千葉県立図書館の市川市民話索引では、行徳・善照寺・湊を根拠地とする市川市の伝承として掲載。"
+  },
+  "locations": [
+    {
+      "name": "行徳",
+      "location_type": "place",
+      "description": "柔昌院の伝承と結びつく地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001"]
+    },
+    {
+      "name": "湊",
+      "location_type": "place",
+      "description": "柔昌院の伝承と結びつく地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001"]
+    },
+    {
+      "name": "善照寺",
+      "location_type": "temple",
+      "description": "千葉県立図書館の索引で柔昌院の伝承の根拠として挙げられている寺院。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "place",
+      "source_ids": ["SRC-CHI-001"]
+    },
+    {
+      "name": "江戸城大奥御錠口",
+      "location_type": "historical_place",
+      "description": "柔昌院が勤めたと題名に記される大奥の出入口。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "historical_place",
+      "source_ids": ["SRC-CHI-001"]
+    }
+  ],
+  "characters": [
+    {
+      "name": "柔昌院",
+      "role": "人物伝承の主人公",
+      "attributes": ["大奥のお錠口に勤めたと伝えられる人物","行徳・湊・善照寺と結びつく"],
+      "source_ids": ["SRC-CHI-001","SRC-BOSO-HIME-001"]
+    }
+  ],
+  "beings": [],
+  "themes": ["人物伝承","大奥","お錠口","行徳","湊","善照寺","江戸"],
+  "story_type": ["伝説","人物伝承","地域伝承"],
+  "related_records": [],
+  "sources": [
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "大奥お錠口に勤めた柔昌院／房総の秘められた話、奇々怪々な話／市川市・行徳・善照寺・湊",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-BOSO-HIME-001",
+      "title": "房総の秘められた話、奇々怪々な話",
+      "publisher": "崙書房",
+      "author": "大衆文学研究会千葉支部 編著",
+      "publication_date": "1983年7月",
+      "source_type": "book",
+      "url": "https://www.library.city.chiba.jp/licsxp-opac/WOpacTifTilDetailToKanRenDetailAction.do?kanrenflg=1&returnflg=&tilcodtmp=1000010146466",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "内容細目29 大奥お錠口に勤めた柔昌院〈市川市〉",
+      "language": "ja"
+    }
+  ],
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": true,
+    "translation_used": false,
+    "notes": "千葉県立図書館の市川市民話索引と、収録書の書誌・内容細目を照合した。公開本文は題名と索引から確認できる人物・場所・職務に限定し、本文未確認の具体的な逸話や人物関係は創作していない。"
+  },
+  "confidence": "medium",
+  "research_status": "partial",
+  "research_notes": "1983年『房総の秘められた話、奇々怪々な話』に収録された題名と、市川市側の根拠地が行徳・善照寺・湊であることを確認した。本文全文はオンラインで直接確認できないため、柔昌院の出自、勤めに至った経緯、退職後の出来事などは断定しない。なお『御錠口』は大奥の出入口を指す歴史用語であることを別資料でも確認した。"
+}
