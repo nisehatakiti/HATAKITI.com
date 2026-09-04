@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-mama-no-namidaishi",
+  "status":"draft",
+  "title":"真間のなみだ石",
+  "title_normalized":"真間のなみだ石",
+  "title_origin":"source_title",
+  "summary":{"text":"真間山弘法寺の石段に、いつも濡れている一石があり、江戸時代の鈴木長頼の無念の涙が染み込んだものだと伝える伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-CITY-MAMA","SRC-ICHIKAWA-MINWA-NAMIDA"]},
+  "story_summary":"日光東照宮の造営用石材を運んでいた鈴木長頼が、市川の根本付近で船が動かなくなったため、その石を弘法寺の石段に使った。後に責任を問われた長頼が石段で切腹し、その無念の涙が一つの石を濡らし続けていると伝えられている。",
+  "story_content":"江戸時代、作事奉行の鈴木長頼は、日光東照宮の造営に使う石材を伊豆から船で運んでいた。ところが市川の根本付近まで来ると船が動かなくなり、長頼は積んでいた石を近くの弘法寺の石段に使ったという。その後、石材を勝手に使った責任を問われた長頼は、弘法寺の石段で切腹したと伝えられている。それ以来、石段の一つだけが雨でもないのに濡れているようになり、長頼の無念の涙が染み込んでいるためだと語られ、「涙石」と呼ばれるようになったという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"真間・根本","source_description":"千葉県立図書館の民話索引、市川市公式の真間案内、市川民話の会の語りの紹介で伝承を確認。"},
+  "locations":[{"name":"真間山弘法寺","type":"寺院","description":"涙石があると伝えられる寺院。","source_ids":["SRC-ICHIKAWA-CITY-MAMA","SRC-ICHIKAWA-MINWA-NAMIDA"]},{"name":"涙石","type":"石・伝承地","description":"弘法寺正面石段にある、いつも濡れていると伝えられる一石。","source_ids":["SRC-ICHIKAWA-CITY-MAMA","SRC-ICHIKAWA-MINWA-NAMIDA"]},{"name":"根本","type":"地名","description":"鈴木長頼の船が動かなくなったと伝えられる市川側の場所。","source_ids":["SRC-ICHIKAWA-MINWA-NAMIDA"]}],
+  "characters":[{"name":"鈴木長頼","role":"伝承上の人物","attributes":["江戸時代の作事奉行","日光東照宮造営用石材を運んだと伝えられる","弘法寺の石段で切腹したと伝えられる"],"source_ids":["SRC-ICHIKAWA-MINWA-NAMIDA"]}],
+  "beings":[],
+  "themes":["涙石","弘法寺","鈴木長頼","石段","無念","怪異","真間"],
+  "story_type":["寺社伝承","怪異伝承","由来伝説"],
+  "related_records":[{"record_id":"chiba-ichikawa-mama-no-tecona","relation":"same_tradition_area","note":"いずれも真間を代表する地域伝承"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"真間のなみだ石／千葉県の民話／1980年／市川市 真間・根本・弘法寺","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-CITY-MAMA","title":"市川・真間界隈","publisher":"市川市","author":null,"publication_date":"web","source_type":"municipal_web","url":"https://www.city.ichikawa.lg.jp/page/4614.html","accessed_date":"2026-09-04","relevant_section":"弘法寺・真間の涙石伝説","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-MINWA-NAMIDA","title":"市川の昔ばなし「行徳地域の話を中心に」","publisher":"市川民話の会","author":null,"publication_date":"2025-06-12","source_type":"local_storytelling","url":"https://ichikawa.genki365.jp/G0000286/system/event/6488.html","accessed_date":"2026-09-04","relevant_section":"プログラム7 涙石（真間）","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川市公式ページで涙石伝説の存在を確認し、複数の地域資料で語られている鈴木長頼の具体的な由来を採用。史実との相違可能性を踏まえ、本文では一貫して『伝えられている』として記述した。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館索引は1980年『千葉県の民話』の題名・伝承地を確認。市川市公式は弘法寺の石段築造に関わる涙石伝説を明記。市川民話の会は2025年の語りの演目として涙石を掲載。具体的な鈴木長頼の筋は地域資料・複数サイトで一致するが、伝承として扱う。"
+}
