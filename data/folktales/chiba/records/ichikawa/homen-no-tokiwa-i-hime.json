@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-homen-no-tokiwa-i-hime",
+  "status":"draft",
+  "title":"奉免の常盤井姫",
+  "title_normalized":"奉免の常盤井姫",
+  "title_origin":"source_title",
+  "summary":{"text":"都を離れて市川に流れ着いた常盤井姫が、日蓮上人の教えに触れて出家し、奉免に安楽寺を開いたと伝える人物伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-LIBRARY-TOKIWAI","SRC-ICHIKAWA-MINWA"]},
+  "story_summary":"後深草天皇の皇女と伝えられる常盤井姫は、病を患ったため都を離れ、小舟で各地をさすらった末に市川へ流れ着いた。日蓮上人の言葉に感銘を受け、出家して日国と名乗り、奉免に安楽寺を建てたと伝えられている。",
+  "story_content":"後深草天皇の皇女と伝えられる常盤井姫は、十代半ばで伝染病を患い、人目を避けて小舟で都を離れたという。やがて市川の地に流れ着き、そこで日蓮上人の言葉を聞いて感銘を受けた。常盤井姫は出家して日国と名乗り、奉免の地に安楽寺を建て、優しく気高く生きたと伝えられている。現在の市川市奉免町に結びつく、姫の流転と出家をめぐる人物伝承である。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"奉免町・宮久保","source_description":"千葉県立図書館の市川市民話索引と市川市立図書館、市川民話の会による紹介で奉免町の伝承として確認。"},
+  "locations":[{"name":"奉免町","type":"伝承地","description":"常盤井姫が安楽寺を建てたと伝えられる地域。","source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-LIBRARY-TOKIWAI"]},{"name":"安楽寺","type":"寺院","description":"常盤井姫が出家後に建てたと伝えられる寺。","source_ids":["SRC-ICHIKAWA-LIBRARY-TOKIWAI"]}],
+  "characters":[{"name":"常盤井姫","role":"主人公","attributes":["後深草天皇の皇女と伝えられる","病を患って都を離れた","出家して日国と名乗った"],"source_ids":["SRC-ICHIKAWA-LIBRARY-TOKIWAI","SRC-ICHIKAWA-MINWA"]},{"name":"日蓮上人","role":"人物","attributes":["常盤井姫が言葉を聞いて感銘を受けたと伝えられる"],"source_ids":["SRC-ICHIKAWA-LIBRARY-TOKIWAI"]}],
+  "beings":[],
+  "themes":["常盤井姫","奉免","出家","日蓮","安楽寺","皇女","流転"],
+  "story_type":["人物伝承","寺社縁起","流離譚"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa_ichikawa.html","accessed_date":"2026-09-04","relevant_section":"奉免の常盤井姫／奉免の常盤井姫／すがの会／2009年／宮久保","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-LIBRARY-TOKIWAI","title":"こどもとしょかん 読み聞かせ動画『奉免の常盤井姫』","publisher":"市川市立図書館","author":"中津攸子／唐沢静","publication_date":"2022-03-01","source_type":"municipal_library_web","url":"https://www.city.ichikawa.lg.jp/site/library/1459.html","accessed_date":"2026-09-04","relevant_section":"郷土の絵本『奉免の常盤井姫』","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-MINWA","title":"第11回市川の昔ばなし『市川の北地域の話』","publisher":"市川民話の会","author":null,"publication_date":"2025-04-10","source_type":"local_storytelling_event","url":"https://ichikawa.genki365.jp/G0000286/event/6363.html","accessed_date":"2026-09-04","relevant_section":"流れついたお姫さま・常盤井姫（奉免町）","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川市立図書館が公開する郷土絵本の紹介文を中心に筋を構成し、伝承上の人物であることを踏まえて『伝えられる』表現を維持した。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館の索引、2022年公開の市川市立図書館による絵本紹介、市川民話の会の2025年の語りの会案内を照合。常盤井姫の出自・病・来訪・出家・安楽寺建立の筋を確認した。"
+}
