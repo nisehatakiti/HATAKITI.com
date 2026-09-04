@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-nashi-zukuri-no-zenrokusan",
+  "status":"draft",
+  "title":"なし作りのぜんろくさん",
+  "title_normalized":"なし作りのぜんろくさん",
+  "title_origin":"source_title",
+  "summary":{"text":"江戸時代、八幡の川上善六が美濃で梨作りを学び、接ぎ穂を持ち帰って市川で梨作りを始めたと伝える地域人物伝承。","based_on_source_ids":["SRC-ICHIKAWA-LIBRARY-ZENROKU","SRC-CHIBA-LIB-ICHIKAWA-INDEX"]},
+  "story_summary":"江戸時代、八幡に住んでいた川上善六は、貧しい家を救うため梨作りに目をつけた。梨作りが盛んな美濃へ出向いて栽培法を学び、接ぎ穂を持ち帰って八幡で梨作りを始めたと伝えられている。",
+  "story_content":"江戸時代、八幡に住んでいた川上善六は、貧しい家を救うために梨作りに興味を持ったという。そこで梨作りが盛んな美濃へ出向き、梨の作り方を教わった善六は、接ぎ穂をもらって八幡へ帰った。そして、その接ぎ穂をもとに梨作りを市川で始めたと伝えられている。地域の産業につながる梨作りの始まりを、一人の人物の行動を通して語る郷土伝承である。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"八幡","source_description":"市川市立図書館の郷土絵本紹介および千葉県立図書館の市川民話索引で確認。"},
+  "locations":[{"name":"八幡","type":"伝承地","description":"川上善六が住み、持ち帰った接ぎ穂から梨作りを始めたと伝えられる地域。","source_ids":["SRC-ICHIKAWA-LIBRARY-ZENROKU"]},{"name":"美濃","type":"伝承地","description":"善六が梨作りを学びに訪れたと伝えられる地域。現在の岐阜県周辺。","source_ids":["SRC-ICHIKAWA-LIBRARY-ZENROKU"]}],
+  "characters":[{"name":"川上善六","role":"主人公","attributes":["江戸時代に八幡に住んでいたと伝えられる","美濃で梨作りを学んだ","接ぎ穂を持ち帰った"],"source_ids":["SRC-ICHIKAWA-LIBRARY-ZENROKU"]}],
+  "beings":[],
+  "themes":["川上善六","梨","梨作り","八幡","美濃","地域産業","江戸時代"],
+  "story_type":["人物伝承","産業起源伝承","郷土伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa_ichikawa.html","accessed_date":"2026-09-04","relevant_section":"なし作りのぜんろくさん／すがの会／2019年","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-LIBRARY-ZENROKU","title":"こどもとしょかん 読み聞かせ動画『なし作りのぜんろくさん』","publisher":"市川市立図書館","author":"すがの会／唐沢静","publication_date":"2019-01","source_type":"municipal_library_web","url":"https://www.city.ichikawa.lg.jp/site/library/1459.html","accessed_date":"2026-09-04","relevant_section":"郷土の絵本『なし作りのぜんろくさん』","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川市立図書館による郷土絵本の公式紹介文をそのまま事実関係の基礎とし、梨栽培の歴史的細部を推測で補っていない。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館の索引で2019年の郷土絵本を確認し、市川市立図書館の公式紹介文から、八幡の川上善六が美濃で梨作りを学び、接ぎ穂を持ち帰って市川で梨作りを始めたという筋を確認。2026年にも市川中央図書館で原画展示が行われており、現在も郷土伝承として紹介されている。"
+}
