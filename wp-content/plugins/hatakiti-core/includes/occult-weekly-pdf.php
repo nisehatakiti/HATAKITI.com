@@ -32,6 +32,16 @@ define( 'HATAKITI_OCCULT_PDF_FONT_DIR', HATAKITI_CORE_DIR . 'assets/fonts/' );
 define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpdf.php' );
 
 /**
+ * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
+ * 正式ロゴとして採用された画像をそのまま配置する — PDF側でタイトル
+ * 文字列を再入力・再現することはしない。縦横比は元画像（2172×724px、
+ * 比率3:1）のまま、高さ基準でスケーリングする。
+ */
+define( 'HATAKITI_OCCULT_PDF_LOGO_PATH', HATAKITI_CORE_DIR . 'assets/images/occult-weekly-logo.png' );
+define( 'HATAKITI_OCCULT_PDF_LOGO_ASPECT', 3.0 );
+define( 'HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM', 34.0 );
+
+/**
  * mm単位の版面定数。すべてA4縦（210×297mm）を前提にする。
  */
 function hatakiti_occult_pdf_layout_constants() {
@@ -42,7 +52,11 @@ function hatakiti_occult_pdf_layout_constants() {
         'margin_r'        => 7.0,
         'margin_t'        => 9.0,
         'margin_b'        => 7.0,
-        'masthead_h'      => 25.0, // 1ページ目のみ
+        // ロゴ画像の高さ＋発行日・号数の副題行＋二重罫線＋本文までの
+        // 余白。旧テキスト題字（25.0mm）より高くなる分、本文領域は
+        // その分だけ狭くなるが、必要ならページ数が増えてよいという
+        // 指示書の方針に従う（本文を削って合わせない）。
+        'masthead_h'      => HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM + 15.0,
         'page2_header_h'  => 6.0,  // 2ページ目以降の簡易見出し
         'tier_fonts'      => array(
             'large'  => array( 'headline' => 18.5, 'body' => 10.8 ),
@@ -320,12 +334,24 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
     $top = $c['margin_t'];
     $w   = $c['page_w'] - $c['margin_l'] - $c['margin_r'];
 
-    $pdf->SetFont( $font_bold, '', 30 );
-    $pdf->SetXY( $c['margin_l'], $top );
-    $pdf->Cell( $w, 16, '週刊オカルト新聞', 0, 0, 'C' );
+    // 正式ロゴ画像をマストヘッドとして配置する（テキストでの題字再現は
+    // 行わない）。縦横比は元画像のまま、高さ基準でスケーリングし、
+    // 紙面中央に配置する。
+    $logo_h = HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM;
+    $logo_w = $logo_h * HATAKITI_OCCULT_PDF_LOGO_ASPECT;
+    $logo_x = $c['margin_l'] + ( $w - $logo_w ) / 2;
+    if ( file_exists( HATAKITI_OCCULT_PDF_LOGO_PATH ) ) {
+        $pdf->Image( HATAKITI_OCCULT_PDF_LOGO_PATH, $logo_x, $top, $logo_w, $logo_h, 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false );
+    } else {
+        // ロゴ画像が万一見つからない場合の保険（本来発生しない想定）。
+        // 紙面が完全な空白にならないよう最小限のテキストにとどめる。
+        $pdf->SetFont( $font_bold, '', 24 );
+        $pdf->SetXY( $c['margin_l'], $top );
+        $pdf->Cell( $w, $logo_h, '週刊オカルト新聞', 0, 0, 'C' );
+    }
 
     $pdf->SetFont( $font_regular, '', 9 );
-    $sub_y = $top + 17;
+    $sub_y = $top + $logo_h + 3;
     $left_text  = $issue_subtitle ? mb_substr( $issue_subtitle, 0, 60 ) : '';
     $right_bits = array();
     if ( $issue_id ) {
@@ -341,7 +367,7 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
     $pdf->SetXY( $c['margin_l'] + $w * 0.62, $sub_y );
     $pdf->Cell( $w * 0.38, 6, $right_text, 0, 0, 'R' );
 
-    $rule_y = $top + $c['masthead_h'] - 4;
+    $rule_y = $sub_y + 8;
     $pdf->SetLineWidth( 0.9 );
     $pdf->Line( $c['margin_l'], $rule_y, $c['page_w'] - $c['margin_r'], $rule_y );
     $pdf->SetLineWidth( 0.2 );
