@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '5' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '6' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -500,7 +500,15 @@ define( 'HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM', 2.2 );
 define( 'HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM', 1.8 );
 define( 'HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM', 4.2 );
 define( 'HATAKITI_OCCULT_PDF_ROW_GAP_MM', 3.2 );
-define( 'HATAKITI_OCCULT_PDF_MIN_BODY_ROWS', 4 );
+// 6行: 実際に画像確認したところ、見出し直後に本文がわずか1〜2行だけ
+// 入って即座に続きへ回るケースが見つかった（原因は見出し高さの見積もり
+// が1行分固定だったこと、下記 hatakiti_occult_pdf_min_viable_box_height()
+// 参照）。見出しの見積もりを実測に直したうえで、それでも本文が数行しか
+// 入らない開始位置は「記事を開始する価値がある」とは言えないため、
+// 4行から6行に引き上げる — 大見出し（10.8pt）で本文6行はおよそ23mm、
+// 見出し（複数行になり得る）・余白・出典欄を加えた最低必要高さは、
+// 版面1ゾーン（約230mm）に対して十分小さく、記事数を過度に圧迫しない。
+define( 'HATAKITI_OCCULT_PDF_MIN_BODY_ROWS', 6 );
 
 /**
  * 与えられた列の高さ(mm)と1文字の高さ(mm)から、実際に配置してよい
@@ -515,13 +523,6 @@ function hatakiti_occult_pdf_column_capacity( $col_h_mm, $char_h ) {
     return max( 1, (int) floor( $usable / $char_h ) - 1 );
 }
 
-/**
- * 記事（続きを含む）を「今このゾーンの残り高さに描画してよい」と判断
- * するための最低限の高さ(mm)。見出し1行分＋見出し-本文間の余白＋本文
- * 最低4文字分＋出典ストリップ＋下端マージン。これを満たさない残り高さ
- * しかない場合は描画せず、記事を丸ごと次のゾーン／ページへ送る
- * （指示書の最重要方針：文字を詰め込んでページ数を減らさない）。
- */
 /**
  * ゾーン全幅をそのまま使うと、短い本文（特に続きの残り）が「1行だけの
  * 横長の帯」になってしまう問題への対策。ゾーン幅をそのまま使った場合の
@@ -547,17 +548,34 @@ function hatakiti_occult_pdf_effective_box_width( $unit_count, $zone_w, $font_pt
     return max( $col_pitch * 2, min( $zone_w, $width_for_min_rows ) );
 }
 
-function hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier ) {
+/**
+ * 記事（続きを含む）を「今このゾーンの残り高さに描画してよい」と判断
+ * するための最低限の高さ(mm)。見出し（実際の折り返しを反映した高さ）
+ * ＋見出し-本文間の余白＋本文最低HATAKITI_OCCULT_PDF_MIN_BODY_ROWS行分
+ * ＋出典ストリップ＋下端マージン。これを満たさない残り高さしかない
+ * 場合は描画せず、記事を丸ごと次のゾーン／ページへ送る（指示書の最重要
+ * 方針：文字を詰め込んでページ数を減らさない）。
+ *
+ * @param float $box_w 実際にこの記事が描画される幅（zone_wまたは
+ *   hatakiti_occult_pdf_effective_box_width()で狭めた幅）。見出しは
+ *   この幅で横書き折り返しされるため、正確な判定にはここが実際の
+ *   描画幅と一致している必要がある — 1行固定の概算だと、2行以上に
+ *   折り返す見出しで残り本文領域を過大評価し、「見出し＋本文1行だけ」
+ *   という不自然な開始を許してしまう不具合があった（実PDF画像で確認・
+ *   修正）。
+ */
+function hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier, $box_w ) {
     $fonts           = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
     $is_continuation = ! empty( $article['_continuation'] );
+    $headline        = (string) ( $article['headline'] ?? '' );
 
     $head_pt     = hatakiti_occult_pdf_headline_font_pt( $article, $fonts['headline'] );
-    $head_line_h = $head_pt * 0.3528 * 1.3;
+    $head_h      = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $head_pt, $headline, $box_w );
     $gap         = $is_continuation ? HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
     $src_h       = $is_continuation ? 0.0 : HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM;
     $body_char_h = $fonts['body'] * 0.3528;
 
-    return $head_line_h + $gap + ( HATAKITI_OCCULT_PDF_MIN_BODY_ROWS * $body_char_h ) + $src_h + HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM;
+    return $head_h + $gap + ( HATAKITI_OCCULT_PDF_MIN_BODY_ROWS * $body_char_h ) + $src_h + HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM;
 }
 
 /**
@@ -815,10 +833,12 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
 
             // 残り高さがどちらか一方でも最低限の可読サイズに満たない
             // 場合は、この場では描画せずペアごと次のゾーン／ページへ
-            // 送る — 罫線ぎりぎりの1行だけの箱を作らないため。
+            // 送る — 見出し直後に本文が1〜2行しか入らない状態で記事を
+            // 開始しないため。pair_wは既に確定しているのでそのまま渡す
+            // （見出しの実際の折り返し幅と一致させる）。
             $min_viable_pair = max(
-                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, 'small' ),
-                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article2, 'small' )
+                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, 'small', $pair_w ),
+                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article2, 'small', $pair_w )
             );
             if ( $remaining < $min_viable_pair ) {
                 break;
@@ -856,20 +876,25 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             continue;
         }
 
-        // 残り高さが最低限の可読サイズに満たない場合は、この場では
-        // 描画せず記事（続きを含む）を丸ごと次のゾーン／ページへ送る。
-        $min_viable = hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier );
-        if ( $remaining < $min_viable ) {
-            break;
-        }
-
         // ゾーン全幅をそのまま使うと、本文が短い場合（特に続きの残り）に
         // 「1行だけの横長の帯」になり罫線ぎりぎりまで文字が詰まって見える
         // ため、行数を確保できる幅まで狭める（右端はゾーン右端のまま）。
         // 本文が十分長い通常記事ではeffective_w=$zone_wのまま変わらない。
+        // この幅は見出しの折り返しにも使う（後述の最低可読サイズ判定を
+        // 実際の描画条件と一致させるため）ので、判定より先に決める。
         $body_font_pt = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ]['body'];
         list( $article_unit_count, ) = hatakiti_occult_pdf_count_units( (string) ( $article['body'] ?? '' ) );
         $effective_w = hatakiti_occult_pdf_effective_box_width( $article_unit_count, $zone_w, $body_font_pt );
+
+        // 残り高さが最低限の可読サイズに満たない場合は、この場では
+        // 描画せず記事（続きを含む）を丸ごと次のゾーン／ページへ送る。
+        // 見出しの折り返し行数を実際の描画幅（effective_w）で見積もる
+        // ため、「見出し2行＋本文1行だけ」のような、残り領域を過大評価
+        // して記事を開始してしまう不具合を防げる。
+        $min_viable = hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier, $effective_w );
+        if ( $remaining < $min_viable ) {
+            break;
+        }
 
         $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $effective_w );
         $actual_h = min( $needed_h, $remaining );
