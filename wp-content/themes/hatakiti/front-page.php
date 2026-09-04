@@ -88,8 +88,12 @@ get_header();
             'posts_per_page'      => 1,
             'ignore_sticky_posts' => true,
             'no_found_rows'       => true,
-            'orderby'             => 'date',
+            'meta_key'            => 'hatakiti_occult_issue_date',
+            'orderby'             => 'meta_value',
             'order'               => 'DESC',
+            // 臨時発行のmanual_testは常にdraftのためpublish状態のこの
+            // クエリには出てこないが、多重防御として明示的にも除外する。
+            'meta_query'          => hatakiti_occult_weekly_public_meta_query(),
         ) );
         ?>
         <div class="hk-section-head">

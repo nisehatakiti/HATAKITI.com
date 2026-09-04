@@ -200,6 +200,37 @@ function hatakiti_register_occult_meta() {
 add_action( 'init', 'hatakiti_register_occult_meta' );
 
 /**
+ * 「一般公開してよい号」の除外条件（臨時発行のmanual_testを除く）。
+ * publish状態は常に別途クエリ側で指定する前提 — ここではrun_typeのみを
+ * 見る。バックナンバー一覧・フロントページ最新号カードなど、公開表示
+ * すべてで同じ定義を使い回すための共有ヘルパー。
+ */
+function hatakiti_occult_weekly_public_meta_query() {
+    return array(
+        'relation' => 'OR',
+        array( 'key' => 'hatakiti_occult_run_type', 'compare' => 'NOT EXISTS' ),
+        array( 'key' => 'hatakiti_occult_run_type', 'value' => 'manual_test', 'compare' => '!=' ),
+    );
+}
+
+/**
+ * 一般公開してよい最新号（publishかつmanual_testでない）を1件返す。
+ * 無ければnull。
+ */
+function hatakiti_get_latest_published_occult_weekly() {
+    $posts = get_posts( array(
+        'post_type'      => 'occult_weekly',
+        'post_status'    => 'publish',
+        'posts_per_page' => 1,
+        'meta_key'       => 'hatakiti_occult_issue_date',
+        'orderby'        => 'meta_value',
+        'order'          => 'DESC',
+        'meta_query'     => hatakiti_occult_weekly_public_meta_query(),
+    ) );
+    return $posts ? $posts[0] : null;
+}
+
+/**
  * 号一覧は発行日（issue_date）の新しい順 — WordPressの投稿日ではなく、
  * 号として編集上意味を持つ日付で並べる（観劇記録などと同じ考え方）。
  */
@@ -214,11 +245,7 @@ function hatakiti_order_occult_weekly_archive( $query ) {
         // 臨時発行の「テスト発行」（hatakiti_occult_run_type=manual_test）
         // は常にdraftなので通常はこのクエリに出てこないが、多重防御として
         // 明示的にも除外する — 一般ユーザーが正式発行号と混同しないため。
-        $query->set( 'meta_query', array(
-            'relation' => 'OR',
-            array( 'key' => 'hatakiti_occult_run_type', 'compare' => 'NOT EXISTS' ),
-            array( 'key' => 'hatakiti_occult_run_type', 'value' => 'manual_test', 'compare' => '!=' ),
-        ) );
+        $query->set( 'meta_query', hatakiti_occult_weekly_public_meta_query() );
     }
 }
 add_action( 'pre_get_posts', 'hatakiti_order_occult_weekly_archive' );
