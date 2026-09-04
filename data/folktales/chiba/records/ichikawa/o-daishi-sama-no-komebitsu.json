@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-o-daishi-sama-no-komebitsu",
+  "status":"draft",
+  "title":"お大師様の米びつ",
+  "title_normalized":"お大師様の米びつ",
+  "title_origin":"source_title",
+  "summary":{"text":"相之川の舟渡場に結びつく、お大師様と米びつを題材にした地域伝承。","based_on_source_ids":["SRC-CHI-001","SRC-ICHIKAWA-MINWA-001"]},
+  "story_summary":"市川市相之川の舟渡場に結びつく地域の昔ばなし。千葉県立図書館の市川市民話索引では『ふるさと千葉県の民話』収録の『お大師様の米びつ』として記録されている。現在も市川民話の会が『米びつの話（相之川）』として語り継いでいる。",
+  "story_content":"『お大師様の米びつ』は、相之川の舟渡場を地域的な根拠とする昔ばなしである。題名どおり、お大師様と米びつをめぐる出来事を語る話として伝えられ、現在も市川民話の会の昔ばなしの会で『米びつの話（相之川）』として取り上げられている。相之川の地域に結びついた身近な伝承として受け継がれている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"相之川","source_description":"千葉県立図書館の市川市民話索引では相之川の舟渡場を地域根拠として掲載。市川民話の会でも相之川の話として語られている。"},
+  "locations":[{"name":"相之川の舟渡場","location_type":"historical_place","description":"千葉県立図書館の市川市民話索引が本話の地域根拠として挙げる場所。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-CHI-001"]},{"name":"相之川","location_type":"place","description":"市川民話の会が『米びつの話』の地域として紹介している市川市の地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-ICHIKAWA-MINWA-001"]}],
+  "characters":[{"name":"お大師様","role":"伝承上の人物・聖者","attributes":["米びつをめぐる地域伝承に登場する"],"source_ids":["SRC-CHI-001","SRC-ICHIKAWA-MINWA-001"]}],
+  "beings":[],
+  "themes":["地域伝承","弘法大師","米びつ","舟渡場","相之川","信仰"],
+  "story_type":["昔話","人物伝承","地域伝承"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-CHI-001","title":"千葉県の民話　市川市","publisher":"千葉県立図書館","author":null,"publication_date":"2026年閲覧","source_type":"library","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"お大師様の米びつ／ふるさと千葉県の民話／市川市・相の川の舟渡場","language":"ja"},{"source_id":"SRC-ICHIKAWA-MINWA-001","title":"第12回市川の昔ばなし『行徳地域の話を中心に』","publisher":"市川民話の会","author":null,"publication_date":"2025年","source_type":"web","url":"https://ichikawa.genki365.jp/G0000286/event/6488.html","accessed_date":"2026-09-04","relevant_section":"米びつの話（相之川）","language":"ja"},{"source_id":"SRC-ICHIKAWA-MINWA-002","title":"第47回市川の民話のつどい","publisher":"市川民話の会","author":null,"publication_date":"2024年","source_type":"web","url":"https://ichikawa.genki365.jp/G0000286/activity/772.html","accessed_date":"2026-09-04","relevant_section":"米びつの話（相之川）","language":"ja"}],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の市川市民話索引で1980年刊『ふるさと千葉県の民話』収録と相之川の舟渡場との地域的結び付きを確認し、市川民話の会による2024・2025年の語りの記録を照合した。本文全文をオンラインで直接確認できないため、公開内容では具体的な出来事を推測していない。"},
+  "confidence":"medium",
+  "research_status":"partial",
+  "research_notes":"題名・出典・地域根拠は確認済み。市川民話の会が現在も『米びつの話（相之川）』として語っていることを確認。原典本文全文はオンラインで直接確認できていないため、米びつに関する具体的な出来事や結末は推測していない。"
+}
