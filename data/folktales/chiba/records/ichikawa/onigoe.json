@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-onigoe",
+  "status":"draft",
+  "title":"鬼越え",
+  "title_normalized":"鬼越え",
+  "title_origin":"source_title",
+  "summary":{"text":"市川市鬼越の地名の由来をめぐる伝承。小栗判官の愛馬・鬼鹿毛が沼地を越えた話など、複数の由来譚が伝えられている。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-KANKOU-ONIGOE","SRC-ICHIKAWA-LIBRARY-ONIGOE-FUDO"]},
+  "story_summary":"市川市鬼越の地名について伝わる由来譚。小栗判官が愛馬・鬼鹿毛に乗って当地を通った際、沼にはまった馬が不動明王の加護によって沼を越えたことから鬼越と呼ばれるようになったという話のほか、鬼国の人がこの地を越えたこと、鬼が住んでいたため鬼子居と呼ばれたことなど、複数の説が伝えられている。",
+  "story_content":"小栗判官が愛馬・鬼鹿毛に乗ってこの地を通ったとき、馬が沼にはまり込んで動けなくなった。しかし、不動明王のご利益によって鬼鹿毛は沼地を乗り越え、その先へ進むことができた。そのため、鬼鹿毛が通り越えた場所から「鬼越」と呼ばれるようになったという。市川市ではこのほか、鬼国の人がこの地を越えて行ったことから鬼越と呼んだという説や、鬼が住んでいたため「鬼子居」と呼ばれたものが後に鬼越となったという説も伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"鬼越","source_description":"千葉県立図書館の市川市民話索引では、市川市鬼越を伝承地とする「鬼越え」として掲載されている。"},
+  "locations":[{"name":"鬼越","type":"地名","description":"市川市鬼越。地名の由来をめぐる複数の伝承が残る。"},{"name":"神明寺","type":"寺院","description":"鬼越にある寺院。小栗判官と愛馬・鬼鹿毛、不動明王にまつわる伝承が結びついている。"}],
+  "characters":[{"name":"小栗判官","role":"伝承上の人物","attributes":["愛馬・鬼鹿毛に乗って当地を通ったとされる"],"source_ids":["SRC-ICHIKAWA-KANKOU-ONIGOE","SRC-ICHIKAWA-LIBRARY-ONIGOE-FUDO"]},{"name":"鬼鹿毛","role":"小栗判官の愛馬","attributes":["沼地を越えたとされる馬"],"source_ids":["SRC-ICHIKAWA-KANKOU-ONIGOE"]}],
+  "beings":[{"name":"不動明王","type":"神仏","description":"小栗判官・鬼鹿毛が難を逃れる加護を与えたと伝えられる。","source_ids":["SRC-ICHIKAWA-LIBRARY-ONIGOE-FUDO"]}],
+  "themes":["地名由来","鬼越","小栗判官","鬼鹿毛","不動明王","伝承地名"],
+  "story_type":["地名由来譚","人物伝承","伝承説話"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"鬼越え／房総の伝説／第一法規／1976年／市川市鬼越（地名）","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-KANKOU-ONIGOE","title":"パワースポット神社仏閣紹介「鬼越」の地名の由来","publisher":"市川市観光協会","author":null,"publication_date":"web","source_type":"municipal_tourism","url":"https://www.ichikawa-kankou.jp/type-b/%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88%E7%A5%9E%E7%A4%BE%E4%BB%8F%E9%96%A3%E7%B4%B9%E4%BB%8B/","accessed_date":"2026-09-04","relevant_section":"7.「鬼越」の地名の由来","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-LIBRARY-ONIGOE-FUDO","title":"鬼越のお不動さま","publisher":"市川市立図書館","author":null,"publication_date":"web","source_type":"municipal_library","url":"https://www.city.ichikawa.lg.jp/site/library/8056.html","accessed_date":"2026-09-04","relevant_section":"小栗判官・鬼鹿毛・不動明王にまつわる鬼越の伝承","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の索引で原典『房総の伝説』所収「鬼越え」を確認し、市川市観光協会および市川市立図書館が公開する鬼越の地名由来・小栗判官伝承と照合した。複数の由来説を一つの出来事として混同せず、確認できた伝承として併記した。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"1976年『房総の伝説』の本文そのものはオンラインで全文確認できていないが、千葉県立図書館の索引で題名・収録資料・伝承地を確認し、市川市観光協会と市川市立図書館の公開資料で鬼越の地名由来伝承および小栗判官・鬼鹿毛・不動明王の内容を確認した。"
+}
