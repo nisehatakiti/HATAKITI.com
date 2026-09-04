@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-juemon-uma-no-suki-na-aomon",
+  "status": "draft",
+  "title": "印内の重右衛門　馬のすきな青いもんのこと",
+  "title_normalized": "印内の重右衛門 馬のすきな青いもんのこと",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "印内の重右衛門を主人公とする、馬と「青いもん」に関わる笑話。",
+    "based_on_source_ids": ["SRC-CHI-001", "SRC-CHI-REGIONAL-001", "SRC-JFOLK-001"]
+  },
+  "story_summary": "印内の重右衛門を主人公とする笑話の一つで、1978年刊『房総の民話』に「馬のすきな青いもんのこと」という題で収録されている。千葉県立図書館の市川市民話索引では、北方村を根拠として市川市の民話として掲載されている。",
+  "story_content": "印内の重右衛門は、印内を故地とする人物伝承・笑話の主人公として、千葉県内に複数の話が伝えられている。この話はその一つで、『房総の民話』では「馬のすきな青いもんのこと」という題で収録されている。市川市の索引では北方村を根拠として掲載され、船橋市の民話索引にも同じ題名が印内村の伝承として掲載されている。重右衛門伝承は市川市北方周辺と船橋市印内の双方にまたがって伝えられている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "北方・印内周辺",
+    "source_description": "千葉県立図書館の市川市民話索引では北方村を根拠として掲載。船橋市民話索引では下総国の印内村を根拠として同題を掲載しており、伝承地域が市川市と船橋市にまたがる。"
+  },
+  "locations": [
+    {
+      "name": "北方",
+      "location_type": "place",
+      "description": "千葉県立図書館の市川市民話索引で本話の地域根拠として示されている地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001"]
+    },
+    {
+      "name": "印内",
+      "location_type": "place",
+      "description": "重右衛門伝承の故地として各資料に現れる地域。現在の船橋市印内。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-REGIONAL-001"]
+    }
+  ],
+  "characters": [
+    {
+      "name": "印内の重右衛門",
+      "role": "主人公",
+      "attributes": ["印内を故地とする人物伝承・笑話の主人公"],
+      "source_ids": ["SRC-CHI-001", "SRC-CHI-REGIONAL-001"]
+    }
+  ],
+  "beings": [],
+  "themes": ["人物", "重右衛門", "馬", "笑話", "印内", "北方"],
+  "story_type": ["民話", "人物伝承", "笑話"],
+  "related_records": [
+    {
+      "record_id": "chiba-ichikawa-innai-juemon-traditions",
+      "relationship": "same_tradition",
+      "note": "印内の重右衛門伝承群を構成する個別話。ハブと相互接続する。"
+    },
+    {
+      "record_id": "chiba-ichikawa-innai-no-jiimu-san",
+      "relationship": "same_tradition",
+      "note": "印内のじいむさんと同じ重右衛門伝承群に属する個別話として関連付ける。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内の重右衛門　馬のすきな青いもんのこと／房総の民話／北方村",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-CHI-REGIONAL-001",
+      "title": "千葉県の民話　地方や郡・千葉県全域",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/chiiki.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印旛郡／印内の重右衛門　馬のすきな青いもんのこと",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-JFOLK-001",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "重右衛門伝承群／重右衛門⑳ 青い物はみな草／北国分",
+      "language": "ja"
+    }
+  ],
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": true,
+    "translation_used": false,
+    "notes": "千葉県立図書館の市川市索引と地方・郡別索引で対象題名、収録書籍、北方村・印内村との地域根拠を確認した。日本伝承マップでは同系統の重右衛門伝承として「青い物はみな草」が北国分に掲載されている。本文全文は確認できていないため、具体的な筋や結末は補完していない。"
+  },
+  "confidence": "medium",
+  "research_status": "partial",
+  "research_notes": "対象題名は千葉県立図書館の市川市索引・地方索引で確認済み。1978年『房総の民話』収録も確認できる。同題は船橋市索引にも掲載され、印内村を根拠としている。日本伝承マップには同系統の「重右衛門⑳ 青い物はみな草」が北国分に掲載されており、題名上のモチーフの対応は強いが、両本文を直接照合できていないため同一話とは断定しない。本文未確認のため、公開本文では題名・主人公・伝承地域・収録情報に限定した。"
+}
