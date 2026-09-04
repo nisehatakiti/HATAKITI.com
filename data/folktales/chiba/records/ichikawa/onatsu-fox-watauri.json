@@ -1,46 +1,23 @@
 {
-  "schema_version": "1.0",
-  "record_id": "chiba-ichikawa-onatsu-fox-watauri",
-  "municipality": "市川市",
-  "title": "おなつギツネとわたうり",
-  "alternate_titles": ["お夏狐と綿売り"],
-  "research_status": "source_confirmed",
-  "story_type": ["狐伝承"],
-  "cross_tags": ["狐", "お夏狐", "綿売り", "了善寺", "相之川", "行徳", "市川市"],
-  "sources": [
-    {
-      "source_id": "SRC-CHIBA-LIB-ICHIKAWA-INDEX",
-      "title": "千葉県の民話 市川市",
-      "author_or_publisher": "千葉県立図書館",
-      "publication_year_or_date": "web",
-      "source_type": "library_index",
-      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "伝承題名、収録資料、地域・関連地を確認するための索引。本文そのものではない。"
-    },
-    {
-      "source_id": "SRC-OKASAN-MUKASHIBANASHI-1986",
-      "title": "お母さんがきいたむかしばなし",
-      "author_or_publisher": "エピック",
-      "publication_year_or_date": "1986",
-      "source_type": "book",
-      "url_or_identifier": "千葉県立図書館民話索引掲載書誌情報",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "「おなつギツネとわたうり」の収録資料として確認。本文未確認。"
-    }
-  ],
-  "related_items": [
-    {
-      "relation_type": "linked_by_shared_subject_and_probable_variant",
-      "target_title": "綿売りと狐",
-      "target_scope": "市川市行徳の狐伝承",
-      "note": "題名中の「わたうり」と、市川市行徳で確認される「綿売りと狐」を関連伝承として紐づける。現時点では同一本文と断定せず、本文確認後に同一話・異題・別話の判定を更新する。"
-    },
-    {
-      "relation_type": "linked_by_shared_subject",
-      "target_subject": "お夏狐",
-      "note": "市川市・行徳周辺に複数確認されるお夏狐伝承とタグで横断接続する。"
-    }
-  ],
-  "research_notes": "「綿売りと狐」は題名・語義・地域が近接するため関連項目として紐づけた。ただし現段階では本文同一性を確認していないため、同一recordへの統合は行わず、個別伝承として保持する。今後本文または原資料を確認できた場合に関係種別を再判定する。"
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-onatsu-fox-watauri",
+  "status":"draft",
+  "title":"おなつギツネとわたうり",
+  "title_normalized":"おなつぎつねとわたうり",
+  "title_origin":"source_title",
+  "summary":{"text":"了善寺に伝わるお夏狐と綿売りの出会い・やり取りを題材にした市川市の狐伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-OKASAN-MUKASHIBANASHI-1986","SRC-JFOLKLORE-ICHIKAWA","SRC-ICHIKAWA-MINWA"]},
+  "story_summary":"市川市の了善寺に結びつく「お夏狐」の伝承の一つ。綿を売り歩く人物と狐との出来事を題材にした話で、狐が人の暮らしの中に現れ、人を化かしたり驚かせたりする地域の狐伝承として語り継がれている。市川民話の会でも「おなつぎつね」として相之川の話が現在まで語られている。",
+  "story_content":"相之川の了善寺には、お夏狐が棲んでいたという伝承が残っている。この話では、そのお夏狐と綿売りとの出来事が語られる。狐が人の生活圏に現れ、綿を売り歩く人との間にひと騒動を起こすという、行徳・南行徳地域に残る狐の化かし話の一つである。市川市では現在も「おなつぎつね」として語り継がれており、地域の狐伝承を伝える昔ばなしとして紹介されている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"南行徳・相之川","source_description":"千葉県立図書館の市川市民話索引では、1986年刊『お母さんがきいたむかしばなし』の地域根拠を了善寺として掲載。市川民話の会では相之川の話として現在も紹介されている。"},
+  "locations":[{"name":"了善寺","location_type":"temple","description":"お夏狐の伝承地。市川市南行徳・相之川地域に結びつく。","latitude":null,"longitude":null,"precision":"local","source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-JFOLKLORE-ICHIKAWA","SRC-ICHIKAWA-MINWA"]},{"name":"相之川","location_type":"place","description":"市川民話の会が「おなつぎつね」の伝承地として紹介している地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-ICHIKAWA-MINWA"]}],
+  "characters":[{"name":"お夏狐","role":"狐の怪異・主人公格","attributes":["了善寺に棲んでいたと伝えられる狐","人間との出来事が語られる"],"source_ids":["SRC-JFOLKLORE-ICHIKAWA","SRC-ICHIKAWA-MINWA"]},{"name":"綿売り","role":"狐と出会う人物","attributes":["綿を売り歩く人物として題名に登場"],"source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX"]}],
+  "beings":[{"name":"狐","type":"怪異・動物","description":"人を化かす存在として地域の伝承に登場する狐。","source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+  "themes":["狐伝承","化かし","お夏狐","綿売り","了善寺","相之川","行徳","南行徳"],
+  "story_type":["狐伝承","怪異譚","化かし話","地域伝承"],
+  "related_records":[{"record_id":"chiba-ichikawa-onatsu-gitsune","relationship":"same_subject_variant_or_related_tale","note":"同じお夏狐を扱う市川市の別タイトル「おなつ狐」。本文照合前のため同一話とは断定しない。"},{"record_id":"chiba-ichikawa-watauri-to-kitsune","relationship":"comparison_candidate","note":"日本伝承マップに「綿売りと狐」という別伝承が行徳で記録されている。題材が近いため比較対象とするが、同一話とは断定しない。"}],
+  "sources":[{"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"おなつギツネとわたうり／お母さんがきいたむかしばなし／了善寺","language":"ja"},{"source_id":"SRC-OKASAN-MUKASHIBANASHI-1986","title":"お母さんがきいたむかしばなし","publisher":"エピック","author":null,"publication_date":"1986年","source_type":"book","url":null,"accessed_date":"2026-09-04","relevant_section":"おなつギツネとわたうり","language":"ja"},{"source_id":"SRC-JFOLKLORE-ICHIKAWA","title":"市川市の伝承","publisher":"日本伝承マップ","author":null,"publication_date":"web","source_type":"folklore_database","url":"https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82","accessed_date":"2026-09-04","relevant_section":"お夏狐／お夏ぎつね（1）新聞屋・（2）おみやげ／綿売りと狐","language":"ja"},{"source_id":"SRC-ICHIKAWA-MINWA","title":"動画で市川の民話を聴こう／第12回市川の昔ばなし「行徳地域の話を中心に」","publisher":"市川民話の会","author":null,"publication_date":"2021-2025年","source_type":"web","url":"https://ichikawa.genki365.jp/G0000286/information/200.html","accessed_date":"2026-09-04","relevant_section":"おなつぎつね（相之川）","language":"ja"}],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"旧レコードを現行WordPressデータ契約へ移行。公開本文は、題名・伝承地・現在の語り継ぎ状況から確認できる内容に限定し、本文で確認できない具体的な化かし方や結末は補っていない。"},
+  "confidence":"medium",
+  "research_status":"partial",
+  "research_notes":"1986年『お母さんがきいたむかしばなし』への収録と了善寺との地域的結びつきは千葉県立図書館で確認。市川民話の会は相之川の「おなつぎつね」を現在も語っている。日本伝承マップには関連する「お夏ぎつね（1）新聞屋」「（2）おみやげ」および別伝承「綿売りと狐」が記録されているが、1986年収録話との本文同一性は未確認のため統合していない。"
 }
