@@ -1,16 +1,23 @@
 {
   "schema_version":"1.0",
   "record_id":"chiba-ichikawa-otsukisama-ga-bee",
-  "municipality":"市川市",
+  "status":"draft",
   "title":"お月さまがべーえ",
-  "research_status":"source_confirmed",
-  "tags":["月","行徳","市川市"],
-  "sources":[
-    {"title":"お母さんがきいたむかしばなし","publication_year_or_date":"1986","source_type":"book","note":"千葉県立図書館民話索引で市川市の収録題名として確認。"},
-    {"title":"語り継ごう千葉の民話・民謡・童謡 第2巻","author_or_publisher":"千葉県","source_type":"audio_collection","note":"伝承地を市川市行徳として収録。語り手：荒石かつえ。"}
-  ],
-  "related_traditions":[
-    {"relationship":"comparison_candidate","theme":"月に化ける怪異","records":["月に化けたタヌキ（浦安）","月に化けた狢（浦安）","月に化けたムジナ（浦安）"],"reason":"行徳と浦安は近接する旧江戸川河口の伝承圏であり、題名から月に関する怪異伝承との関連を検討する価値がある。ただし本伝承の本文未確認のため、同一伝承・異伝とは断定しない。"}
-  ],
-  "research_notes":"浦安の月に化けたタヌキ／狢／ムジナを比較候補として明示的に紐づけ。本文確認時には月への変身・動物怪異の要素を最優先で照合する。"
+  "title_normalized":"お月さまがべーえ",
+  "title_origin":"source_title",
+  "summary":{"text":"市川市行徳に伝わる、「お月さまがべーえ」という印象的な題名で語られてきた昔話。千葉県の民話事業でも行徳の伝承として音声記録されている。","based_on_source_ids":["SRC-CHI-001","SRC-CHI-MINWA-CD"]},
+  "story_summary":"『お母さんがきいたむかしばなし』に収録された市川市の昔話の一つで、千葉県の民話集CDでは市川市行徳の伝承として大窪絢子の語りが収録されている。題名の「べーえ」という語り口が特徴的な、月を題材とする昔話として伝えられている。",
+  "story_content":"「お月さまがべーえ」は、市川市行徳に伝わる昔話として記録された語り物である。千葉県が制作した民話集CDでは、行徳の伝承として大窪絢子が3分21秒の語りを担当している。題名にある「べーえ」という特徴的な言葉を軸に、お月さまを登場させて語る昔話として伝承されてきた。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"行徳","source_description":"千葉県立図書館の市川市民話索引および千葉県の民話集CDで市川市行徳の伝承として確認。"},
+  "locations":[{"name":"行徳","location_type":"place","description":"千葉県の民話集CDで本話の伝承地として記録されている地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-CHI-MINWA-CD"]}],
+  "characters":[{"name":"お月さま","role":"題名に登場する存在","attributes":["月をめぐる昔話の中心的存在"],"source_ids":["SRC-CHI-001","SRC-CHI-MINWA-CD"]}],
+  "beings":[],
+  "themes":["月","昔話","行徳","語り伝承","市川市"],
+  "story_type":["昔話","世間話"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-CHI-001","title":"千葉県の民話　市川市","publisher":"千葉県立図書館","author":null,"publication_date":"2026年閲覧","source_type":"library","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"お月さまがべーえ／お母さんがきいたむかしばなし／市川市","language":"ja"},{"source_id":"SRC-CHI-MINWA-CD","title":"語り継ごう千葉の民話・民謡・童謡","publisher":"千葉県","author":null,"publication_date":"2024年更新ページ","source_type":"audio_collection","url":"https://www.pref.chiba.lg.jp/kkbunka/b-shinkou/jigyou/minwa-cd.html","accessed_date":"2026-09-04","relevant_section":"第2巻 葛南地域 13 お月様がべーえ／語り手 大窪絢子／市川市行徳／3分21秒","language":"ja"}],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の市川市民話索引と千葉県の民話集CD公式ページを照合。公開本文は確認できた資料情報の範囲に限定し、未確認の細部は補っていない。"},
+  "confidence":"medium",
+  "research_status":"deep_researched",
+  "research_notes":"原典『お母さんがきいたむかしばなし』の本文全文はオンラインでは確認できなかった。一方、千葉県公式ページで行徳伝承として音声収録されていること、千葉県立図書館で1986年刊行資料への収録が確認できる。旧レコードにあった浦安の狸・狢の月変身話との関連は、本文照合前の比較候補に過ぎないため公開関連付けから外した。"
 }
