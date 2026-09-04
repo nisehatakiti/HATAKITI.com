@@ -1,14 +1,27 @@
 {
   "schema_version":"1.0",
   "record_id":"chiba-ichikawa-onbu-sareta-mujina",
-  "municipality":"市川市",
+  "status":"draft",
   "title":"おんぶされたムジナ",
-  "research_status":"story_matched",
-  "tags":["ムジナ","狸","動物怪異","化かし","赤子","行徳","本行徳","市川市"],
+  "title_normalized":"おんぶされたムジナ",
+  "title_origin":"source_title",
+  "summary":{"text":"行徳に伝わる、赤子の泣き声に化けたムジナが大工の老人に背負われる民話。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-GENDAI-MINKWA-11","SRC-J-FOLKLORE-GYOTOKU-7"]},
+  "story_summary":"市川市本行徳の大工が夜道で赤子の泣き声を聞き、捨て子と思って近づく。翌晩も同じ声がしたためムジナの仕業と気づき、ムジナをおんぶして連れ帰る。家で柱に縛っておくと正体のムジナに戻り、夜には仲間のムジナが大勢迎えに来て騒いだため、最後には追い放したという話。",
+  "story_content":"本行徳の「ホウキや」という屋号の家の大工が、田尻の仕事から夜遅く帰る途中、おぎゃおぎゃという赤子の泣き声を聞いた。捨て子かと思って探したが姿はなく、翌晩も同じ声がしたのでムジナの仕業だと分かった。大工はムジナに「おじさんにおんぶしな」と声をかけて背負って帰り、家の縁の下の柱に縛っておいた。するとムジナは正体に戻り、夜になると仲間のムジナが大勢やって来て「こんばんは」と迎えに来た。あまりに騒がしくて眠れないため、大工はとうとうムジナを追い放したという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"本行徳","source_description":"千葉県立図書館の市川市民話索引で行徳を伝承地として確認し、現代民話考の採集伝承では本行徳とされる。"},
+  "locations":[{"name":"本行徳","type":"地域","description":"本話の採集地として記録される地域。","source_ids":["SRC-GENDONAI-MINKWA-11","SRC-J-FOLKLORE-GYOTOKU-7"]},{"name":"田尻","type":"地域","description":"大工が仕事をして帰る途中だった場所として伝承本文に登場する。","source_ids":["SRC-J-FOLKLORE-GYOTOKU-7"]}],
+  "characters":[{"name":"大工の老人","role":"人間側の主人公","attributes":["本行徳のホウキやという屋号の家の爺さん","大工"],"source_ids":["SRC-GENDONAI-MINKWA-11","SRC-J-FOLKLORE-GYOTOKU-7"]},{"name":"ムジナ","role":"怪異の主体","attributes":["赤子の泣き声に化ける","人に背負われる"],"source_ids":["SRC-GENDONAI-MINKWA-11","SRC-J-FOLKLORE-GYOTOKU-7"]}],
+  "beings":[{"name":"ムジナ","type":"妖怪・動物怪異","description":"赤子の泣き声に化けて人を誘い、老人に背負われた後に正体を現す。","source_ids":["SRC-GENDONAI-MINKWA-11","SRC-J-FOLKLORE-GYOTOKU-7"]}],
+  "themes":["ムジナ","化かし","赤子の泣き声","おんぶ","行徳","本行徳","市川市"],
+  "story_type":["妖怪譚","怪異譚","化かし話"],
+  "related_records":[],
   "sources":[
-    {"title":"お母さんがきいたむかしばなし","publication_year_or_date":"1986","source_type":"book","note":"千葉県立図書館民話索引で市川市・行徳の収録題名として確認。"},
-    {"title":"現代民話考 11 狸・むじな","author_or_publisher":"松谷みよ子","source_type":"book","note":"本行徳の、赤子の泣き声に化けたムジナを老人が背負って帰る話として確認。"}
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"おんぶされたムジナ／お母さんがきいたむかしばなし／1986年／行徳","language":"ja"},
+    {"source_id":"SRC-GENDONAI-MINKWA-11","title":"現代民話考 11 狸・むじな","publisher":"松谷みよ子","author":"松谷みよ子","publication_date":"1987年","source_type":"book","url":null,"accessed_date":"2026-09-04","relevant_section":"行徳のムジナ伝承","language":"ja"},
+    {"source_id":"SRC-J-FOLKLORE-GYOTOKU-7","title":"行徳（7）","publisher":"日本伝承マップ","author":null,"publication_date":"web","source_type":"folklore_database","url":"https://j-folklore.com/l/book_472_ep_264","accessed_date":"2026-09-04","relevant_section":"市川市本行徳／話例・7 子どもに化ける Bむじな赤子の泣き声","language":"ja"}
   ],
-  "story_identity":{"status":"treated_as_same_story","matched_source":"現代民話考 11 狸・むじな","reason":"題名は完全一致しないが、行徳／本行徳という伝承圏と『背負われたムジナ』という中心的筋が一致するため、同一伝承として扱う。"},
-  "research_notes":"ユーザー判断により、松谷みよ子『現代民話考 11 狸・むじな』掲載の本行徳のムジナ話を『おんぶされたムジナ』と同一伝承として正本に採用。今後、原典本文が確認できた場合は異同比較を追記する。"
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の市川市民話索引で1986年『お母さんがきいたむかしばなし』所収・行徳伝承であることを確認。松谷みよ子『現代民話考 11 狸・むじな』に記録された本行徳の採集伝承と日本伝承マップの小話記録を照合し、題名の『おんぶされたムジナ』に対応する話として整理した。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"市川市版1986年資料の本文そのものはオンラインで直接確認できないが、千葉県立図書館の索引と、同じ行徳・本行徳の伝承として松谷みよ子『現代民話考 11 狸・むじな』および日本伝承マップに記録された本文を照合。『赤子の泣き声に化ける→背負われる→正体に戻る→仲間が迎えに来る→追い放される』という筋を採用。"
 }
