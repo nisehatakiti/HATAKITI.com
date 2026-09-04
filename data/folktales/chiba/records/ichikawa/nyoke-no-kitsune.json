@@ -1,1 +1,26 @@
-{"schema_version":"1.0","record_id":"chiba-ichikawa-nyoke-no-kitsune","municipality":"市川市","title":"女化のキツネ","research_status":"source_confirmed","story_type":["狐伝承"],"cross_tags":["狐","市川市"],"sources":[{"title":"お母さんがきいたむかしばなし","author_or_publisher":"エピック","publication_year_or_date":"1986","source_type":"book","reliability_notes":"収録資料。本文未確認。"},{"title":"千葉県の民話 市川市","author_or_publisher":"千葉県立図書館","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-08-26","reliability_notes":"題名・市川市伝承として確認。"}],"related_items":[{"relation_type":"comparison_candidate","target_title":"女化原の白狐","target_scope":"茨城県牛久市周辺の女化原伝承","note":"題名・狐化身という主題から比較候補とするが、市川の本文未確認のため同一伝承とは扱わない。"},{"relation_type":"related_place_reference_candidate","target_title":"女化神社(茨城)の話","target_scope":"市川市北国分の関連伝承","note":"市川地域内に茨城の女化伝承を参照する話があるため比較上の関連候補として保持する。"}],"research_notes":"茨城の女化原伝承との混同を避ける。本文確認まで同一話・異伝の判定は保留。"}
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-nyoke-no-kitsune",
+  "status":"draft",
+  "title":"女化のキツネ",
+  "title_normalized":"女化のキツネ",
+  "title_origin":"source_title",
+  "summary":{"text":"市川市の民話索引に収録される、女に化けるキツネを題材とした狐伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-OKASAN-MUKASHIBANASHI-1986"]},
+  "story_summary":"『お母さんがきいたむかしばなし』に収録された市川市の狐伝承。女に化けるキツネを題材とする話として、千葉県立図書館の市川市民話索引に掲載されている。市川市の伝承として記録されている一方、茨城県の女化原・女化神社に伝わる狐女房伝説とは、現時点では同一話とは扱わない。",
+  "story_content":"市川市には、女に化けるキツネを題材にした「女化のキツネ」という民話が伝えられている。キツネが人の姿に化けるという狐の変化・化かしを題材にした伝承の一つである。千葉県立図書館の民話索引では、1986年刊の『お母さんがきいたむかしばなし』に収録された市川市の話として確認できる。なお、茨城県の女化原に伝わる、狐が女性となって人間の妻になる「狐女房」の伝説と題名が近いが、市川市の本話については原典本文を確認できるまでは同一の伝承とは断定しない。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":null,"source_description":"千葉県立図書館の市川市民話索引に市川市の民話として掲載。特定地域名は索引に記載なし。"},
+  "locations":[],
+  "characters":[{"name":"キツネ","role":"怪異の主体","attributes":["人の姿に化ける存在として題材となる"],"source_ids":["SRC-OKASAN-MUKASHIBANASHI-1986"]}],
+  "beings":[{"name":"狐","type":"妖怪・動物怪異","description":"人の姿に化ける存在として語られる狐。","source_ids":["SRC-OKASAN-MUKASHIBANASHI-1986"]}],
+  "themes":["狐","化け","変身","怪異","市川市"],
+  "story_type":["狐伝承","怪異譚"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"女化のキツネ／お母さんがきいたむかしばなし／1986年","language":"ja"},
+    {"source_id":"SRC-OKASAN-MUKASHIBANASHI-1986","title":"お母さんがきいたむかしばなし","publisher":"エピック","author":null,"publication_date":"1986年","source_type":"book","url":null,"accessed_date":"2026-09-04","relevant_section":"女化のキツネ","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の市川市民話索引で題名・収録資料を確認し、女化・狐女房系の茨城伝承とは本文照合なしに統合しない方針で整理した。"},
+  "confidence":"medium",
+  "research_status":"partial",
+  "research_notes":"市川市版の原典本文をオンラインで直接確認できていないため、具体的な人物名・舞台・結末などは推測していない。茨城県の女化原・女化神社の狐女房伝説は別伝承として扱う。"
+}
