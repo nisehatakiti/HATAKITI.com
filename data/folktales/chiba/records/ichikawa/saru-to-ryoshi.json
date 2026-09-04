@@ -1,1 +1,26 @@
-{"schema_version":"1.0","record_id":"chiba-ichikawa-saru-to-ryoshi","municipality":"市川市","title":"サルとりょうし","research_status":"story_partially_confirmed","story_type":["動物伝承","因果伝承"],"cross_tags":["猿","猟師","殺生","因果","行徳","市川市"],"sources":[{"title":"お母さんがきいたむかしばなし","author_or_publisher":"エピック","publication_year_or_date":"1986","source_type":"book","reliability_notes":"収録資料。"},{"title":"市川緑の市民フォーラム会報 2016年6月 通巻148号","source_type":"periodical","reliability_notes":"「サルとりょうし（行徳）」として紹介され、身重の猿を猟師が仕留めた後、子孫の男子に耳が聞こえない者が生まれる筋を確認。結末未確認。"}],"story_summary_confirmed":"猟師が身重の猿を仕留め、その後、猟師の子孫の男子に耳が聞こえない者が生まれる筋が確認されている。","research_notes":"猿の祟り・供養などは本文の明示確認がないため断定しない。"}
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-saru-to-ryoshi",
+  "status":"draft",
+  "title":"サルとりょうし",
+  "title_normalized":"サルとりょうし",
+  "title_origin":"source_title",
+  "summary":{"text":"身重の猿を仕留めた猟師と、その後に生まれた子孫の耳の聞こえない男子をめぐる、市川市行徳の因果伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-MIDORI-2016"]},
+  "story_summary":"行徳に伝わる民話で、猟師が身重の猿を仕留めたことと、その後の子孫に起きた出来事が結び付けて語られる。猟師の子孫に生まれた長男は耳が聞こえず、その子どもも耳が聞こえなかったと伝えられている。",
+  "story_content":"むかし、ある猟師が猿を仕留めた。その猿は身重だったという。その後、猟師の子孫に生まれた長男は耳が聞こえず、さらにその子どもも耳が聞こえなかったと伝えられている。身重の猿を殺したことと、後の世代に続いた耳の不自由さを結び付けて語る、因果をめぐる動物伝承である。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"行徳","source_description":"千葉県立図書館の市川市民話索引および市川緑の市民フォーラム会報で行徳の民話として確認。"},
+  "locations":[{"name":"行徳","type":"伝承地","description":"「サルとりょうし」の伝承地として紹介されている地域。","source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-MIDORI-2016"]}],
+  "characters":[{"name":"猟師","role":"主人公","attributes":["猿を仕留める"],"source_ids":["SRC-ICHIKAWA-MIDORI-2016"]},{"name":"身重の猿","role":"動物","attributes":["猟師に仕留められる"],"source_ids":["SRC-ICHIKAWA-MIDORI-2016"]},{"name":"猟師の子孫の長男","role":"後世の人物","attributes":["耳が聞こえないと伝えられる"],"source_ids":["SRC-ICHIKAWA-MIDORI-2016"]}],
+  "beings":[{"name":"猿","type":"動物","description":"身重の状態で猟師に仕留められたと伝えられる猿。","source_ids":["SRC-ICHIKAWA-MIDORI-2016"]}],
+  "themes":["猿","猟師","殺生","因果","動物伝承","行徳"],
+  "story_type":["動物伝承","因果伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"サルとりょうし／お母さんがきいたむかしばなし／1986年","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-MIDORI-2016","title":"市川緑の市民フォーラム会報 2016年6月 通巻148号","publisher":"市川緑の市民フォーラム","author":null,"publication_date":"2016年6月","source_type":"periodical","url":"https://expydoc.com/doc/9778604/%E5%B8%82%E5%B7%9D%E7%B7%91%E3%81%AE%E5%B8%82%E6%B0%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0-%E4%BC%9A%E5%A0%B1-2016-%E5%B9%B4-6%E6%9C%88-%E9%80%9A%E5%B7%BB-148-%E5%8F%B7","accessed_date":"2026-09-04","relevant_section":"市川の民話に登場するサル／サルとりょうし（行徳）","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川緑の市民フォーラム会報に掲載された筋を基礎に、本文で確認できない祟り・供養などは追加していない。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"1986年収録実績と2016年の市川民話紹介記事を照合。確認できた筋は、身重の猿を猟師が仕留め、その後の子孫に耳の聞こえない男子が生まれたという部分まで。"
+}
