@@ -32,6 +32,14 @@ define( 'HATAKITI_OCCULT_PDF_FONT_DIR', HATAKITI_CORE_DIR . 'assets/fonts/' );
 define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpdf.php' );
 
 /**
+ * 組版コード自体のバージョン。マストヘッド・段組み・余白などPDFの
+ * 見た目に関わるロジックを変更するたびに上げる — hatakiti_occult_pdf_
+ * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
+ * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
+ */
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '3' );
+
+/**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
  * 正式ロゴとして採用された画像をそのまま配置する — PDF側でタイトル
  * 文字列を再入力・再現することはしない。縦横比は元画像（2172×724px、
@@ -1136,7 +1144,14 @@ function hatakiti_occult_pdf_cache_path( $post_id ) {
 function hatakiti_occult_pdf_cache_key( $post_id ) {
     $articles = get_post_meta( $post_id, 'hatakiti_occult_articles_json', true );
     $summary  = get_post_meta( $post_id, 'hatakiti_occult_editorial_summary', true );
-    return md5( (string) $articles . '|' . (string) $summary );
+    // HATAKITI_OCCULT_PDF_GENERATOR_VERSION をキーに含めることで、記事
+    // 内容が変わっていなくても、組版コード自体（マストヘッド・レイアウト
+    // 等）が変わった時点で既存の全キャッシュ済みPDFが自動的に無効化
+    // される。ここに含めないと、コードだけを変更した回で「まだ articles_
+    // json を書き換えていない号」のPDFが古いレイアウトのまま配信され
+    // 続けてしまう（実際に発生した不具合 — 本文データは無関係、PDF
+    // キャッシュのみの問題）。
+    return md5( HATAKITI_OCCULT_PDF_GENERATOR_VERSION . '|' . (string) $articles . '|' . (string) $summary );
 }
 
 /**
