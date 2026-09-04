@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '6' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '7' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -48,6 +48,23 @@ define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '6' );
 define( 'HATAKITI_OCCULT_PDF_LOGO_PATH', HATAKITI_CORE_DIR . 'assets/images/occult-weekly-logo.png' );
 define( 'HATAKITI_OCCULT_PDF_LOGO_ASPECT', 3.0 );
 define( 'HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM', 34.0 );
+
+/**
+ * 半角数字→全角数字の表示用マッピング。DB上のarticles_json／headline／
+ * bodyは一切書き換えない — PDFへ実際に文字を描画する直前にだけ、この
+ * 関数を通して見た目だけ全角化する。縦書き本文側では、桁数判定
+ * （縦中横ペアリング・4桁西暦判定）は必ず変換前の半角文字列に対して
+ * 行い、変換後の全角文字はグリフを差し替えて描画するだけに使う
+ * （全角文字はASCIIではないためctype_digit()が効かなくなり、変換を
+ * 先にやってしまうと桁数判定そのものが壊れる）。
+ */
+function hatakiti_occult_pdf_fullwidth_digits( $text ) {
+    static $map = array(
+        '0' => '０', '1' => '１', '2' => '２', '3' => '３', '4' => '４',
+        '5' => '５', '6' => '６', '7' => '７', '8' => '８', '9' => '９',
+    );
+    return strtr( (string) $text, $map );
+}
 
 /**
  * mm単位の版面定数。すべてA4縦（210×297mm）を前提にする。
@@ -138,14 +155,19 @@ function hatakiti_occult_pdf_build_units( $text ) {
     // 縦書きで90度回転させる文字。長音記号・波ダッシュ・三点リーダー
     // （既存）に加え、全角ダッシュ類と主要な括弧類（開き・閉じとも同じ
     // 角度で回転させる — 開き括弧は下向きに開き、閉じ括弧は上向きに
-    // 開く形になり、縦書きとして自然な向きになる）。句読点（、。）や
-    // ！？は、フォント自体のグリフが縦書きでもそのまま自然に見える
-    // ため回転対象に含めない（回転すると逆に不自然になる）。
+    // 開く形になり、縦書きとして自然な向きになる）。！？は回転させない
+    // （縦書きでもそのまま自然に見えるため）。
     $rotate_chars = array(
         'ー', '〜', '…', '‥', '―', '—', '‐',
         '「', '」', '『', '』', '（', '）', '【', '】',
         '［', '］', '〈', '〉', '《', '》', '〔', '〕', '｛', '｝',
     );
+
+    // 読点・句点（全角のカンマ・ピリオド含む）は、通常の文字と同じ
+    // 大きさ・中央揃えで描くと縦書きの列の中で浮いて見えるため、
+    // 専用の'punct'タイプとして小さめ・セル右上寄りに描く
+    // （hatakiti_occult_pdf_layout_and_draw_columns()のdraw_unit参照）。
+    $punct_small_chars = array( '、', '。', '，', '．' );
 
     $result = array();
     foreach ( $paragraphs as $para ) {
@@ -192,7 +214,9 @@ function hatakiti_occult_pdf_build_units( $text ) {
                 $i = $j;
                 continue;
             }
-            if ( in_array( $ch, $rotate_chars, true ) ) {
+            if ( in_array( $ch, $punct_small_chars, true ) ) {
+                $units[] = array( 'type' => 'punct', 'ch' => $ch );
+            } elseif ( in_array( $ch, $rotate_chars, true ) ) {
                 $units[] = array( 'type' => 'rotate', 'ch' => $ch );
             } else {
                 $units[] = array( 'type' => 'char', 'ch' => $ch );
@@ -238,7 +262,14 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
 
     $draw_unit = function ( $unit, $col_left, $y ) use ( $pdf, $col_pitch, $char_h, $font_pt, $font_key ) {
         if ( 'tcy' === $unit['type'] ) {
-            $digits  = mb_str_split( $unit['ch'], 1, 'UTF-8' );
+            // 縦中横の数字も表示上は全角グリフに差し替える（桁数判定は
+            // build_units()側で変換前の半角文字列に対してすでに終わって
+            // いるため、ここでの差し替えはグリフの見た目だけに影響する）。
+            $digits    = mb_str_split( $unit['ch'], 1, 'UTF-8' );
+            $digits[0] = hatakiti_occult_pdf_fullwidth_digits( $digits[0] );
+            if ( isset( $digits[1] ) ) {
+                $digits[1] = hatakiti_occult_pdf_fullwidth_digits( $digits[1] );
+            }
             $tcy_pt  = $font_pt * 0.56;
             $half_w  = $col_pitch / 2;
             $pdf->SetFontSize( $tcy_pt );
@@ -257,9 +288,21 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
             $pdf->SetXY( $cx - ( $char_h / 2 ), $cy - ( $col_pitch / 2 ) );
             $pdf->Cell( $char_h, $col_pitch, $unit['ch'], 0, 0, 'C' );
             $pdf->StopTransform();
+        } elseif ( 'punct' === $unit['type'] ) {
+            // 読点・句点は、通常の文字と同じ大きさ・中央揃えで描くと縦の
+            // 列の中で浮いて見えるため、一回り小さく・セルの右上寄り
+            // （＝直前の文字に寄り添う位置）に配置する。列の送り幅
+            // （col_pitch/char_h）自体は変えない — 段組みの高さ計算
+            // （capacity等）に影響を与えないための制約。
+            $punct_pt = $font_pt * 0.62;
+            $pdf->SetFontSize( $punct_pt );
+            $pdf->SetXY( $col_left + ( $col_pitch * 0.12 ), $y - ( $char_h * 0.22 ) );
+            $pdf->Cell( $col_pitch * 0.76, $char_h, $unit['ch'], 0, 0, 'L' );
+            $pdf->SetFontSize( $font_pt );
         } else {
+            $ch_display = hatakiti_occult_pdf_fullwidth_digits( $unit['ch'] );
             $pdf->SetXY( $col_left, $y );
-            $pdf->Cell( $col_pitch, $char_h, $unit['ch'], 0, 0, 'C' );
+            $pdf->Cell( $col_pitch, $char_h, $ch_display, 0, 0, 'C' );
         }
     };
 
@@ -303,12 +346,13 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
         }
 
         // 行末禁則：最後が「開き括弧」なら次のコラムへ送り戻す。
-        // 括弧類は縦書き用に'rotate'扱いになっているため、'char'だけで
-        // なく'rotate'型のunitも対象にする（そうしないと回転させた
-        // 括弧だけ禁則処理が効かなくなってしまう）。
+        // 括弧類は'rotate'、読点・句点は'punct'扱いになっているため、
+        // 'char'だけでなくこれらも対象にする（そうしないと回転／縮小
+        // 表示させた文字だけ禁則処理が効かなくなってしまう）。
+        $kinsoku_types = array( 'char', 'rotate', 'punct' );
         if ( count( $slots ) > 0 ) {
             $last = end( $slots );
-            if ( is_array( $last ) && in_array( $last['type'], array( 'char', 'rotate' ), true ) && in_array( $last['ch'], $cannot_end, true ) && $pos < $total ) {
+            if ( is_array( $last ) && in_array( $last['type'], $kinsoku_types, true ) && in_array( $last['ch'], $cannot_end, true ) && $pos < $total ) {
                 array_pop( $slots );
                 $pos--;
             }
@@ -318,7 +362,7 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
         // このコラムに1文字だけ押し込む（capacity+1まで許容）。
         if ( $pos < $total && ! ( isset( $flat[ $pos ]['break'] ) && $flat[ $pos ]['break'] ) ) {
             $next_unit = $flat[ $pos ]['unit'];
-            if ( in_array( $next_unit['type'], array( 'char', 'rotate' ), true ) && in_array( $next_unit['ch'], $cannot_start, true ) ) {
+            if ( in_array( $next_unit['type'], $kinsoku_types, true ) && in_array( $next_unit['ch'], $cannot_start, true ) ) {
                 $slots[] = $next_unit;
                 $pos++;
             }
@@ -391,7 +435,7 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
 
     $pdf->SetFont( $font_regular, '', 9 );
     $sub_y = $top + $logo_h + 3;
-    $left_text  = $issue_subtitle ? mb_substr( $issue_subtitle, 0, 60 ) : '';
+    $left_text  = $issue_subtitle ? hatakiti_occult_pdf_fullwidth_digits( mb_substr( $issue_subtitle, 0, 60 ) ) : '';
     $right_bits = array();
     if ( $issue_id ) {
         $right_bits[] = '第' . $issue_id . '号';
@@ -399,7 +443,7 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
     if ( $issue_date ) {
         $right_bits[] = $issue_date . '発行';
     }
-    $right_text = implode( '　', $right_bits );
+    $right_text = hatakiti_occult_pdf_fullwidth_digits( implode( '　', $right_bits ) );
 
     $pdf->SetXY( $c['margin_l'], $sub_y );
     $pdf->Cell( $w * 0.62, 6, $left_text, 0, 0, 'L' );
@@ -416,7 +460,7 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
 function hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, $page_no = 2 ) {
     $pdf->SetFont( $font_regular, '', 9 );
     $pdf->SetXY( $c['margin_l'], $c['margin_t'] );
-    $pdf->Cell( $c['page_w'] - $c['margin_l'] - $c['margin_r'], 5, '週刊オカルト新聞　（第' . (int) $page_no . '面）', 0, 0, 'L' );
+    $pdf->Cell( $c['page_w'] - $c['margin_l'] - $c['margin_r'], 5, hatakiti_occult_pdf_fullwidth_digits( '週刊オカルト新聞　（第' . (int) $page_no . '面）' ), 0, 0, 'L' );
     $rule_y = $c['margin_t'] + $c['page2_header_h'] - 2;
     $pdf->SetLineWidth( 0.3 );
     $pdf->Line( $c['margin_l'], $rule_y, $c['page_w'] - $c['margin_r'], $rule_y );
@@ -579,6 +623,22 @@ function hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, 
 }
 
 /**
+ * 「この記事を、単独記事として今の残り高さで開始してよいか」の判定。
+ * ページ全体のバランスを取るための先読み（hatakiti_occult_pdf_stack_
+ * articles()）で、キュー先頭が収まらない場合に後続から代わりを探す際に
+ * 使う。ペア判定（small2本並び）は考慮しない単純な判定 — 先読みの目的は
+ * 「大きな余白を残すより、収まる記事を1つでも前に出す」ことであり、
+ * ペアの機会を多少犠牲にしてもよい。
+ */
+function hatakiti_occult_pdf_article_fits( $pdf, $font_bold, $article, $tier, $zone_w, $remaining ) {
+    $body_font_pt = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ]['body'];
+    list( $unit_count, ) = hatakiti_occult_pdf_count_units( (string) ( $article['body'] ?? '' ) );
+    $effective_w = hatakiti_occult_pdf_effective_box_width( $unit_count, $zone_w, $body_font_pt );
+    $min_viable  = hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier, $effective_w );
+    return $remaining >= $min_viable;
+}
+
+/**
  * 見出し（横書き・箱の全幅で折り返し）に必要な高さ(mm)を、実際には
  * 描画せず見積もる。
  */
@@ -586,9 +646,13 @@ function hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $font_pt
     if ( '' === (string) $text ) {
         return 0.0;
     }
+    // 見出しは横書きなので、全角化すると折り返し幅（＝行数）が変わり
+    // 得る。実際に描画する文字列（全角化後）で見積もらないと、行数が
+    // 増えた場合に見積もりと実描画がずれてしまうため、ここで変換する。
+    $text = hatakiti_occult_pdf_fullwidth_digits( (string) $text );
     $pdf->SetFont( $font_bold, '', $font_pt );
     $line_h = $font_pt * 0.3528 * 1.3;
-    $h = $pdf->getStringHeight( $box_w, (string) $text );
+    $h = $pdf->getStringHeight( $box_w, $text );
     return max( $line_h, $h );
 }
 
@@ -691,12 +755,16 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     if ( '' === $headline ) {
         $head_h = 0.0;
     } else {
+        // 表示用に全角化した文字列で折り返し幅を測る・描くの両方を行う
+        // — 測定と描画で異なる文字列を使うと折り返し行数がずれ、罫線と
+        // 本文が重なる不具合の原因になる（過去に修正した問題と同じ種類）。
+        $headline_display = hatakiti_occult_pdf_fullwidth_digits( $headline );
         $head_pt     = hatakiti_occult_pdf_headline_font_pt( $article, $fonts['headline'] );
         $head_line_h = $head_pt * 0.3528 * 1.3;
         $pdf->SetFont( $font_bold, '', $head_pt );
-        $head_h = max( $head_line_h, $pdf->getStringHeight( $w, $headline ) );
+        $head_h = max( $head_line_h, $pdf->getStringHeight( $w, $headline_display ) );
         $pdf->SetXY( $x, $y );
-        $pdf->MultiCell( $w, $head_line_h, $headline, 0, 'L' );
+        $pdf->MultiCell( $w, $head_line_h, $headline_display, 0, 'L' );
     }
 
     // 続きの箱は出典ストリップを省略する（出典は記事の最初の箱に
@@ -742,7 +810,7 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
 
         $pdf->SetFont( $font_regular, '', $src_font );
         $pdf->SetXY( $x, $src_y );
-        $pdf->Cell( $w, 3.4, $text, 0, 0, 'L' );
+        $pdf->Cell( $w, 3.4, hatakiti_occult_pdf_fullwidth_digits( $text ), 0, 0, 'L' );
         if ( $sl['url'] ) {
             $pdf->Link( $x, $src_y, $w, 3.4, $sl['url'] );
         }
@@ -820,6 +888,43 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
         }
         if ( $stall_count >= 3 ) {
             break;
+        }
+
+        // ページ全体のバランスを取るための先読み：現在の残り高さでは
+        // キュー先頭の記事が（small2本並びの可能性も含めて）開始できない
+        // 場合、そのままこのゾーンを終えて次へ送るのではなく、キューの
+        // 後方に「今の残り高さでも開始できる記事」がないか探し、あれば
+        // それを先頭へ繰り上げる。これにより、「本来ならまだ入る記事が
+        // あるのに、先頭の記事だけが理由でゾーンを空けたまま次へ進んで
+        // しまい、結果として大きな余白が残る」状態を避ける。見つから
+        // なければ、これまで通りこのゾーンの処理を終える。
+        $head_can_start = false;
+        if ( 'small' === $tier && isset( $queue[1] ) && 'small' === $queue[1]['_tier'] ) {
+            $pair_w_check   = ( $zone_w - 2.0 ) / 2;
+            $head_can_start = $remaining >= max(
+                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, 'small', $pair_w_check ),
+                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $queue[1], 'small', $pair_w_check )
+            );
+        } else {
+            $head_can_start = hatakiti_occult_pdf_article_fits( $pdf, $font_bold, $article, $tier, $zone_w, $remaining );
+        }
+
+        if ( ! $head_can_start ) {
+            $promote_idx = null;
+            for ( $look = 1; $look < count( $queue ); $look++ ) {
+                if ( hatakiti_occult_pdf_article_fits( $pdf, $font_bold, $queue[ $look ], $queue[ $look ]['_tier'], $zone_w, $remaining ) ) {
+                    $promote_idx = $look;
+                    break;
+                }
+            }
+            if ( null === $promote_idx ) {
+                break;
+            }
+            $promoted = $queue[ $promote_idx ];
+            array_splice( $queue, $promote_idx, 1 );
+            array_unshift( $queue, $promoted );
+            $article = $queue[0];
+            $tier    = $article['_tier'];
         }
 
         // small記事は、2本並ぶ場合は横に並べて「小記事」らしくコンパクトに
@@ -955,7 +1060,7 @@ function hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $
         $y += 5;
         $pdf->SetFont( $font_regular, '', 7.5 );
         foreach ( $all_sources as $s ) {
-            $text = $s['name'] . '「' . mb_substr( $s['title'], 0, 50 ) . '」';
+            $text = hatakiti_occult_pdf_fullwidth_digits( $s['name'] . '「' . mb_substr( $s['title'], 0, 50 ) . '」' );
             $pdf->SetXY( $c['margin_l'], $y );
             $pdf->Cell( $w, 4, $text, 0, 0, 'L' );
             if ( $s['url'] ) {
@@ -1021,7 +1126,12 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         }
     }
 
-    $editorial_summary = get_post_meta( $post_id, 'hatakiti_occult_editorial_summary', true );
+    // 表示用に全角化する（DBのpostmetaそのものは変更しない）。
+    // editorial_summaryはhatakiti_occult_pdf_footer_height()（見積もり）
+    // とhatakiti_occult_pdf_draw_footer()（実描画）の両方で使われるため、
+    // ここで一度だけ変換し、以降は同じ変換済み文字列を両方に渡すことで
+    // 見積もりと実描画のずれを防ぐ。
+    $editorial_summary = hatakiti_occult_pdf_fullwidth_digits( get_post_meta( $post_id, 'hatakiti_occult_editorial_summary', true ) );
     $issue_id          = get_post_meta( $post_id, 'hatakiti_occult_issue_id', true );
     $issue_date        = get_post_meta( $post_id, 'hatakiti_occult_issue_date', true );
     $issue_subtitle    = get_the_title( $post_id );
