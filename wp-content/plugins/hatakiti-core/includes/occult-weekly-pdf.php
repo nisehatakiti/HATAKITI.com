@@ -175,7 +175,7 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
 
     $char_h    = $font_pt * 0.3528;
     $col_pitch = $char_h * 1.08;
-    $capacity  = max( 1, (int) floor( $col_h_mm / $char_h ) - 1 ); // 禁則の押し出し用に1文字ぶん余裕を残す
+    $capacity  = hatakiti_occult_pdf_column_capacity( $col_h_mm, $char_h );
 
     $pdf->SetFont( $font_key, '', $font_pt );
 
@@ -348,10 +348,10 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
     $pdf->Line( $c['margin_l'], $rule_y + 1.3, $c['page_w'] - $c['margin_r'], $rule_y + 1.3 );
 }
 
-function hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c ) {
+function hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, $page_no = 2 ) {
     $pdf->SetFont( $font_regular, '', 9 );
     $pdf->SetXY( $c['margin_l'], $c['margin_t'] );
-    $pdf->Cell( $c['page_w'] - $c['margin_l'] - $c['margin_r'], 5, '週刊オカルト新聞　（第2面）', 0, 0, 'L' );
+    $pdf->Cell( $c['page_w'] - $c['margin_l'] - $c['margin_r'], 5, '週刊オカルト新聞　（第' . (int) $page_no . '面）', 0, 0, 'L' );
     $rule_y = $c['margin_t'] + $c['page2_header_h'] - 2;
     $pdf->SetLineWidth( 0.3 );
     $pdf->Line( $c['margin_l'], $rule_y, $c['page_w'] - $c['margin_r'], $rule_y );
@@ -412,6 +412,90 @@ define( 'HATAKITI_OCCULT_PDF_CONTINUATION_LABEL', '（続き）' );
 define( 'HATAKITI_OCCULT_PDF_CONTINUATION_FONT_PT', 6.5 );
 
 /**
+ * レイアウト再修正（罫線と本文の干渉・段組みの極端な不揃い対策）で
+ * 導入した版面マージン定数。
+ *
+ *   BODY_BOTTOM_MARGIN_MM: 各列の最終文字と「その列に許された高さの
+ *     下端」との間に必ず確保する余白。禁則処理で1文字ぶん押し込まれる
+ *     最悪ケースでも、この余白ぶんは絶対に消費されない（下記
+ *     hatakiti_occult_pdf_column_capacity() が担保する）。
+ *   NORMAL_HEAD_GAP_MM / CONTINUATION_HEAD_GAP_MM: 見出し（または
+ *     「続き」ラベル）と本文の間の余白。旧実装の続き用0.4mmは文字が
+ *     ラベルに接触して見える主因だったため引き上げる。
+ *   ROW_GAP_MM: 縦に積んだ記事ボックス間の区切り線の余白（線の上下
+ *     それぞれに ROW_GAP_MM/2 ずつ）。
+ *   MIN_BODY_ROWS: 1つの記事ボックスを「その場で」描画してよいと判断
+ *     するために最低限必要な、本文1列あたりの文字数。これを満たせない
+ *     ほど残り領域が少ない場合は、その記事（続きを含む）を丸ごと次の
+ *     ゾーン／ページへ送る — 罫線ぎりぎりに1行だけ押し込むような
+ *     極端に窮屈な箱を二度と作らないための仕組み。
+ */
+define( 'HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM', 2.2 );
+define( 'HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM', 2.2 );
+define( 'HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM', 1.8 );
+define( 'HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM', 4.2 );
+define( 'HATAKITI_OCCULT_PDF_ROW_GAP_MM', 3.2 );
+define( 'HATAKITI_OCCULT_PDF_MIN_BODY_ROWS', 4 );
+
+/**
+ * 与えられた列の高さ(mm)と1文字の高さ(mm)から、実際に配置してよい
+ * 文字数（capacity）を返す。HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM
+ * ぶんを必ず差し引いてから計算するため、禁則処理で最大1文字押し込まれる
+ * 最悪ケースでも、列の下端との間に必ず余白が残る。本文サイズの見積もり
+ * （estimate）と実際の描画（draw）の両方がこの同じ関数を通ることで、
+ * 見積もりと実描画のずれ（＝罫線と文字が重なる不具合の原因）を防ぐ。
+ */
+function hatakiti_occult_pdf_column_capacity( $col_h_mm, $char_h ) {
+    $usable = max( 0, $col_h_mm - HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM );
+    return max( 1, (int) floor( $usable / $char_h ) - 1 );
+}
+
+/**
+ * 記事（続きを含む）を「今このゾーンの残り高さに描画してよい」と判断
+ * するための最低限の高さ(mm)。見出し1行分＋見出し-本文間の余白＋本文
+ * 最低4文字分＋出典ストリップ＋下端マージン。これを満たさない残り高さ
+ * しかない場合は描画せず、記事を丸ごと次のゾーン／ページへ送る
+ * （指示書の最重要方針：文字を詰め込んでページ数を減らさない）。
+ */
+/**
+ * ゾーン全幅をそのまま使うと、短い本文（特に続きの残り）が「1行だけの
+ * 横長の帯」になってしまう問題への対策。ゾーン幅をそのまま使った場合の
+ * 列数で本文unit数を割ると行数が最低本数(MIN_BODY_ROWS)を満たさない
+ * 場合、行数を確保できる分だけ幅を狭める（右端はゾーンの右端に揃えた
+ * まま、左側の余りを空ける）。長い本文（行数が自然に足りるもの）では
+ * $zone_wをそのまま返すため、通常記事の組み方は変わらない。
+ */
+function hatakiti_occult_pdf_effective_box_width( $unit_count, $zone_w, $font_pt ) {
+    if ( $unit_count <= 0 ) {
+        return $zone_w;
+    }
+    $char_h    = $font_pt * 0.3528;
+    $col_pitch = $char_h * 1.08;
+
+    // +1列ぶんの余裕: 見積もり(rows計算)と実描画(capacity計算)は同じ値に
+    // 収束するとは限らず、ぎりぎりの幅だと丸め差で1文字だけ収まりきらず
+    // 極端に小さい「続き」が新たに生まれることがあるため、常に1列分の
+    // 余裕を持たせておく。
+    $cols_for_min_rows  = max( 1, (int) ceil( $unit_count / HATAKITI_OCCULT_PDF_MIN_BODY_ROWS ) ) + 1;
+    $width_for_min_rows = $cols_for_min_rows * $col_pitch;
+
+    return max( $col_pitch * 2, min( $zone_w, $width_for_min_rows ) );
+}
+
+function hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier ) {
+    $fonts           = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
+    $is_continuation = ! empty( $article['_continuation'] );
+
+    $head_pt     = hatakiti_occult_pdf_headline_font_pt( $article, $fonts['headline'] );
+    $head_line_h = $head_pt * 0.3528 * 1.3;
+    $gap         = $is_continuation ? HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+    $src_h       = $is_continuation ? 0.0 : HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM;
+    $body_char_h = $fonts['body'] * 0.3528;
+
+    return $head_line_h + $gap + ( HATAKITI_OCCULT_PDF_MIN_BODY_ROWS * $body_char_h ) + $src_h + HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM;
+}
+
+/**
  * 見出し（横書き・箱の全幅で折り返し）に必要な高さ(mm)を、実際には
  * 描画せず見積もる。
  */
@@ -441,9 +525,12 @@ function hatakiti_occult_pdf_estimate_body_height( $unit_count, $box_w_mm, $font
     $col_pitch  = $char_h * 1.08;
     $n_cols_fit = max( 1, (int) floor( $box_w_mm / $col_pitch ) );
     $rows       = max( 1, (int) ceil( $unit_count / $n_cols_fit ) );
-    // 実描画側は capacity = floor(h/char_h) - 1 （禁則の押し出し余裕）
-    // なので、見積もりも +1 行ぶん多めに確保して整合させる。
-    return ( $rows + 1 ) * $char_h;
+    // 実描画側は hatakiti_occult_pdf_column_capacity()（禁則の押し出し
+    // 余裕1行＋下端の安全マージン）を使うため、見積もりもそれと整合する
+    // ように多めに余裕を持たせる（+2行）。見積もりと実描画の丸め差で
+    // 数文字だけ収まりきらず、不自然に小さい「続き」が新たに生まれる
+    // ことを防ぐための保守的なマージン。
+    return ( $rows + 2 ) * $char_h + HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM;
 }
 
 /**
@@ -462,8 +549,8 @@ function hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $t
     $body_h = hatakiti_occult_pdf_estimate_body_height( $unit_count, $box_w, $fonts['body'] );
 
     $is_continuation = ! empty( $article['_continuation'] );
-    $gap   = $is_continuation ? 0.4 : 1.8;
-    $src_h = $is_continuation ? 0.0 : 4.2;
+    $gap   = $is_continuation ? HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+    $src_h = $is_continuation ? 0.0 : HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM;
     return $head_h + $gap + $body_h + $src_h;
 }
 
@@ -483,8 +570,8 @@ function hatakiti_occult_pdf_natural_width_for_height( $pdf, $font_bold, $articl
     list( $unit_count, ) = hatakiti_occult_pdf_count_units( $body );
     $body_char_h    = $fonts['body'] * 0.3528;
     $body_col_pitch = $body_char_h * 1.08;
-    $body_h_budget  = max( 10, $fixed_h - $head_h - 1.8 - 4.2 );
-    $capacity       = max( 1, (int) floor( $body_h_budget / $body_char_h ) - 1 );
+    $body_h_budget  = max( 10, $fixed_h - $head_h - HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM - HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM );
+    $capacity       = hatakiti_occult_pdf_column_capacity( $body_h_budget, $body_char_h );
     $cols_needed    = max( 1, (int) ceil( $unit_count / $capacity ) );
 
     return $cols_needed * $body_col_pitch;
@@ -531,8 +618,8 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
 
     // 続きの箱は出典ストリップを省略する（出典は記事の最初の箱に
     // すでに表示済みのため、情報は失われない）。
-    $gap   = $is_continuation ? 0.4 : 1.8;
-    $src_h = $is_continuation ? 0.0 : 4.2;
+    $gap   = $is_continuation ? HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+    $src_h = $is_continuation ? 0.0 : HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM;
     $body_top = $y + $head_h + $gap;
     $body_h   = $h - ( $head_h + $gap ) - $src_h;
 
@@ -542,7 +629,7 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
 
         $body_char_h    = $fonts['body'] * 0.3528;
         $body_col_pitch = $body_char_h * 1.08;
-        $body_capacity  = max( 1, (int) floor( $body_h / $body_char_h ) - 1 );
+        $body_capacity  = hatakiti_occult_pdf_column_capacity( $body_h, $body_char_h );
         $needed_cols    = max( 1, (int) ceil( $unit_count / $body_capacity ) );
         $max_cols_by_w  = max( 0, (int) floor( $w / $body_col_pitch ) );
         $cols_to_use    = min( $needed_cols, $max_cols_by_w );
@@ -626,14 +713,13 @@ function hatakiti_occult_pdf_requeue_or_shift( &$queue, $idx, $article, $overflo
 function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
     $y         = $zone_y;
     $remaining = $zone_h_budget;
-    $min_box_h = 12.0;
-    $row_gap   = 2.0;
+    $row_gap   = HATAKITI_OCCULT_PDF_ROW_GAP_MM;
     $drew_any  = false;
     $debug     = array();
     $stall_key = null;
     $stall_count = 0;
 
-    while ( ! empty( $queue ) && $remaining > $min_box_h ) {
+    while ( ! empty( $queue ) && $remaining > 3.0 ) {
         $article = $queue[0];
         $tier    = $article['_tier'];
 
@@ -661,6 +747,17 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $pair_gap = 2.0;
             $pair_w   = ( $zone_w - $pair_gap ) / 2;
             $article2 = $queue[1];
+
+            // 残り高さがどちらか一方でも最低限の可読サイズに満たない
+            // 場合は、この場では描画せずペアごと次のゾーン／ページへ
+            // 送る — 罫線ぎりぎりの1行だけの箱を作らないため。
+            $min_viable_pair = max(
+                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, 'small' ),
+                hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article2, 'small' )
+            );
+            if ( $remaining < $min_viable_pair ) {
+                break;
+            }
 
             $needed_h = max(
                 hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, 'small', $pair_w ),
@@ -694,10 +791,25 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             continue;
         }
 
-        $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $zone_w );
+        // 残り高さが最低限の可読サイズに満たない場合は、この場では
+        // 描画せず記事（続きを含む）を丸ごと次のゾーン／ページへ送る。
+        $min_viable = hatakiti_occult_pdf_min_viable_box_height( $pdf, $font_bold, $article, $tier );
+        if ( $remaining < $min_viable ) {
+            break;
+        }
+
+        // ゾーン全幅をそのまま使うと、本文が短い場合（特に続きの残り）に
+        // 「1行だけの横長の帯」になり罫線ぎりぎりまで文字が詰まって見える
+        // ため、行数を確保できる幅まで狭める（右端はゾーン右端のまま）。
+        // 本文が十分長い通常記事ではeffective_w=$zone_wのまま変わらない。
+        $body_font_pt = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ]['body'];
+        list( $article_unit_count, ) = hatakiti_occult_pdf_count_units( (string) ( $article['body'] ?? '' ) );
+        $effective_w = hatakiti_occult_pdf_effective_box_width( $article_unit_count, $zone_w, $body_font_pt );
+
+        $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $effective_w );
         $actual_h = min( $needed_h, $remaining );
 
-        $box    = array( 'x' => $zone_x, 'y' => $y, 'w' => $zone_w, 'h' => $actual_h );
+        $box    = array( 'x' => $zone_x + ( $zone_w - $effective_w ), 'y' => $y, 'w' => $effective_w, 'h' => $actual_h );
         $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box );
         $drew_any = true;
 
@@ -943,7 +1055,7 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         // フォントの過度な圧縮ではない。
         if ( ! empty( $page2_queue ) ) {
             $pdf->AddPage();
-            hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c );
+            hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, 3 );
             $page3_col_top    = $c['margin_t'] + $c['page2_header_h'];
             $page3_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page3_col_top;
             $reserved_h_3page = $footer_h + 1.5;
