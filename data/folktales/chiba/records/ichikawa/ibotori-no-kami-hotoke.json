@@ -1,158 +1,103 @@
 {
   "schema_version": "1.0",
   "record_id": "chiba-ichikawa-ibotori-no-kami-hotoke",
-  "source_index_id": "CHB-000237",
-  "municipality": "市川市",
+  "status": "draft",
   "title": "いぼとりの神・仏",
-  "reading": "いぼとりのかみ・ほとけ",
-  "research_status": "researching",
-  "source_status": "index_confirmed",
-  "story_type": ["信仰伝承", "民間療法伝承", "寺社伝承"],
-  "location": {
-    "modern": "千葉県市川市真間・総寧寺（索引上の地域根拠）",
-    "historical": "市川市真間・総寧寺"
+  "title_normalized": "いぼとりの神・仏",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "千葉県立図書館の市川市民話索引に『いぼとりの神・仏』として登録されている伝承。出典は平野馨編著『房総の伝説』（第一法規、1976年）で、地域根拠は市川市真間（地名）・総寧寺（建造物）とされる。現段階では原典本文を直接確認できていないため、総寧寺で祀られる対象や具体的ないぼ取りの方法・由来は確定していない。",
+    "based_on_source_ids": ["SRC-CHI-001"]
   },
-  "tags": ["いぼとり", "いぼ", "神", "仏", "総寧寺", "真間", "病気平癒", "願掛け"],
-  "summary": "千葉県立図書館の市川市民話索引に『いぼとりの神・仏』として登録されている伝承。出典は平野馨編著『房総の伝説』（第一法規、1976年）で、索引上の市川市における地域根拠は『市川市真間（地名）・総寧寺（建造物）』とされる。現段階では原典本文を直接確認できていないため、総寧寺にどの神仏が祀られ、どのような願掛け・治癒方法・由来が語られるのかは確定しない。",
-  "classification_note": "千葉県立図書館の公式索引では、本題名は市川市だけでなく、君津市・睦沢町などにも同じ題名で掲載されているため、題名だけで同一伝承とみなさない。市川市分については、索引が明示する『真間・総寧寺』を現時点の対象地点として保持する。また、市川市内には大野町迎米のいぼとり地蔵、香取の源心寺のいぼとり地蔵・不動、市川の地蔵山墓地のいぼとり地蔵など別系統のいぼ取り信仰が確認できるが、これらを本題名と同一伝承とは断定しない。",
-  "claims": [
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": null,
+    "municipality": "市川市",
+    "area_name": "真間",
+    "source_description": "千葉県立図書館の市川市民話索引では『市川市真間（地名）総寧寺（建造物）』を地域根拠として掲載。"
+  },
+  "locations": [
     {
-      "claim_id": "claim-001",
-      "text": "千葉県立図書館の市川市民話索引には『いぼとりの神・仏』が掲載され、出典は平野馨編著『房総の伝説』（第一法規、1976年）、資料上の地域は房総、地域根拠は市川市真間（地名）・総寧寺（建造物）とされている。",
-      "source_ids": ["SRC-CHI-001"],
-      "interpretation": false
+      "name": "真間",
+      "location_type": "place",
+      "description": "索引が本題の地域根拠として示す市川市真間。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001"]
     },
     {
-      "claim_id": "claim-002",
-      "text": "国立国会図書館の書誌情報によれば、『房総の伝説』は平野馨編著、第一法規出版、1976年刊、177ページの資料である。",
-      "source_ids": ["SRC-NDL-001"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-003",
-      "text": "市川市公式サイトは大野町迎米の地蔵を『いぼとり地蔵』として紹介し、いぼができた際に塩を供えると治るといわれていると記している。",
-      "source_ids": ["SRC-ICHIKAWA-001"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-004",
-      "text": "市川市香取の源心寺には古くから『いぼとり』のご利益があるとされる地蔵があり、いぼが取れたお礼に飴を供える慣わしがあると市川市公式デジタルミュージアムが紹介している。",
-      "source_ids": ["SRC-ICHIKAWA-DM-001"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-005",
-      "text": "市川市内には複数のいぼ取り信仰が確認できるが、現段階では大野町迎米のいぼとり地蔵、香取・源心寺のいぼとり地蔵、市川1丁目地蔵山墓地のいぼとり地蔵を『いぼとりの神・仏』と同一伝承とは判定しない。",
-      "source_ids": ["SRC-ICHIKAWA-001", "SRC-ICHIKAWA-DM-001", "SRC-HIRAMATSU-001"],
-      "interpretation": true
-    },
-    {
-      "claim_id": "claim-006",
-      "text": "同じ『いぼとりの神・仏』という題名は、千葉県立図書館の別自治体索引でも確認されており、君津市・睦沢町などでは別の地域根拠が付されている。したがって、市川市の伝承を他地域の同題伝承と本文確認前に統合してはならない。",
-      "source_ids": ["SRC-KIMITSU-001", "SRC-MUTSUZAWA-001"],
-      "interpretation": false
+      "name": "総寧寺",
+      "location_type": "temple",
+      "description": "索引が本題の建造物根拠として示す寺院。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "approximate",
+      "source_ids": ["SRC-CHI-001"]
     }
   ],
-  "related_traditions": [
-    {
-      "relationship": "same_theme_candidate",
-      "tradition": "大野町迎米のいぼとり地蔵",
-      "reason": "市川市内のいぼ取り信仰として確認できるが、千葉県立図書館索引が本題名の地域根拠として示す総寧寺とは別地点。原典本文を確認するまでは同一話・異伝の判定を行わない。"
-    },
-    {
-      "relationship": "same_theme_candidate",
-      "tradition": "源心寺のいぼとり地蔵",
-      "reason": "市川市香取に伝わるいぼ取り信仰。総寧寺とは別地点であり、本題名との関係は本文照合が必要。"
-    },
-    {
-      "relationship": "same_theme_candidate",
-      "tradition": "市川1丁目・地蔵山墓地のいぼとり地蔵",
-      "reason": "市川市内の別のいぼ取り地蔵として確認されるため関連候補として保持するが、本題名との同一性は未確定。"
-    }
-  ],
-  "research_missing": [
-    "平野馨編著『房総の伝説』（1976年）の『いぼとりの神・仏』本文・掲載頁を直接確認する必要がある。",
-    "総寧寺に関する本題の神仏名、由来、願掛け方法、いぼが治った場合の返礼などを原典本文から確認する必要がある。",
-    "『真間』という地名根拠と『総寧寺』という建造物根拠が、同一伝承の伝承地としてどう結び付くかを原典および地域資料で確認する必要がある。",
-    "市川市内の他のいぼ取り信仰（迎米、源心寺、市川1丁目など）が本題の異伝・類話として関係するか、本文照合によって精査する必要がある。",
-    "君津市・睦沢町などにある同題伝承との関係は、各原典本文を確認するまでは同一話と判断しない。"
-  ],
+  "characters": [],
+  "beings": [],
+  "themes": ["いぼ", "病気平癒", "願掛け", "神仏", "寺社信仰"],
+  "story_type": ["信仰伝承", "寺社伝承", "民間療法伝承"],
+  "related_records": [],
   "sources": [
     {
       "source_id": "SRC-CHI-001",
       "title": "千葉県の民話　市川市",
-      "author_or_publisher": "千葉県立図書館",
-      "publication_year_or_date": "2026年閲覧",
-      "source_type": "library_index",
-      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
       "accessed_date": "2026-09-04",
-      "reliability_notes": "市川市の民話・伝承資料を市町村別に索引化した千葉県立図書館の公式資料。対象話の題名、出典、刊年、地域根拠を確認。"
+      "relevant_section": "いぼとりの神・仏／房総の伝説／市川市真間・総寧寺",
+      "language": "ja"
     },
     {
       "source_id": "SRC-NDL-001",
       "title": "房総の伝説",
-      "author_or_publisher": "平野馨 編著／第一法規出版",
-      "publication_year_or_date": "1976年",
-      "source_type": "bibliographic_record",
-      "url_or_identifier": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001265384",
+      "publisher": "第一法規出版",
+      "author": "平野馨 編著",
+      "publication_date": "1976年",
+      "source_type": "book",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000001265384",
       "accessed_date": "2026-09-04",
-      "reliability_notes": "国立国会図書館の書誌情報。原典本文そのものではなく、書誌確認に使用。"
+      "relevant_section": "いぼとりの神・仏",
+      "language": "ja"
     },
     {
       "source_id": "SRC-ICHIKAWA-001",
       "title": "大町・大野町界隈",
-      "author_or_publisher": "市川市",
-      "publication_year_or_date": "2026年閲覧",
-      "source_type": "official_archive",
-      "url_or_identifier": "https://www.city.ichikawa.lg.jp/page/4333.html",
+      "publisher": "市川市",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "government",
+      "url": "https://www.city.ichikawa.lg.jp/page/4333.html",
       "accessed_date": "2026-09-04",
-      "reliability_notes": "市川市公式サイト。大野町迎米のいぼとり地蔵と、その信仰方法を確認。"
+      "relevant_section": "大野町迎米のいぼとり地蔵",
+      "language": "ja"
     },
     {
       "source_id": "SRC-ICHIKAWA-DM-001",
       "title": "源心寺のいぼとり地蔵",
-      "author_or_publisher": "いちかわデジタルミュージアム／市川市",
-      "publication_year_or_date": "2026年閲覧",
-      "source_type": "official_archive",
-      "url_or_identifier": "https://ichikawa-digitalmuseum.com/works/genshinji-no-ibotorijizou/",
+      "publisher": "いちかわデジタルミュージアム／市川市",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "museum",
+      "url": "https://ichikawa-digitalmuseum.com/works/genshinji-no-ibotorijizou/",
       "accessed_date": "2026-09-04",
-      "reliability_notes": "市川市公式デジタルミュージアム。源心寺のいぼとり地蔵の信仰と作品情報を確認。"
-    },
-    {
-      "source_id": "SRC-HIRAMATSU-001",
-      "title": "いぼとり神様・仏様全国リスト（1）",
-      "author_or_publisher": "平松皮膚科医院",
-      "publication_year_or_date": "2020年更新情報を含む",
-      "source_type": "secondary_source",
-      "url_or_identifier": "https://hiramatu-hifuka.com/iboibo/ibozen1.html",
-      "accessed_date": "2026-09-04",
-      "reliability_notes": "全国のいぼ取り信仰を収集した二次資料。市川市内の複数地点を関連候補として確認するために使用し、伝承の同一性判定には単独で用いない。"
-    },
-    {
-      "source_id": "SRC-KIMITSU-001",
-      "title": "千葉県の民話　君津市",
-      "author_or_publisher": "千葉県立図書館",
-      "publication_year_or_date": "2026年閲覧",
-      "source_type": "library_index",
-      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/kimitsu.html",
-      "accessed_date": "2026-09-04",
-      "reliability_notes": "同題『いぼとりの神・仏』が君津市索引にも存在することを確認。地域根拠が市川市とは異なるため、重複統合しない判断材料。"
-    },
-    {
-      "source_id": "SRC-MUTSUZAWA-001",
-      "title": "千葉県の民話　睦沢町",
-      "author_or_publisher": "千葉県立図書館",
-      "publication_year_or_date": "2026年閲覧",
-      "source_type": "library_index",
-      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/mutsuzawa.html",
-      "accessed_date": "2026-09-04",
-      "reliability_notes": "同題『いぼとりの神・仏』が睦沢町索引にも存在し、長生郡睦沢村川島が地域根拠とされることを確認。"
+      "relevant_section": "源心寺のいぼとり地蔵",
+      "language": "ja"
     }
   ],
-  "research_notes": "CHB-000237としてresearching登録。千葉県立図書館の市川市索引は、本題を『房総の伝説』（1976）所収、地域根拠を『市川市真間（地名）総寧寺（建造物）』としている。一方、市川市内には複数の別個のいぼ取り信仰が現在も確認できるため、題名だけでそれらを本題に統合しない。さらに同じ題名が君津市・睦沢町の索引にも掲載されることから、各地域の同題伝承を横断的に同一視しない。次段階では『房総の伝説』本文の直接確認を最優先し、総寧寺で祀られる対象、願掛けの作法、伝承の由来と、真間との位置・地名関係を確定する。",
-  "verification_locations": [
-    "市川市真間",
-    "総寧寺（市川市国府台）"
-  ],
-  "created_date": "2026-09-04"
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": false,
+    "translation_used": false,
+    "notes": "市川市内の他のいぼ取り信仰は関連候補として確認したが、総寧寺の本題と同一伝承とは統合していない。同じ題名の君津市・睦沢町の伝承も別地域のため統合しない。"
+  },
+  "confidence": "medium",
+  "research_status": "researching",
+  "research_notes": "原典『房総の伝説』の本文確認を最優先とする。総寧寺で祀られる神仏、願掛け方法、いぼが治った際の返礼、真間との関係を本文から確定する。"
 }
