@@ -22,11 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+/**
+ * オカルトニュースのカテゴリ体系（固定10種）。AI自動分類・手動分類の
+ * どちらでもこの配列を唯一の正としてvalidateする — 別名・追加カテゴリを
+ * 増やさない（指示書「オカルトニュースのカテゴリ自動分類」§2）。
+ */
 function hatakiti_occult_category_terms() {
     return array(
-        'UFO', 'UMA', '幽霊', '心霊', '妖怪', '都市伝説', '未解決事件',
-        '超常現象', 'オーパーツ', '古代文明', '陰謀論', '超能力', '宗教',
-        '呪術', '予言', '科学と超常', 'その他',
+        'UMA・未確認生物', 'UFO・宇宙', '心霊・怪談', '超常現象', '古代・歴史',
+        '民俗・呪術', '科学・人体', '事件・ミステリー', '予言・終末', 'その他',
     );
 }
 
@@ -113,21 +117,38 @@ function hatakiti_register_occult_taxonomy() {
             'new_item_name' => '新規カテゴリ名',
             'menu_name'     => 'カテゴリ',
         ),
-        'hierarchical'      => false,
+        // hierarchical=true -> checkbox UI (fixed list), not a free-text
+        // tag box — the category set is a closed set of 10 (指示書
+        // 「オカルトニュースのカテゴリ自動分類」§2), so manual editing
+        // should not be able to introduce ad-hoc variants either.
+        'hierarchical'      => true,
         'public'            => false,
         'show_ui'           => true,
         'show_admin_column' => true,
         'show_in_rest'      => false,
-        // Fixed-ish starter list, but not locked — plain default tag box
-        // so new categories can always be typed in (指示書 §9).
     ) );
 }
 add_action( 'init', 'hatakiti_register_occult_taxonomy' );
 
+/**
+ * 固定10カテゴリを投入し、それ以外の未使用（count=0）タームは削除する
+ * — 冪等（何度呼んでも安全）。使用中（count>0）のタームは絶対に削除
+ * しない。
+ */
 function hatakiti_seed_occult_category_terms() {
-    foreach ( hatakiti_occult_category_terms() as $term ) {
+    $valid = hatakiti_occult_category_terms();
+    foreach ( $valid as $term ) {
         if ( ! term_exists( $term, 'occult_category' ) ) {
             wp_insert_term( $term, 'occult_category' );
+        }
+    }
+
+    $existing = get_terms( array( 'taxonomy' => 'occult_category', 'hide_empty' => false ) );
+    if ( ! is_wp_error( $existing ) ) {
+        foreach ( $existing as $term ) {
+            if ( ! in_array( $term->name, $valid, true ) && 0 === (int) $term->count ) {
+                wp_delete_term( $term->term_id, 'occult_category' );
+            }
         }
     }
 }
@@ -201,3 +222,50 @@ function hatakiti_order_occult_weekly_archive( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'hatakiti_order_occult_weekly_archive' );
+
+/**
+ * 管理画面「ニュース一覧」にカテゴリ絞り込みドロップダウンを追加。
+ */
+function hatakiti_occult_news_item_category_filter() {
+    global $typenow;
+    if ( 'occult_news_item' !== $typenow ) {
+        return;
+    }
+    $selected = isset( $_GET['occult_category'] ) ? sanitize_text_field( wp_unslash( $_GET['occult_category'] ) ) : '';
+    $terms    = get_terms( array( 'taxonomy' => 'occult_category', 'hide_empty' => false ) );
+    if ( is_wp_error( $terms ) || ! $terms ) {
+        return;
+    }
+    ?>
+    <select name="occult_category">
+        <option value=""><?php esc_html_e( 'すべてのカテゴリ', 'hatakiti' ); ?></option>
+        <?php foreach ( $terms as $term ) : ?>
+            <option value="<?php echo esc_attr( $term->slug ); ?>"<?php selected( $selected, $term->slug ); ?>><?php echo esc_html( $term->name ); ?> (<?php echo (int) $term->count; ?>)</option>
+        <?php endforeach; ?>
+    </select>
+    <?php
+}
+add_action( 'restrict_manage_posts', 'hatakiti_occult_news_item_category_filter' );
+
+/**
+ * occult_categoryはpublic=falseのため、上のドロップダウンのGETパラメータ
+ * だけでは自動的に絞り込まれない — 管理一覧のクエリに明示的に反映する。
+ */
+function hatakiti_occult_news_item_category_filter_query( $query ) {
+    if ( ! is_admin() || ! $query->is_main_query() ) {
+        return;
+    }
+    global $typenow, $pagenow;
+    if ( 'occult_news_item' !== $typenow || 'edit.php' !== $pagenow ) {
+        return;
+    }
+    if ( empty( $_GET['occult_category'] ) ) {
+        return;
+    }
+    $query->set( 'tax_query', array( array(
+        'taxonomy' => 'occult_category',
+        'field'    => 'slug',
+        'terms'    => sanitize_text_field( wp_unslash( $_GET['occult_category'] ) ),
+    ) ) );
+}
+add_action( 'pre_get_posts', 'hatakiti_occult_news_item_category_filter_query' );

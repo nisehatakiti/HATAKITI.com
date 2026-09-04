@@ -77,6 +77,19 @@ function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
     }
     $items_text = implode( "\n\n---\n\n", $lines );
 
+    $category_guide = <<<CATS
+- UMA・未確認生物: 未確認生物、怪物、謎の生物、未知の動物など
+- UFO・宇宙: UFO、UAP、宇宙人、異星人、宇宙現象、地球外生命など
+- 心霊・怪談: 幽霊、霊、心霊現象、怪談、怪奇現象、呪われた場所など
+- 超常現象: 発光現象、念力、テレパシー、時間・空間異常など説明困難な現象（UMA/UFO/心霊など明確に別カテゴリに該当する場合はそちらを優先）
+- 古代・歴史: 古文書、古代文明、歴史上の謎、遺跡、過去の記録など
+- 民俗・呪術: 民間伝承、風習、呪術、祭祀、まじない、民話など
+- 科学・人体: 科学、医学、人体、脳、心理、生物学など（オカルト的話題でも記事の中心が科学・人体研究の場合はこちら）
+- 事件・ミステリー: 未解決事件、失踪、謎の死亡、犯罪、不可解な事件など
+- 予言・終末: 予言、未来予知、終末論、世界滅亡、災害予言など
+- その他: 上記のどれにも明確に分類できないもの
+CATS;
+
     $system = <<<SYS
 あなたは「週刊オカルト新聞」（HATAKITI.com）のAI編集者です。複数の情報源から集まった1週間分のオカルト関連ニュースを分析し、クラスタリング・重要度判定・新聞記事としての執筆を行います。
 
@@ -125,6 +138,11 @@ function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
 - id は下記に与えられたものだけを使い、絶対に新しいidを作らないでください。
 - 1つの記事が複数の元ニュース（同一事件の複数ソース）を統合した場合、その全てのidを含めてください。
 
+【カテゴリ分類】
+各記事に、次の10カテゴリのうち最も近いもの1つを category として付けてください（複数選択・新規カテゴリの作成は不可、必ず下記の表記のまま使用）。
+{$category_guide}
+分類に迷った場合は、無理に複数カテゴリを付けず、記事の主題に最も近い1カテゴリを選んでください。
+
 【出力形式】
 説明文やMarkdownのコードフェンスを一切付けず、以下の構造のJSONオブジェクトのみを出力してください。
 
@@ -135,6 +153,7 @@ function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
     {
       "headline": "記事の見出し",
       "importance": "headline または major または minor",
+      "category": "超常現象",
       "body": "記事本文",
       "source_item_ids": [123, 456]
     }
@@ -196,15 +215,23 @@ function hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start,
         );
     }
 
-    $groups   = array();
-    $used_ids = array();
-    $order    = 0;
+    $groups            = array();
+    $used_ids          = array();
+    $order             = 0;
+    $valid_categories  = hatakiti_occult_category_terms();
 
     foreach ( $data['articles'] as $article ) {
         $importance = isset( $article['importance'] ) ? (string) $article['importance'] : 'minor';
         $tier       = hatakiti_occult_ai_importance_to_tier( $importance );
         $headline   = isset( $article['headline'] ) ? sanitize_text_field( $article['headline'] ) : '';
         $body       = isset( $article['body'] ) ? wp_kses_post( $article['body'] ) : '';
+
+        // カテゴリはニュース本文の生成・保存を一切左右しない — 欠落・
+        // 不正な値は静かに「その他」へフォールバックする（週刊新聞の
+        // 発行自体をカテゴリ分類の失敗で止めない、という方針）。
+        $category = isset( $article['category'] ) && in_array( $article['category'], $valid_categories, true )
+            ? $article['category']
+            : 'その他';
 
         $source_ids = array();
         foreach ( (array) ( isset( $article['source_item_ids'] ) ? $article['source_item_ids'] : array() ) as $sid ) {
@@ -232,6 +259,15 @@ function hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start,
             'news_item_ids' => $source_ids,
         );
         $used_ids = array_merge( $used_ids, $source_ids );
+
+        // カテゴリはoccult_weekly側のarticles_json（本文JSON）には一切
+        // 持たせず、occult_news_item側のtaxonomyへの割り当てだけで完結
+        // させる — 過去に発生した本文消失問題の経路（articles_json全体
+        // の再構築・保存）に一切触れないため。失敗しても記事生成・保存
+        // 自体には影響しない。
+        foreach ( $source_ids as $sid ) {
+            wp_set_object_terms( $sid, $category, 'occult_category' );
+        }
     }
 
     if ( empty( $groups ) ) {

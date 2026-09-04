@@ -38,6 +38,7 @@ require_once HATAKITI_CORE_DIR . 'includes/occult-cpt.php';
 require_once HATAKITI_CORE_DIR . 'includes/occult-meta-boxes.php';
 require_once HATAKITI_CORE_DIR . 'includes/occult-rss-fetch.php';
 require_once HATAKITI_CORE_DIR . 'includes/occult-source-fetch.php';
+require_once HATAKITI_CORE_DIR . 'includes/occult-news-category-classify.php';
 require_once HATAKITI_CORE_DIR . 'includes/meta-boxes.php';
 require_once HATAKITI_CORE_DIR . 'includes/admin-forms.php';
 require_once HATAKITI_CORE_DIR . 'includes/admin-form-activity.php';
