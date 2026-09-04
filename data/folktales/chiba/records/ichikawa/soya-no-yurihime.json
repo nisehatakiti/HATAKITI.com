@@ -1,0 +1,28 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-soya-no-yurihime",
+  "status":"draft",
+  "title":"曽谷の百合姫",
+  "title_normalized":"曽谷の百合姫",
+  "title_origin":"source_title",
+  "summary":{"text":"曽谷城の落城に際し、曽谷氏の娘・百合姫が池に身を投げたと伝える、市川市曽谷の落城悲話。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-CITY-YURIHIME","SRC-ICHIKAWA-MINWA-2025"]},
+  "story_summary":"室町時代、曽谷の地を治めていた曽谷一族が一族内の争いに巻き込まれ、曽谷城が落城した。その際、城主の娘とされる百合姫が悲しみのあまり池に身を投げたと伝えられている。",
+  "story_content":"曽谷に館を構えていた曽谷氏は、千葉氏の一族が二つに分かれて戦った争いに巻き込まれた。曽谷城が落城する中、曽谷左衛門丞直繁の娘とされる百合姫は、父から館を逃れて生きのびるよう命じられたとも、敵方についた婚約者を知って悲しみ、池に身を投げたとも伝えられている。池は現在の弁天池で、かつてはじゅんさい池と呼ばれていた。百合姫の入水を伝える落城悲話として、曽谷の地に語り継がれている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"曽谷","source_description":"千葉県立図書館の市川市民話索引、市川市公式文化案内、市川民話の会による伝承紹介で曽谷の伝承として確認。"},
+  "locations":[{"name":"曽谷城跡","type":"伝承地","description":"曽谷一族の館・城があったとされ、百合姫伝説の舞台となる場所。","source_ids":["SRC-ICHIKAWA-CITY-YURIHIME"]},{"name":"弁天池","type":"池","description":"曽谷城落城の際、百合姫が身を投げたと伝えられる池。かつてはじゅんさい池と呼ばれた。","source_ids":["SRC-ICHIKAWA-CITY-YURIHIME","SRC-ICHIKAWA-MINWA-2025"]}],
+  "characters":[{"name":"百合姫","role":"主人公","attributes":["曽谷氏の娘と伝えられる","落城の際に池へ身を投げたと伝えられる"],"source_ids":["SRC-ICHIKAWA-CITY-YURIHIME","SRC-ICHIKAWA-MINWA-2025"]},{"name":"曽谷左衛門丞直繁","role":"百合姫の父と伝えられる人物","attributes":["曽谷氏の武将","市川合戦で討死したとされる"],"source_ids":["SRC-ICHIKAWA-CITY-HISTORY-2020"]}],
+  "beings":[],
+  "themes":["曽谷城","落城","百合姫","入水","悲話","千葉氏","曽谷"],
+  "story_type":["落城伝説","人物伝承","悲話"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"曽谷の百合姫／曽谷の百合姫／すがの会／2007年／市川市曽谷","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-CITY-YURIHIME","title":"曽谷・宮久保界隈","publisher":"市川市","author":null,"publication_date":"web","source_type":"municipal_web","url":"https://www.city.ichikawa.lg.jp/page/6739.html","accessed_date":"2026-09-04","relevant_section":"（4）弁天池／曽谷城落城と百合姫の入水伝承","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-CITY-HISTORY-2020","title":"令和元年度 広報いちかわ 2月1日号 連載","publisher":"市川市","author":"市川市歴史博物館 山岸未来","publication_date":"2020-02-01","source_type":"municipal_web","url":"https://www.city.ichikawa.lg.jp/site/kohoichikawa/5897.html","accessed_date":"2026-09-04","relevant_section":"康正2年の市川合戦と曽谷氏／百合姫の父","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-MINWA-2025","title":"じゅん菜池周辺の池や水神にまつわる伝承","publisher":"ichikawa-hakkenden","author":"根岸英之","publication_date":"2025-07-05","source_type":"local_history_web","url":"https://ichikawahakkenden.jimdofree.com/20250705/","accessed_date":"2026-09-04","relevant_section":"曽谷の「池端弁財天」と百合姫／『市川の伝承民話』1992 百合台（2）－百合姫","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"市川市公式案内で確認できる曽谷城落城・弁天池入水伝承を中心に記録。市川民話の会系資料には、百合姫が父から逃げるよう命じられたことや、敵方についた婚約者を知って入水したという筋があるため、断定せず『とも伝えられる』として併記した。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"市川市公式ページは、室町時代の千葉一族の争いで曽谷城が落城し、百合姫が弁天池に身を投げたと伝える。市川市公式広報は、百合姫の父を曽谷直繁とする昔話の内容を紹介。2025年の地域資料では、敵方についた婚約者を知って入水したという口承と、『市川の伝承民話』1992の出典が確認できる。" 
+}
