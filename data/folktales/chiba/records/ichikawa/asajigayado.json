@@ -1,52 +1,156 @@
 {
   "schema_version": "1.0",
   "record_id": "chiba-ichikawa-asajigayado",
-  "municipality": "市川市",
+  "status": "draft",
   "title": "浅茅が宿",
-  "reading": "あさじがやど",
-  "research_status": "deep_researched",
-  "source_status": "deep_researched",
+  "title_normalized": "浅茅が宿",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "上田秋成『雨月物語』所収の怪異譚。下総国葛飾郡真間郷の勝四郎は、家を再興するため妻の宮木を残して京都へ商売に出る。関東の戦乱などにより帰郷できないまま七年が過ぎ、帰郷した勝四郎は荒れ果てた旧宅で生きているような宮木と一夜を過ごす。しかし翌朝、宮木はすでに亡くなっていたことが判明する。物語の終盤では、宮木の死を語る老人が古代の真間の手児女（手児奈）の伝承を語り、勝四郎の悲嘆と重ね合わせる。",
+    "based_on_source_ids": ["SRC-UGETSU-001", "SRC-CHI-001"]
+  },
+  "story_summary": "上田秋成『雨月物語』の「浅茅が宿」は、下総国真間を舞台に、戦乱のため七年間帰れなかった男・勝四郎が、故郷で亡き妻・宮木の姿に出会う怪異譚である。終盤では真間の手児奈伝承が語られ、宮木の悲劇と重ね合わされる。",
+  "story_content": "下総国葛飾郡真間郷に住む勝四郎は、家を再興するため妻の宮木を残して京都へ商売に出る。ところが関東の戦乱などによって帰郷できないまま七年が過ぎる。ようやく真間へ戻った勝四郎は、荒れ果てた旧宅で宮木と再会し、一夜をともに過ごす。しかし翌朝になると家は廃墟のようになっており、近隣の老人から、宮木は戦乱の中ですでに亡くなり埋葬されていたことを知らされる。物語の終盤では、老人が古代の真間の手児女（手児奈）の伝承を語り、勝四郎と宮木の悲劇を真間に伝わる古い女性の悲劇と重ね合わせる。なお本作は中国明代の『剪燈新話』「愛卿伝」、浅井了意『伽婢子』の関連話などを踏まえて成立した文学作品であり、市川・真間の口承民話そのものと単純に同一視すべきではない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "真間",
+    "source_description": "千葉県立図書館の市川市民話索引では市川市真間を地域根拠として掲載。作品本文では下総国葛飾郡真間郷が舞台。"
+  },
+  "locations": [
+    {
+      "name": "真間",
+      "location_type": "place",
+      "description": "作品冒頭から舞台として示される下総国葛飾郡真間郷。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-UGETSU-001", "SRC-CHI-001"]
+    },
+    {
+      "name": "継橋",
+      "location_type": "place",
+      "description": "真間に結びつく地名として作品中に登場する。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "unknown",
+      "source_ids": ["SRC-UGETSU-001"]
+    }
+  ],
+  "characters": [
+    {
+      "name": "勝四郎",
+      "role": "主人公・商人",
+      "attributes": ["真間の住人"],
+      "source_ids": ["SRC-UGETSU-001"]
+    },
+    {
+      "name": "宮木",
+      "role": "勝四郎の妻・怪異として現れる死者",
+      "attributes": ["戦乱で死亡"],
+      "source_ids": ["SRC-UGETSU-001"]
+    },
+    {
+      "name": "近隣の老人",
+      "role": "宮木の死を勝四郎に伝える人物",
+      "attributes": [],
+      "source_ids": ["SRC-UGETSU-001"]
+    }
+  ],
+  "beings": [
+    {
+      "name": "宮木の幽霊",
+      "normalized_name": "幽霊",
+      "type": "ghost",
+      "attributes": ["死者", "怪異"],
+      "source_ids": ["SRC-UGETSU-001"]
+    }
+  ],
+  "themes": ["幽霊", "死者", "夫婦", "戦乱", "真間", "手児奈", "地域文学"],
   "story_type": ["文学作品", "怪異譚", "地域伝承再構成"],
-  "location": {"modern": "千葉県市川市真間", "historical": "下総国葛飾郡真間郷"},
-  "tags": ["真間", "手児奈", "手児女", "雨月物語", "上田秋成", "幽霊", "夫婦", "戦乱", "廃屋", "継橋", "死者", "地域文学"],
-  "summary": "上田秋成『雨月物語』所収の怪異譚。下総国葛飾郡真間郷の勝四郎は、家を再興するため妻の宮木を残して京都へ商売に出る。関東の戦乱などにより帰郷できないまま七年が過ぎ、帰郷した勝四郎は荒れ果てた旧宅で生きているような宮木と一夜を過ごす。しかし翌朝、宮木はすでに亡くなっていたことが判明する。物語の終盤では、宮木の死を語る老人が古代の真間の手児女（手児奈）の伝承を語り、勝四郎の悲嘆と重ね合わせる。",
-  "classification_note": "千葉県立図書館の市川市民話索引には市川市真間の伝承資料として収録されている一方、市川市は『浅茅が宿』を江戸時代の市川を描く文学作品・旅行文学として扱っている。本レコードでは、口承民話そのものと断定せず、真間の地域伝承を文学作品として再構成した事例として分類する。",
-  "literary_genealogy": [
-    {"stage": "中国文学", "work": "剪燈新話『愛卿伝』", "relationship": "『浅茅が宿』の主要な先行作品として研究上位置づけられている。"},
-    {"stage": "日本文学", "work": "浅井了意『伽婢子』「藤井清六遊女宮城野を娶事」", "relationship": "『愛卿伝』を日本化した先行作品。"},
-    {"stage": "日本文学", "work": "上田秋成『雨月物語』「浅茅が宿」", "relationship": "真間を舞台に置き、手児女（手児奈）伝説などを組み込み再構成した作品。"}
-  ],
-  "claims": [
-    {"claim_id": "claim-001", "text": "千葉県立図書館の市川市民話索引には「浅茅が宿」が収録され、出典は『房総の伝説』（第一法規、1976年）、地域は市川市真間とされている。", "source_ids": ["SRC-CHI-001"], "interpretation": false},
-    {"claim_id": "claim-002", "text": "『浅茅が宿』本文は「下総の国葛飾郡真間の郷」を舞台として始まり、主人公は勝四郎、妻は宮木である。", "source_ids": ["SRC-UGETSU-001"], "interpretation": false},
-    {"claim_id": "claim-003", "text": "勝四郎は家を再興するため宮木を真間に残して京都へ商売に出るが、関東の戦乱や交通上の事情などにより帰郷できず、七年後に真間へ戻る。", "source_ids": ["SRC-UGETSU-001"], "interpretation": false},
-    {"claim_id": "claim-004", "text": "帰郷した勝四郎は荒れた旧宅で宮木と一夜を過ごすが、翌朝には家が廃墟となっており、宮木がすでに死んでいたことを知る。", "source_ids": ["SRC-UGETSU-001"], "interpretation": false},
-    {"claim_id": "claim-005", "text": "宮木の死について、近隣の老人は彼女を埋葬したと語り、宮木が戦乱の中で亡くなったことを伝える。", "source_ids": ["SRC-UGETSU-001"], "interpretation": false},
-    {"claim_id": "claim-006", "text": "物語終盤では、老人が古代の真間の手児女（手児奈）の伝承を語り、宮木と勝四郎の悲劇を真間に伝わる古い女性の悲劇と重ね合わせる構成になっている。", "source_ids": ["SRC-UGETSU-001", "SRC-ICHIKAWA-001"], "interpretation": false},
-    {"claim_id": "claim-007", "text": "市川市は『浅茅が宿』を、江戸時代の市川・真間を描く文学作品として紹介し、市川における旅行文学・地域文学の一例として位置づけている。", "source_ids": ["SRC-ICHIKAWA-001", "SRC-ICHIKAWA-002"], "interpretation": false},
-    {"claim_id": "claim-008", "text": "研究論文では、作品冒頭から下総・真間などの地名が詳細に用いられ、地名そのものが物語構成上重要な役割を持つと論じられている。", "source_ids": ["SRC-MURASE-001"], "interpretation": true},
-    {"claim_id": "claim-009", "text": "『浅茅が宿』の文学的系譜として、中国明代の『剪燈新話』「愛卿伝」から『伽婢子』「藤井清六遊女宮城野を娶事」を経て『雨月物語』「浅茅が宿」へ至る関係が確認されている。", "source_ids": ["SRC-AKINARI-001", "SRC-MORITA-001"], "interpretation": false},
-    {"claim_id": "claim-010", "text": "『浅茅が宿』には『万葉集』の真間の手児奈に関する歌など、真間に結びつく古い文学・伝承の要素が組み込まれている。", "source_ids": ["SRC-UGETSU-001", "SRC-AOKI-001"], "interpretation": false},
-    {"claim_id": "claim-011", "text": "本作品は、口承された市川の民話として単純に扱うよりも、既存の真間の手児奈伝承・地名・古典文学・中国説話を上田秋成が結合して成立させた地域文学・怪異譚として扱うのが妥当である。", "source_ids": ["SRC-CHI-001", "SRC-ICHIKAWA-001", "SRC-MURASE-001", "SRC-AKINARI-001"], "interpretation": true}
-  ],
-  "related_traditions": [
-    {"relationship": "directly_embedded", "tradition": "真間の手児奈（手児女）", "reason": "物語終盤で老人が手児女の伝承を語り、宮木・勝四郎の悲劇と重ね合わせる。"},
-    {"relationship": "related_local_literature", "tradition": "真間・手児奈伝承群", "reason": "真間を歌枕・伝承地として扱う古代からの文学的蓄積と結びつく。"}
-  ],
-  "research_missing": [
-    "千葉県立図書館索引が出典として挙げる『房総の伝説』（第一法規、1976年）の「浅茅が宿」掲載本文そのものは未確認。",
-    "『浅茅が宿』が市川地域で口承民話として伝承された経路と、近現代の地域文化としての受容については追加調査余地あり。",
-    "真間の手児奈伝承と『浅茅が宿』の受容史について、地域史資料・郷土資料を追加確認するとより詳細な関係を記録できる。"
-  ],
+  "related_records": [],
   "sources": [
-    {"source_id": "SRC-CHI-001", "title": "千葉県の民話　市川市", "author_or_publisher": "千葉県立図書館", "publication_year_or_date": "2026年閲覧", "source_type": "library_index", "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html", "accessed_date": "2026-09-04", "reliability_notes": "千葉県立図書館が市町村別に民話資料を索引化した公式資料。『浅茅が宿』の収録書誌と市川市真間への地域付与を確認するために使用。"},
-    {"source_id": "SRC-ICHIKAWA-001", "title": "市川市文学ミュージアム関連資料・市川文学の紹介", "author_or_publisher": "市川市", "publication_year_or_date": "2026年閲覧", "source_type": "official_archive", "url_or_identifier": "https://www.city.ichikawa.lg.jp/site/litera/1662.html", "accessed_date": "2026-09-04", "reliability_notes": "市川市公式サイト。『浅茅が宿』を市川・真間を描く文学作品として紹介している。"},
-    {"source_id": "SRC-ICHIKAWA-002", "title": "市川市立図書館　文学・地域資料案内", "author_or_publisher": "市川市立図書館", "publication_year_or_date": "2026年閲覧", "source_type": "official_archive", "url_or_identifier": "https://www.city.ichikawa.lg.jp/site/library/8088.html", "accessed_date": "2026-09-04", "reliability_notes": "市川市公式図書館資料。『浅茅が宿』を市川の旅行文学として位置づける説明を確認。"},
-    {"source_id": "SRC-UGETSU-001", "title": "雨月物語「浅茅が宿」本文", "author_or_publisher": "上田秋成", "publication_year_or_date": "1776年", "source_type": "primary_document", "url_or_identifier": "https://www.koten.net/ugetsu/gen/210/", "accessed_date": "2026-09-04", "reliability_notes": "公開された古典本文。人物、舞台、筋、宮木の死、手児女伝承への接続を確認するために使用。"},
-    {"source_id": "SRC-MURASE-001", "title": "「浅茅が宿」論—方法としての地名—", "author_or_publisher": "村瀬木綿子", "publication_year_or_date": "2017年", "source_type": "academic_work", "url_or_identifier": "https://iuk-repo.repo.nii.ac.jp/record/913/files/13459929_v18-3_Y.Murase.pdf", "accessed_date": "2026-09-04", "reliability_notes": "国際文化学部論集掲載論文。作品における地名・下総・真間の機能を検討する研究資料。"},
-    {"source_id": "SRC-MORITA-001", "title": "「愛卿伝」から「浅茅が宿」へ--上田秋成の創作", "author_or_publisher": "森田喜郎", "publication_year_or_date": "2004年", "source_type": "academic_work", "url_or_identifier": "https://ndlsearch.ndl.go.jp/books/R000000004-I6897912", "accessed_date": "2026-09-04", "reliability_notes": "『弘学大語文』30掲載論文。『愛卿伝』から『浅茅が宿』への創作上の関係を確認するために使用。"},
-    {"source_id": "SRC-AKINARI-001", "title": "上田秋成研究事典", "author_or_publisher": "笠間書院", "publication_year_or_date": "2026年閲覧", "source_type": "academic_work", "url_or_identifier": "https://www.kasama-shoin.co.jp/", "accessed_date": "2026-09-04", "reliability_notes": "『浅茅が宿』の先行資料として『愛卿伝』を挙げる研究事典の書誌情報を確認。"},
-    {"source_id": "SRC-AOKI-001", "title": "『雨月物語』「浅茅が宿」解説", "author_or_publisher": "青空書院", "publication_year_or_date": "2026年閲覧", "source_type": "reputable_web", "url_or_identifier": "https://aozora-shoin.com/", "accessed_date": "2026-09-04", "reliability_notes": "補助的な文学解説資料。先行作品・関連古典の整理に使用し、主要な本文確認は一次本文・公的資料・学術資料を優先。"}
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "浅茅が宿／房総の伝説／市川市真間",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-UGETSU-001",
+      "title": "雨月物語「浅茅が宿」本文",
+      "publisher": null,
+      "author": "上田秋成",
+      "publication_date": "1776年",
+      "source_type": "digital_archive",
+      "url": "https://www.koten.net/ugetsu/gen/210/",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "浅茅が宿",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-ICHIKAWA-001",
+      "title": "市川市文学ミュージアム関連資料・市川文学の紹介",
+      "publisher": "市川市",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "government",
+      "url": "https://www.city.ichikawa.lg.jp/site/litera/1662.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "市川・真間と文学作品",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-MURASE-001",
+      "title": "「浅茅が宿」論—方法としての地名—",
+      "publisher": null,
+      "author": "村瀬木綿子",
+      "publication_date": "2017年",
+      "source_type": "academic_paper",
+      "url": "https://iuk-repo.repo.nii.ac.jp/record/913/files/13459929_v18-3_Y.Murase.pdf",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "地名・下総・真間の機能",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-MORITA-001",
+      "title": "「愛卿伝」から「浅茅が宿」へ--上田秋成の創作",
+      "publisher": null,
+      "author": "森田喜郎",
+      "publication_date": "2004年",
+      "source_type": "academic_paper",
+      "url": "https://ndlsearch.ndl.go.jp/books/R000000004-I6897912",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "愛卿伝と浅茅が宿の関係",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-AKINARI-001",
+      "title": "上田秋成研究事典",
+      "publisher": "笠間書院",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "academic_work",
+      "url": "https://www.kasama-shoin.co.jp/",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "『浅茅が宿』の先行資料",
+      "language": "ja"
+    }
   ],
-  "research_notes": "本レコードでは『浅茅が宿』を市川市真間に関係する重要な怪異文学として登録する。千葉県立図書館の民話索引上は市川市の民話資料に含まれるが、市川市自身は地域文学・旅行文学として扱っているため、口承民話と断定しない。特に重要なのは、中国説話→日本近世文学→真間の手児奈伝承という複数層の伝承ネットワークである。"
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": true,
+    "translation_used": false,
+    "notes": "作品本文、千葉県立図書館の索引、市川市公式資料、研究論文を照合。『浅茅が宿』を口承民話と断定せず、真間の地域伝承を取り込んだ文学作品として分類した。"
+  },
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "WordPressのFolktaleRecord契約に合わせ、公開表示用のstory_summary/story_content、region、locations、characters、beings、themes、related_records、sourcesを正式フィールドとして保持する。"
 }
