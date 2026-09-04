@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-oomatoi-2-sumotori-ni-naru",
+  "status":"draft",
+  "title":"オオマトイ（二）相撲取りになる",
+  "title_normalized":"オオマトイ（二）相撲取りになる",
+  "title_origin":"source_title",
+  "summary":{"text":"中山に結びつく人物オオマトイが相撲取りになることを題材にした、浦安地方の世間話。","based_on_source_ids":["SRC-CHI-001","SRC-URAYASU-001"]},
+  "story_summary":"『浦安の世間話』に収録されたオオマトイの連作の一話。オオマトイをめぐって、力震えから相撲取りになるまでの人物像を語る世間話として伝えられている。千葉県立図書館の市川市民話索引では、市川市中山をこの話の地域根拠としている。",
+  "story_content":"オオマトイは、浦安の世間話に登場する力の強い人物として語られている。その話は『力震え』『相撲取りになる』『関東相撲』『十両になる』『喧嘩』と続く連作になっており、この話ではオオマトイが相撲取りになることが題材となる。相撲をめぐるオオマトイの人物像を、土地の人々の世間話としておもしろく語った一話である。市川市側では中山を根拠地とする伝承として索引に記録されている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"中山","source_description":"千葉県立図書館の市川市民話索引では、市川市中山を地域根拠として掲載。資料自体は浦安の世間話として収録される。"},
+  "locations":[{"name":"中山","location_type":"place","description":"千葉県立図書館の市川市索引で本話の地域根拠とされる地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-CHI-001"]},{"name":"浦安","location_type":"place","description":"本話が収録された世間話の伝承地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-URAYASU-001"]}],
+  "characters":[{"name":"オオマトイ","role":"主人公・人物伝承の人物","attributes":["力の強い人物として語られる","相撲取りになる話が伝わる"],"source_ids":["SRC-CHI-001","SRC-URAYASU-001"]}],
+  "beings":[],
+  "themes":["人物伝承","力持ち","相撲","世間話","中山","浦安"],
+  "story_type":["世間話","人物伝承","笑話"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-CHI-001","title":"千葉県の民話　市川市","publisher":"千葉県立図書館","author":null,"publication_date":"2026年閲覧","source_type":"library","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"オオマトイ（二）相撲取りになる／浦安の世間話／中山（地名）","language":"ja"},{"source_id":"SRC-URAYASU-001","title":"浦安の世間話","publisher":"青弓社","author":"米屋陽一 編","publication_date":"1992年","source_type":"book","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-09-04","relevant_section":"2 ムラ話・様々な人々／オオマトイ、4 重右衛門話","language":"ja"}],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の市川市・浦安市索引と『浦安の世間話』の書誌・目次を照合した。本文全文をオンラインで確認できないため、題名と連作構成から確認できる範囲に公開内容を限定した。"},
+  "confidence":"medium",
+  "research_status":"partial",
+  "research_notes":"市川市索引では本話を中山（地名）に結びつけている。一方、『浦安の世間話』ではオオマトイが『力震え』『相撲取りになる』『関東相撲』『十両になる』『喧嘩』の連作として収録されている。対象話の本文全文はオンラインで直接確認できないため、相撲取りになる具体的な経緯・対戦相手・結末は推測していない。"
+}
