@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-gontakubo-tatari",
+  "municipality": "市川市",
+  "title": "生き埋めにされたごんたく坊の祟り",
+  "reading": "いきうめにされたごんたくぼうのたたり",
+  "research_status": "deep_researched",
+  "source_status": "deep_researched",
+  "story_type": ["人物伝承", "祟り伝承", "寺社伝承", "怪異譚"],
+  "location": {
+    "modern": "千葉県市川市妙典1丁目・妙好寺",
+    "historical": "行徳・妙典"
+  },
+  "tags": ["ごんたく坊", "ごんたく坊さん", "妙好寺", "妙典", "行徳", "生き埋め", "祟り", "観音堂", "供養", "寺社伝承"],
+  "summary": "行徳・妙典の妙好寺に伝わる、ごんたく坊という小僧をめぐる祟り伝承。伝承では、宝永8年（1711）5月28日、酒に酔って乱暴を働くなどしたごんたく坊を村人たちが持て余し、寺の墓地の奥に穴を掘って生き埋めにしたという。ごんたく坊は死の際に村人を呪う言葉を残し、その後、関わった家々に身体の不自由な子が生まれるなどの祟りが続いたため、村人が供養のため観音堂を建立したとされる。",
+  "classification_note": "千葉県立図書館の市川市民話索引では『房総の不思議な話、珍しい話』（崙書房、1983年）の収録題名として確認され、地域根拠は市川市行徳上妙典の妙好寺とされる。市川市公式サイトも妙好寺境内に『ごんたくさん』伝説の奥の院があることを明記しており、単なるネット上の怪談ではなく、寺院と結びついた地域伝承として扱う。",
+  "claims": [
+    {
+      "claim_id": "claim-001",
+      "text": "千葉県立図書館の市川市民話索引には『生き埋めにされたごんたく坊の祟り』が掲載され、出典は『房総の不思議な話、珍しい話』（崙書房、1983年）、地域根拠は市川市行徳上妙典・妙好寺とされている。",
+      "source_ids": ["SRC-CHI-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-002",
+      "text": "妙好寺に伝わるごんたく坊伝承では、ごんたくは美男だが大酒飲みで乱暴な小僧として語られている。",
+      "source_ids": ["SRC-JFM-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-003",
+      "text": "伝承では宝永8年（1711）5月28日、村の若者や年寄りが酔ったごんたくを持て余し、寺の墓地の奥に穴を掘って目隠しをしたうえで生き埋めにしたとされる。",
+      "source_ids": ["SRC-JFM-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-004",
+      "text": "ごんたくは生き埋めにされる際に呪いの言葉を残して死亡し、その後、関係した家々に目や足の悪い子が生まれるなどの祟りが続いたと伝えられている。",
+      "source_ids": ["SRC-JFM-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-005",
+      "text": "祟りを鎮めるため、村人はごんたくを供養する観音堂を建てたと伝えられている。",
+      "source_ids": ["SRC-JFM-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-006",
+      "text": "市川市公式サイトは妙好寺について、山門を入り左に妙田地蔵尊、右に観音堂があり、『ごんたくさん』伝説の奥の院があると紹介している。",
+      "source_ids": ["SRC-ICHIKAWA-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-007",
+      "text": "市川市公式サイトによれば、妙好寺は日蓮宗寺院で、永禄8年（1565）に創建されたとされる。",
+      "source_ids": ["SRC-ICHIKAWA-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-008",
+      "text": "妙好寺は現在も市川市妙典1-11-10に所在し、市川市および千葉県の公式資料で寺院として確認できる。",
+      "source_ids": ["SRC-ICHIKAWA-001", "SRC-CHIBA-001"],
+      "interpretation": false
+    },
+    {
+      "claim_id": "claim-009",
+      "text": "本伝承の中心構造は、村人による共同制裁としての生き埋め、その被害者による死後の呪い、祟りへの恐れ、そして供養施設の建立という、加害・怨霊・鎮魂が一体化した寺社伝承である。",
+      "source_ids": ["SRC-JFM-001", "SRC-ICHIKAWA-001"],
+      "interpretation": true
+    },
+    {
+      "claim_id": "claim-010",
+      "text": "ネット上では『妙好寺のごんたく坊伝説』として、生き埋めと末代までの呪いを語る地域住民の記述も確認できるが、これは伝承の現在的な受容を示す補助資料として扱い、主要な出典とはしない。",
+      "source_ids": ["SRC-MACHIBBS-001"],
+      "interpretation": false
+    }
+  ],
+  "related_traditions": [
+    {
+      "relationship": "same_subject_variant",
+      "tradition": "ごんたく坊さん (1)",
+      "reason": "『市川の伝承民話 第1集』を出典とする同系統の記録として確認され、同じ妙好寺・ごんたく坊の生き埋めと祟りを扱う。"
+    },
+    {
+      "relationship": "same_subject_variant",
+      "tradition": "ごんたく坊さん (2)",
+      "reason": "市川市行徳・妙典の同一人物伝承として別話が登録されているため、本文を確認して独立話か異伝かを判定する必要がある。"
+    },
+    {
+      "relationship": "site_link",
+      "tradition": "妙好寺の観音堂・ごんたくさん奥の院",
+      "reason": "伝承の祟りを鎮める供養の場として語られ、現在の寺院境内にも関連施設・伝承地が残る。"
+    }
+  ],
+  "research_missing": [
+    "千葉県立図書館索引が出典として挙げる『房総の不思議な話、珍しい話』（崙書房、1983年）の掲載本文そのものは未確認。",
+    "『市川の伝承民話 第1集』の原資料本文についてはオンライン転記を通じた確認であり、刊行本そのものの頁・書誌詳細を追加確認する余地がある。",
+    "『ごんたく坊さん (2)』の本文を確認し、本レコードとの異伝・続話・別話の関係を確定する必要がある。",
+    "ごんたく坊の祟りと現在の観音堂・奥の院の具体的な位置関係、建立・供養の歴史的経緯については追加調査余地がある。"
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "author_or_publisher": "千葉県立図書館",
+      "publication_year_or_date": "2026年閲覧",
+      "source_type": "library_index",
+      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "reliability_notes": "市川市の民話・伝承資料を市町村別に索引化した千葉県立図書館の公式資料。対象話の書名・刊年・地域根拠を確認。"
+    },
+    {
+      "source_id": "SRC-JFM-001",
+      "title": "ごんたく坊さん (1)",
+      "author_or_publisher": "日本伝承マップ",
+      "publication_year_or_date": "2026年閲覧",
+      "source_type": "community_source",
+      "url_or_identifier": "https://j-folklore.com/l/book_456_ep_074",
+      "accessed_date": "2026-09-04",
+      "reliability_notes": "『市川の伝承民話 第1集』の伝承本文を話単位で整理した二次資料。本文内容の確認に使用。一次刊行本そのものではないため、書誌・内容の最終確認は別途必要。"
+    },
+    {
+      "source_id": "SRC-ICHIKAWA-001",
+      "title": "行徳・南行徳界隈",
+      "author_or_publisher": "市川市",
+      "publication_year_or_date": "2026年閲覧",
+      "source_type": "official_archive",
+      "url_or_identifier": "https://www.city.ichikawa.lg.jp/page/7439.html",
+      "accessed_date": "2026-09-04",
+      "reliability_notes": "市川市公式サイト。妙好寺の所在地・寺歴と、境内に『ごんたくさん』伝説の奥の院があることを確認。"
+    },
+    {
+      "source_id": "SRC-CHIBA-001",
+      "title": "市川市｜宗教法人一覧／千葉県",
+      "author_or_publisher": "千葉県",
+      "publication_year_or_date": "2026年閲覧",
+      "source_type": "official_archive",
+      "url_or_identifier": "https://www.pref.chiba.lg.jp/gakuji/shuukyou/houjin/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "reliability_notes": "千葉県公式資料。妙好寺の宗派・所在地を確認。"
+    },
+    {
+      "source_id": "SRC-MACHIBBS-001",
+      "title": "千葉県市川市（行徳・南行徳・妙典）Part125",
+      "author_or_publisher": "まちBBS",
+      "publication_year_or_date": "2011年",
+      "source_type": "community_source",
+      "url_or_identifier": "https://machi.to/bbs/read.cgi/kanto/1308574075/",
+      "accessed_date": "2026-09-04",
+      "reliability_notes": "地域住民による伝承言及。歴史的事実の根拠にはせず、現代の地域内で伝承が知られていることを示す補助資料として使用。"
+    }
+  ],
+  "research_notes": "『生き埋めにされたごんたく坊の祟り』は、千葉県立図書館の索引上の書誌情報と、市川の伝承民話を整理した二次資料、市川市公式サイトによる妙好寺境内の『ごんたくさん』奥の院の存在を組み合わせて確認した。特に重要なのは、単なる怪談ではなく、村人による共同制裁→被害者の呪い→家々への祟り→観音堂による供養という構造を持ち、伝承の舞台となる寺院と関連施設が現在も確認できる点である。なお、1983年『房総の不思議な話、珍しい話』の原文は未確認なので、そこからの直接引用とはせず、原典確認前の深掘りレコードとして登録する。"
+}
