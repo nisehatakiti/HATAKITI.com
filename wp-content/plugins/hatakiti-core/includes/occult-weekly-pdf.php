@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '3' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '5' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -135,7 +135,17 @@ function hatakiti_occult_pdf_build_units( $text ) {
     $text       = str_replace( "\r\n", "\n", $text );
     $paragraphs = preg_split( '/\n{2,}|\n/u', $text );
 
-    $rotate_chars = array( 'ー', '〜', '…', '‥' );
+    // 縦書きで90度回転させる文字。長音記号・波ダッシュ・三点リーダー
+    // （既存）に加え、全角ダッシュ類と主要な括弧類（開き・閉じとも同じ
+    // 角度で回転させる — 開き括弧は下向きに開き、閉じ括弧は上向きに
+    // 開く形になり、縦書きとして自然な向きになる）。句読点（、。）や
+    // ！？は、フォント自体のグリフが縦書きでもそのまま自然に見える
+    // ため回転対象に含めない（回転すると逆に不自然になる）。
+    $rotate_chars = array(
+        'ー', '〜', '…', '‥', '―', '—', '‐',
+        '「', '」', '『', '』', '（', '）', '【', '】',
+        '［', '］', '〈', '〉', '《', '》', '〔', '〕', '｛', '｝',
+    );
 
     $result = array();
     foreach ( $paragraphs as $para ) {
@@ -150,16 +160,34 @@ function hatakiti_occult_pdf_build_units( $text ) {
         while ( $i < $n ) {
             $ch = $chars[ $i ];
             if ( ctype_digit( $ch ) ) {
-                $run = $ch;
-                $j   = $i + 1;
-                while ( $j < $n && ctype_digit( $chars[ $j ] ) && mb_strlen( $run ) < 2 ) {
-                    $run .= $chars[ $j ];
+                // まず連続する半角数字の全体の長さを求める（2桁で打ち切らない
+                // — ちょうど4桁かどうかで西暦判定するため）。
+                $j = $i;
+                while ( $j < $n && ctype_digit( $chars[ $j ] ) ) {
                     $j++;
                 }
-                if ( mb_strlen( $run ) === 2 ) {
-                    $units[] = array( 'type' => 'tcy', 'ch' => $run );
+                $run_len = $j - $i;
+
+                if ( 4 === $run_len ) {
+                    // 4桁の西暦（例: 2026）は縦中横にせず、1桁ずつ通常の
+                    // 縦書き文字として配置する（指示書§10-13）。
+                    for ( $k = $i; $k < $j; $k++ ) {
+                        $units[] = array( 'type' => 'char', 'ch' => $chars[ $k ] );
+                    }
                 } else {
-                    $units[] = array( 'type' => 'char', 'ch' => $run );
+                    // 4桁以外は既存どおり、2桁ずつの縦中横ペアリング
+                    // （余りは1桁の通常文字）。
+                    $k = $i;
+                    while ( $k < $j ) {
+                        $pair_end = min( $k + 2, $j );
+                        $pair     = implode( '', array_slice( $chars, $k, $pair_end - $k ) );
+                        if ( 2 === mb_strlen( $pair ) ) {
+                            $units[] = array( 'type' => 'tcy', 'ch' => $pair );
+                        } else {
+                            $units[] = array( 'type' => 'char', 'ch' => $pair );
+                        }
+                        $k = $pair_end;
+                    }
                 }
                 $i = $j;
                 continue;
@@ -274,10 +302,13 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
             $pos++;
         }
 
-        // 行末禁則：最後が「開き括弧」なら次のコラムへ送り戻す
+        // 行末禁則：最後が「開き括弧」なら次のコラムへ送り戻す。
+        // 括弧類は縦書き用に'rotate'扱いになっているため、'char'だけで
+        // なく'rotate'型のunitも対象にする（そうしないと回転させた
+        // 括弧だけ禁則処理が効かなくなってしまう）。
         if ( count( $slots ) > 0 ) {
             $last = end( $slots );
-            if ( is_array( $last ) && 'char' === $last['type'] && in_array( $last['ch'], $cannot_end, true ) && $pos < $total ) {
+            if ( is_array( $last ) && in_array( $last['type'], array( 'char', 'rotate' ), true ) && in_array( $last['ch'], $cannot_end, true ) && $pos < $total ) {
                 array_pop( $slots );
                 $pos--;
             }
@@ -287,7 +318,7 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
         // このコラムに1文字だけ押し込む（capacity+1まで許容）。
         if ( $pos < $total && ! ( isset( $flat[ $pos ]['break'] ) && $flat[ $pos ]['break'] ) ) {
             $next_unit = $flat[ $pos ]['unit'];
-            if ( 'char' === $next_unit['type'] && in_array( $next_unit['ch'], $cannot_start, true ) ) {
+            if ( in_array( $next_unit['type'], array( 'char', 'rotate' ), true ) && in_array( $next_unit['ch'], $cannot_start, true ) ) {
                 $slots[] = $next_unit;
                 $pos++;
             }
@@ -1060,7 +1091,6 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         // ページ2：large残り（稀）＋medium/small残りを、紙面全幅の
         // 単一ゾーンとして続きから積み上げる。
         $page2_queue = array_merge( $large_queue, $other_queue );
-        $unrecoverable = false;
 
         if ( ! empty( $page2_queue ) ) {
             $pdf->AddPage();
@@ -1082,35 +1112,36 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
             $footer_y = max( $large_stack['bottom_y'], $left_stack['bottom_y'], $page1_col_top + 40 );
         }
 
-        // 3ページ目：2ページ目にfooterぶんの余白を確保してもなお記事が
-        // 収まらなかった場合のみ。「2ページに収めるため本文を削る」こと
-        // は禁止されているため、4000字級の分量でどうしても数文字〜
-        // 数十字だけ残るケースの正しい落とし所は3ページ目であり、余白や
-        // フォントの過度な圧縮ではない。
-        if ( ! empty( $page2_queue ) ) {
+        // 3ページ目以降：footerぶんの余白を確保しつつ、記事が尽きるまで
+        // 何ページでも追加する。「ページに収めるため本文を削る」ことは
+        // 禁止されているため、ページ数に実質的な上限を設けない
+        // （max_pages_safetyは暴走防止の安全弁であり、通常運用では
+        // まず到達しない）。
+        $extra_page_no    = 3;
+        $max_pages_safety = 12;
+        while ( ! empty( $page2_queue ) && $extra_page_no <= $max_pages_safety ) {
             $pdf->AddPage();
-            hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, 3 );
-            $page3_col_top    = $c['margin_t'] + $c['page2_header_h'];
-            $page3_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page3_col_top;
-            $reserved_h_3page = $footer_h + 1.5;
-            $h_page3          = max( 40, $page3_col_h_full - $reserved_h_3page );
+            hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, $extra_page_no );
+            $page_n_col_top    = $c['margin_t'] + $c['page2_header_h'];
+            $page_n_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page_n_col_top;
+            $reserved_h_npage  = $footer_h + 1.5;
+            $h_page_n          = max( 40, $page_n_col_h_full - $reserved_h_npage );
 
-            $page3_stack = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page3_col_top, $full_w, $h_page3, 3 );
-            $debug_log   = array_merge( $debug_log, $page3_stack['debug'] );
-
-            if ( ! empty( $page2_queue ) ) {
-                $unrecoverable = true;
-            }
-
-            $footer_y = max( $page3_stack['bottom_y'], $page3_col_top + 30 );
+            $page_n_stack = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $h_page_n, $extra_page_no );
+            $debug_log    = array_merge( $debug_log, $page_n_stack['debug'] );
+            $footer_y     = max( $page_n_stack['bottom_y'], $page_n_col_top + 30 );
+            $extra_page_no++;
         }
 
-        if ( $unrecoverable ) {
+        if ( ! empty( $page2_queue ) ) {
+            // 安全弁: $max_pages_safety ページでも収まらない極端な分量の
+            // 場合のみ到達する想定（通常運用では発生しない）。
+            // articles_jsonは変更しない。
             $remaining_headlines = array();
             foreach ( $page2_queue as $r_article ) {
                 $remaining_headlines[] = mb_substr( (string) ( $r_article['headline'] ?? '' ), 0, 20 ) . '（' . mb_strlen( (string) ( $r_article['body'] ?? '' ) ) . '字）';
             }
-            $warnings[] = '記事量が多く、3ページ以内に紙面へ収まりませんでした。記事本文は自動で削除していません（articles_jsonは無変更）。未掲載: ' . implode( ' / ', $remaining_headlines );
+            $warnings[] = "記事量が非常に多く、{$max_pages_safety}ページ以内に紙面へ収まりませんでした。記事本文は自動で削除していません（articles_jsonは無変更）。未掲載: " . implode( ' / ', $remaining_headlines );
         }
 
         hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $all_sources, $editorial_summary, $footer_y + 2 );
