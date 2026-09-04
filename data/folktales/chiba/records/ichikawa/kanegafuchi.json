@@ -14,7 +14,7 @@
   "beings":[],
   "themes":["地名由来","鐘","沈鐘伝説","国府台合戦","里見氏","江戸川","伝承地"],
   "story_type":["地名伝承","合戦伝承","沈鐘伝説"],
-  "related_records":[{"record_id":"chiba-ichikawa-kanegafuchi-yonakiishi","relation":"related_tradition","note":"『鐘ヶ淵と夜泣石 かたり伝え』として同じ国府台の伝承圏に収録される。"}],
+  "related_records":[],
   "sources":[
     {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"鐘が渕／鐘ヶ淵／鐘ヶ淵と夜泣石 かたり伝え","language":"ja"},
     {"source_id":"SRC-ICHIKAWA-REF-KANEKAKE-MATSU","title":"市川市の里見公園にある『鐘懸の松』について詳しく書いてある本はないか？","publisher":"レファレンス協同データベース","author":null,"publication_date":"web","source_type":"reference_database","url":"https://crd.ndl.go.jp/reference/entry/reference/show?asc=desc&dtltbs=1&fi=4_%E9%83%B7%E5%9C%9F+5_%E7%A4%BE%E4%BC%9A%E4%BA%BA+6_0+8_23&id=1000052486&ldtl=1&mcmd=25&ndc1=2&ndc_lk=1&page=ref_view&pg=74&st=update","accessed_date":"2026-09-04","relevant_section":"鐘懸けの松・鐘ヶ淵","language":"ja"},
