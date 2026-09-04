@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-juemon-sannenkan-mo-isoro",
+  "status": "draft",
+  "title": "印内の重右衛門　三年間も居候したこと",
+  "title_normalized": "印内の重右衛門 三年間も居候したこと",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "印内の重右衛門を主人公とする、三年間の奉公をめぐる笑話。",
+    "based_on_source_ids": ["SRC-CHI-001", "SRC-CHI-REGIONAL-001", "SRC-JFOLK-002"]
+  },
+  "story_summary": "印内の重右衛門を主人公とする笑話の一つで、1978年刊『房総の民話』に「三年間も居候したこと」という題で収録されている。市川の伝承資料では、北方の家に三年間奉公したじゅえむが、家に帰って「三年も使われた」と泣いたという落ちが伝えられている。",
+  "story_content": "北方の家に三年間奉公したじゅえむは、三年の奉公を終えて家に帰ると、「三年も使われた」と泣いたという。三年間も働いたことを、まるで不本意な目に遭ったかのように言い立てるところに、この話の笑いがある。また、このように屁理屈を言って主人を困らせる者を「いんねのじいむみたいだ」と言ったと伝えられている。市川市では北方を中心に、印内のじゅえむどん（重右衛門）を主人公とする笑話が複数伝えられている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "北方・印内周辺",
+    "source_description": "千葉県立図書館の市川市民話索引では北方村を根拠として掲載。日本伝承マップでは本話に対応する「いんねえのじゅえむどん (3) 三年使われて泣く」が北方の伝承として収録されている。"
+  },
+  "locations": [
+    {
+      "name": "北方",
+      "location_type": "place",
+      "description": "千葉県立図書館の市川市民話索引で本話の地域根拠として示され、伝承本文でもじゅえむの奉公先として登場する地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-001", "SRC-JFOLK-002"]
+    },
+    {
+      "name": "印内",
+      "location_type": "place",
+      "description": "重右衛門・じゅえむどんの故地として語られる地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": ["SRC-CHI-REGIONAL-001"]
+    }
+  ],
+  "characters": [
+    {
+      "name": "印内の重右衛門（じゅえむどん・じいむ）",
+      "role": "主人公・奉公人",
+      "attributes": ["北方で三年間奉公したと伝わる", "屁理屈を言って笑いを生む人物"],
+      "source_ids": ["SRC-JFOLK-002"]
+    }
+  ],
+  "beings": [],
+  "themes": ["人物", "重右衛門", "奉公", "笑話", "屁理屈", "印内", "北方"],
+  "story_type": ["民話", "人物伝承", "笑話"],
+  "related_records": [
+    {
+      "record_id": "chiba-ichikawa-innai-juemon-traditions",
+      "relationship": "same_tradition",
+      "note": "印内の重右衛門伝承群を構成する個別話。ハブと相互接続する。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHI-001",
+      "title": "千葉県の民話　市川市",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内の重右衛門　三年間も居候したこと／房総の民話／北方村",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-CHI-REGIONAL-001",
+      "title": "千葉県の民話　地方や郡・千葉県全域",
+      "publisher": "千葉県立図書館",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "library",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/chiiki.html",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "印内の重右衛門　三年間も居候したこと／房総の民話／1978年",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-JFOLK-002",
+      "title": "いんねえのじゅえむどん (3) 三年使われて泣く",
+      "publisher": "日本伝承マップ",
+      "author": null,
+      "publication_date": "2026年閲覧",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/l/book_458_ep_022",
+      "accessed_date": "2026-09-04",
+      "relevant_section": "北方のシチイムに三年奉公したじいむ／三年も使われたと泣く／市川の伝承民話 第6集",
+      "language": "ja"
+    }
+  ],
+  "ai_processing": {
+    "summary_generated": true,
+    "sources_merged": true,
+    "translation_used": false,
+    "notes": "千葉県立図書館で1978年『房総の民話』収録の対象題名と北方村という地域根拠を確認した。日本伝承マップには同系統の「いんねえのじゅえむどん (3) 三年使われて泣く」が掲載され、北方で三年奉公したじいむが「三年も使われた」と泣くという筋が確認できるため、本recordの題名に対応する伝承内容として採用した。"
+  },
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "対象題名は千葉県立図書館の市川市索引・地方索引で確認済み。1978年『房総の民話』収録、北方村を地域根拠とすることも確認した。本文そのものは1978年版を直接確認していないが、日本伝承マップが収録する『市川の伝承民話 第6集』の「いんねえのじゅえむどん (3) 三年使われて泣く」に、北方で三年奉公し「三年も使われた」と泣くという対応する筋が掲載されている。公開本文ではこの確認できた筋のみを記載し、1978年版との逐語的一致は断定しない。"
+}
