@@ -1,0 +1,27 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-kanegafuchi",
+  "status":"draft",
+  "title":"鐘ヶ淵",
+  "title_normalized":"鐘ヶ淵",
+  "title_origin":"source_title",
+  "summary":{"text":"国府台合戦の際に里見軍の陣鐘が江戸川へ沈み、その場所を鐘ヶ淵と呼ぶようになったという地名・伝承。","based_on_source_ids":["SRC-CHIBA-LIB-ICHIKAWA-INDEX","SRC-ICHIKAWA-REF-KANEKAKE-MATSU","SRC-JAPANMYSTERY-KANEGAFUCHI"]},
+  "story_summary":"国府台の崖上に掛けられていた里見軍の陣鐘が川へ沈み、その場所が鐘ヶ淵と呼ばれるようになったという伝承。北条軍が鐘を撞いても鳴らず、里見ゆかりの女性が撞くと鳴ったという異伝も伝わる。",
+  "story_content":"国府台の里見軍が陣鐘を松の木に掛けていたところ、戦の後にその鐘が江戸川へ落ちたと伝えられている。鐘が沈んだ場所は「鐘ヶ淵」と呼ばれるようになり、鐘を掛けていた松は「鐘懸けの松」と呼ばれた。伝承の一つでは、北条方が鐘を撞いても鳴らなかったのに対し、捕らえられた里見ゆかりの女性が撞くと美しい音が鳴り、その直後に松の枝が折れて鐘が川へ沈んだという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"国府台","source_description":"市川市国府台・里見公園西側の江戸川沿いに伝わる鐘ヶ淵の伝承。"},
+  "locations":[{"name":"鐘ヶ淵","type":"淵・伝承地","description":"国府台の崖下の江戸川にあったとされる場所で、里見軍の陣鐘が沈んだことから名付けられたと伝わる。","source_ids":["SRC-ICHIKAWA-REF-KANEKAKE-MATSU","SRC-JAPANMYSTERY-KANEGAFUCHI"]},{"name":"鐘懸けの松","type":"伝承地","description":"里見軍の陣鐘を掛けたと伝えられる松。鐘が沈んだ伝承と結びつく。","source_ids":["SRC-ICHIKAWA-REF-KANEKAKE-MATSU"]}],
+  "characters":[{"name":"里見軍","role":"伝承上の主体","attributes":["国府台合戦で陣鐘を使用したと伝えられる"],"source_ids":["SRC-ICHIKAWA-REF-KANEKAKE-MATSU"]},{"name":"里見ゆかりの女性","role":"伝承上の人物","attributes":["鐘を撞くと音が鳴ったとされる"],"source_ids":["SRC-ICHIKAWA-REF-KANEKAKE-MATSU"]}],
+  "beings":[],
+  "themes":["地名由来","鐘","沈鐘伝説","国府台合戦","里見氏","江戸川","伝承地"],
+  "story_type":["地名伝承","合戦伝承","沈鐘伝説"],
+  "related_records":[{"record_id":"chiba-ichikawa-kanegafuchi-yonakiishi","relation":"related_tradition","note":"『鐘ヶ淵と夜泣石 かたり伝え』として同じ国府台の伝承圏に収録される。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-INDEX","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-04","relevant_section":"鐘が渕／鐘ヶ淵／鐘ヶ淵と夜泣石 かたり伝え","language":"ja"},
+    {"source_id":"SRC-ICHIKAWA-REF-KANEKAKE-MATSU","title":"市川市の里見公園にある『鐘懸の松』について詳しく書いてある本はないか？","publisher":"レファレンス協同データベース","author":null,"publication_date":"web","source_type":"reference_database","url":"https://crd.ndl.go.jp/reference/entry/reference/show?asc=desc&dtltbs=1&fi=4_%E9%83%B7%E5%9C%9F+5_%E7%A4%BE%E4%BC%9A%E4%BA%BA+6_0+8_23&id=1000052486&ldtl=1&mcmd=25&ndc1=2&ndc_lk=1&page=ref_view&pg=74&st=update","accessed_date":"2026-09-04","relevant_section":"鐘懸けの松・鐘ヶ淵","language":"ja"},
+    {"source_id":"SRC-JAPANMYSTERY-KANEGAFUCHI","title":"鐘ヶ淵（千葉県市川市）","publisher":"全国現存伝承地ファイル","author":null,"publication_date":"2025-04-23","source_type":"folklore_database","url":"https://data.japanmystery.com/category/toukatu/","accessed_date":"2026-09-04","relevant_section":"鐘ヶ淵","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"千葉県立図書館の複数収録題名を同一の鐘ヶ淵伝承として統合。レファレンス資料で、鐘懸けの松・沈鐘・女性が撞いて鳴ったという異伝を確認した。"},
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"『鐘が渕』『鐘ヶ淵』『鐘ヶ淵と夜泣石 かたり伝え』のうち、鐘そのものと地名由来を扱う部分を本レコードの正本とし、夜泣石は別伝承として分離する。"
+}
