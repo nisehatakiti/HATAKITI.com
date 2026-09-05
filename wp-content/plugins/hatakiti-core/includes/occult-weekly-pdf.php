@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '23' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '24' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -48,6 +48,20 @@ define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '23' );
 define( 'HATAKITI_OCCULT_PDF_LOGO_PATH', HATAKITI_CORE_DIR . 'assets/images/occult-weekly-logo.png' );
 define( 'HATAKITI_OCCULT_PDF_LOGO_ASPECT', 3.0 );
 define( 'HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM', 34.0 );
+
+/**
+ * 週刊オカルト新聞の正式創刊日（月曜日固定）。この日付を基準に、
+ * 号の発行日（hatakiti_occult_issue_date）がどの週に属するかを
+ * 逆算し、通算号数を決定論的に算出する（「今日の日付」や「最新投稿」
+ * からの推測ではなく、この固定値だけを根拠にする）。同じ号を何度PDF
+ * 再生成しても常に同じ号数になることは、この値が変わらない限り保証
+ * される。
+ *
+ * この日付より前の週に属する号（articles_json準備期間のテスト投稿含む）
+ * は正式な通算号数の対象外として扱う
+ * （hatakiti_occult_pdf_compute_issue_number()がnullを返す）。
+ */
+define( 'HATAKITI_OCCULT_WEEKLY_LAUNCH_DATE', '2026-09-07' );
 
 /**
  * 本文「1段あたりの最大文字数」。今回の組版方式の中心定数（指示書§1）
@@ -544,8 +558,85 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
 }
 
 /**
+ * 与えられた日付（'Y-m-d'）が属する週の月曜日を、真夜中のUNIXタイム
+ * スタンプとして返す。日付文字列として不正な場合はnull。
+ */
+function hatakiti_occult_pdf_monday_of_week_ts( $date_str ) {
+    $ts = strtotime( trim( (string) $date_str ) . ' 00:00:00' );
+    if ( false === $ts ) {
+        return null;
+    }
+    $day_of_week = (int) date( 'N', $ts ); // 1=月曜〜7=日曜
+    return $ts - ( ( $day_of_week - 1 ) * DAY_IN_SECONDS );
+}
+
+/**
+ * 号の発行日（hatakiti_occult_issue_date、'Y-m-d'）から、
+ * HATAKITI_OCCULT_WEEKLY_LAUNCH_DATE を基準にした通算号数を決定論的に
+ * 算出する。「今日の日付」や「最新投稿」からの推測ではなく、発行日が
+ * 属する週の月曜日と、創刊日（同じく月曜日）との週数差だけで決まる
+ * ため、同じ号を何度再生成しても常に同じ値になる。
+ *
+ * 創刊日より前の週に属する場合（articles_json準備期間のテスト投稿等）
+ * は正式な通算号数の対象外としてnullを返す（指示書§5/§11「正式創刊
+ * 以前の投稿は正式号数にカウントしない」）。
+ *
+ * @return int|null 創刊週なら1（表示は「創刊号」）、以降は2,3,4...
+ */
+function hatakiti_occult_pdf_compute_issue_number( $issue_date_str ) {
+    $issue_monday_ts = hatakiti_occult_pdf_monday_of_week_ts( $issue_date_str );
+    if ( null === $issue_monday_ts ) {
+        return null;
+    }
+    $launch_monday_ts = hatakiti_occult_pdf_monday_of_week_ts( HATAKITI_OCCULT_WEEKLY_LAUNCH_DATE );
+    if ( null === $launch_monday_ts ) {
+        return null;
+    }
+    $diff_days = (int) round( ( $issue_monday_ts - $launch_monday_ts ) / DAY_IN_SECONDS );
+    if ( $diff_days < 0 ) {
+        return null;
+    }
+    return intdiv( $diff_days, 7 ) + 1;
+}
+
+/**
+ * 号数表示文字列（「創刊号」または「第○号」、全角数字）を返す。
+ * $issue_number が null（創刊前の号）なら空文字列。
+ */
+function hatakiti_occult_pdf_issue_number_label( $issue_number ) {
+    if ( null === $issue_number ) {
+        return '';
+    }
+    if ( 1 === $issue_number ) {
+        return '創刊号';
+    }
+    return hatakiti_occult_pdf_fullwidth_digits( '第' . $issue_number . '号' );
+}
+
+/**
+ * 発行日（'Y-m-d'）を「２０２６年９月７日発行」のような表示用文字列に
+ * 変換する（全角数字化込み）。不正な日付文字列ならそのまま返す。
+ */
+function hatakiti_occult_pdf_format_issue_date_for_display( $date_str ) {
+    $ts = strtotime( trim( (string) $date_str ) );
+    if ( false === $ts ) {
+        return (string) $date_str;
+    }
+    $text = date( 'Y', $ts ) . '年' . (int) date( 'n', $ts ) . '月' . (int) date( 'j', $ts ) . '日発行';
+    return hatakiti_occult_pdf_fullwidth_digits( $text );
+}
+
+/**
  * 題字（1ページ目のみ）。「週刊オカルト新聞」を主題字として横書きで大きく
  * 掲載し、号数・発行日・号のサブタイトルを添える。二重罫で区切る。
+ *
+ * 号数表示は「○月○日号」のように発行日を号名として使わず、
+ * HATAKITI_OCCULT_WEEKLY_LAUNCH_DATE を基準にした通算号数
+ * （創刊号／第○号）を主役として表示し、発行日は補助情報として添える
+ * （PDF「○月○日号」表記廃止／正式創刊号・通算号数管理指示）。
+ * 正式創刊前の号（$issue_idはあるがhatakiti_occult_pdf_compute_issue_
+ * number()がnullを返す場合）は、既存デザインとの後方互換のため従来
+ * 通り $issue_id をそのまま「第{issue_id}号」として表示する。
  */
 function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c, $issue_subtitle, $issue_id, $issue_date ) {
     $top = $c['margin_t'];
@@ -570,12 +661,19 @@ function hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c,
     $pdf->SetFont( $font_regular, '', 9 );
     $sub_y = $top + $logo_h + 3;
     $left_text  = $issue_subtitle ? hatakiti_occult_pdf_fullwidth_digits( mb_substr( $issue_subtitle, 0, 60 ) ) : '';
-    $right_bits = array();
-    if ( $issue_id ) {
+    $right_bits   = array();
+    $issue_number = hatakiti_occult_pdf_compute_issue_number( $issue_date );
+    if ( null !== $issue_number ) {
+        $right_bits[] = hatakiti_occult_pdf_issue_number_label( $issue_number );
+    } elseif ( $issue_id ) {
+        // 正式創刊前（テスト・準備データ）は既存表示のままにする
+        // （正式創刊以前の投稿へ号数を遡及付与しない、指示書§11）。
         $right_bits[] = '第' . $issue_id . '号';
     }
     if ( $issue_date ) {
-        $right_bits[] = $issue_date . '発行';
+        $right_bits[] = null !== $issue_number
+            ? hatakiti_occult_pdf_format_issue_date_for_display( $issue_date )
+            : $issue_date . '発行';
     }
     $right_text = hatakiti_occult_pdf_fullwidth_digits( implode( '　', $right_bits ) );
 
