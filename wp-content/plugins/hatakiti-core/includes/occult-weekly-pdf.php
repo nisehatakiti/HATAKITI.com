@@ -16,7 +16,9 @@
  *
  * スコープ上の割り切り（報告書に明記）:
  *   - 禁則処理は行頭禁則・行末禁則の主要文字のみ（JIS完全準拠ではない）
- *   - 縦中横は連続する半角数字を2桁ずつペアリングする単純な方式
+ *   - 数字は縦中横（2桁ペアリング）を使わず、桁数によらず1桁ずつ
+ *     通常サイズの縦書き文字として並べる（縮小ペアと通常サイズの
+ *     混在が半角文字のように見える不具合を避けるため）
  *   - 長音記号(ー)・波ダッシュ(〜)・三点リーダ(…)のみ90度回転、
  *     小書きかな等はそのまま（多くの実際の縦組みでも同様）
  *   - 出典・編集後記・題字まわりは横書き（実際の新聞でもクレジット行や
@@ -37,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '24' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '25' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -99,7 +101,7 @@ function hatakiti_occult_pdf_unit_h_mm( $tier ) {
  * 半角数字→全角数字の表示用マッピング。DB上のarticles_json／headline／
  * bodyは一切書き換えない — PDFへ実際に文字を描画する直前にだけ、この
  * 関数を通して見た目だけ全角化する。縦書き本文側では、桁数判定
- * （縦中横ペアリング・4桁西暦判定）は必ず変換前の半角文字列に対して
+ * （連続する半角数字の長さの判定）は必ず変換前の半角文字列に対して
  * 行い、変換後の全角文字はグリフを差し替えて描画するだけに使う
  * （全角文字はASCIIではないためctype_digit()が効かなくなり、変換を
  * 先にやってしまうと桁数判定そのものが壊れる）。
@@ -241,11 +243,11 @@ function hatakiti_occult_pdf_new_tcpdf() {
 }
 
 /**
- * 半角数字ちょうど2桁の縦中横ペアリング（それ以外の桁数は1桁ずつ通常の
- * 縦書き文字として並べる）＋回転文字（ー〜…）を考慮しつつ、段落
+ * 数字は桁数によらず縦中横（2桁ペアリング）を使わず1桁ずつ通常サイズの
+ * 縦書き文字として並べる＋回転文字（ー〜…）を考慮しつつ、段落
  * （\n\n区切り）ごとに「1文字ぶんの描画単位」の配列へ分解する。
  *
- * @return array 各要素は段落＝unitの配列。unit = array('type'=>'char'|'tcy'|'rotate', 'ch'=>string|array)
+ * @return array 各要素は段落＝unitの配列。unit = array('type'=>'char'|'rotate'|'punct'|'small_kana', 'ch'=>string)
  */
 function hatakiti_occult_pdf_build_units( $text ) {
     $text       = (string) $text;
@@ -291,29 +293,18 @@ function hatakiti_occult_pdf_build_units( $text ) {
         while ( $i < $n ) {
             $ch = $chars[ $i ];
             if ( ctype_digit( $ch ) ) {
-                // まず連続する半角数字の全体の長さを求める（2桁で打ち切らない
-                // — ちょうど4桁かどうかで西暦判定するため）。
+                // 連続する半角数字の終端を求め、桁数に関わらず1桁ずつ
+                // 通常サイズの縦書き文字として配置する（縦中横の2桁
+                // ペアリングは使わない — 桁数によって「2桁だけ縮小表示・
+                // 残りは通常サイズ」という混在が生じ、数字の一部が半角
+                // のように見えてしまうため。実際に「518」「8月22日」
+                // 「1980〜90」等で報告された見た目の不具合）。
                 $j = $i;
                 while ( $j < $n && ctype_digit( $chars[ $j ] ) ) {
                     $j++;
                 }
-                $run_len = $j - $i;
-
-                if ( 2 === $run_len ) {
-                    // ちょうど2桁（日付・年代の下2桁など）だけを縦中横で
-                    // ペアリングする。
-                    $pair    = implode( '', array_slice( $chars, $i, 2 ) );
-                    $units[] = array( 'type' => 'tcy', 'ch' => $pair );
-                } else {
-                    // 2桁ちょうど以外（1桁単独、3桁の数量表記「518」、
-                    // 4桁の西暦「2026」、5桁以上など）は縦中横ペアリングに
-                    // せず、1桁ずつ通常の縦書き文字として配置する。
-                    // 「２桁だけ小さく詰めて残り1桁だけ通常サイズ」という
-                    // 混在（例：518→「51」ペア＋「8」単独）は、縦中横部分
-                    // だけ不自然に小さく・半角風に見えるため禁止する。
-                    for ( $k = $i; $k < $j; $k++ ) {
-                        $units[] = array( 'type' => 'char', 'ch' => $chars[ $k ] );
-                    }
+                for ( $k = $i; $k < $j; $k++ ) {
+                    $units[] = array( 'type' => 'char', 'ch' => $chars[ $k ] );
                 }
                 $i = $j;
                 continue;
@@ -367,26 +358,7 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
     $flush_column_started = false;
 
     $draw_unit = function ( $unit, $col_left, $y ) use ( $pdf, $col_pitch, $char_h, $font_pt, $font_key ) {
-        if ( 'tcy' === $unit['type'] ) {
-            // 縦中横の数字も表示上は全角グリフに差し替える（桁数判定は
-            // build_units()側で変換前の半角文字列に対してすでに終わって
-            // いるため、ここでの差し替えはグリフの見た目だけに影響する）。
-            $digits    = mb_str_split( $unit['ch'], 1, 'UTF-8' );
-            $digits[0] = hatakiti_occult_pdf_fullwidth_digits( $digits[0] );
-            if ( isset( $digits[1] ) ) {
-                $digits[1] = hatakiti_occult_pdf_fullwidth_digits( $digits[1] );
-            }
-            $tcy_pt  = $font_pt * 0.56;
-            $half_w  = $col_pitch / 2;
-            $pdf->SetFontSize( $tcy_pt );
-            $pdf->SetXY( $col_left, $y );
-            $pdf->Cell( $half_w, $char_h, $digits[0], 0, 0, 'C' );
-            if ( isset( $digits[1] ) ) {
-                $pdf->SetXY( $col_left + $half_w, $y );
-                $pdf->Cell( $half_w, $char_h, $digits[1], 0, 0, 'C' );
-            }
-            $pdf->SetFontSize( $font_pt );
-        } elseif ( 'rotate' === $unit['type'] ) {
+        if ( 'rotate' === $unit['type'] ) {
             // ー・〜／～は回転文字の中でも特に、そのまま中央揃えで
             // 回転させると縦書きの列内でやや左寄りに見えるため、回転の
             // 中心自体をわずかに右へずらす（PDF組版最終微調整指示§1）。
