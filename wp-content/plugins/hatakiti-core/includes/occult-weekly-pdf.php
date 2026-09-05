@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '22' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '23' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -227,8 +227,9 @@ function hatakiti_occult_pdf_new_tcpdf() {
 }
 
 /**
- * 半角数字2桁ペアリング（縦中横）＋回転文字（ー〜…）を考慮しつつ、
- * 段落（\n\n区切り）ごとに「1文字ぶんの描画単位」の配列へ分解する。
+ * 半角数字ちょうど2桁の縦中横ペアリング（それ以外の桁数は1桁ずつ通常の
+ * 縦書き文字として並べる）＋回転文字（ー〜…）を考慮しつつ、段落
+ * （\n\n区切り）ごとに「1文字ぶんの描画単位」の配列へ分解する。
  *
  * @return array 各要素は段落＝unitの配列。unit = array('type'=>'char'|'tcy'|'rotate', 'ch'=>string|array)
  */
@@ -284,25 +285,20 @@ function hatakiti_occult_pdf_build_units( $text ) {
                 }
                 $run_len = $j - $i;
 
-                if ( 4 === $run_len ) {
-                    // 4桁の西暦（例: 2026）は縦中横にせず、1桁ずつ通常の
-                    // 縦書き文字として配置する（指示書§10-13）。
+                if ( 2 === $run_len ) {
+                    // ちょうど2桁（日付・年代の下2桁など）だけを縦中横で
+                    // ペアリングする。
+                    $pair    = implode( '', array_slice( $chars, $i, 2 ) );
+                    $units[] = array( 'type' => 'tcy', 'ch' => $pair );
+                } else {
+                    // 2桁ちょうど以外（1桁単独、3桁の数量表記「518」、
+                    // 4桁の西暦「2026」、5桁以上など）は縦中横ペアリングに
+                    // せず、1桁ずつ通常の縦書き文字として配置する。
+                    // 「２桁だけ小さく詰めて残り1桁だけ通常サイズ」という
+                    // 混在（例：518→「51」ペア＋「8」単独）は、縦中横部分
+                    // だけ不自然に小さく・半角風に見えるため禁止する。
                     for ( $k = $i; $k < $j; $k++ ) {
                         $units[] = array( 'type' => 'char', 'ch' => $chars[ $k ] );
-                    }
-                } else {
-                    // 4桁以外は既存どおり、2桁ずつの縦中横ペアリング
-                    // （余りは1桁の通常文字）。
-                    $k = $i;
-                    while ( $k < $j ) {
-                        $pair_end = min( $k + 2, $j );
-                        $pair     = implode( '', array_slice( $chars, $k, $pair_end - $k ) );
-                        if ( 2 === mb_strlen( $pair ) ) {
-                            $units[] = array( 'type' => 'tcy', 'ch' => $pair );
-                        } else {
-                            $units[] = array( 'type' => 'char', 'ch' => $pair );
-                        }
-                        $k = $pair_end;
                     }
                 }
                 $i = $j;
