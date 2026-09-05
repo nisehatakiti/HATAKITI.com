@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '19' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '20' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -99,6 +99,9 @@ function hatakiti_occult_pdf_fullwidth_digits( $text ) {
         // §10「表示される数字は原則すべて全角数字へ正規化する」）。
         '⁰' => '０', '¹' => '１', '²' => '２', '³' => '３', '⁴' => '４',
         '⁵' => '５', '⁶' => '６', '⁷' => '７', '⁸' => '８', '⁹' => '９',
+        // 下付き数字（脚注・化学式等由来）も同様に正規化する。
+        '₀' => '０', '₁' => '１', '₂' => '２', '₃' => '３', '₄' => '４',
+        '₅' => '５', '₆' => '６', '₇' => '７', '₈' => '８', '₉' => '９',
     );
     return strtr( (string) $text, $map );
 }
@@ -208,7 +211,7 @@ function hatakiti_occult_pdf_build_units( $text ) {
     // 開く形になり、縦書きとして自然な向きになる）。！？は回転させない
     // （縦書きでもそのまま自然に見えるため）。
     $rotate_chars = array(
-        'ー', '〜', '…', '‥', '―', '—', '‐',
+        'ー', '〜', '～', '…', '‥', '―', '—', '‐',
         '「', '」', '『', '』', '（', '）', '【', '】',
         '［', '］', '〈', '〉', '《', '》', '〔', '〕', '｛', '｝',
     );
@@ -342,7 +345,17 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
             }
             $pdf->SetFontSize( $font_pt );
         } elseif ( 'rotate' === $unit['type'] ) {
-            $cx = $col_left + ( $col_pitch / 2 );
+            // ー・〜／～は回転文字の中でも特に、そのまま中央揃えで
+            // 回転させると縦書きの列内でやや左寄りに見えるため、回転の
+            // 中心自体をわずかに右へずらす（PDF組版最終微調整指示§1）。
+            // 三点リーダーや括弧類など他の回転文字はそのまま（対象外）。
+            $rotate_right_adjust = 0.0;
+            if ( 'ー' === $unit['ch'] ) {
+                $rotate_right_adjust = HATAKITI_OCCULT_PDF_LONG_VOWEL_RIGHT_ADJUST;
+            } elseif ( '〜' === $unit['ch'] || '～' === $unit['ch'] ) {
+                $rotate_right_adjust = HATAKITI_OCCULT_PDF_WAVE_DASH_RIGHT_ADJUST;
+            }
+            $cx = $col_left + ( $col_pitch / 2 ) + $rotate_right_adjust;
             $cy = $y + ( $char_h / 2 );
             $pdf->StartTransform();
             $pdf->Rotate( -90, $cx, $cy );
@@ -360,9 +373,13 @@ function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_righ
             // して「右上」ではなく「左上」に見える不具合があった。
             // 列の送り幅（col_pitch/char_h）自体は変えない — 段組みの
             // 高さ計算（capacity等）に影響を与えないための制約。
+            // 、。は句読点の中でも特に左寄りに見えるため、既存の右上
+            // シフトにさらにわずかな右方向オフセットを加える（，．は
+            // 対象外、PDF組版最終微調整指示§1）。
+            $punct_right_adjust = ( '、' === $unit['ch'] || '。' === $unit['ch'] ) ? HATAKITI_OCCULT_PDF_PUNCT_RIGHT_ADJUST : 0.0;
             $punct_pt = $font_pt * 0.62;
             $pdf->SetFontSize( $punct_pt );
-            $pdf->SetXY( $col_left + ( $col_pitch * 0.10 ), $y - ( $char_h * 0.32 ) );
+            $pdf->SetXY( $col_left + ( $col_pitch * 0.10 ) + $punct_right_adjust, $y - ( $char_h * 0.32 ) );
             $pdf->Cell( $col_pitch * 0.86, $char_h * 0.62, $unit['ch'], 0, 0, 'R' );
             $pdf->SetFontSize( $font_pt );
         } elseif ( 'small_kana' === $unit['type'] ) {
@@ -629,6 +646,20 @@ define( 'HATAKITI_OCCULT_PDF_ROW_GAP_MM', 3.2 );
  */
 define( 'HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM', 2.0 );
 define( 'HATAKITI_OCCULT_PDF_MIN_COL_W_MM', 55.0 );
+
+/**
+ * 縦書き本文中、特定の記号だけがやや左寄りに見える視覚補正のための
+ * 右方向オフセット（mm）。通常文字の描画位置・段の高さ計算・列幅
+ * 判定など、レイアウト構造には一切影響しない — draw_unit内でその記号
+ * を描く直前のX座標にだけ加算する見た目だけの微調整（PDF組版
+ * 最終微調整指示）。「明らかに動いた」と分かるほど大きくしないため、
+ * いずれも1文字ぶんの幅（col_pitch、9.5pt本文でおよそ3.6mm）に対して
+ * 数%程度の小さい値にとどめる。記号ごとに別定数にしておき、実際の
+ * PDF画像を見ながら数値だけを調整できるようにする。
+ */
+define( 'HATAKITI_OCCULT_PDF_LONG_VOWEL_RIGHT_ADJUST', 0.15 ); // ー
+define( 'HATAKITI_OCCULT_PDF_WAVE_DASH_RIGHT_ADJUST', 0.15 );  // 〜／～
+define( 'HATAKITI_OCCULT_PDF_PUNCT_RIGHT_ADJUST', 0.12 );      // 、。
 
 /**
  * 続き記事の冒頭に付ける「継続表示」の高さ（mm）。指示書§7「記事の続きが
