@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '21' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '22' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -691,7 +691,7 @@ define( 'HATAKITI_OCCULT_PDF_MIN_COL_W_MM', 55.0 );
  */
 define( 'HATAKITI_OCCULT_PDF_LONG_VOWEL_RIGHT_ADJUST', 0.30 ); // ー
 define( 'HATAKITI_OCCULT_PDF_WAVE_DASH_RIGHT_ADJUST', 0.30 );  // 〜／～
-define( 'HATAKITI_OCCULT_PDF_PUNCT_RIGHT_ADJUST', 0.25 );      // 、。
+define( 'HATAKITI_OCCULT_PDF_PUNCT_RIGHT_ADJUST', 0.40 );      // 、。
 
 /**
  * 続き記事の冒頭に付ける「継続表示」の高さ（mm）。指示書§7「記事の続きが
