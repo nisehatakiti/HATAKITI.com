@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '18' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '19' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -689,30 +689,6 @@ function hatakiti_occult_pdf_body_segment_h( $article, $tier ) {
 }
 
 /**
- * 記事（または続き）をこの場に置く場合に必要な箱の高さ（mm）を返す。
- * 本文部分は hatakiti_occult_pdf_body_segment_h() が決める（途中
- * セグメントは1段固定、最終セグメントは縮小）。
- *
- * 新規記事（続きでない）はこれに加えて見出し・見出し-本文間隔・出典
- * ストリップぶんを載せる。大見出しのサイズはtierで変わってよいが、
- * それは見出し部分だけの話であり本文の段の高さには影響しない
- * （指示書§21「大見出しと本文段は分離して考える」「LARGEだから本文
- * 1段の高さまで大きくすることは禁止」）。続きは元の見出しそのものを
- * 再表示しないが、代わりに小さな継続表示ラベル（指示書§7「記事の続きが
- * 読者に明確に分かること」）ぶんの高さを載せる。
- */
-function hatakiti_occult_pdf_segment_box_h( $pdf, $font_bold, $article, $tier, $box_w ) {
-    $body_h = hatakiti_occult_pdf_body_segment_h( $article, $tier );
-    if ( ! empty( $article['_continuation'] ) ) {
-        return HATAKITI_OCCULT_PDF_CONTINUATION_LABEL_H_MM + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM + $body_h;
-    }
-    $fonts    = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
-    $headline = (string) ( $article['headline'] ?? '' );
-    $head_h   = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $fonts['headline'], $headline, $box_w );
-    return $head_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM + HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM + $body_h;
-}
-
-/**
  * 見出し（横書き・箱の全幅で折り返し）に必要な高さ(mm)を、実際には
  * 描画せず見積もる。
  */
@@ -731,46 +707,71 @@ function hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $font_pt
 }
 
 /**
- * 1記事を「箱」(x=左端, y=上端, w=幅, h=高さ)の中に描画する。
+ * 見出し（または続きラベル）に必要な高さ(mm)を見積もる。ブロック内の
+ * 各列の本文開始Y座標を揃えるには、実際に描画する前にブロック内の
+ * 全列ぶんの見出し高さが分かっている必要があるため、描画用関数
+ * （hatakiti_occult_pdf_draw_article_box）とは別に切り出してある。
+ *
+ *   - $article が続き記事（_continuation）なら、それがこのブロックの
+ *     最初のセグメントであるかどうかに関わらず、続きラベルの高さを返す
+ *     — ラベルを表示するかどうか（$is_first_in_block）は呼び出し側が
+ *     決めるが、高さの見積もり自体はラベル前提でよい（続き記事が
+ *     ブロック内2セグメント目以降になることはなく、続き記事は必ず
+ *     ブロックの最初のセグメントとして現れるため — 同一ブロック内の
+ *     2セグメント目以降はこの関数を呼ばずheader_h=0を直接使う）。
+ *   - 新規記事なら実際の見出し文字列を計測する。
+ */
+function hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $article, $tier, $col_w ) {
+    if ( ! empty( $article['_continuation'] ) ) {
+        return HATAKITI_OCCULT_PDF_CONTINUATION_LABEL_H_MM;
+    }
+    $fonts    = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
+    $headline = (string) ( $article['headline'] ?? '' );
+    return hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $fonts['headline'], $headline, $col_w );
+}
+
+/**
+ * 1記事（の1セグメントぶん）を描画する。
  *
  * 指示書の核心：Article = 面積であり Article = 1列 ではない。見出しは
  * 横書きで箱の全幅を使って上部に、本文は見出しの下で「箱の全幅を使った
  * 縦書き複数列」として組む。これにより1記事が細い縦ストリップに閉じ
  * こめられることを避ける。
  *
- * @return array array('overflow_body'=>array|null)
+ * 見出し領域の高さ($header_h)と本文開始Y座標は、呼び出し側
+ * （hatakiti_occult_pdf_stack_articles）がブロック単位で決めてから渡す
+ * — この関数自身は「見出しがこの記事にとって実際に必要な高さ」を
+ * 使って本文開始位置を決めたりしない。同一ブロック内の複数列で
+ * 見出しの行数が異なっても、本文の開始Y座標（$y + $header_h + gap）が
+ * 全列で完全に一致する（追加指示§3〜§6「本文開始位置を揃える」）。
+ *
+ * @param string $mode 'headline'=新規記事の見出しを描く／
+ *                      'label'=ページまたぎ続きの継続ラベルを描く／
+ *                      'none'=同一ページ内の同一列直下続き（見出しも
+ *                      ラベルも描かず、本文をそのまま$yから続ける）
+ * @param float  $header_h このセグメントに割り当てる見出し領域の高さ。
+ *                      'headline'/'label'ではブロック内の最大値
+ *                      （block_header_h）、'none'では常に0。
+ * @return array array('overflow_body'=>array|null, 'bottom_y'=>float)
  */
-function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box ) {
+function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $x, $y, $w, $header_h, $mode ) {
     $fonts    = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
     $headline = (string) ( $article['headline'] ?? '' );
     $body     = (string) ( $article['body'] ?? '' );
 
-    $x = $box['x'];
-    $y = $box['y'];
-    $w = $box['w'];
-    $h = $box['h'];
-
-    $is_continuation = ! empty( $article['_continuation'] );
-
-    // 見出し：横書き、箱の全幅で折り返し（新聞の見出し帯）。続きの箱は
-    // 元の見出しをそのまま再表示するのではなく、小さな1行の継続表示
-    // ラベル「「元見出しの短縮形」の続き」に置き換える — 読者がどの記事
-    // の続きかを見失わないようにするため（指示書§7「記事の続きが読者に
-    // 明確に分かること」）。
-    if ( $is_continuation ) {
-        $label_source = (string) ( $article['headline'] ?? '' );
-        $label_short  = mb_substr( $label_source, 0, 16 );
-        if ( mb_strlen( $label_source ) > 16 ) {
+    if ( 'label' === $mode ) {
+        // ページをまたいだ続き — 元の見出しをそのまま再表示するのでは
+        // なく、小さな1行の継続表示ラベル「「元見出しの短縮形」の続き」
+        // を描く（指示書§2「ページをまたぐ場合の続き表示は維持する」）。
+        $label_short = mb_substr( $headline, 0, 16 );
+        if ( mb_strlen( $headline ) > 16 ) {
             $label_short .= '…';
         }
         $label_text = hatakiti_occult_pdf_fullwidth_digits( '「' . $label_short . '」の続き' );
         $pdf->SetFont( $font_regular, '', HATAKITI_OCCULT_PDF_CONTINUATION_LABEL_FONT_PT );
         $pdf->SetXY( $x, $y );
         $pdf->Cell( $w, HATAKITI_OCCULT_PDF_CONTINUATION_LABEL_H_MM, $label_text, 0, 0, 'L' );
-        $head_h = HATAKITI_OCCULT_PDF_CONTINUATION_LABEL_H_MM;
-    } elseif ( '' === $headline ) {
-        $head_h = 0.0;
-    } else {
+    } elseif ( 'headline' === $mode && '' !== $headline ) {
         // 表示用に全角化した文字列で折り返し幅を測る・描くの両方を行う
         // — 測定と描画で異なる文字列を使うと折り返し行数がずれ、罫線と
         // 本文が重なる不具合の原因になる（過去に修正した問題と同じ種類）。
@@ -778,18 +779,20 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         $head_pt     = $fonts['headline'];
         $head_line_h = $head_pt * 0.3528 * 1.3;
         $pdf->SetFont( $font_bold, '', $head_pt );
-        $head_h = max( $head_line_h, $pdf->getStringHeight( $w, $headline_display ) );
         $pdf->SetXY( $x, $y );
         $pdf->MultiCell( $w, $head_line_h, $headline_display, 0, 'L' );
     }
+    // 'none'（同一ページ内・同一列の直下続き）は見出しもラベルも描かず、
+    // 本文をそのまま連続させる（追加指示§1「不要な続きラベルを廃止」）。
 
-    // 見出し(または続きラベル)と本文の間隔は共通。出典ストリップだけは
-    // 続きの箱で省略する（出典は記事の最初の箱にすでに表示済みのため、
-    // 情報は失われない）。
-    $gap   = HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
-    $src_h = $is_continuation ? 0.0 : HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM;
-    $body_top = $y + $head_h + $gap;
-    $body_h   = $h - ( $head_h + $gap ) - $src_h;
+    // 見出し(またはラベル)と本文の間隔は、何か描いた場合のみ設ける。
+    // 'none'では見出し領域そのものが無い（$header_h=0）ため、間隔も
+    // 置かず本文をこのセグメントの先頭からそのまま続ける（追加指示§1
+    // 「不要な続きラベル用の高さや余白も確保しないこと」）。
+    $gap      = 'none' === $mode ? 0.0 : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+    $src_h    = 'headline' === $mode ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
+    $body_top = $y + $header_h + $gap;
+    $body_h   = hatakiti_occult_pdf_body_segment_h( $article, $tier );
 
     $overflow_body = null;
     if ( $body_h > 2.0 ) {
@@ -799,18 +802,19 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         $body_col_pitch = $body_char_h * 1.08;
         // 段落の切れ目ごとに新しい列から始める（禁則処理ぶんの余白も
         // 生じる）ため、単純な「総文字数÷1段あたりの文字数」の見積もり
-        // ($unit_count/$body_capacity)は実際に必要な列数を過小評価する
-        // ことがある。過小評価したぶんで列数を打ち切ると、前の段にまだ
-        // 描画可能な余地があるのに本文の末尾が丸ごと次の箱へ送られて
-        // しまう（指示書§8「実際の描画可能領域を計算し、可能なら前段へ
-        // 収める」）。そこで列数は幅が物理的に許す上限（$max_cols_by_w）
-        // をそのまま使う — 実際の描画は本文を使い切った時点で自然に
-        // 停止するため、上限を大きくしても余計な空列が増えることはない。
+        // では実際に必要な列数を過小評価することがある。過小評価した
+        // ぶんで列数を打ち切ると、前の段にまだ描画可能な余地があるのに
+        // 本文の末尾が丸ごと次の箱へ送られてしまう（指示書§8「実際の
+        // 描画可能領域を計算し、可能なら前段へ収める」）。そこで列数は
+        // 幅が物理的に許す上限（$max_cols_by_w）をそのまま使う — 実際の
+        // 描画は本文を使い切った時点で自然に停止するため、上限を大きく
+        // しても余計な空列が増えることはない。
         $max_cols_by_w  = max( 0, (int) floor( $w / $body_col_pitch ) );
         $cols_to_use    = $max_cols_by_w;
 
         if ( $cols_to_use < 1 ) {
             $overflow_body = $body_paragraphs;
+            $body_content_h = 0.0;
         } else {
             $body_result = hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $body_paragraphs, $x + $w, $body_top, $body_h, $cols_to_use, $fonts['body'], $font_regular );
             if ( $body_result['overflow'] ) {
@@ -821,17 +825,16 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         $overflow_body = hatakiti_occult_pdf_build_units( $body );
     }
 
-    // 出典（横書き、箱の下端の専用ストリップ内に1行）。紙面先行型では
-    // 箱の高さ($h)はグリッド単位の整数倍で決まっており、本文が短く
-    // 終わった場合の余白は意図した余白として扱う（詰めない）ため、出典
-    // 行も本文の実際の終端ではなく箱の下端に固定する — 罫線（箱の境界）
-    // と揃った位置関係を保つ。狭い箱でも隣とぶつからないよう割当幅に
-    // 収まる文字数まで短縮する（詳細な元記事タイトル・URLは紙面末尾の
-    // 出典一覧に必ず載るので情報は失われない）。
+    $bottom_y = $body_top + $body_h;
+
+    // 出典（横書き、本文のすぐ下に1行）。今回そろえるのは見出し上端と
+    // 本文開始位置までであり、記事の終了位置（出典・罫線の位置）まで
+    // 列間で無理に揃えようとはしない（追加指示§7）— 出典は単純にこの
+    // セグメント自身の本文の直後に置く。
     $source_lines = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
     if ( $source_lines && $w > 12 && $src_h > 0 ) {
         $src_font  = 6.3;
-        $src_y     = $y + $h - $src_h + 0.6;
+        $src_y     = $bottom_y + 0.6;
         $max_chars = max( 2, (int) floor( $w / ( $src_font * 0.55 ) ) );
         $sl        = $source_lines[0];
         $text      = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
@@ -842,9 +845,10 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         if ( $sl['url'] ) {
             $pdf->Link( $x, $src_y, $w, 3.4, $sl['url'] );
         }
+        $bottom_y += $src_h;
     }
 
-    return array( 'overflow_body' => $overflow_body );
+    return array( 'overflow_body' => $overflow_body, 'bottom_y' => $bottom_y );
 }
 
 /**
@@ -928,18 +932,30 @@ function hatakiti_occult_pdf_decide_row_columns( $queue, $zone_w ) {
  * （1〜3）を1回だけ決め、各列にはキュー先頭からその列数ぶんの記事を
  * 割り当てる。そのあとは各列を完全に独立に、同じX座標・同じ列幅の
  * まま下方向へ積み上げる — ある列の記事が続く限り、その続きは必ず
- * 同じ列にとどまる（追加指示§1〜§7「同一記事の連続性」「元記事と同じ
- * 列位置の維持」「読者が視線を下方向へ追うだけで続きを読めること」）。
+ * 同じ列にとどまる（同一記事の連続性・元記事と同じ列位置の維持）。
  * 1つの列の記事が完結しても、その空いた列へ別の記事を割り込ませる
  * ことはしない — ブロックは全列が完結する（またはページ末に達する）
  * まで終わらず、次のブロックはその時点の最も深い列の位置から、
- * 改めて列数を判定して始まる（追加指示§8「ページをまたぐ場合のみ
- * 新しいページのレイアウトを再判定してよい」の裏返しとして、同一
- * ページ内でブロックの列配置を勝手に組み替えない）。
+ * 改めて列数を判定して始まる（同一ページ内でブロックの列配置を勝手に
+ * 組み替えない）。
+ *
+ * 【見出し領域と本文領域の分離】各列の見出し（またはブロック先頭の
+ * 続きラベル）の高さはブロック内で列ごとに異なってよいが、本文の
+ * 開始Y座標はブロック内の全列で完全に一致させる — 見出しが長い列に
+ * 合わせて block_header_h = ブロック内の各列の見出し高さの最大値を
+ * 求め、全列とも body_start_y = block_top + block_header_h + 共通余白
+ * から本文を描き始める（追加指示§3〜§6）。見出しが短い列は、見出し
+ * 下に余白ができてよい。記事の終了位置（出典・罫線）まで列間で揃える
+ * 必要はない（追加指示§7）。
+ *
+ * 【続きラベルの要否】ブロックの最初のセグメント（＝キューに入っていた
+ * ときにすでに続き記事だったもの＝ページをまたいだ続き）は継続表示
+ * ラベルを表示する。一方、同じ列の中で2セグメント目以降（＝同一ページ
+ * 内でこの場で発生した続き）はラベルを一切表示せず、見出し領域も
+ * 確保しない（高さ0）— 本文がそのまま連続して見える（追加指示§1/§2）。
  *
  * 紙面利用率（列によっては他の列より早く記事が完結し、そのぶん
- * 空白が残る）よりも、列位置の一貫性を優先する（追加指示の優先順位
- * ①〜⑥）。
+ * 空白が残る）よりも、列位置の一貫性を優先する。
  *
  * @return array array('bottom_y'=>mm, 'drew_any'=>bool, 'debug'=>array)
  */
@@ -963,15 +979,27 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $col_x[ $k ] = $zone_x + $zone_w - ( ( $k + 1 ) * $col_w ) - ( $k * $col_gap );
         }
 
+        // ブロック内全列の「最初のセグメント」の見出し（またはラベル）
+        // 高さを先に見積もり、その最大値を全列共通の見出し領域高さと
+        // する — これにより本文開始Y座標を列間で完全に揃えられる
+        // （追加指示§5「block_header_h = 最大値」）。
+        $block_header_h = 0.0;
+        for ( $k = 0; $k < $cols; $k++ ) {
+            $h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $k ], $queue[ $k ]['_tier'], $col_w );
+            $block_header_h = max( $block_header_h, $h );
+        }
+        $body_start_y = $block_top + $block_header_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+
         $col_final   = array(); // 各列で最後に残った記事（nullなら完結）
         $col_bottom  = array(); // 各列が到達した実際のY
         $col_drew    = array();
 
         for ( $k = 0; $k < $cols; $k++ ) {
-            $article    = $queue[ $k ];
-            $y          = $block_top;
-            $drew_this  = false;
-            $stall_key  = null;
+            $article     = $queue[ $k ];
+            $is_first    = true; // このブロック内でこの列の最初のセグメントか
+            $y           = $block_top;
+            $drew_this   = false;
+            $stall_key   = null;
             $stall_count = 0;
 
             while ( true ) {
@@ -990,32 +1018,54 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                     break;
                 }
 
-                $tier  = $article['_tier'];
-                $box_h = hatakiti_occult_pdf_segment_box_h( $pdf, $font_bold, $article, $tier, $col_w );
-                if ( $y + $box_h > $page_bottom ) {
+                $tier = $article['_tier'];
+                // このセグメントの見出し領域：ブロック最初のセグメント
+                // だけblock_header_h（ラベル or 見出し）を使い、2回目
+                // 以降は0（見出しもラベルも無し・本文がそのまま続く）。
+                if ( $is_first ) {
+                    $mode     = ! empty( $article['_continuation'] ) ? 'label' : 'headline';
+                    $header_h = $block_header_h;
+                    $seg_top  = $block_top; // 全列共通の見出し上端
+                } else {
+                    $mode     = 'none';
+                    $header_h = 0.0;
+                    $seg_top  = $y;
+                }
+
+                $body_h    = hatakiti_occult_pdf_body_segment_h( $article, $tier );
+                $gap       = 'none' === $mode ? 0.0 : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+                $src_h     = 'headline' === $mode ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
+                $seg_bottom = $seg_top + $header_h + $gap + $body_h + $src_h;
+                if ( $seg_bottom > $page_bottom ) {
                     break;
                 }
 
-                $box    = array( 'x' => $col_x[ $k ], 'y' => $y, 'w' => $col_w, 'h' => $box_h );
-                $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box );
+                $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $col_x[ $k ], $seg_top, $col_w, $header_h, $mode );
                 $drew_this = true;
 
                 $debug[] = array(
                     'page' => $page_no, 'tier' => $tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
                     'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
-                    'x' => round( $col_x[ $k ], 1 ), 'y' => round( $y, 1 ), 'w' => round( $col_w, 1 ), 'h' => round( $box_h, 1 ),
+                    'x' => round( $col_x[ $k ], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $col_w, 1 ), 'h' => round( $result['bottom_y'] - $seg_top, 1 ),
                     'continuation' => ! empty( $article['_continuation'] ),
+                    'mode' => $mode,
+                    'label_shown' => 'label' === $mode,
+                    'is_first_in_block' => $is_first,
+                    'body_top' => round( $seg_top + $header_h + $gap, 1 ),
                     'overflow' => ! empty( $result['overflow_body'] ),
                 );
 
                 $pdf->SetLineWidth( 'large' === $tier && 1 === $cols ? 0.5 : 0.25 );
-                $pdf->Line( $col_x[ $k ], $y + $box_h + ( $row_gap / 2 ), $col_x[ $k ] + $col_w, $y + $box_h + ( $row_gap / 2 ) );
+                $pdf->Line( $col_x[ $k ], $result['bottom_y'] + ( $row_gap / 2 ), $col_x[ $k ] + $col_w, $result['bottom_y'] + ( $row_gap / 2 ) );
 
-                $y += $box_h + $row_gap;
+                $y        = $result['bottom_y'] + $row_gap;
+                $is_first = false;
 
                 if ( ! empty( $result['overflow_body'] ) ) {
                     // この列の記事はまだ続く — 続きも必ず同じ列
-                    // （同じX座標・同じ列幅）に留める。
+                    // （同じX座標・同じ列幅）に留める。同一ページ内の
+                    // この続きは、次のループでmode='none'（ラベル無し）
+                    // として描かれる。
                     $continuation                  = $article;
                     $continuation['_continuation'] = true;
                     $continuation['body']          = hatakiti_occult_pdf_overflow_to_text( $result['overflow_body'] );
