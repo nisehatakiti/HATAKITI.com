@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '15' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '16' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -59,16 +59,21 @@ define( 'HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM', 34.0 );
 define( 'HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN', 20 );
 
 /**
- * 重要度（tier）の本文フォントサイズから、「本文1段」＝
- * HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN文字ぶんの物理高さ（mm）を
- * 計算する。記事の箱の本文部分は、続きも含め常にこの1段ぶんの高さ
- * ちょうどになる — 段を複数個積んで1つの箱にする（＝1箱が2段分3段分の
- * 高さを持つ）ことはしない。記事がこの1段に収まりきらなければ、続きは
- * 同じ高さの次の箱（罫線で区切られた次の段）へ送る（指示書§2/§5/§6）。
- * +1文字ぶん余裕を持たせるのは、hatakiti_occult_pdf_column_capacity()
- * 側の禁則処理向け安全マージン（floor(...)−1）と辻褄を合わせ、この
- * 高さで実際に描画すると必ずちょうど
- * HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN文字が上限になるようにするため。
+ * 「本文1段」＝HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN文字ぶんの物理高さ
+ * （mm）を計算する。本文フォントサイズは全tier共通の
+ * HATAKITI_OCCULT_PDF_BODY_FONT_PTを使う（指示書§13）ため、この関数は
+ * 実質どのtierを渡しても同じ値を返す — 引数の$tierはlayout_constants()
+ * から本文フォントサイズを引くための入口として残しているだけで、
+ * 「tierによって1段の高さが変わる」という意味ではない。
+ *
+ * 記事の箱の本文部分は、続きも含め常にこの1段ぶんの高さちょうどになる
+ * — 段を複数個積んで1つの箱にする（＝1箱が2段分3段分の高さを持つ）こと
+ * はしない。記事がこの1段に収まりきらなければ、続きは同じ高さの次の箱
+ * （罫線で区切られた次の段）へ送る（指示書§2/§5/§6）。+1文字ぶん余裕を
+ * 持たせるのは、hatakiti_occult_pdf_column_capacity()側の禁則処理向け
+ * 安全マージン（floor(...)−1）と辻褄を合わせ、この高さで実際に描画する
+ * と必ずちょうどHATAKITI_OCCULT_PDF_CHARS_PER_COLUMN文字が上限になる
+ * ようにするため。
  */
 function hatakiti_occult_pdf_unit_h_mm( $tier ) {
     $fonts  = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
@@ -94,6 +99,16 @@ function hatakiti_occult_pdf_fullwidth_digits( $text ) {
 }
 
 /**
+ * 本文の文字サイズ（pt）。tier・記事・空きスペースの都合によらず、
+ * PDF全体で唯一のこの値を使う（指示書§13「本文文字サイズは全記事・
+ * 全ページ・全段組みで完全に統一する」）。記事を箱に収めるための調整は
+ * 段数・段高さ・紙面レイアウト・ページ送りで行い、本文フォントサイズ
+ * そのものは変更しない。見出しサイズはtierごとに変えてよい
+ * （hatakiti_occult_pdf_layout_constants()のtier_fonts参照、指示書§14）。
+ */
+define( 'HATAKITI_OCCULT_PDF_BODY_FONT_PT', 9.5 );
+
+/**
  * mm単位の版面定数。すべてA4縦（210×297mm）を前提にする。
  */
 function hatakiti_occult_pdf_layout_constants() {
@@ -110,10 +125,13 @@ function hatakiti_occult_pdf_layout_constants() {
         // 指示書の方針に従う（本文を削って合わせない）。
         'masthead_h'      => HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM + 15.0,
         'page2_header_h'  => 6.0,  // 2ページ目以降の簡易見出し
+        // 見出しサイズは記事の重要度（tier）を表現するためのものとして
+        // tierごとに変えるが、本文サイズは3tierとも
+        // HATAKITI_OCCULT_PDF_BODY_FONT_PTで統一する（指示書§13/§14）。
         'tier_fonts'      => array(
-            'large'  => array( 'headline' => 18.5, 'body' => 10.8 ),
-            'medium' => array( 'headline' => 13.0, 'body' => 9.4 ),
-            'small'  => array( 'headline' => 10.0, 'body' => 8.5 ),
+            'large'  => array( 'headline' => 18.5, 'body' => HATAKITI_OCCULT_PDF_BODY_FONT_PT ),
+            'medium' => array( 'headline' => 13.0, 'body' => HATAKITI_OCCULT_PDF_BODY_FONT_PT ),
+            'small'  => array( 'headline' => 10.0, 'body' => HATAKITI_OCCULT_PDF_BODY_FONT_PT ),
         ),
     );
 }
@@ -887,28 +905,40 @@ function hatakiti_occult_pdf_requeue_or_shift( &$queue, $idx, $article, $overflo
  *     描画する。まだ続きが出る場合は次の同じ高さの箱（次の段）へ。
  *   - 箱高さが残りに収まらない場合：先頭が続き記事なら、他の記事を
  *     割り込ませたり繰り上げたりは一切せず、そのままこのゾーンを終える
- *     （指示書§7「同一記事の連続性」）。先頭がまだ開始していない新規
+ *     （指示書§5「同一記事の連続性」）。先頭がまだ開始していない新規
  *     記事なら、後方のキューに「この残りに収まる記事」がないか探して
- *     繰り上げる（hatakiti_occult_pdf_find_fitting_index、指示書§9/§10
- *     「入る記事を探す」）— 続きは常にキュー先頭にしか現れないため、
- *     この繰り上げが他の記事の連続性を壊すことはない。
- *   - tierが同じ記事が2本連続するときは横並びペアとして組む
- *     （small/medium/largeいずれのtierでも可、指示書§12「2面以降も
- *     横並び記事を確保する」）。
+ *     繰り上げる（hatakiti_occult_pdf_find_fitting_index）— 続きは常に
+ *     キュー先頭にしか現れないため、この繰り上げが他の記事の連続性を
+ *     壊すことはない。
+ *   - $policy（'pair_any_tier' / 'pair_same_tier' / 'no_pair'）に応じて
+ *     キュー先頭2件を横並びペアとして組むかどうかが決まる。この$policy
+ *     自体は呼び出し側が固定で選ぶのではなく、
+ *     hatakiti_occult_pdf_choose_zone_policy() が複数policyを実際に
+ *     ドライランしてスコアリングし、最も紙面利用率・横並び数・段高さの
+ *     整合性が良いものを選ぶ（指示書§7/§8「紙面先行型レイアウト探索」
+ *     「複数の記事の組み合わせを評価し、スコアで最良のものを採用する」）。
+ *     1面の各ゾーンだけでなく2面以降の各ページについても同様にこの
+ *     選択を行う（指示書§10「すべてのページについて複数Patternを
+ *     評価する」）。
  *   - 罫線は必ず段の境界に置く。本文の実際の終了位置がその境界より
- *     手前にあっても、そこに罫線は置かない（指示書§17相当）。
+ *     手前にあっても、そこに罫線は置かない。
  *   - 続きの箱は見出しを再表示しない（draw_article_box側で処理）ため、
- *     本文が最初の見出しから連続して読める（指示書§8）。
+ *     本文が最初の見出しから連続して読める（指示書§5）。
  *
  * 段幅（$zone_w、pairの場合はその半分）は記事によらず常に固定。
  *
- * 【スコープ上の注記】今回の指示書が示す「複数のページレイアウト候補
- * （A|B、C|D、Eなど複数パターン）を作り、スコア関数で最良のものを選ぶ」
- * という汎用的な探索エンジンまでは実装していない。上記の、続きの連続性
- * を壊さない範囲での先読み・tier一致ペアの一般化・最終セグメント縮小
- * という具体的な改善に絞って対応した（詳細は最終報告に明記）。
+ * 【スコープ上の注記】指示書が例示する「A|B、C|D、Eのような複数マス目
+ * 状のページテンプレート」を、任意形状のネスト箱として汎用的に定義・
+ * 描画する仕組みまでは実装していない（そこまで一般化すると、テンプレート
+ * ごとにmm単位のジオメトリを個別定義する必要があり、既存の描画パイプ
+ * ライン全体の再設計が必要になる）。代わりに、実質的に同じ効果 —
+ * 「横並びにするか／どのtier同士を組み合わせるか」という紙面構成の
+ * 選択肢を複数用意し、実際にドライランして紙面利用率・横並び数・空白・
+ * 段高さの整合性をスコアリングし、最良のものを採用する — を、ゾーン単位
+ * の$policy選択として実装した。1ページ・1ゾーンあたり3案
+ * （pair_any_tier / pair_same_tier / no_pair）を比較する。
  */
-function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
+function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1, $policy = 'pair_same_tier' ) {
     $y           = $zone_y;
     $remaining   = $zone_h_budget;
     $row_gap     = HATAKITI_OCCULT_PDF_ROW_GAP_MM;
@@ -938,24 +968,51 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             break;
         }
 
-        // tierが同じ記事が2本並ぶ場合は横に並べてコンパクトに組む
-        // （新聞の小記事の並びを模す — 指示書§12「2面以降も横並び記事
-        // を確保する」に対応するため、small限定だったペア機構を
-        // medium/largeにも一般化した）。1本だけ残っている場合や、次が
-        // 同じtierでない場合は通常どおりゾーン全幅で処理する。
-        if ( isset( $queue[1] ) && $queue[1]['_tier'] === $tier
-            && in_array( $tier, array( 'small', 'medium', 'large' ), true ) ) {
-            $pair_gap = 2.0;
-            $pair_w   = ( $zone_w - $pair_gap ) / 2;
-            $article2 = $queue[1];
+        // このゾーンで採用中の$policyに応じて、キュー先頭2件を横並びに
+        // 組んでよいか判定する（指示書§7「候補となる複数の記事の組み
+        // 合わせを評価する」— 実際の評価・選択は呼び出し側の
+        // hatakiti_occult_pdf_choose_zone_policy() が複数policyを
+        // ドライランしてスコアで行う）。
+        //   'pair_same_tier' : 先頭2件のtierが一致する場合のみ横並び
+        //     （新聞の小記事の並びを模す最も保守的な組み方）。
+        //   'pair_any_tier'  : tierが違っても先頭2件を横並びにする
+        //     （指示書のA|C図のように、必ずしも同じtier同士とは限らない
+        //     横並びを許す）。
+        //   'no_pair'        : 横並びを一切試みず、常にゾーン全幅で
+        //     順番に積む（比較用のベースライン）。
+        $tier2                  = isset( $queue[1] ) ? $queue[1]['_tier'] : null;
+        $pair_allowed_by_policy = 'no_pair' !== $policy && null !== $tier2
+            && ( 'pair_any_tier' === $policy || ( 'pair_same_tier' === $policy && $tier2 === $tier ) );
 
+        // policy上は横並びが許されていても、2件の箱高さが大きく食い違う
+        // 場合は横並びにしない。続き記事が残りわずか（最終セグメント）
+        // のところへ、まだ長く続く新規記事とペアにしてしまうと、
+        // box_h = max(h1, h2) に引きずられて短いほうの箱の大部分が
+        // 空白のまま残ってしまう — これは「箱が固定だから」という理由
+        // で空白を残すことに他ならず禁止（指示書）。高さの比が一定以下
+        // なら単独描画にフォールバックし、短いほうは実際に必要な高さ
+        // まで縮小して次の記事のために空間を解放する
+        // （hatakiti_occult_pdf_body_segment_h の最終セグメント縮小）。
+        $can_pair = false;
+        $pair_gap = 2.0;
+        $pair_w   = ( $zone_w - $pair_gap ) / 2;
+        if ( $pair_allowed_by_policy ) {
+            $article2 = $queue[1];
+            $h1       = hatakiti_occult_pdf_segment_box_h( $pdf, $font_bold, $article, $tier, $pair_w );
+            $h2       = hatakiti_occult_pdf_segment_box_h( $pdf, $font_bold, $article2, $tier2, $pair_w );
+            $taller   = max( $h1, $h2 );
+            $shorter  = min( $h1, $h2 );
+            $can_pair = $taller > 0 && ( $shorter / $taller ) >= 0.55;
+        }
+
+        if ( $can_pair ) {
             // 両記事の箱高さ（新規なら見出しぶん込み、続きなら本文
             // ぶんそのもの）のうち大きいほうを共有の高さとして使う —
-            // 横並びのペアの下端を視覚的に揃えるため。どちらかが残り
-            // 高さに収まらなければ、他の記事を割り込ませたりせず
-            // このゾーンを終える（指示書§4/§13）。
-            $h1    = hatakiti_occult_pdf_segment_box_h( $pdf, $font_bold, $article, $tier, $pair_w );
-            $h2    = hatakiti_occult_pdf_segment_box_h( $pdf, $font_bold, $article2, $tier, $pair_w );
+            // 横並びのペアの下端を視覚的に揃えるため。それぞれの記事
+            // 自身のtierでフォントサイズを決める（pair_any_tierでは
+            // 両者のtierが異なり得る）。どちらかが残り高さに収まらな
+            // ければ、他の記事を割り込ませたりせずこのゾーンを終える
+            // （指示書§5「同一記事の連続性」）。
             $box_h = max( $h1, $h2 );
             if ( $remaining < $box_h ) {
                 break;
@@ -964,11 +1021,11 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $box_r = array( 'x' => $zone_x + $pair_w + $pair_gap, 'y' => $y, 'w' => $pair_w, 'h' => $box_h );
             $box_l = array( 'x' => $zone_x, 'y' => $y, 'w' => $pair_w, 'h' => $box_h );
             $r1 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box_r );
-            $r2 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article2, $tier, $box_l );
+            $r2 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article2, $tier2, $box_l );
             $drew_any = true;
 
             $debug[] = array( 'page' => $page_no, 'tier' => $tier . '(pair-R)', 'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_r['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $box_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r1['overflow_body'] ) );
-            $debug[] = array( 'page' => $page_no, 'tier' => $tier . '(pair-L)', 'headline' => mb_substr( (string) ( $article2['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_l['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $box_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r2['overflow_body'] ) );
+            $debug[] = array( 'page' => $page_no, 'tier' => $tier2 . '(pair-L)', 'headline' => mb_substr( (string) ( $article2['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_l['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $box_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r2['overflow_body'] ) );
 
             $pdf->SetLineWidth( 0.25 );
             $pdf->Line( $zone_x + $pair_w + ( $pair_gap / 2 ), $y, $zone_x + $pair_w + ( $pair_gap / 2 ), $y + $box_h );
@@ -1043,6 +1100,98 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
     }
 
     return array( 'bottom_y' => $y, 'drew_any' => $drew_any, 'debug' => $debug );
+}
+
+/**
+ * 「紙面先行型レイアウト探索」の核。1ゾーンぶんについて、複数の
+ * 配置方針（policy）を実際にドライラン（使い捨てのPDFインスタンス
+ * 上で本当に描画してみて、実寸で結果を測る — 概算ではなく実描画条件に
+ * 基づいて判定する、指示書§14/§7）し、スコアの最も高いものを採用する
+ * （指示書§7/§8「複数のレイアウト候補を評価し、スコアで選ぶ」）。
+ *
+ * 候補となるpolicy：
+ *   'pair_any_tier'  : tierが違っても先頭2件を横並びにする
+ *   'pair_same_tier' : tierが一致する場合のみ横並びにする
+ *   'no_pair'        : 横並びを一切試みない（比較用ベースライン）
+ *
+ * 3案とも同じ$queueの状態（コピー）から独立にドライランするため、
+ * どの案を選んでも実際のキューの消費順そのものは変わらない —
+ * 変わるのは「同じ記事たちを横並びにまとめるか、縦に並べるか」という
+ * 組み方だけ。そのため、この探索は指示書§5「同一記事の連続性」を
+ * 一切壊さない。
+ */
+function hatakiti_occult_pdf_score_zone_layout( $debug, $used_h, $zone_h_budget, $queue_exhausted ) {
+    $pair_count  = 0;
+    $box_heights = array();
+    foreach ( $debug as $row ) {
+        $box_heights[] = $row['h'];
+        if ( false !== strpos( $row['tier'], '(pair-R)' ) ) {
+            $pair_count++;
+        }
+    }
+
+    $zone_h_budget = max( 0.01, $zone_h_budget );
+    $utilization   = min( 1.0, $used_h / $zone_h_budget );
+    $leftover_frac = max( 0.0, ( $zone_h_budget - $used_h ) / $zone_h_budget );
+
+    $score  = 0.0;
+    $score += $utilization * 100.0;      // ＋紙面利用率
+    $score += $pair_count * 18.0;        // ＋横並び記事数
+
+    // ＋箱容量に対する適合率・段高さの整合性：同一tierの箱高さのばら
+    // つきが小さいほど加点（分散が小さい＝段高さが揃っている）。
+    if ( count( $box_heights ) > 1 ) {
+        $mean = array_sum( $box_heights ) / count( $box_heights );
+        $var  = 0.0;
+        foreach ( $box_heights as $h ) {
+            $var += ( $h - $mean ) * ( $h - $mean );
+        }
+        $var /= count( $box_heights );
+        $score -= sqrt( $var ) * 0.6;    // －記事ごとの高さの極端なばらつき
+    }
+
+    // －巨大な連続空白領域／ページ下部だけに残る大きな空白：まだ記事が
+    // 残っているのにゾーンの4分の1を超える空白を残して終えた場合のみ
+    // 強く減点する（記事が尽きた自然な余白は指示書上も許容されるため
+    // 減点しない）。
+    if ( ! $queue_exhausted && $leftover_frac > 0.25 ) {
+        $score -= $leftover_frac * 220.0;
+    }
+
+    return $score;
+}
+
+/**
+ * $queueの現状態（コピー）に対して、指定policyで実際にゾーンを
+ * ドライラン（使い捨てのTCPDFインスタンス上に本当に描画してみる）し、
+ * その結果をスコアリングする。$queueは一切変更しない。
+ */
+function hatakiti_occult_pdf_dry_run_zone_policy( $queue, $zone_w, $zone_h_budget, $page_no, $policy ) {
+    list( $pdf, $font_regular, $font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+    $pdf->AddPage();
+    $queue_copy = $queue;
+    $result     = hatakiti_occult_pdf_stack_articles( $queue_copy, $pdf, $font_regular, $font_bold, 0, 0, $zone_w, $zone_h_budget, $page_no, $policy );
+    $score      = hatakiti_occult_pdf_score_zone_layout( $result['debug'], $result['bottom_y'], $zone_h_budget, empty( $queue_copy ) );
+    return $score;
+}
+
+/**
+ * 1ゾーンぶんについて、複数の配置policyをドライランで比較し、最も
+ * スコアの高いものの名前を返す（指示書§7/§8「候補となる複数の記事の
+ * 組み合わせを評価し、最もスコアの高いPatternを採用する」）。
+ */
+function hatakiti_occult_pdf_choose_zone_policy( $queue, $zone_w, $zone_h_budget, $page_no ) {
+    $policies = array( 'pair_any_tier', 'pair_same_tier', 'no_pair' );
+    $best_policy = 'pair_same_tier';
+    $best_score  = null;
+    foreach ( $policies as $policy ) {
+        $score = hatakiti_occult_pdf_dry_run_zone_policy( $queue, $zone_w, $zone_h_budget, $page_no, $policy );
+        if ( null === $best_score || $score > $best_score ) {
+            $best_score  = $score;
+            $best_policy = $policy;
+        }
+    }
+    return $best_policy;
 }
 
 /**
@@ -1199,11 +1348,18 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         $other_queue = array_merge( $tiers['medium'], $tiers['small'] );
 
         $large_x = $c['margin_l'] + $left_zone_w + $zone_gap;
+        // 各ゾーンについて、複数の配置policyをドライランで比較し最も
+        // スコアの高いものを採用してから、実際に描画する（指示書§7/§8
+        // 「紙面先行型レイアウト探索」）。
+        $large_policy = $large_zone_w > 0
+            ? hatakiti_occult_pdf_choose_zone_policy( $large_queue, $large_zone_w, $h_try1, 1 )
+            : 'pair_same_tier';
         $large_stack = $large_zone_w > 0
-            ? hatakiti_occult_pdf_stack_articles( $large_queue, $pdf, $font_regular, $font_bold, $large_x, $page1_col_top, $large_zone_w, $h_try1, 1 )
+            ? hatakiti_occult_pdf_stack_articles( $large_queue, $pdf, $font_regular, $font_bold, $large_x, $page1_col_top, $large_zone_w, $h_try1, 1, $large_policy )
             : array( 'bottom_y' => $page1_col_top, 'debug' => array() );
 
-        $left_stack = hatakiti_occult_pdf_stack_articles( $other_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $left_zone_w, $h_try1, 1 );
+        $left_policy = hatakiti_occult_pdf_choose_zone_policy( $other_queue, $left_zone_w, $h_try1, 1 );
+        $left_stack  = hatakiti_occult_pdf_stack_articles( $other_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $left_zone_w, $h_try1, 1, $left_policy );
 
         $debug_log = array_merge( $large_stack['debug'], $left_stack['debug'] );
 
@@ -1229,15 +1385,19 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         $other_queue = array_merge( $tiers['medium'], $tiers['small'] );
 
         $large_x = $c['margin_l'] + $left_zone_w + $zone_gap;
+        $large_policy = $large_zone_w > 0
+            ? hatakiti_occult_pdf_choose_zone_policy( $large_queue, $large_zone_w, $page1_col_h_full, 1 )
+            : 'pair_same_tier';
         $large_stack = $large_zone_w > 0
-            ? hatakiti_occult_pdf_stack_articles( $large_queue, $pdf, $font_regular, $font_bold, $large_x, $page1_col_top, $large_zone_w, $page1_col_h_full, 1 )
+            ? hatakiti_occult_pdf_stack_articles( $large_queue, $pdf, $font_regular, $font_bold, $large_x, $page1_col_top, $large_zone_w, $page1_col_h_full, 1, $large_policy )
             : array( 'bottom_y' => $page1_col_top, 'debug' => array() );
         if ( $large_zone_w > 0 ) {
             $pdf->SetLineWidth( 0.6 );
             $pdf->Line( $large_x - ( $zone_gap / 2 ), $page1_col_top, $large_x - ( $zone_gap / 2 ), $page1_col_top + $page1_col_h_full );
         }
 
-        $left_stack = hatakiti_occult_pdf_stack_articles( $other_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $left_zone_w, $page1_col_h_full, 1 );
+        $left_policy = hatakiti_occult_pdf_choose_zone_policy( $other_queue, $left_zone_w, $page1_col_h_full, 1 );
+        $left_stack  = hatakiti_occult_pdf_stack_articles( $other_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $left_zone_w, $page1_col_h_full, 1, $left_policy );
 
         $debug_log = array_merge( $large_stack['debug'], $left_stack['debug'] );
 
@@ -1276,8 +1436,13 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
                 $page_n_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page_n_col_top;
 
                 // footerぶんを引かず、ページのフル高さをそのまま記事に使う。
-                $page_n_stack = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no );
-                $debug_log    = array_merge( $debug_log, $page_n_stack['debug'] );
+                // 2ページ目以降も単純な縦積みにせず、このページ1枚ぶんに
+                // ついて複数の配置policyをドライランで比較してから採用
+                // する（指示書§10「すべてのページについて、同じように
+                // 複数Patternを評価する」）。
+                $page_n_policy = hatakiti_occult_pdf_choose_zone_policy( $page2_queue, $full_w, $page_n_col_h_full, $page_no );
+                $page_n_stack  = hatakiti_occult_pdf_stack_articles( $page2_queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no, $page_n_policy );
+                $debug_log     = array_merge( $debug_log, $page_n_stack['debug'] );
 
                 if ( empty( $page2_queue ) ) {
                     // このページで記事が尽きた。footerがこのページの
