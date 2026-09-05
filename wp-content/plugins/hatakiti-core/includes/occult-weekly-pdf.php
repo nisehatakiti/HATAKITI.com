@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '10' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '11' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -50,15 +50,36 @@ define( 'HATAKITI_OCCULT_PDF_LOGO_ASPECT', 3.0 );
 define( 'HATAKITI_OCCULT_PDF_LOGO_HEIGHT_MM', 34.0 );
 
 /**
- * 紙面グリッドの基準単位（mm）。段幅・段配置・記事高さの「目安」として
- * 設計時に参照した値であり、現在は記事の開始可否や箱の高さを直接
- * 決定する計算には使わない — それらは「残り高さが本文を1行も配置
- * できない高さ未満か」（hatakiti_occult_pdf_min_viable_start_h()）と
- * 実際に描画された内容の真の高さ（used_h、hatakiti_occult_pdf_draw_
- * article_box()の戻り値）に基づく（指示書「グリッドは空白を発生させる
- * ための制約ではない」「紙面利用効率を最優先する」）。
+ * 「紙面先行型」組版の中心定数。記事の文字量を見てから箱の高さを決める
+ * のではなく、重要度（tier）ごとに箱の高さを先に固定し、その箱に記事を
+ * 割り当てる（指示書「記事から紙面を作るのではなく、紙面を先に作り、
+ * その紙面に記事を入れる」）。同一記事が複数の箱にまたがる場合も、
+ * 続きの箱は同じtierである限り必ず同じ高さになる — tierを変えない
+ * 限り箱の高さも変わらないため、「同一記事の段ごとに高さが変わる」
+ * ことが構造的に起こらない。
+ *
+ * 値は実際にPDFを生成・目視確認した結果に基づく暫定値 — small/medium/
+ * largeそれぞれの典型的な記事量が、可能な限り1箱で完結する（分割を
+ * 最小化する）ことを目安に調整する。
  */
-define( 'HATAKITI_OCCULT_PDF_GRID_UNIT_H_MM', 30.0 );
+define( 'HATAKITI_OCCULT_PDF_SMALL_BOX_H_MM', 45.0 );
+define( 'HATAKITI_OCCULT_PDF_MEDIUM_BOX_H_MM', 95.0 );
+define( 'HATAKITI_OCCULT_PDF_LARGE_BOX_H_MM', 190.0 );
+
+/**
+ * 重要度（tier）から、その記事が使う固定の箱の高さ（mm）を返す。
+ * 記事の文字量には一切依存しない — これが「紙面先行型」の核。
+ */
+function hatakiti_occult_pdf_tier_box_h( $tier ) {
+    switch ( $tier ) {
+        case 'large':
+            return HATAKITI_OCCULT_PDF_LARGE_BOX_H_MM;
+        case 'medium':
+            return HATAKITI_OCCULT_PDF_MEDIUM_BOX_H_MM;
+        default:
+            return HATAKITI_OCCULT_PDF_SMALL_BOX_H_MM;
+    }
+}
 
 /**
  * 半角数字→全角数字の表示用マッピング。DB上のarticles_json／headline／
@@ -560,10 +581,9 @@ define( 'HATAKITI_OCCULT_PDF_CONTINUATION_FONT_PT', 7.0 );
  *   ROW_GAP_MM: 縦に積んだ記事ボックス間の区切り線の余白（線の上下
  *     それぞれに ROW_GAP_MM/2 ずつ）。
  *
- * 記事の開始可否の判定自体は「残り高さが本文を1行も配置できない高さ
- * 未満か」（hatakiti_occult_pdf_min_viable_start_h()）に一本化した —
- * 固定のグリッド単位数（下記 HATAKITI_OCCULT_PDF_GRID_UNIT_H_MM）を
- * 最低条件にはしない。
+ * 記事の開始可否は「tierごとの固定箱高さ
+ * （hatakiti_occult_pdf_tier_box_h()）が残り高さに収まるか」で判定する
+ * — 紙面先行型（箱を先に決め、記事を割り当てる）の一部。
  */
 define( 'HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM', 2.2 );
 define( 'HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM', 2.2 );
@@ -585,42 +605,16 @@ function hatakiti_occult_pdf_column_capacity( $col_h_mm, $char_h ) {
 }
 
 /**
- * 記事（または続き）をこの場で開始してよい最低限の高さ（mm）を返す。
- * 「残り高さ < 本文を1行も配置できない高さ」の場合に限り次へ送る、
- * という判定に使う — 固定のグリッド単位数（例:30mm）を最低条件には
- * しない。グリッドは段幅・基準高さ・記事配置の基準であり、紙面利用
- * 効率より優先する空白を生む制約にはしない（指示書「グリッドは空白を
- * 発生させるための制約ではない」「残り高さ<30mmだけを理由に次へ送る
- * ことを禁止する」）。
- *
- * 見出し（続きの場合は小さい再掲見出し）＋見出し-本文間隔＋本文最低
- * 1行＋下端マージンが収まれば「開始してよい」とみなす。実際に何行
- * 描画できるかは hatakiti_occult_pdf_draw_article_box() が改めて
- * その場の残り高さいっぱいまで判断する。
+ * キュー中で、現在の残り高さ$remainingに固定箱がそのまま収まる（tierの
+ * 固定箱高さ hatakiti_occult_pdf_tier_box_h() 以下に収まる）最初の
+ * 記事のインデックスを返す。先頭記事のtier箱が残りに入りきらない場合、
+ * 後方に「この残りに収まるtierの記事」がないか探すために使う（例：
+ * medium箱95mmは残り70mmに入らないが、small箱45mmの記事なら入る）。
+ * 見つからなければnull。$start_idxより前は探索しない。
  */
-function hatakiti_occult_pdf_min_viable_start_h( $pdf, $font_bold, $article, $tier, $box_w ) {
-    $fonts           = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
-    $headline        = (string) ( $article['headline'] ?? '' );
-    $is_continuation = ! empty( $article['_continuation'] );
-    $head_pt         = hatakiti_occult_pdf_headline_font_pt( $article, $fonts['headline'] );
-    $head_h          = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $head_pt, $headline, $box_w );
-    $gap             = $is_continuation ? HATAKITI_OCCULT_PDF_CONTINUATION_HEAD_GAP_MM : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
-    $char_h          = $fonts['body'] * 0.3528;
-    return $head_h + $gap + $char_h + HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM;
-}
-
-/**
- * キュー中で、現在の残り高さ$remainingに完全に収まる（続きを発生させ
- * ない）最初の記事のインデックスを探す。新規記事の先頭（queue[0]）が
- * 開始に必要な最低高さを満たせない場合に、後方に「この隙間にちょうど
- * 収まる記事」がないか先読みするために使う（指示書§3「先読み」・§9
- * 「短い記事30mmが隙間に収まるなら検討する」）。見つからなければnull。
- * $start_idxより前は探索しない（キュー先頭より前に戻すことはない）。
- */
-function hatakiti_occult_pdf_find_full_fit_index( $queue, $start_idx, $pdf, $font_bold, $box_w, $remaining ) {
+function hatakiti_occult_pdf_find_fitting_tier_index( $queue, $start_idx, $remaining ) {
     for ( $i = $start_idx; $i < count( $queue ); $i++ ) {
-        $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $queue[ $i ], $queue[ $i ]['_tier'], $box_w );
-        if ( $needed_h <= $remaining ) {
+        if ( hatakiti_occult_pdf_tier_box_h( $queue[ $i ]['_tier'] ) <= $remaining ) {
             return $i;
         }
     }
@@ -766,7 +760,6 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     $body_h   = $h - ( $head_h + $gap ) - $src_h;
 
     $overflow_body = null;
-    $content_h     = 0.0;
     if ( $body_h > 2.0 ) {
         list( $unit_count, $body_paragraphs ) = hatakiti_occult_pdf_count_units( $body );
 
@@ -784,28 +777,22 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
             if ( $body_result['overflow'] ) {
                 $overflow_body = $body_result['remainder'];
             }
-            // 割り当てた$body_h全部ではなく、実際に文字が置かれた深さ
-            // （段落区切りで途中までしか埋まらない列があり得るため、
-            // 割り当てより浅いことがある）。これを使って罫線・出典の
-            // 位置を決めることで、「本文の終端より下に罫線があり、
-            // その間が無駄な空白になる」不具合を防ぐ（指示書§5/§6）。
-            $content_h = $body_result['content_h'];
         }
     } else {
         $overflow_body = hatakiti_occult_pdf_build_units( $body );
     }
 
-    // 出典（横書き、本文の実際の終端直後に1行）。箱に事前に割り当てた
-    // 高さ($h)の下端に固定すると、本文が短く終わった場合に出典行が
-    // 宙に浮き、その下にも無駄な空白ができてしまうため、本文の実終端
-    // （$body_top + $content_h）を基準に置く。狭い箱でも隣とぶつから
-    // ないよう割当幅に収まる文字数まで短縮する（詳細な元記事タイトル・
-    // URLは紙面末尾の出典一覧に必ず載るので情報は失われない）。
-    $source_lines  = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
-    $src_drawn_h   = 0.0;
+    // 出典（横書き、箱の下端の専用ストリップ内に1行）。紙面先行型では
+    // 箱の高さ($h)はtierで決まる固定値であり、本文が短く終わった場合の
+    // 余白は意図した余白として扱う（詰めない）ため、出典行も本文の実際
+    // の終端ではなく箱の下端に固定する — 罫線（箱の境界）と揃った位置
+    // 関係を保つ。狭い箱でも隣とぶつからないよう割当幅に収まる文字数
+    // まで短縮する（詳細な元記事タイトル・URLは紙面末尾の出典一覧に
+    // 必ず載るので情報は失われない）。
+    $source_lines = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
     if ( $source_lines && $w > 12 && $src_h > 0 ) {
         $src_font  = 6.3;
-        $src_y     = $body_top + $content_h + 0.8;
+        $src_y     = $y + $h - $src_h + 0.6;
         $max_chars = max( 2, (int) floor( $w / ( $src_font * 0.55 ) ) );
         $sl        = $source_lines[0];
         $text      = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
@@ -816,16 +803,9 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         if ( $sl['url'] ) {
             $pdf->Link( $x, $src_y, $w, 3.4, $sl['url'] );
         }
-        $src_drawn_h = ( $src_y - $body_top ) + 3.4;
     }
 
-    // 箱全体として実際に使った高さ（見出し＋間隔＋本文実終端、または
-    // ＋出典行）。呼び出し側はこれを使って罫線位置・次の記事の開始
-    // 位置を決める — 事前に割り当てた$hをそのまま使うと、内容がそれ
-    // より浅く終わった分がすべて無駄な空白になってしまう。
-    $used_h = $head_h + $gap + max( $content_h, $src_drawn_h );
-
-    return array( 'overflow_body' => $overflow_body, 'used_h' => $used_h );
+    return array( 'overflow_body' => $overflow_body );
 }
 
 /**
@@ -870,34 +850,27 @@ function hatakiti_occult_pdf_requeue_or_shift( &$queue, $idx, $article, $overflo
 }
 
 /**
- * ゾーン組版。グリッド（HATAKITI_OCCULT_PDF_GRID_UNIT_H_MM）は段幅・
- * 基準高さ・記事配置の基準であって、紙面利用効率より優先する制約では
- * ない（指示書「グリッドは空白を発生させるための制約ではない」）。
+ * 「紙面先行型」のゾーン組版。記事の文字量を見てから箱の高さを決める
+ * のではなく、重要度（tier）ごとに固定された箱の高さ
+ * （hatakiti_occult_pdf_tier_box_h）を先に決め、その箱へ記事を割り
+ * 当てる（指示書「記事から紙面を作るのではなく、紙面を先に作り、その
+ * 紙面に記事を入れる」）。
  *
- *   - 記事を次のゾーン／ページへ送るのは「残り高さが、本文を1行も配置
- *     できない高さ未満」の場合に限る（固定のグリッド単位数を最低条件に
- *     しない — 指示書§1/§4「残り40mmなのに次へ送るのは禁止」）。新規
- *     記事・続き記事のどちらも同じ基準
- *     （hatakiti_occult_pdf_min_viable_start_h：見出し＋間隔＋本文1行
- *     ＋下端マージン）で判定する。満たせない場合のみ、後方のキューに
- *     「この残りに完全に収まりきる記事」がないか探し（先読み）、なければ
- *     このゾーンを終える。
- *   - 箱の高さは、まず本文量に見合った見積もり
- *     （hatakiti_occult_pdf_estimate_box_height）を使う。見積もりが
- *     残り高さより大きい（＝どうせ続きが出る）場合だけ残り高さいっぱい
- *     まで広げる — 常に残り高さ全部を渡すと、1列あたりの許容行数が
- *     実際の本文量に対して過大になり、短い記事でも幅を使わず少ない列に
- *     縦長へ詰め込む形になって紙面を大きく無駄にする（実装・検証中に
- *     この回帰を確認し、見積もり優先の方式に戻した）。罫線・次の記事の
- *     開始位置は、割り当てた高さではなく実際に描画された内容の真の
- *     高さ（used_h、draw_article_box()の戻り値）を基準にする。これに
- *     より「本文の実終端より下に罫線があり、その間が無駄な空白になる」
- *     ことを防ぎ（指示書§3/§5/§6）、見積もりが実際より保守的だった分
- *     もその場で次の記事のために回収できる。
- *   - 同一記事が複数の箱にまたがる場合、各箱の高さは「その箱で実際に
- *     使った分」になる。新しいページの先頭からは常にページの全高が
- *     割り当てられるため、内容が十分にある限り各箱は自然にそのページ
- *     の最大深さ近くまで揃う（指示書§2「段の下端がバラバラ」の防止）。
+ *   - 箱の高さは記事の文字量に一切依存しない。同じtierである限り、
+ *     新規記事も続きの記事も常に同じ固定高さの箱を使う — 続きが
+ *     「同じ記事なのに前の箱より高い／低い」ことは構造的に起こらない
+ *     （指示書§16「今回の最重要視覚ルール」）。
+ *   - 箱に記事の本文が入りきらなければ続きは次の箱（同じtier・同じ
+ *     固定高さ）へ、余れば箱の残り部分は意図した余白として扱う —
+ *     箱を埋めるために本文を詰めたり、逆に他の記事を割り込ませたりは
+ *     しない（指示書§7/§10/§19）。
+ *   - 罫線は必ず箱の境界（$y + 箱の固定高さ）に置く。本文の実際の
+ *     終了位置には合わせない（指示書§12「記事本文が終わった位置では
+ *     なく、箱の境界に線を置く」）。
+ *   - 先頭の記事の固定箱が残り高さに入りきらない場合、後方のキューに
+ *     「この残りに収まるtierの記事」がないか探して繰り上げる。無ければ
+ *     このゾーンを終える — 残りは次ページの新しい箱へ渡す（無理に
+ *     詰めない）。
  *
  * 段幅（$zone_w、pairの場合はその半分）は記事によらず常に固定。
  */
@@ -938,42 +911,28 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $pair_gap = 2.0;
             $pair_w   = ( $zone_w - $pair_gap ) / 2;
             $article2 = $queue[1];
+            $box_h    = HATAKITI_OCCULT_PDF_SMALL_BOX_H_MM;
 
-            $min1 = hatakiti_occult_pdf_min_viable_start_h( $pdf, $font_bold, $article, 'small', $pair_w );
-            $min2 = hatakiti_occult_pdf_min_viable_start_h( $pdf, $font_bold, $article2, 'small', $pair_w );
-            if ( $remaining < max( $min1, $min2 ) ) {
+            if ( $remaining < $box_h ) {
                 break;
             }
 
-            // 箱の高さは、まず見積もり（実際の本文量に見合った自然な
-            // 高さ）を使う — ここでいきなり$remaining（ページの残り
-            // 全部）を渡すと、1列あたりの許容行数（capacity）が実際の
-            // 本文量に対して過大になり、短い記事でも「幅を使わず、
-            // 少ない列にひたすら縦長に詰め込む」形になって紙面を大きく
-            // 無駄にする。見積もりが残りより大きい（＝どうせ続きが出る）
-            // 場合のみ、残り高さいっぱいまで広げる。
-            $need1    = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, 'small', $pair_w );
-            $need2    = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article2, 'small', $pair_w );
-            $box_h    = min( max( $need1, $need2 ), $remaining );
-
-            // 両者を同じ高さの箱で描画し、実際に使った高さ(used_h)の
-            // 大きい方を共有の実高さとする — 横並びのペアは下端を視覚的
-            // に揃えたいため（指示書§2の考え方を左右2記事の整列にも
-            // 適用）、短い方の側にできる余白は意図したものであり、
-            // 無駄な空白ではない。
+            // 箱の高さは常に固定（HATAKITI_OCCULT_PDF_SMALL_BOX_H_MM）
+            // — 両記事の文字量には一切左右されない。片方が短ければ
+            // その側の箱には余白が残るだけで、罫線は必ずこの固定高さの
+            // 境界に置く。
             $box_r = array( 'x' => $zone_x + $pair_w + $pair_gap, 'y' => $y, 'w' => $pair_w, 'h' => $box_h );
             $box_l = array( 'x' => $zone_x, 'y' => $y, 'w' => $pair_w, 'h' => $box_h );
             $r1 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, 'small', $box_r );
             $r2 = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article2, 'small', $box_l );
             $drew_any = true;
-            $actual_h = min( max( $r1['used_h'], $r2['used_h'] ), $box_h );
 
-            $debug[] = array( 'page' => $page_no, 'tier' => 'small(pair-R)', 'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_r['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $actual_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r1['overflow_body'] ) );
-            $debug[] = array( 'page' => $page_no, 'tier' => 'small(pair-L)', 'headline' => mb_substr( (string) ( $article2['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_l['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $actual_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r2['overflow_body'] ) );
+            $debug[] = array( 'page' => $page_no, 'tier' => 'small(pair-R)', 'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_r['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $box_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r1['overflow_body'] ) );
+            $debug[] = array( 'page' => $page_no, 'tier' => 'small(pair-L)', 'headline' => mb_substr( (string) ( $article2['headline'] ?? '' ), 0, 16 ), 'x' => round( $box_l['x'], 1 ), 'y' => round( $y, 1 ), 'w' => round( $pair_w, 1 ), 'h' => round( $box_h, 1 ), 'remaining_before' => round( $remaining, 1 ), 'overflow' => ! empty( $r2['overflow_body'] ) );
 
             $pdf->SetLineWidth( 0.25 );
-            $pdf->Line( $zone_x + $pair_w + ( $pair_gap / 2 ), $y, $zone_x + $pair_w + ( $pair_gap / 2 ), $y + $actual_h );
-            $pdf->Line( $zone_x, $y + $actual_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $actual_h + ( $row_gap / 2 ) );
+            $pdf->Line( $zone_x + $pair_w + ( $pair_gap / 2 ), $y, $zone_x + $pair_w + ( $pair_gap / 2 ), $y + $box_h );
+            $pdf->Line( $zone_x, $y + $box_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $box_h + ( $row_gap / 2 ) );
 
             $still1 = hatakiti_occult_pdf_requeue_or_shift( $queue, 0, $article, $r1['overflow_body'] );
             // queue[0]が続きとして残っている場合、2本目は元々queue[1]に
@@ -982,18 +941,18 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $idx2 = $still1 ? 1 : 0;
             hatakiti_occult_pdf_requeue_or_shift( $queue, $idx2, $article2, $r2['overflow_body'] );
 
-            $y         += $actual_h + $row_gap;
-            $remaining -= ( $actual_h + $row_gap );
+            $y         += $box_h + $row_gap;
+            $remaining -= ( $box_h + $row_gap );
             continue;
         }
 
-        // 単独記事：最低でも「本文を1行も配置できない高さ」を確保でき
-        // なければこの場では開始しない。ただし後方のキューに「この残り
-        // に完全に収まりきる記事」があれば繰り上げて隙間を埋める
-        // （先読み）。
-        $min_start = hatakiti_occult_pdf_min_viable_start_h( $pdf, $font_bold, $article, $tier, $zone_w );
-        if ( $remaining < $min_start ) {
-            $fit_idx = hatakiti_occult_pdf_find_full_fit_index( $queue, 1, $pdf, $font_bold, $zone_w, $remaining );
+        // 単独記事：tierごとの固定箱高さが残りに入らなければこの場では
+        // 開始しない。ただし後方のキューに「この残りに収まるtierの
+        // 記事」があれば繰り上げる（例：medium箱は入らないがsmall箱の
+        // 記事なら入る）。見つからなければこのゾーンを終える。
+        $box_h = hatakiti_occult_pdf_tier_box_h( $tier );
+        if ( $remaining < $box_h ) {
+            $fit_idx = hatakiti_occult_pdf_find_fitting_tier_index( $queue, 1, $remaining );
             if ( null === $fit_idx ) {
                 break;
             }
@@ -1003,44 +962,33 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $article         = $queue[0];
             $tier            = $article['_tier'];
             $is_continuation = ! empty( $article['_continuation'] );
+            $box_h           = hatakiti_occult_pdf_tier_box_h( $tier );
         }
 
         // 段幅は常に$zone_wのまま固定（記事の長さによって変えない —
-        // 指示書§13）。箱の高さは、まず本文量に見合った見積もりを使う
-        // — 残り高さをいきなりそのまま渡すと、1列あたりの許容行数
-        // （capacity）が実際の本文量に対して過大になり、短い記事でも
-        // 「幅を使わず少ない列に縦長へ詰め込む」形になって紙面を大きく
-        // 無駄にする（実際にこの実装で検証し、号あたりのページ数が
-        // 4→8〜10に悪化する回帰を確認して以前の方式に戻した）。見積もり
-        // が残りより大きい（＝どうせ続きが出る）場合のみ、残り高さ
-        // いっぱいまで広げる。罫線・次の記事の開始位置は、割り当てた
-        // 高さではなく実際に使った高さ（used_h、draw_article_box()の
-        // 戻り値）を基準にする — 見積もりが実際より保守的だった分は
-        // その場で回収する。
-        $needed_h = hatakiti_occult_pdf_estimate_box_height( $pdf, $font_bold, $article, $tier, $zone_w );
-        $box_h    = min( $needed_h, $remaining );
-
+        // 指示書§13）。箱の高さはtierで決まる固定値のみを使う — 本文が
+        // 短ければ箱の残りは余白のまま、長ければ続きを同じ固定高さの
+        // 次の箱へ送る。罫線は必ずこの固定高さの境界に置く。
         $box    = array( 'x' => $zone_x, 'y' => $y, 'w' => $zone_w, 'h' => $box_h );
         $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $box );
         $drew_any = true;
-        $actual_h = min( $result['used_h'], $box_h );
 
         $debug[] = array(
             'page' => $page_no, 'tier' => $tier,
             'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
-            'x' => round( $zone_x, 1 ), 'y' => round( $y, 1 ), 'w' => round( $zone_w, 1 ), 'h' => round( $actual_h, 1 ),
+            'x' => round( $zone_x, 1 ), 'y' => round( $y, 1 ), 'w' => round( $zone_w, 1 ), 'h' => round( $box_h, 1 ),
             'continuation' => $is_continuation,
             'remaining_before' => round( $remaining, 1 ),
             'overflow' => ! empty( $result['overflow_body'] ),
         );
 
         $pdf->SetLineWidth( 'large' === $tier ? 0.5 : 0.25 );
-        $pdf->Line( $zone_x, $y + $actual_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $actual_h + ( $row_gap / 2 ) );
+        $pdf->Line( $zone_x, $y + $box_h + ( $row_gap / 2 ), $zone_x + $zone_w, $y + $box_h + ( $row_gap / 2 ) );
 
         hatakiti_occult_pdf_requeue_or_shift( $queue, 0, $article, $result['overflow_body'] );
 
-        $y         += $actual_h + $row_gap;
-        $remaining -= ( $actual_h + $row_gap );
+        $y         += $box_h + $row_gap;
+        $remaining -= ( $box_h + $row_gap );
     }
 
     return array( 'bottom_y' => $y, 'drew_any' => $drew_any, 'debug' => $debug );
