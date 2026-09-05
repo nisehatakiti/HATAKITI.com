@@ -37,7 +37,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '20' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '21' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -89,21 +89,53 @@ function hatakiti_occult_pdf_unit_h_mm( $tier ) {
  * 行い、変換後の全角文字はグリフを差し替えて描画するだけに使う
  * （全角文字はASCIIではないためctype_digit()が効かなくなり、変換を
  * 先にやってしまうと桁数判定そのものが壊れる）。
+ *
+ * ASCII数字・上付き数字・下付き数字はまず固定マップで変換する（上付き・
+ * 下付きはUnicode上「10進数字」カテゴリに属さないため、後述の汎用判定
+ * では検出できない）。そのうえで、intl拡張が使える環境では
+ * IntlChar::charDigitValue()により「Unicode上10進数字に分類される
+ * 文字」を汎用的に検出し、まだ全角になっていなければ全角数字へ差し
+ * 替える — ASCII・上下付き数字のどちらでもない、想定外の数字互換
+ * 文字（他言語の10進数字など）が元記事から紛れ込んでいた場合の最終
+ * 防衛ラインとして機能する。intl拡張が無い環境では固定マップのみに
+ * フォールバックする。
  */
 function hatakiti_occult_pdf_fullwidth_digits( $text ) {
     static $map = array(
         '0' => '０', '1' => '１', '2' => '２', '3' => '３', '4' => '４',
         '5' => '５', '6' => '６', '7' => '７', '8' => '８', '9' => '９',
         // 元記事から取り込んだ本文に上付き数字（脚注番号等）が混じって
-        // いることがある。これも通常の全角数字に正規化する（指示書
-        // §10「表示される数字は原則すべて全角数字へ正規化する」）。
+        // いることがある。これも通常の全角数字に正規化する。
         '⁰' => '０', '¹' => '１', '²' => '２', '³' => '３', '⁴' => '４',
         '⁵' => '５', '⁶' => '６', '⁷' => '７', '⁸' => '８', '⁹' => '９',
         // 下付き数字（脚注・化学式等由来）も同様に正規化する。
         '₀' => '０', '₁' => '１', '₂' => '２', '₃' => '３', '₄' => '４',
         '₅' => '５', '₆' => '６', '₇' => '７', '₈' => '８', '₉' => '９',
     );
-    return strtr( (string) $text, $map );
+    $text = strtr( (string) $text, $map );
+
+    if ( ! class_exists( 'IntlChar' ) ) {
+        return $text;
+    }
+
+    static $fw_digits = array( '０', '１', '２', '３', '４', '５', '６', '７', '８', '９' );
+    $chars   = mb_str_split( $text, 1, 'UTF-8' );
+    $changed = false;
+    foreach ( $chars as $i => $ch ) {
+        if ( in_array( $ch, $fw_digits, true ) ) {
+            continue; // すでに全角数字
+        }
+        $cp = IntlChar::ord( $ch );
+        if ( null === $cp || false === $cp ) {
+            continue;
+        }
+        $val = IntlChar::charDigitValue( $cp );
+        if ( null !== $val && $val >= 0 && $val <= 9 ) {
+            $chars[ $i ] = $fw_digits[ $val ];
+            $changed     = true;
+        }
+    }
+    return $changed ? implode( '', $chars ) : $text;
 }
 
 /**
@@ -651,15 +683,15 @@ define( 'HATAKITI_OCCULT_PDF_MIN_COL_W_MM', 55.0 );
  * 縦書き本文中、特定の記号だけがやや左寄りに見える視覚補正のための
  * 右方向オフセット（mm）。通常文字の描画位置・段の高さ計算・列幅
  * 判定など、レイアウト構造には一切影響しない — draw_unit内でその記号
- * を描く直前のX座標にだけ加算する見た目だけの微調整（PDF組版
- * 最終微調整指示）。「明らかに動いた」と分かるほど大きくしないため、
- * いずれも1文字ぶんの幅（col_pitch、9.5pt本文でおよそ3.6mm）に対して
- * 数%程度の小さい値にとどめる。記号ごとに別定数にしておき、実際の
+ * を描く直前のX座標にだけ加算する見た目だけの微調整。1文字ぶんの幅
+ * （col_pitch、9.5pt本文でおよそ3.6mm）に対して数%〜1割弱程度の値に
+ * とどめる（「はっきり動いた」ではなく「他の文字と並べて自然」を目標に、
+ * 前回の値より明確に強めた再調整）。記号ごとに別定数にしておき、実際の
  * PDF画像を見ながら数値だけを調整できるようにする。
  */
-define( 'HATAKITI_OCCULT_PDF_LONG_VOWEL_RIGHT_ADJUST', 0.15 ); // ー
-define( 'HATAKITI_OCCULT_PDF_WAVE_DASH_RIGHT_ADJUST', 0.15 );  // 〜／～
-define( 'HATAKITI_OCCULT_PDF_PUNCT_RIGHT_ADJUST', 0.12 );      // 、。
+define( 'HATAKITI_OCCULT_PDF_LONG_VOWEL_RIGHT_ADJUST', 0.30 ); // ー
+define( 'HATAKITI_OCCULT_PDF_WAVE_DASH_RIGHT_ADJUST', 0.30 );  // 〜／～
+define( 'HATAKITI_OCCULT_PDF_PUNCT_RIGHT_ADJUST', 0.25 );      // 、。
 
 /**
  * 続き記事の冒頭に付ける「継続表示」の高さ（mm）。指示書§7「記事の続きが
