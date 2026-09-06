@@ -38,46 +38,39 @@ function hatakiti_occult_ai_importance_to_tier( $importance ) {
     return isset( $map[ $importance ] ) ? $map[ $importance ] : 'small';
 }
 
-function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
-    $lines           = array();
-    $fetched_count   = 0;
-    $fallback_count  = 0;
+/**
+ * 1件のニュースをAIプロンプトへ渡す行に変換する。STEP1(選定・分類)・
+ * STEP2(執筆)どちらのプロンプトからも共通で呼ばれる — 元記事取得
+ * (hatakiti_fetch_occult_source_article()) はmetaにキャッシュされる
+ * 既存仕様なので、両ステップから呼んでも二重ネットワークアクセスには
+ * ならない。
+ */
+function hatakiti_occult_ai_item_lines( $item ) {
+    $fetch_status = hatakiti_fetch_occult_source_article( $item->ID );
 
-    foreach ( $items as $item ) {
-        // RSS = ニュース発見用、元記事 = 記事作成用の役割分離
-        // (指示書§0)。未取得なら取得を試み、結果はmetaにキャッシュされる
-        // ので同じ号を作り直しても再取得しない（hatakiti_fetch_occult_
-        // source_article() 側の既存判定）。
-        $fetch_status = hatakiti_fetch_occult_source_article( $item->ID );
+    $lines = array(
+        'id: ' . $item->ID,
+        '媒体: ' . get_post_meta( $item->ID, 'hatakiti_occult_source_name', true ),
+        'タイトル: ' . get_the_title( $item->ID ),
+        '公開日時: ' . get_post_meta( $item->ID, 'hatakiti_occult_published_at', true ),
+        'URL: ' . get_post_meta( $item->ID, 'hatakiti_occult_original_url', true ),
+        'RSS要約: ' . $item->post_content,
+    );
 
-        $lines_for_item = array(
-            'id: ' . $item->ID,
-            '媒体: ' . get_post_meta( $item->ID, 'hatakiti_occult_source_name', true ),
-            'タイトル: ' . get_the_title( $item->ID ),
-            '公開日時: ' . get_post_meta( $item->ID, 'hatakiti_occult_published_at', true ),
-            'URL: ' . get_post_meta( $item->ID, 'hatakiti_occult_original_url', true ),
-            'RSS要約: ' . $item->post_content,
-        );
-
-        if ( 'success' === $fetch_status ) {
-            $article_text = get_post_meta( $item->ID, 'hatakiti_occult_source_article_text', true );
-            if ( $article_text ) {
-                $lines_for_item[] = '元記事本文（事実確認・記事執筆のための資料。転載・引用元ではなく参考情報として扱うこと）: ' . $article_text;
-                $fetched_count++;
-            } else {
-                $fallback_count++;
-            }
-        } else {
-            // 取得失敗・対象外ホスト等 — RSS要約のみで続行する
-            // （指示書§13の明示的なフォールバック方針）。
-            $fallback_count++;
+    if ( 'success' === $fetch_status ) {
+        $article_text = get_post_meta( $item->ID, 'hatakiti_occult_source_article_text', true );
+        if ( $article_text ) {
+            $lines[] = '元記事本文（事実確認・記事執筆のための資料。転載・引用元ではなく参考情報として扱うこと）: ' . $article_text;
         }
-
-        $lines[] = implode( "\n", $lines_for_item );
     }
-    $items_text = implode( "\n\n---\n\n", $lines );
+    // 取得失敗・対象外ホスト等はRSS要約のみで続行する（指示書§13の
+    // 明示的なフォールバック方針、無変更）。
 
-    $category_guide = <<<CATS
+    return implode( "\n", $lines );
+}
+
+function hatakiti_occult_ai_category_guide_text() {
+    return <<<CATS
 - UMA・未確認生物: 未確認生物、怪物、謎の生物、未知の動物など
 - UFO・宇宙: UFO、UAP、宇宙人、異星人、宇宙現象、地球外生命など
 - 心霊・怪談: 幽霊、霊、心霊現象、怪談、怪奇現象、呪われた場所など
@@ -89,32 +82,115 @@ function hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end ) {
 - 予言・終末: 予言、未来予知、終末論、世界滅亡、災害予言など
 - その他: 上記のどれにも明確に分類できないもの
 CATS;
+}
+
+/**
+ * STEP1（選定・クラスタリング・重要度／カテゴリ判定）専用プロンプト。
+ *
+ * 2026-09-07の自動発行失敗（18記事分の「クラスタリング＋執筆＋分類」を
+ * 1回のAnthropic呼び出しにまとめた結果、cURL error 28で280秒×3回とも
+ * 応答0バイトのまま終了）を受けて、旧hatakiti_build_occult_ai_prompt()
+ * の単一プロンプトを2段階へ分割した。このSTEP1は本文執筆を一切行わない
+ * ため出力が小さく、入力に全ニュースの元記事本文を含めてもクラスタ
+ * 判定の精度は変えずに応答時間を短く保てる（LLMの応答時間は一般に
+ * 出力トークン数に強く依存し、入力サイズの影響は相対的に小さいため）。
+ */
+function hatakiti_build_occult_ai_planning_prompt( $items, $week_start, $week_end ) {
+    $lines = array();
+    foreach ( $items as $item ) {
+        $lines[] = hatakiti_occult_ai_item_lines( $item );
+    }
+    $items_text     = implode( "\n\n---\n\n", $lines );
+    $category_guide = hatakiti_occult_ai_category_guide_text();
 
     $system = <<<SYS
-あなたは「週刊オカルト新聞」（HATAKITI.com）のAI編集者です。複数の情報源から集まった1週間分のオカルト関連ニュースを分析し、クラスタリング・重要度判定・新聞記事としての執筆を行います。
+あなたは「週刊オカルト新聞」（HATAKITI.com）のAI編集者です。複数の情報源から集まった1週間分のオカルト関連ニュースを分析し、クラスタリング・重要度判定・カテゴリ分類を行います。この段階では記事本文は執筆しません（本文執筆は別の担当者が後続の工程で行います）。
 
 【入力データについて】
-各ニュースには「RSS要約」（短い、記事発見用の情報）に加えて、可能な場合は「元記事本文」（元記事ページから抽出した本文。事実確認・記事執筆のための資料）が付いています。元記事本文がある場合はそちらを優先的な事実の根拠として使い、RSS要約はタイトル・概要の補助として扱ってください。元記事本文が無いニュースは、RSS要約だけで分かる範囲にとどめてください（不足を想像で埋めない）。
+各ニュースには「RSS要約」（短い、記事発見用の情報）に加えて、可能な場合は「元記事本文」（元記事ページから抽出した本文）が付いています。クラスタリング（同一事件かどうかの判断）の材料として使ってください。
+
+【クラスタリングのルール — 最重要】
+- 単純なタイトルの類似だけで同一事件と判断してはいけません。人物、場所、日付、事件内容、固有名詞、発生経緯を具体的に照らし合わせて判断してください。
+- 同一事件・続報と判断できる場合のみ、それらのニュースを1つのグループにまとめてください。
+- 関連事件・同じテーマではあるが別の出来事の場合は、無理に1つにまとめず、別々のグループとして残してください。
+- 判断に自信が持てない場合は、統合せず別グループのままにしてください。誤って別の事件を同一事件として統合するより、別グループとして残すことを優先してください。
+
+【重要度判定】
+各グループに、次の3段階のいずれかを付けてください。
+- headline（大見出し）: 今週で最も重要・注目度の高い事件。原則として1〜2本程度。
+- major（主要記事）: 一定の関心を集める話題。
+- minor（小記事）: 単独ニュースで扱いが小さいもの。
+
+【カテゴリ分類】
+各グループに、次の10カテゴリのうち最も近いもの1つを category として付けてください（複数選択・新規カテゴリの作成は不可、必ず下記の表記のまま使用）。
+{$category_guide}
+分類に迷った場合は、無理に複数カテゴリを付けず、最も近い1カテゴリを選んでください。
+
+【出典の追跡】
+- 各グループには、含めたニュースのidを必ず item_ids に列挙してください。
+- id は下記に与えられたものだけを使い、絶対に新しいidを作らないでください。
+
+【story_noteについて】
+story_noteは、後で本文を執筆する担当者への引き継ぎメモです。読者向けの文章ではなく、「何が起きたか」を1〜2文で簡潔に書いてください（詳細な執筆は担当者が元記事を読んで行います）。
+
+【出力形式】
+説明文やMarkdownのコードフェンスを一切付けず、以下の構造のJSONオブジェクトのみを出力してください。本文（body）はここでは出力しないでください。
+
+{
+  "issue_title": "その号の内容を表す短いタイトル案（号数・回数は含めない。実在しない号数を作らないこと。例: 週刊オカルト新聞 ― 終末予言と奇跡の遺物）",
+  "editorial_summary": "今週全体を振り返る編集後記（2〜4文程度）",
+  "groups": [
+    {
+      "importance": "headline または major または minor",
+      "category": "超常現象",
+      "item_ids": [123, 456],
+      "story_note": "執筆担当への引き継ぎメモ（1〜2文）"
+    }
+  ]
+}
+SYS;
+
+    $prompt = "対象期間: {$week_start} 〜 {$week_end}\n\n以下は今週収集されたオカルト関連ニュースです（各項目のidを必ずitem_idsで参照してください）。\n\n{$items_text}\n\n上記を分析し、指示された構造のJSONのみを出力してください。";
+
+    return array( $system, $prompt );
+}
+
+/**
+ * STEP2（執筆）専用プロンプト。1回の呼び出しが扱うグループ数は
+ * HATAKITI_OCCULT_AI_WRITING_BATCH_SIZE 件までに限定し、STEP1が既に
+ * 決定したimportance/category/item_idsはそのまま使う — 執筆担当が
+ * 決めるのはheadline/bodyのみ。
+ */
+function hatakiti_build_occult_ai_writing_prompt( $group_batch, $items_by_id, $week_start, $week_end ) {
+    $blocks = array();
+    foreach ( $group_batch as $group ) {
+        $item_lines = array();
+        foreach ( $group['item_ids'] as $iid ) {
+            if ( isset( $items_by_id[ $iid ] ) ) {
+                $item_lines[] = hatakiti_occult_ai_item_lines( $items_by_id[ $iid ] );
+            }
+        }
+        $blocks[] = "[group_key: {$group['group_key']}]\n"
+            . "重要度: {$group['importance']}\n"
+            . "編集メモ（内部情報。方針の参考にするだけで、本文にそのまま書き写さないこと）: {$group['story_note']}\n"
+            . "対象ニュース:\n" . implode( "\n\n---\n\n", $item_lines );
+    }
+    $groups_text = implode( "\n\n====\n\n", $blocks );
+
+    $system = <<<SYS
+あなたは「週刊オカルト新聞」（HATAKITI.com）のAI記者です。編集部が既にクラスタリング・重要度判定・カテゴリ分類を終えた複数のニューストピックについて、それぞれ新聞記事の本文を執筆します。グループ分け・重要度・使用ニュースは変更しないでください。あなたの仕事は各グループのheadline（見出し）とbody（本文）の執筆だけです。
 
 【この新聞の基本方針 — 最重要】
 - あなたの役割はニュースを数行に「要約」することではありません。読者がHATAKITI.com上の記事本文だけを読めば、そのニュースで何が起きたのか、いつ・どこで・誰が関係し・どのような経緯があり・何が分かっていて何が分かっていないのかを理解できるよう、新聞記事として再構成してください。
 - 出典リンクは「リンク先を読まないと内容が分からない」状態を補うためのものではありません。まずHATAKITI側の記事を完成させ、そのうえで、さらに詳しく調べたい読者のために元記事への入口を用意するものです。
 - 元記事の本文（RSS要約・元記事本文どちらも）をそのまま転載・長文引用してはいけません。読んで理解した事実を、あなた自身の言葉で新聞記事として再構成してください。
 - 入力情報に存在しない事実、人物、発言、日時、場所、因果関係などを創作してはいけません。情報が不足している場合は、不足していることを明示してください。
-- 同一事件について複数の元記事がある場合、(a) 複数の情報源で共通して確認できる事実、(b) 一方の情報源だけが報じている内容、(c) 情報源間で食い違っている部分、を区別して扱ってください。食い違いがある場合、どちらが正しいかをあなたが勝手に決めないでください。
+- 同一グループ内に複数の元記事がある場合、(a) 複数の情報源で共通して確認できる事実、(b) 一方の情報源だけが報じている内容、(c) 情報源間で食い違っている部分、を区別して扱ってください。食い違いがある場合、どちらが正しいかをあなたが勝手に決めないでください。
 
-【クラスタリングのルール — 最重要】
-- 単純なタイトルの類似だけで同一事件と判断してはいけません。人物、場所、日付、事件内容、固有名詞、発生経緯を具体的に照らし合わせて判断してください。
-- 同一事件・続報と判断できる場合のみ、それらのニュースを1つの記事にまとめてください。
-- 関連事件・同じテーマではあるが別の出来事の場合は、無理に1つにまとめず、別々の記事として残してください。
-- 判断に自信が持てない場合は、統合せず別記事のままにしてください。誤って別の事件を同一事件として統合するより、別記事として残すことを優先してください。
-
-【重要度判定と記事の長さ】
-各記事に、次の3段階のいずれかを付けてください。重要度は、そのまま新聞上の記事サイズと本文量に反映されます。
-
-- headline（大見出し）: 今週で最も重要・注目度の高い事件。原則として1〜2本程度。本文は800〜1200字程度を目安にしてください。複数ソースの情報を統合し、出来事の背景、経緯、現在分かっていること、争点や不可解な点まで含めて、読者が単独で読んでも内容を理解できる記事にしてください。
-- major（主要記事）: 一定の関心を集める話題。本文は500〜800字程度を目安にしてください。事件・出来事の概要だけでなく、経緯や注目されている理由まで説明してください。
-- minor（小記事）: 単独ニュースで扱いが小さいもの。本文は200〜350字程度を目安にしてください。短くても「何が起きたのか」が分かる完結した記事にしてください。
+【重要度別の文字数の目安】
+- headline（大見出し）: 800〜1200字程度。複数ソースの情報を統合し、出来事の背景、経緯、現在分かっていること、争点や不可解な点まで含めて、読者が単独で読んでも内容を理解できる記事にしてください。
+- major（主要記事）: 500〜800字程度。事件・出来事の概要だけでなく、経緯や注目されている理由まで説明してください。
+- minor（小記事）: 200〜350字程度。短くても「何が起きたのか」が分かる完結した記事にしてください。
 
 文字数は目安であり、絶対的な上限・下限ではありません。優先順位は「事実性 ＞ 読者がニュースを理解できること ＞ 情報の整理 ＞ 読みやすさ ＞ 文字数」です。元記事本文などから十分な事実が得られる場合は、目安の文字数を満たすように詳しく書いてください。一方、情報が少ないニュースについて、文字数を埋めるためだけに一般論・推測・同じ内容の言い換えを追加することは禁止します。情報が少ない場合は、無理に長くせず、確認できる範囲で簡潔にまとめてください。
 
@@ -133,37 +209,166 @@ CATS;
 - 入力に含まれる情報だけで不足する部分を、想像で補って文字数を稼がないでください。
 - 「報じられている」「〜という」「現時点では確認されていない」など、確認された事実と未確認情報を区別する表現を使ってください。
 
-【出典の追跡】
-- 各記事には、使用した元ニュースのidを必ず source_item_ids に列挙してください。
-- id は下記に与えられたものだけを使い、絶対に新しいidを作らないでください。
-- 1つの記事が複数の元ニュース（同一事件の複数ソース）を統合した場合、その全てのidを含めてください。
-
-【カテゴリ分類】
-各記事に、次の10カテゴリのうち最も近いもの1つを category として付けてください（複数選択・新規カテゴリの作成は不可、必ず下記の表記のまま使用）。
-{$category_guide}
-分類に迷った場合は、無理に複数カテゴリを付けず、記事の主題に最も近い1カテゴリを選んでください。
-
 【出力形式】
-説明文やMarkdownのコードフェンスを一切付けず、以下の構造のJSONオブジェクトのみを出力してください。
+説明文やMarkdownのコードフェンスを一切付けず、以下の構造のJSONオブジェクトのみを出力してください。group_keyは与えられたものをそのまま使い、新しく作らないでください。
 
 {
-  "issue_title": "その号の内容を表す短いタイトル案（号数・回数は含めない。実在しない号数を作らないこと。例: 週刊オカルト新聞 ― 終末予言と奇跡の遺物）",
-  "editorial_summary": "今週全体を振り返る編集後記（2〜4文程度）",
   "articles": [
     {
+      "group_key": "g0",
       "headline": "記事の見出し",
-      "importance": "headline または major または minor",
-      "category": "超常現象",
-      "body": "記事本文",
-      "source_item_ids": [123, 456]
+      "body": "記事本文"
     }
   ]
 }
 SYS;
 
-    $prompt = "対象期間: {$week_start} 〜 {$week_end}\n\n以下は今週収集されたオカルト関連ニュースです（各項目のidを必ずsource_item_idsで参照してください）。\n\n{$items_text}\n\n上記を分析し、重要度に応じた十分な文字量の新聞記事を執筆したうえで、指示された構造のJSONのみを出力してください。";
+    $prompt = "対象期間: {$week_start} 〜 {$week_end}\n\n以下の各グループについて、指定された重要度に応じた新聞記事を執筆してください。グループ分け・重要度・使用ニュースは既に決定済みです。あなたの仕事は本文の執筆のみです。\n\n{$groups_text}\n\n各グループについて、指定されたgroup_keyをそのまま使い、指定された構造のJSONのみを出力してください。";
 
     return array( $system, $prompt );
+}
+
+/**
+ * 1回のSTEP2呼び出しが扱うグループ数の上限。「適切な単位で分割して
+ * 生成」（2026-09-07の指示書§3）の実装値 — 巨大すぎず、かつ呼び出し
+ * 回数が増えすぎない値として4を選んだ。
+ */
+define( 'HATAKITI_OCCULT_AI_WRITING_BATCH_SIZE', 4 );
+
+/**
+ * バッチ内のグループ構成から、この呼び出しに必要そうなmax_tokensを
+ * 見積もる。重要度ごとの目安文字数に応じた大まかな予算＋thinking用の
+ * 余裕を積むだけの単純な見積もりで、正確なトークン換算はしない
+ * （既存のfullwidth文字カウント等と同じ「目安でよい」方針）。
+ */
+function hatakiti_occult_ai_writing_max_tokens( $group_batch ) {
+    $budget = array( 'headline' => 3000, 'major' => 2000, 'minor' => 1000 );
+    $total  = 1500; // thinking + JSON構造のオーバーヘッド分の余裕
+    foreach ( $group_batch as $group ) {
+        $total += isset( $budget[ $group['importance'] ] ) ? $budget[ $group['importance'] ] : 1000;
+    }
+    return max( 4000, min( 20000, $total ) );
+}
+
+/**
+ * STEP1呼び出し。返り値は正規化済みの
+ * ['issue_title'=>string, 'editorial_summary'=>string,
+ *   'groups'=>[['group_key','importance','category','item_ids','story_note'], ...]]
+ * または WP_Error。
+ */
+function hatakiti_call_occult_ai_planning( $items, $week_start, $week_end ) {
+    list( $system, $prompt ) = hatakiti_build_occult_ai_planning_prompt( $items, $week_start, $week_end );
+    $valid_ids = wp_list_pluck( $items, 'ID' );
+
+    $body_check = function ( $decoded ) use ( $valid_ids ) {
+        return hatakiti_occult_ai_planning_body_check( $decoded, $valid_ids );
+    };
+
+    $log_context = array(
+        'phase'           => 'planning',
+        'source_articles' => count( $items ),
+        'prompt_chars'    => mb_strlen( $system ) + mb_strlen( $prompt ),
+    );
+
+    // 本文は出力しないが、18記事規模の実測でmax_tokens=4000は
+    // stop_reason=max_tokensで打ち切られた（thinking+テキスト合算で
+    // 消費されるため）。実測(約70〜80 token/秒)を踏まえ16000/260秒とし、
+    // 元の単一巨大リクエスト(20000/280秒)より小さいがSTEP1単体としては
+    // 十分な余裕を持たせる。
+    $ai_text = hatakiti_call_occult_ai_text( $prompt, $system, $body_check, 16000, 260, $log_context );
+    if ( is_wp_error( $ai_text ) ) {
+        return $ai_text;
+    }
+
+    $decoded = hatakiti_extract_json_from_ai_text( $ai_text );
+    $valid   = hatakiti_occult_ai_validate_planning_structure( $decoded, $valid_ids );
+    if ( is_wp_error( $valid ) ) {
+        return $valid;
+    }
+
+    $valid_categories = hatakiti_occult_category_terms();
+    $groups           = array();
+    foreach ( $decoded['groups'] as $idx => $group ) {
+        $item_ids = array();
+        foreach ( (array) $group['item_ids'] as $sid ) {
+            $sid = (int) $sid;
+            if ( $sid && in_array( $sid, $valid_ids, true ) ) {
+                $item_ids[] = $sid;
+            }
+        }
+        if ( empty( $item_ids ) ) {
+            continue;
+        }
+
+        $category = isset( $group['category'] ) && in_array( $group['category'], $valid_categories, true )
+            ? $group['category']
+            : 'その他';
+
+        $groups[] = array(
+            'group_key'  => 'g' . $idx,
+            'importance' => $group['importance'],
+            'category'   => $category,
+            'item_ids'   => $item_ids,
+            'story_note' => isset( $group['story_note'] ) ? (string) $group['story_note'] : '',
+        );
+    }
+
+    if ( empty( $groups ) ) {
+        return new WP_Error( 'hatakiti_ai_no_valid_groups', 'AIの応答から有効なグループを1件も生成できませんでした。' );
+    }
+
+    return array(
+        'issue_title'       => ( ! empty( $decoded['issue_title'] ) && is_string( $decoded['issue_title'] ) ) ? $decoded['issue_title'] : '',
+        'editorial_summary' => ( ! empty( $decoded['editorial_summary'] ) && is_string( $decoded['editorial_summary'] ) ) ? $decoded['editorial_summary'] : '',
+        'groups'            => $groups,
+    );
+}
+
+/**
+ * STEP2呼び出し（1バッチ分）。返り値は group_key => ['headline','body']
+ * の連想配列、または WP_Error。
+ */
+function hatakiti_call_occult_ai_writing_batch( $group_batch, $items_by_id, $week_start, $week_end, $batch_index ) {
+    list( $system, $prompt ) = hatakiti_build_occult_ai_writing_prompt( $group_batch, $items_by_id, $week_start, $week_end );
+    $expected_keys = wp_list_pluck( $group_batch, 'group_key' );
+
+    $body_check = function ( $decoded ) use ( $expected_keys ) {
+        return hatakiti_occult_ai_writing_body_check( $decoded, $expected_keys );
+    };
+
+    $source_article_count = 0;
+    foreach ( $group_batch as $group ) {
+        $source_article_count += count( $group['item_ids'] );
+    }
+
+    $log_context = array(
+        'phase'           => 'writing',
+        'batch_index'     => $batch_index,
+        'group_count'     => count( $group_batch ),
+        'source_articles' => $source_article_count,
+        'prompt_chars'    => mb_strlen( $system ) + mb_strlen( $prompt ),
+    );
+
+    $max_tokens = hatakiti_occult_ai_writing_max_tokens( $group_batch );
+    $ai_text    = hatakiti_call_occult_ai_text( $prompt, $system, $body_check, $max_tokens, 280, $log_context );
+    if ( is_wp_error( $ai_text ) ) {
+        return $ai_text;
+    }
+
+    $decoded = hatakiti_extract_json_from_ai_text( $ai_text );
+    $valid   = hatakiti_occult_ai_validate_writing_structure( $decoded, $expected_keys );
+    if ( is_wp_error( $valid ) ) {
+        return $valid;
+    }
+
+    $result = array();
+    foreach ( $decoded['articles'] as $article ) {
+        $result[ $article['group_key'] ] = array(
+            'headline' => sanitize_text_field( (string) $article['headline'] ),
+            'body'     => (string) $article['body'],
+        );
+    }
+    return $result;
 }
 
 /**
@@ -177,6 +382,16 @@ SYS;
  *   (occult-weekly-auto-publish.php) so a manual test run can reuse
  *   already-linked news instead of being blocked by "no new news".
  */
+/**
+ * STEP1（選定・クラスタリング・分類）→ STEP2（バッチ分割執筆）→
+ * STEP3（結合）の順で実行する。旧実装は「クラスタリング＋執筆＋分類」
+ * を1回のAnthropic呼び出しにまとめており、2026-09-07にニュース18件の
+ * 号でcURL error 28（280秒×3回とも応答0バイト）を起こして自動発行が
+ * 失敗した。articles_json等の保存形式・hatakiti_process_occult_ai_
+ * response()は完全に無変更 — STEP1/STEP2の結果を同じ
+ * {issue_title, editorial_summary, articles:[...]} 形式へ組み立て直して
+ * から渡すだけなので、DBスキーマ・PDF生成・保存経路への影響は無い。
+ */
 function hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end, $override_items = null ) {
     if ( ! preg_match( '/^\d{4}-\d{2}-\d{2}$/', $week_start ) || ! preg_match( '/^\d{4}-\d{2}-\d{2}$/', $week_end ) ) {
         return new WP_Error( 'hatakiti_ai_bad_range', '対象期間（開始・終了）の形式が正しくありません。' );
@@ -187,16 +402,61 @@ function hatakiti_generate_occult_weekly_draft_via_ai( $week_start, $week_end, $
         return new WP_Error( 'hatakiti_ai_no_items', '対象期間内に、まだどの号にも使われていないニュースがありません。先にRSS取得（またはテストデータ投入）を行ってください。' );
     }
 
-    $valid_ids = wp_list_pluck( $items, 'ID' );
-
-    list( $system, $prompt ) = hatakiti_build_occult_ai_prompt( $items, $week_start, $week_end );
-
-    $ai_text = hatakiti_call_occult_ai_text( $prompt, $system );
-    if ( is_wp_error( $ai_text ) ) {
-        return $ai_text;
+    $valid_ids   = wp_list_pluck( $items, 'ID' );
+    $items_by_id = array();
+    foreach ( $items as $item ) {
+        $items_by_id[ $item->ID ] = $item;
     }
 
-    return hatakiti_process_occult_ai_response( $ai_text, $valid_ids, $week_start, $week_end );
+    // STEP1: 選定・クラスタリング・重要度／カテゴリ判定（本文執筆なし）。
+    $planning = hatakiti_call_occult_ai_planning( $items, $week_start, $week_end );
+    if ( is_wp_error( $planning ) ) {
+        return $planning;
+    }
+
+    // STEP2: グループをHATAKITI_OCCULT_AI_WRITING_BATCH_SIZE件ずつの
+    // バッチへ分割し、バッチごとに本文を執筆。1バッチでも失敗（リトライ
+    // 上限到達）した場合は全体を失敗として返す — 号は
+    // hatakiti_process_occult_ai_response()内でのみ作成されるため、
+    // ここでエラーになっても中途半端な下書きは残らない。
+    $batches = array_chunk( $planning['groups'], HATAKITI_OCCULT_AI_WRITING_BATCH_SIZE );
+    $written = array();
+    foreach ( $batches as $batch_index => $batch ) {
+        $batch_result = hatakiti_call_occult_ai_writing_batch( $batch, $items_by_id, $week_start, $week_end, $batch_index );
+        if ( is_wp_error( $batch_result ) ) {
+            return $batch_result;
+        }
+        $written = $written + $batch_result;
+    }
+
+    // STEP3: STEP1の判定（importance/category/item_ids）とSTEP2の執筆
+    // 結果（headline/body）を、旧単一呼び出し応答と同じ形へ結合する。
+    $articles = array();
+    foreach ( $planning['groups'] as $group ) {
+        $key = $group['group_key'];
+        if ( ! isset( $written[ $key ] ) ) {
+            continue; // hatakiti_occult_ai_validate_writing_structure()が全key網羅を保証するため通常到達しない
+        }
+        $articles[] = array(
+            'headline'        => $written[ $key ]['headline'],
+            'importance'      => $group['importance'],
+            'category'        => $group['category'],
+            'body'            => $written[ $key ]['body'],
+            'source_item_ids' => $group['item_ids'],
+        );
+    }
+
+    if ( empty( $articles ) ) {
+        return new WP_Error( 'hatakiti_ai_no_valid_articles', 'STEP1/STEP2の結果から有効な記事を1件も組み立てられませんでした。' );
+    }
+
+    $merged = array(
+        'issue_title'       => $planning['issue_title'],
+        'editorial_summary' => $planning['editorial_summary'],
+        'articles'          => $articles,
+    );
+
+    return hatakiti_process_occult_ai_response( wp_json_encode( $merged ), $valid_ids, $week_start, $week_end );
 }
 
 /**

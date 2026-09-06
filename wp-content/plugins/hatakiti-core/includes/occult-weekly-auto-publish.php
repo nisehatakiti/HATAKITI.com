@@ -397,7 +397,10 @@ function hatakiti_run_occult_weekly_auto_pipeline( $run_type = 'manual_test' ) {
             );
         }
     } else {
-        $candidates = hatakiti_get_occult_weekly_candidates( $week_start, $week_end, 0 );
+        // ignore_lower_bound=true: a previous week's AI-generation failure
+        // must not strand its still-unlinked news items outside every
+        // later rolling window (2026-09-07 timeout investigation §6).
+        $candidates = hatakiti_get_occult_weekly_candidates( $week_start, $week_end, 0, true );
         if ( ! $candidates ) {
             hatakiti_occult_ai_log( array( 'source' => 'auto_publish', 'run_type' => $run_type, 'step' => 'candidates', 'count' => 0, 'outcome' => 'no_new_news' ) );
             hatakiti_occult_auto_publish_release_lock();

@@ -384,8 +384,19 @@ function hatakiti_finalize_occult_weekly_groups( $post_id, $groups, $relevant_it
  * editing an existing issue), or unlinked and published within
  * [$week_start, $week_end]. Shared by the manual edit form and the AI
  * draft generator so both ever agree on what "this week's news" means.
+ *
+ * @param bool $ignore_lower_bound When true, drops the week_start half of
+ *   the BETWEEN filter (published_at <= week_end only). Default false
+ *   preserves the exact existing behavior for every existing caller (the
+ *   manual "AIで週刊号を作成" form's explicit date range, the candidate-
+ *   count preview). Added for occult-weekly-auto-publish.php's scheduled
+ *   run: if a week's AI generation fails, its still-unlinked news items
+ *   fall outside every later week's rolling 7-day window and would
+ *   otherwise never be offered as candidates again (2026-09-07 timeout
+ *   investigation §6 — "AI生成失敗→次回Cronで自動的に安全に再試行でき
+ *   る" would not actually hold without this).
  */
-function hatakiti_get_occult_weekly_candidates( $week_start, $week_end, $post_id = 0 ) {
+function hatakiti_get_occult_weekly_candidates( $week_start, $week_end, $post_id = 0, $ignore_lower_bound = false ) {
     $meta_query = array( 'relation' => 'OR' );
     if ( $post_id ) {
         $meta_query[] = array( 'key' => 'hatakiti_occult_issue_post_id', 'value' => $post_id );
@@ -398,7 +409,14 @@ function hatakiti_get_occult_weekly_candidates( $week_start, $week_end, $post_id
             array( 'key' => 'hatakiti_occult_issue_post_id', 'compare' => 'NOT EXISTS' ),
         ),
     );
-    if ( $week_start && $week_end ) {
+    if ( $week_start && $week_end && $ignore_lower_bound ) {
+        $unlinked_clause[] = array(
+            'key'     => 'hatakiti_occult_published_at',
+            'value'   => $week_end . ' 23:59:59',
+            'compare' => '<=',
+            'type'    => 'DATETIME',
+        );
+    } elseif ( $week_start && $week_end ) {
         $unlinked_clause[] = array(
             'key'     => 'hatakiti_occult_published_at',
             'value'   => array( $week_start . ' 00:00:00', $week_end . ' 23:59:59' ),
