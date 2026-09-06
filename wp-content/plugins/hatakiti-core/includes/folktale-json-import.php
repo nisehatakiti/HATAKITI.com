@@ -171,6 +171,27 @@ function hatakiti_handle_folktale_import_submit() {
 }
 
 /**
+ * Some collected records store related_records entries as a bare
+ * record_id string instead of docs/12 §14's {record_id, relationship,
+ * note} object (observed in the ichikawa batch, e.g. oomatoi-3/4/5).
+ * single-folktale.php reads $rel['record_id'], so a bare string is
+ * silently dropped from the 関連する民話 list — normalize it here
+ * instead of editing the source JSON files.
+ */
+function hatakiti_normalize_folktale_related_records( $related_records ) {
+    if ( ! is_array( $related_records ) ) {
+        return array();
+    }
+    foreach ( $related_records as &$rel ) {
+        if ( is_string( $rel ) ) {
+            $rel = array( 'record_id' => $rel );
+        }
+    }
+    unset( $rel );
+    return $related_records;
+}
+
+/**
  * Imports one FolktaleRecord. Never throws — always returns a result row
  * so one bad record in a batch doesn't abort the rest.
  */
@@ -264,7 +285,7 @@ function hatakiti_import_folktale_record( $record ) {
     update_post_meta( $post_id, 'hatakiti_folktale_characters_json', wp_json_encode( isset( $record['characters'] ) ? $record['characters'] : array(), JSON_UNESCAPED_UNICODE ) );
     update_post_meta( $post_id, 'hatakiti_folktale_beings_json', wp_json_encode( isset( $record['beings'] ) ? $record['beings'] : array(), JSON_UNESCAPED_UNICODE ) );
     update_post_meta( $post_id, 'hatakiti_folktale_sources_json', wp_json_encode( $record['sources'], JSON_UNESCAPED_UNICODE ) );
-    update_post_meta( $post_id, 'hatakiti_folktale_related_records_json', wp_json_encode( isset( $record['related_records'] ) ? $record['related_records'] : array(), JSON_UNESCAPED_UNICODE ) );
+    update_post_meta( $post_id, 'hatakiti_folktale_related_records_json', wp_json_encode( hatakiti_normalize_folktale_related_records( isset( $record['related_records'] ) ? $record['related_records'] : array() ), JSON_UNESCAPED_UNICODE ) );
     update_post_meta( $post_id, 'hatakiti_folktale_ai_processing_json', wp_json_encode( isset( $record['ai_processing'] ) ? $record['ai_processing'] : array(), JSON_UNESCAPED_UNICODE ) );
     update_post_meta( $post_id, 'hatakiti_folktale_summary_based_on_json', wp_json_encode( $summary_sources, JSON_UNESCAPED_UNICODE ) );
 
