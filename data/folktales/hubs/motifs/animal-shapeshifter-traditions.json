@@ -1,20 +1,152 @@
 {
-  "schema_version":"1.0",
-  "hub_type":"motif_or_story_type",
-  "motif_id":"animal-shapeshifter-traditions",
-  "canonical_name":"狐・狸・ムジナの化かし伝承",
-  "aliases":["狐と狸の化かし話","狐・狢伝承","動物怪異の化身譚"],
-  "hub_tags":["類型ハブ","狐","狸","ムジナ","化かし","変身","動物怪異"],
-  "classification_note":"狐・狸・ムジナなど、地域で動物と怪異の境界をまたぐ存在が人間を化かす、声や姿を変える、人の生活圏に現れるという伝承を横断するハブ。地域・動物名・本文の異同を越えて個別話を統合するものではなく、動物怪異という類型上の接続を提供する。",
-  "sub_motifs":["人の姿への変身","赤子や子どもの声への変身","人間を化かす","人に助けられる・背負われる","商売や日常生活に現れる動物怪異","寺社・稲荷と動物怪異"],
-  "linking_rule":"狐・狸・ムジナが怪異的行為や変身主体として確認できる個別伝承を接続する。単なる動物の登場のみでは接続しない。狐と狸・ムジナの生物学的同一性や地域語義は決めつけず、各記録の原資料上の名称を保持する。",
-  "known_connections":[
-    {"record_id":"chiba-ichikawa-onbu-sareta-mujina","title":"おんぶされたムジナ","municipality":"市川市","animal":"ムジナ","status":"deep_researched"},
-    {"record_id":"chiba-ichikawa-shinba-no-kitsune","title":"新場のキツネ","municipality":"市川市","animal":"狐","status":"deep_researched"},
-    {"record_id":"chiba-ichikawa-nyoke-no-kitsune","title":"女化の狐","municipality":"市川市","animal":"狐","status":"source_confirmed"},
-    {"record_id":"chiba-ichikawa-kamataki-to-kitsune","title":"かまたきとキツネ","municipality":"市川市","animal":"狐","status":"source_confirmed"},
-    {"record_id":"chiba-ichikawa-kitsune-to-oihagi","title":"キツネと追いはぎ","municipality":"市川市","animal":"狐","status":"source_confirmed"},
-    {"record_id":"chiba-ichikawa-yokomachi-inari-no-kitsune","title":"横町稲荷のきつね","municipality":"市川市","animal":"狐","status":"source_confirmed"}
+  "schema_version": "1.0",
+  "hub_type": "motif_or_story_type",
+  "motif_id": "animal-shapeshifter-traditions",
+  "canonical_name": "狐・狸・ムジナの化かし伝承",
+  "aliases": [
+    "狐と狸の化かし話",
+    "狐・狢伝承",
+    "動物怪異の化身譚"
   ],
-  "research_status":"hub_ready"
+  "hub_tags": [
+    "類型ハブ",
+    "狐",
+    "狸",
+    "ムジナ",
+    "化かし",
+    "変身",
+    "動物怪異"
+  ],
+  "classification_note": "狐・狸・ムジナなど、地域で動物と怪異の境界をまたぐ存在が人間を化かす、声や姿を変える、人の生活圏に現れるという伝承を横断するハブ。地域・動物名・本文の異同を越えて個別話を統合するものではなく、動物怪異という類型上の接続を提供する。",
+  "sub_motifs": [
+    "人の姿への変身",
+    "赤子や子どもの声への変身",
+    "人間を化かす",
+    "人に助けられる・背負われる",
+    "商売や日常生活に現れる動物怪異",
+    "寺社・稲荷と動物怪異"
+  ],
+  "linking_rule": "狐・狸・ムジナが怪異的行為や変身主体として確認できる個別伝承を接続する。単なる動物の登場のみでは接続しない。狐と狸・ムジナの生物学的同一性や地域語義は決めつけず、各記録の原資料上の名称を保持する。",
+  "known_connections": [
+    {
+      "record_id": "chiba-ichikawa-onbu-sareta-mujina",
+      "title": "おんぶされたムジナ",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "deep_researched"
+    },
+    {
+      "record_id": "chiba-ichikawa-shinba-no-kitsune",
+      "title": "新場のキツネ",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "deep_researched"
+    },
+    {
+      "record_id": "chiba-ichikawa-nyoke-no-kitsune",
+      "title": "女化の狐",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kamataki-to-kitsune",
+      "title": "かまたきとキツネ",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-to-oihagi",
+      "title": "キツネと追いはぎ",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-yokomachi-inari-no-kitsune",
+      "title": "横町稲荷のきつね",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-mujina-ni-kakasareta-1",
+      "title": "ムジナに化かされた話（1）",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-mujina-ni-kakasareta-2",
+      "title": "ムジナに化かされた話（2）",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-mujina-no-aoi-hibana",
+      "title": "ムジナの青い火花",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-to-mujina",
+      "title": "狐とムジナ",
+      "municipality": "市川市",
+      "animal": "狐・ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-mujina-no-suna",
+      "title": "ムジナの砂",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-babasama-ni-kamitsuita-mujina",
+      "title": "婆様に噛みついたムジナ",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-mujina-ga-bakete-deta-sotani",
+      "title": "ムジナが化けて出た話",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-mujina-ga-bakete-deta-gyotoku",
+      "title": "ムジナが化けて出た話",
+      "municipality": "市川市",
+      "animal": "ムジナ",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-umi-ebi-ten-no-suki-na-kitsune",
+      "title": "海老天の好きな狐",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-tanuki",
+      "title": "たぬき",
+      "municipality": "市川市",
+      "animal": "狸",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-usagi-to-tanuki-kachikachiyama",
+      "title": "うさぎと狸（勝々山）",
+      "municipality": "市川市",
+      "animal": "狸",
+      "status": "source_confirmed"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
 }
