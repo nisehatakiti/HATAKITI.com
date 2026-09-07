@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '33' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '34' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -779,6 +779,25 @@ define( 'HATAKITI_OCCULT_PDF_BACKFILL_IMBALANCE_GAP_MM', 20.0 );
  * ため（hatakiti_occult_pdf_fallback_tier()のコメント参照）。
  */
 define( 'HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILL', false );
+
+/**
+ * ページ途中空白削減指示書（第2弾）—
+ * hatakiti_occult_pdf_choose_block_config_with_lookahead()による
+ * 「直近2ブロック分をdry-runでまとめて比較し、ブロック境界そのものを
+ * 組み替える」機能を有効にするか。既定はfalse。
+ *
+ * 実データ9件で検証した結果、ブロック内部空白（列間不均衡）は
+ * 局所的に改善する一方、2ブロック先読みだけではその先のページ構成
+ * まで見通せず、上流のブロックで選び直した構成が下流のキュー残量を
+ * 変えてしまい、実データ9件中2件（#547: 3→4ページ、#662: 6→7ページ）
+ * で総ページ数がかえって悪化することを確認した。これは
+ * HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILLや過去に削除した
+ * predictive backfill simulationと同じ「局所最適が大域では逆効果」
+ * のパターンであり、同じ方針（実装は残すが既定オフ）を踏襲する。
+ * trueにする場合は、必ず実データ全件で総ページ数・ページまたぎ・
+ * 内部空白を比較してから判断すること。
+ */
+define( 'HATAKITI_OCCULT_PDF_ALLOW_BLOCK_BOUNDARY_LOOKAHEAD', false );
 
 /**
  * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
@@ -1693,8 +1712,6 @@ function hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, &$queue, $zo
  * @return array array('bottom_y'=>mm, 'drew_any'=>bool, 'debug'=>array)
  */
 function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
-    $row_gap     = HATAKITI_OCCULT_PDF_ROW_GAP_MM;
-    $col_gap     = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
     $page_bottom = $zone_y + $zone_h_budget;
     $block_top   = $zone_y;
     $drew_any    = false;
@@ -1703,8 +1720,46 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
 
     while ( ! empty( $queue ) && ( $page_bottom - $block_top ) > HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
         $block_index++;
+
+        // ページ途中空白削減指示書（第2弾）§1〜§3 — 「現在のブロック
+        // 構成を固定してから次のブロックを始める」を最適解とみなさず、
+        // 直近2ブロック分をdry-runでまとめて比較し、ページ全体として
+        // 空白の少ない構成を選ぶ（詳細は
+        // hatakiti_occult_pdf_choose_block_config_with_lookahead()）。
+        $col_w_arr = hatakiti_occult_pdf_choose_block_config_with_lookahead( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index );
+
+        $result = hatakiti_occult_pdf_draw_one_block( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index, $col_w_arr );
+        if ( null === $result ) {
+            break;
+        }
+        $debug       = array_merge( $debug, $result['debug'] );
+        $drew_any    = $drew_any || $result['drew_any'];
+        $block_top   = $result['block_bottom'];
+    }
+
+    return array( 'bottom_y' => $block_top, 'drew_any' => $drew_any, 'debug' => $debug );
+}
+
+/**
+ * hatakiti_occult_pdf_stack_articles()から1ブロック分の決定・描画・
+ * バックフィル・キュー更新を切り出したもの。$col_w_arrを渡せば
+ * その列構成を強制し（hatakiti_occult_pdf_decide_block_config()は
+ * 呼ばない）、nullなら従来どおり自動決定する。実PDFへの本描画にも、
+ * 候補比較用の使い捨てTCPDFへのdry-runにも、同じ関数を使う（実描画と
+ * 見積もりの乖離を防ぐ、既存の設計方針を踏襲）。
+ *
+ * @return array|null array('block_bottom'=>mm,'drew_any'=>bool,'debug'=>array)。
+ *   どの列も1件も描画できなければnull（＝これ以上このページには載らない）。
+ */
+function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index, $col_w_arr = null ) {
+    $row_gap = HATAKITI_OCCULT_PDF_ROW_GAP_MM;
+    $col_gap = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
+    if ( null === $col_w_arr ) {
         $col_w_arr = hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, $queue, $zone_w, $page_bottom, $block_top );
-        $cols      = count( $col_w_arr );
+    }
+    $cols     = count( $col_w_arr );
+    $drew_any = false;
+    $debug    = array();
 
         // 各列のX座標（縦書きの読み順に合わせ、列0をいちばん右に置く）
         // はブロック開始時に一度だけ決め、この列の記事が続く限り最後
@@ -1995,7 +2050,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
         if ( $block_bottom <= $block_top ) {
             // どの列も1件も描画できなかった（先頭記事の最初のセグメント
             // すら残り高さに収まらない）— これ以上このページには載らない。
-            break;
+            return null;
         }
 
         // ブロックの外枠：列の境界線（ブロック全体の高さぶん）と、
@@ -2023,10 +2078,198 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             }
         }
 
-        $block_top = $block_bottom;
+        return array( 'block_bottom' => $block_bottom, 'drew_any' => $drew_any, 'debug' => $debug );
+}
+
+/**
+ * ページ途中空白削減指示書（第2弾）§候補例 — 現在のブロック（キュー
+ * 先頭記事群）について、tier・同tier連続数・最小列幅の制約を満たす
+ * 「許可された列構成」の候補一覧を返す（1列／均等2列／非対称2列
+ * 2種／smallのみ均等3列）。1件も選ばず、勝者を決めるのは呼び出し側
+ * （hatakiti_occult_pdf_choose_block_config_with_lookahead()）。
+ * hatakiti_occult_pdf_decide_block_config_legacy()と同じ候補集合・
+ * 同じ制約チェックを使うが、こちらは「全候補を残す」点だけが異なる。
+ *
+ * @return array 各要素が1つの$col_w_arr候補（mm単位の幅配列）。
+ */
+function hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w ) {
+    if ( empty( $queue ) || isset( $queue[0]['_pinned_col_w'] ) ) {
+        return array();
+    }
+    $tier = $queue[0]['_tier'];
+    if ( 'large' === $tier ) {
+        return array();
+    }
+    $same_tier_run = 1;
+    for ( $i = 1; $i < count( $queue ) && $i < 3; $i++ ) {
+        if ( $queue[ $i ]['_tier'] !== $tier ) {
+            break;
+        }
+        $same_tier_run++;
+    }
+    $configs = array(
+        array( 1.0 ),
+        array( 0.5, 0.5 ),
+        array( 2 / 3, 1 / 3 ),
+        array( 1 / 3, 2 / 3 ),
+    );
+    if ( 'small' === $tier ) {
+        $configs[] = array( 1 / 3, 1 / 3, 1 / 3 );
+    }
+    $col_gap = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
+    $out     = array();
+    foreach ( $configs as $fractions ) {
+        $cols = count( $fractions );
+        if ( $cols > $same_tier_run ) {
+            continue;
+        }
+        $widths = hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap );
+        if ( min( $widths ) < HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
+            continue;
+        }
+        $out[] = $widths;
+    }
+    return $out;
+}
+
+/**
+ * debug配列（hatakiti_occult_pdf_draw_one_block()の'debug'）から、
+ * ブロック内で各列が実際に到達したY（col_bottom）を求め、
+ * block_bottom（列の最大値）との差が通常の行間ギャップを明確に超える
+ * 分だけを「内部空白」として面積合計を返す。バックフィルの列間不均衡
+ * 修正（PDFページ途中空白削減指示書）で導入した空白検出と同じ考え方。
+ */
+function hatakiti_occult_pdf_debug_rows_internal_blank_area( $debug_rows, $block_bottom ) {
+    $col_bottom = array();
+    $col_w      = array();
+    foreach ( $debug_rows as $r ) {
+        if ( ! isset( $r['col'], $r['y'], $r['h'], $r['w'] ) ) {
+            continue;
+        }
+        $bottom = $r['y'] + $r['h'];
+        if ( ! isset( $col_bottom[ $r['col'] ] ) || $bottom > $col_bottom[ $r['col'] ] ) {
+            $col_bottom[ $r['col'] ] = $bottom;
+            $col_w[ $r['col'] ]      = $r['w'];
+        }
+    }
+    $area = 0.0;
+    foreach ( $col_bottom as $col_no => $bottom ) {
+        $gap = $block_bottom - $bottom;
+        if ( $gap > 1.0 ) {
+            $area += $gap * $col_w[ $col_no ];
+        }
+    }
+    return $area;
+}
+
+/**
+ * ページ途中空白削減指示書（第2弾）§1〜§3 —「現在のブロックを
+ * block_bottomまで確定してから次のブロックを始める」処理を最適解と
+ * みなさず、直近2ブロック分（現在ブロック＋次ブロック）をdry-runで
+ * まとめて比較し、ページ全体として空白の少ない列構成を選ぶ。
+ *
+ * 対象は現在ブロックの列構成のみ（次ブロックは常に既存の自動決定＝
+ * hatakiti_occult_pdf_decide_block_config()に委ねる）。候補は
+ * 「自然候補（既存ロジックがそのまま選ぶ構成）」と
+ * hatakiti_occult_pdf_block_alt_candidates()が返す許可された代替構成
+ * （1列／均等2列／非対称2列2種／smallのみ均等3列）。各候補について
+ * 「現在ブロック＋次ブロック」を使い捨てTCPDFでdry-run実描画し、
+ * ブロック内部空白（列間不均衡）の合計面積で比較する。自然候補より
+ * 明確に（0.5mm²超）優れる代替が無ければ、自然候補のまま変更しない
+ * （記事順序・列構成の不要な変更を避ける、指示書§重要）。
+ *
+ * 続き記事（_pinned_col_w）・large tierは列構成が既存仕様で固定される
+ * ため対象外とし、常にnullを返す（呼び出し側は
+ * hatakiti_occult_pdf_decide_block_config()の自動決定をそのまま使う）。
+ *
+ * @return array|null 採用する$col_w_arr。自然候補のままでよい場合は
+ *   null（＝呼び出し側がdecide_block_config()を自前で呼ぶ）。
+ */
+function hatakiti_occult_pdf_choose_block_config_with_lookahead( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index ) {
+    if ( ! HATAKITI_OCCULT_PDF_ALLOW_BLOCK_BOUNDARY_LOOKAHEAD ) {
+        return null;
+    }
+    if ( empty( $queue ) || isset( $queue[0]['_pinned_col_w'] ) || 'large' === $queue[0]['_tier'] ) {
+        return null;
     }
 
-    return array( 'bottom_y' => $block_top, 'drew_any' => $drew_any, 'debug' => $debug );
+    $queue_for_natural = $queue; // 値渡しのコピー — decide_block_config()は&$queueを取るため。
+    $natural           = hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, $queue_for_natural, $zone_w, $page_bottom, $block_top );
+
+    $alt_candidates = hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w );
+    $candidates      = array( $natural );
+    foreach ( $alt_candidates as $alt ) {
+        $dup = false;
+        foreach ( $candidates as $existing ) {
+            if ( count( $existing ) !== count( $alt ) ) {
+                continue;
+            }
+            $same = true;
+            foreach ( $existing as $i => $w ) {
+                if ( abs( $w - $alt[ $i ] ) > 0.05 ) {
+                    $same = false;
+                    break;
+                }
+            }
+            if ( $same ) {
+                $dup = true;
+                break;
+            }
+        }
+        if ( ! $dup ) {
+            $candidates[] = $alt;
+        }
+    }
+
+    if ( count( $candidates ) <= 1 ) {
+        return null; // 代替候補が無ければ、無駄なdry-runをせず自然候補のまま。
+    }
+
+    $scores = array();
+    foreach ( $candidates as $idx => $cand ) {
+        $queue_copy = $queue;
+        list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+        $scratch_pdf->AddPage();
+        $block1 = hatakiti_occult_pdf_draw_one_block( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index, $cand );
+        if ( null === $block1 ) {
+            continue; // この構成では何も描画できない＝無効。
+        }
+        $score = hatakiti_occult_pdf_debug_rows_internal_blank_area( $block1['debug'], $block1['block_bottom'] );
+
+        if ( ! empty( $queue_copy ) && ( $page_bottom - $block1['block_bottom'] ) > HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
+            $block2 = hatakiti_occult_pdf_draw_one_block( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_w, $block1['block_bottom'], $page_bottom, $page_no, $block_index + 1, null );
+            if ( null !== $block2 ) {
+                $score += hatakiti_occult_pdf_debug_rows_internal_blank_area( $block2['debug'], $block2['block_bottom'] );
+                if ( empty( $queue_copy ) ) {
+                    // このブロックの並びでページの記事が尽きる＝末尾の
+                    // トレーリング空白も比較対象に含める。
+                    $score += ( $page_bottom - $block2['block_bottom'] ) * $zone_w;
+                }
+            }
+        } elseif ( empty( $queue_copy ) ) {
+            $score += ( $page_bottom - $block1['block_bottom'] ) * $zone_w;
+        }
+
+        $scores[ $idx ] = $score;
+    }
+
+    if ( ! isset( $scores[0] ) ) {
+        return null; // 自然候補自体が無効になることは通常無いはずだが、念のため。
+    }
+
+    $best_idx   = 0;
+    $best_score = $scores[0];
+    foreach ( $scores as $idx => $score ) {
+        if ( 0 === $idx ) {
+            continue;
+        }
+        if ( $score < $best_score - 0.5 ) {
+            $best_score = $score;
+            $best_idx   = $idx;
+        }
+    }
+
+    return ( 0 === $best_idx ) ? null : $candidates[ $best_idx ];
 }
 
 /**
