@@ -71,6 +71,14 @@ get_header();
         $articles      = hatakiti_json_meta( $post_id, 'hatakiti_occult_articles_json' );
         $article_count = is_array( $articles ) ? count( $articles ) : 0;
 
+        // マストヘッド(occult-weekly-pdf.php)と同じ号数ロジックを使う —
+        // "occult-ai-2026-09-07" のような内部ID文字列を読者に見せず、
+        // 創刊号/第○号表記＋自然な日本語の発行日表記にする
+        // （2026-09-07 臨時創刊号CRON実行指示 §2）。
+        $issue_number  = hatakiti_occult_pdf_compute_issue_number( $issue_date );
+        $issue_display = null !== $issue_number ? hatakiti_occult_pdf_issue_number_label( $issue_number ) : $issue_id;
+        $date_display  = null !== $issue_number ? hatakiti_occult_pdf_format_issue_date_for_display( $issue_date ) : ( $issue_date ? '発行日: ' . $issue_date : '' );
+
         // ローカルにPDFファイルが既に存在するかだけを見る軽い判定 —
         // PDF生成自体はここでは一切行わない（実際の配信は既存の
         // template_redirect/hatakiti_get_occult_weekly_pdf_path()に
@@ -88,8 +96,8 @@ get_header();
                 <div class="hk-card-type">週刊オカルト新聞</div>
                 <h1><?php the_title(); ?></h1>
                 <div class="hk-article-meta">
-                    <?php if ( $issue_id ) : ?><code><?php echo esc_html( $issue_id ); ?></code><br><?php endif; ?>
-                    <?php if ( $issue_date ) : ?>発行日: <?php echo esc_html( $issue_date ); ?><?php endif; ?>
+                    <?php if ( $issue_display ) : ?><?php echo esc_html( $issue_display ); ?><br><?php endif; ?>
+                    <?php if ( $date_display ) : ?><?php echo esc_html( $date_display ); ?><?php endif; ?>
                     <?php if ( $article_count > 0 ) : ?>
                         <br>この号には<?php echo (int) $article_count; ?>本の記事が掲載されています。
                     <?php endif; ?>
