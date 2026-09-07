@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-mujina-ni-kakasareta-1",
+  "status": "draft",
+  "title": "ムジナに化かされた話（1）",
+  "title_normalized": "ムジナに化かされた話（1）",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "行徳の円頓寺先の石橋に伝わる、ムジナに化かされた話。市川市の伝承一覧で独立した一話として確認できる。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-ICHIKAWA"
+    ]
+  },
+  "story_summary": "ムジナに化かされた話（1）は、行徳の円頓寺先にあった石橋を伝承地とする。市川市には複数のムジナ伝承が残り、本話もその一つとして記録されている。本文の具体的な筋は未確認のため、化かしの内容を推測せず独立話として登録する。",
+  "story_content": "ムジナに化かされた話（1）は、行徳の円頓寺先にあった石橋を伝承地とする。市川市には複数のムジナ伝承が残り、本話もその一つとして記録されている。本文の具体的な筋は未確認のため、化かしの内容を推測せず独立話として登録する。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "行徳（円頓寺先の石橋）",
+    "source_description": "日本伝承マップの市川市伝承一覧で確認。"
+  },
+  "locations": [
+    {
+      "name": "行徳（円頓寺先の石橋）",
+      "location_type": "tradition_area",
+      "description": "伝承一覧に示される伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "ムジナ",
+      "type": "怪異・動物",
+      "description": "題名または伝承分類上の中心となる存在。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "動物怪異",
+    "化かし",
+    "市川市",
+    "ムジナ"
+  ],
+  "story_type": [
+    "動物怪異譚",
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "motif_hub",
+      "note": "狐・狸・ムジナの化かし伝承類型ハブに接続。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "ムジナに化かされた話（1）",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "題名と伝承地の存在を確認。本文未確認部分は補完せず、独立した個別話として登録。"
+}
