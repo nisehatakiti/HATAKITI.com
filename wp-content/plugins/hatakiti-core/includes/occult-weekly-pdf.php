@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '32' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '33' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -752,6 +752,24 @@ define( 'HATAKITI_OCCULT_PDF_MIN_COL_W_MM', 55.0 );
  * することは避ける」ため、無制限にはしない。
  */
 define( 'HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW', 6 );
+
+/**
+ * ページ途中空白削減指示書§1〜§4 — バックフィルで列ごとに独立して
+ * 候補を探すと、「片方の列は同tier候補が見つかって大きく延長できる
+ * が、もう片方の列は（列幅が狭い等で）候補が1つも見つからない」
+ * ケースで、延長された列の下に、候補のない列だけが取り残されて
+ * 大きな空白矩形になる（ブロック外枠の列区切り線は block_bottom
+ * = max(col_bottom) まで引かれるため、空いた列がそのまま可視の
+ * 空白として残る）。
+ *
+ * これを避けるため、「候補が1つも無い列」が存在する状態で、他の列を
+ * その候補の無い列の位置よりこの値を超えて延長することは許可しない
+ * （フェーズ分割バックフィル、詳細はhatakiti_occult_pdf_stack_articles()
+ * 内のコメント参照）。延長を見送られた記事はキューに残り、次のブロック
+ * （＝この列を含む現在ブロックが確定したあとの、新しい段組み判定）で
+ * 改めて配置候補になる。
+ */
+define( 'HATAKITI_OCCULT_PDF_BACKFILL_IMBALANCE_GAP_MM', 20.0 );
 
 /**
  * バックフィルで同tierの供給が尽きた列に、隣接tier（medium⇄small）の
@@ -1812,21 +1830,41 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             }
         }
 
-        // バックフィル（次段の空白削減・可変ブロック組版指示書§5/§7）：
+        // バックフィル（次段の空白削減・可変ブロック組版指示書§5/§7、
+        // ページ途中空白削減指示書§1〜§4）：
         // ブロック内で記事が完結し空きが生じた列（＝その列の記事完結
         // 位置からページ末までの「空き矩形」）に、後続記事を、その矩形に
         // 完全に収まる範囲で詰め込めるだけ詰め込む。優先順位1（同tier）
         // →優先順位2（隣接tier、hatakiti_occult_pdf_fallback_tier()）の
         // 順で探す — 同tierの供給が尽きた場合のみ、隣接tierの記事で
-        // 列を埋める。「現在の列構成を維持するために空白を残す」のでは
-        // なく、列ごとに独立して後続記事を探索・充填する。続きが必要な
-        // 列（$col_final[$k]が非null）は対象にしない — 列位置維持の
-        // 既存仕様を壊さないため。
+        // 列を埋める。続きが必要な列（$col_final[$k]が非null）は対象に
+        // しない — 列位置維持の既存仕様を壊さないため。
+        //
+        // 1ラウンドを「探索（コミットしない）→不均衡チェック→コミット」
+        // の3フェーズに分ける。列ごとに見つかった候補を即座に確定させて
+        // しまうと、「片方の列だけ大きく延長できて、もう片方の列には
+        // 候補が1つも無い」場合に、候補の無い列がそのまま大きな空白
+        // 矩形として取り残される（block_bottomは列の最大値になるため）。
+        // これを防ぐため、候補の無い開いた列が存在する場合、その列の
+        // 現在位置からHATAKITI_OCCULT_PDF_BACKFILL_IMBALANCE_GAP_MMを
+        // 超えて他の列を延長する候補は、このラウンドでは見送る（キュー
+        // に残したままにする）。見送られた記事は、このブロックが確定
+        // した後、次のブロックの段組み判定で改めて配置候補になる —
+        // 「現在ブロックに無理に詰め込む」のではなく「空白の原因になる
+        // 延長を止め、次のブロックで適切な段組みを選び直させる」ことで
+        // 空白そのものを縮める（ページ途中空白削減指示書§3）。
         $block_tier = $queue[0]['_tier'];
         $backfill_changed = true;
         while ( $backfill_changed ) {
             $backfill_changed = false;
+
+            // フェーズ1：各開いている列について、コミットせずに最良候補
+            // を探す。同一ラウンド内で複数の列が同じ記事を奪い合わない
+            // よう、$claimedで確保済みのキュー添字を記録する。
+            $plans   = array();
+            $claimed = array();
             for ( $k = 0; $k < $cols; $k++ ) {
+                $plans[ $k ] = null;
                 if ( null !== $col_final[ $k ] ) {
                     continue;
                 }
@@ -1846,7 +1884,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                         continue;
                     }
                     for ( $j = $cols; $j < $limit; $j++ ) {
-                        if ( ! isset( $queue[ $j ] ) || $queue[ $j ]['_tier'] !== $try_tier || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
+                        if ( isset( $claimed[ $j ] ) || ! isset( $queue[ $j ] ) || $queue[ $j ]['_tier'] !== $try_tier || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
                             continue;
                         }
                         $cand_header_h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $j ], $try_tier, $col_w_arr[ $k ] );
@@ -1869,27 +1907,79 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                 if ( null === $best_j ) {
                     continue;
                 }
+                $claimed[ $best_j ] = true;
+                $plans[ $k ]        = array(
+                    'j'         => $best_j,
+                    'est'       => $best_est,
+                    'header_h'  => $best_header_h,
+                    'tier'      => $best_tier,
+                );
+            }
 
-                $candidate = $queue[ $best_j ];
-                array_splice( $queue, $best_j, 1 );
+            // フェーズ2：不均衡チェック。候補が1つも無い「取り残された」
+            // 開いた列があれば、その最も浅い位置を基準に、他の列の延長を
+            // 基準+閾値までに制限する。
+            $stuck_floor = null;
+            for ( $k = 0; $k < $cols; $k++ ) {
+                if ( null !== $col_final[ $k ] ) {
+                    continue;
+                }
+                if ( ( $page_bottom - $col_bottom[ $k ] ) <= HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
+                    continue;
+                }
+                if ( null === $plans[ $k ] ) {
+                    $stuck_floor = ( null === $stuck_floor ) ? $col_bottom[ $k ] : min( $stuck_floor, $col_bottom[ $k ] );
+                }
+            }
+            if ( null !== $stuck_floor ) {
+                for ( $k = 0; $k < $cols; $k++ ) {
+                    if ( null === $plans[ $k ] ) {
+                        continue;
+                    }
+                    if ( $plans[ $k ]['est']['bottom'] > $stuck_floor + HATAKITI_OCCULT_PDF_BACKFILL_IMBALANCE_GAP_MM ) {
+                        $plans[ $k ] = null; // 見送り：候補の無い列を大きく置き去りにするため。
+                    }
+                }
+            }
+
+            // フェーズ3：残った有効プランをコミットする。キュー添字が
+            // 大きいものから順にspliceし、小さい添字の位置がずれない
+            // ようにする。
+            $commit_ks = array();
+            foreach ( $plans as $k => $plan ) {
+                if ( null !== $plan ) {
+                    $commit_ks[] = $k;
+                }
+            }
+            usort(
+                $commit_ks,
+                function ( $a, $b ) use ( $plans ) {
+                    return $plans[ $b ]['j'] <=> $plans[ $a ]['j'];
+                }
+            );
+
+            foreach ( $commit_ks as $k ) {
+                $plan      = $plans[ $k ];
+                $candidate = $queue[ $plan['j'] ];
+                array_splice( $queue, $plan['j'], 1 );
 
                 $seg_top = $col_bottom[ $k ];
-                $result  = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $candidate, $best_tier, $col_x[ $k ], $seg_top, $col_w_arr[ $k ], $best_header_h, 'headline' );
+                $result  = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $candidate, $plan['tier'], $col_x[ $k ], $seg_top, $col_w_arr[ $k ], $plan['header_h'], 'headline' );
 
                 $debug[] = array(
                     'page' => $page_no, 'block' => $block_index, 'cols' => $cols, 'col' => $k,
                     'article_id' => $candidate['_debug_article_id'] ?? null,
-                    'tier' => $best_tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
+                    'tier' => $plan['tier'] . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
                     'headline' => mb_substr( (string) ( $candidate['headline'] ?? '' ), 0, 16 ),
                     'x' => round( $col_x[ $k ], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $col_w_arr[ $k ], 1 ), 'h' => round( $result['bottom_y'] - $seg_top, 1 ),
                     'continuation' => false,
                     'mode' => 'headline',
                     'label_shown' => false,
                     'is_first_in_block' => false,
-                    'body_top' => round( $seg_top + $best_header_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
+                    'body_top' => round( $seg_top + $plan['header_h'] + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
                     'overflow' => ! empty( $result['overflow_body'] ),
                     'backfill' => true,
-                    'cross_tier' => ( $best_tier !== $block_tier ),
+                    'cross_tier' => ( $plan['tier'] !== $block_tier ),
                 );
 
                 $pdf->SetLineWidth( 0.25 );
