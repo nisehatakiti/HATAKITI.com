@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '35' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '36' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -837,6 +837,16 @@ define( 'HATAKITI_OCCULT_PDF_SMALL_4COL_MIN_COL_W_MM', 47.5 );
  * 判定できないため）。
  */
 define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_RECT_IMPROVEMENT_MM2', 500.0 );
+
+/**
+ * 空き矩形拡張指示書§11の安全弁：最大空白矩形やページ末尾空白が
+ * 改善しても、列バランス（column_imbalance_score）がBaselineより
+ * この値（mm）を超えて悪化する場合は不採用とする。実データで確認
+ * された自然な悪化（post=592 3ページ目、+17.8mm、目視で問題なし）
+ * より十分大きく、かつ「明らかにおかしい」悪化は防げる値として40mmを
+ * 採用した。
+ */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_IMBALANCE_REGRESSION_MM', 40.0 );
 
 /**
  * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
@@ -1778,6 +1788,43 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                     $block_top = $result['block_bottom'];
                 }
             }
+            // 空き矩形拡張指示書§7：採用されたPagePlanに空き矩形への
+            // 配置（placements）が含まれる場合、探索時に確定したx/y/幅
+            // へ実際に描画する。探索はコピーしたキューで行われたため、
+            // 実キューから同じ記事を_debug_article_id（安定した識別子）
+            // で探して取り出す。
+            if ( ! empty( $plan_result['placements'] ) ) {
+                foreach ( $plan_result['placements'] as $placement ) {
+                    $found_idx = null;
+                    foreach ( $queue as $qi => $qa ) {
+                        if ( ( $qa['_debug_article_id'] ?? null ) === $placement['article_id'] ) {
+                            $found_idx = $qi;
+                            break;
+                        }
+                    }
+                    if ( null === $found_idx ) {
+                        continue; // 通常到達しない安全弁。
+                    }
+                    $article = $queue[ $found_idx ];
+                    array_splice( $queue, $found_idx, 1 );
+                    $draw_result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $placement['tier'], $placement['x'], $placement['y'], $placement['width'], $placement['header_h'], 'headline' );
+                    $pdf->SetLineWidth( 0.25 );
+                    $pdf->Line( $placement['x'], $draw_result['bottom_y'] + ( HATAKITI_OCCULT_PDF_ROW_GAP_MM / 2 ), $placement['x'] + $placement['width'], $draw_result['bottom_y'] + ( HATAKITI_OCCULT_PDF_ROW_GAP_MM / 2 ) );
+                    $debug[] = array(
+                        'page' => $page_no, 'block' => 'space_fill', 'cols' => 1, 'col' => 0,
+                        'article_id' => $placement['article_id'],
+                        'tier' => $placement['tier'],
+                        'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
+                        'x' => round( $placement['x'], 1 ), 'y' => round( $placement['y'], 1 ), 'w' => round( $placement['width'], 1 ), 'h' => round( $draw_result['bottom_y'] - $placement['y'], 1 ),
+                        'continuation' => false, 'mode' => 'headline', 'label_shown' => false, 'is_first_in_block' => false,
+                        'body_top' => round( $placement['y'] + $placement['header_h'] + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
+                        'overflow' => ! empty( $draw_result['overflow_body'] ),
+                        'space_fill' => true,
+                        'order_jump' => $placement['order_jump'],
+                    );
+                    $drew_any = true;
+                }
+            }
         }
     }
 
@@ -2250,6 +2297,160 @@ function hatakiti_occult_pdf_debug_rows_internal_blank_area( $debug_rows, $block
     return $area;
 }
 
+/* ============================================================
+ * ページ内「空き矩形（Available Spaces）」方式への拡張 指示書
+ * ============================================================
+ * 既存のRow方式（ページを上から下へ複数の横長ブロックとして積む）は
+ * 維持したまま、Row内で列ごとの記事完結位置がblock_bottomより浅い
+ * 場合に生じる「空き矩形」を明示的に矩形として管理し、ページ単位
+ * 探索の候補として後続記事をそこへ配置できるようにする（§2〜§5）。
+ * 完全自由な2次元ビンパッキングにはせず、「既存Rowの列がそのまま
+ * 使っていた矩形の、記事完結位置から下」という1パターンのみを対象と
+ * する（§5-3/5-4）。列自体の左右分割（§5-1/5-2）は
+ * hatakiti_occult_pdf_split_available_space()が対応するが、実際の
+ * 候補生成（§4-5相当、hatakiti_occult_pdf_search_page_plan_recursive()
+ * 内）では常に空きスペースの幅をそのまま使う（列幅を変えない）ため
+ * 発生しない。
+ */
+
+/**
+ * §4-1：ページ開始時点の初期空き矩形（ページコンテンツ領域全体）を
+ * 1件返す。
+ */
+function hatakiti_occult_pdf_create_initial_available_space( $zone_x, $zone_y, $zone_w, $page_bottom ) {
+    return array(
+        array( 'x' => $zone_x, 'y' => $zone_y, 'width' => $zone_w, 'height' => $page_bottom - $zone_y ),
+    );
+}
+
+/**
+ * Row（hatakiti_occult_pdf_draw_one_block()のdebug配列）から、各列が
+ * 実際に完結した位置（col_bottom）とRow全体のblock_bottomの差が
+ * 通常の行間ギャップを明確に超える列を、空き矩形として抽出する。
+ * tierは列の最初のセグメントのtier文字列から "(colN-M)" 表記を除いた
+ * ものを記録し、後続の同tier限定マッチングに使う（バックフィルと
+ * 同じ方針、既存tierルールを破らないため）。
+ */
+function hatakiti_occult_pdf_row_leftover_spaces( $debug_rows, $row_bottom ) {
+    $col_bottom = array();
+    $col_x      = array();
+    $col_w      = array();
+    $col_tier   = array();
+    foreach ( $debug_rows as $r ) {
+        if ( ! isset( $r['col'], $r['y'], $r['h'], $r['w'], $r['x'] ) ) {
+            continue;
+        }
+        $bottom = $r['y'] + $r['h'];
+        if ( ! isset( $col_bottom[ $r['col'] ] ) || $bottom > $col_bottom[ $r['col'] ] ) {
+            $col_bottom[ $r['col'] ] = $bottom;
+            $col_x[ $r['col'] ]      = $r['x'];
+            $col_w[ $r['col'] ]      = $r['w'];
+            $col_tier[ $r['col'] ]   = preg_replace( '/\(col\d+-\d+\)$/', '', (string) ( $r['tier'] ?? '' ) );
+        }
+    }
+    $spaces = array();
+    foreach ( $col_bottom as $col_no => $bottom ) {
+        $h = $row_bottom - $bottom;
+        if ( $h > 1.0 ) {
+            $spaces[] = array(
+                'x'      => $col_x[ $col_no ],
+                'y'      => $bottom,
+                'width'  => $col_w[ $col_no ],
+                'height' => $h,
+                'tier'   => $col_tier[ $col_no ],
+            );
+        }
+    }
+    return $spaces;
+}
+
+/**
+ * §4-2：指定した記事を指定した空きスペースへ配置した場合のdry-run。
+ * 既存のhatakiti_occult_pdf_estimate_article_height()をそのまま使い、
+ * space.height（＝space.y + space.heightをページ末とみなす）を
+ * 超える場合はtruncated扱いとする — 記事途中分割・スペースの高さ
+ * 超過を絶対に許可しない（§1-1・§4-2）。
+ *
+ * @return array array('fits'=>bool,'article_height'=>mm,'bottom'=>mm,
+ *   'truncated'=>bool,'header_h'=>mm)
+ */
+function hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $article, $tier, $space ) {
+    $header_h        = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $article, $tier, $space['width'] );
+    $space_bottom     = $space['y'] + $space['height'];
+    $est              = hatakiti_occult_pdf_estimate_article_height( $article, $tier, $space['width'], $header_h, $space['y'], $space_bottom );
+    return array(
+        'fits'           => ! $est['truncated'],
+        'article_height' => $est['bottom'] - $space['y'],
+        'bottom'         => $est['bottom'],
+        'truncated'      => $est['truncated'],
+        'header_h'       => $header_h,
+    );
+}
+
+/**
+ * §4-3：空きスペースに記事を配置した後、残った領域を新しい空き矩形群
+ * として返す。今回許可する配置（§5-3/5-4）は「スペースの幅をそのまま
+ * 使い、上端から記事の必要高さぶんを使う」パターンのみのため、
+ * 残りは常に「同じx・同じ幅で、配置した記事の下」の1矩形（あれば）
+ * だけになる。左右分割（§5-1/5-2）が必要になる配置（スペースの幅の
+ * 一部だけを使う配置）は今回の候補生成では発生しないため、
+ * $used_widthがspace.widthより狭い場合のみ左右の余り矩形も返す
+ * （将来の配置パターン拡張に備えた一般化、§5-1/5-2）。
+ */
+function hatakiti_occult_pdf_split_available_space( $space, $used_height, $used_width = null, $align = 'left' ) {
+    $tier = $space['tier'] ?? '';
+    $out  = array();
+    if ( null === $used_width || $used_width >= $space['width'] - 0.05 ) {
+        $used_width = $space['width'];
+    } else {
+        $remaining_width = $space['width'] - $used_width;
+        if ( $remaining_width > 0.5 ) {
+            $side_x = ( 'right' === $align ) ? $space['x'] : $space['x'] + $used_width;
+            $out[]  = array( 'x' => $side_x, 'y' => $space['y'], 'width' => $remaining_width, 'height' => $space['height'], 'tier' => $tier );
+        }
+    }
+    $leftover_h = $space['height'] - $used_height;
+    if ( $leftover_h > 1.0 ) {
+        $used_x = ( 'right' === $align && $used_width < $space['width'] ) ? $space['x'] + ( $space['width'] - $used_width ) : $space['x'];
+        $out[]  = array( 'x' => $used_x, 'y' => $space['y'] + $used_height, 'width' => $used_width, 'height' => $leftover_h, 'tier' => $tier );
+    }
+    return $out;
+}
+
+/**
+ * §4-4：空き矩形リストを正規化する。width/heightが許容誤差以下の
+ * ものを削除し、同じx・同じ幅で縦に隣接する矩形を結合する。
+ */
+function hatakiti_occult_pdf_normalize_available_spaces( $spaces ) {
+    $filtered = array();
+    foreach ( $spaces as $s ) {
+        if ( $s['width'] <= 0.5 || $s['height'] <= 1.0 ) {
+            continue;
+        }
+        $filtered[] = $s;
+    }
+    usort(
+        $filtered,
+        function ( $a, $b ) {
+            return $a['y'] <=> $b['y'];
+        }
+    );
+    $merged = array();
+    foreach ( $filtered as $s ) {
+        $last = count( $merged ) - 1;
+        if ( $last >= 0
+            && abs( $merged[ $last ]['x'] - $s['x'] ) < 0.1
+            && abs( $merged[ $last ]['width'] - $s['width'] ) < 0.1
+            && abs( ( $merged[ $last ]['y'] + $merged[ $last ]['height'] ) - $s['y'] ) < 0.5
+        ) {
+            $merged[ $last ]['height'] += $s['height'];
+        } else {
+            $merged[] = $s;
+        }
+    }
+    return $merged;
+}
+
 /**
  * ページ途中空白削減指示書（第2弾）§1〜§3 —「現在のブロックを
  * block_bottomまで確定してから次のブロックを始める」処理を最適解と
@@ -2386,9 +2587,10 @@ function hatakiti_occult_pdf_choose_block_config_with_lookahead( $queue, $pdf, $
 $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = false;
 
 /**
- * ページ単位探索指示書§4：現在のキュー先頭記事群について、PagePlanの
- * 「Row」候補をすべて成立させたうえで、再帰的に「ここでプランを終了
- * する」候補と「もう1行足す」候補の両方を列挙する。
+ * ページ単位探索指示書§4／空き矩形拡張指示書§8：現在のキュー先頭
+ * 記事群について、PagePlanの「Row」候補をすべて成立させたうえで、
+ * 再帰的に「ここでプランを終了する」候補、「もう1行足す」候補、
+ * 「既存の空き矩形へ後続記事を配置する」候補の3種類を列挙する。
  *
  * 各Row候補はhatakiti_occult_pdf_draw_one_block()で実際にdry-run
  * 描画し、①ページ内に完全に収まる（truncatedでない）②途中分割が
@@ -2398,17 +2600,30 @@ $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = false;
  * 記事（_pinned_col_w）に達したら、それ以上は探索しない（§1-3、
  * 呼び出し側で先に固定描画済みの前提）。
  *
+ * 空き矩形候補（空き矩形拡張指示書§4-5・§5-3/5-4）：Rowを追加する
+ * たびに、そのRow内で発生した列ごとの空き矩形
+ * （hatakiti_occult_pdf_row_leftover_spaces()）をavailable_spacesへ
+ * 積み上げる。各再帰ノードでは、その時点で最大面積の空き矩形1件を
+ * 対象に、キュー先頭からLOOKAHEAD_WINDOW件以内・同tier・large tier
+ * 以外の記事を試し、収まる候補が見つかるたびに1つの新しい再帰枝を
+ * 作る（探索爆発防止のため、対象空き矩形は常に最大の1件のみ、成立
+ * 候補も先頭から数件までに制限）。空き矩形へ配置してもyは進めない
+ * （Rowの積み上げとは独立した操作のため）。
+ *
  * @param array    &$candidates      結果を追加する配列（参照）。各要素は
- *   array('rows'=>[['top','bottom','col_w_arr','debug'], ...], 'final_y'=>mm,
- *         'remaining_queue'=>array)。
+ *   array('rows'=>[...], 'placements'=>[...], 'available_spaces'=>[...],
+ *         'final_y'=>mm, 'remaining_queue'=>array, 'order_jump'=>int)。
  * @param int      &$candidate_count 生成済み候補数（参照、上限管理用）。
  */
-function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $depth ) {
-    if ( ! empty( $rows_so_far ) ) {
+function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $depth ) {
+    if ( ! empty( $rows_so_far ) || ! empty( $placements_so_far ) ) {
         $candidates[] = array(
-            'rows'            => $rows_so_far,
-            'final_y'         => $y,
-            'remaining_queue' => $queue,
+            'rows'             => $rows_so_far,
+            'placements'       => $placements_so_far,
+            'available_spaces' => $available_spaces,
+            'final_y'          => $y,
+            'remaining_queue'  => $queue,
+            'order_jump'       => $order_jump_so_far,
         );
         $candidate_count++;
     }
@@ -2418,6 +2633,70 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
     if ( $depth >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_ROWS ) {
         return;
     }
+
+    // 分岐A（空き矩形拡張指示書§8）：既存の空き矩形のうち最大の1件へ、
+    // 後続記事（LOOKAHEAD_WINDOW以内・同tier・large tier以外）を試す。
+    // Rowの積み上げとは独立した操作のため、$yは変更しない。
+    if ( ! empty( $available_spaces ) && ! empty( $queue ) ) {
+        $best_idx = null;
+        $best_area = 0.0;
+        foreach ( $available_spaces as $i => $sp ) {
+            $area = $sp['width'] * $sp['height'];
+            if ( $area > $best_area ) {
+                $best_area = $area;
+                $best_idx  = $i;
+            }
+        }
+        if ( null !== $best_idx ) {
+            $space = $available_spaces[ $best_idx ];
+            $limit = min( count( $queue ), HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW );
+            $tried = 0;
+            for ( $j = 0; $j < $limit && $tried < 3 && $candidate_count < HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES; $j++ ) {
+                if ( ! isset( $queue[ $j ] ) || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
+                    continue;
+                }
+                $cand_tier = $queue[ $j ]['_tier'];
+                if ( 'large' === $cand_tier ) {
+                    continue; // §1-4相当：large tierは空き矩形へ配置しない。
+                }
+                $space_tier = $space['tier'] ?? '';
+                if ( '' !== $space_tier && $cand_tier !== $space_tier ) {
+                    continue; // バックフィルと同じ方針：同tierのみ対象。
+                }
+                $est = hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $queue[ $j ], $cand_tier, $space );
+                if ( ! $est['fits'] ) {
+                    continue;
+                }
+                $tried++;
+
+                $new_queue      = $queue;
+                $placed_article = $queue[ $j ];
+                array_splice( $new_queue, $j, 1 );
+
+                $new_spaces = $available_spaces;
+                array_splice( $new_spaces, $best_idx, 1 );
+                $leftover   = hatakiti_occult_pdf_split_available_space( $space, $est['article_height'] );
+                $new_spaces = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $new_spaces, $leftover ) );
+
+                $new_placements   = $placements_so_far;
+                $new_placements[] = array(
+                    'article_id' => $placed_article['_debug_article_id'] ?? null,
+                    'x'          => $space['x'],
+                    'y'          => $space['y'],
+                    'width'      => $space['width'],
+                    'tier'       => $cand_tier,
+                    'header_h'   => $est['header_h'],
+                    'order_jump' => $j,
+                );
+
+                hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $new_queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $new_spaces, $new_placements, $order_jump_so_far + $j, $depth + 1 );
+            }
+        }
+    }
+
+    if ( $candidate_count >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES ) {
+        return;
+    }
     if ( empty( $queue ) || ( $page_bottom - $y ) <= HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
         return;
     }
@@ -2425,6 +2704,7 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         return; // §1-3：続き記事はページ単位探索の対象外。
     }
 
+    // 分岐B：従来のRow追加。
     $tier = $queue[0]['_tier'];
     if ( 'large' === $tier ) {
         // §1-4：large記事の列構成は変更しない。自然決定（常に全幅）の
@@ -2436,9 +2716,11 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         if ( null === $result || $result['has_continuation'] ) {
             return;
         }
-        $new_rows   = $rows_so_far;
-        $new_rows[] = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => array( $zone_w ), 'debug' => $result['debug'] );
-        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $depth + 1 );
+        $new_rows      = $rows_so_far;
+        $new_rows[]    = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => array( $zone_w ), 'debug' => $result['debug'] );
+        $row_leftovers = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
+        $new_spaces    = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
+        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, $depth + 1 );
         return;
     }
 
@@ -2454,9 +2736,11 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         if ( null === $result || $result['has_continuation'] ) {
             continue; // §1-1：収まらない、または途中分割が発生する候補は除外。
         }
-        $new_rows   = $rows_so_far;
-        $new_rows[] = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => $col_w_arr, 'debug' => $result['debug'] );
-        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $depth + 1 );
+        $new_rows      = $rows_so_far;
+        $new_rows[]    = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => $col_w_arr, 'debug' => $result['debug'] );
+        $row_leftovers = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
+        $new_spaces    = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
+        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, $depth + 1 );
     }
 }
 
@@ -2471,10 +2755,11 @@ function hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular,
     $queue_copy = $queue;
     list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
     $scratch_pdf->AddPage();
-    $rows        = array();
-    $y           = $start_y;
-    $block_index = $block_index_base;
-    $safety      = 0;
+    $rows             = array();
+    $available_spaces = array();
+    $y                = $start_y;
+    $block_index      = $block_index_base;
+    $safety           = 0;
     while ( ! empty( $queue_copy ) && ( $page_bottom - $y ) > HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM && $safety < 20 ) {
         $safety++;
         $block_index++;
@@ -2482,10 +2767,19 @@ function hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular,
         if ( null === $result ) {
             break;
         }
-        $rows[] = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'debug' => $result['debug'] );
-        $y      = $result['block_bottom'];
+        $rows[]           = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'debug' => $result['debug'] );
+        $row_leftovers    = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
+        $available_spaces = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
+        $y                = $result['block_bottom'];
     }
-    return array( 'rows' => $rows, 'final_y' => $y, 'remaining_queue' => $queue_copy );
+    return array(
+        'rows'             => $rows,
+        'placements'       => array(),
+        'available_spaces' => $available_spaces,
+        'final_y'          => $y,
+        'remaining_queue'  => $queue_copy,
+        'order_jump'       => 0,
+    );
 }
 
 /**
@@ -2494,8 +2788,9 @@ function hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular,
  * を評価する（§3-3）。
  */
 function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) {
-    $rows = $plan['rows'];
-    if ( empty( $rows ) ) {
+    $rows       = $plan['rows'];
+    $placements = $plan['placements'] ?? array();
+    if ( empty( $rows ) && empty( $placements ) ) {
         return array(
             'valid'                   => false,
             'article_count'           => 0,
@@ -2505,21 +2800,16 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) 
             'layout_switch_count'     => 0,
             'row_count'               => 0,
             'column_imbalance_score'  => 0.0,
+            'order_jump'              => $plan['order_jump'] ?? 0,
         );
     }
 
-    $largest_rect_area = 0.0;
-    $total_blank_area   = 0.0;
-    $imbalance_total    = 0.0;
-    $article_ids        = array();
-    $prev_cols          = null;
-    $switch_count       = 0;
+    $article_ids  = array();
+    $prev_cols    = null;
+    $switch_count = 0;
+    $imbalance_total = 0.0;
 
     foreach ( $rows as $row ) {
-        $row_area = hatakiti_occult_pdf_debug_rows_internal_blank_area( $row['debug'], $row['bottom'] );
-        $total_blank_area += $row_area;
-        $largest_rect_area = max( $largest_rect_area, $row_area );
-
         $col_bottom = array();
         foreach ( $row['debug'] as $r ) {
             if ( ! isset( $r['col'], $r['y'], $r['h'] ) ) {
@@ -2543,8 +2833,28 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) 
         }
         $prev_cols = $cols;
     }
+    foreach ( $placements as $p ) {
+        if ( isset( $p['article_id'] ) && null !== $p['article_id'] ) {
+            $article_ids[ $p['article_id'] ] = true;
+        }
+    }
 
-    $final_y          = $rows[ count( $rows ) - 1 ]['bottom'];
+    // 空き矩形拡張指示書§9-1：最大空白矩形／総空白面積は、Rowの内部
+    // 空白ではなく、その時点で残っているavailable_spaces（Row内部の
+    // 空白のうち、後続配置でまだ埋まっていない分）を正とする。空き
+    // 矩形へ配置した分はavailable_spacesから既に除かれているため、
+    // 二重計上しない（旧来のhatakiti_occult_pdf_debug_rows_internal_
+    // blank_area()による再計算はしない）。
+    $available_spaces = $plan['available_spaces'] ?? array();
+    $largest_rect_area = 0.0;
+    $total_blank_area  = 0.0;
+    foreach ( $available_spaces as $sp ) {
+        $area = $sp['width'] * $sp['height'];
+        $total_blank_area += $area;
+        $largest_rect_area = max( $largest_rect_area, $area );
+    }
+
+    $final_y          = $plan['final_y'];
     $remaining_height = max( 0, $page_bottom - $final_y );
     $trailing_area    = $remaining_height * $zone_w;
     $total_blank_area += $trailing_area;
@@ -2559,6 +2869,7 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) 
         'layout_switch_count'     => $switch_count,
         'row_count'               => count( $rows ),
         'column_imbalance_score'  => round( $imbalance_total, 1 ),
+        'order_jump'              => $plan['order_jump'] ?? 0,
     );
 }
 
@@ -2594,6 +2905,14 @@ function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
         return true;
     }
     if ( $a['column_imbalance_score'] > $b['column_imbalance_score'] + 0.5 ) {
+        return false;
+    }
+    // 空き矩形拡張指示書§6/§10 優先順位7：他が同等ならorder_jump
+    // （記事順序の飛び越し量）が小さい方を優先する。
+    if ( $a['order_jump'] < $b['order_jump'] ) {
+        return true;
+    }
+    if ( $a['order_jump'] > $b['order_jump'] ) {
         return false;
     }
     return $a['article_count'] > $b['article_count'];
@@ -2678,6 +2997,12 @@ function hatakiti_occult_pdf_should_adopt_page_plan( $baseline, $baseline_metric
         return array( 'adopt' => false, 'reason' => 'TOO_MANY_LAYOUT_SWITCHES' );
     }
 
+    // 空き矩形拡張指示書§11 重要な安全弁：最大空白矩形は改善しても、
+    // 列バランスが極端に悪化する場合は不採用とする。
+    if ( $candidate_metrics['column_imbalance_score'] > $baseline_metrics['column_imbalance_score'] + HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_IMBALANCE_REGRESSION_MM ) {
+        return array( 'adopt' => false, 'reason' => 'COLUMN_BALANCE_SEVERELY_WORSE' );
+    }
+
     return array( 'adopt' => true, 'reason' => 'IMPROVED', 'baseline_more_pages' => $baseline_more, 'candidate_more_pages' => $candidate_more );
 }
 
@@ -2706,7 +3031,7 @@ function hatakiti_occult_pdf_search_page_plan( $queue, $pdf, $font_regular, $fon
 
     $candidates       = array();
     $candidate_count  = 0;
-    hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base, array(), 0 );
+    hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base, array(), array(), array(), 0, 0 );
 
     $best         = null;
     $best_metrics = null;
@@ -2728,23 +3053,36 @@ function hatakiti_occult_pdf_search_page_plan( $queue, $pdf, $font_regular, $fon
     if ( null === $best ) {
         $debug_entry['adopted']      = false;
         $debug_entry['reject_reason'] = 'NO_CANDIDATE';
-        return array( 'rows' => null, 'debug_log' => array( $debug_entry ) );
+        return array( 'rows' => null, 'placements' => null, 'debug_log' => array( $debug_entry ) );
     }
 
     $decision = hatakiti_occult_pdf_should_adopt_page_plan( $baseline, $baseline_metrics, $best, $best_metrics );
     $debug_entry['best_candidate_metrics'] = $best_metrics;
     $debug_entry['adopted']                = $decision['adopt'];
     $debug_entry['reject_reason']          = $decision['adopt'] ? null : $decision['reason'];
+    $debug_entry['placement_count']        = count( $best['placements'] ?? array() );
     if ( isset( $decision['baseline_more_pages'] ) ) {
         $debug_entry['baseline_more_pages']  = $decision['baseline_more_pages'];
         $debug_entry['candidate_more_pages'] = $decision['candidate_more_pages'];
     }
 
     if ( ! $decision['adopt'] ) {
-        return array( 'rows' => null, 'debug_log' => array( $debug_entry ) );
+        return array( 'rows' => null, 'placements' => null, 'debug_log' => array( $debug_entry ) );
     }
 
-    return array( 'rows' => $best['rows'], 'debug_log' => array( $debug_entry ) );
+    // 空き矩形拡張指示書§16：採用時、空き矩形への配置（あれば）を
+    // 個別にログへ残す。
+    foreach ( $best['placements'] as $p ) {
+        $debug_entry['space_fill_placements'][] = array(
+            'article_id' => $p['article_id'],
+            'x'          => round( $p['x'], 1 ),
+            'y'          => round( $p['y'], 1 ),
+            'width'      => round( $p['width'], 1 ),
+            'order_jump' => $p['order_jump'],
+        );
+    }
+
+    return array( 'rows' => $best['rows'], 'placements' => $best['placements'], 'debug_log' => array( $debug_entry ) );
 }
 
 /**
