@@ -202,6 +202,166 @@
       "municipality": "市川市",
       "animal": "狐",
       "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-renpeijo-no-goma-gitsune",
+      "title": "練兵場のゴマ狐",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-shima-gitsune-to-inariya-gitsune",
+      "title": "シマ狐とイナリヤ狐",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-01",
+      "title": "狐に化かされた話 (1)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-02",
+      "title": "狐に化かされた話 (2)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-03",
+      "title": "狐に化かされた話 (3)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-04",
+      "title": "狐に化かされた話 (4)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-05",
+      "title": "狐に化かされた話 (5)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-06",
+      "title": "狐に化かされた話 (6)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "中国分（商大高校）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-07",
+      "title": "狐に化かされた話 (7)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-08",
+      "title": "狐に化かされた話 (8)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-09",
+      "title": "狐に化かされた話 (9)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-10",
+      "title": "狐に化かされた話 (10)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-11",
+      "title": "狐に化かされた話 (11)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-12",
+      "title": "狐に化かされた話 (12)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-13",
+      "title": "狐に化かされた話 (13)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-14",
+      "title": "狐に化かされた話 (14)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-15",
+      "title": "狐に化かされた話 (15)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-16",
+      "title": "狐に化かされた話 (16)",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsunebi-inakoshi-no-yamate",
+      "title": "狐火",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "国分（稲越の山手）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-no-chochin-kitakokubun",
+      "title": "狐の提灯",
+      "municipality": "市川市",
+      "animal": "狐",
+      "area": "北国分",
+      "status": "source_confirmed"
     }
   ],
   "research_status": "hub_ready_expanded"
