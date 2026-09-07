@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-urayasu-nekozane-no-benten-sama",
+  "status": "draft",
+  "title": "猫実の弁天様",
+  "title_normalized": "猫実の弁天様",
+  "title_origin": "local_tradition_name",
+  "summary": {
+    "text": "猫実の「灰やのくるわ」で、災害の前に弁天様が女の姿で現れ、火災や大津波を知らせて人々を救ったと伝える地域の守り神の伝承。大正6年の大津波で堂宇が流失したが、地元の人々が再建した。",
+    "based_on_source_ids": [
+      "SRC-URAYASU-KANKOU-SAYUTENMEI",
+      "SRC-URAYASU-CITY-HISTORIC-SIGNS"
+    ]
+  },
+  "story_summary": "明治17年（1884）、猫実の「灰やのくるわ」に左右天命を祀る弁天様の堂宇が建立された。伝承では、この弁天様は地域に災害が起こる前、女の姿になって現れ、火災を知らせたり、大津波の襲来を予告したりして、くるわの人々を救ったとされる。そのため周辺の守り神として崇拝された。大正6年（1917）の大津波では堂宇が流失したが、地元の人々が浄財を持ち寄って再建した。",
+  "story_content": "猫実に伝わる「猫実の弁天様」の話は、災害を前もって知らせる地域の守り神の伝承である。弁天様は災害が起こる前に女の姿となって現れ、火災や津波を知らせて人々を救ったと伝えられる。大正6年の大津波では社が流されたが、住民によって再建された。伝承上の予知能力と、実際の災害による堂宇流失・再建の歴史が一つの地域伝承として結び付いている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "浦安市",
+    "area_name": "猫実二丁目（旧称・灰やのくるわ周辺）",
+    "source_description": "浦安観光公式および浦安市公式史跡表示情報で確認。"
+  },
+  "locations": [
+    {
+      "name": "左右天命弁財天",
+      "location_type": "tradition_site",
+      "description": "通称「猫実の弁天様」。伝承の中心となる弁天堂。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "address",
+      "source_ids": [
+        "SRC-URAYASU-KANKOU-SAYUTENMEI",
+        "SRC-URAYASU-CITY-HISTORIC-SIGNS"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "左右天命弁財天",
+      "type": "神仏・信仰対象",
+      "description": "災害前に女の姿で現れ、地域の人々を救うと伝えられる弁天様。",
+      "source_ids": [
+        "SRC-URAYASU-KANKOU-SAYUTENMEI"
+      ]
+    }
+  ],
+  "themes": [
+    "災害予知",
+    "津波",
+    "地域の守り神",
+    "弁財天",
+    "猫実"
+  ],
+  "story_type": [
+    "信仰伝承",
+    "災害伝承",
+    "寺社伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "urayasu-yahai-no-benten-sama",
+      "relationship": "possible_related_record",
+      "note": "浦安市の弁天信仰伝承として関連候補。ただし同一伝承とは断定しない。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-URAYASU-KANKOU-SAYUTENMEI",
+      "title": "左右天命弁財天",
+      "publisher": "浦安観光 公式サイト",
+      "publication_date": "web",
+      "source_type": "official_tourism_site",
+      "url": "https://www.urayasu-kankou.jp/index/1962/",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "由緒・災害予知伝承・大正6年津波",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-URAYASU-CITY-HISTORIC-SIGNS",
+      "title": "市内史跡等表示板一覧",
+      "publisher": "浦安市",
+      "publication_date": "web",
+      "source_type": "municipal_official",
+      "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "左右天命弁財天",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "公式資料により伝承内容と堂宇の災害史を確認。浦安市民話索引の「ヤヘイの弁天さま」との同一性は未確認のため別話として保持。"
+}
