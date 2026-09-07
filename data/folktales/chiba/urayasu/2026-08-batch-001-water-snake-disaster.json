@@ -1,19 +1,288 @@
 {
-  "schema_version":"1.1",
-  "batch_id":"chiba-urayasu-2026-08-001",
-  "batch_role":"research_queue",
-  "deduplication_policy":"Each tradition is managed as a single canonical record across the repository. A batch must not retain duplicate full records after canonicalization. Removed duplicates are preserved only as lightweight deduplication history so downstream AI can determine that they were intentionally removed rather than overlooked.",
-  "deduplicated_records":[
-    {"title":"蛇の橋","canonical_record_id":"chiba-urayasu-hebi-no-hashi","canonical_file":"data/folktales/chiba/ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json","reason":"same record_id existed as a separate, slightly different full record in Ichikawa batch-006 (created earlier, 2026-08-26 10:41); consolidated there, removed here to avoid two full records under one ID"},
-    {"title":"蛇の泡とり","canonical_record_id":"chiba-urayasu-hebi-no-awatori","canonical_file":"data/folktales/chiba/ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json","reason":"same record_id existed as a separate, slightly different full record in Ichikawa batch-006 (created earlier, 2026-08-26 10:41); consolidated there, removed here to avoid two full records under one ID"}
+  "schema_version": "1.1",
+  "batch_id": "chiba-urayasu-2026-08-001",
+  "batch_role": "research_queue",
+  "deduplication_policy": "Each tradition is managed as a single canonical record across the repository. A batch must not retain duplicate full records after canonicalization. Removed duplicates are preserved only as lightweight deduplication history so downstream AI can determine that they were intentionally removed rather than overlooked.",
+  "deduplicated_records": [
+    {
+      "title": "蛇の橋",
+      "canonical_record_id": "chiba-urayasu-hebi-no-hashi",
+      "canonical_file": "data/folktales/chiba/ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json",
+      "reason": "same record_id existed as a separate, slightly different full record in Ichikawa batch-006 (created earlier, 2026-08-26 10:41); consolidated there, removed here to avoid two full records under one ID"
+    },
+    {
+      "title": "蛇の泡とり",
+      "canonical_record_id": "chiba-urayasu-hebi-no-awatori",
+      "canonical_file": "data/folktales/chiba/ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json",
+      "reason": "same record_id existed as a separate, slightly different full record in Ichikawa batch-006 (created earlier, 2026-08-26 10:41); consolidated there, removed here to avoid two full records under one ID"
+    }
   ],
-  "records":[
-    {"record_id":"chiba-urayasu-taisho6-tsunami-01","title":"大正六年の大津波（一）不思議な松の木","prefecture":"千葉県","municipality":"浦安市","locations":["当代島"],"cross_tags":["災害伝承","津波伝承","大正六年の大津波"],"themes":["災害","不思議な樹木","地域伝承"],"research_status":"partial","research_notes":"同一災害を共通コンテキストとする連作の一つ。船橋にも関連地点情報があるため広域関連を保持。","sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}]},
-    {"record_id":"chiba-urayasu-taisho6-tsunami-02","title":"大正六年の大津波（二）神さまの声","prefecture":"千葉県","municipality":"浦安市","related_regions":["市川市新井"],"cross_tags":["災害伝承","津波伝承","大正六年の大津波","寺社信仰"],"themes":["災害","神の声","地域伝承"],"research_status":"partial","research_notes":"市川市新井にも関連地点情報があり、市川・浦安接続を保持。","sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"},{"title":"千葉県立図書館 千葉県の民話 市川市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"}]},
-    {"record_id":"chiba-urayasu-taisho6-tsunami-03","title":"大正六年の大津波（三）木の上の蛇","prefecture":"千葉県","municipality":"浦安市","locations":["柳町"],"beings":["蛇"],"cross_tags":["災害伝承","津波伝承","大正六年の大津波","蛇伝承","水辺伝承"],"themes":["災害","怪異","動物"],"research_status":"partial","sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}]},
-    {"record_id":"chiba-urayasu-taisho6-tsunami-04","title":"大正六年の大津波（四）津波から守った鎮守さま","prefecture":"千葉県","municipality":"浦安市","locations":["猫実","堀江","当代島"],"cross_tags":["災害伝承","津波伝承","大正六年の大津波","寺社信仰"],"themes":["災害","鎮守","地域信仰"],"research_status":"partial","related_records":[{"record_id":"chiba-urayasu-taisho6-otsunami-tsunami-chinju","relationship":"variant_candidate","note":"市川バッチ006（ichikawa/2026-08-batch-006）に同一と思われる伝承の索引recordあり。本文未照合のため統合しない。"}],"sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}]},
-    {"record_id":"chiba-urayasu-hebi-no-ongaeshi","title":"蛇の恩返し","prefecture":"千葉県","municipality":"浦安市","beings":["蛇"],"cross_tags":["蛇伝承","動物報恩譚"],"themes":["恩返し","怪異"],"research_status":"researching","sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}]},
-    {"record_id":"chiba-urayasu-hebi-no-hikkoshi","title":"蛇の引越し","prefecture":"千葉県","municipality":"浦安市","beings":["蛇"],"cross_tags":["蛇伝承"],"themes":["怪異","移動"],"research_status":"researching","sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}]},
-    {"record_id":"chiba-urayasu-hebi-no-medama","title":"蛇の目玉に手え突っこんだ","prefecture":"千葉県","municipality":"浦安市","beings":["蛇"],"cross_tags":["蛇伝承"],"themes":["怪異","笑い話候補"],"research_status":"researching","research_notes":"題名からの類型推定は確定せず、本文確認まで候補扱い。","related_records":[{"record_id":"chiba-ichikawa-hebi-no-medama-ni-tee-tsukkonda","relationship":"variant_candidate","note":"市川バッチ006（ichikawa/2026-08-batch-006）に同題の深掘りrecordあり。本文未照合のため統合しない。"}],"sources":[{"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"}]}
+  "records": [
+    {
+      "record_id": "chiba-urayasu-taisho6-tsunami-01",
+      "title": "大正六年の大津波（一）不思議な松の木",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "locations": [
+        "当代島"
+      ],
+      "cross_tags": [
+        "災害伝承",
+        "津波伝承",
+        "大正六年の大津波"
+      ],
+      "themes": [
+        "災害",
+        "不思議な樹木",
+        "地域伝承"
+      ],
+      "research_status": "context_confirmed",
+      "research_notes": "同一災害を共通コンテキストとする連作の一つ。船橋にも関連地点情報があるため広域関連を保持。 個別の民話本文は未確認だが、4話が共有する災害の実態と地域的記憶は浦安市・千葉県公式資料で確認。",
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        },
+        {
+          "source_id": "SRC-URAYASU-CITY-FLOOD-1917",
+          "title": "浦安を襲った水害の記録",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/todokede/anzen/bousai/1030670/joho/1002113.html",
+          "accessed_date": "2026-09-07"
+        },
+        {
+          "source_id": "SRC-CHIBA-PREF-TAISHO6",
+          "title": "風水害との闘い 第2章 十五夜に海が襲ってきた！",
+          "publisher": "千葉県",
+          "url": "https://www.pref.chiba.lg.jp/bousaik/jibun/chishiki/huusui-yousi.html",
+          "accessed_date": "2026-09-07"
+        }
+      ],
+      "historical_context": "1917年9月30日に関東を襲った台風と満潮が重なって発生した高潮災害。地域では「大正6年の大津波」として伝承される。"
+    },
+    {
+      "record_id": "chiba-urayasu-taisho6-tsunami-02",
+      "title": "大正六年の大津波（二）神さまの声",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "related_regions": [
+        "市川市新井"
+      ],
+      "cross_tags": [
+        "災害伝承",
+        "津波伝承",
+        "大正六年の大津波",
+        "寺社信仰"
+      ],
+      "themes": [
+        "災害",
+        "神の声",
+        "地域伝承"
+      ],
+      "research_status": "context_confirmed",
+      "research_notes": "市川市新井にも関連地点情報があり、市川・浦安接続を保持。 個別の民話本文は未確認だが、4話が共有する災害の実態と地域的記憶は浦安市・千葉県公式資料で確認。",
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        },
+        {
+          "title": "千葉県立図書館 千葉県の民話 市川市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"
+        },
+        {
+          "source_id": "SRC-URAYASU-CITY-FLOOD-1917",
+          "title": "浦安を襲った水害の記録",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/todokede/anzen/bousai/1030670/joho/1002113.html",
+          "accessed_date": "2026-09-07"
+        },
+        {
+          "source_id": "SRC-CHIBA-PREF-TAISHO6",
+          "title": "風水害との闘い 第2章 十五夜に海が襲ってきた！",
+          "publisher": "千葉県",
+          "url": "https://www.pref.chiba.lg.jp/bousaik/jibun/chishiki/huusui-yousi.html",
+          "accessed_date": "2026-09-07"
+        }
+      ],
+      "historical_context": "1917年9月30日に関東を襲った台風と満潮が重なって発生した高潮災害。地域では「大正6年の大津波」として伝承される。"
+    },
+    {
+      "record_id": "chiba-urayasu-taisho6-tsunami-03",
+      "title": "大正六年の大津波（三）木の上の蛇",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "locations": [
+        "柳町"
+      ],
+      "beings": [
+        "蛇"
+      ],
+      "cross_tags": [
+        "災害伝承",
+        "津波伝承",
+        "大正六年の大津波",
+        "蛇伝承",
+        "水辺伝承"
+      ],
+      "themes": [
+        "災害",
+        "怪異",
+        "動物"
+      ],
+      "research_status": "context_confirmed",
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        },
+        {
+          "source_id": "SRC-URAYASU-CITY-FLOOD-1917",
+          "title": "浦安を襲った水害の記録",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/todokede/anzen/bousai/1030670/joho/1002113.html",
+          "accessed_date": "2026-09-07"
+        },
+        {
+          "source_id": "SRC-CHIBA-PREF-TAISHO6",
+          "title": "風水害との闘い 第2章 十五夜に海が襲ってきた！",
+          "publisher": "千葉県",
+          "url": "https://www.pref.chiba.lg.jp/bousaik/jibun/chishiki/huusui-yousi.html",
+          "accessed_date": "2026-09-07"
+        }
+      ],
+      "historical_context": "1917年9月30日に関東を襲った台風と満潮が重なって発生した高潮災害。地域では「大正6年の大津波」として伝承される。",
+      "research_notes": "個別の民話本文は未確認だが、4話が共有する災害の実態と地域的記憶は浦安市・千葉県公式資料で確認。"
+    },
+    {
+      "record_id": "chiba-urayasu-taisho6-tsunami-04",
+      "title": "大正六年の大津波（四）津波から守った鎮守さま",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "堀江",
+        "当代島"
+      ],
+      "cross_tags": [
+        "災害伝承",
+        "津波伝承",
+        "大正六年の大津波",
+        "寺社信仰"
+      ],
+      "themes": [
+        "災害",
+        "鎮守",
+        "地域信仰"
+      ],
+      "research_status": "context_confirmed",
+      "related_records": [
+        {
+          "record_id": "chiba-urayasu-taisho6-otsunami-tsunami-chinju",
+          "relationship": "variant_candidate",
+          "note": "市川バッチ006（ichikawa/2026-08-batch-006）に同一と思われる伝承の索引recordあり。本文未照合のため統合しない。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        },
+        {
+          "source_id": "SRC-URAYASU-CITY-FLOOD-1917",
+          "title": "浦安を襲った水害の記録",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/todokede/anzen/bousai/1030670/joho/1002113.html",
+          "accessed_date": "2026-09-07"
+        },
+        {
+          "source_id": "SRC-CHIBA-PREF-TAISHO6",
+          "title": "風水害との闘い 第2章 十五夜に海が襲ってきた！",
+          "publisher": "千葉県",
+          "url": "https://www.pref.chiba.lg.jp/bousaik/jibun/chishiki/huusui-yousi.html",
+          "accessed_date": "2026-09-07"
+        }
+      ],
+      "historical_context": "1917年9月30日に関東を襲った台風と満潮が重なって発生した高潮災害。地域では「大正6年の大津波」として伝承される。",
+      "research_notes": "個別の民話本文は未確認だが、4話が共有する災害の実態と地域的記憶は浦安市・千葉県公式資料で確認。"
+    },
+    {
+      "record_id": "chiba-urayasu-hebi-no-ongaeshi",
+      "title": "蛇の恩返し",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "beings": [
+        "蛇"
+      ],
+      "cross_tags": [
+        "蛇伝承",
+        "動物報恩譚"
+      ],
+      "themes": [
+        "恩返し",
+        "怪異"
+      ],
+      "research_status": "researching",
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-hebi-no-hikkoshi",
+      "title": "蛇の引越し",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "beings": [
+        "蛇"
+      ],
+      "cross_tags": [
+        "蛇伝承"
+      ],
+      "themes": [
+        "怪異",
+        "移動"
+      ],
+      "research_status": "researching",
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-hebi-no-medama",
+      "title": "蛇の目玉に手え突っこんだ",
+      "prefecture": "千葉県",
+      "municipality": "浦安市",
+      "beings": [
+        "蛇"
+      ],
+      "cross_tags": [
+        "蛇伝承"
+      ],
+      "themes": [
+        "怪異",
+        "笑い話候補"
+      ],
+      "research_status": "researching",
+      "research_notes": "題名からの類型推定は確定せず、本文確認まで候補扱い。",
+      "related_records": [
+        {
+          "record_id": "chiba-ichikawa-hebi-no-medama-ni-tee-tsukkonda",
+          "relationship": "variant_candidate",
+          "note": "市川バッチ006（ichikawa/2026-08-batch-006）に同題の深掘りrecordあり。本文未照合のため統合しない。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "千葉県立図書館 千葉県の民話 浦安市",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        }
+      ]
+    }
   ]
 }
