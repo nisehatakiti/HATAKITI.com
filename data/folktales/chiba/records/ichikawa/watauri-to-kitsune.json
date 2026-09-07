@@ -1,0 +1,15 @@
+{
+"schema_version":"1.0","record_id":"chiba-ichikawa-watauri-to-kitsune","status":"draft","title":"綿売りと狐","title_normalized":"わたうりときつね","title_origin":"source_title",
+"summary":{"text":"市川市・行徳地域に記録される、綿売りと狐を題材にした伝承。お夏狐の「おなつギツネとわたうり」と題材が近いため比較対象となるが、本文照合前のため独立した話として扱う。","based_on_source_ids":["SRC-JFOLKLORE-ICHIKAWA"]},
+"story_summary":"「綿売りと狐」は、市川市の伝承一覧に独立した題名で記録されている。綿売りと狐という組み合わせは「おなつギツネとわたうり」と近いが、公開資料上で本文同一性を確認できないため、現時点では別伝承として登録する。",
+"story_content":"市川市・行徳地域には狐が人間の商売や日常生活に現れる話が複数残る。「綿売りと狐」は、その中で綿を売る人物と狐を題材にした独立した伝承として記録されている。既存の「おなつギツネとわたうり」と題材が近いものの、題名の近さだけで同一話と決めず、今後本文や伝承地の詳細が確認できるまで比較候補として保持する。",
+"region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"行徳周辺","source_description":"日本伝承マップの市川市伝承一覧で確認。"},
+"locations":[{"name":"行徳地域","location_type":"region","description":"狐伝承が記録される地域圏。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+"characters":[{"name":"綿売り","role":"物語の人物","attributes":["綿を売る人物として題名に登場"],"source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+"beings":[{"name":"狐","type":"怪異・動物","description":"人間の生活圏に現れる存在。","source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+"themes":["狐伝承","綿売り","化かし","行徳"],
+"story_type":["狐伝承","怪異譚","地域伝承"],
+"related_records":[{"record_id":"chiba-ichikawa-onatsu-fox-watauri","relationship":"comparison_candidate","note":"題材が近い「おなつギツネとわたうり」。本文照合前のため同一話とは断定しない。"}],
+"sources":[{"source_id":"SRC-JFOLKLORE-ICHIKAWA","title":"市川市の伝承","publisher":"日本伝承マップ","publication_date":"web","source_type":"folklore_database","url":"https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82","accessed_date":"2026-09-07","relevant_section":"綿売りと狐","language":"ja"}],
+"confidence":"medium","research_status":"source_confirmed","research_notes":"題名と市川市の伝承としての記録を確認。既存のお夏狐伝承との本文同一性は未確認。"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "hub_type":"motif_or_story_type",
+  "motif_id":"onatsu-fox-tradition",
+  "canonical_name":"お夏狐伝承群",
+  "aliases":["お夏狐","おなつ狐","おなつぎつね","お夏ぎつね"],
+  "hub_tags":["伝承群ハブ","狐伝承","行徳","相之川","人名を持つ狐","化かし話"],
+  "classification_note":"市川市の行徳・相之川地域で、お夏狐という固有名を持つ狐を中心に記録される複数の話を横断する伝承群。個別話の本文・出来事・語りの系統は未照合のため、同一話として統合せず、固有の狐を共有する伝承群として接続する。",
+  "sub_motifs":["人名を持つ狐","寺院と狐","人間の商売・仕事と狐","土産をめぐる狐","綿売りと狐","地域の狐の化かし話"],
+  "linking_rule":"市川市・行徳周辺の記録で「お夏狐」「おなつぎつね」等の固有名が確認できる個別話を接続する。題材が狐一般のみの場合は、お夏狐との同一性を本文または出典で確認できるまで比較候補に留める。",
+  "known_connections":[
+    {"prefecture":"千葉県","municipality":"市川市","record_id":"chiba-ichikawa-onatsu-fox-watauri","title":"おなつギツネとわたうり","status":"partial"},
+    {"prefecture":"千葉県","municipality":"市川市","record_id":"chiba-ichikawa-onatsu-gitsune-shinbunya","title":"お夏ぎつね（1）新聞屋","status":"source_confirmed"},
+    {"prefecture":"千葉県","municipality":"市川市","record_id":"chiba-ichikawa-onatsu-gitsune-omiyage","title":"お夏ぎつね（2）おみやげ","status":"source_confirmed"}
+  ],
+  "comparison_candidates":[
+    {"prefecture":"千葉県","municipality":"市川市","record_id":"chiba-ichikawa-watauri-to-kitsune","title":"綿売りと狐","note":"題材が近いが、お夏狐との本文上の同一性は未確認。"}
+  ],
+  "research_status":"hub_ready"
+}
