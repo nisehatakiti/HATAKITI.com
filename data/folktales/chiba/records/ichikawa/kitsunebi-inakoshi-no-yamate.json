@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-kitsunebi-inakoshi-no-yamate",
+  "status": "draft",
+  "title": "狐火",
+  "title_normalized": "狐火",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "国分の稲越の山手に伝わる狐火の伝承。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-ICHIKAWA",
+      "SRC-ICHIKAWA-LIBRARY"
+    ]
+  },
+  "story_summary": "「狐火」は国分の稲越の山手に伝わる怪火伝承として確認できる。市川市には曽谷の火の玉狐など動物怪異と怪火を結ぶ話もあり比較可能だが、本話の具体的な現象は本文未確認のため補わない。",
+  "story_content": "「狐火」は国分の稲越の山手に伝わる怪火伝承として確認できる。市川市には曽谷の火の玉狐など動物怪異と怪火を結ぶ話もあり比較可能だが、本話の具体的な現象は本文未確認のため補わない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "国分（稲越の山手）",
+    "source_description": "日本伝承マップの市川市伝承一覧で題名と伝承地を確認。市川市図書館は地域別・内容別に昔話を調べられる資料案内を公開している。"
+  },
+  "locations": [
+    {
+      "name": "国分（稲越の山手）",
+      "location_type": "tradition_area",
+      "description": "出典一覧に示される伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・動物",
+      "description": "伝承の中心となる狐。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "狐伝承",
+    "動物怪異",
+    "化かし",
+    "国分・北国分"
+  ],
+  "story_type": [
+    "狐伝承",
+    "地域伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "motif_hub",
+      "note": "狐・狸・ムジナの化かし伝承類型ハブに接続。"
+    },
+    {
+      "record_id": "hub-region-kokubun-kitakokubun-fox-traditions",
+      "relationship": "regional_tradition_cluster",
+      "note": "国分・北国分を中心とする狐伝承群に接続。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "狐火",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-ICHIKAWA-LIBRARY",
+      "title": "市川のむかし話",
+      "publisher": "市川市図書館",
+      "publication_date": "2025-10-22更新",
+      "source_type": "municipal_library_guide",
+      "url": "https://www.city.ichikawa.lg.jp/site/library/4572.html",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "地域や内容から市川の昔話を調べる案内",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "題名と伝承地を確認。本文未確認のため、既存の狐化かし話の典型的筋を流用せず独立レコードとして登録。"
+}
