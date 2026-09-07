@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-yokomachi-inari-no-kitsune",
+  "status": "draft",
+  "title": "横町稲荷のきつね",
+  "title_normalized": "よこまちいなりのきつね",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "本行徳の横町稲荷を舞台にした狐の伝承。複数の異伝が記録され、市川民話の会でも継続して語られている。",
+    "based_on_source_ids": [
+      "SRC-ICHIKAWA-MINWA-YOKOMACHI",
+      "SRC-JFOLKLORE-ICHIKAWA"
+    ]
+  },
+  "story_summary": "本行徳の横町稲荷を舞台とする狐の話で、市川市の伝承一覧には「横町稲荷の狐（1）」「横町稲荷の狐（2）」という複数の異伝が記録されている。市川民話の会でも2023年、2024年、2026年に本行徳の話として継続的に語られている。本文の異同は未照合のため、複数の異伝を一つの物語へ統合せず、横町稲荷を中心とする狐伝承の独立レコードとして登録する。",
+  "story_content": "行徳の本行徳には横町稲荷を舞台にした狐の伝承が残る。「横町稲荷のきつね」は市川民話の会で繰り返し語られており、日本伝承マップでも「横町稲荷の狐（1）」「横町稲荷の狐（2）」という複数の記録が確認できる。現時点では各異伝の本文を直接比較できないため、狐がどのように現れ、人間をどう化かしたのかを推測して補わない。横町稲荷を中心に複数の狐話が集まる伝承地として、今後本文確認時に異伝関係を整理する。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "本行徳",
+    "source_description": "市川民話の会および日本伝承マップで横町稲荷を舞台とする狐伝承を確認。"
+  },
+  "locations": [
+    {
+      "name": "横町稲荷",
+      "location_type": "shrine_or_tradition_site",
+      "description": "本行徳にあり、複数の狐伝承が結び付く伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "local",
+      "source_ids": [
+        "SRC-ICHIKAWA-MINWA-YOKOMACHI",
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・動物",
+      "description": "横町稲荷に結び付く伝承上の存在。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "狐伝承",
+    "稲荷信仰",
+    "横町稲荷",
+    "本行徳",
+    "化かし",
+    "怪異"
+  ],
+  "story_type": [
+    "狐伝承",
+    "怪異譚",
+    "稲荷伝承",
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "chiba-ichikawa-oinari-san-to-kodomo-tachi",
+      "relationship": "same_location_tradition_cluster",
+      "note": "同じ横町稲荷に結び付く伝承群。本文同一性は未確認。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-ICHIKAWA-MINWA-YOKOMACHI",
+      "title": "市川民話の会 公開演目",
+      "publisher": "市川民話の会",
+      "publication_date": "2023-2026年",
+      "source_type": "community_folklore_web",
+      "url": "https://ichikawa.genki365.jp/G0000286/",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "横町稲荷のきつね（本行徳）",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "横町稲荷の狐（1）・（2）",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "伝承名、場所、複数異伝の存在、継続的な語りを確認。本文は未確認のため具体的筋は補完しない。"
+}
