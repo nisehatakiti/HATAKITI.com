@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-mujina-ga-bakete-deta-gyotoku",
+  "status": "draft",
+  "title": "ムジナが化けて出た話",
+  "title_normalized": "ムジナが化けて出た話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "行徳の馬頭観音に結び付く、ムジナが化けて現れる伝承。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-ICHIKAWA"
+    ]
+  },
+  "story_summary": "「ムジナが化けて出た話」は行徳の馬頭観音を伝承地とする。寺社・石仏などの場所に結び付く動物怪異伝承として重要だが、本文の具体的内容は未確認。",
+  "story_content": "「ムジナが化けて出た話」は行徳の馬頭観音を伝承地とする。寺社・石仏などの場所に結び付く動物怪異伝承として重要だが、本文の具体的内容は未確認。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "行徳（馬頭観音）",
+    "source_description": "日本伝承マップの市川市伝承一覧で確認。"
+  },
+  "locations": [
+    {
+      "name": "行徳（馬頭観音）",
+      "location_type": "tradition_area",
+      "description": "伝承一覧に示される伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "ムジナ",
+      "type": "怪異・動物",
+      "description": "題名または伝承分類上の中心となる存在。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "動物怪異",
+    "化かし",
+    "市川市",
+    "ムジナ"
+  ],
+  "story_type": [
+    "動物怪異譚",
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "motif_hub",
+      "note": "狐・狸・ムジナの化かし伝承類型ハブに接続。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "ムジナが化けて出た話",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "題名と伝承地の存在を確認。本文未確認部分は補完せず、独立した個別話として登録。"
+}
