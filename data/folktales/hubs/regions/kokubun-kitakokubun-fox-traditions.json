@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "regional_tradition_cluster",
+  "hub_id": "kokubun-kitakokubun-fox-traditions",
+  "canonical_name": "国分・北国分の狐伝承群",
+  "aliases": [
+    "練兵場周辺の狐伝承",
+    "国分狐話群"
+  ],
+  "region": {
+    "prefecture": "千葉県",
+    "municipality": "市川市",
+    "areas": [
+      "国分",
+      "北国分",
+      "中国分",
+      "国分新田",
+      "稲越"
+    ]
+  },
+  "summary": "市川市国分・北国分周辺に集中する狐伝承を地域単位で横断するハブ。練兵場を伝承地とする話が多く、番号付きの「狐に化かされた話」16件に加え、固有名を持つ狐、狐火、狐の提灯などが確認される。番号付き記録を同一話へ統合せず、本文照合まで独立話として扱う。",
+  "research_findings": [
+    "日本伝承マップの市川市伝承一覧には、国分・北国分・中国分にまたがる「狐に化かされた話」(1)〜(16)が記録される。",
+    "練兵場が複数の狐伝承の共通地点として現れる。",
+    "「練兵場のゴマ狐」「シマ狐とイナリヤ狐」のように固有名を持つ狐伝承も存在する。",
+    "狐火・狐の提灯は化かし話とは別に怪火・灯火との関連を持つ比較対象となる。"
+  ],
+  "connections": [
+    {
+      "record_id": "chiba-ichikawa-renpeijo-no-goma-gitsune",
+      "title": "練兵場のゴマ狐",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-shima-gitsune-to-inariya-gitsune",
+      "title": "シマ狐とイナリヤ狐",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-01",
+      "title": "狐に化かされた話 (1)",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-02",
+      "title": "狐に化かされた話 (2)",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-03",
+      "title": "狐に化かされた話 (3)",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-04",
+      "title": "狐に化かされた話 (4)",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-05",
+      "title": "狐に化かされた話 (5)",
+      "area": "国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-06",
+      "title": "狐に化かされた話 (6)",
+      "area": "中国分（商大高校）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-07",
+      "title": "狐に化かされた話 (7)",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-08",
+      "title": "狐に化かされた話 (8)",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-09",
+      "title": "狐に化かされた話 (9)",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-10",
+      "title": "狐に化かされた話 (10)",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-11",
+      "title": "狐に化かされた話 (11)",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-12",
+      "title": "狐に化かされた話 (12)",
+      "area": "北国分（練兵場）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-13",
+      "title": "狐に化かされた話 (13)",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-14",
+      "title": "狐に化かされた話 (14)",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-15",
+      "title": "狐に化かされた話 (15)",
+      "area": "国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-16",
+      "title": "狐に化かされた話 (16)",
+      "area": "北国分",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsunebi-inakoshi-no-yamate",
+      "title": "狐火",
+      "area": "国分（稲越の山手）",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-no-chochin-kitakokubun",
+      "title": "狐の提灯",
+      "area": "北国分",
+      "status": "source_confirmed"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07"
+    },
+    {
+      "source_id": "SRC-ICHIKAWA-LIBRARY",
+      "title": "市川のむかし話",
+      "publisher": "市川市図書館",
+      "url": "https://www.city.ichikawa.lg.jp/site/library/4572.html",
+      "accessed_date": "2026-09-07"
+    }
+  ],
+  "research_status": "hub_ready"
+}
