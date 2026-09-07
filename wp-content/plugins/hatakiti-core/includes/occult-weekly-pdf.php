@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '25' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '26' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -1001,72 +1001,255 @@ function hatakiti_occult_pdf_overflow_to_text( $overflow_body ) {
 }
 
 /**
- * この「ブロック」に何列（1〜3）並べるかを、キュー先頭の記事構成から
- * 直接決める（指示書§1「最優先方針」の順序をそのままルールの適用順に
- * する）。
- *
- *   - キュー先頭がlarge tierなら常に1列（横ぶち抜き、指示書§4）。
- *     large記事はどんな場合もペアにしない（続きであっても同じ）。
- *   - キュー先頭から連続して同tierが3件並んでいて（続き記事も同tier
- *     である限りカウントする — 続き記事だからといって単独1列へ強制
- *     しない、指示書追加指示§4/§5「続き記事が先頭なら常に全幅1列、を
- *     撤廃し、元記事と同じ列幅・同じX座標を維持することを優先する」）、
- *     3等分した列幅がHATAKITI_OCCULT_PDF_MIN_COL_W_MM以上なら3列。
- *   - 同様に2件同tierが並んでいれば2列。
- *   - それ以外（tierが混在する、または後続がない）は1列。
- *
- * この判定は「ブロック」の開始時に1回だけ行う。ブロック内の各列は、
- * 一度決まった列幅・X座標のまま、その列の記事が完結する（または
- * ページ末に達する）まで縦方向へ継続描画し続ける
- * （hatakiti_occult_pdf_stack_articles参照）。
- *
- * @return int 1|2|3
+ * fractions（列0=最も右→列N-1=最も左の幅比率、合計1.0）を、実際の
+ * mm幅の配列へ変換する。列間ギャップ(ROW_COL_GAP_MM)ぶんを先に引いた
+ * 実質幅を比率で配分する。
  */
-function hatakiti_occult_pdf_decide_row_columns( $queue, $zone_w ) {
-    if ( empty( $queue ) ) {
-        return 1;
+function hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap ) {
+    $cols   = count( $fractions );
+    $usable = $zone_w - ( $col_gap * ( $cols - 1 ) );
+    $widths = array();
+    foreach ( $fractions as $f ) {
+        $widths[] = $usable * $f;
     }
-    $first = $queue[0];
-    if ( 'large' === $first['_tier'] ) {
-        return 1;
-    }
-    $tier = $first['_tier'];
+    return $widths;
+}
 
-    $same_run = 1;
+/**
+ * ある記事（の残り本文）が、指定した列幅$col_wで$block_topから
+ * 描画された場合に、実際に完結する（またはページ末$page_bottomに
+ * 達して打ち切られる）until、どこまで（mm, ページ上端からの絶対Y）
+ * 到達するかを見積もる。実際には描画しない — 候補となる段組み構成
+ * ごとに「どれだけの高さを使い、どれだけ空白が残るか」を比較する
+ * ためだけの dry-run。
+ *
+ * hatakiti_occult_pdf_body_segment_h() と同じ「非最終セグメントは
+ * 常に固定の1段ぶんの高さ（unit_h_mm）、最終セグメントだけ実際の
+ * 残り文字数ぶんへ縮小する」という考え方をそのまま踏襲し、列幅から
+ * 導いた「1セグメントで実際に収まる文字数」（$capacity_per_segment）
+ * を使って、続きが必要な場合はセグメントを積み増しながら進める。
+ *
+ * @return array array('bottom'=>mm, 'truncated'=>bool)
+ */
+function hatakiti_occult_pdf_estimate_article_height( $article, $tier, $col_w, $header_h, $block_top, $page_bottom ) {
+    $fonts          = hatakiti_occult_pdf_layout_constants()['tier_fonts'][ $tier ];
+    $char_h         = $fonts['body'] * 0.3528;
+    $body_col_pitch = $char_h * 1.08;
+    $max_cols_by_w  = max( 1, (int) floor( $col_w / $body_col_pitch ) );
+    $capacity       = $max_cols_by_w * HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN;
+
+    list( $remaining, ) = hatakiti_occult_pdf_count_units( (string) ( $article['body'] ?? '' ) );
+
+    $y        = $block_top;
+    $is_first = true;
+    $truncated = false;
+    $safety   = 0;
+
+    while ( $remaining > 0 && $safety < 40 ) {
+        $safety++;
+
+        $seg_header_h = $is_first ? $header_h : 0.0;
+        $gap          = $is_first ? HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM : 0.0;
+        $src_h        = $is_first ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
+
+        if ( $remaining > HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN ) {
+            $body_h   = hatakiti_occult_pdf_unit_h_mm( $tier );
+            $consumed = min( $remaining, $capacity );
+        } else {
+            $body_h   = ( $remaining + 1 ) * $char_h + HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM;
+            $consumed = $remaining;
+        }
+
+        $seg_bottom = $y + $seg_header_h + $gap + $body_h + $src_h;
+        if ( $seg_bottom > $page_bottom ) {
+            $truncated = true;
+            break;
+        }
+
+        $y         = $seg_bottom + HATAKITI_OCCULT_PDF_ROW_GAP_MM;
+        $remaining -= $consumed;
+        $is_first  = false;
+    }
+
+    if ( $truncated || $safety >= 40 ) {
+        return array( 'bottom' => $page_bottom, 'truncated' => true );
+    }
+    // 最後に足したROW_GAPぶんを戻す（罫線位置＝実際の記事末端に相当）。
+    return array( 'bottom' => $y - HATAKITI_OCCULT_PDF_ROW_GAP_MM, 'truncated' => false );
+}
+
+/**
+ * 「ブロック」の段組み構成を決める（2026-09-07
+ * 全ページ対応・ブロック単位の可変段組みレイアウト実装指示書）。
+ *
+ * 1ページ目から最終ページまで完全に同じロジックを使う — ページ番号に
+ * よる特別扱いは無い。列数を固定の整数として決めるのではなく、列幅の
+ * 配分（1列／1:1／1:2／2:1／1:1:1）まで含めた「構成」として決め、
+ * 戻り値は列0（最も右）→列N-1（最も左）のmm幅の配列。
+ *
+ * 優先順位（指示書§5・if分岐で直接実装 — 加重スコアで下位が上位を
+ * 覆す方式にはしない）：
+ *   1) tier制約 — large tierは常に1列全幅。他tierは許可された構成
+ *      （medium: 1列/1:1/1:2/2:1、small: それに加えて1:1:1）のみ。
+ *   2) 続き記事の列位置・列幅維持 — キュー先頭が前ブロックからの
+ *      続き（_pinned_col_wを持つ）なら、その値をそのまま使い、新しい
+ *      構成へ変更しない。
+ *   3) ページ内の不自然な大きな空白を減らす。
+ *   4) 記事を必要以上に細い列へ押し込まない（MIN_COL_W_MM未満の候補
+ *      は除外）。
+ *   5) 標準候補は1:1の2列。3列・非対称2列は、明確に空白が改善する
+ *      場合のみ採用する（「同tierが3件だから3列」を優先しない）。
+ *
+ * @return float[] 列0（最も右）→列N-1（最も左）の実際のmm幅。
+ */
+function hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, $queue, $zone_w, $page_bottom, $block_top ) {
+    if ( empty( $queue ) ) {
+        return array( $zone_w );
+    }
+
+    // 優先順位2（最優先）：続き記事の列位置・列幅維持。キュー先頭が
+    // 前ブロックの続き（_pinned_col_w保持）なら、連続して続く先頭
+    // ぶんだけそのままのmm幅を再現する。新規記事を混ぜて構成を組み
+    // 替えることはしない — この構成が尽きるまで次のブロックへ持ち
+    // 越さず、ここで確定させる。
+    if ( isset( $queue[0]['_pinned_col_w'] ) ) {
+        $widths = array();
+        for ( $k = 0; $k < 3 && $k < count( $queue ); $k++ ) {
+            if ( ! isset( $queue[ $k ]['_pinned_col_w'] ) ) {
+                break;
+            }
+            $widths[] = (float) $queue[ $k ]['_pinned_col_w'];
+        }
+        return $widths;
+    }
+
+    // 優先順位1：large tierは常に1列全幅、他記事と横並びにしない。
+    $tier = $queue[0]['_tier'];
+    if ( 'large' === $tier ) {
+        return array( $zone_w );
+    }
+
+    // tierごとの許可構成（指示書§6）。mediumは均等3列を候補に含めない
+    // — 「1/3+2/3」等の非対称2列までに留める。smallのみ均等3列を追加。
+    $configs = array(
+        '1col'       => array( 1.0 ),
+        '2col_equal' => array( 0.5, 0.5 ),
+        '2col_q0w'   => array( 2 / 3, 1 / 3 ), // queue[0]（右列）を広く
+        '2col_q1w'   => array( 1 / 3, 2 / 3 ), // queue[1]（左列）を広く
+    );
+    if ( 'small' === $tier ) {
+        $configs['3col_equal'] = array( 1 / 3, 1 / 3, 1 / 3 );
+    }
+
+    // 同tierが連続している件数ぶんしか列を割けない（既存の制約を維持）。
+    $same_tier_run = 1;
     for ( $i = 1; $i < count( $queue ) && $i < 3; $i++ ) {
         if ( $queue[ $i ]['_tier'] !== $tier ) {
             break;
         }
-        $same_run++;
+        $same_tier_run++;
     }
 
-    if ( $same_run >= 3 ) {
-        $triple_w = ( $zone_w - ( HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM * 2 ) ) / 3;
-        if ( $triple_w >= HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
-            return 3;
+    $col_gap    = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
+    $candidates = array();
+    foreach ( $configs as $key => $fractions ) {
+        $cols = count( $fractions );
+        if ( $cols > $same_tier_run ) {
+            continue;
+        }
+        $widths = hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap );
+        if ( min( $widths ) < HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
+            continue; // 優先順位4：細すぎる列は候補から除外
+        }
+
+        $block_header_h = 0.0;
+        for ( $k = 0; $k < $cols; $k++ ) {
+            $h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $k ], $tier, $widths[ $k ] );
+            $block_header_h = max( $block_header_h, $h );
+        }
+
+        $bottoms = array();
+        for ( $k = 0; $k < $cols; $k++ ) {
+            $est       = hatakiti_occult_pdf_estimate_article_height( $queue[ $k ], $tier, $widths[ $k ], $block_header_h, $block_top, $page_bottom );
+            $bottoms[] = $est['bottom'];
+        }
+        $block_bottom = max( $bottoms );
+        $height       = max( 0.001, $block_bottom - $block_top );
+        $slack        = 0.0;
+        foreach ( $bottoms as $b ) {
+            $slack += ( $block_bottom - $b );
+        }
+
+        $candidates[ $key ] = array(
+            'widths'       => $widths,
+            'wasted_ratio' => $slack / ( $height * $cols ),
+        );
+    }
+
+    if ( empty( $candidates ) ) {
+        return array( $zone_w );
+    }
+    if ( ! isset( $candidates['1col'] ) ) {
+        // 1colはcols<=same_tier_run・幅制約を必ず満たすため通常は
+        // 到達しない安全弁。
+        $first = reset( $candidates );
+        return $first['widths'];
+    }
+
+    // 優先順位5：標準候補は1:1の2列。
+    $chosen_key = isset( $candidates['2col_equal'] ) ? '2col_equal' : '1col';
+
+    // 均等3列（smallのみ）は、2列よりも明確に空白が少ない場合のみ。
+    if ( isset( $candidates['3col_equal'] )
+        && $candidates['3col_equal']['wasted_ratio'] < 0.35
+        && $candidates['3col_equal']['wasted_ratio'] <= $candidates[ $chosen_key ]['wasted_ratio'] * 0.7
+    ) {
+        $chosen_key = '3col_equal';
+    }
+
+    // 非対称2列（1:2／2:1）は、記事量の偏りに合わせて明確に空白が
+    // 減る場合のみ、均等2列の代わりに採用する。どちら向きにするかは
+    // queue[0]/queue[1]のどちらの本文が長いかで選ぶ（長い方に広い列
+    // を割り当てる）。
+    if ( '3col_equal' !== $chosen_key && isset( $candidates['2col_q0w'] ) && isset( $candidates['2col_q1w'] ) ) {
+        list( $len0, ) = hatakiti_occult_pdf_count_units( (string) ( $queue[0]['body'] ?? '' ) );
+        list( $len1, ) = hatakiti_occult_pdf_count_units( (string) ( $queue[1]['body'] ?? '' ) );
+        $asym_key = $len0 >= $len1 ? '2col_q0w' : '2col_q1w';
+        if ( $candidates[ $asym_key ]['wasted_ratio'] < 0.35
+            && $candidates[ $asym_key ]['wasted_ratio'] <= $candidates[ $chosen_key ]['wasted_ratio'] * 0.7
+        ) {
+            $chosen_key = $asym_key;
         }
     }
-    if ( $same_run >= 2 ) {
-        $pair_w = ( $zone_w - HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM ) / 2;
-        if ( $pair_w >= HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
-            return 2;
-        }
+
+    // それでも無駄が大きすぎる場合のみ、1列（記事量が少ない場合）へ
+    // 後退する。
+    if ( '1col' !== $chosen_key
+        && $candidates[ $chosen_key ]['wasted_ratio'] > 0.6
+        && $candidates['1col']['wasted_ratio'] < $candidates[ $chosen_key ]['wasted_ratio']
+    ) {
+        $chosen_key = '1col';
     }
-    return 1;
+
+    return $candidates[ $chosen_key ]['widths'];
 }
 
 /**
  * 「紙面先行型」の列組版。処理は「ブロック」単位で進む —
- * hatakiti_occult_pdf_decide_row_columns() がブロック先頭で列数
- * （1〜3）を1回だけ決め、各列にはキュー先頭からその列数ぶんの記事を
- * 割り当てる。そのあとは各列を完全に独立に、同じX座標・同じ列幅の
- * まま下方向へ積み上げる — ある列の記事が続く限り、その続きは必ず
- * 同じ列にとどまる（同一記事の連続性・元記事と同じ列位置の維持）。
- * 1つの列の記事が完結しても、その空いた列へ別の記事を割り込ませる
- * ことはしない — ブロックは全列が完結する（またはページ末に達する）
- * まで終わらず、次のブロックはその時点の最も深い列の位置から、
- * 改めて列数を判定して始まる（同一ページ内でブロックの列配置を勝手に
- * 組み替えない）。
+ * hatakiti_occult_pdf_decide_block_config() がブロック先頭で段組み
+ * 構成（列数と各列の幅、1列〜3列・均等／非対称）を1回だけ決め、各列
+ * にはキュー先頭からその列数ぶんの記事を割り当てる。そのあとは各列を
+ * 完全に独立に、同じX座標・同じ列幅のまま下方向へ積み上げる — ある
+ * 列の記事が続く限り、その続きは必ず同じ列にとどまる（同一記事の
+ * 連続性・元記事と同じ列位置の維持、ページをまたいでも同じ）。1つの
+ * 列の記事が完結しても、その空いた列へ別の記事を割り込ませることは
+ * しない — ブロックは全列が完結する（またはページ末に達する）まで
+ * 終わらず、次のブロックはその時点の最も深い列の位置から、改めて
+ * 段組み構成を判定して始まる（同一ページ内・ページをまたいでも、
+ * ブロックの列配置を勝手に組み替えない）。1ページ目から最終ページ
+ * まで、この判定ロジックはまったく同じ — ページ番号による特別扱いは
+ * 無い（2026-09-07 全ページ対応・ブロック単位の可変段組みレイアウト
+ * 実装指示書§1/§9）。
  *
  * 【見出し領域と本文領域の分離】各列の見出し（またはブロック先頭の
  * 続きラベル）の高さはブロック内で列ごとに異なってよいが、本文の
@@ -1083,9 +1266,6 @@ function hatakiti_occult_pdf_decide_row_columns( $queue, $zone_w ) {
  * 内でこの場で発生した続き）はラベルを一切表示せず、見出し領域も
  * 確保しない（高さ0）— 本文がそのまま連続して見える（追加指示§1/§2）。
  *
- * 紙面利用率（列によっては他の列より早く記事が完結し、そのぶん
- * 空白が残る）よりも、列位置の一貫性を優先する。
- *
  * @return array array('bottom_y'=>mm, 'drew_any'=>bool, 'debug'=>array)
  */
 function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no = 1 ) {
@@ -1095,17 +1275,22 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
     $block_top   = $zone_y;
     $drew_any    = false;
     $debug       = array();
+    $block_index = 0; // 検証・報告用（レイアウトには影響しない）— このページ内でのブロック通し番号。
 
     while ( ! empty( $queue ) && ( $page_bottom - $block_top ) > HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
-        $cols  = hatakiti_occult_pdf_decide_row_columns( $queue, $zone_w );
-        $col_w = 1 === $cols ? $zone_w : ( $zone_w - ( $col_gap * ( $cols - 1 ) ) ) / $cols;
+        $block_index++;
+        $col_w_arr = hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, $queue, $zone_w, $page_bottom, $block_top );
+        $cols      = count( $col_w_arr );
 
         // 各列のX座標（縦書きの読み順に合わせ、列0をいちばん右に置く）
         // はブロック開始時に一度だけ決め、この列の記事が続く限り最後
-        // まで変えない。
+        // まで変えない。列幅は列ごとに異なってよい（非対称2列）ため、
+        // 右端からの累積オフセットで各列の左端を求める。
         $col_x = array();
+        $cursor_from_right = 0.0;
         for ( $k = 0; $k < $cols; $k++ ) {
-            $col_x[ $k ] = $zone_x + $zone_w - ( ( $k + 1 ) * $col_w ) - ( $k * $col_gap );
+            $col_x[ $k ] = $zone_x + $zone_w - $cursor_from_right - $col_w_arr[ $k ];
+            $cursor_from_right += $col_w_arr[ $k ] + $col_gap;
         }
 
         // ブロック内全列の「最初のセグメント」の見出し（またはラベル）
@@ -1114,7 +1299,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
         // （追加指示§5「block_header_h = 最大値」）。
         $block_header_h = 0.0;
         for ( $k = 0; $k < $cols; $k++ ) {
-            $h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $k ], $queue[ $k ]['_tier'], $col_w );
+            $h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $k ], $queue[ $k ]['_tier'], $col_w_arr[ $k ] );
             $block_header_h = max( $block_header_h, $h );
         }
         $body_start_y = $block_top + $block_header_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
@@ -1125,6 +1310,12 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
 
         for ( $k = 0; $k < $cols; $k++ ) {
             $article     = $queue[ $k ];
+            // このブロックで決まった列幅を記事自身に記録しておく —
+            // ページをまたいで続きが発生した場合、次ページの
+            // hatakiti_occult_pdf_decide_block_config() がこの値を
+            // そのまま読み、同じ列幅・同じX座標を再現する（新規記事の
+            // 混在や段組みの組み替えをしない、追加指示§10）。
+            $article['_pinned_col_w'] = $col_w_arr[ $k ];
             $is_first    = true; // このブロック内でこの列の最初のセグメントか
             $y           = $block_top;
             $drew_this   = false;
@@ -1169,13 +1360,14 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                     break;
                 }
 
-                $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $col_x[ $k ], $seg_top, $col_w, $header_h, $mode );
+                $result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $tier, $col_x[ $k ], $seg_top, $col_w_arr[ $k ], $header_h, $mode );
                 $drew_this = true;
 
                 $debug[] = array(
-                    'page' => $page_no, 'tier' => $tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
+                    'page' => $page_no, 'block' => $block_index, 'cols' => $cols, 'col' => $k,
+                    'tier' => $tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
                     'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
-                    'x' => round( $col_x[ $k ], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $col_w, 1 ), 'h' => round( $result['bottom_y'] - $seg_top, 1 ),
+                    'x' => round( $col_x[ $k ], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $col_w_arr[ $k ], 1 ), 'h' => round( $result['bottom_y'] - $seg_top, 1 ),
                     'continuation' => ! empty( $article['_continuation'] ),
                     'mode' => $mode,
                     'label_shown' => 'label' === $mode,
@@ -1185,7 +1377,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                 );
 
                 $pdf->SetLineWidth( 'large' === $tier && 1 === $cols ? 0.5 : 0.25 );
-                $pdf->Line( $col_x[ $k ], $result['bottom_y'] + ( $row_gap / 2 ), $col_x[ $k ] + $col_w, $result['bottom_y'] + ( $row_gap / 2 ) );
+                $pdf->Line( $col_x[ $k ], $result['bottom_y'] + ( $row_gap / 2 ), $col_x[ $k ] + $col_w_arr[ $k ], $result['bottom_y'] + ( $row_gap / 2 ) );
 
                 $y        = $result['bottom_y'] + $row_gap;
                 $is_first = false;
@@ -1224,7 +1416,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
         // ブロック終端の全幅罫線。
         if ( $cols > 1 ) {
             for ( $k = 1; $k < $cols; $k++ ) {
-                $div_x = $col_x[ $k ] + $col_w + ( $col_gap / 2 );
+                $div_x = $col_x[ $k ] + $col_w_arr[ $k ] + ( $col_gap / 2 );
                 $pdf->SetLineWidth( 0.25 );
                 $pdf->Line( $div_x, $block_top, $div_x, $block_bottom );
             }
