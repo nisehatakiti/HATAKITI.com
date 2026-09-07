@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '28' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '29' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -1588,16 +1588,24 @@ function hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, &$queue, $zo
  * にはキュー先頭からその列数ぶんの記事を割り当てる。そのあとは各列を
  * 完全に独立に、同じX座標・同じ列幅のまま下方向へ積み上げる — ある
  * 列の記事が続く限り、その続きは必ず同じ列にとどまる（同一記事の
- * 連続性・元記事と同じ列位置の維持、ページをまたいでも同じ）。1つの
- * 列の記事が完結しても、その空いた列へ別の記事を割り込ませることは
- * しない — ブロックは全列が完結する（またはページ末に達する）まで
- * 終わらず、次のブロックはその時点の最も深い列の位置から、改めて
- * 段組み構成を判定して始まる（同一ページ内・ページをまたいでも、
- * ブロックの列配置を勝手に組み替えない）。1ページ目から最終ページ
- * まで、この判定ロジックはまったく同じ — ページ番号による特別扱いは
- * 無い（2026-09-07 全ページ対応・ブロック単位の可変段組みレイアウト
- * 実装指示書§1/§9）。
+ * 連続性・元記事と同じ列位置の維持、ページをまたいでも同じ）。ブロック
+ * は全列が完結する（またはページ末に達する）まで終わらず、次のブロック
+ * はその時点の最も深い列の位置から、改めて段組み構成を判定して始まる
+ * （同一ページ内・ページをまたいでも、ブロックの列配置を勝手に組み替え
+ * ない）。1ページ目から最終ページまで、この判定ロジックはまったく同じ
+ * — ページ番号による特別扱いは無い。
  *
+ * 【バックフィル】1つの列（続き記事ではなく、元の記事が完結した列）が
+ * 空いた場合、そこへ別の記事を割り込ませる（記事配置アルゴリズム再調整
+ * 指示書§5/§7）。空いた列を「その列のX座標・列幅を持つ、記事完結位置
+ * からページ末までの空き矩形」とみなし、後続キュー（最大
+ * HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW件）から、その矩形に完全に収まる
+ * 同tier記事を探して詰める — 「列構成（列数・列幅）を維持すること」を
+ * 優先しつつ、既に決まった列構成の中で個々の列の空きは可能な限り埋める。
+ * 続き記事が確定している列（次ページへ持ち越す列）はバックフィル対象に
+ * しない。
+ *
+
  * 【見出し領域と本文領域の分離】各列の見出し（またはブロック先頭の
  * 続きラベル）の高さはブロック内で列ごとに異なってよいが、本文の
  * 開始Y座標はブロック内の全列で完全に一致させる — 見出しが長い列に
@@ -1750,6 +1758,79 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             $col_drew[ $k ]   = $drew_this;
             if ( $drew_this ) {
                 $drew_any = true;
+            }
+        }
+
+        // バックフィル（記事配置アルゴリズム再調整指示書§5/§7）：ブロック
+        // 内で記事が完結し空きが生じた列（＝その列の記事完結位置から
+        // ページ末までの「空き矩形」）に、後続の同tier記事を、その矩形に
+        // 完全に収まる範囲で詰め込めるだけ詰め込む。「現在の列構成を
+        // 維持するために空白を残す」のではなく、列ごとに独立して後続
+        // 記事を探索・充填する。続きが必要な列（$col_final[$k]が非null）
+        // は対象にしない — 列位置維持の既存仕様を壊さないため。
+        $block_tier = $queue[0]['_tier'];
+        $backfill_changed = true;
+        while ( $backfill_changed ) {
+            $backfill_changed = false;
+            for ( $k = 0; $k < $cols; $k++ ) {
+                if ( null !== $col_final[ $k ] ) {
+                    continue;
+                }
+                if ( ( $page_bottom - $col_bottom[ $k ] ) <= HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
+                    continue;
+                }
+
+                $best_j        = null;
+                $best_est      = null;
+                $best_header_h = 0.0;
+                $limit         = min( count( $queue ), $cols + HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW );
+                for ( $j = $cols; $j < $limit; $j++ ) {
+                    if ( ! isset( $queue[ $j ] ) || $queue[ $j ]['_tier'] !== $block_tier || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
+                        continue;
+                    }
+                    $cand_header_h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $j ], $block_tier, $col_w_arr[ $k ] );
+                    $est           = hatakiti_occult_pdf_estimate_article_height( $queue[ $j ], $block_tier, $col_w_arr[ $k ], $cand_header_h, $col_bottom[ $k ], $page_bottom );
+                    if ( $est['truncated'] ) {
+                        continue;
+                    }
+                    if ( null === $best_est || $est['bottom'] < $best_est['bottom'] ) {
+                        $best_j        = $j;
+                        $best_est      = $est;
+                        $best_header_h = $cand_header_h;
+                    }
+                }
+
+                if ( null === $best_j ) {
+                    continue;
+                }
+
+                $candidate = $queue[ $best_j ];
+                array_splice( $queue, $best_j, 1 );
+
+                $seg_top = $col_bottom[ $k ];
+                $result  = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $candidate, $block_tier, $col_x[ $k ], $seg_top, $col_w_arr[ $k ], $best_header_h, 'headline' );
+
+                $debug[] = array(
+                    'page' => $page_no, 'block' => $block_index, 'cols' => $cols, 'col' => $k,
+                    'article_id' => $candidate['_debug_article_id'] ?? null,
+                    'tier' => $block_tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
+                    'headline' => mb_substr( (string) ( $candidate['headline'] ?? '' ), 0, 16 ),
+                    'x' => round( $col_x[ $k ], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $col_w_arr[ $k ], 1 ), 'h' => round( $result['bottom_y'] - $seg_top, 1 ),
+                    'continuation' => false,
+                    'mode' => 'headline',
+                    'label_shown' => false,
+                    'is_first_in_block' => false,
+                    'body_top' => round( $seg_top + $best_header_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
+                    'overflow' => ! empty( $result['overflow_body'] ),
+                    'backfill' => true,
+                );
+
+                $pdf->SetLineWidth( 0.25 );
+                $pdf->Line( $col_x[ $k ], $result['bottom_y'] + ( $row_gap / 2 ), $col_x[ $k ] + $col_w_arr[ $k ], $result['bottom_y'] + ( $row_gap / 2 ) );
+
+                $col_bottom[ $k ] = $result['bottom_y'] + $row_gap;
+                $drew_any         = true;
+                $backfill_changed = true;
             }
         }
 
