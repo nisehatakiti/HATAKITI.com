@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '30' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '32' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -1940,6 +1940,168 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
 }
 
 /**
+ * PDFページ数最小化指示書§1/§3：このページで、記事領域の高さを
+ * footer分（$footer_h + $footer_margin）だけ手前で切り上げても、
+ * 残りキューがちょうど尽きるかを、使い捨てのTCPDFインスタンス上で
+ * 試す（実際の$pdf・$queueは一切変更しない）。尽きるなら、このページ
+ * を「記事＋出典＋編集後記が同居する最終ページ」として使ってよい —
+ * 出典・編集後記専用ページを追加せずに済む。
+ *
+ * 「記事をページ末まで目一杯詰める」既存のバックフィルは、footer用の
+ * 余白を考慮せずページを埋め切ってしまうため、この判定を経ずに
+ * そのまま描画すると、記事がぎりぎり尽きた直後の残り高さがfooterに
+ * 足りず、専用ページが生じる（今回の指示書が問題視したケース）。
+ * この事前トライアルにより、そもそも記事の割り付け段階で必要な
+ * 余白を空けておけるようにする。
+ *
+ * @return bool 尽きればtrue（＝footer分の余白を確保してこのページを
+ *   使ってよい）。
+ */
+function hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $zone_x, $zone_y, $zone_w, $reduced_budget, $page_no ) {
+    if ( $reduced_budget <= 0 ) {
+        return false;
+    }
+    list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+    $scratch_pdf->AddPage();
+    $queue_copy = $queue; // PHPの配列は値渡し（複合値も再帰的に複製される）— 実際の$queueには影響しない。
+    hatakiti_occult_pdf_stack_articles( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_y, $zone_w, $reduced_budget, $page_no );
+    return empty( $queue_copy );
+}
+
+/**
+ * PDFページ数最小化指示書§3案B／§4①②③ — 「このページを縮めて
+ * 残り記事を次ページへ送り、次ページで残り記事＋footerをまとめて
+ * 収容できないか」を試す（終盤ページの再配置シミュレーション）。
+ *
+ * hatakiti_occult_pdf_trial_fits_with_footer_reserved()による
+ * 「footer分を手前で切り上げてもこのページだけでキューが尽きるか」
+ * の判定が失敗した場合（＝footerを置く余白がこのページには全く
+ * 足りない場合）に呼ばれる。full_budgetを段階的に縮小しながら、
+ * 「このページでは尽きないが、あふれた分＋footerが次ページの
+ * フル高さに収まる」縮小予算を探す。見つかった時点で（＝あふれる
+ * 記事数が最小になる時点で）即座に返す。
+ *
+ * 見つかった予算を現在のページの実描画に使えば、キューは自然に
+ * 少しだけ次ページへ残り、次ページ側の
+ * trial_fits_with_footer_reserved()判定が今度は成功して、
+ * footer専用ページなしで「残り記事＋footer」を1ページに収容できる。
+ *
+ * 縮小幅は単純な割合ではなく、まずフル予算で試し積みして実際の
+ * ブロック境界（Y座標）を取得し、「末尾のブロックから順に1つずつ
+ * 次ページへ送る」形で候補を作る。ブロックは1〜4列の行単位で
+ * まとまって配置されるため、境界を無視した中途半端な割合縮小では
+ * 「送られる量が多すぎる／全く送られない」の両極端になりがちで、
+ * 案Bの成立条件（あふれた分＋footerが次ページに収まる）を捉え
+ * 損ねやすい。ブロック境界での縮小なら、末尾1ブロックだけを送る
+ * 最小限の調整から順に試せる。
+ *
+ * 見つからなかった場合も、$debug_logで「なぜ既存ページへ収容できな
+ * かったのか」を報告できるよう、試した候補のうち最も惜しかった
+ * （次ページの残り高さとfooter必要高さの差＝不足量が最小だった）
+ * ものを best_attempt として返す（PDFページ数最小化指示書§4の
+ * ログ要件）。
+ *
+ * @return array array(
+ *   'budget'       => float|null  見つかった縮小予算（mm）。null＝失敗。
+ *   'best_attempt' => array|null  失敗時の最善候補の診断情報
+ *     array('spilled_count'=>int, 'remaining_on_next'=>float,
+ *           'footer_needed'=>float, 'shortfall'=>float)。
+ * )
+ */
+/**
+ * hatakiti_occult_pdf_find_endgame_reflow_budget()の結果を、
+ * footer専用ページの理由ログ（PDFページ数最小化指示書§4）向けの
+ * 短い文字列に整形する。
+ */
+function hatakiti_occult_pdf_format_endgame_reason( $would_finish_full, $endgame_budget, $endgame_best ) {
+    if ( ! $would_finish_full ) {
+        return 'no(このページは最終記事ページではないため未試行)';
+    }
+    if ( null !== $endgame_budget ) {
+        return 'yes(成功)';
+    }
+    if ( null === $endgame_best ) {
+        return 'yes(失敗、候補構成なし)';
+    }
+    return sprintf(
+        'yes(失敗、最善候補=末尾%d記事を次ページへ送っても次ページ残り%.1fmm<footer必要%.1fmm、不足%.1fmm)',
+        $endgame_best['spilled_count'],
+        $endgame_best['remaining_on_next'],
+        $endgame_best['footer_needed'],
+        $endgame_best['shortfall']
+    );
+}
+
+function hatakiti_occult_pdf_find_endgame_reflow_budget( $queue, $zone_x, $zone_y, $zone_w, $full_budget, $footer_h, $footer_margin, $page_no, $next_zone_y, $next_full_budget ) {
+    $fail = array( 'budget' => null, 'best_attempt' => null );
+
+    $queue_copy_full = $queue; // PHPの配列は値渡し — 実際の$queueには影響しない。
+    list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+    $scratch_pdf->AddPage();
+    $full_stack = hatakiti_occult_pdf_stack_articles( $queue_copy_full, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_y, $zone_w, $full_budget, $page_no );
+    if ( ! empty( $queue_copy_full ) ) {
+        // フル予算でもこのページだけでは尽きない＝呼び出し側の事前
+        // 判定と矛盾するはずだが、念のため安全に諦める。
+        return $fail;
+    }
+
+    $block_tops = array();
+    foreach ( $full_stack['debug'] as $row ) {
+        if ( ! isset( $row['block'], $row['y'] ) ) {
+            continue;
+        }
+        $b = $row['block'];
+        if ( ! isset( $block_tops[ $b ] ) || $row['y'] < $block_tops[ $b ] ) {
+            $block_tops[ $b ] = $row['y'];
+        }
+    }
+    if ( empty( $block_tops ) ) {
+        return $fail;
+    }
+    krsort( $block_tops ); // ブロック番号の大きい順＝末尾のブロックから試す。
+
+    $footer_needed = $footer_h + $footer_margin;
+    $next_reduced  = $next_full_budget - $footer_h - $footer_margin;
+    $best_attempt  = null;
+    foreach ( $block_tops as $top_y ) {
+        $candidate_budget = ( $top_y - $zone_y ) - 1.0; // このブロックの直前で切り上げる
+        if ( $candidate_budget <= 0 ) {
+            continue;
+        }
+        $queue_copy = $queue;
+        list( $scratch_pdf2, $scratch_font_regular2, $scratch_font_bold2 ) = hatakiti_occult_pdf_new_tcpdf();
+        $scratch_pdf2->AddPage();
+        hatakiti_occult_pdf_stack_articles( $queue_copy, $scratch_pdf2, $scratch_font_regular2, $scratch_font_bold2, $zone_x, $zone_y, $zone_w, $candidate_budget, $page_no );
+        if ( empty( $queue_copy ) ) {
+            // この境界で切ってもまだ全部収まってしまう（backfillが
+            // 別のブロック構成を選び直した等）。もう1つ手前を試す。
+            continue;
+        }
+        if ( hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue_copy, $zone_x, $next_zone_y, $zone_w, $next_reduced, $page_no + 1 ) ) {
+            return array( 'budget' => $candidate_budget, 'best_attempt' => null );
+        }
+
+        // 惜しさを測るため、あふれた分だけを次ページのフル高さで
+        // 試し積みし、実際に残る高さ（footer用に使える高さ）を測る。
+        $spill_copy = $queue_copy;
+        list( $scratch_pdf3, $scratch_font_regular3, $scratch_font_bold3 ) = hatakiti_occult_pdf_new_tcpdf();
+        $scratch_pdf3->AddPage();
+        $spill_stack     = hatakiti_occult_pdf_stack_articles( $spill_copy, $scratch_pdf3, $scratch_font_regular3, $scratch_font_bold3, $zone_x, $next_zone_y, $zone_w, $next_full_budget, $page_no + 1 );
+        $remaining_next  = ( $next_zone_y + $next_full_budget ) - max( $spill_stack['bottom_y'], $next_zone_y );
+        $shortfall       = $footer_needed - $remaining_next;
+        if ( null === $best_attempt || $shortfall < $best_attempt['shortfall'] ) {
+            $best_attempt = array(
+                'spilled_count'     => count( $queue_copy ),
+                'remaining_on_next' => round( $remaining_next, 1 ),
+                'footer_needed'     => round( $footer_needed, 1 ),
+                'shortfall'         => round( $shortfall, 1 ),
+            );
+        }
+    }
+    return array( 'budget' => null, 'best_attempt' => $best_attempt );
+}
+
+/**
  * 出典一覧＋編集後記＋文責クレジットの横書きフッターブロック。
  */
 function hatakiti_occult_pdf_footer_height( $pdf, $font_regular, $all_sources, $editorial_summary, $w ) {
@@ -2066,6 +2228,12 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
     $page1_col_top    = $c['margin_t'] + $c['masthead_h'];
     $page1_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page1_col_top;
 
+    // 2ページ目以降の版面はどのページでも同じ（見出し高さが一定のため）
+    // なので、終盤ページの再配置シミュレーション（「次ページ」の版面を
+    // 覗き見る）でも使えるよう、ここで一度だけ計算しておく。
+    $page_n_col_top    = $c['margin_t'] + $c['page2_header_h'];
+    $page_n_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page_n_col_top;
+
     // 紙面全体を通じて1本のキューとして扱う（large_zone/left_zoneの
     // ような並行ゾーンへの事前分割はしない）。large→medium→smallの
     // 順で並べることで、1面冒頭にlarge記事の横ぶち抜きが来て、その後
@@ -2080,20 +2248,54 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
     $pdf->AddPage();
     hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c, $issue_subtitle, $issue_id, $issue_date );
 
-    $page1_stack = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, 1 );
-    $debug_log   = $page1_stack['debug'];
-
     // footer（出典一覧＋編集後記）ぶんの余白を毎ページ機械的に確保
     // すると、記事がまだ続くページにも常に「footerのための空白」が
     // 残ってしまい、「前ページに十分な空きがあるのに続きを次ページへ
-    // 送る」不具合の直接の原因になる。そこで、記事ページは常にフル
-    // 高さを使って積み、footerは「記事がすべて尽きた最後のページ」の
-    // 残り高さに収まる場合だけそこへ同居させ、収まらない場合のみ
-    // footer専用の1ページを追加する。
+    // 送る」不具合の直接の原因になる。そこで通常は記事ページを常に
+    // フル高さで積むが、残りキューが少ない（footerで最後になり得る）
+    // 段階では、事前トライアル
+    // （hatakiti_occult_pdf_trial_fits_with_footer_reserved()）で
+    // 「footer分を手前で切り上げても残りキューが尽きるか」を確認し、
+    // 尽きるならそのページだけfooter分の余白を残して積む — これにより
+    // 出典・編集後記専用ページの発生そのものを避ける（PDFページ数
+    // 最小化指示書§1〜§4）。専用ページになった場合のみ、その理由を
+    // $debug_logへ記録する。
     $footer_margin    = 3.0;
     $footer_y         = null;
+    $footer_dedicated_reason = null;
     $max_pages_safety = 12;
     $page_no          = 1;
+
+    // まず「フル高さで積んだ場合、このページだけでキューが尽きるか
+    // （＝このページが最後の記事ページになり得るか）」を安く確認する。
+    // 尽きない（まだ何ページも続く）とわかっている序盤のページでは、
+    // footer関連のトライアルをそもそも試す意味がないため省略する
+    // （生成時間の無駄を避ける）。
+    $would_finish_full_p1 = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, 1 );
+    $reserve_footer_p1    = false;
+    $endgame_budget_p1    = null;
+    $endgame_best_p1      = null;
+    $page1_budget_to_use  = $page1_col_h_full;
+    if ( $would_finish_full_p1 ) {
+        $reduced_budget_p1 = $page1_col_h_full - $footer_h - $footer_margin;
+        $reserve_footer_p1 = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page1_col_top, $full_w, $reduced_budget_p1, 1 );
+        if ( $reserve_footer_p1 ) {
+            $page1_budget_to_use = $reduced_budget_p1;
+        } else {
+            // footerを置く余白がこのページには全く足りない。案B：
+            // このページを少し縮めて残り記事を次ページへ送り、次ページで
+            // 残り記事＋footerをまとめて収容できないか試す。
+            $endgame_result_p1 = hatakiti_occult_pdf_find_endgame_reflow_budget( $queue, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, $footer_h, $footer_margin, 1, $page_n_col_top, $page_n_col_h_full );
+            $endgame_budget_p1 = $endgame_result_p1['budget'];
+            $endgame_best_p1   = $endgame_result_p1['best_attempt'];
+            if ( null !== $endgame_budget_p1 ) {
+                $page1_budget_to_use = $endgame_budget_p1;
+            }
+        }
+    }
+
+    $page1_stack = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $full_w, $page1_budget_to_use, 1 );
+    $debug_log   = $page1_stack['debug'];
 
     if ( empty( $queue ) ) {
         // 全記事が1面だけで収まった。footerが1面の残り高さに収まるか
@@ -2102,16 +2304,39 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
         $remaining_on_p1 = ( $page1_col_top + $page1_col_h_full ) - $bottom_y;
         if ( $remaining_on_p1 >= $footer_h + $footer_margin ) {
             $footer_y = $bottom_y;
+        } else {
+            $footer_dedicated_reason = sprintf( '1ページ目残り高さ%.1fmm（footer必要%.1fmm、reduced_budget試行=%s、endgame再配置試行=%s）', $remaining_on_p1, $footer_h + $footer_margin, $reserve_footer_p1 ? 'yes' : 'no', hatakiti_occult_pdf_format_endgame_reason( $would_finish_full_p1, $endgame_budget_p1, $endgame_best_p1 ) );
         }
     } else {
         $page_no = 2;
         while ( ! empty( $queue ) && $page_no <= $max_pages_safety ) {
             $pdf->AddPage();
             hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, $page_no );
-            $page_n_col_top    = $c['margin_t'] + $c['page2_header_h'];
-            $page_n_col_h_full = ( $c['page_h'] - $c['margin_b'] ) - $page_n_col_top;
 
-            $page_n_stack = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no );
+            $would_finish_full_n  = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no );
+            $reserve_footer_n     = false;
+            $endgame_budget_n     = null;
+            $endgame_best_n       = null;
+            $page_n_budget_to_use = $page_n_col_h_full;
+            if ( $would_finish_full_n ) {
+                $reduced_budget_n = $page_n_col_h_full - $footer_h - $footer_margin;
+                $reserve_footer_n = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page_n_col_top, $full_w, $reduced_budget_n, $page_no );
+                if ( $reserve_footer_n ) {
+                    $page_n_budget_to_use = $reduced_budget_n;
+                } else {
+                    // footerを置く余白がこのページには全く足りない。案B：
+                    // このページを少し縮めて残り記事を次ページへ送り、次
+                    // ページで残り記事＋footerをまとめて収容できないか試す。
+                    $endgame_result_n = hatakiti_occult_pdf_find_endgame_reflow_budget( $queue, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $footer_h, $footer_margin, $page_no, $page_n_col_top, $page_n_col_h_full );
+                    $endgame_budget_n = $endgame_result_n['budget'];
+                    $endgame_best_n   = $endgame_result_n['best_attempt'];
+                    if ( null !== $endgame_budget_n ) {
+                        $page_n_budget_to_use = $endgame_budget_n;
+                    }
+                }
+            }
+
+            $page_n_stack = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_budget_to_use, $page_no );
             $debug_log    = array_merge( $debug_log, $page_n_stack['debug'] );
 
             if ( empty( $queue ) ) {
@@ -2121,6 +2346,8 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
                 $remaining_on_pg = ( $page_n_col_top + $page_n_col_h_full ) - $bottom_y;
                 if ( $remaining_on_pg >= $footer_h + $footer_margin ) {
                     $footer_y = $bottom_y;
+                } else {
+                    $footer_dedicated_reason = sprintf( '%dページ目残り高さ%.1fmm（footer必要%.1fmm、reduced_budget試行=%s、endgame再配置試行=%s）', $page_no, $remaining_on_pg, $footer_h + $footer_margin, $reserve_footer_n ? 'yes' : 'no', hatakiti_occult_pdf_format_endgame_reason( $would_finish_full_n, $endgame_budget_n, $endgame_best_n ) );
                 }
                 // 収まらない場合は $footer_y を null のままにし、
                 // ループの外でfooter専用ページを追加する。
@@ -2142,7 +2369,14 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
 
     if ( null === $footer_y ) {
         // 最後の記事ページの残り高さにfooterが収まらなかった場合の
-        // フォールバック：footer専用の1ページを追加する。
+        // フォールバック：footer専用の1ページを追加する。理由をdebug_log
+        // へ記録する（PDFページ数最小化指示書§4、articles_json等の
+        // DBデータには一切影響しない診断情報）。
+        $debug_log[] = array(
+            'page'                   => $page_no + 1,
+            'dedicated_footer_page'  => true,
+            'reason'                 => $footer_dedicated_reason,
+        );
         $pdf->AddPage();
         hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, $page_no );
         $footer_y = $c['margin_t'] + $c['page2_header_h'];
