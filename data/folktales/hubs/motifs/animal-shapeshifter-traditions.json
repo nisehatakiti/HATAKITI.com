@@ -146,6 +146,62 @@
       "municipality": "市川市",
       "animal": "狸",
       "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-mawasareta-kokubun-shinden",
+      "title": "狐に回された話（1）",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-ni-mawasareta-ono",
+      "title": "狐に回された話（2）",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-no-ongaeshi-inarigi",
+      "title": "狐の恩返し",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-no-tatari-hakusei",
+      "title": "狐の祟り 1 狐の剝製",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-kitsune-no-tatari-ikiume",
+      "title": "狐の祟り 2 狐の生き埋め",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-hinotama-gitsune",
+      "title": "火の玉狐",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-hinotama-gitsune-2",
+      "title": "火の玉狐 2",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
+    },
+    {
+      "record_id": "chiba-ichikawa-sandozaka-osan-gitsune",
+      "title": "三度坂のおさんぎつね",
+      "municipality": "市川市",
+      "animal": "狐",
+      "status": "source_confirmed"
     }
   ],
   "research_status": "hub_ready_expanded"
