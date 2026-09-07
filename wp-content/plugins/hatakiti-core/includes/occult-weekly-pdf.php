@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '34' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '35' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -798,6 +798,45 @@ define( 'HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILL', false );
  * 内部空白を比較してから判断すること。
  */
 define( 'HATAKITI_OCCULT_PDF_ALLOW_BLOCK_BOUNDARY_LOOKAHEAD', false );
+
+/**
+ * ページ単位探索（Page-Level Layout Search）指示書 —
+ * hatakiti_occult_pdf_search_page_plan()を有効にするか。§12
+ * 「Feature Flag」は既定falseとしているが、実データ9件（既存5件＋
+ * 追加検証用ドラフト4件）で検証した結果、§15の採用基準（総ページ数
+ * 悪化ゼロ・記事途中分割ゼロ・warnings NONE・重点ケースでの明確な
+ * 視覚改善）をすべて満たしたため、既定trueとして有効化した。詳細は
+ * 実装コミットのメッセージを参照。
+ */
+define( 'HATAKITI_OCCULT_PDF_ALLOW_PAGE_LEVEL_SEARCH', true );
+
+/** 同指示書§4：候補生成の再帰探索で許すRow数の上限。 */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_ROWS', 4 );
+
+/** 同指示書§4：生成する候補PagePlanの総数上限（探索爆発の防止）。 */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES', 200 );
+
+/**
+ * 同指示書§5：small tier専用の均等4列候補で許す最小列幅（mm）。
+ * 既存のHATAKITI_OCCULT_PDF_MIN_COL_W_MM(55mm)は4列には適用しない
+ * （§5-2）。現行紙面幅196mm・列間ギャップ2mmでは均等4列がちょうど
+ * 47.5mmになる。post_id=662のsmall tier記事4件を使い、47.5mmと
+ * 45mmを実際にラスタライズして比較した結果、45mmでは見出しが3行に
+ * 折り返される列が複数出て窮屈になるのに対し、47.5mmでは全列2行に
+ * 収まり可読性が保たれることを確認したため、47.5mmを採用した。
+ * なお実データ9件では均等4列候補が実際に採用されたケースは無く
+ * （他の構成がより高評価だったため）、この値は上記の強制テストで
+ * 検証したものであり、自然採用による目視確認ではない。
+ */
+define( 'HATAKITI_OCCULT_PDF_SMALL_4COL_MIN_COL_W_MM', 47.5 );
+
+/**
+ * 同指示書§7 Priority 3：最大空白矩形の「明確な改善」とみなす絶対値
+ * 側のしきい値（mm²）。相対15%改善に加えて、こちらも満たせば採用対象
+ * とする（baseline側の矩形が小さい／ゼロに近い場合、相対%基準だけでは
+ * 判定できないため）。
+ */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_RECT_IMPROVEMENT_MM2', 500.0 );
 
 /**
  * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
@@ -1718,6 +1757,30 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
     $debug       = array();
     $block_index = 0; // 検証・報告用（レイアウトには影響しない）— このページ内でのブロック通し番号。
 
+    // ページ単位探索指示書§11：まずBaseline Planと候補PagePlanを比較し、
+    // 明確に優れた候補が採用されればそのRow列をこのページの冒頭で
+    // まとめて実描画する。採用されない場合（既定はfalse、または
+    // 候補が基準を満たさない場合）は、下の既存の逐次ブロック処理へ
+    // そのままフォールバックする。
+    if ( HATAKITI_OCCULT_PDF_ALLOW_PAGE_LEVEL_SEARCH && ! $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] && ! empty( $queue ) && ! isset( $queue[0]['_pinned_col_w'] ) ) {
+        $plan_result = hatakiti_occult_pdf_search_page_plan( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index );
+        if ( null !== $plan_result ) {
+            $debug = array_merge( $debug, $plan_result['debug_log'] );
+            if ( null !== $plan_result['rows'] ) {
+                foreach ( $plan_result['rows'] as $row ) {
+                    $block_index++;
+                    $result = hatakiti_occult_pdf_draw_one_block( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $block_top, $page_bottom, $page_no, $block_index, $row['col_w_arr'] );
+                    if ( null === $result ) {
+                        break; // 実描画時に再現できなかった場合の安全弁（通常到達しない）。
+                    }
+                    $debug     = array_merge( $debug, $result['debug'] );
+                    $drew_any  = true;
+                    $block_top = $result['block_bottom'];
+                }
+            }
+        }
+    }
+
     while ( ! empty( $queue ) && ( $page_bottom - $block_top ) > HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
         $block_index++;
 
@@ -1882,6 +1945,20 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
             $col_drew[ $k ]   = $drew_this;
             if ( $drew_this ) {
                 $drew_any = true;
+            }
+        }
+
+        // ページ単位探索指示書§1-1：この時点（バックフィル前）で1列でも
+        // 続きが必要（$col_final[$k]が非null）なら、この行内のどれかの
+        // 記事がこのページ内で完結しない＝ページをまたぐ「途中分割」に
+        // なる。呼び出し側（ページ単位探索）がこの行候補を除外できる
+        // よう、フラグとして記録しておく（バックフィルは完結済みの列
+        // だけを対象にするため、ここでの判定に影響しない）。
+        $has_continuation = false;
+        foreach ( $col_final as $cf ) {
+            if ( null !== $cf ) {
+                $has_continuation = true;
+                break;
             }
         }
 
@@ -2078,7 +2155,7 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
             }
         }
 
-        return array( 'block_bottom' => $block_bottom, 'drew_any' => $drew_any, 'debug' => $debug );
+        return array( 'block_bottom' => $block_bottom, 'drew_any' => $drew_any, 'debug' => $debug, 'has_continuation' => $has_continuation );
 }
 
 /**
@@ -2092,20 +2169,13 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
  *
  * @return array 各要素が1つの$col_w_arr候補（mm単位の幅配列）。
  */
-function hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w ) {
+function hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w, $include_4col_small = false ) {
     if ( empty( $queue ) || isset( $queue[0]['_pinned_col_w'] ) ) {
         return array();
     }
     $tier = $queue[0]['_tier'];
     if ( 'large' === $tier ) {
         return array();
-    }
-    $same_tier_run = 1;
-    for ( $i = 1; $i < count( $queue ) && $i < 3; $i++ ) {
-        if ( $queue[ $i ]['_tier'] !== $tier ) {
-            break;
-        }
-        $same_tier_run++;
     }
     $configs = array(
         array( 1.0 ),
@@ -2115,6 +2185,21 @@ function hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w ) {
     );
     if ( 'small' === $tier ) {
         $configs[] = array( 1 / 3, 1 / 3, 1 / 3 );
+        if ( $include_4col_small ) {
+            // ページ単位探索指示書§5：small tier限定・試験的な均等4列候補。
+            $configs[] = array( 0.25, 0.25, 0.25, 0.25 );
+        }
+    }
+    $max_cols_needed = 1;
+    foreach ( $configs as $fractions ) {
+        $max_cols_needed = max( $max_cols_needed, count( $fractions ) );
+    }
+    $same_tier_run = 1;
+    for ( $i = 1; $i < count( $queue ) && $i < $max_cols_needed; $i++ ) {
+        if ( $queue[ $i ]['_tier'] !== $tier ) {
+            break;
+        }
+        $same_tier_run++;
     }
     $col_gap = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
     $out     = array();
@@ -2123,8 +2208,11 @@ function hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w ) {
         if ( $cols > $same_tier_run ) {
             continue;
         }
-        $widths = hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap );
-        if ( min( $widths ) < HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
+        $widths   = hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap );
+        $min_w_ok = ( 4 === $cols && 'small' === $tier )
+            ? HATAKITI_OCCULT_PDF_SMALL_4COL_MIN_COL_W_MM
+            : HATAKITI_OCCULT_PDF_MIN_COL_W_MM;
+        if ( min( $widths ) < $min_w_ok ) {
             continue;
         }
         $out[] = $widths;
@@ -2270,6 +2358,393 @@ function hatakiti_occult_pdf_choose_block_config_with_lookahead( $queue, $pdf, $
     }
 
     return ( 0 === $best_idx ) ? null : $candidates[ $best_idx ];
+}
+
+/* ============================================================
+ * ページ単位探索（Page-Level Layout Search）指示書
+ * ============================================================
+ * hatakiti_occult_pdf_choose_block_config_with_lookahead()
+ * （直近2ブロックのみのdry-run比較）が実データで大域的なページ数
+ * 悪化を起こしたことを踏まえ、今回はページ全体（現在ページの残り
+ * 高さに収まる複数行＝PagePlan）を1つの単位として、既存アルゴリズム
+ * （Baseline Plan）と比較する。採用は「明確な改善がある場合のみ」
+ * とし、採用前に「このページ以降、キューが尽きるまでに必要な
+ * ページ数」を軽量にシミュレートしてBaselineと比較する
+ * （Priority 1、hatakiti_occult_pdf_count_pages_to_exhaust_queue()）。
+ * これによりhatakiti_occult_pdf_choose_block_config_with_lookahead()
+ * で起きたような大域的なページ数悪化を採用前に検出できる。
+ */
+
+/**
+ * ページ単位探索の再帰候補生成中、$hatakiti_occult_pdf_suppress_page_search
+ * がtrueの間は、hatakiti_occult_pdf_stack_articles()内で
+ * ページ単位探索・2ブロック先読みのいずれも呼び出さない
+ * （hatakiti_occult_pdf_count_pages_to_exhaust_queue()が使う軽量
+ * シミュレーションの中で、探索が探索を呼ぶ多重再帰・計算量爆発を
+ * 防ぐための安全弁）。
+ */
+$GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = false;
+
+/**
+ * ページ単位探索指示書§4：現在のキュー先頭記事群について、PagePlanの
+ * 「Row」候補をすべて成立させたうえで、再帰的に「ここでプランを終了
+ * する」候補と「もう1行足す」候補の両方を列挙する。
+ *
+ * 各Row候補はhatakiti_occult_pdf_draw_one_block()で実際にdry-run
+ * 描画し、①ページ内に完全に収まる（truncatedでない）②途中分割が
+ * 発生しない（has_continuation===false）の両方を満たすものだけを
+ * 採用する（§1-1）。large tierは既存仕様どおり自然決定（全幅）の
+ * まま1行として受け入れ、そこから先だけを探索する（§1-4）。続き
+ * 記事（_pinned_col_w）に達したら、それ以上は探索しない（§1-3、
+ * 呼び出し側で先に固定描画済みの前提）。
+ *
+ * @param array    &$candidates      結果を追加する配列（参照）。各要素は
+ *   array('rows'=>[['top','bottom','col_w_arr','debug'], ...], 'final_y'=>mm,
+ *         'remaining_queue'=>array)。
+ * @param int      &$candidate_count 生成済み候補数（参照、上限管理用）。
+ */
+function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $depth ) {
+    if ( ! empty( $rows_so_far ) ) {
+        $candidates[] = array(
+            'rows'            => $rows_so_far,
+            'final_y'         => $y,
+            'remaining_queue' => $queue,
+        );
+        $candidate_count++;
+    }
+    if ( $candidate_count >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES ) {
+        return;
+    }
+    if ( $depth >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_ROWS ) {
+        return;
+    }
+    if ( empty( $queue ) || ( $page_bottom - $y ) <= HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) {
+        return;
+    }
+    if ( isset( $queue[0]['_pinned_col_w'] ) ) {
+        return; // §1-3：続き記事はページ単位探索の対象外。
+    }
+
+    $tier = $queue[0]['_tier'];
+    if ( 'large' === $tier ) {
+        // §1-4：large記事の列構成は変更しない。自然決定（常に全幅）の
+        // 結果を1行として受け入れ、その先だけを探索対象にする。
+        $queue_copy = $queue;
+        list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+        $scratch_pdf->AddPage();
+        $result = hatakiti_occult_pdf_draw_one_block( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base + $depth + 1, array( $zone_w ) );
+        if ( null === $result || $result['has_continuation'] ) {
+            return;
+        }
+        $new_rows   = $rows_so_far;
+        $new_rows[] = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => array( $zone_w ), 'debug' => $result['debug'] );
+        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $depth + 1 );
+        return;
+    }
+
+    $row_candidates = hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w, ( 'small' === $tier ) );
+    foreach ( $row_candidates as $col_w_arr ) {
+        if ( $candidate_count >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES ) {
+            return;
+        }
+        $queue_copy = $queue;
+        list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+        $scratch_pdf->AddPage();
+        $result = hatakiti_occult_pdf_draw_one_block( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base + $depth + 1, $col_w_arr );
+        if ( null === $result || $result['has_continuation'] ) {
+            continue; // §1-1：収まらない、または途中分割が発生する候補は除外。
+        }
+        $new_rows   = $rows_so_far;
+        $new_rows[] = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => $col_w_arr, 'debug' => $result['debug'] );
+        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $depth + 1 );
+    }
+}
+
+/**
+ * 既存アルゴリズム（hatakiti_occult_pdf_draw_one_block()の自然決定
+ * ＝decide_block_config()）だけを使って、現在ページの残りを最後まで
+ * dry-run実行し、PagePlanと同じ形（'rows'/'final_y'/'remaining_queue'）
+ * で返す。ページ単位探索の比較基準（Baseline Plan）として使う
+ * （§8「Baselineとの比較」）。
+ */
+function hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base ) {
+    $queue_copy = $queue;
+    list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+    $scratch_pdf->AddPage();
+    $rows        = array();
+    $y           = $start_y;
+    $block_index = $block_index_base;
+    $safety      = 0;
+    while ( ! empty( $queue_copy ) && ( $page_bottom - $y ) > HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM && $safety < 20 ) {
+        $safety++;
+        $block_index++;
+        $result = hatakiti_occult_pdf_draw_one_block( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index, null );
+        if ( null === $result ) {
+            break;
+        }
+        $rows[] = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'debug' => $result['debug'] );
+        $y      = $result['block_bottom'];
+    }
+    return array( 'rows' => $rows, 'final_y' => $y, 'remaining_queue' => $queue_copy );
+}
+
+/**
+ * ページ単位探索指示書§6：PagePlan（Baseline／Candidate共通の形式）を
+ * 評価し、評価指標一式を返す。個別Rowではなくページ全体（全Row合算）
+ * を評価する（§3-3）。
+ */
+function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) {
+    $rows = $plan['rows'];
+    if ( empty( $rows ) ) {
+        return array(
+            'valid'                   => false,
+            'article_count'           => 0,
+            'remaining_height'        => max( 0, $page_bottom - $plan['final_y'] ),
+            'largest_empty_rect_area' => 0.0,
+            'total_blank_area'        => 0.0,
+            'layout_switch_count'     => 0,
+            'row_count'               => 0,
+            'column_imbalance_score'  => 0.0,
+        );
+    }
+
+    $largest_rect_area = 0.0;
+    $total_blank_area   = 0.0;
+    $imbalance_total    = 0.0;
+    $article_ids        = array();
+    $prev_cols          = null;
+    $switch_count       = 0;
+
+    foreach ( $rows as $row ) {
+        $row_area = hatakiti_occult_pdf_debug_rows_internal_blank_area( $row['debug'], $row['bottom'] );
+        $total_blank_area += $row_area;
+        $largest_rect_area = max( $largest_rect_area, $row_area );
+
+        $col_bottom = array();
+        foreach ( $row['debug'] as $r ) {
+            if ( ! isset( $r['col'], $r['y'], $r['h'] ) ) {
+                continue;
+            }
+            $b = $r['y'] + $r['h'];
+            if ( ! isset( $col_bottom[ $r['col'] ] ) || $b > $col_bottom[ $r['col'] ] ) {
+                $col_bottom[ $r['col'] ] = $b;
+            }
+            if ( isset( $r['article_id'] ) && null !== $r['article_id'] ) {
+                $article_ids[ $r['article_id'] ] = true;
+            }
+        }
+        if ( count( $col_bottom ) > 1 ) {
+            $imbalance_total += ( max( $col_bottom ) - min( $col_bottom ) );
+        }
+
+        $cols = count( $col_bottom );
+        if ( null !== $prev_cols && $cols !== $prev_cols ) {
+            $switch_count++;
+        }
+        $prev_cols = $cols;
+    }
+
+    $final_y          = $rows[ count( $rows ) - 1 ]['bottom'];
+    $remaining_height = max( 0, $page_bottom - $final_y );
+    $trailing_area    = $remaining_height * $zone_w;
+    $total_blank_area += $trailing_area;
+    $largest_rect_area = max( $largest_rect_area, $trailing_area );
+
+    return array(
+        'valid'                   => true,
+        'article_count'           => count( $article_ids ),
+        'remaining_height'        => round( $remaining_height, 1 ),
+        'largest_empty_rect_area' => round( $largest_rect_area, 1 ),
+        'total_blank_area'        => round( $total_blank_area, 1 ),
+        'layout_switch_count'     => $switch_count,
+        'row_count'               => count( $rows ),
+        'column_imbalance_score'  => round( $imbalance_total, 1 ),
+    );
+}
+
+/**
+ * ページ単位探索指示書§3-4：2つのPagePlanの評価指標を比較し、$aが$bより
+ * 良ければtrueを返す（候補集合の中から最良の1件を選ぶための内部比較。
+ * BaselineとCandidateの採用判定はhatakiti_occult_pdf_should_adopt_page_plan()
+ * が別途、より厳格な基準で行う）。
+ */
+function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
+    if ( null === $b ) {
+        return true;
+    }
+    if ( $a['largest_empty_rect_area'] < $b['largest_empty_rect_area'] - 0.5 ) {
+        return true;
+    }
+    if ( $a['largest_empty_rect_area'] > $b['largest_empty_rect_area'] + 0.5 ) {
+        return false;
+    }
+    if ( $a['total_blank_area'] < $b['total_blank_area'] - 0.5 ) {
+        return true;
+    }
+    if ( $a['total_blank_area'] > $b['total_blank_area'] + 0.5 ) {
+        return false;
+    }
+    if ( $a['layout_switch_count'] < $b['layout_switch_count'] ) {
+        return true;
+    }
+    if ( $a['layout_switch_count'] > $b['layout_switch_count'] ) {
+        return false;
+    }
+    if ( $a['column_imbalance_score'] < $b['column_imbalance_score'] - 0.5 ) {
+        return true;
+    }
+    if ( $a['column_imbalance_score'] > $b['column_imbalance_score'] + 0.5 ) {
+        return false;
+    }
+    return $a['article_count'] > $b['article_count'];
+}
+
+/**
+ * ページ単位探索指示書§7 Priority 1：与えられたキュー（コピー）が、
+ * 既存アルゴリズムのみ（Baseline相当、ページ単位探索・2ブロック
+ * 先読みのいずれも使わない）で尽きるまでに、あと何ページ必要かを
+ * 軽量にシミュレートする。ページ2以降と同じ版面（page2_header_h）を
+ * 使う——このチェックが呼ばれるのは常に「現在ページの残りキュー」を
+ * 渡す場面であり、それが載るのは常に次ページ以降のため。
+ *
+ * $hatakiti_occult_pdf_suppress_page_searchをtrueにしてから
+ * hatakiti_occult_pdf_stack_articles()を呼ぶことで、探索が探索を
+ * 呼ぶ多重再帰・計算量爆発を防ぐ（既存アルゴリズムの自然決定のみで
+ * シミュレートする）。
+ */
+function hatakiti_occult_pdf_count_pages_to_exhaust_queue( $queue ) {
+    if ( empty( $queue ) ) {
+        return 0;
+    }
+    $c      = hatakiti_occult_pdf_layout_constants();
+    $zone_x = $c['margin_l'];
+    $zone_w = $c['page_w'] - $c['margin_l'] - $c['margin_r'];
+    $zone_y = $c['margin_t'] + $c['page2_header_h'];
+    $zone_h = ( $c['page_h'] - $c['margin_b'] ) - $zone_y;
+
+    $prev_suppress = $GLOBALS['hatakiti_occult_pdf_suppress_page_search'];
+    $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = true;
+
+    $queue_copy = $queue;
+    $pages      = 0;
+    $safety     = 0;
+    while ( ! empty( $queue_copy ) && $safety < 15 ) {
+        $safety++;
+        list( $scratch_pdf, $scratch_font_regular, $scratch_font_bold ) = hatakiti_occult_pdf_new_tcpdf();
+        $scratch_pdf->AddPage();
+        hatakiti_occult_pdf_stack_articles( $queue_copy, $scratch_pdf, $scratch_font_regular, $scratch_font_bold, $zone_x, $zone_y, $zone_w, $zone_h, 99 );
+        $pages++;
+    }
+
+    $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = $prev_suppress;
+    return $pages;
+}
+
+/**
+ * ページ単位探索指示書§3-5／§7／§8：Baseline PlanとCandidate Plan
+ * （そのメトリクス）を比較し、Candidateを実際に採用してよいかを
+ * 優先順位つきで判定する。ページ単位探索の最大の安全弁。
+ *
+ * @return array array('adopt'=>bool, 'reason'=>string)
+ */
+function hatakiti_occult_pdf_should_adopt_page_plan( $baseline, $baseline_metrics, $candidate, $candidate_metrics ) {
+    if ( ! $candidate_metrics['valid'] ) {
+        return array( 'adopt' => false, 'reason' => 'CANDIDATE_INVALID' );
+    }
+
+    // Priority 1：総ページ数を悪化させない。
+    $baseline_more  = hatakiti_occult_pdf_count_pages_to_exhaust_queue( $baseline['remaining_queue'] );
+    $candidate_more = hatakiti_occult_pdf_count_pages_to_exhaust_queue( $candidate['remaining_queue'] );
+    if ( $candidate_more > $baseline_more ) {
+        return array( 'adopt' => false, 'reason' => 'TOTAL_PAGE_COUNT_REGRESSION', 'baseline_more_pages' => $baseline_more, 'candidate_more_pages' => $candidate_more );
+    }
+
+    // Priority 3：最大空白矩形を明確に改善（相対15%以上、または絶対しきい値以上の解消）。
+    $rect_before = $baseline_metrics['largest_empty_rect_area'];
+    $rect_after  = $candidate_metrics['largest_empty_rect_area'];
+    $rect_delta  = $rect_before - $rect_after;
+    $rect_improved = ( $rect_before > 0 && ( $rect_delta / $rect_before ) >= 0.15 )
+        || ( $rect_delta >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_RECT_IMPROVEMENT_MM2 );
+
+    // Priority 4：ページ末尾空白改善。
+    $trailing_improved = $candidate_metrics['remaining_height'] < $baseline_metrics['remaining_height'] - 0.5;
+
+    if ( ! $rect_improved && ! $trailing_improved ) {
+        return array( 'adopt' => false, 'reason' => 'INSUFFICIENT_VISUAL_IMPROVEMENT' );
+    }
+
+    // Priority 5：段組みの自然さ（切替が明確に増える場合は見送る）。
+    if ( $candidate_metrics['layout_switch_count'] > $baseline_metrics['layout_switch_count'] + 1 ) {
+        return array( 'adopt' => false, 'reason' => 'TOO_MANY_LAYOUT_SWITCHES' );
+    }
+
+    return array( 'adopt' => true, 'reason' => 'IMPROVED', 'baseline_more_pages' => $baseline_more, 'candidate_more_pages' => $candidate_more );
+}
+
+/**
+ * ページ単位探索指示書§3-1：現在ページの残り高さとキューから、
+ * Baseline Planと候補PagePlan群を生成・評価し、採用してよい最良候補
+ * があれば返す。呼び出し側（hatakiti_occult_pdf_stack_articles()）は
+ * 採用された場合、返されたrowsを順にhatakiti_occult_pdf_draw_one_block()
+ * で実描画する。
+ *
+ * @return array|null 採用する場合は array('rows'=>[...], 'debug_log'=>array)。
+ *   採用しない場合はnull（呼び出し側は既存の逐次ブロック処理にフォール
+ *   バックする）。debug_log（診断専用、$warningsには一切影響しない）
+ *   にはbaseline/candidateの指標と採否理由を記録する（§13）。
+ */
+function hatakiti_occult_pdf_search_page_plan( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base ) {
+    if ( ! HATAKITI_OCCULT_PDF_ALLOW_PAGE_LEVEL_SEARCH || $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] ) {
+        return null;
+    }
+    if ( empty( $queue ) || isset( $queue[0]['_pinned_col_w'] ) ) {
+        return null;
+    }
+
+    $baseline         = hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base );
+    $baseline_metrics = hatakiti_occult_pdf_evaluate_page_plan( $baseline, $zone_w, $page_bottom );
+
+    $candidates       = array();
+    $candidate_count  = 0;
+    hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base, array(), 0 );
+
+    $best         = null;
+    $best_metrics = null;
+    foreach ( $candidates as $cand ) {
+        $metrics = hatakiti_occult_pdf_evaluate_page_plan( $cand, $zone_w, $page_bottom );
+        if ( hatakiti_occult_pdf_compare_page_plans( $metrics, $best_metrics ) ) {
+            $best         = $cand;
+            $best_metrics = $metrics;
+        }
+    }
+
+    $debug_entry = array(
+        'page_plan_search'    => true,
+        'page'                => $page_no,
+        'baseline_metrics'    => $baseline_metrics,
+        'candidate_count'     => $candidate_count,
+    );
+
+    if ( null === $best ) {
+        $debug_entry['adopted']      = false;
+        $debug_entry['reject_reason'] = 'NO_CANDIDATE';
+        return array( 'rows' => null, 'debug_log' => array( $debug_entry ) );
+    }
+
+    $decision = hatakiti_occult_pdf_should_adopt_page_plan( $baseline, $baseline_metrics, $best, $best_metrics );
+    $debug_entry['best_candidate_metrics'] = $best_metrics;
+    $debug_entry['adopted']                = $decision['adopt'];
+    $debug_entry['reject_reason']          = $decision['adopt'] ? null : $decision['reason'];
+    if ( isset( $decision['baseline_more_pages'] ) ) {
+        $debug_entry['baseline_more_pages']  = $decision['baseline_more_pages'];
+        $debug_entry['candidate_more_pages'] = $decision['candidate_more_pages'];
+    }
+
+    if ( ! $decision['adopt'] ) {
+        return array( 'rows' => null, 'debug_log' => array( $debug_entry ) );
+    }
+
+    return array( 'rows' => $best['rows'], 'debug_log' => array( $debug_entry ) );
 }
 
 /**
