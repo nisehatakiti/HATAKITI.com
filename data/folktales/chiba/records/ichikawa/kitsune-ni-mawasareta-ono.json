@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-kitsune-ni-mawasareta-ono",
+  "status": "draft",
+  "title": "狐に回された話（2）",
+  "title_normalized": "狐に回された話（2）",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "大野に伝わる「狐に回された」別記録。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-ICHIKAWA"
+    ]
+  },
+  "story_summary": "市川市大野には「狐に回された話（2）」が記録されている。国分新田の（1）と同じ話の異伝かは本文照合前のため断定せず、地域の異なる独立レコードとして扱う。",
+  "story_content": "市川市大野には「狐に回された話（2）」が記録されている。国分新田の（1）と同じ話の異伝かは本文照合前のため断定せず、地域の異なる独立レコードとして扱う。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "大野",
+    "source_description": "日本伝承マップの市川市伝承一覧および狐・祟り・火の玉タグ一覧で確認。"
+  },
+  "locations": [
+    {
+      "name": "大野",
+      "location_type": "tradition_area",
+      "description": "出典一覧に示される伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・動物",
+      "description": "伝承の中心となる狐。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "狐伝承",
+    "動物怪異",
+    "市川市",
+    "化かし"
+  ],
+  "story_type": [
+    "狐伝承",
+    "地域伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "motif_hub",
+      "note": "狐・狸・ムジナの化かし伝承類型ハブに接続。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "狐に回された話（2）",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "題名と伝承地を確認。本文未確認のため、具体的な出来事や結末は創作せず、今後の原典照合対象として登録。"
+}
