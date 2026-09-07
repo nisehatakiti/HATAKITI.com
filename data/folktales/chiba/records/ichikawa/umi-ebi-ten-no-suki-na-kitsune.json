@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-umi-ebi-ten-no-suki-na-kitsune",
+  "status": "draft",
+  "title": "海老天の好きな狐",
+  "title_normalized": "海老天の好きな狐",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "南行徳に伝わる、海老天を好む狐を題材にした伝承。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-ICHIKAWA"
+    ]
+  },
+  "story_summary": "「海老天の好きな狐」は南行徳の独立した狐伝承として確認できる。食べ物を介して人間の生活圏に現れる狐という点で、お夏狐や綿売りの狐とは別の比較軸を持つ。本文未確認のため具体的な出来事は補わない。",
+  "story_content": "「海老天の好きな狐」は南行徳の独立した狐伝承として確認できる。食べ物を介して人間の生活圏に現れる狐という点で、お夏狐や綿売りの狐とは別の比較軸を持つ。本文未確認のため具体的な出来事は補わない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "南行徳",
+    "source_description": "日本伝承マップの市川市伝承一覧で確認。"
+  },
+  "locations": [
+    {
+      "name": "南行徳",
+      "location_type": "tradition_area",
+      "description": "伝承一覧に示される伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・動物",
+      "description": "題名または伝承分類上の中心となる存在。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "動物怪異",
+    "化かし",
+    "市川市",
+    "狐"
+  ],
+  "story_type": [
+    "動物怪異譚",
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "motif_hub",
+      "note": "狐・狸・ムジナの化かし伝承類型ハブに接続。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "海老天の好きな狐",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "題名と伝承地の存在を確認。本文未確認部分は補完せず、独立した個別話として登録。"
+}
