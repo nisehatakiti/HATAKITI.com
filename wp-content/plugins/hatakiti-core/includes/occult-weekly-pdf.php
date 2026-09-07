@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '29' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '30' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -754,6 +754,15 @@ define( 'HATAKITI_OCCULT_PDF_MIN_COL_W_MM', 55.0 );
 define( 'HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW', 6 );
 
 /**
+ * バックフィルで同tierの供給が尽きた列に、隣接tier（medium⇄small）の
+ * 記事を詰めることを許可するか。既定はfalse — 実データ検証で、有効化
+ * するとmedium列がsmall記事を先食いしてしまい、あとで小tierのブロック
+ * に使える記事が不足してページ数がかえって増える逆効果を確認した
+ * ため（hatakiti_occult_pdf_fallback_tier()のコメント参照）。
+ */
+define( 'HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILL', false );
+
+/**
  * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
  * — hatakiti_occult_pdf_search_multirow_plan()が探索する段（行）の
  * 最大数。「2列→1列→2列」のような3段構成まで許可する。
@@ -1296,9 +1305,51 @@ function hatakiti_occult_pdf_row_configs_for_tier( $tier ) {
 }
 
 /**
+ * バックフィルの優先順位2（次段の空白削減・可変ブロック組版指示書§5）
+ * — 同tierで埋まらない場合にだけ試す隣接tier。実装はしたが、既定では
+ * HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILLでオフにしている。
+ *
+ * 理由（実データでの検証で判明）：medium列の空きを小tier記事で
+ * バックフィルすると、その時点では該当ページの空白率は下がるが、
+ * small記事という「あとで小tier同士のブロックに必要な在庫」を先食い
+ * してしまい、結果的にページ末尾でsmall記事が足りなくなって
+ * ページ数がかえって増えるケースを創刊号#662の実データで確認した
+ * （5ページ→6ページに悪化）。1ブロック単位の局所最適が、ページ全体
+ * では悪化する典型例。真に安全に行うには「後続の同tier必要量を含めた
+ * 全体最適」が要るが、今回の実装范囲では見送り、既定オフとした。
+ * 有効化したい場合はこの定数をtrueにする（既存の他ロジックは無変更で
+ * 動く）。
+ */
+function hatakiti_occult_pdf_fallback_tier( $tier ) {
+    if ( ! HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILL ) {
+        return null;
+    }
+    if ( 'medium' === $tier ) {
+        return 'small';
+    }
+    if ( 'small' === $tier ) {
+        return 'medium';
+    }
+    return null;
+}
+
+/**
  * ちょうど$fractions分の記事（$items）を、$row_topから始まる1行として
  * 描いた場合のdry-run評価。列のいずれか1つでもこのページに完全に収まら
  * ない場合はnullを返す（記事途中分割を伴う行は候補にしない）。
+ *
+ * 「各列の初期記事のあとにバックフィルでどこまで延長できるか」まで
+ * この時点でdry-runシミュレーションして候補比較に織り込む案を実装・
+ * 実測したが、創刊号#662の実データで比較したところ、素朴な単一記事
+ * dry-run（このバージョン）の方が実際のページ数が少なかった
+ * （シミュレーション有りは6〜7ページ、無しは5ページ）。バックフィルは
+ * 実行時に貪欲に確定していくため、候補比較の時点で「先読みで仮に消費
+ * した記事」が実際のバックフィル時の選択と食い違い、かえって不利な
+ * 段組みを選んでしまうケースがあったためと考えられる。そのため、この
+ * 関数は各列の初期記事1件だけを見る単純なdry-runに留めている —
+ * 実際の空き埋めはhatakiti_occult_pdf_stack_articles()内のバックフィル
+ * パス（実行時に確定済みの状態を見て判断するため、事前シミュレーション
+ * より正確）に委ねる。
  *
  * @return array|null array('cols','widths','row_height')
  */
@@ -1761,13 +1812,16 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
             }
         }
 
-        // バックフィル（記事配置アルゴリズム再調整指示書§5/§7）：ブロック
-        // 内で記事が完結し空きが生じた列（＝その列の記事完結位置から
-        // ページ末までの「空き矩形」）に、後続の同tier記事を、その矩形に
-        // 完全に収まる範囲で詰め込めるだけ詰め込む。「現在の列構成を
-        // 維持するために空白を残す」のではなく、列ごとに独立して後続
-        // 記事を探索・充填する。続きが必要な列（$col_final[$k]が非null）
-        // は対象にしない — 列位置維持の既存仕様を壊さないため。
+        // バックフィル（次段の空白削減・可変ブロック組版指示書§5/§7）：
+        // ブロック内で記事が完結し空きが生じた列（＝その列の記事完結
+        // 位置からページ末までの「空き矩形」）に、後続記事を、その矩形に
+        // 完全に収まる範囲で詰め込めるだけ詰め込む。優先順位1（同tier）
+        // →優先順位2（隣接tier、hatakiti_occult_pdf_fallback_tier()）の
+        // 順で探す — 同tierの供給が尽きた場合のみ、隣接tierの記事で
+        // 列を埋める。「現在の列構成を維持するために空白を残す」のでは
+        // なく、列ごとに独立して後続記事を探索・充填する。続きが必要な
+        // 列（$col_final[$k]が非null）は対象にしない — 列位置維持の
+        // 既存仕様を壊さないため。
         $block_tier = $queue[0]['_tier'];
         $backfill_changed = true;
         while ( $backfill_changed ) {
@@ -1780,23 +1834,35 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                     continue;
                 }
 
+                // 優先順位1（同tier）→優先順位2（隣接tier、指示書§5）の順で
+                // 探す。同tierで1件でも見つかれば隣接tierは試さない。
                 $best_j        = null;
                 $best_est      = null;
                 $best_header_h = 0.0;
+                $best_tier     = null;
                 $limit         = min( count( $queue ), $cols + HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW );
-                for ( $j = $cols; $j < $limit; $j++ ) {
-                    if ( ! isset( $queue[ $j ] ) || $queue[ $j ]['_tier'] !== $block_tier || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
+                foreach ( array( $block_tier, hatakiti_occult_pdf_fallback_tier( $block_tier ) ) as $try_tier ) {
+                    if ( null === $try_tier ) {
                         continue;
                     }
-                    $cand_header_h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $j ], $block_tier, $col_w_arr[ $k ] );
-                    $est           = hatakiti_occult_pdf_estimate_article_height( $queue[ $j ], $block_tier, $col_w_arr[ $k ], $cand_header_h, $col_bottom[ $k ], $page_bottom );
-                    if ( $est['truncated'] ) {
-                        continue;
+                    for ( $j = $cols; $j < $limit; $j++ ) {
+                        if ( ! isset( $queue[ $j ] ) || $queue[ $j ]['_tier'] !== $try_tier || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
+                            continue;
+                        }
+                        $cand_header_h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $j ], $try_tier, $col_w_arr[ $k ] );
+                        $est           = hatakiti_occult_pdf_estimate_article_height( $queue[ $j ], $try_tier, $col_w_arr[ $k ], $cand_header_h, $col_bottom[ $k ], $page_bottom );
+                        if ( $est['truncated'] ) {
+                            continue;
+                        }
+                        if ( null === $best_est || $est['bottom'] < $best_est['bottom'] ) {
+                            $best_j        = $j;
+                            $best_est      = $est;
+                            $best_header_h = $cand_header_h;
+                            $best_tier     = $try_tier;
+                        }
                     }
-                    if ( null === $best_est || $est['bottom'] < $best_est['bottom'] ) {
-                        $best_j        = $j;
-                        $best_est      = $est;
-                        $best_header_h = $cand_header_h;
+                    if ( null !== $best_j ) {
+                        break;
                     }
                 }
 
@@ -1808,12 +1874,12 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                 array_splice( $queue, $best_j, 1 );
 
                 $seg_top = $col_bottom[ $k ];
-                $result  = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $candidate, $block_tier, $col_x[ $k ], $seg_top, $col_w_arr[ $k ], $best_header_h, 'headline' );
+                $result  = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $candidate, $best_tier, $col_x[ $k ], $seg_top, $col_w_arr[ $k ], $best_header_h, 'headline' );
 
                 $debug[] = array(
                     'page' => $page_no, 'block' => $block_index, 'cols' => $cols, 'col' => $k,
                     'article_id' => $candidate['_debug_article_id'] ?? null,
-                    'tier' => $block_tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
+                    'tier' => $best_tier . ( $cols > 1 ? '(col' . $cols . '-' . ( $k + 1 ) . ')' : '' ),
                     'headline' => mb_substr( (string) ( $candidate['headline'] ?? '' ), 0, 16 ),
                     'x' => round( $col_x[ $k ], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $col_w_arr[ $k ], 1 ), 'h' => round( $result['bottom_y'] - $seg_top, 1 ),
                     'continuation' => false,
@@ -1823,6 +1889,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                     'body_top' => round( $seg_top + $best_header_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
                     'overflow' => ! empty( $result['overflow_body'] ),
                     'backfill' => true,
+                    'cross_tier' => ( $best_tier !== $block_tier ),
                 );
 
                 $pdf->SetLineWidth( 0.25 );
