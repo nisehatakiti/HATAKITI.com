@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-kitsune-to-oihagi",
+  "status": "draft",
+  "title": "キツネと追いはぎ",
+  "title_normalized": "きつねとおいはぎ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "行徳に伝わる「キツネと追いはぎ」という題名の狐伝承。市川民話の会の公開資料と動画資料で独立した話として確認されている。",
+    "based_on_source_ids": [
+      "SRC-ICHIKAWA-MINWA-VIDEO"
+    ]
+  },
+  "story_summary": "市川民話の会の公開資料では「キツネと追いはぎ（行徳）」という独立した民話として確認できる。狐と追いはぎが題名に登場するが、公開資料から本文を直接確定できないため、狐が追いはぎをしたのか、追いはぎを化かしたのかなどは断定しない。",
+  "story_content": "「キツネと追いはぎ」は行徳の民話として市川民話の会が公開している。題名から狐と追いはぎが物語の中心にあることは確認できるが、現在確認できる公開資料では具体的な筋や結末を文字資料として確定できない。そのため、題名から物語を作らず、行徳の独立した狐伝承として登録し、本文確認後に既存の行徳狐伝承との関係を整理する。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "行徳",
+    "source_description": "市川民話の会の公開資料で行徳の民話として確認。"
+  },
+  "locations": [
+    {
+      "name": "行徳",
+      "location_type": "region",
+      "description": "市川民話の会が伝承地として示す地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-ICHIKAWA-MINWA-VIDEO"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "追いはぎ",
+      "role": "題名に登場する人物または存在",
+      "attributes": [
+        "本文上の役割は未確認"
+      ],
+      "source_ids": [
+        "SRC-ICHIKAWA-MINWA-VIDEO"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・動物",
+      "description": "題名に登場する存在。本文上の行動は未確認。",
+      "source_ids": [
+        "SRC-ICHIKAWA-MINWA-VIDEO"
+      ]
+    }
+  ],
+  "themes": [
+    "狐伝承",
+    "追いはぎ",
+    "化かし",
+    "怪異",
+    "行徳"
+  ],
+  "story_type": [
+    "狐伝承",
+    "怪異譚",
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-onatsu-fox-tradition",
+      "relationship": "regional_comparison_candidate",
+      "note": "同じ行徳地域の狐伝承だが、お夏狐との関係は未確認。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-ICHIKAWA-MINWA-VIDEO",
+      "title": "動画で市川の民話を聴こう",
+      "publisher": "市川民話の会",
+      "publication_date": "web",
+      "source_type": "community_folklore_video_index",
+      "url": "https://ichikawa.genki365.jp/G0000286/information/200.html",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "キツネと追いはぎ（行徳）",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "固有題名・伝承地・公開動画の存在を確認。本文未確認のため具体的筋は補完しない。"
+}
