@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '27' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '28' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -754,6 +754,13 @@ define( 'HATAKITI_OCCULT_PDF_MIN_COL_W_MM', 55.0 );
 define( 'HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW', 6 );
 
 /**
+ * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
+ * — hatakiti_occult_pdf_search_multirow_plan()が探索する段（行）の
+ * 最大数。「2列→1列→2列」のような3段構成まで許可する。
+ */
+define( 'HATAKITI_OCCULT_PDF_MAX_PLAN_ROWS', 3 );
+
+/**
  * 縦書き本文中、特定の記号だけがやや左寄りに見える視覚補正のための
  * 右方向オフセット（mm）。通常文字の描画位置・段の高さ計算・列幅
  * 判定など、レイアウト構造には一切影響しない — draw_unit内でその記号
@@ -1269,42 +1276,225 @@ function hatakiti_occult_pdf_search_ahead_filler( $pdf, $font_bold, $queue, $sta
 }
 
 /**
- * 優先順位5（旧hatakiti_occult_pdf_decide_block_config_legacy()と同一
- * の閾値・考え方）：「記事全体がこのページに完全に収まる」ことが既に
- * 確認済みの候補群から、標準は1:1の2列、3列・非対称2列は明確に有利な
- * 場合のみ、無駄が大きすぎる場合のみ1列、という優先順位で1つを選ぶ。
+ * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
+ * — このtierで候補となる「1行ぶん」の段組み構成。mediumは均等3列・
+ * 4列を候補に含めない（本文幅が狭くなりすぎるため）。smallのみ
+ * 均等3列・4列を追加する。
  */
-function hatakiti_occult_pdf_pick_best_fully_fit_candidate( $candidates ) {
-    if ( ! isset( $candidates['1col'] ) ) {
-        $first = reset( $candidates );
-        return $first['widths'];
+function hatakiti_occult_pdf_row_configs_for_tier( $tier ) {
+    $configs = array(
+        '1col'       => array( 1.0 ),
+        '2col_equal' => array( 0.5, 0.5 ),
+        '2col_q0w'   => array( 2 / 3, 1 / 3 ),
+        '2col_q1w'   => array( 1 / 3, 2 / 3 ),
+    );
+    if ( 'small' === $tier ) {
+        $configs['3col_equal'] = array( 1 / 3, 1 / 3, 1 / 3 );
+        $configs['4col_equal'] = array( 0.25, 0.25, 0.25, 0.25 );
+    }
+    return $configs;
+}
+
+/**
+ * ちょうど$fractions分の記事（$items）を、$row_topから始まる1行として
+ * 描いた場合のdry-run評価。列のいずれか1つでもこのページに完全に収まら
+ * ない場合はnullを返す（記事途中分割を伴う行は候補にしない）。
+ *
+ * @return array|null array('cols','widths','row_height')
+ */
+function hatakiti_occult_pdf_evaluate_row( $pdf, $font_bold, $items, $tier, $fractions, $zone_w, $row_top, $page_bottom ) {
+    $cols = count( $fractions );
+    if ( count( $items ) < $cols ) {
+        return null;
+    }
+    $col_gap = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
+    $widths  = hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap );
+    if ( min( $widths ) < HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
+        return null;
     }
 
-    $chosen_key = isset( $candidates['2col_equal'] ) ? '2col_equal' : '1col';
-
-    if ( isset( $candidates['3col_equal'] )
-        && $candidates['3col_equal']['wasted_ratio'] < 0.35
-        && $candidates['3col_equal']['wasted_ratio'] <= $candidates[ $chosen_key ]['wasted_ratio'] * 0.7
-    ) {
-        $chosen_key = '3col_equal';
+    $header_h = 0.0;
+    for ( $k = 0; $k < $cols; $k++ ) {
+        $h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $items[ $k ], $tier, $widths[ $k ] );
+        $header_h = max( $header_h, $h );
     }
 
-    if ( '3col_equal' !== $chosen_key && isset( $candidates['2col_asym'] ) ) {
-        if ( $candidates['2col_asym']['wasted_ratio'] < 0.35
-            && $candidates['2col_asym']['wasted_ratio'] <= $candidates[ $chosen_key ]['wasted_ratio'] * 0.7
-        ) {
-            $chosen_key = '2col_asym';
+    $bottoms = array();
+    foreach ( $widths as $k => $w ) {
+        $est = hatakiti_occult_pdf_estimate_article_height( $items[ $k ], $tier, $w, $header_h, $row_top, $page_bottom );
+        if ( $est['truncated'] ) {
+            return null;
+        }
+        $bottoms[ $k ] = $est['bottom'];
+    }
+
+    $row_bottom = max( $bottoms );
+    $row_height = $row_bottom - $row_top;
+
+    return array(
+        'cols'       => $cols,
+        'widths'     => $widths,
+        'row_height' => $row_height,
+    );
+}
+
+/**
+ * $a と $b（どちらも hatakiti_occult_pdf_search_rows_recursive()の
+ * 戻り値と同じ形）を比べ、より良い方を返す。
+ *
+ * 比較の基準は「使用高さ ÷ 配置した記事数」（1記事あたりの平均消費
+ * 高さ）— 小さいほど良い。1列は「他列との不揃い」が原理的に発生
+ * しない（列が1本しかない）ため、単純な「行内の空白面積」で比べると
+ * 常に1列が満点になってしまい、複数列が一切選ばれなくなる。1記事
+ * あたりの高さで比較すれば、列幅が半分になった記事はおおよそ倍の
+ * 高さを要するため、記事の長さがよく揃っている場合は複数列と1列が
+ * ほぼ同等に評価され、長さが偏っている場合にのみ1列（または段数の
+ * 違う組合せ）が有利になる — 指示書§5の面積比較の意図を、1列を含む
+ * 全構成で公平に比較できる形にしたもの。僅差（1記事あたり0.5mm以内）
+ * なら段数が少ない方を優先する。$b が null なら常に $a。
+ */
+function hatakiti_occult_pdf_better_multirow_plan( $a, $b ) {
+    if ( null === $b ) {
+        return $a;
+    }
+    $avg_a = $a['height'] / max( 1, $a['article_count'] );
+    $avg_b = $b['height'] / max( 1, $b['article_count'] );
+    if ( $avg_a < $avg_b - 0.001 ) {
+        return $a;
+    }
+    if ( abs( $avg_a - $avg_b ) <= 0.5 && count( $a['rows'] ) < count( $b['rows'] ) ) {
+        return $a;
+    }
+    return $b;
+}
+
+/**
+ * 後続の同tier記事群を使い、最大$max_rows段までの組合せを再帰的に
+ * 探索する（ページ充填アルゴリズム改善指示書§4「評価単位をブロックから
+ * ページ残り領域に拡張する」）。各段は$queueの連続する先頭部分（この
+ * 呼び出しでは$consumed_before以降）を、段の列数ぶんだけ消費する —
+ * 記事の順序は一切入れ替えない。「この段だけで止める」場合と「この段＋
+ * 後続の最良の組合せ」の両方を候補として比較し、
+ * hatakiti_occult_pdf_better_multirow_plan()（1記事あたりの平均消費
+ * 高さが最も小さいもの）で選ぶ。
+ *
+ * @return array|null array('rows'=>[evaluate_row()の戻り値,...],
+ *   'height','article_count') — 1行も組めない場合はnull。
+ */
+function hatakiti_occult_pdf_search_rows_recursive( $pdf, $font_bold, $queue, $tier, $configs, $zone_w, $row_top, $page_bottom, $remaining_count, $consumed_before, $max_rows ) {
+    $best = null;
+
+    foreach ( $configs as $fractions ) {
+        $cols = count( $fractions );
+        if ( $cols > $remaining_count ) {
+            continue;
+        }
+        $items = array_slice( $queue, $consumed_before, $cols );
+
+        // 非対称2列は、この行に割り当てる2記事の本文量に合った向き
+        // だけを候補にする（長い方を広い列へ）。
+        if ( 2 === $cols && 0.5 !== $fractions[0] ) {
+            list( $len0, ) = hatakiti_occult_pdf_count_units( (string) ( $items[0]['body'] ?? '' ) );
+            list( $len1, ) = hatakiti_occult_pdf_count_units( (string) ( $items[1]['body'] ?? '' ) );
+            $wants_q0_wide = $len0 >= $len1;
+            $is_q0_wide    = $fractions[0] > $fractions[1];
+            if ( $wants_q0_wide !== $is_q0_wide ) {
+                continue;
+            }
+        }
+
+        $row = hatakiti_occult_pdf_evaluate_row( $pdf, $font_bold, $items, $tier, $fractions, $zone_w, $row_top, $page_bottom );
+        if ( null === $row ) {
+            continue;
+        }
+
+        // 候補1：この段だけで止める。
+        $alone = array(
+            'rows'          => array( $row ),
+            'height'        => $row['row_height'],
+            'article_count' => $row['cols'],
+        );
+        $best = hatakiti_occult_pdf_better_multirow_plan( $alone, $best );
+
+        // 候補2：この段＋後続段の最良の組合せ。
+        if ( $max_rows > 1 && $remaining_count > $cols ) {
+            $next = hatakiti_occult_pdf_search_rows_recursive( $pdf, $font_bold, $queue, $tier, $configs, $zone_w, $row_top + $row['row_height'], $page_bottom, $remaining_count - $cols, $consumed_before + $cols, $max_rows - 1 );
+            if ( null !== $next ) {
+                $combined = array(
+                    'rows'          => array_merge( array( $row ), $next['rows'] ),
+                    'height'        => $row['row_height'] + $next['height'],
+                    'article_count' => $row['cols'] + $next['article_count'],
+                );
+                $best = hatakiti_occult_pdf_better_multirow_plan( $combined, $best );
+            }
         }
     }
 
-    if ( '1col' !== $chosen_key
-        && $candidates[ $chosen_key ]['wasted_ratio'] > 0.6
-        && $candidates['1col']['wasted_ratio'] < $candidates[ $chosen_key ]['wasted_ratio']
-    ) {
-        $chosen_key = '1col';
+    return $best;
+}
+
+/**
+ * ページ残り領域を、後続の同tier記事を使って最大
+ * HATAKITI_OCCULT_PDF_MAX_PLAN_ROWS段のブロックへ分割する候補を探索し、
+ * 1記事あたりの平均消費高さが最も小さい組合せの「最初の1行ぶんの列幅」
+ * だけを返す（続きの行は、次回のhatakiti_occult_pdf_decide_block_
+ * config()呼び出しで、その時点のqueue/block_topから同じ探索が自然に
+ * 再実行され、通常は同じ結論が再発見される — 状態を持ち越さない、
+ * 決定論的な探索）。
+ *
+ * 4列は、4列を含まない最良候補より1記事あたりの平均消費高さが30%以上
+ * 改善する場合のみ採用する（指示書§6「4列の採用条件」— 既存の3列・
+ * 非対称2列の採用しきい値と同じ考え方）。
+ *
+ * @return float[]|null 見つかった場合は最初の行の列幅配列（列0＝最も
+ *   右→列N-1＝最も左）、1行も完結できる組合せが無ければnull。
+ */
+function hatakiti_occult_pdf_search_multirow_plan( $pdf, $font_bold, $queue, $tier, $zone_w, $block_top, $page_bottom ) {
+    $limit         = min( count( $queue ), HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW );
+    $same_tier_run = 0;
+    for ( $i = 0; $i < $limit; $i++ ) {
+        if ( $queue[ $i ]['_tier'] !== $tier ) {
+            break;
+        }
+        $same_tier_run++;
+    }
+    if ( 0 === $same_tier_run ) {
+        return null;
     }
 
-    return $candidates[ $chosen_key ]['widths'];
+    $configs_all = hatakiti_occult_pdf_row_configs_for_tier( $tier );
+    $configs_no4 = $configs_all;
+    unset( $configs_no4['4col_equal'] );
+
+    $best_any = hatakiti_occult_pdf_search_rows_recursive( $pdf, $font_bold, $queue, $tier, $configs_all, $zone_w, $block_top, $page_bottom, $same_tier_run, 0, HATAKITI_OCCULT_PDF_MAX_PLAN_ROWS );
+    if ( null === $best_any ) {
+        return null;
+    }
+
+    $uses_4col = false;
+    foreach ( $best_any['rows'] as $r ) {
+        if ( 4 === $r['cols'] ) {
+            $uses_4col = true;
+            break;
+        }
+    }
+    if ( ! $uses_4col ) {
+        return $best_any['rows'][0]['widths'];
+    }
+
+    $best_no4 = hatakiti_occult_pdf_search_rows_recursive( $pdf, $font_bold, $queue, $tier, $configs_no4, $zone_w, $block_top, $page_bottom, $same_tier_run, 0, HATAKITI_OCCULT_PDF_MAX_PLAN_ROWS );
+    if ( null === $best_no4 ) {
+        return $best_any['rows'][0]['widths'];
+    }
+
+    $avg_any = $best_any['height'] / max( 1, $best_any['article_count'] );
+    $avg_no4 = $best_no4['height'] / max( 1, $best_no4['article_count'] );
+    if ( $avg_any > $avg_no4 * 0.7 ) {
+        // 4列を含む方が明確には有利でない（1記事あたりの平均消費高さが
+        // 30%以上改善していない）— 4列を使わない方を採用する。
+        return $best_no4['rows'][0]['widths'];
+    }
+    return $best_any['rows'][0]['widths'];
 }
 
 /**
@@ -1320,14 +1510,19 @@ function hatakiti_occult_pdf_pick_best_fully_fit_candidate( $candidates ) {
  *      large記事は分割せず、後続キューから「単独1列でこのページに
  *      完全に収まる」記事を探して先に配置する（見つからない場合のみ
  *      安全弁として従来どおりlarge記事を配置＝続きが発生し得る）。
- *   3) medium/smallでは、tierごとに許可された段組み候補（1列/1:1/
- *      1:2/2:1、smallのみ1:1:1）のうち「割り当てる記事すべてがこの
- *      ページに完全に収まる」ものだけを対象に、
- *      hatakiti_occult_pdf_pick_best_fully_fit_candidate()の優先順位
- *      で選ぶ。該当構成が1つも無ければ、後続キューから「単独1列で
- *      完全に収まる」記事を探して先に配置する。それも無ければ安全弁
- *      として hatakiti_occult_pdf_decide_block_config_legacy()
- *      （続きの発生を許容する旧ロジック）にフォールバックする。
+ *   3) medium/smallでは、hatakiti_occult_pdf_search_multirow_plan()が
+ *      後続の同tier記事群（最大HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW件）
+ *      を使い、最大HATAKITI_OCCULT_PDF_MAX_PLAN_ROWS段までの段組み
+ *      組合せ（1列/1:1/1:2/2:1、smallのみ1:1:1・1:1:1:1も候補）を
+ *      dry-runで探索し、割り当てる記事すべてがこのページに完全に
+ *      収まる組合せの中から面積効率（実際に文字が入っている面積 ÷
+ *      その段組みが占める版面上の面積）が最も高いものを選ぶ — その
+ *      最初の1段ぶんだけを今回のブロックとして採用する（続きの段は
+ *      次回の呼び出しで同じ探索から自然に再発見される）。該当構成が
+ *      1つも無ければ、後続キューから「単独1列で完全に収まる」記事を
+ *      探して先に配置する。それも無ければ安全弁として
+ *      hatakiti_occult_pdf_decide_block_config_legacy()（続きの発生を
+ *      許容する旧ロジック）にフォールバックする。
  *
  * @return float[] 列0（最も右）→列N-1（最も左）の実際のmm幅。
  */
@@ -1363,86 +1558,9 @@ function hatakiti_occult_pdf_decide_block_config( $pdf, $font_bold, &$queue, $zo
         return array( $zone_w );
     }
 
-    $configs = array(
-        '1col'       => array( 1.0 ),
-        '2col_equal' => array( 0.5, 0.5 ),
-        '2col_q0w'   => array( 2 / 3, 1 / 3 ),
-        '2col_q1w'   => array( 1 / 3, 2 / 3 ),
-    );
-    if ( 'small' === $tier ) {
-        $configs['3col_equal'] = array( 1 / 3, 1 / 3, 1 / 3 );
-    }
-
-    $same_tier_run = 1;
-    for ( $i = 1; $i < count( $queue ) && $i < 3; $i++ ) {
-        if ( $queue[ $i ]['_tier'] !== $tier ) {
-            break;
-        }
-        $same_tier_run++;
-    }
-
-    $col_gap    = HATAKITI_OCCULT_PDF_ROW_COL_GAP_MM;
-    $candidates = array();
-    foreach ( $configs as $key => $fractions ) {
-        $cols = count( $fractions );
-        if ( $cols > $same_tier_run ) {
-            continue;
-        }
-        $widths = hatakiti_occult_pdf_fractions_to_widths( $fractions, $zone_w, $col_gap );
-        if ( min( $widths ) < HATAKITI_OCCULT_PDF_MIN_COL_W_MM ) {
-            continue;
-        }
-
-        $block_header_h = 0.0;
-        for ( $k = 0; $k < $cols; $k++ ) {
-            $h = hatakiti_occult_pdf_measure_first_segment_header_h( $pdf, $font_bold, $queue[ $k ], $tier, $widths[ $k ] );
-            $block_header_h = max( $block_header_h, $h );
-        }
-
-        $bottoms = array();
-        $all_fit = true;
-        for ( $k = 0; $k < $cols; $k++ ) {
-            $est = hatakiti_occult_pdf_estimate_article_height( $queue[ $k ], $tier, $widths[ $k ], $block_header_h, $block_top, $page_bottom );
-            if ( $est['truncated'] ) {
-                $all_fit = false;
-            }
-            $bottoms[] = $est['bottom'];
-        }
-        if ( ! $all_fit ) {
-            continue; // 記事の途中分割を伴う構成は通常経路の候補にしない
-        }
-
-        $block_bottom = max( $bottoms );
-        $height       = max( 0.001, $block_bottom - $block_top );
-        $slack        = 0.0;
-        foreach ( $bottoms as $b ) {
-            $slack += ( $block_bottom - $b );
-        }
-
-        $candidates[ $key ] = array(
-            'widths'       => $widths,
-            'wasted_ratio' => $slack / ( $height * $cols ),
-        );
-    }
-
-    // 非対称2列は、本文量に応じた向き（長い方を広く）だけを残す。
-    if ( isset( $candidates['2col_q0w'] ) && isset( $candidates['2col_q1w'] ) ) {
-        list( $len0, ) = hatakiti_occult_pdf_count_units( (string) ( $queue[0]['body'] ?? '' ) );
-        list( $len1, ) = hatakiti_occult_pdf_count_units( (string) ( $queue[1]['body'] ?? '' ) );
-        $keep = $len0 >= $len1 ? '2col_q0w' : '2col_q1w';
-        $drop = '2col_q0w' === $keep ? '2col_q1w' : '2col_q0w';
-        $candidates['2col_asym'] = $candidates[ $keep ];
-        unset( $candidates['2col_q0w'], $candidates['2col_q1w'], $candidates[ $drop ] );
-    } elseif ( isset( $candidates['2col_q0w'] ) ) {
-        $candidates['2col_asym'] = $candidates['2col_q0w'];
-        unset( $candidates['2col_q0w'] );
-    } elseif ( isset( $candidates['2col_q1w'] ) ) {
-        $candidates['2col_asym'] = $candidates['2col_q1w'];
-        unset( $candidates['2col_q1w'] );
-    }
-
-    if ( ! empty( $candidates ) ) {
-        return hatakiti_occult_pdf_pick_best_fully_fit_candidate( $candidates );
+    $plan_widths = hatakiti_occult_pdf_search_multirow_plan( $pdf, $font_bold, $queue, $tier, $zone_w, $block_top, $page_bottom );
+    if ( null !== $plan_widths ) {
+        return $plan_widths;
     }
 
     // 先頭記事（群）がどの構成でも完結しない — 後続キューから、この
