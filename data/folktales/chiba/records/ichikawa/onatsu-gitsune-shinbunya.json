@@ -1,0 +1,15 @@
+{
+"schema_version":"1.0","record_id":"chiba-ichikawa-onatsu-gitsune-shinbunya","status":"draft","title":"お夏ぎつね（1）新聞屋","title_normalized":"おなつぎつねしんぶんや","title_origin":"source_title",
+"summary":{"text":"市川市の相之川・行徳地域に伝わるお夏狐伝承の一話。「新聞屋」を題材にした独立した語りとして記録されている。","based_on_source_ids":["SRC-JFOLKLORE-ICHIKAWA"]},
+"story_summary":"相之川の了善寺に結び付くお夏狐を題材にした伝承群の一話で、日本伝承マップでは「お夏ぎつね（1）新聞屋」として市川市の個別伝承に記録されている。既存の「おなつギツネとわたうり」と同じお夏狐伝承群に属する可能性が高いが、本文照合ができないため別話として登録する。",
+"story_content":"行徳・相之川地域には、了善寺に棲んでいたと伝えられるお夏狐の話が残る。「お夏ぎつね（1）新聞屋」は、そのお夏狐をめぐる伝承の一つとして「新聞屋」という題で記録されている。現時点では公開資料から具体的な出来事の筋までは確認できないため、新聞配達人や新聞屋をめぐる狐の化かし方を推測して補わず、お夏狐伝承群の独立した一話として扱う。",
+"region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"市川市","area_name":"行徳・相之川周辺","source_description":"日本伝承マップの市川市伝承一覧で、お夏狐関連の個別話として確認。"},
+"locations":[{"name":"相之川","location_type":"place","description":"お夏狐伝承群が市川民話の会で語られる地域。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+"characters":[{"name":"お夏狐","role":"伝承群の中心となる狐","attributes":["市川市の相之川・行徳地域に伝わる狐"],"source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+"beings":[{"name":"狐","type":"怪異・動物","description":"人間の生活圏に現れる狐として伝承に登場。","source_ids":["SRC-JFOLKLORE-ICHIKAWA"]}],
+"themes":["狐伝承","お夏狐","新聞屋","化かし","行徳","相之川"],
+"story_type":["狐伝承","怪異譚","地域伝承"],
+"related_records":[{"record_id":"chiba-ichikawa-onatsu-fox-watauri","relationship":"same_subject_variant_or_related_tale","note":"お夏狐を扱う既存の「おなつギツネとわたうり」。本文未照合のため別話として保持。"}],
+"sources":[{"source_id":"SRC-JFOLKLORE-ICHIKAWA","title":"市川市の伝承","publisher":"日本伝承マップ","publication_date":"web","source_type":"folklore_database","url":"https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82","accessed_date":"2026-09-07","relevant_section":"お夏ぎつね（1）新聞屋","language":"ja"}],
+"confidence":"medium","research_status":"source_confirmed","research_notes":"題名・市川市の伝承としての存在・お夏狐伝承群との関係を確認。本文の具体的な筋は未確認のため創作的補完は行わない。"
+}
