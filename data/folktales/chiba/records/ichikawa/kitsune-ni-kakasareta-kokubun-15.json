@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-kitsune-ni-kakasareta-kokubun-15",
+  "status": "draft",
+  "title": "狐に化かされた話 (15)",
+  "title_normalized": "狐に化かされた話 (15)",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "国分に伝わる「狐に化かされた話」の独立した記録。市川市国分・北国分周辺に集中する狐化かし伝承群の一話。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-ICHIKAWA",
+      "SRC-ICHIKAWA-LIBRARY"
+    ]
+  },
+  "story_summary": "「狐に化かされた話 (15)」は国分の伝承として確認できる。市川市の国分・北国分周辺には番号付きの「狐に化かされた話」が16件記録され、同じ地域に集中している。番号付き記録は異伝または別話の可能性があるため、本文照合前に統合せず独立レコードとして保存する。現時点では題名と伝承地以外の具体的な筋を補わない。",
+  "story_content": "「狐に化かされた話 (15)」は国分の伝承として確認できる。市川市の国分・北国分周辺には番号付きの「狐に化かされた話」が16件記録され、同じ地域に集中している。番号付き記録は異伝または別話の可能性があるため、本文照合前に統合せず独立レコードとして保存する。現時点では題名と伝承地以外の具体的な筋を補わない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "市川市",
+    "area_name": "国分",
+    "source_description": "日本伝承マップの市川市伝承一覧で題名と伝承地を確認。市川市図書館は地域別・内容別に昔話を調べられる資料案内を公開している。"
+  },
+  "locations": [
+    {
+      "name": "国分",
+      "location_type": "tradition_area",
+      "description": "出典一覧に示される伝承地。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "region",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・動物",
+      "description": "伝承の中心となる狐。",
+      "source_ids": [
+        "SRC-JFOLKLORE-ICHIKAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "狐伝承",
+    "動物怪異",
+    "化かし",
+    "国分・北国分"
+  ],
+  "story_type": [
+    "狐伝承",
+    "地域伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "motif_hub",
+      "note": "狐・狸・ムジナの化かし伝承類型ハブに接続。"
+    },
+    {
+      "record_id": "hub-region-kokubun-kitakokubun-fox-traditions",
+      "relationship": "regional_tradition_cluster",
+      "note": "国分・北国分を中心とする狐伝承群に接続。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-ICHIKAWA",
+      "title": "市川市の伝承",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "狐に化かされた話 (15)",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-ICHIKAWA-LIBRARY",
+      "title": "市川のむかし話",
+      "publisher": "市川市図書館",
+      "publication_date": "2025-10-22更新",
+      "source_type": "municipal_library_guide",
+      "url": "https://www.city.ichikawa.lg.jp/site/library/4572.html",
+      "accessed_date": "2026-09-07",
+      "relevant_section": "地域や内容から市川の昔話を調べる案内",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "source_confirmed",
+  "research_notes": "題名と伝承地を確認。本文未確認のため、既存の狐化かし話の典型的筋を流用せず独立レコードとして登録。"
+}
