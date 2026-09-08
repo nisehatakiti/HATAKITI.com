@@ -810,6 +810,126 @@
           "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
         }
       ]
+    },
+    {
+      "record_id": "chiba-urayasu-toyoke-fujizuka",
+      "title": "豊受神社の富士塚",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "豊受神社"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "富士信仰",
+        "擬似巡礼"
+      ],
+      "cross_tags": [
+        "富士塚",
+        "富士信仰",
+        "浅間神社",
+        "猫実",
+        "登拝"
+      ],
+      "research_status": "deep_researched",
+      "summary": "浦安では富士信仰が盛んで、遠い富士山へ実際に登れない人々は地域に築かれた富士塚を拝んだ。豊受神社境内にも富士塚と浅間神社があり、猫実の人々が身近な場所で富士山信仰を実践した痕跡を残している。",
+      "research_notes": "浦安観光公式と浦安市公式史跡一覧、豊受神社公式由緒で境内の富士塚・浅間神社を確認。",
+      "sources": [
+        {
+          "title": "浦安の古今と自然に触れるまち巡り",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/sightseeing/2035/"
+        },
+        {
+          "title": "市内史跡等表示板一覧",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html"
+        },
+        {
+          "title": "神社の由緒",
+          "publisher": "豊受神社 公式サイト",
+          "url": "https://urayasu-toyoukejinja.com/free/profile"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-toyoke-ginkgo-survival",
+      "title": "豊受神社の大銀杏と水害の記憶",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "豊受神社"
+      ],
+      "story_type": [
+        "御神木伝承",
+        "災害伝承",
+        "地域信仰"
+      ],
+      "cross_tags": [
+        "大銀杏",
+        "御神木",
+        "水害",
+        "落雷",
+        "豊受神社",
+        "猫実"
+      ],
+      "research_status": "deep_researched",
+      "summary": "豊受神社の大銀杏は浦安市指定天然記念物で、樹齢約300～400年とされる。浦安の地域資料では、幹が落雷や水害によって五つに割れたと伝えられており、度重なる風水害で社殿が流失・再建された神社の歴史とともに、地域の災害記憶を宿す御神木として受け継がれている。",
+      "research_notes": "神社公式で大銀杏と度重なる風水害による再建を確認。浦安市発行のまち巡り資料で、落雷や水害によって幹が五つに割れたという伝承を確認。",
+      "sources": [
+        {
+          "title": "神社の由緒",
+          "publisher": "豊受神社 公式サイト",
+          "url": "https://urayasu-toyoukejinja.com/free/profile"
+        },
+        {
+          "title": "浦安の古今と自然に触れるまち巡り",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/000/023/high2026.pdf"
+        },
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-toyoke-storm-rebuilding",
+      "title": "豊受神社の大津波と再建の記憶",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "豊受神社",
+        "当代島"
+      ],
+      "story_type": [
+        "災害伝承",
+        "神社由緒",
+        "再建伝承"
+      ],
+      "cross_tags": [
+        "大津波",
+        "風水害",
+        "社殿流失",
+        "豊受神社",
+        "猫実"
+      ],
+      "research_status": "deep_researched",
+      "summary": "浦安最古とされる豊受神社は、1293年の大津波をはじめ度重なる風水害で社殿が破損・流失し、そのたびに再建されてきたと伝えられる。神社由緒そのものが、海辺の集落が災害を受けながら鎮守を守り続けた地域の記憶になっている。",
+      "research_notes": "浦安観光公式と豊受神社公式由緒で、大津波・風水害・再建の経緯を確認。",
+      "sources": [
+        {
+          "title": "豊受神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1960/"
+        },
+        {
+          "title": "神社の由緒",
+          "publisher": "豊受神社 公式サイト",
+          "url": "https://urayasu-toyoukejinja.com/free/profile"
+        }
+      ]
     }
   ],
   "source_url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
