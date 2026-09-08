@@ -667,6 +667,149 @@
           "url": "https://tesshow.jp/chiba/urayas/temple_neko_kezo.html"
         }
       ]
+    },
+    {
+      "record_id": "chiba-urayasu-shinabi-jizo",
+      "title": "しなび地蔵",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "正福寺"
+      ],
+      "story_type": [
+        "霊験譚",
+        "病気平癒",
+        "地蔵信仰"
+      ],
+      "cross_tags": [
+        "地蔵",
+        "皮膚病",
+        "首なし地蔵",
+        "しなび",
+        "正福寺"
+      ],
+      "research_status": "deep_researched",
+      "summary": "堀江の「しなび」という屋号の家の者が江戸への行商途中、焼け野原で首のない地蔵を見つけた。皮膚病の快癒を願って家に持ち帰ると病が治ったため、首を修復して祀ったところ霊験を聞いた人々が参詣するようになったという。",
+      "research_notes": "浦安市教育委員会掲示を引用する寺社資料で具体的な由来譚を確認。浦安市公式史跡表示板一覧でも正福寺内の史跡として確認。",
+      "sources": [
+        {
+          "title": "市内史跡等表示板一覧",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html"
+        },
+        {
+          "title": "正福寺｜浦安市堀江にある日蓮宗寺院",
+          "publisher": "寺社資料紹介（浦安市教育委員会掲示引用）",
+          "url": "https://tesshow.jp/chiba/urayas/temple_horie_shofk.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-jogyo-bosatsu-washing-faith",
+      "title": "正福寺の浄行堂と洗仏信仰",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "正福寺"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "病気平癒",
+        "洗仏"
+      ],
+      "cross_tags": [
+        "浄行菩薩",
+        "洗仏",
+        "病気平癒",
+        "浄行様",
+        "正福寺"
+      ],
+      "research_status": "deep_researched",
+      "summary": "正福寺の浄行菩薩像は、病人が自分の患部と同じ場所を仏像で洗うと病が治ると信じられる「洗仏」として霊験を集め、「浄行様」と親しまれてきた。明治28年（1895）に第17世住職によって祀られたとされる。",
+      "research_notes": "浦安市教育委員会掲示を引用する寺社資料で洗仏信仰と建立経緯を確認。浦安市公式史跡表示板一覧でも浄行堂を確認。",
+      "sources": [
+        {
+          "title": "市内史跡等表示板一覧",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html"
+        },
+        {
+          "title": "正福寺｜浦安市堀江にある日蓮宗寺院",
+          "publisher": "寺社資料紹介（浦安市教育委員会掲示引用）",
+          "url": "https://tesshow.jp/chiba/urayas/temple_horie_shofk.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-kosho-kairyo-ganjoto",
+      "title": "公訴貝猟願成の塔",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "花蔵院",
+        "三番瀬"
+      ],
+      "story_type": [
+        "漁業伝承",
+        "供養伝承",
+        "地域史"
+      ],
+      "cross_tags": [
+        "三番瀬",
+        "漁場争い",
+        "訴訟",
+        "落命者供養",
+        "花蔵院"
+      ],
+      "research_status": "source_confirmed",
+      "summary": "江戸時代後期、堀江・猫実村と船橋村の漁師が三番瀬の漁場をめぐって評定所で争った。猫実側では花蔵院の宥賢和尚を中心に対応したが、その過程で村の3人が落命したと伝えられ、勝訴後にその冥福と願成を祈って石塔が建てられた。",
+      "research_notes": "浦安市の文化財一覧で市指定文化財として確認。詳細な争いと落命者供養の筋は現地説明板を紹介する地域資料で確認しており、一次資料直接取得まで source_confirmed。",
+      "sources": [
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        },
+        {
+          "title": "浦安市の地域探訪 猫実の花蔵院",
+          "publisher": "地域史資料紹介",
+          "url": "https://g1satsuki.hatenablog.com/entry/2024/20241223H.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-hojoin-koshinto",
+      "title": "宝城院の庚申塔",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "宝城院"
+      ],
+      "story_type": [
+        "信仰遺産",
+        "庚申信仰"
+      ],
+      "cross_tags": [
+        "庚申塔",
+        "庚申信仰",
+        "宝城院",
+        "堀江"
+      ],
+      "research_status": "source_confirmed",
+      "summary": "堀江の宝城院に残る庚申塔は千葉県指定有形文化財で、浦安の民間信仰を示す代表的な石造信仰遺産として保存されている。",
+      "research_notes": "県・浦安市の公式文化財資料で存在と指定を確認。個別の造立由来や信仰実践の詳細は未取得のため、今回は独立記録として source_confirmed。",
+      "sources": [
+        {
+          "title": "浦安市の指定・登録文化財",
+          "publisher": "千葉県教育委員会",
+          "url": "https://www.pref.chiba.lg.jp/kyouiku/bunkazai/shitei/shichouson/urayasu.html"
+        },
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        }
+      ]
     }
   ],
   "source_url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
