@@ -333,8 +333,195 @@
           "url": "https://library.city.urayasu.chiba.jp/teiten/teiten/before-urayasu.html"
         }
       ]
+    },
+    {
+      "record_id": "chiba-urayasu-inari-smallpox-stone",
+      "title": "稲荷神社の疱瘡除けの小石",
+      "municipality": "浦安市",
+      "locations": [
+        "当代島",
+        "稲荷神社"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "霊験譚",
+        "病気除け"
+      ],
+      "cross_tags": [
+        "稲荷信仰",
+        "疱瘡",
+        "病気除け",
+        "石伝承",
+        "当代島"
+      ],
+      "research_status": "deep_researched",
+      "summary": "当代島の稲荷神社は古くから疱瘡に霊験があると信じられ、嘉永年間には境内の小石を持ち帰って病除けを願う人々が列をなしたと伝えられる。神社は元禄2年（1689）に小岩村の善養寺から移し祀られたとされる。",
+      "research_notes": "浦安観光公式と浦安市公式関連資料で、疱瘡への霊験と小石を持ち帰る信仰を確認。地域の具体的な病気除け信仰として独立登録。",
+      "sources": [
+        {
+          "title": "稲荷神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1992/"
+        },
+        {
+          "title": "浦安の古今と自然に触れるまち巡り",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/000/023/high2026.pdf"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-inari-whale-votive-stone",
+      "title": "稲荷神社の大鯨の碑",
+      "municipality": "浦安市",
+      "locations": [
+        "当代島",
+        "稲荷神社",
+        "三枚洲"
+      ],
+      "story_type": [
+        "漁業信仰",
+        "海の伝承",
+        "記念碑伝承"
+      ],
+      "cross_tags": [
+        "鯨",
+        "漁師",
+        "奉納",
+        "東京湾",
+        "当代島"
+      ],
+      "research_status": "deep_researched",
+      "summary": "明治8年（1875）、浦安沖の漁場・三枚洲で鯨を生け捕りにした漁師が稲荷神社へ奉納したと伝えられる碑。かつて東京湾にも迷い鯨が現れたという地域の海の記憶と、漁獲を神に結び付ける信仰を残している。",
+      "research_notes": "浦安観光公式の由緒説明と浦安市の指定文化財一覧で碑の存在・所在地を確認。",
+      "sources": [
+        {
+          "title": "稲荷神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1992/"
+        },
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-seiryu-shrine-sea-faith",
+      "title": "清瀧神社の海神信仰",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "清瀧神社"
+      ],
+      "story_type": [
+        "神社由緒",
+        "海の信仰",
+        "地域信仰"
+      ],
+      "cross_tags": [
+        "海神",
+        "龍神",
+        "浦島太郎",
+        "龍宮",
+        "堀江",
+        "漁村"
+      ],
+      "research_status": "deep_researched",
+      "summary": "堀江の鎮守・清瀧神社は大海津神を祀り、建久7年（1196）の創建とされる。社殿には龍・浦島太郎・龍宮城・千鳥など海に関わる彫刻があり、境内にも竜神社が祀られるなど、海と漁村の地域信仰を強く反映している。",
+      "research_notes": "浦安観光公式と浦安市公式の文化財情報で確認。民話本文ではなく、海神を中心にした地域信仰・図像伝承として整理。",
+      "sources": [
+        {
+          "title": "清瀧神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1959/"
+        },
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        },
+        {
+          "title": "市内史跡等表示板一覧",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-hojoin-obinzuru",
+      "title": "宝城院のおびんずる",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "宝城院"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "病気平癒",
+        "撫で仏"
+      ],
+      "cross_tags": [
+        "おびんずる",
+        "賓頭盧尊者",
+        "病気平癒",
+        "願掛け",
+        "堀江"
+      ],
+      "research_status": "source_confirmed",
+      "summary": "宝城院には地域で名高い「なで仏」のおびんずるが祀られ、患部と同じ場所を撫でて病気の回復を願う信仰が続いてきたとされる。地域資料では、像の宝珠を持ち帰って願いがかなうと戻すという願掛けの伝承も紹介されている。",
+      "research_notes": "宝城院の縁起と浦安市公式史跡一覧で、おびんずる信仰の存在・所在地を確認。宝珠を持ち帰る細部は地域資料紹介に基づくため source_confirmed とし、深掘り余地を残す。",
+      "sources": [
+        {
+          "title": "宝城院｜浦安市堀江にある真言宗豊山派寺院",
+          "publisher": "地域寺社資料紹介",
+          "url": "https://tesshow.jp/chiba/urayas/temple_horie_hojo.html"
+        },
+        {
+          "title": "市内史跡等表示板一覧",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-zenpukuji-hokyointo-faith",
+      "title": "善福寺の宝篋印塔と罪障消滅の信仰",
+      "municipality": "浦安市",
+      "locations": [
+        "当代島",
+        "善福寺"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "供養伝承",
+        "水難供養"
+      ],
+      "cross_tags": [
+        "宝篋印塔",
+        "罪障消滅",
+        "供養",
+        "水難",
+        "当代島"
+      ],
+      "research_status": "source_confirmed",
+      "summary": "当代島の善福寺にある宝篋印塔は宝暦6年（1756）建立。塔内から見つかった経文や勧化帳などから、供養・礼拝によって長く積もった罪科が消滅するという信仰と、近隣の村々や江戸の人々が資金を出し合った広域的な信仰の広がりが確認されている。",
+      "research_notes": "浦安市の指定文化財・史跡情報で塔の存在を確認し、浦安市教育委員会掲示内容を紹介する地域資料で建立趣旨と信仰内容を確認。一次的な掲示原文の直接取得は今後の課題。",
+      "sources": [
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        },
+        {
+          "title": "善福寺｜浦安市当代島にある新義真言宗寺院",
+          "publisher": "地域寺社資料紹介",
+          "url": "https://tesshow.jp/chiba/urayas/temple_todai_zenpk.html"
+        }
+      ]
     }
   ],
   "source_url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-  "batch_notes": "浦安の人物・歴史・地名由来候補を一次構造化。人物は同一人物を中心に話群として束ね、全国・広域接続の可能性があるものは person_tags/cross_tags を保持。本文未確認は researching/partial とした。"
+  "batch_notes": "浦安の人物・歴史・地名由来候補を一次構造化。人物は同一人物を中心に話群として束ね、全国・広域接続の可能性があるものは person_tags/cross_tags を保持。本文未確認は researching/partial とした。 寺社由緒ルートの深掘りとして、稲荷神社の疱瘡除け・大鯨の碑、清瀧神社の海神信仰、宝城院のおびんずる、善福寺の宝篋印塔を追加。"
 }
