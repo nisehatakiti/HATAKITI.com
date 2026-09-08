@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '39' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '40' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -2950,6 +2950,8 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
             'row_count'               => 0,
             'column_imbalance_score'  => 0.0,
             'order_jump'              => $plan['order_jump'] ?? 0,
+            'clipped_article_count'   => 0,
+            'isolated_fragment_count' => 0,
         );
     }
 
@@ -2957,19 +2959,38 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
     $prev_cols    = null;
     $switch_count = 0;
     $imbalance_total = 0.0;
+    // Rowの内部占有領域再利用指示書§13：clipped_article_count。Row候補は
+    // has_continuation===trueの時点でhatakiti_occult_pdf_search_page_
+    // plan_recursive()が候補化前に除外している（§1-1）ため、
+    // rows_so_farに含まれるRowは常にhas_continuation===false（列内の
+    // 記事がすべて完結済み）である。ただし個々のdebug行の'overflow'は
+    // 「その列内の“次のセグメント”へ続くか」を示すだけで、同じ列の
+    // 最後のセグメントで完結していれば正常（1記事が同一ページ内で
+    // 複数セグメントに分かれるのは通常の挙動であり、途中で消える
+    // クリッピングではない）。そのため、各(行, 列)ごとに最も深い
+    // （＝最後の）セグメントのoverflowのみを判定対象にする — 途中の
+    // セグメントのoverflow=trueを誤ってクリッピングとして数えない。
+    $clipped_article_count = 0;
 
     foreach ( $rows as $row ) {
-        $col_bottom = array();
+        $col_bottom  = array();
+        $col_last_of = array(); // col => 最も深いセグメントのoverflowフラグ
         foreach ( $row['debug'] as $r ) {
             if ( ! isset( $r['col'], $r['y'], $r['h'] ) ) {
                 continue;
             }
             $b = $r['y'] + $r['h'];
             if ( ! isset( $col_bottom[ $r['col'] ] ) || $b > $col_bottom[ $r['col'] ] ) {
-                $col_bottom[ $r['col'] ] = $b;
+                $col_bottom[ $r['col'] ]  = $b;
+                $col_last_of[ $r['col'] ] = ! empty( $r['overflow'] );
             }
             if ( isset( $r['article_id'] ) && null !== $r['article_id'] ) {
                 $article_ids[ $r['article_id'] ] = true;
+            }
+        }
+        foreach ( $col_last_of as $has_overflow_at_end ) {
+            if ( $has_overflow_at_end ) {
+                $clipped_article_count++;
             }
         }
         if ( count( $col_bottom ) > 1 ) {
@@ -2982,9 +3003,19 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
         }
         $prev_cols = $cols;
     }
+    // Rowの内部占有領域再利用指示書§13：isolated_fragment_count。
+    // Space Fillはhatakiti_occult_pdf_estimate_article_in_space()が
+    // truncated===falseの記事しか候補化しないため（§7-1「完全配置」
+    // のみを実装し、§7-2「部分配置」は実装していない）、placementsに
+    // 記事の一部だけが置かれることは構造的に発生しない。防御的に
+    // 明示カウントする（常に0であるべき）。
+    $isolated_fragment_count = 0;
     foreach ( $placements as $p ) {
         if ( isset( $p['article_id'] ) && null !== $p['article_id'] ) {
             $article_ids[ $p['article_id'] ] = true;
+        }
+        if ( ! empty( $p['fragment'] ) ) {
+            $isolated_fragment_count++;
         }
     }
 
@@ -3050,6 +3081,8 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
         'row_count'               => count( $rows ),
         'column_imbalance_score'  => round( $imbalance_total, 1 ),
         'order_jump'              => $plan['order_jump'] ?? 0,
+        'clipped_article_count'   => $clipped_article_count,
+        'isolated_fragment_count' => $isolated_fragment_count,
     );
 }
 
@@ -3062,6 +3095,15 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
 function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
     if ( null === $b ) {
         return true;
+    }
+    // Rowの内部占有領域再利用指示書§14 優先順位1・2：clipping・孤立
+    // 断片は他の全指標より絶対優先で少ない方を選ぶ（本設計では常に
+    // 0のはずだが、防御的に最優先で評価する）。
+    if ( $a['clipped_article_count'] !== $b['clipped_article_count'] ) {
+        return $a['clipped_article_count'] < $b['clipped_article_count'];
+    }
+    if ( $a['isolated_fragment_count'] !== $b['isolated_fragment_count'] ) {
+        return $a['isolated_fragment_count'] < $b['isolated_fragment_count'];
     }
     // PagePlan探索仕様§16の優先順位（辞書式比較）。記事数について、
     // 記事サイズ差による不公平を避けるため「配置済み記事数が同じ場合
@@ -3168,6 +3210,16 @@ function hatakiti_occult_pdf_count_pages_to_exhaust_queue( $queue ) {
 function hatakiti_occult_pdf_should_adopt_page_plan( $baseline, $baseline_metrics, $candidate, $candidate_metrics ) {
     if ( ! $candidate_metrics['valid'] ) {
         return array( 'adopt' => false, 'reason' => 'CANDIDATE_INVALID' );
+    }
+
+    // Rowの内部占有領域再利用指示書§15：clipping・孤立断片は絶対条件
+    // として最優先で却下する（本設計では常に0のはずだが、防御的に
+    // 最初にチェックする）。
+    if ( $candidate_metrics['clipped_article_count'] > 0 ) {
+        return array( 'adopt' => false, 'reason' => 'CLIPPED_ARTICLE_DETECTED' );
+    }
+    if ( $candidate_metrics['isolated_fragment_count'] > 0 ) {
+        return array( 'adopt' => false, 'reason' => 'ISOLATED_FRAGMENT_DETECTED' );
     }
 
     // Priority 1：総ページ数を悪化させない。
