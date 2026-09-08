@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '38' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '39' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -1064,8 +1064,9 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     $body_top = $y + $header_h + $gap;
     $body_h   = hatakiti_occult_pdf_body_segment_h( $article, $tier );
 
-    $overflow_body   = null;
-    $body_used_width = 0.0; // 実描画占有矩形ベースAvailable Spaces指示書§4：本文が実際に使った幅（右詰め）。
+    $overflow_body    = null;
+    $body_used_width  = 0.0; // 実描画占有矩形ベースAvailable Spaces指示書§4：本文が実際に使った幅（右詰め）。
+    $body_content_h   = $body_h; // Row内部visual空白指示書§2〜§3：本文の実描画高さ（既定は予約高さと同じ）。
     if ( $body_h > 2.0 ) {
         list( , $body_paragraphs ) = hatakiti_occult_pdf_count_units( $body );
 
@@ -1084,7 +1085,7 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         $cols_to_use    = $max_cols_by_w;
 
         if ( $cols_to_use < 1 ) {
-            $overflow_body = $body_paragraphs;
+            $overflow_body  = $body_paragraphs;
             $body_content_h = 0.0;
         } else {
             $body_result = hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $body_paragraphs, $x + $w, $body_top, $body_h, $cols_to_use, $fonts['body'], $font_regular );
@@ -1096,6 +1097,14 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
             // $w全体を占有済みとはみなさない（実描画占有矩形ベース
             // Available Spaces指示書§1・§4・§7）。
             $body_used_width = $body_result['columns_used'] * $body_result['col_pitch'];
+            // Row内部visual空白指示書§2〜§3：予約高さ($body_h)ではなく
+            // 実際に描画された最深部（content_h）を「本文の実際の高さ」
+            // として記録する。ただし$bottom_y（出典・次行の開始位置）
+            // の計算には従来どおり予約高さ$body_hを使い続ける — 実描画
+            // 位置そのものは変更しない（既存の安定したページ送り・
+            // 段組み判定を壊さないため）。空き矩形検出でのみ、この
+            // より正確な値を使う。
+            $body_content_h = $body_result['content_h'];
         }
     } else {
         $overflow_body = hatakiti_occult_pdf_build_units( $body );
@@ -1124,6 +1133,15 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         $bottom_y += $src_h;
     }
 
+    // Row内部visual空白指示書§2・§5：article_visual_bottom。出典が
+    // 存在する場合は、出典（横書きの実描画要素）がbottom_yの位置に
+    // 実際に描画されるため、そこを空き領域の開始位置にしてはならない
+    // （既存記事の出典を上書きする配置を防ぐ）。出典が無いセグメント
+    // （'none'モードの列内続き等）のみ、予約高さ($body_h)ではなく
+    // 実際に描画された本文の最深部(content_h)を使う — 罫線は呼び出し
+    // 元でbottom_yに描かれるため、visual_bottomはそれ以下にはしない。
+    $visual_bottom = ( $src_h > 0 ) ? $bottom_y : ( $body_top + $body_content_h );
+
     return array(
         'overflow_body'    => $overflow_body,
         'bottom_y'         => $bottom_y,
@@ -1133,6 +1151,10 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         'body_top'         => round( $body_top, 3 ),
         'body_h'           => round( $body_h, 3 ),
         'body_used_width'  => round( $body_used_width, 3 ),
+        // Row内部visual空白指示書§2〜§3：実際に描画された最深部に基づく
+        // visual_bottom（出典がある場合はbottom_yと同じ＝出典・罫線を
+        // 上書きしない）。
+        'visual_bottom'    => round( $visual_bottom, 3 ),
     );
 }
 
@@ -1885,6 +1907,7 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                         'overflow' => ! empty( $draw_result['overflow_body'] ),
                         'body_h_actual' => $draw_result['body_h'] ?? 0.0,
                         'body_used_width' => $draw_result['body_used_width'] ?? 0.0,
+                        'visual_bottom' => $draw_result['visual_bottom'] ?? round( $draw_result['bottom_y'], 1 ),
                         'space_fill' => true,
                         'order_jump' => $placement['order_jump'],
                     );
@@ -2032,6 +2055,7 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
                     'overflow' => ! empty( $result['overflow_body'] ),
                     'body_h_actual' => $result['body_h'] ?? round( $body_h, 1 ),
                     'body_used_width' => $result['body_used_width'] ?? 0.0,
+                    'visual_bottom' => $result['visual_bottom'] ?? round( $result['bottom_y'], 1 ),
                 );
 
                 $pdf->SetLineWidth( 'large' === $tier && 1 === $cols ? 0.5 : 0.25 );
@@ -2227,6 +2251,7 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
                     'overflow' => ! empty( $result['overflow_body'] ),
                     'body_h_actual' => $result['body_h'] ?? 0.0,
                     'body_used_width' => $result['body_used_width'] ?? 0.0,
+                    'visual_bottom' => $result['visual_bottom'] ?? round( $result['bottom_y'], 1 ),
                     'backfill' => true,
                     'cross_tier' => ( $plan['tier'] !== $block_tier ),
                 );
@@ -2425,7 +2450,11 @@ function hatakiti_occult_pdf_row_leftover_spaces( $debug_rows, $row_bottom ) {
         if ( ! isset( $r['col'], $r['y'], $r['h'], $r['w'], $r['x'] ) ) {
             continue;
         }
-        $bottom = $r['y'] + $r['h'];
+        // Row内部visual空白指示書§2〜§3：列の実際の到達位置は
+        // visual_bottom（実描画の最深部、出典があればそこまで含む）を
+        // 優先する。無ければ従来どおりbox_bottom（$r['y']+$r['h']）に
+        // フォールバックする。
+        $bottom = isset( $r['visual_bottom'] ) ? $r['visual_bottom'] : ( $r['y'] + $r['h'] );
         $tier   = preg_replace( '/\(col\d+-\d+\)$/', '', (string) ( $r['tier'] ?? '' ) );
         if ( ! isset( $col_bottom[ $r['col'] ] ) || $bottom > $col_bottom[ $r['col'] ] ) {
             $col_bottom[ $r['col'] ] = $bottom;
