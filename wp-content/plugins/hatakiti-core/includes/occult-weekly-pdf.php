@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '37' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '38' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -871,6 +871,15 @@ define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CONSECUTIVE_SPACE_FILLS', 3 );
 define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_SPACE_FILL_IMPROVEMENT_MM2', 200.0 );
 
 /**
+ * hatakiti_occult_pdf_compare_page_plans()で、面積系指標（largest_
+ * empty_rect_area等、mm²）を比較する際の「同等」とみなす許容誤差。
+ * 実データpost=662 3ページ目で、262.7mm²というノイズレベルの差だけで
+ * 段組み切替回数の少ない候補が不採用になる問題を確認したため導入した
+ * （長さ系指標と同じ±0.5mmの許容誤差では狭すぎる）。
+ */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_AREA_TIE_TOLERANCE_MM2', 500.0 );
+
+/**
  * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
  * — hatakiti_occult_pdf_search_multirow_plan()が探索する段（行）の
  * 最大数。「2列→1列→2列」のような3段構成まで許可する。
@@ -1055,7 +1064,8 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     $body_top = $y + $header_h + $gap;
     $body_h   = hatakiti_occult_pdf_body_segment_h( $article, $tier );
 
-    $overflow_body = null;
+    $overflow_body   = null;
+    $body_used_width = 0.0; // 実描画占有矩形ベースAvailable Spaces指示書§4：本文が実際に使った幅（右詰め）。
     if ( $body_h > 2.0 ) {
         list( , $body_paragraphs ) = hatakiti_occult_pdf_count_units( $body );
 
@@ -1081,6 +1091,11 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
             if ( $body_result['overflow'] ) {
                 $overflow_body = $body_result['remainder'];
             }
+            // 本文は列0（右端）から左へ埋まっていくため、実際に使った
+            // 列数ぶんの幅だけが右詰めで占有される。割り当てられた
+            // $w全体を占有済みとはみなさない（実描画占有矩形ベース
+            // Available Spaces指示書§1・§4・§7）。
+            $body_used_width = $body_result['columns_used'] * $body_result['col_pitch'];
         }
     } else {
         $overflow_body = hatakiti_occult_pdf_build_units( $body );
@@ -1109,7 +1124,16 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
         $bottom_y += $src_h;
     }
 
-    return array( 'overflow_body' => $overflow_body, 'bottom_y' => $bottom_y );
+    return array(
+        'overflow_body'    => $overflow_body,
+        'bottom_y'         => $bottom_y,
+        // 実描画占有矩形ベースAvailable Spaces指示書§4：本文の実際の
+        // 占有矩形（右詰め）。見出し・出典は割り当て幅$wをそのまま
+        // 占有するとみなす（実際にほぼ全幅を使う横書き要素のため）。
+        'body_top'         => round( $body_top, 3 ),
+        'body_h'           => round( $body_h, 3 ),
+        'body_used_width'  => round( $body_used_width, 3 ),
+    );
 }
 
 /**
@@ -1432,6 +1456,24 @@ function hatakiti_occult_pdf_fallback_tier( $tier ) {
     if ( ! HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILL ) {
         return null;
     }
+    if ( 'medium' === $tier ) {
+        return 'small';
+    }
+    if ( 'small' === $tier ) {
+        return 'medium';
+    }
+    return null;
+}
+
+/**
+ * hatakiti_occult_pdf_fallback_tier()の隣接tier表（medium⇄small）と
+ * 同じ組み合わせを、HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_BACKFILLの
+ * 設定に関係なく返す。Space Fill専用 — 既に「他記事が使わなかった
+ * 余り幅」であり埋めなければそのまま無駄になる領域が対象のため、
+ * バックフィルで確認された「medium列がsmallを先食いする」リスクは
+ * 当てはまらない（採用前に必ず総ページ数悪化チェックを通るため）。
+ */
+function hatakiti_occult_pdf_space_fill_fallback_tier( $tier ) {
     if ( 'medium' === $tier ) {
         return 'small';
     }
@@ -1841,6 +1883,8 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                         'continuation' => false, 'mode' => 'headline', 'label_shown' => false, 'is_first_in_block' => false,
                         'body_top' => round( $placement['y'] + $placement['header_h'] + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
                         'overflow' => ! empty( $draw_result['overflow_body'] ),
+                        'body_h_actual' => $draw_result['body_h'] ?? 0.0,
+                        'body_used_width' => $draw_result['body_used_width'] ?? 0.0,
                         'space_fill' => true,
                         'order_jump' => $placement['order_jump'],
                     );
@@ -1986,6 +2030,8 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
                     'is_first_in_block' => $is_first,
                     'body_top' => round( $seg_top + $header_h + $gap, 1 ),
                     'overflow' => ! empty( $result['overflow_body'] ),
+                    'body_h_actual' => $result['body_h'] ?? round( $body_h, 1 ),
+                    'body_used_width' => $result['body_used_width'] ?? 0.0,
                 );
 
                 $pdf->SetLineWidth( 'large' === $tier && 1 === $cols ? 0.5 : 0.25 );
@@ -2179,6 +2225,8 @@ function hatakiti_occult_pdf_draw_one_block( &$queue, $pdf, $font_regular, $font
                     'is_first_in_block' => false,
                     'body_top' => round( $seg_top + $plan['header_h'] + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
                     'overflow' => ! empty( $result['overflow_body'] ),
+                    'body_h_actual' => $result['body_h'] ?? 0.0,
+                    'body_used_width' => $result['body_used_width'] ?? 0.0,
                     'backfill' => true,
                     'cross_tier' => ( $plan['tier'] !== $block_tier ),
                 );
@@ -2346,9 +2394,23 @@ function hatakiti_occult_pdf_create_initial_available_space( $zone_x, $zone_y, $
 }
 
 /**
- * Row（hatakiti_occult_pdf_draw_one_block()のdebug配列）から、各列が
- * 実際に完結した位置（col_bottom）とRow全体のblock_bottomの差が
- * 通常の行間ギャップを明確に超える列を、空き矩形として抽出する。
+ * Row（hatakiti_occult_pdf_draw_one_block()のdebug配列）から、実際に
+ * 描画された占有矩形（occupied_rects）を差し引いた残りを空き矩形と
+ * して抽出する（実描画占有矩形ベースAvailable Spaces指示書§1・§6〜
+ * §8）。2種類の空き矩形を検出する：
+ *
+ * ①列の高さ差（既存）：各列が実際に完結した位置（col_bottom）と
+ *   Row全体のblock_bottomの差が通常の行間ギャップを明確に超える分。
+ *
+ * ②セグメント内の幅の余り（新規）：本文は縦書きの列0（右端）から
+ *   左へ埋まるため、割り当てられた列幅よりも実際に使った本文幅
+ *   （body_used_width、hatakiti_occult_pdf_draw_article_box()が返す
+ *   実測値）が狭い場合、見出し帯の直下から本文終端までの高さぶん、
+ *   左側に「記事ブロックの外接矩形だけを見ていては検出できない」
+ *   空き矩形が残る（post_id=662 3ページ目「水浴びする謎の人影」の
+ *   ような、見出しは全幅・本文は右側の狭い列しか使わないケース）。
+ *   これが今回の指示書が重点的に検出対象とするケース。
+ *
  * tierは列の最初のセグメントのtier文字列から "(colN-M)" 表記を除いた
  * ものを記録し、後続の同tier限定マッチングに使う（バックフィルと
  * 同じ方針、既存tierルールを破らないため）。
@@ -2358,19 +2420,35 @@ function hatakiti_occult_pdf_row_leftover_spaces( $debug_rows, $row_bottom ) {
     $col_x      = array();
     $col_w      = array();
     $col_tier   = array();
+    $spaces     = array();
     foreach ( $debug_rows as $r ) {
         if ( ! isset( $r['col'], $r['y'], $r['h'], $r['w'], $r['x'] ) ) {
             continue;
         }
         $bottom = $r['y'] + $r['h'];
+        $tier   = preg_replace( '/\(col\d+-\d+\)$/', '', (string) ( $r['tier'] ?? '' ) );
         if ( ! isset( $col_bottom[ $r['col'] ] ) || $bottom > $col_bottom[ $r['col'] ] ) {
             $col_bottom[ $r['col'] ] = $bottom;
             $col_x[ $r['col'] ]      = $r['x'];
             $col_w[ $r['col'] ]      = $r['w'];
-            $col_tier[ $r['col'] ]   = preg_replace( '/\(col\d+-\d+\)$/', '', (string) ( $r['tier'] ?? '' ) );
+            $col_tier[ $r['col'] ]   = $tier;
+        }
+
+        // ②セグメント内の幅の余り。本文が右詰めで使った幅
+        // （body_used_width）が割り当て幅（w）より明確に狭い場合のみ。
+        if ( isset( $r['body_used_width'], $r['body_top'], $r['body_h_actual'] )
+            && $r['body_h_actual'] > 1.0
+            && ( $r['w'] - $r['body_used_width'] ) > 1.0
+        ) {
+            $spaces[] = array(
+                'x'      => $r['x'], // 本文は右詰め＝空きは左側。
+                'y'      => $r['body_top'],
+                'width'  => $r['w'] - $r['body_used_width'],
+                'height' => $r['body_h_actual'],
+                'tier'   => $tier,
+            );
         }
     }
-    $spaces = array();
     foreach ( $col_bottom as $col_no => $bottom ) {
         $h = $row_bottom - $bottom;
         if ( $h > 1.0 ) {
@@ -2682,9 +2760,20 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
                 if ( 'large' === $cand_tier ) {
                     continue; // §1-4相当：large tierは空き矩形へ配置しない。
                 }
+                // Space Fillはバックフィルとは別の仕組み — 既に「他の
+                // 記事の本文が使わなかった余り幅」であり、埋めなければ
+                // そのまま無駄になる領域を対象にするため、バックフィル
+                // で確認された「medium列がsmallを先食いして後のページが
+                // 悪化する」リスク（HATAKITI_OCCULT_PDF_ALLOW_CROSS_TIER_
+                // BACKFILLのコメント参照）は当てはまらない。仮に先食い
+                // が起きても、採用前に必ずhatakiti_occult_pdf_should_
+                // adopt_page_plan()のPriority1（総ページ数悪化チェック）
+                // を通るため、同tier優先→隣接tier
+                // （hatakiti_occult_pdf_fallback_tier()、medium⇄small）
+                // の順で候補化してよい。
                 $space_tier = $space['tier'] ?? '';
-                if ( '' !== $space_tier && $cand_tier !== $space_tier ) {
-                    continue; // バックフィルと同じ方針：同tierのみ対象。
+                if ( '' !== $space_tier && $cand_tier !== $space_tier && $cand_tier !== hatakiti_occult_pdf_space_fill_fallback_tier( $space_tier ) ) {
+                    continue;
                 }
                 $est = hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $queue[ $j ], $cand_tier, $space );
                 if ( ! $est['fits'] ) {
@@ -2958,22 +3047,30 @@ function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
     if ( $a['remaining_height'] > $b['remaining_height'] + 0.5 ) {
         return false;
     }
-    if ( $a['largest_empty_rect_area'] < $b['largest_empty_rect_area'] - 0.5 ) {
+    // 面積系の指標（mm²）は長さ系（mm）よりケタが大きいため、同じ
+    // ±0.5の許容誤差では「数百mm²程度のノイズレベルの差」だけで決着
+    // してしまい、より優先度の低い指標（段組み切替回数など）が一切
+    // 考慮されなくなる（実データpost=662 3ページ目で、262.7mm²の差
+    // だけで段組み切替が少ない候補が不採用になる問題を実際に確認した
+    // ため修正）。HATAKITI_OCCULT_PDF_PAGE_SEARCH_AREA_TIE_TOLERANCE_MM2
+    // 未満の差は「同等」とみなし、次の優先順位へ進める。
+    $area_tol = HATAKITI_OCCULT_PDF_PAGE_SEARCH_AREA_TIE_TOLERANCE_MM2;
+    if ( $a['largest_empty_rect_area'] < $b['largest_empty_rect_area'] - $area_tol ) {
         return true;
     }
-    if ( $a['largest_empty_rect_area'] > $b['largest_empty_rect_area'] + 0.5 ) {
+    if ( $a['largest_empty_rect_area'] > $b['largest_empty_rect_area'] + $area_tol ) {
         return false;
     }
-    if ( $a['usable_empty_area'] < $b['usable_empty_area'] - 0.5 ) {
+    if ( $a['usable_empty_area'] < $b['usable_empty_area'] - $area_tol ) {
         return true;
     }
-    if ( $a['usable_empty_area'] > $b['usable_empty_area'] + 0.5 ) {
+    if ( $a['usable_empty_area'] > $b['usable_empty_area'] + $area_tol ) {
         return false;
     }
-    if ( $a['total_blank_area'] < $b['total_blank_area'] - 0.5 ) {
+    if ( $a['total_blank_area'] < $b['total_blank_area'] - $area_tol ) {
         return true;
     }
-    if ( $a['total_blank_area'] > $b['total_blank_area'] + 0.5 ) {
+    if ( $a['total_blank_area'] > $b['total_blank_area'] + $area_tol ) {
         return false;
     }
     if ( $a['layout_switch_count'] < $b['layout_switch_count'] ) {
