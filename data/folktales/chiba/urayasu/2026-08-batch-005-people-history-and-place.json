@@ -520,6 +520,153 @@
           "url": "https://tesshow.jp/chiba/urayas/temple_todai_zenpk.html"
         }
       ]
+    },
+    {
+      "record_id": "chiba-urayasu-seiryujinja-fujizuka",
+      "title": "清瀧神社の富士塚",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "清瀧神社"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "富士信仰",
+        "擬似巡礼"
+      ],
+      "cross_tags": [
+        "富士塚",
+        "富士信仰",
+        "清瀧神社",
+        "登拝",
+        "堀江"
+      ],
+      "research_status": "deep_researched",
+      "summary": "清瀧神社境内の富士塚は富士山を模して築かれた塚で、登ることで実際に富士山へ登ったのと同じご利益が得られると信じられた。浦安の漁村に、遠隔地の霊山を身近な場所で体験する信仰が根付いていたことを示す。",
+      "research_notes": "清瀧神社公式と浦安市文化財資料で富士塚の存在と信仰内容を確認。",
+      "sources": [
+        {
+          "title": "境内地について",
+          "publisher": "清瀧神社 公式サイト",
+          "url": "https://seiryuujinja.com/history/keidaini_tuite/"
+        },
+        {
+          "title": "浦安市郷土博物館年報第22号",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/038/107/r4nenpou.pdf"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-seiryujinja-ryujin",
+      "title": "清瀧神社の竜神社と龍宮信仰",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "清瀧神社"
+      ],
+      "story_type": [
+        "神社由緒",
+        "龍神信仰",
+        "海の信仰"
+      ],
+      "cross_tags": [
+        "竜神",
+        "龍",
+        "龍宮",
+        "浦島太郎",
+        "海神",
+        "清瀧神社"
+      ],
+      "research_status": "deep_researched",
+      "summary": "海神を祀る清瀧神社には竜神社があり、本殿には龍・浦島太郎・龍宮城など海の異界を表す彫刻が配されている。海の神を祀る鎮守の中で、龍神と龍宮のイメージが地域の海上安全・漁村信仰と結び付いている。",
+      "research_notes": "既存の清瀧神社海神信仰を、竜神社・龍宮図像の系統として独立整理。",
+      "sources": [
+        {
+          "title": "清瀧神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1959/"
+        },
+        {
+          "title": "境内地について",
+          "publisher": "清瀧神社 公式サイト",
+          "url": "https://seiryuujinja.com/history/keidaini_tuite/"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-seiryu-benzaiten-white-snake",
+      "title": "清滝弁財天の白蛇の命",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "清滝弁財天"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "蛇神伝承",
+        "霊験譚"
+      ],
+      "cross_tags": [
+        "弁財天",
+        "白蛇",
+        "蛇神",
+        "嵐",
+        "海辺信仰",
+        "堀江"
+      ],
+      "research_status": "source_confirmed",
+      "summary": "正式名を生身蛇形弁財天といい、明治44年（1911）に白蛇の命によって建立されたと伝えられる。幾度もの嵐にも耐えたことから霊験があると評判になり、遠方からも参詣者を集めたという。",
+      "research_notes": "浦安市郷土博物館年報で史跡所在地を確認し、地域文化紹介資料で白蛇の命・嵐への霊験・参詣伝承を確認。一次資料の直接確認が今後の課題のため source_confirmed。",
+      "sources": [
+        {
+          "title": "浦安市郷土博物館年報第22号",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/038/107/r4nenpou.pdf"
+        },
+        {
+          "title": "浦安市内の神社やお寺、弁財天や庚申塔",
+          "publisher": "浦安地域文化紹介",
+          "url": "https://urayasu-sanpo.com/03/culture08temple.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-hanakura-smallpox-prayer",
+      "title": "花蔵院の疱瘡・はしか祈願",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "花蔵院"
+      ],
+      "story_type": [
+        "信仰伝承",
+        "病気除け",
+        "まじない"
+      ],
+      "cross_tags": [
+        "疱瘡",
+        "はしか",
+        "病気除け",
+        "花蔵院",
+        "さんだわら",
+        "赤い幣束"
+      ],
+      "research_status": "deep_researched",
+      "summary": "浦安では疱瘡やはしかにかかった子どもの回復を願い、中央を突起させた「さんだわら」に赤い幣束を立て、供物を添えて花蔵院境内の小祠へ祈願したと伝えられる。疱瘡には赤飯と生臭いもの、はしかにはそばを供えるという具体的な民間療法・まじないの形式が残る。",
+      "research_notes": "浦安市郷土博物館の収蔵品解説が『浦安町誌』の「ほうそうとはしかの呪い」を紹介しており、具体的な祈願方法まで確認できる。",
+      "sources": [
+        {
+          "title": "さんだわら",
+          "publisher": "浦安市郷土博物館 収蔵品データベース",
+          "url": "https://jmapps.ne.jp/urayasufkm/det.html?data_id=2331"
+        },
+        {
+          "title": "花蔵院",
+          "publisher": "浦安地域寺社資料紹介",
+          "url": "https://tesshow.jp/chiba/urayas/temple_neko_kezo.html"
+        }
+      ]
     }
   ],
   "source_url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
