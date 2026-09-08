@@ -39,7 +39,7 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '36' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '37' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -847,6 +847,28 @@ define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_RECT_IMPROVEMENT_MM2', 500.0 );
  * 採用した。
  */
 define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_IMBALANCE_REGRESSION_MM', 40.0 );
+
+/**
+ * PagePlan探索仕様（Row/Space Fill並列探索）§14-4：累積order_jump
+ * （空き矩形への記事先取りによるキュー飛び越し量の合計）がこの値を
+ * 超える候補は枝刈りする。LOOKAHEAD_WINDOW×2を初期値とする。
+ */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_ORDER_JUMP_LIMIT', HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW * 2 );
+
+/**
+ * 同仕様§14-5：Space Fillが連続して発生してよい最大回数
+ * （間にRow追加を挟まずに空き矩形へ配置し続けられる回数の上限）。
+ * 紙面が不自然になるのを防ぐ安全弁。
+ */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CONSECUTIVE_SPACE_FILLS', 3 );
+
+/**
+ * 同仕様§19-3：Space Fillによって実際に埋まる面積（＝記事の高さ×
+ * スペース幅）がこの値未満の場合、候補として生成しない
+ * （「巨大空白に記事を置いた結果、実質数mm²しか改善しない」ような
+ * 無意味な詰め込みを避ける）。
+ */
+define( 'HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_SPACE_FILL_IMPROVEMENT_MM2', 200.0 );
 
 /**
  * ページ充填アルゴリズム改善指示書（4分割・複数ブロック組合せ対応）
@@ -2615,7 +2637,7 @@ $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = false;
  *         'final_y'=>mm, 'remaining_queue'=>array, 'order_jump'=>int)。
  * @param int      &$candidate_count 生成済み候補数（参照、上限管理用）。
  */
-function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $depth ) {
+function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth ) {
     if ( ! empty( $rows_so_far ) || ! empty( $placements_so_far ) ) {
         $candidates[] = array(
             'rows'             => $rows_so_far,
@@ -2634,26 +2656,27 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         return;
     }
 
-    // 分岐A（空き矩形拡張指示書§8）：既存の空き矩形のうち最大の1件へ、
+    // 分岐A（PagePlan探索仕様§6〜§8）：既存の空き矩形すべてを対象に、
     // 後続記事（LOOKAHEAD_WINDOW以内・同tier・large tier以外）を試す。
+    // §14-4（order_jump上限）・§14-5（連続Space Fill回数上限）・
+    // §19-3（最低改善面積）の安全弁を先に確認してから候補化する。
     // Rowの積み上げとは独立した操作のため、$yは変更しない。
-    if ( ! empty( $available_spaces ) && ! empty( $queue ) ) {
-        $best_idx = null;
-        $best_area = 0.0;
-        foreach ( $available_spaces as $i => $sp ) {
-            $area = $sp['width'] * $sp['height'];
-            if ( $area > $best_area ) {
-                $best_area = $area;
-                $best_idx  = $i;
+    if ( ! empty( $available_spaces ) && ! empty( $queue )
+        && $order_jump_so_far < HATAKITI_OCCULT_PDF_PAGE_SEARCH_ORDER_JUMP_LIMIT
+        && $consecutive_space_fills < HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CONSECUTIVE_SPACE_FILLS
+    ) {
+        $limit = min( count( $queue ), HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW );
+        foreach ( $available_spaces as $space_idx => $space ) {
+            if ( $candidate_count >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES ) {
+                return;
             }
-        }
-        if ( null !== $best_idx ) {
-            $space = $available_spaces[ $best_idx ];
-            $limit = min( count( $queue ), HATAKITI_OCCULT_PDF_LOOKAHEAD_WINDOW );
             $tried = 0;
-            for ( $j = 0; $j < $limit && $tried < 3 && $candidate_count < HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES; $j++ ) {
+            for ( $j = 0; $j < $limit && $tried < 3; $j++ ) {
                 if ( ! isset( $queue[ $j ] ) || isset( $queue[ $j ]['_pinned_col_w'] ) ) {
                     continue;
+                }
+                if ( $order_jump_so_far + $j > HATAKITI_OCCULT_PDF_PAGE_SEARCH_ORDER_JUMP_LIMIT ) {
+                    continue; // §14-4：累積order_jump上限。
                 }
                 $cand_tier = $queue[ $j ]['_tier'];
                 if ( 'large' === $cand_tier ) {
@@ -2667,6 +2690,9 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
                 if ( ! $est['fits'] ) {
                     continue;
                 }
+                if ( ( $est['article_height'] * $space['width'] ) < HATAKITI_OCCULT_PDF_PAGE_SEARCH_MIN_SPACE_FILL_IMPROVEMENT_MM2 ) {
+                    continue; // §19-3：改善面積が小さすぎる詰め込みは候補化しない。
+                }
                 $tried++;
 
                 $new_queue      = $queue;
@@ -2674,7 +2700,7 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
                 array_splice( $new_queue, $j, 1 );
 
                 $new_spaces = $available_spaces;
-                array_splice( $new_spaces, $best_idx, 1 );
+                array_splice( $new_spaces, $space_idx, 1 );
                 $leftover   = hatakiti_occult_pdf_split_available_space( $space, $est['article_height'] );
                 $new_spaces = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $new_spaces, $leftover ) );
 
@@ -2689,7 +2715,10 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
                     'order_jump' => $j,
                 );
 
-                hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $new_queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $new_spaces, $new_placements, $order_jump_so_far + $j, $depth + 1 );
+                hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $new_queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $new_spaces, $new_placements, $order_jump_so_far + $j, $consecutive_space_fills + 1, $depth + 1 );
+                if ( $candidate_count >= HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES ) {
+                    return;
+                }
             }
         }
     }
@@ -2704,7 +2733,8 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         return; // §1-3：続き記事はページ単位探索の対象外。
     }
 
-    // 分岐B：従来のRow追加。
+    // 分岐B：従来のRow追加。Rowを追加したら連続Space Fill回数は
+    // リセットする（間にRowを挟むため、§14-5の「連続」に該当しない）。
     $tier = $queue[0]['_tier'];
     if ( 'large' === $tier ) {
         // §1-4：large記事の列構成は変更しない。自然決定（常に全幅）の
@@ -2720,7 +2750,7 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         $new_rows[]    = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => array( $zone_w ), 'debug' => $result['debug'] );
         $row_leftovers = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
         $new_spaces    = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
-        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, $depth + 1 );
+        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, 0, $depth + 1 );
         return;
     }
 
@@ -2740,7 +2770,7 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         $new_rows[]    = array( 'top' => $y, 'bottom' => $result['block_bottom'], 'col_w_arr' => $col_w_arr, 'debug' => $result['debug'] );
         $row_leftovers = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
         $new_spaces    = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
-        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, $depth + 1 );
+        hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, 0, $depth + 1 );
     }
 }
 
@@ -2787,7 +2817,7 @@ function hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular,
  * 評価し、評価指標一式を返す。個別Rowではなくページ全体（全Row合算）
  * を評価する（§3-3）。
  */
-function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) {
+function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $pdf = null, $font_bold = null ) {
     $rows       = $plan['rows'];
     $placements = $plan['placements'] ?? array();
     if ( empty( $rows ) && empty( $placements ) ) {
@@ -2797,6 +2827,7 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) 
             'remaining_height'        => max( 0, $page_bottom - $plan['final_y'] ),
             'largest_empty_rect_area' => 0.0,
             'total_blank_area'        => 0.0,
+            'usable_empty_area'       => 0.0,
             'layout_switch_count'     => 0,
             'row_count'               => 0,
             'column_imbalance_score'  => 0.0,
@@ -2860,12 +2891,43 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom ) 
     $total_blank_area += $trailing_area;
     $largest_rect_area = max( $largest_rect_area, $trailing_area );
 
+    // §15-6：usable_empty_area — remaining_queueのLOOKAHEAD_WINDOW内に
+    // 少なくとも1記事を完全収容できる空白矩形の合計面積。診断専用の
+    // 補助指標（採用可否の直接条件にはしない、§16）。コストを抑える
+    // ため、各矩形につき先頭3件までのみ確認する。
+    $usable_empty_area = 0.0;
+    if ( null !== $pdf && null !== $font_bold && ! empty( $available_spaces ) && ! empty( $plan['remaining_queue'] ) ) {
+        $remaining_queue = $plan['remaining_queue'];
+        $check_limit     = min( count( $remaining_queue ), 3 );
+        foreach ( $available_spaces as $sp ) {
+            for ( $k = 0; $k < $check_limit; $k++ ) {
+                if ( isset( $remaining_queue[ $k ]['_pinned_col_w'] ) ) {
+                    continue;
+                }
+                $cand_tier = $remaining_queue[ $k ]['_tier'];
+                if ( 'large' === $cand_tier ) {
+                    continue;
+                }
+                $sp_tier = $sp['tier'] ?? '';
+                if ( '' !== $sp_tier && $cand_tier !== $sp_tier ) {
+                    continue;
+                }
+                $est = hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $remaining_queue[ $k ], $cand_tier, $sp );
+                if ( $est['fits'] ) {
+                    $usable_empty_area += $sp['width'] * $sp['height'];
+                    break;
+                }
+            }
+        }
+    }
+
     return array(
         'valid'                   => true,
         'article_count'           => count( $article_ids ),
         'remaining_height'        => round( $remaining_height, 1 ),
         'largest_empty_rect_area' => round( $largest_rect_area, 1 ),
         'total_blank_area'        => round( $total_blank_area, 1 ),
+        'usable_empty_area'       => round( $usable_empty_area, 1 ),
         'layout_switch_count'     => $switch_count,
         'row_count'               => count( $rows ),
         'column_imbalance_score'  => round( $imbalance_total, 1 ),
@@ -2883,10 +2945,29 @@ function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
     if ( null === $b ) {
         return true;
     }
+    // PagePlan探索仕様§16の優先順位（辞書式比較）。記事数について、
+    // 記事サイズ差による不公平を避けるため「配置済み記事数が同じ場合
+    // のみ以降を比較する」（§16後段）—つまり記事数が異なる場合は
+    // 記事数の多寡のみで決める。
+    if ( $a['article_count'] !== $b['article_count'] ) {
+        return $a['article_count'] > $b['article_count'];
+    }
+    if ( $a['remaining_height'] < $b['remaining_height'] - 0.5 ) {
+        return true;
+    }
+    if ( $a['remaining_height'] > $b['remaining_height'] + 0.5 ) {
+        return false;
+    }
     if ( $a['largest_empty_rect_area'] < $b['largest_empty_rect_area'] - 0.5 ) {
         return true;
     }
     if ( $a['largest_empty_rect_area'] > $b['largest_empty_rect_area'] + 0.5 ) {
+        return false;
+    }
+    if ( $a['usable_empty_area'] < $b['usable_empty_area'] - 0.5 ) {
+        return true;
+    }
+    if ( $a['usable_empty_area'] > $b['usable_empty_area'] + 0.5 ) {
         return false;
     }
     if ( $a['total_blank_area'] < $b['total_blank_area'] - 0.5 ) {
@@ -2901,21 +2982,13 @@ function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
     if ( $a['layout_switch_count'] > $b['layout_switch_count'] ) {
         return false;
     }
-    if ( $a['column_imbalance_score'] < $b['column_imbalance_score'] - 0.5 ) {
-        return true;
-    }
-    if ( $a['column_imbalance_score'] > $b['column_imbalance_score'] + 0.5 ) {
-        return false;
-    }
-    // 空き矩形拡張指示書§6/§10 優先順位7：他が同等ならorder_jump
-    // （記事順序の飛び越し量）が小さい方を優先する。
     if ( $a['order_jump'] < $b['order_jump'] ) {
         return true;
     }
     if ( $a['order_jump'] > $b['order_jump'] ) {
         return false;
     }
-    return $a['article_count'] > $b['article_count'];
+    return $a['column_imbalance_score'] < $b['column_imbalance_score'];
 }
 
 /**
@@ -3027,16 +3100,16 @@ function hatakiti_occult_pdf_search_page_plan( $queue, $pdf, $font_regular, $fon
     }
 
     $baseline         = hatakiti_occult_pdf_dry_run_baseline_plan( $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base );
-    $baseline_metrics = hatakiti_occult_pdf_evaluate_page_plan( $baseline, $zone_w, $page_bottom );
+    $baseline_metrics = hatakiti_occult_pdf_evaluate_page_plan( $baseline, $zone_w, $page_bottom, $pdf, $font_bold );
 
     $candidates       = array();
     $candidate_count  = 0;
-    hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base, array(), array(), array(), 0, 0 );
+    hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $start_y, $page_bottom, $page_no, $block_index_base, array(), array(), array(), 0, 0, 0 );
 
     $best         = null;
     $best_metrics = null;
     foreach ( $candidates as $cand ) {
-        $metrics = hatakiti_occult_pdf_evaluate_page_plan( $cand, $zone_w, $page_bottom );
+        $metrics = hatakiti_occult_pdf_evaluate_page_plan( $cand, $zone_w, $page_bottom, $pdf, $font_bold );
         if ( hatakiti_occult_pdf_compare_page_plans( $metrics, $best_metrics ) ) {
             $best         = $cand;
             $best_metrics = $metrics;
@@ -3061,6 +3134,10 @@ function hatakiti_occult_pdf_search_page_plan( $queue, $pdf, $font_regular, $fon
     $debug_entry['adopted']                = $decision['adopt'];
     $debug_entry['reject_reason']          = $decision['adopt'] ? null : $decision['reason'];
     $debug_entry['placement_count']        = count( $best['placements'] ?? array() );
+    $debug_entry['space_fill_article_ids'] = array();
+    foreach ( $best['placements'] ?? array() as $p ) {
+        $debug_entry['space_fill_article_ids'][] = $p['article_id'];
+    }
     if ( isset( $decision['baseline_more_pages'] ) ) {
         $debug_entry['baseline_more_pages']  = $decision['baseline_more_pages'];
         $debug_entry['candidate_more_pages'] = $decision['candidate_more_pages'];
