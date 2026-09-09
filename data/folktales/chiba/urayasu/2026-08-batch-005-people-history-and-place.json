@@ -1131,6 +1131,138 @@
           "url": "https://www.city.urayasu.lg.jp/shisei/profile/profile/1000025.html"
         }
       ]
+    },
+    {
+      "record_id": "chiba-urayasu-nekozane-koshinto",
+      "title": "猫実の庚申塔と三尸の虫",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "庚申通り"
+      ],
+      "story_type": [
+        "民間信仰",
+        "石仏信仰",
+        "境界信仰"
+      ],
+      "cross_tags": [
+        "庚申塔",
+        "青面金剛",
+        "三猿",
+        "三尸",
+        "庚申講",
+        "庚申通り"
+      ],
+      "research_status": "deep_researched",
+      "summary": "猫実の庚申塔は正徳5年（1715）、猫実村の庚申講の信者によって建立された浦安市指定有形文化財で、市内最古の青面金剛像を刻む庚申塔とされる。邪鬼を踏みつける青面金剛、見ざる・聞かざる・言わざるの三猿、鶏などが刻まれ、庚申の夜に体内の三尸の虫が抜け出して人の罪を天に告げるという信仰と結び付く。",
+      "research_notes": "浦安市公式文化財一覧で指定を確認。説明板内容を紹介する複数資料で建立者、年代、図像、三尸説を確認。",
+      "sources": [
+        {
+          "title": "県・市指定文化財",
+          "publisher": "浦安市",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001477.html"
+        },
+        {
+          "title": "浦安クイズ：庚申通り入口にある庚申塔",
+          "publisher": "浦安に住みたい！",
+          "url": "https://sumitai.ne.jp/urayasu/2017-06-26/45293.html"
+        },
+        {
+          "title": "猫実の庚申塔 石仏調査アーカイブ",
+          "publisher": "みんなで石仏調査アーカイブ",
+          "url": "https://archives.sekibutsu.info/33427.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-todaijima-jihi-jizo",
+      "title": "当代島・大川端の慈悲地蔵尊",
+      "municipality": "浦安市",
+      "locations": [
+        "当代島",
+        "大川端",
+        "旧江戸川"
+      ],
+      "story_type": [
+        "地蔵伝承",
+        "水難供養",
+        "漂着霊供養"
+      ],
+      "cross_tags": [
+        "慈悲地蔵尊",
+        "大川端",
+        "旧江戸川",
+        "洪水",
+        "漂着",
+        "無縁仏",
+        "水難"
+      ],
+      "research_status": "deep_researched",
+      "summary": "当代島字大川端は、江戸川の洪水で土砂が堆積して陸地になったと伝えられる場所で、その長い過程には川を流れてきた人や動物の仏体が数多く漂着し、地中に埋もれたと伝えられる。また地域内でも災難や事故の死者があったため、有縁無縁の霊魂の成仏と地域住民の無事を願い、昭和48年（1973）に慈悲地蔵尊が建立された。",
+      "research_notes": "現地由来碑の全文を紹介する地域史資料と複数の地域記事で確認。千葉県立図書館の浦安民話一覧には『大川端のお地蔵さん』『慈悲地蔵の御利益』が収録され、同地の地蔵伝承が書籍化されていることも確認。",
+      "sources": [
+        {
+          "title": "旧江戸川当代島水門～慈悲地蔵尊～船圦緑道",
+          "publisher": "地域史ブログ（現地由来碑引用）",
+          "url": "https://massneko.hatenablog.com/entry/2015/08/07/000000"
+        },
+        {
+          "title": "浦安小さな旅（5）当代島",
+          "publisher": "市民の新聞 うらやす情報",
+          "url": "https://urayasu-joho.net/archives/entry-14165"
+        },
+        {
+          "title": "千葉県の民話 浦安市",
+          "publisher": "千葉県立図書館",
+          "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-boundary-faith-network",
+      "title": "浦安の境界に立つ信仰対象",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "庚申通り",
+        "当代島",
+        "大川端",
+        "堀江",
+        "清瀧神社"
+      ],
+      "story_type": [
+        "境界信仰",
+        "地域信仰",
+        "石仏"
+      ],
+      "cross_tags": [
+        "庚申塔",
+        "地蔵",
+        "道祖神",
+        "辻",
+        "川",
+        "村境"
+      ],
+      "research_status": "deep_researched",
+      "summary": "浦安には村の鎮守だけでなく、道や辻、川辺に小さな信仰対象が置かれてきた。猫実では庚申塔が庚申通りの名を残し、当代島の大川端では漂着した死者を供養する地蔵が祀られ、堀江の清瀧神社境内には道祖神もある。大きな神社が村全体を守る一方、石仏や小祠は人が行き交う境目や災害の起きやすい場所に記憶と祈りを残す役割を担っている。",
+      "research_notes": "浦安観光公式で清瀧神社境内の道祖神を確認。猫実庚申塔と当代島慈悲地蔵尊の位置・伝承を個別資料で確認。一般的な道祖神論を浦安固有の事実としては扱わず、確認できる配置と地域記憶の構造に限定。",
+      "sources": [
+        {
+          "title": "清瀧神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1959/"
+        },
+        {
+          "title": "浦安クイズ：庚申通り入口にある庚申塔",
+          "publisher": "浦安に住みたい！",
+          "url": "https://sumitai.ne.jp/urayasu/2017-06-26/45293.html"
+        },
+        {
+          "title": "浦安小さな旅（5）当代島",
+          "publisher": "市民の新聞 うらやす情報",
+          "url": "https://urayasu-joho.net/archives/entry-14165"
+        }
+      ]
     }
   ],
   "source_url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
