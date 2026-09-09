@@ -930,8 +930,209 @@
           "url": "https://urayasu-toyoukejinja.com/free/profile"
         }
       ]
+    },
+    {
+      "record_id": "chiba-urayasu-toyoke-shrine-protective-deities",
+      "title": "豊受神社の末社群と生活を守る神々",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "豊受神社"
+      ],
+      "story_type": [
+        "地域信仰",
+        "末社信仰",
+        "生活信仰"
+      ],
+      "cross_tags": [
+        "風の神",
+        "津島神社",
+        "金毘羅",
+        "秋葉",
+        "稲荷",
+        "三峰神社",
+        "浅間神社",
+        "豊受神社"
+      ],
+      "research_status": "deep_researched",
+      "summary": "豊受神社境内には三峰神社、浅間神社、風の神と津島神社を祀る祠、金毘羅大権現、秋葉大権現、稲荷大権現などが集められている。衣食住を守る豊受姫大神を中心に、海上安全、火難除け、疫病や災厄除け、五穀豊穣など生活上の危険や願いを複数の神仏に託す、浦安の複合的な地域信仰を示す。",
+      "research_notes": "豊受神社公式で末社群を確認。個別神格と一般的信仰領域については地域資料も参照したが、浦安固有の個別由来が確認できないものは本件では『生活を守る信仰の集合』として整理。",
+      "sources": [
+        {
+          "title": "神社の由緒",
+          "publisher": "豊受神社 公式サイト",
+          "url": "https://urayasu-toyoukejinja.com/free/profile"
+        },
+        {
+          "title": "豊受神社の摂末社紹介",
+          "publisher": "JREメディア",
+          "url": "https://media.jreast.co.jp/articles/1271"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-toyoke-wind-tsushima-faith",
+      "title": "豊受神社の風の神と津島神社",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "豊受神社"
+      ],
+      "story_type": [
+        "地域信仰",
+        "風害除け",
+        "疫病除け"
+      ],
+      "cross_tags": [
+        "風の神",
+        "津島神社",
+        "須佐之男",
+        "風水害",
+        "災厄除け",
+        "猫実"
+      ],
+      "research_status": "source_confirmed",
+      "summary": "豊受神社には風の神と津島神社を合わせて祀る祠がある。海辺で風水害を繰り返し経験してきた浦安において、風に関わる神と災厄除けの神を境内に祀る構成は、自然災害や疫病など複数の不安に対応する地域信仰の一端を示す。",
+      "research_notes": "豊受神社公式で祠の存在を確認。津島神社の祭神・一般的信仰内容は補助資料で確認したが、浦安での個別勧請由来は未確認のため source_confirmed。",
+      "sources": [
+        {
+          "title": "神社の由緒",
+          "publisher": "豊受神社 公式サイト",
+          "url": "https://urayasu-toyoukejinja.com/free/profile"
+        },
+        {
+          "title": "豊受神社の境内末社紹介",
+          "publisher": "地域神社資料",
+          "url": "https://yashirocollection.com/urayasutoyokejinja20250130/"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-toyoke-konpira-akiba-inari",
+      "title": "豊受神社の金毘羅・秋葉・稲荷信仰",
+      "municipality": "浦安市",
+      "locations": [
+        "猫実",
+        "豊受神社"
+      ],
+      "story_type": [
+        "地域信仰",
+        "海上安全",
+        "火難除け",
+        "五穀信仰"
+      ],
+      "cross_tags": [
+        "金毘羅",
+        "航海安全",
+        "漁業",
+        "秋葉",
+        "火防",
+        "稲荷",
+        "五穀豊穣"
+      ],
+      "research_status": "deep_researched",
+      "summary": "豊受神社の境内には金毘羅大権現、秋葉大権現、稲荷大権現の石祠が並ぶ。漁師町浦安にとって金毘羅は海上・航海の安全、秋葉は火難除け、稲荷は五穀や生業への願いを担う信仰として位置づけられ、海と火という生活上の危険、食と生業への祈りが同じ境内に集約されている。",
+      "research_notes": "豊受神社公式で石祠群を確認。個別の浦安勧請由来は未確認のため、浦安の漁村・生活環境と公式に確認できる信仰対象の組み合わせを中心に整理。",
+      "sources": [
+        {
+          "title": "神社の由緒",
+          "publisher": "豊受神社 公式サイト",
+          "url": "https://urayasu-toyoukejinja.com/free/profile"
+        },
+        {
+          "title": "豊受神社の境内末社紹介",
+          "publisher": "地域神社資料",
+          "url": "https://yashirocollection.com/urayasutoyokejinja20250130/"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-three-shrine-festival-faith",
+      "title": "浦安三社祭と三村の鎮守信仰",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "猫実",
+        "当代島",
+        "清瀧神社",
+        "豊受神社",
+        "稲荷神社"
+      ],
+      "story_type": [
+        "祭礼伝承",
+        "鎮守信仰",
+        "地域共同体"
+      ],
+      "cross_tags": [
+        "浦安三社祭",
+        "神輿",
+        "御魂入れ",
+        "堀江",
+        "猫実",
+        "当代島",
+        "鎮守"
+      ],
+      "research_status": "deep_researched",
+      "summary": "浦安三社祭は、堀江の清瀧神社、猫実の豊受神社、当代島の稲荷神社という旧三村それぞれの鎮守を合同で祭る大祭である。各地ではもともと秋に別々の祭礼が行われ、清瀧神社・豊受神社では神楽、稲荷神社では豊年祭りが行われていた。大正時代末には神輿を中心に三社合同の大祭へ変化し、現在の浦安三社例大祭につながっている。",
+      "research_notes": "浦安市公式と各神社・浦安観光公式資料で、三村の鎮守、旧来の祭礼内容、合同大祭への変化を確認。",
+      "sources": [
+        {
+          "title": "浦安三社祭",
+          "publisher": "浦安市 公式サイト",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/profile/1000025.html"
+        },
+        {
+          "title": "清瀧神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1959/"
+        },
+        {
+          "title": "稲荷神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1992/"
+        }
+      ]
+    },
+    {
+      "record_id": "chiba-urayasu-mikoshi-mitama-ire",
+      "title": "神輿に神を迎える御魂入れ",
+      "municipality": "浦安市",
+      "locations": [
+        "堀江",
+        "猫実",
+        "当代島",
+        "清瀧神社",
+        "豊受神社",
+        "稲荷神社"
+      ],
+      "story_type": [
+        "祭礼信仰",
+        "神霊伝承"
+      ],
+      "cross_tags": [
+        "御魂入れ",
+        "神輿",
+        "神様の魂",
+        "宵宮",
+        "浦安三社祭"
+      ],
+      "research_status": "deep_researched",
+      "summary": "浦安三社祭の宵宮には各神社で御魂入れが行われ、神職が神輿一基ごとに祈りを行い、御札を入れる。浦安では『御札は神様の魂。これを入れて初めて神輿が神様になる』と伝えられており、単なる乗り物だった神輿が祭礼の間だけ神の依り代へ変わるという具体的な神霊観が残されている。",
+      "research_notes": "清瀧神社を紹介する浦安観光公式の説明で、御魂入れの手順と伝承文言を確認。",
+      "sources": [
+        {
+          "title": "清瀧神社",
+          "publisher": "浦安観光 公式サイト",
+          "url": "https://www.urayasu-kankou.jp/index/1959/"
+        },
+        {
+          "title": "浦安三社祭",
+          "publisher": "浦安市 公式サイト",
+          "url": "https://www.city.urayasu.lg.jp/shisei/profile/profile/1000025.html"
+        }
+      ]
     }
   ],
   "source_url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-  "batch_notes": "浦安の人物・歴史・地名由来候補を一次構造化。人物は同一人物を中心に話群として束ね、全国・広域接続の可能性があるものは person_tags/cross_tags を保持。本文未確認は researching/partial とした。 寺社由緒ルートの深掘りとして、稲荷神社の疱瘡除け・大鯨の碑、清瀧神社の海神信仰、宝城院のおびんずる、善福寺の宝篋印塔を追加。"
+  "batch_notes": "浦安の人物・歴史・地名由来候補を一次構造化。人物は同一人物を中心に話群として束ね、全国・広域接続の可能性があるものは person_tags/cross_tags を保持。本文未確認は researching/partial とした。 寺社由緒ルートの深掘りとして、稲荷神社の疱瘡除け・大鯨の碑、清瀧神社の海神信仰、宝城院のおびんずる、善福寺の宝篋印塔を追加。 豊受神社の末社群と浦安三社祭の鎮守・御魂入れ信仰を追加。"
 }
