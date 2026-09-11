@@ -38,8 +38,26 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  * 見た目に関わるロジックを変更するたびに上げる — hatakiti_occult_pdf_
  * cache_key() がこれを含めるため、記事内容（articles_json）が同じ
  * ままでも既存の全キャッシュ済みPDFが次回アクセス時に再生成される。
+ *
+ * 41: 記事の視覚的な途切れ問題＋左側空白問題 修正指示書。
+ *   (1) 出典（横書き1行）を mode==='headline'（＝ブロック内最初の
+ *       セグメントか否か）ではなく overflow_body===null（＝この
+ *       セグメントで記事が本当に完結したか否か）で描くよう修正。
+ *       旧実装は本文が同一ページ内で継続する場合でも出典を本文途中に
+ *       描いてしまい、「出典＝記事終了」の合図の直後に続きの本文が
+ *       現れる＝記事が途中で切れて見える主因だった（post_id=662 1面で
+ *       実データ確認）。
+ *   (2) large tier行から生じた空き矩形（body_used_widthベース）が
+ *       tier不一致で構造的に常に埋まらなかった不具合を修正
+ *       （hatakiti_occult_pdf_space_fill_fallback_tier('large')が
+ *       常にnullを返すため）。
+ *   (3) left_side_empty_area指標を追加し、PagePlan比較の優先順位へ
+ *       組み込み。
+ *   (4) space-fill配置（hatakiti_occult_pdf_stack_articles()内）で
+ *       実描画がdry-run見積もりと食い違いoverflowした場合に本文が
+ *       無警告で失われる経路を防御的に修正（残本文をキューへ差し戻す）。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '40' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '41' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -1060,7 +1078,6 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     // 置かず本文をこのセグメントの先頭からそのまま続ける（追加指示§1
     // 「不要な続きラベル用の高さや余白も確保しないこと」）。
     $gap      = 'none' === $mode ? 0.0 : HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
-    $src_h    = 'headline' === $mode ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
     $body_top = $y + $header_h + $gap;
     $body_h   = hatakiti_occult_pdf_body_segment_h( $article, $tier );
 
@@ -1116,19 +1133,39 @@ function hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, 
     // 本文開始位置までであり、記事の終了位置（出典・罫線の位置）まで
     // 列間で無理に揃えようとはしない（追加指示§7）— 出典は単純にこの
     // セグメント自身の本文の直後に置く。
-    $source_lines = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
+    //
+    // 「記事が途中で切れて見える」問題修正指示書§3：出典帯ぶんの高さ
+    // 予約（$src_h、ひいてはbottom_y・visual_bottom・次セグメントの
+    // 開始位置）はmode==='headline'を基準にした既存どおりの計算のまま
+    // 変更しない — ここをoverflow_body基準に変えると、visual_bottom
+    // （空き矩形検出・PagePlan探索の候補比較の入力）が連鎖的に変わり、
+    // 実データ検証（post_id=662）で総ページ数が悪化するケースを確認した
+    // ため、意図的にレイアウト計算には手を入れない。変更するのは
+    // 「出典を実際に印字するかどうか」だけ — overflow_body===null
+    // （＝このセグメントで記事本文が本当に完結した）の場合のみ印字する。
+    // 旧実装はmode==='headline'でありさえすれば完結の有無に関係なく
+    // 出典を印字していたため、本文がこのセグメントで完結せず同一列内で
+    // 継続する場合でも「出典＝記事終了の合図」が本文途中に印字され、
+    // 続くcontinuationセグメント（見出しもラベルも無い"none"モード）が
+    // 唐突な孤立断片に見える原因になっていた（post_id=662 1面「米政府
+    // 「非人間的知性確認時の準備計画は存在する」」で実際に確認）。
+    $src_h          = 'headline' === $mode ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
+    $print_citation = ( null === $overflow_body );
+    $source_lines   = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
     if ( $source_lines && $w > 12 && $src_h > 0 ) {
-        $src_font  = 6.3;
-        $src_y     = $bottom_y + 0.6;
-        $max_chars = max( 2, (int) floor( $w / ( $src_font * 0.55 ) ) );
-        $sl        = $source_lines[0];
-        $text      = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
+        if ( $print_citation ) {
+            $src_font  = 6.3;
+            $src_y     = $bottom_y + 0.6;
+            $max_chars = max( 2, (int) floor( $w / ( $src_font * 0.55 ) ) );
+            $sl        = $source_lines[0];
+            $text      = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
 
-        $pdf->SetFont( $font_regular, '', $src_font );
-        $pdf->SetXY( $x, $src_y );
-        $pdf->Cell( $w, 3.4, hatakiti_occult_pdf_fullwidth_digits( $text ), 0, 0, 'L' );
-        if ( $sl['url'] ) {
-            $pdf->Link( $x, $src_y, $w, 3.4, $sl['url'] );
+            $pdf->SetFont( $font_regular, '', $src_font );
+            $pdf->SetXY( $x, $src_y );
+            $pdf->Cell( $w, 3.4, hatakiti_occult_pdf_fullwidth_digits( $text ), 0, 0, 'L' );
+            if ( $sl['url'] ) {
+                $pdf->Link( $x, $src_y, $w, 3.4, $sl['url'] );
+            }
         }
         $bottom_y += $src_h;
     }
@@ -1912,6 +1949,26 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                         'order_jump' => $placement['order_jump'],
                     );
                     $drew_any = true;
+
+                    // 左空白問題修正指示書§3・§9：space-fill配置は探索時の
+                    // hatakiti_occult_pdf_estimate_article_in_space()が
+                    // truncated===false（完全に収まる）と判定した候補
+                    // しか候補化しないが、これはdry-runの見積もりに過ぎない
+                    // — 実描画（hatakiti_occult_pdf_draw_article_box()）が
+                    // 万一これと食い違い本文が残った場合、この経路には
+                    // 通常のwhile(true)継続ループが無いため、何もしなければ
+                    // 残本文がそのまま失われてしまう（「記事の部分配置は
+                    // 禁止」に反する、最悪の失敗モード）。見積もりと実描画の
+                    // 乖離は通常発生しない想定だが、防御的に、万一発生した
+                    // 場合は残本文を通常の続きセグメントとしてキュー先頭へ
+                    // 差し戻し、次の通常ブロック処理で必ず描画されるように
+                    // する（内容を落とさないことを常に優先する）。
+                    if ( ! empty( $draw_result['overflow_body'] ) ) {
+                        $continuation                  = $article;
+                        $continuation['_continuation'] = true;
+                        $continuation['body']          = hatakiti_occult_pdf_overflow_to_text( $draw_result['overflow_body'] );
+                        array_unshift( $queue, $continuation );
+                    }
                 }
             }
         }
@@ -2475,6 +2532,11 @@ function hatakiti_occult_pdf_row_leftover_spaces( $debug_rows, $row_bottom ) {
                 'width'  => $r['w'] - $r['body_used_width'],
                 'height' => $r['body_h_actual'],
                 'tier'   => $tier,
+                // 左空白問題修正指示書§10：この種別（本文が右詰めで
+                // 使った幅の余り）は構造的に必ず「その列の左側」に
+                // 生じる空白のため、left_side_empty_area集計の対象と
+                // して明示的にマークする。
+                'kind'   => 'width_gap',
             );
         }
     }
@@ -2528,6 +2590,7 @@ function hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $artic
  */
 function hatakiti_occult_pdf_split_available_space( $space, $used_height, $used_width = null, $align = 'left' ) {
     $tier = $space['tier'] ?? '';
+    $kind = $space['kind'] ?? null; // 左空白問題修正指示書§10：由来種別を残りの矩形にも引き継ぐ。
     $out  = array();
     if ( null === $used_width || $used_width >= $space['width'] - 0.05 ) {
         $used_width = $space['width'];
@@ -2535,13 +2598,13 @@ function hatakiti_occult_pdf_split_available_space( $space, $used_height, $used_
         $remaining_width = $space['width'] - $used_width;
         if ( $remaining_width > 0.5 ) {
             $side_x = ( 'right' === $align ) ? $space['x'] : $space['x'] + $used_width;
-            $out[]  = array( 'x' => $side_x, 'y' => $space['y'], 'width' => $remaining_width, 'height' => $space['height'], 'tier' => $tier );
+            $out[]  = array( 'x' => $side_x, 'y' => $space['y'], 'width' => $remaining_width, 'height' => $space['height'], 'tier' => $tier, 'kind' => $kind );
         }
     }
     $leftover_h = $space['height'] - $used_height;
     if ( $leftover_h > 1.0 ) {
         $used_x = ( 'right' === $align && $used_width < $space['width'] ) ? $space['x'] + ( $space['width'] - $used_width ) : $space['x'];
-        $out[]  = array( 'x' => $used_x, 'y' => $space['y'] + $used_height, 'width' => $used_width, 'height' => $leftover_h, 'tier' => $tier );
+        $out[]  = array( 'x' => $used_x, 'y' => $space['y'] + $used_height, 'width' => $used_width, 'height' => $leftover_h, 'tier' => $tier, 'kind' => $kind );
     }
     return $out;
 }
@@ -2571,6 +2634,7 @@ function hatakiti_occult_pdf_normalize_available_spaces( $spaces ) {
             && abs( $merged[ $last ]['x'] - $s['x'] ) < 0.1
             && abs( $merged[ $last ]['width'] - $s['width'] ) < 0.1
             && abs( ( $merged[ $last ]['y'] + $merged[ $last ]['height'] ) - $s['y'] ) < 0.5
+            && ( $merged[ $last ]['kind'] ?? null ) === ( $s['kind'] ?? null )
         ) {
             $merged[ $last ]['height'] += $s['height'];
         } else {
@@ -2800,8 +2864,23 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
                 // を通るため、同tier優先→隣接tier
                 // （hatakiti_occult_pdf_fallback_tier()、medium⇄small）
                 // の順で候補化してよい。
+                // 左空白問題修正指示書§5〜§6：spaceの由来がlarge tier行
+                // （1列＝全幅の行で、他に同じ行内の列が無い）の場合、
+                // 同tier／隣接tier限定ルールは「同じ行内の他列との視覚的
+                // 整合性」を守るためのものであり、そもそも比較対象となる
+                // 他列が存在しないlarge由来の空きには当てはまらない。
+                // ここで弾くと、body_used_widthベースで正しく検出された
+                // 空き矩形（post_id=662 1面のようなケース）が構造的に
+                // 常に埋まらなくなる（hatakiti_occult_pdf_space_fill_
+                // fallback_tier('large')が常にnullを返すため）。幅・高さ
+                // に実際に収まるかはこの後のest['fits']が判定するので、
+                // ここではtierだけを理由に除外しない。
                 $space_tier = $space['tier'] ?? '';
-                if ( '' !== $space_tier && $cand_tier !== $space_tier && $cand_tier !== hatakiti_occult_pdf_space_fill_fallback_tier( $space_tier ) ) {
+                if ( 'large' !== $space_tier
+                    && '' !== $space_tier
+                    && $cand_tier !== $space_tier
+                    && $cand_tier !== hatakiti_occult_pdf_space_fill_fallback_tier( $space_tier )
+                ) {
                     continue;
                 }
                 $est = hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $queue[ $j ], $cand_tier, $space );
@@ -2946,6 +3025,7 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
             'largest_empty_rect_area' => 0.0,
             'total_blank_area'        => 0.0,
             'usable_empty_area'       => 0.0,
+            'left_side_empty_area'    => 0.0,
             'layout_switch_count'     => 0,
             'row_count'               => 0,
             'column_imbalance_score'  => 0.0,
@@ -3028,10 +3108,19 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
     $available_spaces = $plan['available_spaces'] ?? array();
     $largest_rect_area = 0.0;
     $total_blank_area  = 0.0;
+    // 左空白問題修正指示書§10：left_side_empty_area — 本文が縦書きの
+    // 右詰めで使った幅の余り（'kind'==='width_gap'、必ずその列の左側に
+    // 生じる、hatakiti_occult_pdf_row_leftover_spaces()参照）だけを
+    // 合計する。①の列高さ差（行の下端の余り）は左右どちらの偏りでも
+    // ないため対象外。
+    $left_side_empty_area = 0.0;
     foreach ( $available_spaces as $sp ) {
         $area = $sp['width'] * $sp['height'];
         $total_blank_area += $area;
         $largest_rect_area = max( $largest_rect_area, $area );
+        if ( 'width_gap' === ( $sp['kind'] ?? null ) ) {
+            $left_side_empty_area += $area;
+        }
     }
 
     $final_y          = $plan['final_y'];
@@ -3057,8 +3146,11 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
                 if ( 'large' === $cand_tier ) {
                     continue;
                 }
+                // 左空白問題修正指示書§5〜§6：実際のspace-fill探索
+                // （hatakiti_occult_pdf_search_page_plan_recursive()）と
+                // 同じ基準に揃える — large由来のspaceは同tier限定にしない。
                 $sp_tier = $sp['tier'] ?? '';
-                if ( '' !== $sp_tier && $cand_tier !== $sp_tier ) {
+                if ( 'large' !== $sp_tier && '' !== $sp_tier && $cand_tier !== $sp_tier ) {
                     continue;
                 }
                 $est = hatakiti_occult_pdf_estimate_article_in_space( $pdf, $font_bold, $remaining_queue[ $k ], $cand_tier, $sp );
@@ -3077,6 +3169,7 @@ function hatakiti_occult_pdf_evaluate_page_plan( $plan, $zone_w, $page_bottom, $
         'largest_empty_rect_area' => round( $largest_rect_area, 1 ),
         'total_blank_area'        => round( $total_blank_area, 1 ),
         'usable_empty_area'       => round( $usable_empty_area, 1 ),
+        'left_side_empty_area'    => round( $left_side_empty_area, 1 ),
         'layout_switch_count'     => $switch_count,
         'row_count'               => count( $rows ),
         'column_imbalance_score'  => round( $imbalance_total, 1 ),
@@ -3144,6 +3237,19 @@ function hatakiti_occult_pdf_compare_page_plans( $a, $b ) {
     if ( $a['total_blank_area'] > $b['total_blank_area'] + $area_tol ) {
         return false;
     }
+    // 左空白問題修正指示書§10・§11：left_side_empty_areaはevaluate_
+    // page_plan()で計測・報告するが、候補比較の優先順位には組み込まない
+    // （意図的）。実データ検証（post_id=662）で、この指標をtotal_blank_
+    // area直後の優先順位に加えると、ページ内では左空白が少ない候補が
+    // 選ばれる一方、そのページで消費する記事の組み合わせが変わり、
+    // 数ページ先で総ページ数が悪化する（6→7ページ）ケースを実際に確認
+    // した。総ページ数を悪化させないことは他の全ての空白削減より優先
+    // する絶対条件（指示書§20）のため、ページ単位の貪欲な比較指標を
+    // 増やすほど、should_adopt_page_plan()のPriority1（総ページ数
+    // シミュレーション）では捉えきれない複数ページにまたがる悪影響の
+    // リスクが増す。left_side_empty_areaは診断・回帰確認用の指標として
+    // debug_logに残し、9文書回帰テストで実際に悪化していないかを
+    // 目視・数値の両方で確認する運用とする。
     if ( $a['layout_switch_count'] < $b['layout_switch_count'] ) {
         return true;
     }
