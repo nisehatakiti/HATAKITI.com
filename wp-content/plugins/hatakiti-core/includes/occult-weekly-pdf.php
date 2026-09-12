@@ -51,13 +51,41 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  *       tier不一致で構造的に常に埋まらなかった不具合を修正
  *       （hatakiti_occult_pdf_space_fill_fallback_tier('large')が
  *       常にnullを返すため）。
- *   (3) left_side_empty_area指標を追加し、PagePlan比較の優先順位へ
- *       組み込み。
+ *   (3) left_side_empty_area指標を追加（診断・回帰確認専用。実データで
+ *       PagePlan比較の優先順位に組み込むと総ページ数が悪化するケースを
+ *       確認したため、意図的に比較優先順位には組み込んでいない）。
  *   (4) space-fill配置（hatakiti_occult_pdf_stack_articles()内）で
  *       実描画がdry-run見積もりと食い違いoverflowした場合に本文が
  *       無警告で失われる経路を防御的に修正（残本文をキューへ差し戻す）。
+ *
+ * 42: 大きな左側空白の実測解析と、ページ数を悪化させないSpace Fill拡張。
+ *   (1) hatakiti_occult_pdf_search_page_plan_recursive()に「末尾余白との
+ *       結合」を追加。Rowを1つも追加できずに探索が手詰まりになった時点
+ *       ($y)で終わっているavailable_spaces（他に何も描かれないことが
+ *       直前のRow追加全滅により保証される）を、そのページの末端まで
+ *       安全に高さ延長し、Space Fillを再試行する。無限再帰防止のため
+ *       1深さにつき1回のみ（$trailing_extension_tried）。
+ *   (2) hatakiti_occult_pdf_should_adopt_page_plan()に、完全な記事を
+ *       1件以上安全に多く配置できた場合（article_count改善）も改善条件
+ *       として追加。従来はlargest_empty_rect_area／remaining_heightの
+ *       改善だけを見ており、空白面積が変わらなくても記事を1件安全に
+ *       減らせる候補を取りこぼしていた（post_id=662 1面で実際に確認）。
+ *   (3) space-fill配置の実描画を単発のdraw_article_box()呼び出しから、
+ *       通常の列内バックフィルと同じwhile継続ループへ変更
+ *       （$placement['space_bottom']を境界とする）。
+ *       hatakiti_occult_pdf_estimate_article_height()はspaceの高さ
+ *       いっぱいまでbody_h固定・幅可変の複数セグメントを積めるか
+ *       シミュレートしているため、実描画側も同じ境界内で複数セグメントを
+ *       積めるようにしないと、見積もりが「収まる」と判定した記事が実際
+ *       には単発描画で収まりきらず、(4)（41で追加した安全弁）に頼って
+ *       別の場所へ差し戻されてしまう（結果は安全だが、同じ記事の前半と
+ *       後半で列幅が変わるなど見た目が不自然になる、実データで確認）。
+ *   実データ検証：post_id=662 1面の左側空白（約130.8mm×72.6mm、
+ *   約9497mm²）に記事1件（id=5、medium tier）を完全配置。post_id=580は
+ *   4ページ→3ページに改善。9文書全件でページ数悪化・clipped・isolated
+ *   なしを確認。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '41' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '42' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -1930,43 +1958,95 @@ function hatakiti_occult_pdf_stack_articles( &$queue, $pdf, $font_regular, $font
                     }
                     $article = $queue[ $found_idx ];
                     array_splice( $queue, $found_idx, 1 );
-                    $draw_result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $placement['tier'], $placement['x'], $placement['y'], $placement['width'], $placement['header_h'], 'headline' );
-                    $pdf->SetLineWidth( 0.25 );
-                    $pdf->Line( $placement['x'], $draw_result['bottom_y'] + ( HATAKITI_OCCULT_PDF_ROW_GAP_MM / 2 ), $placement['x'] + $placement['width'], $draw_result['bottom_y'] + ( HATAKITI_OCCULT_PDF_ROW_GAP_MM / 2 ) );
-                    $debug[] = array(
-                        'page' => $page_no, 'block' => 'space_fill', 'cols' => 1, 'col' => 0,
-                        'article_id' => $placement['article_id'],
-                        'tier' => $placement['tier'],
-                        'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
-                        'x' => round( $placement['x'], 1 ), 'y' => round( $placement['y'], 1 ), 'w' => round( $placement['width'], 1 ), 'h' => round( $draw_result['bottom_y'] - $placement['y'], 1 ),
-                        'continuation' => false, 'mode' => 'headline', 'label_shown' => false, 'is_first_in_block' => false,
-                        'body_top' => round( $placement['y'] + $placement['header_h'] + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM, 1 ),
-                        'overflow' => ! empty( $draw_result['overflow_body'] ),
-                        'body_h_actual' => $draw_result['body_h'] ?? 0.0,
-                        'body_used_width' => $draw_result['body_used_width'] ?? 0.0,
-                        'visual_bottom' => $draw_result['visual_bottom'] ?? round( $draw_result['bottom_y'], 1 ),
-                        'space_fill' => true,
-                        'order_jump' => $placement['order_jump'],
-                    );
-                    $drew_any = true;
 
-                    // 左空白問題修正指示書§3・§9：space-fill配置は探索時の
-                    // hatakiti_occult_pdf_estimate_article_in_space()が
-                    // truncated===false（完全に収まる）と判定した候補
-                    // しか候補化しないが、これはdry-runの見積もりに過ぎない
-                    // — 実描画（hatakiti_occult_pdf_draw_article_box()）が
-                    // 万一これと食い違い本文が残った場合、この経路には
-                    // 通常のwhile(true)継続ループが無いため、何もしなければ
-                    // 残本文がそのまま失われてしまう（「記事の部分配置は
-                    // 禁止」に反する、最悪の失敗モード）。見積もりと実描画の
-                    // 乖離は通常発生しない想定だが、防御的に、万一発生した
-                    // 場合は残本文を通常の続きセグメントとしてキュー先頭へ
-                    // 差し戻し、次の通常ブロック処理で必ず描画されるように
-                    // する（内容を落とさないことを常に優先する）。
-                    if ( ! empty( $draw_result['overflow_body'] ) ) {
+                    // 左側空白の高さ不足問題 修正指示書§6：
+                    // hatakiti_occult_pdf_estimate_article_in_space()（＝
+                    // hatakiti_occult_pdf_estimate_article_height()）は、
+                    // このspaceの高さ（$placement['space_bottom']まで）を
+                    // 使って、body_h固定・幅可変の複数セグメントを同じ
+                    // 列内に積めるかどうかをシミュレートして
+                    // truncated===falseと判定している。実描画側が単発の
+                    // draw_article_box()呼び出しだけで済ませると、見積もり
+                    // が2セグメント必要と判断した記事が単発描画では
+                    // 収まりきらず、見積もりと実描画が食い違う（実データ
+                    // 検証で確認）。そこで通常の列内バックフィルと同じ
+                    // while(true)継続ループを、このspaceの境界
+                    // （$placement['space_bottom']）内でだけ再現する。
+                    $seg_top      = $placement['y'];
+                    $space_bottom = $placement['space_bottom'] ?? ( $placement['y'] + $placement['header_h'] + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM + hatakiti_occult_pdf_body_segment_h( $article, $placement['tier'] ) + HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM );
+                    $is_first     = true;
+                    $stall_key    = null;
+                    $stall_count  = 0;
+                    $seg_index    = 0;
+
+                    while ( true ) {
+                        $body_len_now = mb_strlen( (string) ( $article['body'] ?? '' ) );
+                        if ( $stall_key === $body_len_now ) {
+                            $stall_count++;
+                        } else {
+                            $stall_key   = $body_len_now;
+                            $stall_count = 0;
+                        }
+                        if ( $stall_count >= 3 ) {
+                            break; // 安全弁：内容が縮まないまま続く異常系。
+                        }
+
+                        $mode     = $is_first ? 'headline' : 'none';
+                        $header_h = $is_first ? $placement['header_h'] : 0.0;
+                        $gap      = $is_first ? HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM : 0.0;
+                        $src_h_chk = $is_first ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
+                        $body_h_chk = hatakiti_occult_pdf_body_segment_h( $article, $placement['tier'] );
+                        // estimate_article_height()と同じ判定式 —
+                        // このセグメントがspace_bottomを超えるなら、この
+                        // spaceにはもう描けない（見積もりの前提と一致させる）。
+                        if ( ( $seg_top + $header_h + $gap + $body_h_chk + $src_h_chk ) > $space_bottom + 0.5 ) {
+                            break;
+                        }
+
+                        $draw_result = hatakiti_occult_pdf_draw_article_box( $pdf, $font_regular, $font_bold, $article, $placement['tier'], $placement['x'], $seg_top, $placement['width'], $header_h, $mode );
+                        $pdf->SetLineWidth( 0.25 );
+                        $pdf->Line( $placement['x'], $draw_result['bottom_y'] + ( HATAKITI_OCCULT_PDF_ROW_GAP_MM / 2 ), $placement['x'] + $placement['width'], $draw_result['bottom_y'] + ( HATAKITI_OCCULT_PDF_ROW_GAP_MM / 2 ) );
+                        $debug[] = array(
+                            'page' => $page_no, 'block' => 'space_fill', 'cols' => 1, 'col' => 0,
+                            'article_id' => $placement['article_id'],
+                            'tier' => $placement['tier'],
+                            'headline' => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
+                            'x' => round( $placement['x'], 1 ), 'y' => round( $seg_top, 1 ), 'w' => round( $placement['width'], 1 ), 'h' => round( $draw_result['bottom_y'] - $seg_top, 1 ),
+                            'continuation' => ! $is_first, 'mode' => $mode, 'label_shown' => false, 'is_first_in_block' => false,
+                            'body_top' => round( $seg_top + $header_h + $gap, 1 ),
+                            'overflow' => ! empty( $draw_result['overflow_body'] ),
+                            'body_h_actual' => $draw_result['body_h'] ?? 0.0,
+                            'body_used_width' => $draw_result['body_used_width'] ?? 0.0,
+                            'visual_bottom' => $draw_result['visual_bottom'] ?? round( $draw_result['bottom_y'], 1 ),
+                            'space_fill' => true,
+                            'order_jump' => $placement['order_jump'],
+                        );
+                        $drew_any = true;
+                        $seg_top  = $draw_result['bottom_y'] + HATAKITI_OCCULT_PDF_ROW_GAP_MM;
+                        $is_first = false;
+                        $seg_index++;
+
+                        if ( ! empty( $draw_result['overflow_body'] ) ) {
+                            $continuation                  = $article;
+                            $continuation['_continuation'] = true;
+                            $continuation['body']          = hatakiti_occult_pdf_overflow_to_text( $draw_result['overflow_body'] );
+                            $article                       = $continuation;
+                            continue;
+                        }
+                        $article = null; // このspace内で記事が完結した。
+                        break;
+                    }
+
+                    // 左空白問題修正指示書§3・§9：上記のspace内継続ループを
+                    // もってしても記事が完結しなかった場合（見積もりとの
+                    // 乖離、または安全弁による打ち切り）に備えた最終防御。
+                    // 「記事の部分配置は禁止」に反しないよう、残本文を通常の
+                    // 続きセグメントとしてキュー先頭へ差し戻し、次の通常
+                    // ブロック処理で必ず描画されるようにする（内容を落と
+                    // さないことを常に優先する）。
+                    if ( null !== $article ) {
                         $continuation                  = $article;
                         $continuation['_continuation'] = true;
-                        $continuation['body']          = hatakiti_occult_pdf_overflow_to_text( $draw_result['overflow_body'] );
                         array_unshift( $queue, $continuation );
                     }
                 }
@@ -2808,7 +2888,7 @@ $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = false;
  *         'final_y'=>mm, 'remaining_queue'=>array, 'order_jump'=>int)。
  * @param int      &$candidate_count 生成済み候補数（参照、上限管理用）。
  */
-function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth ) {
+function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth, $trailing_extension_tried = false ) {
     if ( ! empty( $rows_so_far ) || ! empty( $placements_so_far ) ) {
         $candidates[] = array(
             'rows'             => $rows_so_far,
@@ -2903,13 +2983,22 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
 
                 $new_placements   = $placements_so_far;
                 $new_placements[] = array(
-                    'article_id' => $placed_article['_debug_article_id'] ?? null,
-                    'x'          => $space['x'],
-                    'y'          => $space['y'],
-                    'width'      => $space['width'],
-                    'tier'       => $cand_tier,
-                    'header_h'   => $est['header_h'],
-                    'order_jump' => $j,
+                    'article_id'   => $placed_article['_debug_article_id'] ?? null,
+                    'x'            => $space['x'],
+                    'y'            => $space['y'],
+                    'width'        => $space['width'],
+                    // 左側空白の高さ不足問題 修正指示書§6：見積もり
+                    // （hatakiti_occult_pdf_estimate_article_height()）は
+                    // spaceの高さいっぱいまで複数セグメント（body_h固定・
+                    // 幅可変）を積んで判定しているため、実描画側も同じ
+                    // 境界（space_bottom）まで同じ列内で複数セグメントを
+                    // 積めるようにしないと、見積もりと実描画が食い違う
+                    // （実データ検証で確認）。space_bottomを記録しておき、
+                    // 実描画側がこの境界内で継続セグメントを描けるようにする。
+                    'space_bottom' => $space['y'] + $space['height'],
+                    'tier'         => $cand_tier,
+                    'header_h'     => $est['header_h'],
+                    'order_jump'   => $j,
                 );
 
                 hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $new_queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $new_spaces, $new_placements, $order_jump_so_far + $j, $consecutive_space_fills + 1, $depth + 1 );
@@ -2968,6 +3057,48 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         $row_leftovers = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
         $new_spaces    = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
         hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, 0, $depth + 1 );
+    }
+
+    // 左側空白の高さ不足問題 修正指示書§4〜§6：末尾余白との結合。
+    // ここまでの分岐A（既存幅のspace-fill）・分岐B（新しいRow追加）の
+    // どちらも試した後、なお$candidate_countがこの時点のまま
+    // （＝この深さでは新しいRowを1つも追加できなかった）で、かつ
+    // ページ末までまだ実質的な余白が残っている場合、その残り高さは
+    // 現状どの available_spaces にも計上されず、evaluate_page_plan()の
+    // remaining_height／trailing_areaとしてのみ扱われ、Space Fillの
+    // 対象にならない。
+    //
+    // ここで、$y（＝現在の内容の最深部。次のRowを置こうとして分岐Bが
+    // 全滅した位置）以浅で終わっているavailable_spaces（本文が右詰めで
+    // 使い切らなかった幅の余りなど、row_gap分の差でちょうど$yに一致
+    // しない場合を含む）は、「その空き矩形の下端からページ末までの間、
+    // 他の記事は一切描かれていない」ことが直前のrow_candidates全滅
+    // （このページにはもうRowを追加できない）により保証できるため、
+    // その幅のまま安全にページ末まで高さを延長できる（重なりは発生
+    // しない）。延長後の高さは元の高さに残り高さを単純加算せず、
+    // その矩形自身の上端からページ末までを再計算する（row_gap等の
+    // 端数差を累積させないため）。無限再帰防止のため一度の深さにつき
+    // 1回のみ試す（$trailing_extension_tried）。
+    if ( ! $trailing_extension_tried
+        && ! empty( $queue )
+        && ! isset( $queue[0]['_pinned_col_w'] )
+        && $candidate_count < HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES
+    ) {
+        $trailing_h = $page_bottom - $y;
+        if ( $trailing_h > 1.0 ) {
+            $extended     = false;
+            $extended_spaces = array();
+            foreach ( $available_spaces as $sp ) {
+                if ( $sp['y'] + $sp['height'] <= $y + 0.5 ) {
+                    $sp['height'] = $page_bottom - $sp['y'];
+                    $extended      = true;
+                }
+                $extended_spaces[] = $sp;
+            }
+            if ( $extended ) {
+                hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $extended_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth + 1, true );
+            }
+        }
     }
 }
 
@@ -3345,7 +3476,20 @@ function hatakiti_occult_pdf_should_adopt_page_plan( $baseline, $baseline_metric
     // Priority 4：ページ末尾空白改善。
     $trailing_improved = $candidate_metrics['remaining_height'] < $baseline_metrics['remaining_height'] - 0.5;
 
-    if ( ! $rect_improved && ! $trailing_improved ) {
+    // 左側空白の高さ不足問題 修正指示書§8：完全な記事を安全に1件以上
+    // 多く配置できている場合も改善として採用する。space-fill配置は
+    // truncated===false（見出し・本文・出典まで完全に収まる）の候補
+    // しか候補化しないため（§5・§6）、article_countの増加は「この
+    // ページで完結する記事が実際に1件以上増えた」ことを意味し、微小な
+    // 改善ではない（clipped_article_count・isolated_fragment_countの
+    // 悪化なしは本関数の最初で既に確認済み）。largest_empty_rect_area・
+    // remaining_heightだけを見ていると、こうした「空白の面積は変わらな
+    // いか増えて見えるが、実際には未配置記事を1件安全に減らせている」
+    // 候補を、視覚的空白のみを理由に取りこぼしてしまう
+    // （post_id=662 1面で実際に確認）。
+    $article_count_improved = $candidate_metrics['article_count'] > $baseline_metrics['article_count'];
+
+    if ( ! $rect_improved && ! $trailing_improved && ! $article_count_improved ) {
         return array( 'adopt' => false, 'reason' => 'INSUFFICIENT_VISUAL_IMPROVEMENT' );
     }
 
