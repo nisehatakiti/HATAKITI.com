@@ -84,8 +84,42 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  *   約9497mm²）に記事1件（id=5、medium tier）を完全配置。post_id=580は
  *   4ページ→3ページに改善。9文書全件でページ数悪化・clipped・isolated
  *   なしを確認。
+ *
+ * 43: レイアウト安全性の回帰修正 — 42の「末尾余白との結合」
+ *   （hatakiti_occult_pdf_search_page_plan_recursive()の
+ *   trailing_extension_tried関連コード）を撤去。
+ *
+ *   row_leftover_spaces()の②幅余白検出は、その空き矩形の高さを
+ *   「そのセグメント自身の予約高さ（body_h_actual）」のまま保つ限り、
+ *   同じ列内で後続セグメントが続く場合でも必ずそのセグメントの手前
+ *   （row_gap分以上手前）で終わるため、安全（重ならない）であることが
+ *   構造的に保証されていた。42の「末尾余白との結合」は、この矩形の
+ *   下端を$y（Row追加が手詰まりになった位置）やページ末まで無条件に
+ *   延長していたが、「その矩形の下端からページ末までの間、他の記事は
+ *   一切描かれていない」という前提が誤りだった —
+ *   実際には、その矩形自身の由来となったセグメントと同じ列で、
+ *   *同じRow呼び出し内で完結する続きセグメント*（例：large/medium tier
+ *   記事の1面リード級記事が2セグメントに分かれる場合の後半部分）が、
+ *   まさにその延長した範囲に描かれることがあり、Space Fillで新しい
+ *   記事をそこへ置くと実際の記事同士が重なってしまう不具合を引き起こ
+ *   していた（9文書中8文書・計42組のペアで実際に重なりを確認、
+ *   実描画矩形ベースの機械的検証で発見）。
+ *
+ *   42で追加した他の変更（tier='large'由来の空きへのtier不一致緩和、
+ *   should_adopt_page_plan()のarticle_count改善条件、space-fill配置の
+ *   while継続ループ化、left_side_empty_area診断指標）は、いずれも
+ *   「矩形の高さをその場で延長しない」限り上記の安全性が成り立つため
+ *   維持する — 実際、42時点で発生していた重なりは全て
+ *   `block=='space_fill'`側の矩形高さが72.584mmを超えるもの（＝末尾
+ *   延長によってのみ生成され得た配置）に限られており、延長機構の撤去
+ *   のみで9文書全件の重なりが解消することを実描画矩形ベースで確認した。
+ *
+ *   post_id=662 1面の左側空白改善（42で達成）は、この回帰修正により
+ *   失われる（元の未延長の空き矩形は高さ不足のため、その空白へは
+ *   記事を配置できなくなる）。「#662の空白を埋めること」より
+ *   「全PDFで記事が絶対に重ならないこと」を優先する。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '42' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '43' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -2888,7 +2922,7 @@ $GLOBALS['hatakiti_occult_pdf_suppress_page_search'] = false;
  *         'final_y'=>mm, 'remaining_queue'=>array, 'order_jump'=>int)。
  * @param int      &$candidate_count 生成済み候補数（参照、上限管理用）。
  */
-function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth, $trailing_extension_tried = false ) {
+function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $available_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth ) {
     if ( ! empty( $rows_so_far ) || ! empty( $placements_so_far ) ) {
         $candidates[] = array(
             'rows'             => $rows_so_far,
@@ -3057,48 +3091,6 @@ function hatakiti_occult_pdf_search_page_plan_recursive( &$candidates, &$candida
         $row_leftovers = hatakiti_occult_pdf_row_leftover_spaces( $result['debug'], $result['block_bottom'] );
         $new_spaces    = hatakiti_occult_pdf_normalize_available_spaces( array_merge( $available_spaces, $row_leftovers ) );
         hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue_copy, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $result['block_bottom'], $page_bottom, $page_no, $block_index_base, $new_rows, $new_spaces, $placements_so_far, $order_jump_so_far, 0, $depth + 1 );
-    }
-
-    // 左側空白の高さ不足問題 修正指示書§4〜§6：末尾余白との結合。
-    // ここまでの分岐A（既存幅のspace-fill）・分岐B（新しいRow追加）の
-    // どちらも試した後、なお$candidate_countがこの時点のまま
-    // （＝この深さでは新しいRowを1つも追加できなかった）で、かつ
-    // ページ末までまだ実質的な余白が残っている場合、その残り高さは
-    // 現状どの available_spaces にも計上されず、evaluate_page_plan()の
-    // remaining_height／trailing_areaとしてのみ扱われ、Space Fillの
-    // 対象にならない。
-    //
-    // ここで、$y（＝現在の内容の最深部。次のRowを置こうとして分岐Bが
-    // 全滅した位置）以浅で終わっているavailable_spaces（本文が右詰めで
-    // 使い切らなかった幅の余りなど、row_gap分の差でちょうど$yに一致
-    // しない場合を含む）は、「その空き矩形の下端からページ末までの間、
-    // 他の記事は一切描かれていない」ことが直前のrow_candidates全滅
-    // （このページにはもうRowを追加できない）により保証できるため、
-    // その幅のまま安全にページ末まで高さを延長できる（重なりは発生
-    // しない）。延長後の高さは元の高さに残り高さを単純加算せず、
-    // その矩形自身の上端からページ末までを再計算する（row_gap等の
-    // 端数差を累積させないため）。無限再帰防止のため一度の深さにつき
-    // 1回のみ試す（$trailing_extension_tried）。
-    if ( ! $trailing_extension_tried
-        && ! empty( $queue )
-        && ! isset( $queue[0]['_pinned_col_w'] )
-        && $candidate_count < HATAKITI_OCCULT_PDF_PAGE_SEARCH_MAX_CANDIDATES
-    ) {
-        $trailing_h = $page_bottom - $y;
-        if ( $trailing_h > 1.0 ) {
-            $extended     = false;
-            $extended_spaces = array();
-            foreach ( $available_spaces as $sp ) {
-                if ( $sp['y'] + $sp['height'] <= $y + 0.5 ) {
-                    $sp['height'] = $page_bottom - $sp['y'];
-                    $extended      = true;
-                }
-                $extended_spaces[] = $sp;
-            }
-            if ( $extended ) {
-                hatakiti_occult_pdf_search_page_plan_recursive( $candidates, $candidate_count, $queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_w, $y, $page_bottom, $page_no, $block_index_base, $rows_so_far, $extended_spaces, $placements_so_far, $order_jump_so_far, $consecutive_space_fills, $depth + 1, true );
-            }
-        }
     }
 }
 
