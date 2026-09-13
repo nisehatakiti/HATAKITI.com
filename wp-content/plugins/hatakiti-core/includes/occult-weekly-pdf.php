@@ -2539,10 +2539,33 @@ function hatakiti_occult_pdf_block_alt_candidates( $queue, $zone_w, $include_4co
  * block_bottom（列の最大値）との差が通常の行間ギャップを明確に超える
  * 分だけを「内部空白」として面積合計を返す。バックフィルの列間不均衡
  * 修正（PDFページ途中空白削減指示書）で導入した空白検出と同じ考え方。
+ *
+ * 記事が途中で切れている問題＋大きな無駄な空白 次ラウンド指示書§3・§7：
+ * 上記（列の高さの不揃い）に加えて、本文が縦書きの右詰めで割当幅を
+ * 使い切らなかった分（body_used_width不足、hatakiti_occult_pdf_row_
+ * leftover_spaces()の②幅余白検出と同じ考え方）も面積に加算する。
+ *
+ * 経緯：この関数はhatakiti_occult_pdf_choose_block_config_with_
+ * lookahead()の候補比較にのみ使われるが、従来は「列の高さの不揃い」
+ * しか見ておらず、「列の高さは揃っているが、各列の横幅がほとんど
+ * 本文で埋まっていない」（post_id=662 3面のmedium tier記事群のような
+ * ケース）を一切スコアに反映していなかった。この追加はスコアの精度
+ * 自体を是正するもの。
+ *
+ * 重要（実データで確認済み）：この追加だけでは、post_id=662 3面の
+ * 1列構成が2列構成へ変わることはない。1列＋バックフィルは複数記事を
+ * ページ末まで隙間なく積める（高さ方向の充填効率が高い）のに対し、
+ * 2列に分けるとブロック2の末尾に新たな高さ方向の空白が生じ、幅の
+ * 空白が減っても合計スコアはむしろ悪化する（実測：1列19143.6 <
+ * 2列（2/3-1/3）19461.6、2列（均等）20047.3、いずれもmm²）。つまり
+ * 「幅は無駄だが高さは無駄がない」1列構成は、このページでは総合的に
+ * 見て実際に優れた選択であり、この関数の是正後もその結論は変わらない
+ * （9文書全件で本追加によるPDF出力の変化なしを確認）。
  */
 function hatakiti_occult_pdf_debug_rows_internal_blank_area( $debug_rows, $block_bottom ) {
     $col_bottom = array();
     $col_w      = array();
+    $area       = 0.0;
     foreach ( $debug_rows as $r ) {
         if ( ! isset( $r['col'], $r['y'], $r['h'], $r['w'] ) ) {
             continue;
@@ -2552,8 +2575,13 @@ function hatakiti_occult_pdf_debug_rows_internal_blank_area( $debug_rows, $block
             $col_bottom[ $r['col'] ] = $bottom;
             $col_w[ $r['col'] ]      = $r['w'];
         }
+        if ( isset( $r['body_used_width'], $r['body_h_actual'] )
+            && $r['body_h_actual'] > 1.0
+            && ( $r['w'] - $r['body_used_width'] ) > 1.0
+        ) {
+            $area += ( $r['w'] - $r['body_used_width'] ) * $r['body_h_actual'];
+        }
     }
-    $area = 0.0;
     foreach ( $col_bottom as $col_no => $bottom ) {
         $gap = $block_bottom - $bottom;
         if ( $gap > 1.0 ) {
