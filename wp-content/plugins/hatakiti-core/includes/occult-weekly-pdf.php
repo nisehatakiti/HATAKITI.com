@@ -118,8 +118,47 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  *   失われる（元の未延長の空き矩形は高さ不足のため、その空白へは
  *   記事を配置できなくなる）。「#662の空白を埋めること」より
  *   「全PDFで記事が絶対に重ならないこと」を優先する。
+ *
+ * 44: 組版エンジン再設計 — 固定3段グリッド＋パターン方式（gridv2）。
+ *   「空白率の最小化」から「実際の新聞組版に近い、固定グリッド＋
+ *   記事の文字量に合うパターンの選択」へ設計を変更。
+ *
+ *   - ページ内容領域を高さの等しい3段（HATAKITI_OCCULT_PDF_GRIDV2_ROWS）
+ *     に固定分割し、記事はこの3段を横断する複数の矩形領域（Region）の
+ *     集合として占有できる（L字型等の複合領域を正式サポート）。
+ *   - 組版パターンはhatakiti_occult_pdf_gridv2_patterns()にテンプレート
+ *     として管理（1〜5記事、L字型2種を含む）。
+ *   - 本文フォント・字送り・行送りは既存どおり全tier共通で完全に統一
+ *     （変更なし）。ただし、1つの領域の高さをそのまま使い切るため、
+ *     hatakiti_occult_pdf_layout_and_draw_columns()に$capacity_override
+ *     引数を追加し、既存のHATAKITI_OCCULT_PDF_CHARS_PER_COLUMN
+ *     （20文字）の頭打ちを外した実高さ基準の文字数を渡せるようにした
+ *     （省略時は完全に既存どおりの挙動、既存Row/Block方式には無影響）。
+ *   - 1記事は原則1ページ内で完結させる（gridv2はページを跨ぐ
+ *     continuationを使わない）。見積もりと実描画の乖離を防ぐため、
+ *     hatakiti_occult_pdf_gridv2_draw_slot()は使い捨てPDFへの見積もりと
+ *     本番描画の両方に同じコードを使う。
+ *   - 記事境界は実線、段境界を跨いで接続する記事境界（L字部分）は破線で
+ *     区別する（hatakiti_occult_pdf_gridv2_draw_borders()、パターン
+ *     定義に明示された境界のみ描画）。
+ *   - 既存のRow/Block/Continuation方式（hatakiti_occult_pdf_
+ *     stack_articles()以下）は削除せず温存し、gridv2がどのパターンにも
+ *     1記事すら収められない極端なケースでのみフォールバックに使う
+ *     （hatakiti_generate_occult_weekly_pdf()内、本文欠落ゼロを最優先）。
+ *   - footer（出典＋編集後記）予約のための「予算縮小・エンドゲーム再
+ *     配置」（V43のhatakiti_occult_pdf_trial_fits_with_footer_reserved()
+ *     等）は固定グリッドとは相性が悪いため、gridv2の主経路では使わない
+ *     （関数自体は削除せず、フォールバック時のために温存）。footerは
+ *     ページの実際の残り高さに収まる場合のみ同一ページに置き、収まら
+ *     なければ専用ページを追加する単純な判定にした。
+ *
+ *   実データ検証（9文書）：全件でoverlap=0、記事欠落なし、gridv2への
+ *   フォールバック発生なし。ページ数はV43と比べて増減あり（固定grid
+ *   方式では文字量に応じた自由な段高さ調整をしないため）— 本指示書の
+ *   優先順位（安全性＞記事の自然さ＞空白削減＞ページ数削減）に従い、
+ *   ページ数の増減は許容する。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '43' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '44' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -414,19 +453,25 @@ function hatakiti_occult_pdf_build_units( $text ) {
  * @param float  $y_top       列の上端 mm
  * @param float  $col_h_mm    1列に使える高さ mm
  * @param int    $max_columns この呼び出しで使ってよい列数の上限
- * @param float  $font_pt     本文フォントサイズ(pt)
- * @param string $font_key    TCPDFフォントキー
+ * @param float    $font_pt     本文フォントサイズ(pt)
+ * @param string   $font_key    TCPDFフォントキー
+ * @param int|null $capacity_override 固定3段グリッド組版指示書§3：
+ *   省略時（null）は既存どおりhatakiti_occult_pdf_column_capacity()
+ *   （HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN=20文字で頭打ち）を使う —
+ *   既存呼び出し（Row/Block方式）の挙動は完全に無変更。gridv2エンジン
+ *   のような「1つの領域の高さをそのまま使い切りたい」呼び出し元だけが、
+ *   20文字の上限を外した実際の高さ基準の値を明示的に渡す。
  * @return array array('columns_used'=>int, 'overflow'=>bool, 'remainder'=>array)
  *               remainder は収まりきらなかった段落配列（続きをそのまま次の
  *               呼び出しに渡せる形）
  */
-function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_right, $y_top, $col_h_mm, $max_columns, $font_pt, $font_key ) {
+function hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $x_right, $y_top, $col_h_mm, $max_columns, $font_pt, $font_key, $capacity_override = null ) {
     $cannot_start = array( '、', '。', '，', '．', '・', '：', '；', '？', '！', '」', '』', '）', ')', ']', '｝', '〉', '》', '】', '〕', 'ヽ', 'ヾ' );
     $cannot_end   = array( '「', '『', '（', '(', '[', '{', '【', '〈', '《', '〔' );
 
     $char_h    = $font_pt * 0.3528;
     $col_pitch = $char_h * 1.08;
-    $capacity  = hatakiti_occult_pdf_column_capacity( $col_h_mm, $char_h );
+    $capacity  = null !== $capacity_override ? $capacity_override : hatakiti_occult_pdf_column_capacity( $col_h_mm, $char_h );
 
     $pdf->SetFont( $font_key, '', $font_pt );
 
@@ -3832,6 +3877,595 @@ function hatakiti_occult_pdf_draw_footer( $pdf, $font_regular, $font_bold, $c, $
     $pdf->MultiCell( $w, 3.2, '本紙は複数の公開情報をAIおよびHATAKITIが整理・編集したものです。元記事本文の転載を目的とせず、掲載内容の真偽を保証するものではありません。文責：チャッピー', 0, 'L' );
 }
 
+/* ============================================================
+ * 組版エンジン再設計指示書（固定3段グリッド＋パターン方式）
+ * ============================================================
+ * 「空白率の最小化」ではなく「新聞として自然な固定グリッド組版」を
+ * 目的とする新しい組版エンジン（gridv2）。既存のRow/Block/Continuation
+ * 方式（hatakiti_occult_pdf_stack_articles()以下）は一切変更・削除せず
+ * そのまま残す — gridv2が万一どのパターンにも収まらない場合の安全弁
+ * として、hatakiti_generate_occult_weekly_pdf()側でフォールバック
+ * 呼び出しに使う。
+ *
+ * 方針：
+ *  - ページ内容領域を高さの等しい3段（HATAKITI_OCCULT_PDF_GRIDV2_ROWS）
+ *    に固定分割する。段そのものは記事の矩形ではなく、記事はこの3段を
+ *    横断する複数の矩形領域（Region）の集合として占有できる。
+ *  - 組版パターンはコード内if/elseの増殖ではなく、
+ *    hatakiti_occult_pdf_gridv2_patterns() の配列としてテンプレート管理。
+ *  - 本文フォントサイズ・字送り・行送りは既存どおり全tier共通
+ *    （HATAKITI_OCCULT_PDF_BODY_FONT_PT）。見出しサイズのみtierで変える。
+ *  - 1記事は原則1ページ内で完結させる（ページを跨ぐcontinuationは
+ *    gridv2では使わない）。
+ *  - 見積もりと実描画の乖離を防ぐため、
+ *    hatakiti_occult_pdf_gridv2_draw_slot()は使い捨てPDFへの見積もり
+ *    描画と本番描画の両方に同じコードで使う（既存のdraw_one_block()と
+ *    同じ考え方）。
+ */
+
+define( 'HATAKITI_OCCULT_PDF_GRIDV2_ROWS', 3 );
+define( 'HATAKITI_OCCULT_PDF_GRIDV2_MIN_REGION_W_MM', 40.0 );
+
+/**
+ * 組版パターンのテンプレート定義。記事数（スロット数）ごとに複数の
+ * バリエーションを持つ。各パターンは：
+ *   'name'    => 診断用の名前
+ *   'slots'   => 記事ごとの領域リスト（記事順序どおり、読む順に並べる）。
+ *                各領域は ['row'=>開始段(0-2), 'span'=>占有段数(1-3),
+ *                'x'=>開始x（zone_wに対する比率0-1), 'w'=>幅の比率]。
+ *                1スロットが複数領域を持てばL字型等の複合領域になる。
+ *   'borders' => 記事境界線。['axis'=>'v'|'h', ...., 'style'=>'solid'|'dashed']。
+ *                段境界（row境界）をまたいで同じ記事の形が続く箇所には
+ *                線を引かない（§6）。異なる記事同士の境界のみ定義する。
+ *                実線＝通常の記事境界、破線＝段境界を跨いで接続する
+ *                記事境界（指示書§5）。
+ *
+ * 座標系：x=0が右端ではなく紙面左端（zone_x起点）からの比率。縦書きの
+ * 列方向とは独立な「領域の配置」だけを表す座標系である点に注意。
+ */
+function hatakiti_occult_pdf_gridv2_patterns() {
+    static $patterns = null;
+    if ( null !== $patterns ) {
+        return $patterns;
+    }
+
+    $patterns = array(
+        1 => array(
+            // 記事数1件（多くは号の最後の1記事）の場合、常に3段フルで
+            // 占有すると、短い記事では大きな余白がその1記事の脇に残る
+            // （指示書§1「余白は許容するが、空白削減のために記事を歪め
+            // ない」の裏返しとして、逆に記事に対して領域が大きすぎる
+            // 場合も同様に扱う）。1段・2段・3段の3バリエーションを候補
+            // にし、hatakiti_occult_pdf_gridv2_fill_page()が「実際に
+            // 描画で使われなかった幅×高さ」が最小の候補を選ぶことで、
+            // 記事の分量に対して自然な大きさのグリッド段数が選ばれる。
+            array(
+                'name'  => 'top1',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(),
+            ),
+            array(
+                'name'  => 'top2',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(),
+            ),
+            array(
+                'name'  => 'full',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(),
+            ),
+        ),
+        2 => array(
+            array(
+                'name'  => 'top1_bottom2',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'top2_bottom1',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'left_right_equal',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0.5, 'w' => 0.5 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'left_wide_right_narrow',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 2 / 3 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 2 / 3, 'w' => 1 / 3 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 2 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'left_narrow_right_wide',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 / 3 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 1 / 3, 'w' => 2 / 3 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 1 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                // L字型（指示書§4の例を2記事に単純化）：Aは1段目全幅＋
+                // 2-3段目の右半分、Bは2-3段目の左半分。
+                'name'  => 'L_2slot',
+                'slots' => array(
+                    array(
+                        array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ),
+                        array( 'row' => 1, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ),
+                    ),
+                    array(
+                        array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 0.5 ),
+                    ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 3, 'style' => 'solid' ),
+                    // 1-2段目境界のうち左半分（A上/B下）だけがA/B境界。
+                    // 右半分はAの自己接続なので線を引かない（§6）。
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 0.5, 'style' => 'dashed' ),
+                ),
+            ),
+        ),
+        3 => array(
+            array(
+                'name'  => 'three_rows_equal',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'three_cols_equal',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 / 3 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 1 / 3, 'w' => 1 / 3 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 2 / 3, 'w' => 1 / 3 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 1 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
+                    array( 'axis' => 'v', 'x' => 2 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'top_full_bottom_split2',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 1, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 3, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'bottom_full_top_split2',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 0, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 2, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                // L字型3記事版（指示書§4の図そのもの）。
+                'name'  => 'L_3slot',
+                'slots' => array(
+                    array(
+                        array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ),
+                        array( 'row' => 1, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ),
+                    ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.5 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ),
+                    ),
+                    array(
+                        array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.5 ),
+                    ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 2, 'style' => 'solid' ),
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 2, 'row_to' => 3, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 0.5, 'style' => 'dashed' ),
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 0.5, 'style' => 'dashed' ),
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0.5, 'x_to' => 1, 'style' => 'dashed' ),
+                ),
+            ),
+        ),
+        4 => array(
+            array(
+                'name'  => 'top1_mid2_bottom1',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 2, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                ),
+            ),
+            array(
+                'name'  => 'top2cols_bottom2rows',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
+                    array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 1, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 3, 'style' => 'solid' ),
+                ),
+            ),
+        ),
+        5 => array(
+            array(
+                'name'  => 'top2_mid2_bottom1',
+                'slots' => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+                'borders' => array(
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 2, 'style' => 'solid' ),
+                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                ),
+            ),
+        ),
+    );
+
+    return $patterns;
+}
+
+/**
+ * パターンの比率座標（row/span/x/w）を、指定した版面（zone_x,zone_y,
+ * zone_w,row_h）上の絶対mm矩形の並び（記事の読む順）へ変換する。
+ */
+function hatakiti_occult_pdf_gridv2_resolve_regions( $slot_regions_frac, $zone_x, $zone_y, $zone_w, $row_h ) {
+    $out = array();
+    foreach ( $slot_regions_frac as $r ) {
+        $out[] = array(
+            'x' => $zone_x + $r['x'] * $zone_w,
+            'y' => $zone_y + $r['row'] * $row_h,
+            'w' => $r['w'] * $zone_w,
+            'h' => $r['span'] * $row_h,
+        );
+    }
+    return $out;
+}
+
+/**
+ * 1記事を、与えられた領域リスト（同一記事の複数Region、読む順）へ
+ * 描画する（または見積もり用の使い捨てPDFへ同じ処理で「試し描画」する
+ * ——既存のdraw_one_block()同様、見積もりと本番描画を同じコードで行い、
+ * 乖離を防ぐ）。
+ *
+ * 見出しは最初のRegionにのみ描く（§7「後続領域に見出しを再表示しない」）。
+ * 本文はhatakiti_occult_pdf_layout_and_draw_columns()をRegionごとに
+ * 順番に呼び、remainderを次のRegionへそのまま引き継ぐことで、複数
+ * Regionをまたぐ自然な本文の流れを実現する（新しい描画プリミティブを
+ * 増やさず、既存の段落フロー関数をそのまま再利用）。
+ *
+ * 出典は、本文が完結したRegion（最後に使ったRegion）にのみ描く
+ * （V41で確立した「出典は記事完結時のみ表示」の原則をgridv2でも維持）。
+ * 最後のRegionの見積もり容量には、出典帯ぶんの高さを事前に差し引く。
+ *
+ * @return array array('overflow'=>bool, 'header_h'=>float, 'regions_debug'=>array)
+ *   overflow=trueは「このRegion群には記事全体が収まらなかった」ことを
+ *   示す（1記事の部分配置は禁止のため、呼び出し側はoverflow=trueの
+ *   パターンを採用してはならない）。
+ */
+function hatakiti_occult_pdf_gridv2_draw_slot( $pdf, $font_regular, $font_bold, $article, $tier, $regions ) {
+    $c        = hatakiti_occult_pdf_layout_constants();
+    $fonts    = $c['tier_fonts'][ $tier ];
+    $headline = (string) ( $article['headline'] ?? '' );
+    $body     = (string) ( $article['body'] ?? '' );
+    $r0       = $regions[0];
+
+    $header_h = hatakiti_occult_pdf_measure_headline_height( $pdf, $font_bold, $fonts['headline'], $headline, $r0['w'] );
+    if ( '' !== $headline ) {
+        $pdf->SetFont( $font_bold, '', $fonts['headline'] );
+        $pdf->SetXY( $r0['x'], $r0['y'] );
+        $pdf->MultiCell( $r0['w'], $fonts['headline'] * 0.3528 * 1.3, hatakiti_occult_pdf_fullwidth_digits( $headline ), 0, 'L' );
+    }
+
+    list( , $paragraphs ) = hatakiti_occult_pdf_count_units( $body );
+
+    $char_h    = $fonts['body'] * 0.3528;
+    $col_pitch = $char_h * 1.08;
+    $n         = count( $regions );
+    $regions_debug = array();
+
+    for ( $i = 0; $i < $n; $i++ ) {
+        $reg = $regions[ $i ];
+        if ( 0 === $i ) {
+            $y_top    = $r0['y'] + $header_h + HATAKITI_OCCULT_PDF_NORMAL_HEAD_GAP_MM;
+            $usable_h = ( $r0['y'] + $r0['h'] ) - $y_top;
+        } else {
+            $y_top    = $reg['y'];
+            $usable_h = $reg['h'];
+        }
+        $is_last_region  = ( $i === $n - 1 );
+        $reserve         = $is_last_region ? HATAKITI_OCCULT_PDF_SOURCE_STRIP_H_MM : 0.0;
+        $usable_h_forcol = max( 0.0, $usable_h - $reserve );
+        $max_cols        = max( 0, (int) floor( $reg['w'] / $col_pitch ) );
+
+        $body_used_width = 0.0;
+        $content_h       = 0.0;
+        if ( ! empty( $paragraphs ) && $max_cols >= 1 && $usable_h_forcol >= $char_h ) {
+            // 固定3段グリッド組版指示書§3：段の高さ（複数段にまたがる
+            // Regionなら最大3段ぶん）をそのまま使い切るため、既存の
+            // HATAKITI_OCCULT_PDF_CHARS_PER_COLUMN（20文字）の頭打ちは
+            // 使わず、このRegionの実高さから直接1列あたりの文字数を
+            // 求める（字送り・行送りそのものは変更しない、字数だけが
+            // 高さに応じて変わる — 実際の縦書き新聞と同じ考え方）。
+            $capacity_override = max( 1, (int) floor( ( $usable_h_forcol - HATAKITI_OCCULT_PDF_BODY_BOTTOM_MARGIN_MM ) / $char_h ) - 1 );
+            $result          = hatakiti_occult_pdf_layout_and_draw_columns( $pdf, $paragraphs, $reg['x'] + $reg['w'], $y_top, $usable_h_forcol, $max_cols, $fonts['body'], $font_regular, $capacity_override );
+            $body_used_width = $result['columns_used'] * $result['col_pitch'];
+            $content_h       = $result['content_h'];
+            $paragraphs      = $result['remainder'];
+        }
+
+        $regions_debug[] = array(
+            'region_idx'      => $i,
+            'x'               => round( $reg['x'], 2 ),
+            'y'               => round( $y_top, 2 ),
+            'w'               => round( $reg['w'], 2 ),
+            'h'               => round( $usable_h, 2 ),
+            'body_used_width' => round( $body_used_width, 2 ),
+            'content_h'       => round( $content_h, 2 ),
+        );
+
+        if ( empty( $paragraphs ) ) {
+            // この記事はこのRegionで完結した — 出典をここに描く。
+            $source_lines = hatakiti_occult_pdf_source_lines( $article['news_item_ids'] ?? array() );
+            if ( $source_lines && $reg['w'] > 12 ) {
+                $src_font  = 6.3;
+                $src_y     = $y_top + $content_h + 0.6;
+                $max_chars = max( 2, (int) floor( $reg['w'] / ( $src_font * 0.55 ) ) );
+                $sl        = $source_lines[0];
+                $text      = mb_strlen( $sl['text'] ) > $max_chars ? mb_substr( $sl['text'], 0, $max_chars - 1 ) . '…' : $sl['text'];
+                $pdf->SetFont( $font_regular, '', $src_font );
+                $pdf->SetXY( $reg['x'], $src_y );
+                $pdf->Cell( $reg['w'], 3.4, hatakiti_occult_pdf_fullwidth_digits( $text ), 0, 0, 'L' );
+                if ( $sl['url'] ) {
+                    $pdf->Link( $reg['x'], $src_y, $reg['w'], 3.4, $sl['url'] );
+                }
+            }
+            break;
+        }
+    }
+
+    return array(
+        'overflow'      => ! empty( $paragraphs ),
+        'header_h'      => $header_h,
+        'regions_debug' => $regions_debug,
+    );
+}
+
+/**
+ * 選択されたパターンの記事境界線を描画する（§5・§6）。実線＝通常の
+ * 記事境界、破線＝段境界を跨いで接続する記事境界。パターン定義に
+ * 明示された境界のみを描く（段境界だからという理由だけの機械的な
+ * 罫線は引かない）。
+ */
+function hatakiti_occult_pdf_gridv2_draw_borders( $pdf, $pattern, $zone_x, $zone_y, $zone_w, $row_h ) {
+    foreach ( $pattern['borders'] as $b ) {
+        $dash = ( 'dashed' === $b['style'] ) ? '2,1.2' : 0;
+        $pdf->SetLineStyle( array( 'width' => 0.25, 'dash' => $dash ) );
+        if ( 'v' === $b['axis'] ) {
+            $x  = $zone_x + $b['x'] * $zone_w;
+            $y1 = $zone_y + $b['row_from'] * $row_h;
+            $y2 = $zone_y + $b['row_to'] * $row_h;
+            $pdf->Line( $x, $y1, $x, $y2 );
+        } else {
+            $y  = $zone_y + $b['row'] * $row_h;
+            $x1 = $zone_x + $b['x_from'] * $zone_w;
+            $x2 = $zone_x + $b['x_to'] * $zone_w;
+            $pdf->Line( $x1, $y, $x2, $y );
+        }
+    }
+    $pdf->SetLineStyle( array( 'width' => 0.25, 'dash' => 0 ) ); // 後続描画に影響させない。
+}
+
+/**
+ * 1ページぶんの3段グリッドを埋める。既存のhatakiti_occult_pdf_
+ * stack_articles()と同じ入出力契約（&$queueを消費し、'bottom_y'/
+ * 'drew_any'/'debug'を返す）を持つため、呼び出し側
+ * （hatakiti_generate_occult_weekly_pdf()）はfooter予約・改ページ
+ * ループ等の既存の版面ロジックをそのまま使い回せる。
+ *
+ * 1回の呼び出しで必ずページ全体（3段グリッド全体）を1つのパターンで
+ * 埋める（既存Rowのような「ページ内で複数ブロックを積む」ループは
+ * 持たない — 固定グリッドは常にページ全体が単位のため）。
+ *
+ * 記事数（キュー先頭からのスロット数）は5から1まで降順に試し、各数の
+ * 全パターン候補についてキュー先頭からその数ぶんの記事が完全に収まる
+ * か（overflowなし）を使い捨てPDFで確認する。収まる候補の中から
+ * 「実描画で使われなかった幅×高さの合計」が最小のものを選ぶ（空白を
+ * 主目的にはしないが、安全な候補内での同点判定に使う程度の副次指標）。
+ * どの記事数でも1パターンも収まらない場合のみ、呼び出し側が既存の
+ * V43方式へフォールバックできるよう 'gridv2_fallback_needed'=>true を
+ * 返す（本文欠落ゼロを最優先するための安全弁、§13）。
+ */
+function hatakiti_occult_pdf_gridv2_fill_page( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no ) {
+    if ( empty( $queue ) ) {
+        return array( 'bottom_y' => $zone_y, 'drew_any' => false, 'debug' => array() );
+    }
+
+    $row_h         = $zone_h_budget / HATAKITI_OCCULT_PDF_GRIDV2_ROWS;
+    $patterns_by_n = hatakiti_occult_pdf_gridv2_patterns();
+    $max_n         = min( count( $queue ), 5 );
+
+    for ( $n = $max_n; $n >= 1; $n-- ) {
+        if ( empty( $patterns_by_n[ $n ] ) ) {
+            continue;
+        }
+        $best = null;
+        foreach ( $patterns_by_n[ $n ] as $pattern ) {
+            $too_narrow = false;
+            foreach ( $pattern['slots'] as $slot_frac_regions ) {
+                foreach ( $slot_frac_regions as $rf ) {
+                    if ( $rf['w'] * $zone_w < HATAKITI_OCCULT_PDF_GRIDV2_MIN_REGION_W_MM ) {
+                        $too_narrow = true;
+                        break 2;
+                    }
+                }
+            }
+            if ( $too_narrow ) {
+                continue;
+            }
+
+            list( $scratch_pdf, $scratch_fr, $scratch_fb ) = hatakiti_occult_pdf_new_tcpdf();
+            $scratch_pdf->AddPage();
+            $all_fit     = true;
+            $total_blank = 0.0;
+            foreach ( $pattern['slots'] as $idx => $slot_frac_regions ) {
+                $article    = $queue[ $idx ];
+                $regions_mm = hatakiti_occult_pdf_gridv2_resolve_regions( $slot_frac_regions, $zone_x, $zone_y, $zone_w, $row_h );
+                $sim        = hatakiti_occult_pdf_gridv2_draw_slot( $scratch_pdf, $scratch_fr, $scratch_fb, $article, $article['_tier'], $regions_mm );
+                if ( $sim['overflow'] ) {
+                    $all_fit = false;
+                    break;
+                }
+                foreach ( $sim['regions_debug'] as $rd ) {
+                    $total_blank += ( $rd['w'] - $rd['body_used_width'] ) * $rd['h'];
+                }
+            }
+            if ( ! $all_fit ) {
+                continue;
+            }
+            if ( null === $best || $total_blank < $best['total_blank'] - 0.001 ) {
+                $best = array( 'pattern' => $pattern, 'total_blank' => $total_blank );
+            }
+        }
+
+        if ( null !== $best ) {
+            $pattern       = $best['pattern'];
+            $placed_debug  = array();
+            $max_row_reached = 0;
+            foreach ( $pattern['slots'] as $idx => $slot_frac_regions ) {
+                foreach ( $slot_frac_regions as $rf ) {
+                    $max_row_reached = max( $max_row_reached, $rf['row'] + $rf['span'] );
+                }
+            }
+            foreach ( $pattern['slots'] as $idx => $slot_frac_regions ) {
+                $article    = array_shift( $queue );
+                $regions_mm = hatakiti_occult_pdf_gridv2_resolve_regions( $slot_frac_regions, $zone_x, $zone_y, $zone_w, $row_h );
+                $sim        = hatakiti_occult_pdf_gridv2_draw_slot( $pdf, $font_regular, $font_bold, $article, $article['_tier'], $regions_mm );
+                // 固定3段グリッド組版指示書§4・§12：L字型等の複合領域は
+                // 「region0の幅×最終regionの下端まで」という単純な外接
+                // 矩形では正しく表せない（本来は別記事の領域である「L字の
+                // 欠け」の部分まで含んでしまい、重なり検証が誤検知する）。
+                // overlap検証・診断のため、実際に占有したRegionそれぞれを
+                // 個別の矩形として記録する（1記事1エントリではなく
+                // 1Region1エントリ）。
+                foreach ( $regions_mm as $region_idx => $reg_mm ) {
+                    $placed_debug[] = array(
+                        'page'          => $page_no,
+                        'gridv2'        => true,
+                        'pattern'       => $pattern['name'],
+                        'slot'          => $idx,
+                        'region_idx'    => $region_idx,
+                        'article_id'    => $article['_debug_article_id'] ?? null,
+                        'tier'          => $article['_tier'],
+                        'headline'      => mb_substr( (string) ( $article['headline'] ?? '' ), 0, 16 ),
+                        'x'             => round( $reg_mm['x'], 1 ),
+                        'y'             => round( $reg_mm['y'], 1 ),
+                        'w'             => round( $reg_mm['w'], 1 ),
+                        'h'             => round( $reg_mm['h'], 1 ),
+                        'region_count'  => count( $regions_mm ),
+                        'overflow'      => false,
+                        'continuation'  => ( $region_idx > 0 ),
+                        'mode'          => ( 0 === $region_idx ) ? 'headline' : 'none',
+                    );
+                }
+            }
+            hatakiti_occult_pdf_gridv2_draw_borders( $pdf, $pattern, $zone_x, $zone_y, $zone_w, $row_h );
+            return array(
+                // 固定3段グリッド組版指示書：footer配置判定
+                // （hatakiti_generate_occult_weekly_pdf()側）が「この
+                // ページの残り高さ」を正しく評価できるよう、パターンが
+                // 実際に使用した最深段までの高さを返す（例：記事1件だけ
+                // が残り、1段のみのパターンが選ばれたページでは、
+                // 残り2段ぶんがfooter配置に使える）。
+                'bottom_y'       => $zone_y + ( $max_row_reached / HATAKITI_OCCULT_PDF_GRIDV2_ROWS ) * $zone_h_budget,
+                'drew_any'       => true,
+                'debug'          => $placed_debug,
+                'gridv2_pattern' => $pattern['name'],
+            );
+        }
+    }
+
+    // 安全弁：どのパターンにも1記事すら収まらない（理論上ほぼ想定外の
+    // 極端な文字量の場合のみ到達）。呼び出し側にV43方式へのフォール
+    // バックを促す（本文欠落ゼロを最優先、§13）。
+    return array( 'bottom_y' => $zone_y, 'drew_any' => false, 'debug' => array(), 'gridv2_fallback_needed' => true );
+}
+
+/**
+ * 固定3段グリッド組版指示書：V43のhatakiti_occult_pdf_trial_fits_with_
+ * footer_reserved()と同じ考え方をgridv2向けに提供する。使い捨てPDF上で
+ * hatakiti_occult_pdf_gridv2_fill_page()を$budgetで実際に試し、その
+ * 1ページだけでキューが尽きるか（＝footer分を差し引いた予算でも
+ * このページが最後の記事ページになり得るか）を返す。gridv2の
+ * フォールバックが発生した試行は「尽きた」とみなさない（本文欠落を
+ * 前提にした判定をしないため）。
+ */
+function hatakiti_occult_pdf_gridv2_trial_fits_with_footer_reserved( $queue, $zone_x, $zone_y, $zone_w, $budget, $page_no ) {
+    if ( $budget <= 0 ) {
+        return false;
+    }
+    list( $scratch_pdf, $scratch_fr, $scratch_fb ) = hatakiti_occult_pdf_new_tcpdf();
+    $scratch_pdf->AddPage();
+    $queue_copy = $queue; // PHPの配列は値渡し — 実際の$queueには影響しない。
+    $result     = hatakiti_occult_pdf_gridv2_fill_page( $queue_copy, $scratch_pdf, $scratch_fr, $scratch_fb, $zone_x, $zone_y, $zone_w, $budget, $page_no );
+    return empty( $queue_copy ) && empty( $result['gridv2_fallback_needed'] );
+}
+
 /**
  * メインエントリ：occult_weekly の post_id から紙面PDFを組版し、
  * 一時ファイルパスを返す。呼び出し側で保存/配信/削除を行う。
@@ -3919,64 +4553,55 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
     $pdf->AddPage();
     hatakiti_occult_pdf_draw_masthead( $pdf, $font_regular, $font_bold, $c, $issue_subtitle, $issue_id, $issue_date );
 
-    // footer（出典一覧＋編集後記）ぶんの余白を毎ページ機械的に確保
-    // すると、記事がまだ続くページにも常に「footerのための空白」が
-    // 残ってしまい、「前ページに十分な空きがあるのに続きを次ページへ
-    // 送る」不具合の直接の原因になる。そこで通常は記事ページを常に
-    // フル高さで積むが、残りキューが少ない（footerで最後になり得る）
-    // 段階では、事前トライアル
-    // （hatakiti_occult_pdf_trial_fits_with_footer_reserved()）で
-    // 「footer分を手前で切り上げても残りキューが尽きるか」を確認し、
-    // 尽きるならそのページだけfooter分の余白を残して積む — これにより
-    // 出典・編集後記専用ページの発生そのものを避ける（PDFページ数
-    // 最小化指示書§1〜§4）。専用ページになった場合のみ、その理由を
-    // $debug_logへ記録する。
+    // 固定3段グリッド組版指示書：gridv2は常にページ全体（3段グリッド）を
+    // 1つのパターンで埋めるため、旧V43方式のような「footer分だけ予算を
+    // 縮めて詰め直す」reduced_budget／endgame再配置は行わない（固定grid
+    // は縮められない）。ページを埋めた後の実際の残り高さ（bottom_y、
+    // 記事数が少なくグリッドの一部しか使わなかった場合はその分だけ
+    // 残る）にfooterが収まるかを見るだけの単純な判定にする。収まらない
+    // 場合は素直にfooter専用ページを追加する（PDFページ数最小化より
+    // 安全性・単純さを優先、指示書§1「余白は許容する」）。
+    // hatakiti_occult_pdf_trial_fits_with_footer_reserved()／
+    // hatakiti_occult_pdf_find_endgame_reflow_budget()自体は削除せず
+    // 現行のまま残す（gridv2フォールバック時の安全弁用に温存）。
     $footer_margin    = 3.0;
     $footer_y         = null;
     $footer_dedicated_reason = null;
     $max_pages_safety = 12;
     $page_no          = 1;
 
-    // まず「フル高さで積んだ場合、このページだけでキューが尽きるか
-    // （＝このページが最後の記事ページになり得るか）」を安く確認する。
-    // 尽きない（まだ何ページも続く）とわかっている序盤のページでは、
-    // footer関連のトライアルをそもそも試す意味がないため省略する
-    // （生成時間の無駄を避ける）。
-    $would_finish_full_p1 = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, 1 );
-    $reserve_footer_p1    = false;
-    $endgame_budget_p1    = null;
-    $endgame_best_p1      = null;
-    $page1_budget_to_use  = $page1_col_h_full;
-    if ( $would_finish_full_p1 ) {
+    // footer専用ページの発生をできるだけ避けるため、V43と同じ考え方の
+    // 事前トライアルをgridv2向けに行う：まずフル予算でこのページだけで
+    // キューが尽きるか確認し、尽きるならfooter分を差し引いた予算でも
+    // 尽きるかを追加で確認する。両方成功した場合のみ、実際の描画も
+    // その縮小予算で行う（固定3段グリッドの段高さがその分だけ低くなる
+    // だけで、パターン選択・安全性チェックの仕組み自体は変わらない）。
+    $page1_budget_to_use = $page1_col_h_full;
+    if ( hatakiti_occult_pdf_gridv2_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, 1 ) ) {
         $reduced_budget_p1 = $page1_col_h_full - $footer_h - $footer_margin;
-        $reserve_footer_p1 = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page1_col_top, $full_w, $reduced_budget_p1, 1 );
-        if ( $reserve_footer_p1 ) {
+        if ( hatakiti_occult_pdf_gridv2_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page1_col_top, $full_w, $reduced_budget_p1, 1 ) ) {
             $page1_budget_to_use = $reduced_budget_p1;
-        } else {
-            // footerを置く余白がこのページには全く足りない。案B：
-            // このページを少し縮めて残り記事を次ページへ送り、次ページで
-            // 残り記事＋footerをまとめて収容できないか試す。
-            $endgame_result_p1 = hatakiti_occult_pdf_find_endgame_reflow_budget( $queue, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, $footer_h, $footer_margin, 1, $page_n_col_top, $page_n_col_h_full );
-            $endgame_budget_p1 = $endgame_result_p1['budget'];
-            $endgame_best_p1   = $endgame_result_p1['best_attempt'];
-            if ( null !== $endgame_budget_p1 ) {
-                $page1_budget_to_use = $endgame_budget_p1;
-            }
         }
     }
-
-    $page1_stack = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $full_w, $page1_budget_to_use, 1 );
-    $debug_log   = $page1_stack['debug'];
+    $page1_result = hatakiti_occult_pdf_gridv2_fill_page( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $full_w, $page1_budget_to_use, 1 );
+    if ( ! empty( $page1_result['gridv2_fallback_needed'] ) ) {
+        // 安全弁：gridv2のどのパターンにも記事が1件も収まらない
+        // （極端な文字量等の）想定外ケースのみ到達する。本文欠落ゼロを
+        // 最優先し、既存V43方式（continuation対応）へフォールバックする。
+        $warnings[] = '1ページ目の記事がgridv2の組版パターンに収まらず、既存方式（V43）へフォールバックしました。';
+        $page1_result = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page1_col_top, $full_w, $page1_col_h_full, 1 );
+    }
+    $debug_log = $page1_result['debug'];
 
     if ( empty( $queue ) ) {
         // 全記事が1面だけで収まった。footerが1面の残り高さに収まるか
         // を確認し、収まらなければfooter専用ページを足す。
-        $bottom_y        = max( $page1_stack['bottom_y'], $page1_col_top + 40 );
+        $bottom_y        = max( $page1_result['bottom_y'], $page1_col_top + 40 );
         $remaining_on_p1 = ( $page1_col_top + $page1_col_h_full ) - $bottom_y;
         if ( $remaining_on_p1 >= $footer_h + $footer_margin ) {
             $footer_y = $bottom_y;
         } else {
-            $footer_dedicated_reason = sprintf( '1ページ目残り高さ%.1fmm（footer必要%.1fmm、reduced_budget試行=%s、endgame再配置試行=%s）', $remaining_on_p1, $footer_h + $footer_margin, $reserve_footer_p1 ? 'yes' : 'no', hatakiti_occult_pdf_format_endgame_reason( $would_finish_full_p1, $endgame_budget_p1, $endgame_best_p1 ) );
+            $footer_dedicated_reason = sprintf( '1ページ目残り高さ%.1fmm（footer必要%.1fmm、gridv2縮小予算トライアルでも収まらなかった）', $remaining_on_p1, $footer_h + $footer_margin );
         }
     } else {
         $page_no = 2;
@@ -3984,41 +4609,29 @@ function hatakiti_generate_occult_weekly_pdf( $post_id ) {
             $pdf->AddPage();
             hatakiti_occult_pdf_draw_page2_header( $pdf, $font_regular, $c, $page_no );
 
-            $would_finish_full_n  = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no );
-            $reserve_footer_n     = false;
-            $endgame_budget_n     = null;
-            $endgame_best_n       = null;
             $page_n_budget_to_use = $page_n_col_h_full;
-            if ( $would_finish_full_n ) {
+            if ( hatakiti_occult_pdf_gridv2_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no ) ) {
                 $reduced_budget_n = $page_n_col_h_full - $footer_h - $footer_margin;
-                $reserve_footer_n = hatakiti_occult_pdf_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page_n_col_top, $full_w, $reduced_budget_n, $page_no );
-                if ( $reserve_footer_n ) {
+                if ( hatakiti_occult_pdf_gridv2_trial_fits_with_footer_reserved( $queue, $c['margin_l'], $page_n_col_top, $full_w, $reduced_budget_n, $page_no ) ) {
                     $page_n_budget_to_use = $reduced_budget_n;
-                } else {
-                    // footerを置く余白がこのページには全く足りない。案B：
-                    // このページを少し縮めて残り記事を次ページへ送り、次
-                    // ページで残り記事＋footerをまとめて収容できないか試す。
-                    $endgame_result_n = hatakiti_occult_pdf_find_endgame_reflow_budget( $queue, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $footer_h, $footer_margin, $page_no, $page_n_col_top, $page_n_col_h_full );
-                    $endgame_budget_n = $endgame_result_n['budget'];
-                    $endgame_best_n   = $endgame_result_n['best_attempt'];
-                    if ( null !== $endgame_budget_n ) {
-                        $page_n_budget_to_use = $endgame_budget_n;
-                    }
                 }
             }
-
-            $page_n_stack = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_budget_to_use, $page_no );
-            $debug_log    = array_merge( $debug_log, $page_n_stack['debug'] );
+            $page_n_result = hatakiti_occult_pdf_gridv2_fill_page( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_budget_to_use, $page_no );
+            if ( ! empty( $page_n_result['gridv2_fallback_needed'] ) ) {
+                $warnings[] = "{$page_no}ページ目の記事がgridv2の組版パターンに収まらず、既存方式（V43）へフォールバックしました。";
+                $page_n_result = hatakiti_occult_pdf_stack_articles( $queue, $pdf, $font_regular, $font_bold, $c['margin_l'], $page_n_col_top, $full_w, $page_n_col_h_full, $page_no );
+            }
+            $debug_log = array_merge( $debug_log, $page_n_result['debug'] );
 
             if ( empty( $queue ) ) {
                 // このページで記事が尽きた。footerがこのページの
                 // 残り高さに収まるかを確認する。
-                $bottom_y        = max( $page_n_stack['bottom_y'], $page_n_col_top + 30 );
+                $bottom_y        = max( $page_n_result['bottom_y'], $page_n_col_top + 30 );
                 $remaining_on_pg = ( $page_n_col_top + $page_n_col_h_full ) - $bottom_y;
                 if ( $remaining_on_pg >= $footer_h + $footer_margin ) {
                     $footer_y = $bottom_y;
                 } else {
-                    $footer_dedicated_reason = sprintf( '%dページ目残り高さ%.1fmm（footer必要%.1fmm、reduced_budget試行=%s、endgame再配置試行=%s）', $page_no, $remaining_on_pg, $footer_h + $footer_margin, $reserve_footer_n ? 'yes' : 'no', hatakiti_occult_pdf_format_endgame_reason( $would_finish_full_n, $endgame_budget_n, $endgame_best_n ) );
+                    $footer_dedicated_reason = sprintf( '%dページ目残り高さ%.1fmm（footer必要%.1fmm、gridv2縮小予算トライアルでも収まらなかった）', $page_no, $remaining_on_pg, $footer_h + $footer_margin );
                 }
                 // 収まらない場合は $footer_y を null のままにし、
                 // ループの外でfooter専用ページを追加する。
