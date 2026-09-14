@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-urayasu-taisho-roku-otsunami",
+  "status": "draft",
+  "title": "大正六年の大津波",
+  "title_normalized": "大正六年の大津波",
+  "title_origin": "oral_tradition_title",
+  "summary": {
+    "text": "大正6年（1917）の東京湾沿岸の災害をめぐり、浦安では鎮守の松、神の声、木の上の蛇、鎮守が人命を守った話、災害後に生まれた子どもの命名など、複数の伝承が語り継がれている。",
+    "based_on_source_ids": [
+      "SRC-URAYASU-MINWA-TAISHO6-OTSUNAMI",
+      "SRC-URAYASU-YONEYA-SAIGAI-KOSHO"
+    ]
+  },
+  "story_summary": "大正6年の東京湾沿岸の災害は、浦安で複数の世間話・災害伝承を生んだ。伝承には、倒れた鎮守の松の大木がいつの間にか元通りに立っていたという話、神さまの声を聞いた話、津波から逃れるため木に登り、その木に多数の蛇が集まったという話、鎮守さまが人々の命を守ったという話、さらに災害の最中に産気づいた女性が子を産み、その子に「ツナ」「なみ」などと名づけた話などがある。",
+  "story_content": "浦安では大正6年（1917）の東京湾沿岸の災害について、単一の話ではなく複数の世間話が伝えられている。千葉県立図書館の民話索引には『大正六年の大津波』として、（一）不思議な松の木、（二）神さまの声、（三）木の上の蛇、（四）津波から守った鎮守さまが挙げられている。米屋陽一の災害と口承文芸に関する論考でも、浦安には倒れた鎮守の松の大木がいつの間にか元通りに立っていた話、神さまの声を聞いた話、木の上にたくさんの蛇が登った話、津波から命を守ってくれた鎮守さまの話、妊婦が産気づいて生まれた子どもに「ツナ」「なみ」などと命名した話などが伝承されてきたと紹介されている。なお、論考では当時の災害について実際には津波ではなく高潮だったとの指摘もあるため、本記録では『大津波』という伝承上の題名を保持しつつ、災害の自然現象について断定しない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "浦安市",
+    "area_name": "猫実・堀江・当代島など",
+    "source_description": "千葉県立図書館の民話索引および口承文芸研究者・米屋陽一の論考で浦安の災害伝承群として確認。"
+  },
+  "locations": [
+    {
+      "name": "浦安市内",
+      "location_type": "tradition_region",
+      "description": "大正6年の災害をめぐる複数の伝承が分布する地域。",
+      "latitude": null,
+      "longitude": null,
+      "precision": "municipality",
+      "source_ids": [
+        "SRC-URAYASU-MINWA-TAISHO6-OTSUNAMI",
+        "SRC-URAYASU-YONEYA-SAIGAI-KOSHO"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "鎮守さま",
+      "type": "神仏・信仰対象",
+      "description": "災害から人々の命を守ったと伝えられる地域の鎮守。",
+      "source_ids": [
+        "SRC-URAYASU-MINWA-TAISHO6-OTSUNAMI",
+        "SRC-URAYASU-YONEYA-SAIGAI-KOSHO"
+      ]
+    }
+  ],
+  "themes": [
+    "災害伝承",
+    "高潮・津波",
+    "鎮守信仰",
+    "神の声",
+    "蛇",
+    "松",
+    "出産と命名",
+    "浦安"
+  ],
+  "story_type": [
+    "災害伝承",
+    "信仰伝承",
+    "世間話"
+  ],
+  "related_records": [
+    {
+      "record_id": "chiba-urayasu-urayasu-sansha-festival",
+      "relationship": "related_tradition",
+      "note": "浦安の鎮守信仰に関する既存記録。大正6年の災害伝承とは別の記録として保持する。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-URAYASU-MINWA-TAISHO6-OTSUNAMI",
+      "title": "千葉県の民話 浦安市",
+      "publisher": "千葉県立図書館",
+      "publication_date": "web",
+      "source_type": "prefectural_library_minnwa_index",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+      "accessed_date": "2026-09-14",
+      "relevant_section": "大正六年の大津波（一）～（四）",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-URAYASU-YONEYA-SAIGAI-KOSHO",
+      "title": "災害と口承文芸",
+      "publisher": "日本口承文芸学会",
+      "publication_date": "2014頃",
+      "source_type": "academic_conference_paper",
+      "url": "https://ko-sho.org/download/K_038/SFNRJ_K_038-06.pdf",
+      "accessed_date": "2026-09-14",
+      "relevant_section": "大正六年の大津波に関する浦安の災害伝承",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "『大正六年の大津波』は千葉県立図書館の民話索引で四つの個別話に分かれて掲載されている。現時点で各話本文を直接確認できていないため、四話の細部を創作せず、研究論考で確認できた伝承群として統合記録した。米屋陽一の論考には実際は津波ではなく高潮との指摘があるため、自然現象については断定しない。"
+}
