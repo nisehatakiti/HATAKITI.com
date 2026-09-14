@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-urayasu-kame-nori-yakushi-nyorai",
+  "status": "draft",
+  "title": "亀乗薬師如来",
+  "title_normalized": "亀乗薬師如来",
+  "title_origin": "local_tradition_name",
+  "summary": {"text": "元亀年間ごろ、堀江村の与八郎の母が砂浜で拾った薬師如来像が、疫病に苦しむ一家を救い、後に東学寺へ奉納されたと伝える寺院縁起。", "based_on_source_ids": ["SRC-URAYASU-TOGAKUJI-SIGN", "SRC-URAYASU-TOGAKUJI-HISTORY"]},
+  "story_summary": "元亀年間ごろの堀江村で、与八郎の母が砂浜で人形のようなものを拾い、玩具箱に入れていた。村に疫病が流行し家族が病に倒れたため与八郎が薬師如来に祈願すると、住職から自宅に薬師如来があると告げられた。帰宅して探すと玩具箱の中に亀に乗った薬師如来像があり、これを祀ると家族の病が快復した。後に像は東学寺へ奉納されたという。",
+  "story_content": "浦安市堀江の東学寺に伝わる縁起。元亀年間（一五七〇～一五七三）ごろ、与八郎の母が砂浜で拾った人形のようなものを玩具箱に入れていた。その後、村に疫病が流行し、与八郎を除く家族や使用人が病に倒れた。与八郎が木下川の薬師如来へ祈願すると、住職から自宅に薬師如来があると告げられた。帰宅して探すと玩具箱の中から亀の上に乗った薬師如来像が見つかった。これを仏壇に安置して供養したところ家族が快復し、後に与八郎が東学寺へ奉納したと伝えられる。像は非公開。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "浦安市", "area_name": "堀江", "source_description": "浦安市教育委員会の現地案内板と複数資料で確認。"},
+  "locations": [{"name": "東学寺", "location_type": "tradition_site", "description": "亀乗薬師如来を本尊として祀る寺院。", "latitude": null, "longitude": null, "precision": "address", "source_ids": ["SRC-URAYASU-TOGAKUJI-SIGN"]}],
+  "characters": [{"name": "与八郎", "role": "伝承上の人物", "description": "薬師如来を祀り、後に像を東学寺へ奉納した人物。", "source_ids": ["SRC-URAYASU-TOGAKUJI-SIGN"]}, {"name": "与八郎の母", "role": "伝承上の人物", "description": "砂浜で薬師如来像を拾った人物。", "source_ids": ["SRC-URAYASU-TOGAKUJI-SIGN"]}],
+  "beings": [{"name": "亀乗薬師如来", "type": "神仏・信仰対象", "description": "亀の上に乗った薬師如来像。疫病平癒の霊験が伝えられる。", "source_ids": ["SRC-URAYASU-TOGAKUJI-SIGN"]}],
+  "themes": ["薬師信仰", "疫病平癒", "霊験", "寺院縁起", "堀江"],
+  "story_type": ["寺社縁起", "霊験譚", "信仰伝承"],
+  "related_records": [],
+  "sources": [{"source_id": "SRC-URAYASU-TOGAKUJI-SIGN", "title": "東学寺本堂脇案内板・亀乗薬師如来縁起", "publisher": "浦安市教育委員会", "publication_date": "平成20年2月案内板", "source_type": "onsite_signboard", "url": "https://www.travel.smileandhappiness.net/togakuji-urayasu.html", "accessed_date": "2026-09-14", "relevant_section": "亀乗薬師如来", "language": "ja"}, {"source_id": "SRC-URAYASU-TOGAKUJI-HISTORY", "title": "東学寺｜浦安市堀江にある真言宗豊山派寺院", "publisher": "寺院縁起・歴史資料紹介", "publication_date": "web", "source_type": "local_history_reference", "url": "https://tesshow.jp/chiba/urayas/temple_horie_togak.html", "accessed_date": "2026-09-14", "relevant_section": "東学寺の縁起・亀乗薬師如来", "language": "ja"}],
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "浦安市教育委員会の現地案内板の内容と複数資料が一致するため登録。疫病平癒の効験は伝承上の内容として記録。"
+}
