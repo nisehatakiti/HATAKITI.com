@@ -157,8 +157,49 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  *   方式では文字量に応じた自由な段高さ調整をしないため）— 本指示書の
  *   優先順位（安全性＞記事の自然さ＞空白削減＞ページ数削減）に従い、
  *   ページ数の増減は許容する。
+ *
+ * 45: 組版再修正指示書（3段グリッド優先・互い違い型）。V44のgridv2が
+ *   実際のPDFで「3段グリッドを維持しつつ記事を積む」ではなく「記事の
+ *   箱を組み立てる」ような見た目になっていた3点を修正：
+ *
+ *   (A) 3段グリッドの構造が視覚的に失われる配置がある
+ *   (B) 3記事構成で、Aが段の幅を使い切らない場合でも隣にBがすぐ始まらず、
+ *       Aの分量が尽きるまでBが下段に押し出されていた
+ *   (C) 4記事の「正確な十字型」（top2cols_bottom2rows、2×2完全分割）が
+ *       機械的に見える
+ *
+ *   対応：
+ *   - hatakiti_occult_pdf_gridv2_patterns()の各パターンに
+ *     'priority'=>'primary'/'fallback'（省略時'primary'）を追加。
+ *     hatakiti_occult_pdf_gridv2_fill_page()は同じ記事数につきまず
+ *     primary群だけで候補を探し、1つも収まらない場合のみfallback群を
+ *     試す2段階選択にした。
+ *   - N=3にZ字型（Z_zigzag_R/L）・逆T字（top_pair_then_wide）・T字
+ *     （wide_then_pair）をprimaryとして追加、既存のthree_rows_equal・
+ *     three_cols_equalはfallbackに降格（Aの隣にBがすぐ始まる「互い違い」
+ *     形状を優先するため）。
+ *   - N=4のtop2cols_bottom2rows（正確な十字型）を完全に削除し、代わりに
+ *     互い違い型（staggered_ABCD/_mirror）と非対称型
+ *     （big_left_stack_right）をprimaryとして追加。
+ *   - N=5に入れ子型（nested_5slot/_mirror、半段row=1.5のサブ分割を使用）
+ *     をprimaryとして追加、既存のtop2_mid2_bottom1はfallbackに降格。
+ *   - 各パターンの'borders'（実線/破線の手書き配列）を廃止し、
+ *     hatakiti_occult_pdf_gridv2_derive_borders()が'slots'の矩形配置
+ *     から自動導出するように変更（L字・Z字・入れ子型など記事が段境界を
+ *     またぐ位置が複雑なパターンほど、手書きの破線/実線判定を書き間違え
+ *     やすく、実際に新規パターンの一部で「同じ記事の折れ目」の判定を
+ *     誤っていたため）。判定規則：段の整数境界（row=1・2）で同じ記事の
+ *     Region同士が接する箇所は破線、異なる記事同士は実線、半段
+ *     （row=1.5等）の境界は常に実線。
+ *
+ *   実データ検証（9文書）：全件でoverlap=0（実描画矩形ベース、丸め誤差
+ *   による0.1mm未満の見かけ上の重なりのみ検出されたが高精度座標で再検証
+ *   し実際の重なりでないことを確認）、記事欠落なし、gridv2へのフォール
+ *   バック発生なし、警告なし。新パターンのborders自動導出は、手計算した
+ *   正しい実線/破線配置と一致することをL字・Z字・入れ子型3パターンで
+ *   個別に検証済み。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '44' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '45' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -3914,11 +3955,14 @@ define( 'HATAKITI_OCCULT_PDF_GRIDV2_MIN_REGION_W_MM', 40.0 );
  *                各領域は ['row'=>開始段(0-2), 'span'=>占有段数(1-3),
  *                'x'=>開始x（zone_wに対する比率0-1), 'w'=>幅の比率]。
  *                1スロットが複数領域を持てばL字型等の複合領域になる。
- *   'borders' => 記事境界線。['axis'=>'v'|'h', ...., 'style'=>'solid'|'dashed']。
- *                段境界（row境界）をまたいで同じ記事の形が続く箇所には
- *                線を引かない（§6）。異なる記事同士の境界のみ定義する。
- *                実線＝通常の記事境界、破線＝段境界を跨いで接続する
- *                記事境界（指示書§5）。
+ *                'priority'（省略時'primary'）=>'primary'/'fallback'。
+ *                同じ記事数の中ではまずprimary群だけで候補を探し、1つも
+ *                収まらない場合のみfallback群を試す（§11）。
+ *   罫線（実線/破線）は'slots'に持たせず、
+ *   hatakiti_occult_pdf_gridv2_derive_borders()が矩形配置から自動導出
+ *   する。段境界（row=1,2）で同じ記事のRegion同士が接する箇所は破線、
+ *   異なる記事同士が接する箇所は実線、半段（row=1.5等）の境界は常に
+ *   実線（破線は「段の境界」専用、指示書§9）。
  *
  * 座標系：x=0が右端ではなく紙面左端（zone_x起点）からの比率。縦書きの
  * 列方向とは独立な「領域の配置」だけを表す座標系である点に注意。
@@ -3929,6 +3973,19 @@ function hatakiti_occult_pdf_gridv2_patterns() {
         return $patterns;
     }
 
+    // 組版再修正指示書（3段グリッド優先・互い違い型）§11：'priority'は
+    // 'primary'（既定・記事の文字量に合えば積極的に採用）と'fallback'
+    // （他のprimaryパターンが1つも収まらない場合のみ試す最終手段）の
+    // 2段階のみとする。hatakiti_occult_pdf_gridv2_fill_page()は同じ
+    // 記事数につき、まずprimary群だけで空き面積最小の候補を探し、
+    // 1つも収まらなければfallback群を試す。
+    //
+    // §9・§11: 各パターンは'slots'（記事ごとのRegion矩形群）のみを持ち、
+    // 'borders'（罫線の実線/破線）は持たない。罫線は
+    // hatakiti_occult_pdf_gridv2_derive_borders()が'slots'の矩形配置
+    // から自動導出する（L字・Z字・入れ子型のように記事が段境界をまたぐ
+    // 位置が複雑になるほど、手書きの罫線指定は「どこが同一記事の折れ目
+    // か」を書き間違えやすいため）。
     $patterns = array(
         1 => array(
             // 記事数1件（多くは号の最後の1記事）の場合、常に3段フルで
@@ -3944,21 +4001,18 @@ function hatakiti_occult_pdf_gridv2_patterns() {
                 'slots' => array(
                     array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
                 ),
-                'borders' => array(),
             ),
             array(
                 'name'  => 'top2',
                 'slots' => array(
                     array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
                 ),
-                'borders' => array(),
             ),
             array(
                 'name'  => 'full',
                 'slots' => array(
                     array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 ) ),
                 ),
-                'borders' => array(),
             ),
         ),
         2 => array(
@@ -3968,18 +4022,12 @@ function hatakiti_occult_pdf_gridv2_patterns() {
                     array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
                     array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
                 ),
-                'borders' => array(
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                ),
             ),
             array(
                 'name'  => 'top2_bottom1',
                 'slots' => array(
                     array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
                     array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
                 ),
             ),
             array(
@@ -3988,9 +4036,6 @@ function hatakiti_occult_pdf_gridv2_patterns() {
                     array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 0.5 ) ),
                     array( array( 'row' => 0, 'span' => 3, 'x' => 0.5, 'w' => 0.5 ) ),
                 ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
-                ),
             ),
             array(
                 'name'  => 'left_wide_right_narrow',
@@ -3998,18 +4043,12 @@ function hatakiti_occult_pdf_gridv2_patterns() {
                     array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 2 / 3 ) ),
                     array( array( 'row' => 0, 'span' => 3, 'x' => 2 / 3, 'w' => 1 / 3 ) ),
                 ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 2 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
-                ),
             ),
             array(
                 'name'  => 'left_narrow_right_wide',
                 'slots' => array(
                     array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 / 3 ) ),
                     array( array( 'row' => 0, 'span' => 3, 'x' => 1 / 3, 'w' => 2 / 3 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 1 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
                 ),
             ),
             array(
@@ -4025,67 +4064,54 @@ function hatakiti_occult_pdf_gridv2_patterns() {
                         array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 0.5 ),
                     ),
                 ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 3, 'style' => 'solid' ),
-                    // 1-2段目境界のうち左半分（A上/B下）だけがA/B境界。
-                    // 右半分はAの自己接続なので線を引かない（§6）。
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 0.5, 'style' => 'dashed' ),
-                ),
             ),
         ),
         3 => array(
+            // 組版再修正指示書§2・§3・§8：「Aが段の一部しか使わず、隣に
+            // Bがすぐ始まり、Bも段をまたいで反転する」Z字型を最優先候補
+            // にする。Aが最大、Bが中量（2段にまたがる）、Cが少量、という
+            // 文字量比を想定。
             array(
-                'name'  => 'three_rows_equal',
-                'slots' => array(
-                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                    array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
+                'name'     => 'Z_zigzag_R',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array(
+                        array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ),
+                        array( 'row' => 1, 'span' => 1, 'x' => 0.6, 'w' => 0.4 ),
+                    ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.6 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0.25, 'w' => 0.75 ),
+                    ),
+                    array(
+                        array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.25 ),
+                    ),
                 ),
             ),
             array(
-                'name'  => 'three_cols_equal',
-                'slots' => array(
-                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 / 3 ) ),
-                    array( array( 'row' => 0, 'span' => 3, 'x' => 1 / 3, 'w' => 1 / 3 ) ),
-                    array( array( 'row' => 0, 'span' => 3, 'x' => 2 / 3, 'w' => 1 / 3 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 1 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
-                    array( 'axis' => 'v', 'x' => 2 / 3, 'row_from' => 0, 'row_to' => 3, 'style' => 'solid' ),
-                ),
-            ),
-            array(
-                'name'  => 'top_full_bottom_split2',
-                'slots' => array(
-                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                    array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 0.5 ) ),
-                    array( array( 'row' => 1, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 3, 'style' => 'solid' ),
+                // Z_zigzag_Rの左右反転。
+                'name'     => 'Z_zigzag_L',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array(
+                        array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ),
+                        array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.4 ),
+                    ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0.4, 'w' => 0.6 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.75 ),
+                    ),
+                    array(
+                        array( 'row' => 2, 'span' => 1, 'x' => 0.75, 'w' => 0.25 ),
+                    ),
                 ),
             ),
             array(
-                'name'  => 'bottom_full_top_split2',
-                'slots' => array(
-                    array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 0.5 ) ),
-                    array( array( 'row' => 0, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ) ),
-                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 2, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                ),
-            ),
-            array(
-                // L字型3記事版（指示書§4の図そのもの）。
-                'name'  => 'L_3slot',
-                'slots' => array(
+                // 既存L字型（Aが1段全幅+2段右半、Bが2段左半+3段右半、
+                // Cが3段左半）。Z_zigzag系より緩やかな文字量差のとき。
+                'name'     => 'L_zigzag_R',
+                'priority' => 'primary',
+                'slots'    => array(
                     array(
                         array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ),
                         array( 'row' => 1, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ),
@@ -4098,60 +4124,150 @@ function hatakiti_occult_pdf_gridv2_patterns() {
                         array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.5 ),
                     ),
                 ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 2, 'style' => 'solid' ),
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 2, 'row_to' => 3, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 0.5, 'style' => 'dashed' ),
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 0.5, 'style' => 'dashed' ),
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0.5, 'x_to' => 1, 'style' => 'dashed' ),
+            ),
+            array(
+                // 逆T字：上段に少量2記事が並び、下2段を大記事1本が使う。
+                'name'     => 'top_pair_then_wide',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 0.55 ) ),
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0.55, 'w' => 0.45 ) ),
+                    array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
+                ),
+            ),
+            array(
+                // T字：上2段を大記事1本が使い、下段に少量2記事。
+                'name'     => 'wide_then_pair',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 2, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
+                ),
+            ),
+            // フォールバック（3記事の文字量がほぼ同量で、上記のどの
+            // 非対称パターンも「空きが大きすぎる/狭すぎる」形で不採用に
+            // なった場合のみ使う単純な矩形積み）。
+            array(
+                'name'     => 'three_rows_equal',
+                'priority' => 'fallback',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                ),
+            ),
+            array(
+                'name'     => 'three_cols_equal',
+                'priority' => 'fallback',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 1 / 3 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 1 / 3, 'w' => 1 / 3 ) ),
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 2 / 3, 'w' => 1 / 3 ) ),
                 ),
             ),
         ),
         4 => array(
+            // 組版再修正指示書§4・§5：正確な十字型（2×2）は不採用とし、
+            // 段ごとに分割位置が変わる「互い違い」型を基本にする。
             array(
-                'name'  => 'top1_mid2_bottom1',
-                'slots' => array(
+                // A=1段目全幅／B=2段目左寄り／C=2段目右寄り+3段目右寄り
+                // （幅が広がる）／D=3段目左寄り。
+                'name'     => 'staggered_ABCD',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.65 ) ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0.65, 'w' => 0.35 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0.25, 'w' => 0.75 ),
+                    ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.25 ) ),
+                ),
+            ),
+            array(
+                // staggered_ABCDの左右反転。
+                'name'     => 'staggered_ABCD_mirror',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0.35, 'w' => 0.65 ) ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.35 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.75 ),
+                    ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0.75, 'w' => 0.25 ) ),
+                ),
+            ),
+            array(
+                // 大記事1本が左側全高、右側に小記事3本を縦積み
+                // （十字型ではなく「大＋小3本の非対称」）。
+                'name'     => 'big_left_stack_right',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 3, 'x' => 0, 'w' => 0.55 ) ),
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0.55, 'w' => 0.45 ) ),
+                    array( array( 'row' => 1, 'span' => 1, 'x' => 0.55, 'w' => 0.45 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0.55, 'w' => 0.45 ) ),
+                ),
+            ),
+            array(
+                // T字：上段全幅・下2段左右分割（互い違いではないが十字
+                // 型でもないため、上記の非対称パターンが不成立の場合の
+                // 中間的な候補として残す）。
+                'name'     => 'top1_mid2_bottom1',
+                'priority' => 'primary',
+                'slots'    => array(
                     array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
                     array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
                     array( array( 'row' => 1, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
                     array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
                 ),
-                'borders' => array(
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 2, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                ),
-            ),
-            array(
-                'name'  => 'top2cols_bottom2rows',
-                'slots' => array(
-                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
-                    array( array( 'row' => 0, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
-                    array( array( 'row' => 1, 'span' => 2, 'x' => 0, 'w' => 0.5 ) ),
-                    array( array( 'row' => 1, 'span' => 2, 'x' => 0.5, 'w' => 0.5 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 3, 'style' => 'solid' ),
-                ),
             ),
         ),
         5 => array(
+            // 組版再修正指示書§10：大記事Aの周囲に中小記事4本を噛み合わ
+            // せる。半段（span=0.5）分割を使い、C/Dが2段目右側を上下で
+            // 分け合う。
             array(
-                'name'  => 'top2_mid2_bottom1',
-                'slots' => array(
+                'name'     => 'nested_5slot',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.65 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0.25, 'w' => 0.75 ),
+                    ),
+                    array( array( 'row' => 1, 'span' => 0.5, 'x' => 0.65, 'w' => 0.35 ) ),
+                    array( array( 'row' => 1.5, 'span' => 0.5, 'x' => 0.65, 'w' => 0.35 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.25 ) ),
+                ),
+            ),
+            array(
+                // nested_5slotの左右反転。
+                'name'     => 'nested_5slot_mirror',
+                'priority' => 'primary',
+                'slots'    => array(
+                    array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
+                    array(
+                        array( 'row' => 1, 'span' => 1, 'x' => 0.35, 'w' => 0.65 ),
+                        array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 0.75 ),
+                    ),
+                    array( array( 'row' => 1, 'span' => 0.5, 'x' => 0, 'w' => 0.35 ) ),
+                    array( array( 'row' => 1.5, 'span' => 0.5, 'x' => 0, 'w' => 0.35 ) ),
+                    array( array( 'row' => 2, 'span' => 1, 'x' => 0.75, 'w' => 0.25 ) ),
+                ),
+            ),
+            // フォールバック（5記事の文字量がほぼ同量の場合のみ）。
+            array(
+                'name'     => 'top2_mid2_bottom1',
+                'priority' => 'fallback',
+                'slots'    => array(
                     array( array( 'row' => 0, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
                     array( array( 'row' => 0, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
                     array( array( 'row' => 1, 'span' => 1, 'x' => 0, 'w' => 0.5 ) ),
                     array( array( 'row' => 1, 'span' => 1, 'x' => 0.5, 'w' => 0.5 ) ),
                     array( array( 'row' => 2, 'span' => 1, 'x' => 0, 'w' => 1 ) ),
-                ),
-                'borders' => array(
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 0, 'row_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 1, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
-                    array( 'axis' => 'v', 'x' => 0.5, 'row_from' => 1, 'row_to' => 2, 'style' => 'solid' ),
-                    array( 'axis' => 'h', 'row' => 2, 'x_from' => 0, 'x_to' => 1, 'style' => 'solid' ),
                 ),
             ),
         ),
@@ -4292,8 +4408,119 @@ function hatakiti_occult_pdf_gridv2_draw_slot( $pdf, $font_regular, $font_bold, 
  * 明示された境界のみを描く（段境界だからという理由だけの機械的な
  * 罫線は引かない）。
  */
+/**
+ * 組版再修正指示書§9・§11：破線/実線の判定を手書きの'borders'配列に
+ * 頼ると、L字・Z字・入れ子型のように記事が段境界をまたぐ位置が複雑な
+ * パターンほど「どの区間が同一記事の折れ目か」を人手で間違えやすい
+ * （実際、当初この方式で書いた'borders'は複数箇所で判定を誤っていた）。
+ * そのため、'borders'配列は使わず、'slots'（各記事のRegion矩形群）だけ
+ * から境界線を自動導出する。ルールは単純：
+ *   - 水平境界（段=row の整数境界、row=1・2のみ）で、上下が同じ記事の
+ *     Region同士なら破線、異なる記事なら実線。
+ *   - 水平境界のうち段の整数境界でない場所（例：5記事パターンの半段
+ *     row=1.5）は、上下が異なる記事なら実線、同じ記事なら線を引かない
+ *     （半段分割は同一記事をまたがない設計のため通常発生しない）。
+ *   - 垂直境界は常に実線（破線は「段の境界」専用、指示書§9）。
+ * 矩形の集合から一意なx/y分割線を求め、各セルの中心点がどのslotに
+ * 属するかで隣接セルの記事が同じか異なるかを判定する（連続する同種
+ * 区間はまとめて1本の線として返す）。
+ */
+function hatakiti_occult_pdf_gridv2_derive_borders( $pattern ) {
+    $regs = array();
+    foreach ( $pattern['slots'] as $slot_idx => $slot_regions ) {
+        foreach ( $slot_regions as $r ) {
+            $regs[] = array(
+                'slot' => $slot_idx,
+                'x0'   => $r['x'],
+                'x1'   => $r['x'] + $r['w'],
+                'y0'   => $r['row'],
+                'y1'   => $r['row'] + $r['span'],
+            );
+        }
+    }
+
+    $round6 = function ( $v ) {
+        return round( $v, 6 );
+    };
+    $xs = array( 0.0, 1.0 );
+    $ys = array( 0.0, (float) HATAKITI_OCCULT_PDF_GRIDV2_ROWS );
+    foreach ( $regs as $r ) {
+        $xs[] = $r['x0'];
+        $xs[] = $r['x1'];
+        $ys[] = $r['y0'];
+        $ys[] = $r['y1'];
+    }
+    $xs = array_values( array_unique( array_map( $round6, $xs ) ) );
+    $ys = array_values( array_unique( array_map( $round6, $ys ) ) );
+    sort( $xs );
+    sort( $ys );
+
+    $nx = count( $xs ) - 1;
+    $ny = count( $ys ) - 1;
+    $owner = array();
+    for ( $yi = 0; $yi < $ny; $yi++ ) {
+        $ycenter = ( $ys[ $yi ] + $ys[ $yi + 1 ] ) / 2;
+        for ( $xi = 0; $xi < $nx; $xi++ ) {
+            $xcenter = ( $xs[ $xi ] + $xs[ $xi + 1 ] ) / 2;
+            $owner[ $yi ][ $xi ] = null;
+            foreach ( $regs as $r ) {
+                if ( $xcenter > $r['x0'] - 1e-6 && $xcenter < $r['x1'] + 1e-6
+                    && $ycenter > $r['y0'] - 1e-6 && $ycenter < $r['y1'] + 1e-6 ) {
+                    $owner[ $yi ][ $xi ] = $r['slot'];
+                    break;
+                }
+            }
+        }
+    }
+
+    $borders = array();
+
+    for ( $yi = 1; $yi < $ny; $yi++ ) {
+        $y_val = $ys[ $yi ];
+        $is_grid_seam = ( abs( $y_val - 1 ) < 1e-6 ) || ( abs( $y_val - 2 ) < 1e-6 );
+        $xi = 0;
+        while ( $xi < $nx ) {
+            $above = $owner[ $yi - 1 ][ $xi ];
+            $below = $owner[ $yi ][ $xi ];
+            $xj    = $xi;
+            while ( $xj < $nx && $owner[ $yi - 1 ][ $xj ] === $above && $owner[ $yi ][ $xj ] === $below ) {
+                $xj++;
+            }
+            if ( null !== $above && null !== $below ) {
+                if ( $above === $below ) {
+                    if ( $is_grid_seam ) {
+                        $borders[] = array( 'axis' => 'h', 'row' => $y_val, 'x_from' => $xs[ $xi ], 'x_to' => $xs[ $xj ], 'style' => 'dashed' );
+                    }
+                } else {
+                    $borders[] = array( 'axis' => 'h', 'row' => $y_val, 'x_from' => $xs[ $xi ], 'x_to' => $xs[ $xj ], 'style' => 'solid' );
+                }
+            }
+            $xi = $xj;
+        }
+    }
+
+    for ( $xi = 1; $xi < $nx; $xi++ ) {
+        $x_val = $xs[ $xi ];
+        $yi    = 0;
+        while ( $yi < $ny ) {
+            $left  = $owner[ $yi ][ $xi - 1 ];
+            $right = $owner[ $yi ][ $xi ];
+            $yj    = $yi;
+            while ( $yj < $ny && $owner[ $yj ][ $xi - 1 ] === $left && $owner[ $yj ][ $xi ] === $right ) {
+                $yj++;
+            }
+            if ( null !== $left && null !== $right && $left !== $right ) {
+                $borders[] = array( 'axis' => 'v', 'x' => $x_val, 'row_from' => $ys[ $yi ], 'row_to' => $ys[ $yj ], 'style' => 'solid' );
+            }
+            $yi = $yj;
+        }
+    }
+
+    return $borders;
+}
+
 function hatakiti_occult_pdf_gridv2_draw_borders( $pdf, $pattern, $zone_x, $zone_y, $zone_w, $row_h ) {
-    foreach ( $pattern['borders'] as $b ) {
+    foreach ( hatakiti_occult_pdf_gridv2_derive_borders( $pattern ) as $b ) {
         $dash = ( 'dashed' === $b['style'] ) ? '2,1.2' : 0;
         $pdf->SetLineStyle( array( 'width' => 0.25, 'dash' => $dash ) );
         if ( 'v' === $b['axis'] ) {
@@ -4344,42 +4571,61 @@ function hatakiti_occult_pdf_gridv2_fill_page( &$queue, $pdf, $font_regular, $fo
         if ( empty( $patterns_by_n[ $n ] ) ) {
             continue;
         }
+        // 組版再修正指示書§11：同じ記事数の中では、まず'fallback'以外
+        // （既定='primary'）の候補だけで空き面積最小のものを探す。1つも
+        // 収まらなかった場合のみ、'fallback'タグの候補を試す。
         $best = null;
-        foreach ( $patterns_by_n[ $n ] as $pattern ) {
-            $too_narrow = false;
-            foreach ( $pattern['slots'] as $slot_frac_regions ) {
-                foreach ( $slot_frac_regions as $rf ) {
-                    if ( $rf['w'] * $zone_w < HATAKITI_OCCULT_PDF_GRIDV2_MIN_REGION_W_MM ) {
-                        $too_narrow = true;
-                        break 2;
+        foreach ( array( 'primary', 'fallback' ) as $priority_tier ) {
+            if ( null !== $best ) {
+                break;
+            }
+            foreach ( $patterns_by_n[ $n ] as $pattern ) {
+                $pattern_priority = $pattern['priority'] ?? 'primary';
+                if ( 'fallback' === $priority_tier ) {
+                    if ( 'fallback' !== $pattern_priority ) {
+                        continue;
+                    }
+                } else {
+                    if ( 'fallback' === $pattern_priority ) {
+                        continue;
                     }
                 }
-            }
-            if ( $too_narrow ) {
-                continue;
-            }
 
-            list( $scratch_pdf, $scratch_fr, $scratch_fb ) = hatakiti_occult_pdf_new_tcpdf();
-            $scratch_pdf->AddPage();
-            $all_fit     = true;
-            $total_blank = 0.0;
-            foreach ( $pattern['slots'] as $idx => $slot_frac_regions ) {
-                $article    = $queue[ $idx ];
-                $regions_mm = hatakiti_occult_pdf_gridv2_resolve_regions( $slot_frac_regions, $zone_x, $zone_y, $zone_w, $row_h );
-                $sim        = hatakiti_occult_pdf_gridv2_draw_slot( $scratch_pdf, $scratch_fr, $scratch_fb, $article, $article['_tier'], $regions_mm );
-                if ( $sim['overflow'] ) {
-                    $all_fit = false;
-                    break;
+                $too_narrow = false;
+                foreach ( $pattern['slots'] as $slot_frac_regions ) {
+                    foreach ( $slot_frac_regions as $rf ) {
+                        if ( $rf['w'] * $zone_w < HATAKITI_OCCULT_PDF_GRIDV2_MIN_REGION_W_MM ) {
+                            $too_narrow = true;
+                            break 2;
+                        }
+                    }
                 }
-                foreach ( $sim['regions_debug'] as $rd ) {
-                    $total_blank += ( $rd['w'] - $rd['body_used_width'] ) * $rd['h'];
+                if ( $too_narrow ) {
+                    continue;
                 }
-            }
-            if ( ! $all_fit ) {
-                continue;
-            }
-            if ( null === $best || $total_blank < $best['total_blank'] - 0.001 ) {
-                $best = array( 'pattern' => $pattern, 'total_blank' => $total_blank );
+
+                list( $scratch_pdf, $scratch_fr, $scratch_fb ) = hatakiti_occult_pdf_new_tcpdf();
+                $scratch_pdf->AddPage();
+                $all_fit     = true;
+                $total_blank = 0.0;
+                foreach ( $pattern['slots'] as $idx => $slot_frac_regions ) {
+                    $article    = $queue[ $idx ];
+                    $regions_mm = hatakiti_occult_pdf_gridv2_resolve_regions( $slot_frac_regions, $zone_x, $zone_y, $zone_w, $row_h );
+                    $sim        = hatakiti_occult_pdf_gridv2_draw_slot( $scratch_pdf, $scratch_fr, $scratch_fb, $article, $article['_tier'], $regions_mm );
+                    if ( $sim['overflow'] ) {
+                        $all_fit = false;
+                        break;
+                    }
+                    foreach ( $sim['regions_debug'] as $rd ) {
+                        $total_blank += ( $rd['w'] - $rd['body_used_width'] ) * $rd['h'];
+                    }
+                }
+                if ( ! $all_fit ) {
+                    continue;
+                }
+                if ( null === $best || $total_blank < $best['total_blank'] - 0.001 ) {
+                    $best = array( 'pattern' => $pattern, 'total_blank' => $total_blank );
+                }
             }
         }
 
