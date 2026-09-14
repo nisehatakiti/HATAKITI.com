@@ -242,8 +242,57 @@ define( 'HATAKITI_OCCULT_PDF_TCPDF_MAIN', HATAKITI_CORE_DIR . 'vendor/tcpdf/tcpd
  *   ことを2種の共有段パターン（finisher/continuer型・按分型）の両方で
  *   直接確認した。実PDFを画像化した目視確認で、3段グリッド構造の視認性・
  *   縦罫線位置の非機械的な動き・記事の途中切れがないことを確認した。
+ *
+ * 47: 組版再修正指示書（記事組み合わせ探索中心方式）。V46は「先頭から
+ *   固定8件のウィンドウ内で単純な1件差し替えのみ」という限定的な組み
+ *   合わせ探索しか行っておらず、紙面後半になるほど「残った記事を入る
+ *   パターンに押し込む」ような配置になりやすい問題があった。今回は
+ *   「どの記事を同じ面に組み合わせるか」の探索そのものを強化した：
+ *
+ *   - hatakiti_occult_pdf_gridv2_generate_combos()のウィンドウを8件→
+ *     14件に拡張し、単純な1件差し替えに加えて以下を候補として生成：
+ *     ・greedy-fill（文字量の多い記事から貪欲に詰めるビンパッキング
+ *       近似）
+ *     ・small-tail系（大記事＋文字量の少ない記事群という、小記事を
+ *       積極的に使う組み合わせを明示的に候補化）
+ *   - hatakiti_occult_pdf_gridv2_fill_page_dynamic()は空白最小の1候補を
+ *     即採用せず、上位$beam_width（=3）件を保持する。$allow_lookahead
+ *     引数（既定false）を渡せば、それぞれについて「残りの記事で次の
+ *     1面がどれだけ自然に組めるか」を1手先読みし、2面合計の空白
+ *     スコアが最小の候補を採用できる（既定で無効な理由は後述）。
+ *
+ *   実装中に判明した実行時間の問題：先読み（$allow_lookahead=true）を
+ *   既定で有効にすると、候補ごとに次の1面を丸ごと再探索するため、
+ *   ウィンドウ拡張後の組み合わせ探索と組み合わさって実行時間が約6.5倍に
+ *   増える（18記事の実データで8.73秒→56.68秒、PDF生成が同期HTTPリクエスト
+ *   内で走る可能性を考えるとタイムアウトのリスクが大きい）。本ラウンドの
+ *   主目的である「組み合わせ探索の不足」自体はウィンドウ拡張と
+ *   greedy-fill/small-tail候補生成（既定でも常に有効）で解決するため、
+ *   先読みは既定で無効にし、実行時間を実用的な範囲（9文書で約64秒、
+ *   V46の約58秒とほぼ同等）に保った（指示書V47§16「完全な全探索が
+ *   重い場合は、現実的なヒューリスティックで構わない」に基づく判断）。
+ *   先読みロジック自体は削除せず、$allow_lookahead=trueで有効化できる
+ *   形で残した。
+ *
+ *   記事の掲載順序（§13）について：ページ構築は依然として
+ *   キュー先頭（まだ配置されていない記事の中で最も古いもの）を必ず
+ *   今面の候補に含める設計を維持しており、これにより「ある記事が
+ *   2回連続でスキップされることはない」（最大1面ぶんの繰り延べで
+ *   確定する）という掲載順の上限を保証している。ウィンドウ拡張に
+ *   伴い、同一tier内での物理配置の入れ替えや、小記事の tier を跨いだ
+ *   繰り上げは起こり得るが、これは指示書§2・§3が明示的に要求している
+ *   挙動そのものである。
+ *
+ *   実データ検証（9文書）：全件でoverlap=0（高精度座標で再検証）、記事
+ *   欠落なし、V45・V43へのフォールバック発生なし、警告なし。ページ数は
+ *   V46と同数（内部の記事組み合わせ・段の使い方はより効率的になった
+ *   ケースあり、例：post565はV46のchain3_BA_BCが4Region使っていたのが
+ *   V47では3Regionで収まり、隣接記事へ段をまるごと譲れるようになった）。
+ *   実PDFを画像化した目視確認で、前半・中盤・最終ページとも3段グリッド
+ *   構造の視認性・記事境界の明確さ・段ごとに異なる縦罫線比率・記事の
+ *   途中切れがないことを確認した。
  */
-define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '46' );
+define( 'HATAKITI_OCCULT_PDF_GENERATOR_VERSION', '47' );
 
 /**
  * マストヘッド（1ページ目最上部）のロゴ画像。「週刊オカルト新聞」の
@@ -4975,19 +5024,108 @@ function hatakiti_occult_pdf_gridv2_instantiate_topology( $scratch_pdf, $font_bo
  * Cをウィンドウ内のDに差し替えた[A,B,D]も候補になる — 指示書§5の
  * 「A+B+C」「A+B+D」の例に対応）。
  */
-function hatakiti_occult_pdf_gridv2_generate_combos( $window_size, $n ) {
-    $baseline = range( 0, $n - 1 );
-    $combos   = array( $baseline );
-    if ( $window_size > $n ) {
+function hatakiti_occult_pdf_gridv2_generate_combos( $window_articles, $n ) {
+    $window_size = count( $window_articles );
+    $units       = array();
+    foreach ( $window_articles as $i => $a ) {
+        list( $u ) = hatakiti_occult_pdf_count_units( (string) ( $a['body'] ?? '' ) );
+        $units[ $i ] = $u;
+    }
+
+    $combos = array();
+
+    // baseline：先頭からn件（既存の基本形、比較の基準として残す）。
+    $baseline = range( 0, min( $n, $window_size ) - 1 );
+    if ( count( $baseline ) === $n ) {
+        $combos[] = $baseline;
+    }
+
+    // single-swap：先頭以外の1件をウィンドウ内の後続記事に差し替える。
+    if ( $window_size > $n && count( $baseline ) === $n ) {
         for ( $i = 1; $i < $n; $i++ ) {
             for ( $j = $n; $j < $window_size; $j++ ) {
-                $combo    = $baseline;
+                $combo       = $baseline;
                 $combo[ $i ] = $j;
                 sort( $combo );
                 $combos[] = $combo;
             }
         }
     }
+
+    // greedy-fill：紙面の概算総容量を超えない範囲で、文字量の多い記事
+    // から貪欲に詰める（ビンパッキング近似）。先頭（index 0）は常に
+    // 含む（§13、掲載順維持のため）。
+    if ( $window_size >= $n && $n >= 1 ) {
+        $rest = array();
+        for ( $i = 1; $i < $window_size; $i++ ) {
+            $rest[] = $i;
+        }
+        usort(
+            $rest,
+            function ( $a, $b ) use ( $units ) {
+                return $units[ $b ] <=> $units[ $a ];
+            }
+        );
+        $combo = array( 0 );
+        foreach ( $rest as $idx ) {
+            if ( count( $combo ) >= $n ) {
+                break;
+            }
+            $combo[] = $idx;
+        }
+        if ( count( $combo ) === $n ) {
+            sort( $combo );
+            $combos[] = $combo;
+        }
+    }
+
+    // small-tail系（指示書V47§3「小記事を積極的に利用する」）：大記事＋
+    // ウィンドウ内で文字量の少ない記事群、という組み合わせを明示的に
+    // 候補化する。
+    if ( $window_size >= $n && $n >= 2 ) {
+        $rest_asc = array();
+        for ( $i = 1; $i < $window_size; $i++ ) {
+            $rest_asc[] = $i;
+        }
+        usort(
+            $rest_asc,
+            function ( $a, $b ) use ( $units ) {
+                return $units[ $a ] <=> $units[ $b ];
+            }
+        );
+
+        // (a) 先頭＋文字量の少ない(n-1)件。
+        $combo_a = array_merge( array( 0 ), array_slice( $rest_asc, 0, $n - 1 ) );
+        if ( count( $combo_a ) === $n ) {
+            sort( $combo_a );
+            $combos[] = $combo_a;
+        }
+
+        // (b) 先頭＋ウィンドウ内で最大の1件＋残りは文字量の少ない記事群
+        // （大記事2本＋小記事群、という構成を明示的に候補化する）。
+        if ( $n >= 3 ) {
+            $rest_desc = array_reverse( $rest_asc );
+            $second    = $rest_desc[0] ?? null;
+            if ( null !== $second ) {
+                $tail = array();
+                foreach ( $rest_asc as $idx ) {
+                    if ( $idx === $second ) {
+                        continue;
+                    }
+                    $tail[] = $idx;
+                    if ( count( $tail ) >= $n - 2 ) {
+                        break;
+                    }
+                }
+                $combo_b = array_merge( array( 0, $second ), $tail );
+                if ( count( $combo_b ) === $n ) {
+                    sort( $combo_b );
+                    $combos[] = $combo_b;
+                }
+            }
+        }
+    }
+
     $seen = array();
     $out  = array();
     foreach ( $combos as $c ) {
@@ -5001,29 +5139,53 @@ function hatakiti_occult_pdf_gridv2_generate_combos( $window_size, $n ) {
 }
 
 /**
- * V46容量ベース組版エンジンのメイン関数。既存のhatakiti_occult_pdf_
+ * V47容量ベース組版エンジンのメイン関数。既存のhatakiti_occult_pdf_
  * stack_articles()・hatakiti_occult_pdf_gridv2_fill_page()と同じ
  * 入出力契約（&$queueを消費し'bottom_y'/'drew_any'/'debug'を返す）を
  * 持つ。
  *
- * 記事数（最大5、ウィンドウ最大8件）を5から1まで降順に試し、各数に
- * ついてトポロジー×組み合わせの全候補を実際に動的インスタンス化して
- * 使い捨てPDFへdry-run描画し、収まる候補の中から「実描画で使われな
- * かった幅×高さの合計」が最小のものを採用する（V45と同じ選定基準）。
+ * 組版再修正指示書V47§1「記事組み合わせ探索を組版決定の中心にする」
+ * に従い、V46の「先頭から固定8件のウィンドウで単純な差し替えのみ」から
+ * 以下の2点を強化した：
+ *   - ウィンドウを14件へ拡張し、hatakiti_occult_pdf_gridv2_
+ *     generate_combos()がbaseline・single-swapに加えてgreedy-fill
+ *     （ビンパッキング近似）・small-tail系（小記事を積極的に使う組み
+ *     合わせ）を候補として生成する（§2・§3）。
+ *   - 各記事数について「空白最小の1候補」だけを即採用せず、上位
+ *     $beam_width件を保持し、$allow_lookahead時はそれぞれについて
+ *     「この面を確定した場合、残りの記事で次の1面がどれだけ自然に
+ *     組めるか」を簡易的に1手先読みし、2面合計の空白スコアが最小の
+ *     候補を採用する（§16「新聞全体を見る」の現実的な折衷としての
+ *     1手先読みビームサーチ）。
+ *
  * どの記事数・組み合わせ・トポロジーでも1件も収まらない場合のみ、
  * 呼び出し側（hatakiti_occult_pdf_gridv2_fill_page_v46()）がV45の
  * 固定パターン方式へフォールバックできるよう'gridv2_fallback_needed'
  * を返す。
+ *
+ * @param bool $allow_lookahead 1手先読みを行うか。既定はfalse —
+ *   実測で、先読み1手ぶんの再帰（候補ごとに次の1面を丸ごと再探索する）
+ *   はbeam_width=3・ウィンドウ14件の組み合わせ探索と組み合わさると
+ *   実行時間が約6.5倍に増える（18記事の実データで8.73秒→56.68秒）。
+ *   一方、本ラウンドの主目的である「組み合わせ探索の不足」自体は
+ *   ウィンドウ拡張とgreedy-fill/small-tail候補生成（既定でも有効）で
+ *   解決するため、既定では先読みを無効にして生成時間を実用的な範囲に
+ *   保つ（指示書V47§16「完全な全探索が重い場合は、現実的な
+ *   ヒューリスティックで構わない」に基づく判断）。先読みロジック自体は
+ *   削除せず残す（trueを渡せば有効）。先読み呼び出しの内部（次の1面
+ *   だけを見る再帰呼び出し）では常にfalseを渡し、再帰の深さを1手に
+ *   固定する（無制限再帰を防ぐ安全策）。
  */
-function hatakiti_occult_pdf_gridv2_fill_page_dynamic( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no ) {
+function hatakiti_occult_pdf_gridv2_fill_page_dynamic( &$queue, $pdf, $font_regular, $font_bold, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no, $allow_lookahead = false ) {
     if ( empty( $queue ) ) {
-        return array( 'bottom_y' => $zone_y, 'drew_any' => false, 'debug' => array() );
+        return array( 'bottom_y' => $zone_y, 'drew_any' => false, 'debug' => array(), 'total_blank_score' => 0.0 );
     }
 
     $row_h           = $zone_h_budget / HATAKITI_OCCULT_PDF_GRIDV2_ROWS;
     $topologies_by_n = hatakiti_occult_pdf_gridv2_topologies_dynamic();
     $max_n           = min( count( $queue ), 5 );
-    $window          = min( count( $queue ), 8 );
+    $window          = min( count( $queue ), 14 );
+    $beam_width      = 3;
 
     list( $scratch_pdf, $scratch_fr, $scratch_fb ) = hatakiti_occult_pdf_new_tcpdf();
 
@@ -5031,11 +5193,12 @@ function hatakiti_occult_pdf_gridv2_fill_page_dynamic( &$queue, $pdf, $font_regu
         if ( empty( $topologies_by_n[ $n ] ) ) {
             continue;
         }
-        $combos = hatakiti_occult_pdf_gridv2_generate_combos( $window, $n );
-        $best   = null;
+        $window_articles = array_slice( $queue, 0, $window );
+        $combos          = hatakiti_occult_pdf_gridv2_generate_combos( $window_articles, $n );
+        $top_candidates  = array();
 
         foreach ( array( 'primary', 'fallback' ) as $priority_tier ) {
-            if ( null !== $best ) {
+            if ( ! empty( $top_candidates ) ) {
                 break;
             }
             foreach ( $topologies_by_n[ $n ] as $topology ) {
@@ -5081,19 +5244,55 @@ function hatakiti_occult_pdf_gridv2_fill_page_dynamic( &$queue, $pdf, $font_regu
                     if ( ! $all_fit ) {
                         continue;
                     }
-                    if ( null === $best || $total_blank < $best['total_blank'] - 0.001 ) {
-                        $best = array(
-                            'combo'       => $combo_idx,
-                            'topology'    => $topology,
-                            'inst'        => $inst,
-                            'total_blank' => $total_blank,
-                        );
+
+                    $top_candidates[] = array(
+                        'combo'       => $combo_idx,
+                        'topology'    => $topology,
+                        'inst'        => $inst,
+                        'total_blank' => $total_blank,
+                    );
+                    usort(
+                        $top_candidates,
+                        function ( $a, $b ) {
+                            return $a['total_blank'] <=> $b['total_blank'];
+                        }
+                    );
+                    if ( count( $top_candidates ) > $beam_width ) {
+                        array_pop( $top_candidates );
                     }
                 }
             }
         }
 
-        if ( null !== $best ) {
+        if ( ! empty( $top_candidates ) ) {
+            if ( $allow_lookahead && count( $top_candidates ) > 1 ) {
+                $best_combined = null;
+                foreach ( $top_candidates as $cand ) {
+                    $residual = $queue;
+                    $desc     = $cand['combo'];
+                    rsort( $desc );
+                    foreach ( $desc as $qi ) {
+                        array_splice( $residual, $qi, 1 );
+                    }
+                    $look_score = 0.0;
+                    if ( ! empty( $residual ) ) {
+                        list( $lpdf, $lfr, $lfb ) = hatakiti_occult_pdf_new_tcpdf();
+                        $lpdf->AddPage();
+                        $look_result = hatakiti_occult_pdf_gridv2_fill_page_dynamic( $residual, $lpdf, $lfr, $lfb, $zone_x, $zone_y, $zone_w, $zone_h_budget, $page_no + 1, false );
+                        $look_score  = empty( $look_result['gridv2_fallback_needed'] )
+                            ? ( $look_result['total_blank_score'] ?? 0.0 )
+                            : ( $zone_w * $zone_h_budget ); // 次面が組めない場合は紙面全体分のペナルティ。
+                    }
+                    $combined = $cand['total_blank'] + $look_score;
+                    if ( null === $best_combined || $combined < $best_combined['combined'] - 0.001 ) {
+                        $best_combined = array( 'cand' => $cand, 'combined' => $combined );
+                    }
+                }
+                $best = $best_combined['cand'];
+            } else {
+                $best = $top_candidates[0];
+            }
+
             $combo_idx = $best['combo'];
             $topology  = $best['topology'];
             $inst      = $best['inst'];
@@ -5147,16 +5346,17 @@ function hatakiti_occult_pdf_gridv2_fill_page_dynamic( &$queue, $pdf, $font_regu
             hatakiti_occult_pdf_gridv2_draw_borders( $pdf, $pseudo_pattern, $zone_x, $zone_y, $zone_w, $row_h );
 
             return array(
-                'bottom_y'        => $zone_y + ( $max_row_reached / HATAKITI_OCCULT_PDF_GRIDV2_ROWS ) * $zone_h_budget,
-                'drew_any'        => true,
-                'debug'           => $placed_debug,
-                'gridv2_pattern'  => $topology['name'],
-                'dynamic_splits'  => $inst['dynamic_splits_debug'],
+                'bottom_y'          => $zone_y + ( $max_row_reached / HATAKITI_OCCULT_PDF_GRIDV2_ROWS ) * $zone_h_budget,
+                'drew_any'          => true,
+                'debug'             => $placed_debug,
+                'gridv2_pattern'    => $topology['name'],
+                'dynamic_splits'    => $inst['dynamic_splits_debug'],
+                'total_blank_score' => $best['total_blank'],
             );
         }
     }
 
-    return array( 'bottom_y' => $zone_y, 'drew_any' => false, 'debug' => array(), 'gridv2_fallback_needed' => true );
+    return array( 'bottom_y' => $zone_y, 'drew_any' => false, 'debug' => array(), 'gridv2_fallback_needed' => true, 'total_blank_score' => 0.0 );
 }
 
 /**
