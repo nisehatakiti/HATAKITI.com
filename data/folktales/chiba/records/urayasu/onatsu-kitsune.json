@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-urayasu-onatsu-kitsune",
+  "status":"draft",
+  "title":"おなつ狐",
+  "title_normalized":"おなつ狐",
+  "title_origin":"book_title",
+  "summary":{"text":"浦安に伝わる狐の話で、狐が人に『綿ちょうだい』と語りかける場面が伝えられている。","based_on_source_ids":["SRC-URAYASU-LIB-MINWA","SRC-URAYASU-SEKENBANASHI","SRC-URAYASU-REVIEW"]},
+  "story_summary":"おなつ狐という狐の話で、書評では狐が『綿ちょうだい』と言う場面が紹介されている。",
+  "story_content":"『浦安の世間話―前田治郎助の語り』には『おなつ狐』が収録されている。森まゆみの書評では、その内容の一場面として狐が『綿ちょうだい』と言うことが紹介されている。千葉県立図書館の民話索引では浦安市の話として掲載され、別の市川市索引では了善寺・新井・相之川との関連も示されているため、周辺地域との伝承圏も含めて記録する。本文全体は公開資料で確認できていないため、狐が綿を求める場面以外の筋は補っていない。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":null},
+  "locations":[],
+  "characters":[{"name":"おなつ狐","role":"狐","description":"浦安の世間話に登場する狐。綿を求める言葉が紹介されている。","source_ids":["SRC-URAYASU-REVIEW"]}],
+  "beings":[{"name":"狐","type":"動物・怪異","description":"人の言葉を発し、綿を求める存在として語られる。","source_ids":["SRC-URAYASU-SEKENBANASHI","SRC-URAYASU-REVIEW"]}],
+  "themes":["狐","動物怪異","変化","綿"],
+  "story_type":["狐伝承","動物怪異譚","世間話"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-URAYASU-LIB-MINWA","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-09-14","relevant_section":"おなつ狐","language":"ja"},{"source_id":"SRC-URAYASU-SEKENBANASHI","title":"浦安の世間話―前田治郎助の語り","publisher":"青弓社","publication_date":"1992-07","source_type":"book","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-09-14","relevant_section":"1 ムラ話・不思議な体験／おなつ狐","language":"ja"},{"source_id":"SRC-URAYASU-REVIEW","title":"『浦安の世間話―前田治郎助の語り』書評","publisher":"ALL REVIEWS","publication_date":"2017-12-18","source_type":"book_review","url":"https://allreviews.jp/review/1819/","accessed_date":"2026-09-14","relevant_section":"おなつ狐","language":"ja"}],
+  "confidence":"medium",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館の収録情報、国立国会図書館の目次、書評による具体的な場面を照合した。本文全体を確認できていないため、『綿ちょうだい』という確認可能な場面以外は推測していない。"
+}
