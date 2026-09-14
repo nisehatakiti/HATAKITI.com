@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-urayasu-goro-san-kuyo",
+  "status":"draft",
+  "title":"五郎さんの供養",
+  "title_normalized":"五郎さんの供養",
+  "title_origin":"book_table_of_contents",
+  "summary":{"text":"浦安の世間話として、海で遭難して遺体が上がらなかった五郎さんの霊が巫女の口を借りて現れ、供養を求めたと伝える話。","based_on_source_ids":["SRC-URAYASU-LIB-MINWA","SRC-URAYASU-SEKENBANASHI","SRC-URAYASU-REVIEW"]},
+  "story_summary":"海で遭難して死骸が上がらなかった大根屋の五郎さんが、イチッコ（巫女）の口を借りて現れ、自分の死について語り、供養を求めたという。",
+  "story_content":"『浦安の世間話―前田治郎助の語り』に収録される話。書評で紹介された内容では、海で遭難して死骸が上がらなかった大根屋（屋号）の五郎さんが、イチッコ（巫女）の口を借りて現れる。五郎さんは自分の死について語り、供養を求める話として紹介されている。本文全体を公開資料で確認できていないため、死の日付など書評で確認できない細部は補っていない。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":null},
+  "locations":[],
+  "characters":[{"name":"五郎さん","type":"死者","description":"海で遭難して遺体が上がらず、巫女の口を借りて現れたと伝えられる人物。","source_ids":["SRC-URAYASU-REVIEW"]},{"name":"イチッコ（巫女）","type":"巫女","description":"五郎さんの言葉を伝える媒介者。","source_ids":["SRC-URAYASU-REVIEW"]}],
+  "beings":[{"name":"五郎さんの霊","type":"霊・死者","description":"巫女の口を借りて現れ、供養を求める死者として語られる。","source_ids":["SRC-URAYASU-SEKENBANASHI","SRC-URAYASU-REVIEW"]}],
+  "themes":["死者","供養","海難","巫女","死者の語り"],
+  "story_type":["死者伝承","供養伝承","怪異伝承","世間話"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-URAYASU-LIB-MINWA","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-09-14","relevant_section":"五郎さんの供養","language":"ja"},{"source_id":"SRC-URAYASU-SEKENBANASHI","title":"浦安の世間話―前田治郎助の語り","publisher":"青弓社","publication_date":"1992-07","source_type":"book","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-09-14","relevant_section":"1 ムラ話・不思議な体験／五郎さん供養","language":"ja"},{"source_id":"SRC-URAYASU-REVIEW","title":"『浦安の世間話―前田治郎助の語り』書評","publisher":"ALL REVIEWS","publication_date":"2018頃","source_type":"book_review","url":"https://allreviews.jp/review/1819/","accessed_date":"2026-09-14","relevant_section":"海難で亡くなった五郎さんとイチッコ","language":"ja"}],
+  "confidence":"medium",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館の収録情報、国立国会図書館の書誌・目次、書評による具体的な筋を照合した。本文全体は公開範囲で確認できていないため、確認できた内容だけを登録した。"
+}
