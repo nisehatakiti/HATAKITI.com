@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-urayasu-kyusuke-inari",
+  "status": "draft",
+  "title": "久助稲荷",
+  "title_normalized": "久助稲荷",
+  "title_origin": "local_tradition_name",
+  "summary": {"text": "大蓮寺に仕えていた久助が死後に現れ、荒れた稲荷の復興を学誉上人に頼んだと伝える縁起。久助の志を受け、稲荷は久助稲荷と改称された。", "based_on_source_ids": ["SRC-URAYASU-DAIRENJI-OFFICIAL", "SRC-URAYASU-KYUSUKE-HISTORY"]},
+  "story_summary": "大蓮寺で仕えていた久助が、増上寺の法主となった学誉上人の前に現れ、大蓮寺の稲荷が荒れ果てているので復興してほしいと頼んだ。学誉上人が復興の手配をしたところ、久助はすでに二十数年前に亡くなっていたことが判明した。上人は稲荷の身代わりとして現れた久助の志に感動し、稲荷を久助稲荷と名付けたと伝えられる。",
+  "story_content": "浦安市堀江の大蓮寺境内に伝わる久助稲荷の縁起では、久助はかつて大蓮寺に仕えていた忠僕だった。後に学誉上人が増上寺の法主となったころ、その庭先に久助が現れ、大蓮寺の稲荷が荒れ果てているので復興してほしいと頼んだという。学誉上人が京都伏見稲荷から正一位の神位を受け、建設費を添えて大蓮寺へ送ったところ、久助はすでに二十数年前に亡くなっていたことが分かった。上人は、稲荷の身代わりとなって現れた久助の志に深く感動し、その名を取って稲荷を久助稲荷と名付けたと伝えられる。享保十三年（一七二八）に社殿を新築したとも伝えられている。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "浦安市", "area_name": "堀江", "source_description": "大蓮寺公式資料、浄土宗資料、浦安市教育委員会掲示の内容を複数資料で確認。"},
+  "locations": [{"name": "久助稲荷", "location_type": "tradition_site", "description": "大蓮寺境内にある稲荷社。久助の伝承を由来として名付けられたとされる。", "latitude": null, "longitude": null, "precision": "address", "source_ids": ["SRC-URAYASU-DAIRENJI-OFFICIAL", "SRC-URAYASU-KYUSUKE-HISTORY"]}, {"name": "大蓮寺", "location_type": "temple", "description": "久助稲荷を境内に祀る寺院。", "latitude": null, "longitude": null, "precision": "address", "source_ids": ["SRC-URAYASU-DAIRENJI-OFFICIAL"]}],
+  "characters": [{"name": "久助", "role": "伝承上の人物", "description": "大蓮寺に仕え、死後に稲荷の復興を願って現れたと伝えられる人物。", "source_ids": ["SRC-URAYASU-DAIRENJI-OFFICIAL"]}, {"name": "学誉冏鑑上人", "role": "僧侶", "description": "後に増上寺第39世法主となり、久助の志を受けて稲荷を復興したと伝えられる。", "source_ids": ["SRC-URAYASU-DAIRENJI-OFFICIAL"]}],
+  "beings": [{"name": "稲荷神", "type": "神仏・信仰対象", "description": "久助の伝承と結び付いて祀られる稲荷神。", "source_ids": ["SRC-URAYASU-DAIRENJI-OFFICIAL"]}],
+  "themes": ["稲荷信仰", "死者の出現", "寺社縁起", "奉仕", "志", "堀江"],
+  "story_type": ["寺社縁起", "信仰伝承", "不思議な体験"],
+  "related_records": [],
+  "sources": [{"source_id": "SRC-URAYASU-DAIRENJI-OFFICIAL", "title": "大蓮寺について・久助稲荷", "publisher": "光縁山勢至院 大蓮寺", "publication_date": "web", "source_type": "official_temple_site", "url": "https://dairenji.jp/about/", "accessed_date": "2026-09-14", "relevant_section": "久助稲荷", "language": "ja"}, {"source_id": "SRC-URAYASU-KYUSUKE-HISTORY", "title": "大蓮寺｜浦安市堀江にある浄土宗寺院", "publisher": "寺院縁起・歴史資料紹介", "publication_date": "web", "source_type": "local_history_reference", "url": "https://tesshow.jp/chiba/urayas/temple_horie_dairen.html", "accessed_date": "2026-09-14", "relevant_section": "境内久助稲荷について", "language": "ja"}],
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "大蓮寺公式資料と複数の歴史資料で久助の出現、稲荷復興、久助稲荷への改称という縁起が確認できるため登録。死後に現れたという部分は伝承として記録。"
+}
