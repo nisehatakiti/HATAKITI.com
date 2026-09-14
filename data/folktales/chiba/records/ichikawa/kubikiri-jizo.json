@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-ichikawa-kubikiri-jizo",
+  "status":"draft",
+  "title":"首切り地蔵",
+  "title_normalized":"首切り地蔵",
+  "title_origin":"source_title",
+  "summary":{"text":"市川市新井の延命寺に伝わる地蔵。久三郎とイネという男女が江戸川を渡ろうとして捕らえられ処刑されたという伝承を背景に、村人が二人を弔うため石地蔵を建てたと伝える。後に地蔵の首が何度直しても落ちるため『首切り地蔵』と呼ばれたという別の由来も伝わる。","based_on_source_ids":["SRC-ICHIKAWA-ENMEI-BOARD","SRC-ICHIKAWA-MUKASHIBANASHI","SRC-ICHIKAWA-NANKATU"]},
+  "story_summary":"もとは江戸川堤防の新井水門付近にあり、ねね塚と呼ばれていたとされる。久三郎とイネが江戸川を渡ろうとして捕らえられ、二人が処刑されたことを哀れんだ村人が石地蔵を建てて弔ったという。その後、この地蔵は何度修復しても首が落ちるため、村人から『首切り地蔵』と呼ばれるようになったと伝えられている。地蔵は後に延命寺境内へ移され、現在の像は再建されたものとされる。",
+  "story_content":"市川市新井の延命寺には『首切り地蔵』と呼ばれる地蔵が祀られている。延命寺境内の案内板によれば、この地蔵はもと江戸川堤防の新井水門付近にあり、ねね塚と呼ばれていた。久三郎とイネという男女が駆け落ちし、女人禁制とされた江戸川を渡ろうとして幕吏に捕らえられ、船頭らとともに処刑されたという伝承があり、船頭たちは菩提寺へ引き取られた一方、久三郎とイネは当地に埋められたとされる。後に村人が二人を哀れみ、後世を弔うため石地蔵を建立したという。さらに、村人が通ると地蔵の首が落ち、何度セメントでつけても再び落ちたため、『首切り地蔵』と呼ばれるようになったと案内板は伝えている。地蔵はその後延命寺境内へ移され、現在の像は老朽化に伴って再建されたものとされる。\n\nこの伝承には年代について資料間の相違がある。延命寺境内の案内板を紹介する資料では、処刑年を天明2年（1782）とする記述がある一方、『市川のむかし話』を紹介する資料や別の案内板では正保元年（1644）とする記述が確認できる。また、石地蔵の再建立については寛政7年（1795）とする資料がある。これらの年代は一本化せず、伝承・案内板ごとの記述として扱う。",
+  "region":{"prefecture":"千葉県","municipality":"市川市","area_name":"新井","source_description":"延命寺境内の案内板と市川の昔話として伝えられている。"},
+  "locations":[{"name":"延命寺","type":"寺院","description":"市川市新井1-9-2。現在の首切り地蔵が祀られている。"},{"name":"新井水門付近","type":"旧所在地","description":"首切り地蔵がもとは祀られていたと伝えられる江戸川堤防付近。ねね塚と呼ばれていたとされる。"},{"name":"今井の渡し","type":"渡船場・歴史地名","description":"久三郎とイネが江戸川を渡ろうとした場所として伝えられる。"}],
+  "characters":[{"name":"久三郎","role":"伝承上の人物","attributes":["駆け落ちした男性","江戸川を渡ろうとして捕らえられたと伝わる"]},{"name":"イネ","role":"伝承上の人物","attributes":["久三郎と駆け落ちした女性","江戸川を渡ろうとして捕らえられたと伝わる"]}],
+  "beings":[{"name":"地蔵菩薩","role":"地蔵","attributes":["久三郎とイネを弔うため建立されたと伝わる","首が落ちることから首切り地蔵と呼ばれたと伝わる"]}],
+  "themes":["地蔵信仰","供養","処刑伝承","江戸川","ねね塚","怪異伝承"],
+  "story_type":["寺院伝承","供養伝承","怪異伝承","地域伝承"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-ICHIKAWA-ENMEI-BOARD","title":"延命寺首切り地蔵前案内板","publisher":"延命寺","publication_date":"web掲載資料による現地案内板転記","source_type":"temple_sign_transcription","url":"https://www.travel.smileandhappiness.net/enmeiji-gyotoku.html","accessed_date":"2026-09-14","relevant_section":"首切り地蔵 由来","language":"ja"},{"source_id":"SRC-ICHIKAWA-MUKASHIBANASHI","title":"市川のむかし話","publisher":"市川民話の会","publication_date":"不明","source_type":"local_folklore_book_referenced","url":"https://www.sanjin.jp/hibi/%E6%B1%9F%E6%88%B2%E5%B7%9D%E6%83%85%E8%A9%B1.php","accessed_date":"2026-09-14","relevant_section":"久三郎とイネ、首切り地蔵の伝承を紹介する箇所","language":"ja"},{"source_id":"SRC-ICHIKAWA-NANKATU","title":"市川市新井・延命寺（南葛八十八ヶ所霊場）","publisher":"南葛札所・寺社紹介資料","publication_date":"2021","source_type":"local_history_web","url":"https://nankatu.hatenablog.com/entry/2021/08/07/210016","accessed_date":"2026-09-14","relevant_section":"首切り地蔵とねね塚に関する境内解説板の整理","language":"ja"}],
+  "confidence":"high",
+  "research_status":"deep_researched",
+  "research_notes":"延命寺境内の案内板に基づく伝承本文を複数の現地記録で照合。処刑年は案内板・伝承資料間で正保元年（1644）と天明2年（1782）の相違があるため断定しない。現在の地蔵は再建像であることも資料間で一致する。歴史的事実として断定せず、地域に伝わる由来・信仰として記録する。",
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false}
+}
