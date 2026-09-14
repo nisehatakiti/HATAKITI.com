@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-urayasu-jizodo",
+  "status": "draft",
+  "title": "地蔵堂",
+  "title_normalized": "地蔵堂",
+  "title_origin": "local_signboard_name",
+  "summary": {
+    "text": "大水で境川から流されてきた地蔵を人々が拾い上げ、境橋の猫実側に祀っていたところ、堀江の大火で橋が焼失し、橋の再建にあわせて現在の花蔵院地蔵堂へ移されたと伝える話。地蔵は猫実地区への延焼を防いだとして大切にされてきた。",
+    "based_on_source_ids": ["SRC-URAYASU-KEZOIN-JIZODO-SIGN", "SRC-URAYASU-NANKATU-JIZODO", "SRC-URAYASU-SMILE-JIZODO"]
+  },
+  "story_summary": "大水で境川から流されてきたお地蔵様を人々が拾い上げ、境橋の猫実側のたもとに祀っていた。堀江地区で大火事があり境橋も焼失したため、橋を再建する際に地蔵は現在の場所へ移されたと伝えられている。また、地蔵が猫実地区への延焼を防いでくれたと、昔から大切にされてきたという。",
+  "story_content": "浦安市猫実の花蔵院にある地蔵堂には、境川から流されてきた地蔵にまつわる由来が伝えられている。大水の際に境川から流れてきたお地蔵様を人々が拾い上げ、境橋の猫実側のたもとに祀っていたという。その後、堀江地区で大火事が起こり、境橋も焼失した。橋を再建するにあたり、地蔵は現在の花蔵院の場所へ移されたとされる。さらに、この地蔵が大火による猫実地区への延焼を防いでくれたと考えられ、地域の人々から大切にされてきたという。大水や大火の具体的な発生年は、確認できた資料では特定されていない。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "浦安市", "area_name": "猫実", "source_description": "花蔵院地蔵堂脇の現地案内板の内容が複数の独立した現地記録で確認できる。"},
+  "locations": [{"name": "海照山花蔵院地蔵堂", "location_type": "tradition_site", "description": "境川から流されてきた地蔵が移されたと伝えられる現在の地蔵堂。", "latitude": null, "longitude": null, "precision": "address", "source_ids": ["SRC-URAYASU-KEZOIN-JIZODO-SIGN", "SRC-URAYASU-NANKATU-JIZODO", "SRC-URAYASU-SMILE-JIZODO"]}, {"name": "境橋・猫実側のたもと", "location_type": "former_tradition_site", "description": "流されてきた地蔵が当初祀られていたと伝えられる場所。", "latitude": null, "longitude": null, "precision": "area", "source_ids": ["SRC-URAYASU-KEZOIN-JIZODO-SIGN", "SRC-URAYASU-NANKATU-JIZODO"]}],
+  "characters": [],
+  "beings": [{"name": "地蔵菩薩", "type": "神仏・信仰対象", "description": "境川から流されてきたと伝えられ、火災から猫実地区を守ったとして信仰された地蔵。", "source_ids": ["SRC-URAYASU-KEZOIN-JIZODO-SIGN"]}],
+  "themes": ["地蔵信仰", "災害伝承", "洪水", "火災", "地域の守り神", "境川", "猫実"],
+  "story_type": ["信仰伝承", "災害伝承", "寺社伝承"],
+  "related_records": [],
+  "sources": [{"source_id": "SRC-URAYASU-KEZOIN-JIZODO-SIGN", "title": "花蔵院地蔵堂脇案内板", "publisher": "海照山花蔵院", "publication_date": "昭和44年9月奉納の案内板", "source_type": "onsite_signboard", "url": "https://www.travel.smileandhappiness.net/kezoin-urayasu.html", "accessed_date": "2026-09-14", "relevant_section": "海照山花蔵院地蔵堂・地蔵堂 由縁", "language": "ja"}, {"source_id": "SRC-URAYASU-NANKATU-JIZODO", "title": "浦安・花蔵院 地蔵堂の由縁紹介", "publisher": "南葛飾散歩", "publication_date": "2021-08-08", "source_type": "local_research_blog", "url": "https://nankatu.hatenablog.com/entry/2021/08/08/111845", "accessed_date": "2026-09-14", "relevant_section": "地蔵堂の由縁", "language": "ja"}, {"source_id": "SRC-URAYASU-SMILE-JIZODO", "title": "浦安散策・花蔵院地蔵堂", "publisher": "Travel Smile & Happiness", "publication_date": "web", "source_type": "local_research_blog", "url": "https://www.travel.smileandhappiness.net/kezoin-urayasu.html", "accessed_date": "2026-09-14", "relevant_section": "地蔵堂 由縁", "language": "ja"}],
+  "confidence": "high",
+  "research_status": "deep_researched",
+  "research_notes": "タイトルは現地案内板に従い『地蔵堂』とした。案内板の内容は複数の独立した現地記録で一致している。大水と堀江の大火の発生年は確認できなかったため記載していない。火災から猫実地区を守ったという部分は地域の伝承・信仰として記録する。"
+}
