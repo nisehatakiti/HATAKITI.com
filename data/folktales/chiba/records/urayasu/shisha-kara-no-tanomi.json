@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-urayasu-shisha-kara-no-tanomi",
+  "status": "draft",
+  "title": "死者からの頼み",
+  "title_normalized": "死者からの頼み",
+  "title_origin": "book_table_of_contents",
+  "summary": {
+    "text": "浦安の世間話として、亡くなった隣家の老婆が夢に現れ、葬送の際に入れ忘れた六文銭を取りに来たという死者からの頼みの話。",
+    "based_on_source_ids": ["SRC-URAYASU-LIB-MINWA", "SRC-URAYASU-SEKENBANASHI", "SRC-URAYASU-REVIEW"]
+  },
+  "story_summary": "隣家のシンスケの婆さんが亡くなった際、渡すはずの六文銭を入れ忘れた。すると後になって、その婆さんが夢に現れて六文銭を取りに来たという。",
+  "story_content": "『浦安の世間話―前田治郎助の語り』に収録される話。書評で紹介された具体的な内容では、隣家のシンスケの婆さんが死んだとき、渡す六文銭を入れ忘れたところ、後に夢の中へ婆さんが六文銭を取りに来たという。死者が葬送時に必要とされる六文銭を求めて現れるという、浦安の死者にまつわる世間話として伝えられている。本文全体を公開資料で確認できていないため、人物の詳細やその後の結末などは補っていない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総国",
+    "municipality": "浦安市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "シンスケの婆さん",
+      "type": "死者",
+      "description": "亡くなった後、夢の中に現れて六文銭を取りに来たとされる老婆。",
+      "source_ids": ["SRC-URAYASU-REVIEW"]
+    }
+  ],
+  "beings": [
+    {
+      "name": "死者の霊",
+      "type": "霊・怪異",
+      "description": "死後に夢へ現れ、忘れられた六文銭を求める存在として語られる。",
+      "source_ids": ["SRC-URAYASU-SEKENBANASHI", "SRC-URAYASU-REVIEW"]
+    }
+  ],
+  "themes": ["死者", "夢", "六文銭", "葬送", "死者からの頼み"],
+  "story_type": ["怪異伝承", "死者伝承", "世間話"],
+  "related_records": [],
+  "sources": [
+    {
+      "source_id": "SRC-URAYASU-LIB-MINWA",
+      "title": "千葉県の民話 浦安市",
+      "publisher": "千葉県立図書館",
+      "publication_date": "web",
+      "source_type": "library_index",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+      "accessed_date": "2026-09-14",
+      "relevant_section": "死者からの頼み",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-URAYASU-SEKENBANASHI",
+      "title": "浦安の世間話―前田治郎助の語り",
+      "publisher": "青弓社",
+      "publication_date": "1992-07",
+      "source_type": "book",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466",
+      "accessed_date": "2026-09-14",
+      "relevant_section": "1 ムラ話・不思議な体験／死者からの頼み",
+      "language": "ja"
+    },
+    {
+      "source_id": "SRC-URAYASU-REVIEW",
+      "title": "『浦安の世間話―前田治郎助の語り』書評",
+      "publisher": "ALL REVIEWS",
+      "publication_date": "2018頃",
+      "source_type": "book_review",
+      "url": "https://allreviews.jp/review/1819/",
+      "accessed_date": "2026-09-14",
+      "relevant_section": "六文銭を取りに来た死者の話",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "deep_researched",
+  "research_notes": "千葉県立図書館の収録情報、国立国会図書館の書誌・目次、書評による具体的な話の内容を照合した。本文全体は公開範囲で確認できていないため、確認できた筋だけを登録し、詳細を補っていない。"
+}
