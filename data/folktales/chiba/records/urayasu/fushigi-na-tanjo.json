@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "record_id":"chiba-urayasu-fushigi-na-tanjo",
+  "status":"draft",
+  "title":"不思議な誕生",
+  "title_normalized":"不思議な誕生",
+  "title_origin":"book_table_of_contents",
+  "summary":{"text":"二度の難産を経験した女性について、祖母が巣鴨の地蔵に願をかけ、三度目の出産が無事だったという浦安の世間話。","based_on_source_ids":["SRC-URAYASU-LIB-MINWA","SRC-URAYASU-SEKENBANASHI","SRC-URAYASU-REVIEW"]},
+  "story_summary":"嫁が二度の難産で胎児の頭を崩して取り出すほどの出産を経験したため、婆さまが巣鴨のお地蔵さまに願をかけ、護符を授かって飲ませた。三度目は無事に生まれ、その護符が赤ん坊に付いていたという。",
+  "story_content":"『浦安の世間話―前田治郎助の語り』に収録される話。書評で紹介された内容では、嫁が二度の難産を経験し、胎児の頭を崩して引っ張り出すほどだったため、婆さまが巣鴨のお地蔵さまに願をかけて護符を授かり、それを飲ませた。三度目の出産は無事で、護符が赤ん坊にぴらぴらとくっついていたという。千葉県立図書館の索引では浦安市堀江と首きり地蔵が関連事項として示されている。本文全体を公開資料で確認できていないため、確認できた筋のみを記録する。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"堀江"},
+  "locations":[{"name":"首きり地蔵","location_type":"related_tradition_site","description":"千葉県立図書館の浦安市民話索引で本話の根拠として挙げられている地蔵。","latitude":null,"longitude":null,"precision":"unknown","source_ids":["SRC-URAYASU-LIB-MINWA"]},{"name":"巣鴨の地蔵","location_type":"pilgrimage_site","description":"難産を避ける願掛けの対象として語られる地蔵。","latitude":null,"longitude":null,"precision":"unknown","source_ids":["SRC-URAYASU-REVIEW"]}],
+  "characters":[{"name":"嫁","role":"出産する女性","description":"二度の難産を経験し、三度目の出産で無事に子を産んだとされる。","source_ids":["SRC-URAYASU-REVIEW"]},{"name":"婆さま","role":"祈願する祖母","description":"巣鴨のお地蔵さまに願をかけ、護符を授かったとされる。","source_ids":["SRC-URAYASU-REVIEW"]}],
+  "beings":[{"name":"地蔵菩薩","type":"仏・信仰対象","description":"難産からの救いを願われる地蔵として登場する。","source_ids":["SRC-URAYASU-REVIEW"]}],
+  "themes":["出産","難産","地蔵信仰","護符","願掛け"],
+  "story_type":["怪異伝承","信仰伝承","誕生譚"],
+  "related_records":[],
+  "sources":[{"source_id":"SRC-URAYASU-LIB-MINWA","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-09-14","relevant_section":"不思議な誕生","language":"ja"},{"source_id":"SRC-URAYASU-SEKENBANASHI","title":"浦安の世間話―前田治郎助の語り","publisher":"青弓社","publication_date":"1992-07","source_type":"book","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-09-14","relevant_section":"1 ムラ話・不思議な体験／不思議な誕生","language":"ja"},{"source_id":"SRC-URAYASU-REVIEW","title":"『浦安の世間話―前田治郎助の語り』書評","publisher":"ALL REVIEWS","publication_date":"2017-12-18","source_type":"book_review","url":"https://allreviews.jp/review/1819/","accessed_date":"2026-09-14","relevant_section":"不思議な誕生","language":"ja"}],
+  "confidence":"medium",
+  "research_status":"deep_researched",
+  "research_notes":"千葉県立図書館の収録情報、国立国会図書館の書誌・目次、書評による具体的な筋を照合した。本文全体は公開資料で確認できていないため、詳細を補っていない。"
+}
