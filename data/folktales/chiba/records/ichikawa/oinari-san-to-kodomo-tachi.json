@@ -21,9 +21,7 @@
   ],
   "themes": ["狐", "稲荷", "横町稲荷", "行徳", "行徳三丁目", "戒め", "変化"],
   "story_type": ["狐伝承", "稲荷信仰", "教訓譚"],
-  "related_records": [
-    {"record_id": "chiba-ichikawa-yokomachi-inari-no-kitsune", "relationship": "related_place", "note": "同じ横町稲荷（行徳三丁目）を舞台とする別伝承。本文の同一性は確認していない。"}
-  ],
+  "related_records": [],
   "sources": [
     {"source_id": "SRC-CHIBA-LIB-ICHIKAWA-INDEX", "title": "千葉県の民話 市川市", "publisher": "千葉県立図書館", "author": null, "publication_date": "web", "source_type": "library_index", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html", "accessed_date": "2026-08-26", "relevant_section": "お稲荷さんと子どもたち", "language": "ja"},
     {"source_id": "SRC-EPIC-1986-OKASAN", "title": "お母さんがきいたむかしばなし", "publisher": "エピック", "author": null, "publication_date": "1986", "source_type": "book", "url": null, "accessed_date": "2026-08-26", "relevant_section": "収録資料（本文未確認）", "language": "ja"},
