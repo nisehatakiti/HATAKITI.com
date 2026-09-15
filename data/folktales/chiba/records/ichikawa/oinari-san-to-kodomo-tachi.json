@@ -1,1 +1,36 @@
-{"schema_version":"1.0","record_id":"chiba-ichikawa-oinari-san-to-kodomo-tachi","municipality":"市川市","title":"お稲荷さんと子どもたち","research_status":"source_confirmed","story_type":["狐伝承","稲荷信仰"],"cross_tags":["狐","稲荷","横町稲荷","行徳","行徳三丁目","市川市"],"sources":[{"title":"お母さんがきいたむかしばなし","author_or_publisher":"エピック","publication_year_or_date":"1986","source_type":"book","reliability_notes":"収録資料。本文未確認。"},{"title":"千葉県の民話 市川市","author_or_publisher":"千葉県立図書館","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-08-26","reliability_notes":"題名・地域確認。"}],"related_items":[{"relation_type":"shared_place_tag","target_subject":"横町稲荷","note":"横町稲荷に関する他の狐伝承と場所タグで横断接続。本文同一性は断定しない。"}],"research_notes":"関連地として行徳三丁目・横町稲荷を確認。本文未確認のため筋は補完しない。"}
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-oinari-san-to-kodomo-tachi",
+  "status": "draft",
+  "title": "お稲荷さんと子どもたち",
+  "title_normalized": "お稲荷さんと子どもたち",
+  "title_origin": "source_title",
+  "summary": {"text": "行徳三丁目・横町稲荷の賽銭箱から金を盗んだ子どもたちが、めったに姿を見せない駐在さんに脅され、盗みを悔いて詫び参りをする伝承。", "based_on_source_ids": ["SRC-JFOLKLORE-OINARI-KODOMO"]},
+  "story_summary": "行徳三丁目の横町稲荷で、賽銭箱から金を盗んだ子どもたちの前に、めったに歩かないはずの駐在さんが現れて脅し、子どもたちが盗みを悔いてお詫び参りをしたという伝承。",
+  "story_content": "行徳三丁目にある横町稲荷は、地元の子どもたちにもなじみの深いお稲荷さんだった。あるとき、子どもたちが賽銭箱に手を伸ばし、中に入っていたお金を盗んでしまった。\n\nすると、ふだんはめったにこのあたりを歩かないはずの駐在さん（おまわりさん）が、どこからともなく子どもたちの前に姿を現した。駐在さんは子どもたちを見て、「稲荷のお金を取ると、おちんちんが大きくなるぞ」と脅した。\n\n驚いた子どもたちは、大急ぎで盗んだお金を稲荷に返しに行った。そして、あの駐在さんは本物の人間ではなく、子どもたちの盗みを戒めるために、お稲荷さんが姿を変えて現れたのだと気づいた。子どもたちは皆でお稲荷さんに手を合わせ、お詫び参りをしたという。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "市川市", "area_name": "行徳三丁目", "source_description": "千葉県立図書館の市川市民話索引・日本伝承マップともに、行徳三丁目の横町稲荷を伝承地として掲載している。"},
+  "locations": [
+    {"name": "横町稲荷（行徳三丁目）", "type": "神社", "description": "子どもたちが賽銭箱から金を盗み、駐在さんに化けたお稲荷さんに戒められたと伝えられる稲荷社。", "source_ids": ["SRC-JFOLKLORE-OINARI-KODOMO"]}
+  ],
+  "characters": [
+    {"name": "鈴木ふく", "role": "語り手または関係者として記録上確認できる人物", "attributes": [], "source_ids": ["SRC-JFOLKLORE-OINARI-KODOMO"]},
+    {"name": "子どもたち", "role": "賽銭箱から金を盗んだ子どもたち", "attributes": [], "source_ids": ["SRC-JFOLKLORE-OINARI-KODOMO"]}
+  ],
+  "beings": [
+    {"name": "お稲荷さん（横町稲荷）", "type": "deity", "attributes": ["駐在さんに姿を変えて子どもたちの盗みを戒めた"], "source_ids": ["SRC-JFOLKLORE-OINARI-KODOMO"]}
+  ],
+  "themes": ["狐", "稲荷", "横町稲荷", "行徳", "行徳三丁目", "戒め", "変化"],
+  "story_type": ["狐伝承", "稲荷信仰", "教訓譚"],
+  "related_records": [
+    {"record_id": "chiba-ichikawa-yokomachi-inari-no-kitsune", "relationship": "related_place", "note": "同じ横町稲荷（行徳三丁目）を舞台とする別伝承。本文の同一性は確認していない。"}
+  ],
+  "sources": [
+    {"source_id": "SRC-CHIBA-LIB-ICHIKAWA-INDEX", "title": "千葉県の民話 市川市", "publisher": "千葉県立図書館", "author": null, "publication_date": "web", "source_type": "library_index", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html", "accessed_date": "2026-08-26", "relevant_section": "お稲荷さんと子どもたち", "language": "ja"},
+    {"source_id": "SRC-EPIC-1986-OKASAN", "title": "お母さんがきいたむかしばなし", "publisher": "エピック", "author": null, "publication_date": "1986", "source_type": "book", "url": null, "accessed_date": "2026-08-26", "relevant_section": "収録資料（本文未確認）", "language": "ja"},
+    {"source_id": "SRC-JFOLKLORE-OINARI-KODOMO", "title": "お稲荷さんと子供達（日本伝承マップ：市川の伝承民話 第2集より）", "publisher": "日本伝承マップ（j-folklore.com）／原典：市川民話の会『市川の伝承民話 第2集』", "author": null, "publication_date": "web", "source_type": "digital_archive", "url": "https://j-folklore.com/l/book_457_ep_024.html", "accessed_date": "2026-09-16", "relevant_section": "あらすじ「賽銭箱から金を盗んだ子供達の前に…」", "language": "ja"}
+  ],
+  "ai_processing": {"summary_generated": true, "sources_merged": true, "translation_used": false, "notes": "日本伝承マップ（j-folklore.com）が公開する『市川の伝承民話 第2集』（市川民話の会）所収あらすじを直接確認し、これを基にHATAKITI.com独自の文章として再構成した。あらすじ以上の原文本文そのものは未確認。"},
+  "confidence": "medium",
+  "research_status": "deep_researched",
+  "research_notes": "日本伝承マップ（j-folklore.com）で、原典『市川の伝承民話 第2集』（市川民話の会）所収のあらすじを直接確認した。あらすじレベルでの確認であり、原典本文そのものは未入手。横町稲荷を舞台とする別伝承『横町稲荷の狐』（chiba-ichikawa-yokomachi-inari-no-kitsune）とは場所タグのみで接続し、本文の同一性は判定していない。"
+}

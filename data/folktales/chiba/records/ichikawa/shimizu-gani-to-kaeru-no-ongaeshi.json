@@ -1,1 +1,34 @@
-{"schema_version":"1.0","record_id":"chiba-ichikawa-shimizu-gani-to-kaeru-no-ongaeshi","municipality":"市川市","title":"清水がにと、蛙の恩返し","research_status":"source_confirmed","story_type":["動物伝承","恩返し"],"cross_tags":["蟹","蛙","恩返し","市川市","行徳"],"sources":[{"title":"千葉県の民話 続","author_or_publisher":"千秋社","publication_year_or_date":"1981","source_type":"book","reliability_notes":"収録資料。本文未確認。"},{"title":"千葉県の民話 市川市","author_or_publisher":"千葉県立図書館","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-09-07","reliability_notes":"題名・出典・市川市伝承として確認。"},{"title":"市川市の伝承（750話）","author_or_publisher":"日本伝承マップ","source_type":"folklore_database","url_or_identifier":"https://j-folklore.com/pref/chiba/%E5%B8%82%E5%B7%9D%E5%B8%82","accessed_date":"2026-09-07","reliability_notes":"「しみずがに」を行徳の伝承として掲載。"}],"research_notes":"「しみずがに」が地名・蟹の名称・物語中の水辺表現のいずれを指すか、本文未確認のため断定しない。蛙の恩返しの具体的筋も確認できず、題名からの補完は行わない。"}
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-ichikawa-shimizu-gani-to-kaeru-no-ongaeshi",
+  "status": "draft",
+  "title": "清水がにと、蛙の恩返し",
+  "title_normalized": "清水がにと、蛙の恩返し",
+  "title_origin": "source_title",
+  "summary": {"text": "行徳に伝わる動物報恩譚。蟹を助けた男が、蛙を呑む蛇に末娘を嫁にやると約束するが、嫁入りの晩に恩を受けた蟹の大群が蛇を退治し、娘は蛙からもらった着物を着て旅立つ。", "based_on_source_ids": ["SRC-JFOLKLORE-SHIMIZUGANI"]},
+  "story_summary": "市川市行徳に伝わる動物報恩の昔話。田の畔の清水蟹を助けた男が、蛙を呑もうとする蛇に末娘を嫁にやると約束するが、嫁入りの晩、かつて助けた蟹の大群が押し寄せて蛇を退治し、娘は蛙からもらった着物を着て旅立っていく。",
+  "story_content": "むかし、行徳のある村に、心やさしい男が住んでいた。あるとき男は、田んぼの畔の清水にすんでいた蟹を見つけ、山まで運んで逃がしてやった。\n\nまたあるとき、男は蛙を呑みこもうとしている蛇に出くわした。男は蛇に向かって、自分の末娘を嫁にやるからと約束をして、その場をおさめた。\n\nやがて嫁入りの晩がやってきて、約束どおり大蛇が男の家へやってきた。すると、かつて男が山へ逃がしてやった蟹たちが大群となって押し寄せ、はさみで蛇をはさみ殺してしまった。こうして娘は難をのがれ、あの蛙からもらった着物を身にまとって、旅立っていったという。\n\nこの話は、明治五年生まれの祖母から、昭和のはじめごろに聞いた話として、行徳の家々に語り伝えられてきたものである。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "市川市", "area_name": "行徳", "source_description": "千葉県立図書館の市川市民話索引・日本伝承マップともに、行徳の伝承として「しみずがに」を掲載している。"},
+  "locations": [],
+  "characters": [
+    {"name": "男（心やさしい男）", "role": "蟹を助け、蛇に娘を嫁がせる約束をする人物", "attributes": [], "source_ids": ["SRC-JFOLKLORE-SHIMIZUGANI"]},
+    {"name": "末娘", "role": "嫁入りを約束された娘", "attributes": [], "source_ids": ["SRC-JFOLKLORE-SHIMIZUGANI"]}
+  ],
+  "beings": [
+    {"name": "清水蟹", "type": "animal", "attributes": ["助けられた恩を返し、大群で蛇を退治する"], "source_ids": ["SRC-JFOLKLORE-SHIMIZUGANI"]},
+    {"name": "蛇", "type": "animal", "attributes": ["蛙を呑もうとする", "娘への婿入りを約束され、嫁入りの晩に蟹に退治される"], "source_ids": ["SRC-JFOLKLORE-SHIMIZUGANI"]},
+    {"name": "蛙", "type": "animal", "attributes": ["娘に着物を贈ったと伝えられる"], "source_ids": ["SRC-JFOLKLORE-SHIMIZUGANI"]}
+  ],
+  "themes": ["蟹", "蛙", "蛇", "恩返し", "動物報恩", "市川市", "行徳"],
+  "story_type": ["動物伝承", "恩返し", "昔話"],
+  "related_records": [],
+  "sources": [
+    {"source_id": "SRC-CHIBA-LIB-ICHIKAWA-INDEX", "title": "千葉県の民話 市川市", "publisher": "千葉県立図書館", "author": null, "publication_date": "web", "source_type": "library_index", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html", "accessed_date": "2026-09-07", "relevant_section": "清水がにと、蛙の恩返し", "language": "ja"},
+    {"source_id": "SRC-CHIBA-1981-ZOKU", "title": "千葉県の民話 続", "publisher": "千秋社", "author": null, "publication_date": "1981", "source_type": "book", "url": null, "accessed_date": "2026-09-07", "relevant_section": "収録資料（本文未確認）", "language": "ja"},
+    {"source_id": "SRC-JFOLKLORE-SHIMIZUGANI", "title": "しみずがに（日本伝承マップ：市川の伝承民話 第1集より）", "publisher": "日本伝承マップ（j-folklore.com）／原典：市川民話の会『市川の伝承民話 第1集』", "author": null, "publication_date": "1980年頃", "source_type": "digital_archive", "url": "https://j-folklore.com/l/book_456_ep_090.html", "accessed_date": "2026-09-16", "relevant_section": "あらすじ・採話情報（明治5年生まれの祖母からの伝聞）", "language": "ja"}
+  ],
+  "ai_processing": {"summary_generated": true, "sources_merged": true, "translation_used": false, "notes": "日本伝承マップ（j-folklore.com）が公開する『市川の伝承民話 第1集』（市川民話の会）所収あらすじを直接確認し、これを基にHATAKITI.com独自の文章として再構成した。あらすじの因果関係が簡潔なため、原文にない展開は補っていない。原典本文そのものは未入手。"},
+  "confidence": "medium",
+  "research_status": "deep_researched",
+  "research_notes": "日本伝承マップ（j-folklore.com）で、原典『市川の伝承民話 第1集』（市川民話の会・昭和55年頃刊）所収のあらすじと採話情報（明治5年生まれの祖母から昭和初めに聞いた話）を直接確認した。あらすじレベルでの確認であり、原典本文そのものは未入手。「しみずがに」が地名か蟹の名称かは確定していない。"
+}

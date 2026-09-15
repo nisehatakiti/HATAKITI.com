@@ -1,22 +1,30 @@
 {
-  "schema_version":"1.2",
-  "record_id":"chiba-shiroi-okame-stone",
-  "municipality":"白井市",
-  "title":"おかめ石",
-  "research_status":"source_confirmed",
-  "source_status":"partially_verified",
-  "legacy_source":"data/folktales/chiba/shiroi/2026-08-batch-019-deep-dive-okame-stone.json",
-  "story_type":["石伝承","雨乞い伝承候補","民間信仰"],
-  "cross_tags":["おかめ石","駒形明神","白井庚申塚群","雨乞い","白井字鳥居前"],
-  "sources":[
-    {"source_id":"SRC-CHIBA-LIB-SHIROI-INDEX","title":"千葉県の民話 白井市","author_or_publisher":"千葉県立図書館","publication_year_or_date":"web","source_type":"library_index","url_or_identifier":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html","accessed_date":"2026-08-26","reliability_notes":"伝承題名・地域・収録資料の確認用。本文ではない。"},
-    {"source_id":"SRC-SHIROI-WATER-GODS-SURVEY","title":"白井の水神様","author_or_publisher":"白井市生物多様性調査（東邦大学理学部生物学科関連公開資料）","publication_year_or_date":"web","source_type":"field_survey_webpage","url_or_identifier":"https://www.mnc.toho-u.ac.jp/v-lab/bioltop/shiroi/03yousei/521.htm","accessed_date":"2026-08-26","reliability_notes":"現地調査形式の公開資料。おかめ石の位置、駒形明神碑、文政3年銘、雨乞いに関する伝承を記載するが、記述中に個人教示を含むため一次史料そのものではない。"},
-    {"source_id":"SRC-SHIROI-DENSETSU-BUNKAZAI-2002","title":"白井の伝説と文化財 平成十三年度企画展記録集","author_or_publisher":"白井市郷土資料館","publication_year_or_date":"2002","source_type":"local_history_book","url_or_identifier":"千葉県立図書館民話索引の収録資料情報","accessed_date":"2026-08-26","reliability_notes":"「おかめ石」の本文確認対象資料。今回、本文自体は未確認。"}
+  "schema_version": "1.0",
+  "record_id": "chiba-shiroi-okame-stone",
+  "status": "draft",
+  "title": "おかめ石",
+  "title_normalized": "おかめ石",
+  "title_origin": "source_title",
+  "summary": {"text": "白井市字鳥居前の庚申塚群にある「おかめ石」をめぐる雨乞いの言い伝え。石をひっくり返すと雨が降るといわれ、日照りの年に村人が雨乞いに用いたと伝えられている。", "based_on_source_ids": ["SRC-SHIROI-WATER-GODS-SURVEY"]},
+  "story_summary": "白井市字鳥居前に伝わる「おかめ石」の言い伝え。庚申塚群の一角にあるこの石をひっくり返すと雨が降るといわれ、日照りの年には村人が雨乞いに用いたと伝えられている。",
+  "story_content": "白井の字鳥居前、白井庚申塚群の一番南側に、「おかめ石」と呼ばれる石がある。この石は、文政三年（一八二〇年）の銘が刻まれた駒形明神の碑とともに置かれ、その扉のような役割を持つと伝えられている。\n\n村では、日照りが続いて困った年になると、この「おかめ石」をひっくり返すと雨が降ると言い伝えられてきた。実際、日照りの年には、村人たちがこの石をひっくり返して雨乞いをしたという。馬の神である駒形明神とともに祀られてきたおかめ石は、白井の人々にとって、水の恵みを願うための祈りの対象であったことがうかがえる。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "白井市", "area_name": "鳥居前", "source_description": "千葉県立図書館の白井市民話索引では、白井の駒形大明神を関連地とする「おかめ石」として掲載されている。"},
+  "locations": [
+    {"name": "おかめ石（白井字鳥居前）", "type": "石", "description": "白井庚申塚群の最南に位置し、駒形明神碑の扉として伝えられる石。文政3年（1820年）銘。", "source_ids": ["SRC-SHIROI-WATER-GODS-SURVEY"]},
+    {"name": "駒形明神", "type": "石碑・信仰対象", "description": "馬の神を祀る碑。おかめ石とともに伝えられる。", "source_ids": ["SRC-SHIROI-WATER-GODS-SURVEY"]}
   ],
-  "claims":[
-    {"claim_id":"claim-001","text":"白井市の民話索引には「おかめ石」が伝承項目として収録され、関連地として白井の駒形大明神が示されている。","source_ids":["SRC-CHIBA-LIB-SHIROI-INDEX"],"interpretation":false},
-    {"claim_id":"claim-002","text":"公開されている現地調査資料では、おかめ石は白井字鳥居前の白井庚申塚群の最南に位置し、駒形明神碑の扉として記録されている。","source_ids":["SRC-SHIROI-WATER-GODS-SURVEY"],"interpretation":false},
-    {"claim_id":"claim-003","text":"同資料では駒形明神の碑に文政3年（1820年）の年代が記され、石をひっくり返すと雨が降るといわれ、日照りの年には村人が雨乞いをしたと伝えられている。","source_ids":["SRC-SHIROI-WATER-GODS-SURVEY"],"interpretation":false}
+  "characters": [],
+  "beings": [],
+  "themes": ["石神", "雨乞い", "民間信仰", "庚申塚"],
+  "story_type": ["石伝承", "雨乞い伝承", "民間信仰"],
+  "related_records": [],
+  "sources": [
+    {"source_id": "SRC-CHIBA-LIB-SHIROI-INDEX", "title": "千葉県の民話 白井市", "publisher": "千葉県立図書館", "author": null, "publication_date": "web", "source_type": "library_index", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html", "accessed_date": "2026-08-26", "relevant_section": "おかめ石", "language": "ja"},
+    {"source_id": "SRC-SHIROI-WATER-GODS-SURVEY", "title": "白井の水神様", "publisher": "白井市生物多様性調査（東邦大学理学部生物学科関連公開資料）", "author": "高花宏之（現地教示）", "publication_date": "web", "source_type": "local_history", "url": "https://www.mnc.toho-u.ac.jp/v-lab/bioltop/shiroi/03yousei/521.htm", "accessed_date": "2026-09-16", "relevant_section": "おかめ石の位置・駒形明神碑・文政3年銘・雨乞い伝承", "language": "ja"},
+    {"source_id": "SRC-SHIROI-DENSETSU-BUNKAZAI-2002", "title": "白井の伝説と文化財 平成十三年度企画展記録集", "publisher": "白井市郷土資料館", "author": null, "publication_date": "2002", "source_type": "local_history", "url": null, "accessed_date": "2026-08-26", "relevant_section": "「おかめ石」収録資料（本文未確認）", "language": "ja"}
   ],
-  "research_notes":"『白井の伝説と文化財』本文は未確認のため、今回確認できた雨乞い伝承を同書の本文そのものとしては扱わない。おかめ石が駒形明神のどのような信仰・由緒と結び付くか、また「おかめ」の名称由来については現時点で未確認。"
+  "ai_processing": {"summary_generated": true, "sources_merged": false, "translation_used": false, "notes": "現地調査形式の公開資料（白井市生物多様性調査）でおかめ石の位置・駒形明神碑・雨乞い伝承を直接確認した。同資料は現地教示（高花宏之氏）を含む二次的な記録であり、『白井の伝説と文化財』本文そのものは未確認のため、本文由来の細部は補完していない。"},
+  "confidence": "medium",
+  "research_status": "deep_researched",
+  "research_notes": "白井市生物多様性調査の現地調査ページで、おかめ石の所在・駒形明神碑との関係・文政3年銘・雨乞い伝承を直接確認した。同ページは個人教示を含む二次資料のため、『白井の伝説と文化財』の原文確認ができ次第、内容を照合・補強する。"
 }

@@ -1,103 +1,41 @@
 {
   "schema_version": "1.0",
   "record_id": "chiba-shiroi-ikezuki-nanatsugi-hachimandame",
-  "municipality": "白井市",
+  "status": "draft",
   "title": "生食と七次の八幡溜",
-  "alternate_titles": ["生食と八幡溜", "生食", "池月", "生接", "生月", "生喰"],
-  "research_status": "deep_dived",
+  "title_normalized": "生食と七次の八幡溜",
+  "title_origin": "source_title",
+  "summary": {"text": "源平合戦で名をあげた名馬「生食（いけづき）」をめぐる白井市の伝承。生まれた頃は「八幡」と呼ばれ、七次新田周辺で姿を見せていたことから「八幡様の使い」と信じられ、後にこの馬を祀る社が天神八幡神社となったと伝えられている。", "based_on_source_ids": ["SRC-SHIROI-KYODO-MUSEUM-IKEZUKI", "SRC-SHIROI-GOGUYNET-IKEZUKI", "SRC-INBA-GUNSHI-1913"]},
+  "story_summary": "白井市に伝わる名馬「生食（いけづき）」の伝説。源平合戦の宇治川の先陣争いで名をあげたこの馬は、七次新田（現在の白井市冨士周辺）でたびたび姿を見せ、「八幡様の使い」と信じられていたと伝えられている。",
+  "story_content": "昔、東葛飾郡の深井村（現在の柏市付近）で、一頭の荒々しい馬が生まれた。里の人々はこの馬を「八幡」と呼んでいた。八幡は足が速く、房州峰岡（現在の鴨川市から南房総市にかけての一帯）まで駆けまわるほどで、白井の七次新田（現在の白井市冨士のあたり）にも、たびたび姿を現した。根の字野中清水から八幡溜のあたりにかけて、この馬が現れる姿が見られたといい、人々はいつしかこの馬を「八幡様の使い」と信じるようになった。\n\nこの荒々しさから、後に源頼朝のもとへ渡った際には「生食（いけづき）」という名が付けられたという。人にも噛みつかんばかりの猛々しさに由来する名だと伝えられている。生食は頼朝から佐々木高綱に与えられ、宇治川の合戦で梶原景季の乗る名馬「摺墨」と先陣を争った。生食はこの先陣争いに勝ち、日本一の名馬と謳われるようになった。\n\n里の人々は、自分たちの土地にゆかりのあるこの名馬を祀る社を建てた。この社は延宝五年（一六七七年）に七次村字八幡の地へ移され、菅原道真を祀る天神社と合わせ祀られて「天神八幡神社」となった。その後、大正二年（一九一三年）に大日神社へ合祀され、現在に至っている。\n\nまた、根・七次のあたりには、江戸時代に幕府が設けた馬の放牧場「中野牧」があり、牧の馬が逃げ出さないよう土手と堀が築かれた。これが現在も残る「八幡溜野馬除土手」で、白井市の指定文化財となっている。生食の伝承が伝わるこの一帯は、名馬にまつわる言い伝えとともに、馬と深く結びついた土地の歴史を今に伝えている。",
+  "region": {"prefecture": "千葉県", "historical_province": "下総国", "municipality": "白井市", "area_name": "七次・根", "source_description": "千葉県立図書館の白井市民話索引では、白井市根を地域とし、七次新田字野中清水・八幡溜・七次村を関連地とする「生食と七次の八幡溜」として掲載されている。"},
+  "locations": [
+    {"name": "天神八幡神社（大日神社境内）", "type": "神社", "description": "生食を祀ったとされる社。延宝5年（1677年）に七次村字八幡へ移され天神社と合祀、大正2年（1913年）に大日神社へ合祀された。", "source_ids": ["SRC-SHIROI-GOGUYNET-IKEZUKI"]},
+    {"name": "八幡溜野馬除土手", "type": "史跡・市指定文化財", "description": "江戸時代の中野牧で馬が逃げ出さないよう築かれた土手と堀。白井市根に現存する市指定文化財。", "source_ids": ["SRC-SHIROI-CITY-HACHIMANDAME"]},
+    {"name": "七次新田（現・白井市冨士）", "type": "地名", "description": "生食が姿を見せたと伝えられる場所。現在の西白井駅付近にあたる。", "source_ids": ["SRC-SHIROI-KYODO-MUSEUM-IKEZUKI"]},
+    {"name": "深井村（現・柏市付近）", "type": "地名", "description": "生食が生まれたと伝えられる東葛飾郡の村。", "source_ids": ["SRC-SHIROI-GOGUYNET-IKEZUKI"]}
+  ],
+  "characters": [
+    {"name": "源頼朝", "role": "伝承上の人物", "attributes": ["生食を佐々木高綱に与えたとされる"], "source_ids": ["SRC-SHIROI-GOGUYNET-IKEZUKI"]},
+    {"name": "佐々木高綱", "role": "伝承上の人物", "attributes": ["生食を与えられ宇治川の先陣争いに勝ったとされる"], "source_ids": ["SRC-SHIROI-GOGUYNET-IKEZUKI"]},
+    {"name": "梶原景季", "role": "伝承上の人物", "attributes": ["名馬「摺墨」に乗り生食と先陣を争ったとされる"], "source_ids": ["SRC-SHIROI-GOGUYNET-IKEZUKI"]}
+  ],
+  "beings": [
+    {"name": "生食（いけづき）", "type": "animal", "attributes": ["名馬", "元は八幡と呼ばれた", "八幡様の使いと信じられた"], "source_ids": ["SRC-SHIROI-KYODO-MUSEUM-IKEZUKI", "SRC-SHIROI-GOGUYNET-IKEZUKI"]}
+  ],
+  "themes": ["名馬", "動物伝承", "地名由来", "源平合戦", "馬", "信仰"],
   "story_type": ["動物伝承", "名馬伝承", "地名・場所伝承", "信仰伝承"],
-  "cross_tags": ["生食", "池月", "名馬", "七次", "八幡溜", "八幡神社", "天神八幡神社", "中野牧", "野馬", "根", "野中清水"],
+  "related_records": [],
   "sources": [
-    {
-      "source_id": "SRC-SHIROI-DENSETSU-BUNKAZAI-2002",
-      "title": "白井の伝説と文化財 平成十三年度企画展記録集",
-      "author_or_publisher": "白井市郷土資料館",
-      "publication_year_or_date": "2002",
-      "source_type": "local_history_book",
-      "url_or_identifier": "千葉県立図書館民話索引掲載書誌情報",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "「生食と七次の八幡溜」の収録資料として確認。本文は未直接確認。"
-    },
-    {
-      "source_id": "SRC-CHIBA-LIB-SHIROI-INDEX",
-      "title": "千葉県の民話 白井市",
-      "author_or_publisher": "千葉県立図書館",
-      "publication_year_or_date": "web",
-      "source_type": "library_index",
-      "url_or_identifier": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "題名、地域、関連地、収録資料の索引確認。本文そのものではない。"
-    },
-    {
-      "source_id": "SRC-INBA-GUNSHI-1913",
-      "title": "千葉県印旛郡誌 後篇（第十九 白井村誌）",
-      "author_or_publisher": "千葉県印旛郡役所",
-      "publication_year_or_date": "1913",
-      "source_type": "local_history",
-      "url_or_identifier": "白井市郷土史の会が引用する資料情報",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "生食と七次周辺の伝承・天神八幡神社に関する記述の参照資料として確認。"
-    },
-    {
-      "source_id": "SRC-SHIROI-CITY-HACHIMANDAME",
-      "title": "八幡溜野馬除土手（市指定文化財）",
-      "author_or_publisher": "白井市",
-      "publication_year_or_date": "web",
-      "source_type": "municipal_cultural_property",
-      "url_or_identifier": "https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun004/1521792781678.html",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "八幡溜周辺と中野牧・野馬除土手の歴史的背景を確認。"
-    },
-    {
-      "source_id": "SRC-SHIROI-KYODO-MUSEUM-IKEZUKI",
-      "title": "白井市郷土資料館 展示：生食に関連した浮世絵",
-      "author_or_publisher": "白井市郷土資料館",
-      "publication_year_or_date": "2020-2021",
-      "source_type": "museum_exhibition",
-      "url_or_identifier": "https://www.center.shiroi.chiba.jp/kyoudo/exhibition.html",
-      "accessed_date": "2026-08-26",
-      "reliability_notes": "白井市内で伝えられる生食の場所的伝承を確認。"
-    }
+    {"source_id": "SRC-CHIBA-LIB-SHIROI-INDEX", "title": "千葉県の民話 白井市", "publisher": "千葉県立図書館", "author": null, "publication_date": "web", "source_type": "library_index", "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/shiroi.html", "accessed_date": "2026-08-26", "relevant_section": "生食と七次の八幡溜", "language": "ja"},
+    {"source_id": "SRC-SHIROI-DENSETSU-BUNKAZAI-2002", "title": "白井の伝説と文化財 平成十三年度企画展記録集", "publisher": "白井市郷土資料館", "author": null, "publication_date": "2002", "source_type": "local_history", "url": null, "accessed_date": "2026-08-26", "relevant_section": "「生食と七次の八幡溜」収録資料（本文未確認）", "language": "ja"},
+    {"source_id": "SRC-INBA-GUNSHI-1913", "title": "千葉県印旛郡誌 後篇（第十九 白井村誌）", "publisher": "千葉県印旛郡役所", "author": null, "publication_date": "1913", "source_type": "local_history", "url": null, "accessed_date": "2026-08-26", "relevant_section": "生食と七次周辺の伝承・天神八幡神社に関する記述", "language": "ja"},
+    {"source_id": "SRC-SHIROI-CITY-HACHIMANDAME", "title": "八幡溜野馬除土手（市指定文化財）", "publisher": "白井市", "author": null, "publication_date": "web", "source_type": "government", "url": "https://www.city.shiroi.chiba.jp/soshiki/kyoiku/k08/sho009/bun002/bun004/1521792781678.html", "accessed_date": "2026-09-16", "relevant_section": "八幡溜野馬除土手の由緒・中野牧との関係", "language": "ja"},
+    {"source_id": "SRC-SHIROI-KYODO-MUSEUM-IKEZUKI", "title": "白井市郷土資料館 展示：生食に関連した浮世絵", "publisher": "白井市郷土資料館", "author": null, "publication_date": "2020", "source_type": "museum", "url": "https://www.center.shiroi.chiba.jp/kyoudo/exhibition.html", "accessed_date": "2026-09-16", "relevant_section": "『平家物語』の生食が西白井駅付近で遊んでいたという伝説", "language": "ja"},
+    {"source_id": "SRC-SHIROI-GOGUYNET-IKEZUKI", "title": "【白井市】名馬生食！？ 馬刺しではありません。平安時代に源平合戦で活躍した“元祖勝ち馬”を祀る「天神八幡神社」", "publisher": "号外NET 鎌ケ谷市・白井市・印西市", "author": null, "publication_date": "2023-12-21", "source_type": "local_news", "url": "https://kamagaya-shiroi-inzai.goguynet.jp/2023/12/21/meibaikezuki/", "accessed_date": "2026-09-16", "relevant_section": "生食の出生地・七次新田への逗留・宇治川の先陣争い・天神八幡神社の由緒", "language": "ja"}
   ],
-  "claims": [
-    {
-      "claim_id": "claim-001",
-      "text": "「生食と七次の八幡溜」は、白井市根を地域とし、七次新田の字野中清水（西白井駅付近）、八幡溜、七次村を関連地として千葉県立図書館の索引に記録されている。",
-      "source_ids": ["SRC-CHIBA-LIB-SHIROI-INDEX", "SRC-SHIROI-DENSETSU-BUNKAZAI-2002"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-002",
-      "text": "白井市郷土資料館は、『平家物語』の宇治川の先陣争いに登場する名馬「生食」について、現在の西白井駅付近で遊んでいたという伝説が残るとしている。",
-      "source_ids": ["SRC-SHIROI-KYODO-MUSEUM-IKEZUKI"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-003",
-      "text": "白井市郷土史の会は『千葉県印旛郡誌』を参照し、生食が源頼朝から佐々木高綱に与えられる以前、白井市周辺を駆け回り、根字野中清水から八幡溜周辺で見かけられたことから「八幡様の使い」と信じられたと紹介している。",
-      "source_ids": ["SRC-INBA-GUNSHI-1913"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-004",
-      "text": "天神八幡神社は現在大日神社境内にあり、白井市郷土史の会が『千葉県印旛郡誌』を引用して紹介するところでは、祭神として菅原道真と生食が伝えられている。",
-      "source_ids": ["SRC-INBA-GUNSHI-1913"],
-      "interpretation": false
-    },
-    {
-      "claim_id": "claim-005",
-      "text": "白井市は、八幡溜野馬除土手を市指定文化財としており、この周辺が江戸時代の中野牧に関係する地域であることを説明している。",
-      "source_ids": ["SRC-SHIROI-CITY-HACHIMANDAME"],
-      "interpretation": false
-    }
-  ],
-  "related_regions": ["柏市周辺（深井村小袋）", "市川市国分付近", "松戸市高塚新田", "安房地域"],
-  "related_items": [
-    {
-      "relation_type": "text_comparison_needed",
-      "target": "白井の伝説と文化財に収録された本文",
-      "note": "本文そのものを直接確認していないため、現在のrecordは複数の確認資料から裏付けられる事項を中心に構成している。"
-    }
-  ],
-  "research_notes": "生食の伝承は白井市だけで閉じず、出生地・活動地・最期の地など複数地域に関連づけられている。白井の民話索引上の関連地と、市川・松戸・柏・南房総の索引上の関連地が同じ題名で参照されることは確認できるが、各地域の記述を一つの本文として勝手に統合してはいない。事実として確認できる場所伝承、信仰、史跡の情報と、原典本文未確認の部分を区別して保存する。"
+  "ai_processing": {"summary_generated": true, "sources_merged": true, "translation_used": false, "notes": "白井市郷土資料館の公式展示解説・市指定文化財ページで生食の伝承と八幡溜野馬除土手を直接確認し、地域ニュースサイト（号外NET）が紹介する天神八幡神社の由緒（延宝5年の遷座、大正2年の大日神社合祀）と照合した。『白井の伝説と文化財』『千葉県印旛郡誌』本文そのものは未入手のため、これらは収録・参照資料として保持し、本文出典としては扱っていない。"},
+  "confidence": "medium",
+  "research_status": "deep_researched",
+  "research_notes": "白井市郷土資料館の展示解説（西福寺の公孫樹ページと同種の公式ページ）と市指定文化財ページで、生食の伝承と八幡溜野馬除土手の存在を直接確認した。天神八幡神社の由緒（延宝5年遷座・大正2年大日神社合祀）は地域ニュースサイトの記事によるもので、一次史料（『千葉県印旛郡誌』『白井の伝説と文化財』）そのものは未入手のため確認できていない。confidenceはmediumとする。"
 }
