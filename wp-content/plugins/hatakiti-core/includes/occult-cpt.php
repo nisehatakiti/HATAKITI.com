@@ -49,6 +49,9 @@ function hatakiti_register_occult_cpts() {
             'menu_name'     => '週刊オカルト新聞',
         ),
         'public'        => true,
+        // 週刊オカルト新聞は廃刊。公開用のCPT定義は残すが、管理画面からは完全に隠す。
+        'show_ui'       => false,
+        'show_in_menu'  => false,
         'has_archive'   => 'occult-weekly',
         'rewrite'       => array( 'slug' => 'occult', 'with_front' => false ),
         'menu_icon'     => 'dashicons-visibility',
