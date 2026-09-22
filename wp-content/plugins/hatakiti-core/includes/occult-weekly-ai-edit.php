@@ -69,6 +69,40 @@ function hatakiti_occult_ai_item_lines( $item ) {
     return implode( "\n", $lines );
 }
 
+/**
+ * STEP1専用の圧縮版入力。クラスタリングでは元記事全文を必要としないため、
+ * 媒体・タイトル・日時・RSS要約に加え、必要な場合だけ元記事冒頭の短い
+ * 事実確認用抜粋を渡す。全文はSTEP2の執筆時だけ送る。
+ *
+ * これにより、同じ元記事本文をSTEP1とSTEP2へ二重投入する無駄を減らし、
+ * 入力トークンとAPI費用を抑える。抜粋は最大800文字に固定する。
+ */
+function hatakiti_occult_ai_planning_item_lines( $item ) {
+    $fetch_status = hatakiti_fetch_occult_source_article( $item->ID );
+
+    $lines = array(
+        'id: ' . $item->ID,
+        '媒体: ' . get_post_meta( $item->ID, 'hatakiti_occult_source_name', true ),
+        'タイトル: ' . get_the_title( $item->ID ),
+        '公開日時: ' . get_post_meta( $item->ID, 'hatakiti_occult_published_at', true ),
+        'URL: ' . get_post_meta( $item->ID, 'hatakiti_occult_original_url', true ),
+        'RSS要約: ' . $item->post_content,
+    );
+
+    if ( 'success' === $fetch_status ) {
+        $article_text = trim( (string) get_post_meta( $item->ID, 'hatakiti_occult_source_article_text', true ) );
+        if ( '' !== $article_text ) {
+            $excerpt = mb_substr( $article_text, 0, 800 );
+            if ( mb_strlen( $article_text ) > 800 ) {
+                $excerpt .= '…';
+            }
+            $lines[] = '元記事冒頭抜粋（クラスタリング時の事実確認用。執筆用の全文ではありません）: ' . $excerpt;
+        }
+    }
+
+    return implode( "\n", $lines );
+}
+
 function hatakiti_occult_ai_category_guide_text() {
     return <<<CATS
 - UMA・未確認生物: 未確認生物、怪物、謎の生物、未知の動物など
@@ -98,7 +132,7 @@ CATS;
 function hatakiti_build_occult_ai_planning_prompt( $items, $week_start, $week_end ) {
     $lines = array();
     foreach ( $items as $item ) {
-        $lines[] = hatakiti_occult_ai_item_lines( $item );
+        $lines[] = hatakiti_occult_ai_planning_item_lines( $item );
     }
     $items_text     = implode( "\n\n---\n\n", $lines );
     $category_guide = hatakiti_occult_ai_category_guide_text();
@@ -107,7 +141,7 @@ function hatakiti_build_occult_ai_planning_prompt( $items, $week_start, $week_en
 あなたは「週刊オカルト新聞」（HATAKITI.com）のAI編集者です。複数の情報源から集まった1週間分のオカルト関連ニュースを分析し、クラスタリング・重要度判定・カテゴリ分類を行います。この段階では記事本文は執筆しません（本文執筆は別の担当者が後続の工程で行います）。
 
 【入力データについて】
-各ニュースには「RSS要約」（短い、記事発見用の情報）に加えて、可能な場合は「元記事本文」（元記事ページから抽出した本文）が付いています。クラスタリング（同一事件かどうかの判断）の材料として使ってください。
+各ニュースには「RSS要約」（短い、記事発見用の情報）と、必要な場合だけ「元記事冒頭抜粋」（最大800文字）が付いています。クラスタリング（同一事件かどうかの判断）の材料として使ってください。元記事全文はこの段階では渡しません。
 
 【クラスタリングのルール — 最重要】
 - 単純なタイトルの類似だけで同一事件と判断してはいけません。人物、場所、日付、事件内容、固有名詞、発生経緯を具体的に照らし合わせて判断してください。
@@ -270,12 +304,9 @@ function hatakiti_call_occult_ai_planning( $items, $week_start, $week_end ) {
         'prompt_chars'    => mb_strlen( $system ) + mb_strlen( $prompt ),
     );
 
-    // 本文は出力しないが、18記事規模の実測でmax_tokens=4000は
-    // stop_reason=max_tokensで打ち切られた（thinking+テキスト合算で
-    // 消費されるため）。実測(約70〜80 token/秒)を踏まえ16000/260秒とし、
-    // 元の単一巨大リクエスト(20000/280秒)より小さいがSTEP1単体としては
-    // 十分な余裕を持たせる。
-    $ai_text = hatakiti_call_occult_ai_text( $prompt, $system, $body_check, 16000, 260, $log_context );
+    // STEP1は本文を生成しないため、出力上限を必要十分な8000へ抑える。
+    // 入力も圧縮版にしているので、通常の週次ニュース件数なら十分な余裕がある。
+    $ai_text = hatakiti_call_occult_ai_text( $prompt, $system, $body_check, 8000, 260, $log_context );
     if ( is_wp_error( $ai_text ) ) {
         return $ai_text;
     }
