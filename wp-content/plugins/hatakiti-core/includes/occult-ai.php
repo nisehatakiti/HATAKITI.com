@@ -677,12 +677,14 @@ function hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model, $ma
         'model'       => $model,
         'messages'    => $messages,
         'temperature' => 0.3,
-        'max_tokens'  => $max_tokens,
+      //  'max_tokens'  => $max_tokens,
+        'max_completion_tokens' => $max_tokens,        
     ) );
 
     $log_context = array_merge( array(
         'model'           => $model,
-        'max_tokens'      => $max_tokens,
+      //  'max_tokens'      => $max_tokens,
+        'max_completion_tokens' => $max_tokens,
         'timeout'         => $timeout,
         'connect_timeout' => 'n/a(WordPress HTTP APIはtimeoutと共通)',
         'request_bytes'   => strlen( $body ),
