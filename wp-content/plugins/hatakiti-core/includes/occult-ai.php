@@ -676,7 +676,8 @@ function hatakiti_call_occult_ai_openai( $prompt, $system, $api_key, $model, $ma
     $body = wp_json_encode( array(
         'model'       => $model,
         'messages'    => $messages,
-        'temperature' => 0.3,
+      //'temperature' => 0.3,
+        'temperature' => 1,
       //  'max_tokens'  => $max_tokens,
         'max_completion_tokens' => $max_tokens,        
     ) );
