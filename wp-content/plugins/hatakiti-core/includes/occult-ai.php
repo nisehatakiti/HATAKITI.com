@@ -543,43 +543,37 @@ function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label, $body
 
         $check = array( 'ok' => $http_ok, 'error_message' => null, 'diag' => array() );
         $decoded_body = null;
-        if ( $http_ok ) {
+        if ( ! $is_wp_error ) {
             $decoded_body = json_decode( wp_remote_retrieve_body( $response ), true );
+        }
 
-            // OpenAI/Anthropic both expose usage on successful responses.
-            // Log actual usage so API cost can be measured from production
-            // instead of estimating tokens from character counts.
-            if ( is_array( $decoded_body ) && isset( $decoded_body['usage'] ) && is_array( $decoded_body['usage'] ) ) {
-                $usage = $decoded_body['usage'];
-                if ( isset( $usage['input_tokens'] ) ) {
-                    $check['diag']['input_tokens'] = $usage['input_tokens'];
-                } elseif ( isset( $usage['prompt_tokens'] ) ) {
-                    $check['diag']['input_tokens'] = $usage['prompt_tokens'];
-                }
-                if ( isset( $usage['output_tokens'] ) ) {
-                    $check['diag']['output_tokens'] = $usage['output_tokens'];
-                } elseif ( isset( $usage['completion_tokens'] ) ) {
-                    $check['diag']['output_tokens'] = $usage['completion_tokens'];
-                }
-                if ( isset( $usage['cache_read_input_tokens'] ) ) {
-                    $check['diag']['cached_input_tokens'] = $usage['cache_read_input_tokens'];
-                } elseif ( isset( $usage['prompt_tokens_details']['cached_tokens'] ) ) {
-                    $check['diag']['cached_input_tokens'] = $usage['prompt_tokens_details']['cached_tokens'];
-                }
-                if ( isset( $usage['input_tokens_details']['cached_tokens'] ) ) {
-                    $check['diag']['cached_input_tokens'] = $usage['input_tokens_details']['cached_tokens'];
-                }
+        // OpenAI/Anthropic both expose usage on successful responses.
+        // Log actual usage so API cost can be measured from production
+        // instead of estimating tokens from character counts.
+        if ( $http_ok && is_array( $decoded_body ) && isset( $decoded_body['usage'] ) && is_array( $decoded_body['usage'] ) ) {
+            $usage = $decoded_body['usage'];
+            if ( isset( $usage['input_tokens'] ) ) {
+                $check['diag']['input_tokens'] = $usage['input_tokens'];
+            } elseif ( isset( $usage['prompt_tokens'] ) ) {
+                $check['diag']['input_tokens'] = $usage['prompt_tokens'];
             }
+            if ( isset( $usage['output_tokens'] ) ) {
+                $check['diag']['output_tokens'] = $usage['output_tokens'];
+            } elseif ( isset( $usage['completion_tokens'] ) ) {
+                $check['diag']['output_tokens'] = $usage['completion_tokens'];
+            }
+            if ( isset( $usage['cache_read_input_tokens'] ) ) {
+                $check['diag']['cached_input_tokens'] = $usage['cache_read_input_tokens'];
+            } elseif ( isset( $usage['prompt_tokens_details']['cached_tokens'] ) ) {
+                $check['diag']['cached_input_tokens'] = $usage['prompt_tokens_details']['cached_tokens'];
+            }
+            if ( isset( $usage['input_tokens_details']['cached_tokens'] ) ) {
+                $check['diag']['cached_input_tokens'] = $usage['input_tokens_details']['cached_tokens'];
+            }
+        }
 
-            if ( null !== $body_check ) {
-                $check = array_merge( $check, call_user_func( $body_check, $decoded_body ) );
-                // Preserve transport-level usage diagnostics when the
-                // provider-specific body_check returned its own diag array.
-                $check['diag'] = array_merge(
-                    isset( $check['diag'] ) && is_array( $check['diag'] ) ? $check['diag'] : array(),
-                    isset( $decoded_body['usage'] ) && is_array( $decoded_body['usage'] ) ? array() : array()
-                );
-            }
+        if ( $http_ok && null !== $body_check ) {
+            $check = array_merge( $check, call_user_func( $body_check, $decoded_body ) );
         }
 
         $success = $http_ok && $check['ok'];
