@@ -216,7 +216,8 @@ function hatakiti_call_occult_ai_text( $prompt, $system = '', $body_check = null
 
 /**
  * Minimal logging for AI call attempts — provider, attempt number, HTTP
- * status, error type, final outcome only. Never logs the API key,
+ * status, error type, actual token usage when the provider returns it,
+ * and final outcome only. Never logs the API key,
  * Authorization header, prompt text, or news body content (§11 of the
  * instruction). Uses PHP's own error_log() rather than a new logging
  * mechanism, so nothing new has to be built or maintained to read it.
@@ -541,9 +542,44 @@ function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label, $body
         $http_ok     = ! $is_wp_error && 200 === $http_code;
 
         $check = array( 'ok' => $http_ok, 'error_message' => null, 'diag' => array() );
-        if ( $http_ok && null !== $body_check ) {
+        $decoded_body = null;
+        if ( $http_ok ) {
             $decoded_body = json_decode( wp_remote_retrieve_body( $response ), true );
-            $check        = call_user_func( $body_check, $decoded_body );
+
+            // OpenAI/Anthropic both expose usage on successful responses.
+            // Log actual usage so API cost can be measured from production
+            // instead of estimating tokens from character counts.
+            if ( is_array( $decoded_body ) && isset( $decoded_body['usage'] ) && is_array( $decoded_body['usage'] ) ) {
+                $usage = $decoded_body['usage'];
+                if ( isset( $usage['input_tokens'] ) ) {
+                    $check['diag']['input_tokens'] = $usage['input_tokens'];
+                } elseif ( isset( $usage['prompt_tokens'] ) ) {
+                    $check['diag']['input_tokens'] = $usage['prompt_tokens'];
+                }
+                if ( isset( $usage['output_tokens'] ) ) {
+                    $check['diag']['output_tokens'] = $usage['output_tokens'];
+                } elseif ( isset( $usage['completion_tokens'] ) ) {
+                    $check['diag']['output_tokens'] = $usage['completion_tokens'];
+                }
+                if ( isset( $usage['cache_read_input_tokens'] ) ) {
+                    $check['diag']['cached_input_tokens'] = $usage['cache_read_input_tokens'];
+                } elseif ( isset( $usage['prompt_tokens_details']['cached_tokens'] ) ) {
+                    $check['diag']['cached_input_tokens'] = $usage['prompt_tokens_details']['cached_tokens'];
+                }
+                if ( isset( $usage['input_tokens_details']['cached_tokens'] ) ) {
+                    $check['diag']['cached_input_tokens'] = $usage['input_tokens_details']['cached_tokens'];
+                }
+            }
+
+            if ( null !== $body_check ) {
+                $check = array_merge( $check, call_user_func( $body_check, $decoded_body ) );
+                // Preserve transport-level usage diagnostics when the
+                // provider-specific body_check returned its own diag array.
+                $check['diag'] = array_merge(
+                    isset( $check['diag'] ) && is_array( $check['diag'] ) ? $check['diag'] : array(),
+                    isset( $decoded_body['usage'] ) && is_array( $decoded_body['usage'] ) ? array() : array()
+                );
+            }
         }
 
         $success = $http_ok && $check['ok'];
@@ -575,9 +611,22 @@ function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label, $body
         // JSON body validation failing on an otherwise-200 response is
         // exactly as retryable as a transient network/server error — it's
         // the failure mode this change exists to catch.
+        $api_error_code = '';
+        if ( ! $is_wp_error && is_array( $decoded_body ) && isset( $decoded_body['error']['code'] ) ) {
+            $api_error_code = sanitize_key( (string) $decoded_body['error']['code'] );
+        }
+        if ( '' !== $api_error_code ) {
+            $log_fields['api_error_code'] = $api_error_code;
+        }
+
         $retryable = $is_wp_error
             ? true
             : ( in_array( $http_code, array( 429, 500, 502, 503, 504 ), true ) || ( $http_ok && ! $check['ok'] ) );
+
+        // A billing/quota 429 will not recover by retrying the same request.
+        if ( in_array( $api_error_code, array( 'insufficient_quota', 'billing_hard_limit_reached' ), true ) ) {
+            $retryable = false;
+        }
 
         if ( ! $retryable || $attempt === $max_attempts ) {
             hatakiti_occult_ai_log( array(
@@ -595,7 +644,17 @@ function hatakiti_occult_ai_post_with_retry( $url, $args, $provider_label, $body
             return $response;
         }
 
-        sleep( $backoff[ $attempt - 1 ] );
+        $retry_after = 0;
+        if ( ! $is_wp_error ) {
+            $retry_after_header = wp_remote_retrieve_header( $response, 'retry-after' );
+            if ( is_numeric( $retry_after_header ) ) {
+                $retry_after = min( 60, max( 0, (int) $retry_after_header ) );
+            }
+        }
+        $sleep_seconds = max( $backoff[ $attempt - 1 ], $retry_after );
+        if ( $sleep_seconds > 0 ) {
+            sleep( $sleep_seconds );
+        }
     }
 
     return $response;
