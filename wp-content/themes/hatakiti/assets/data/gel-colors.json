@@ -42766,6 +42766,918 @@
       ],
       "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
       "detail_url": "https://us.rosco.com/en/products/filters/r381-baldassari-blue"
+    },
+    {
+      "id": "rosco-roscolux-2001",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2001",
+        "color_name": "Storaro Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2001-storaro-red",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 12,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.677,
+          "y": 0.316
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果",
+          "心理表現",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式ガイドではStoraro Selectionの色彩効果フィルター。深い赤系の強い色彩表現に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2001",
+      "color_name": "Storaro Red",
+      "transmission": 12,
+      "transmission_display": "12%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果",
+        "心理表現",
+        "舞台"
+      ],
+      "notes": "Rosco公式ガイドではStoraro Selectionの色彩効果フィルター。深い赤系の強い色彩表現に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2001-storaro-red"
+    },
+    {
+      "id": "rosco-roscolux-2002",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2002",
+        "color_name": "Storaro Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2002-storaro-orange",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 23,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.591,
+          "y": 0.385
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景",
+          "暖色系",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式ガイドでは豊かなアンバーにピンク味を持つ色。午後の日光から夕景への表現に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2002",
+      "color_name": "Storaro Orange",
+      "transmission": 23,
+      "transmission_display": "23%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景",
+        "暖色系",
+        "舞台"
+      ],
+      "notes": "Rosco公式ガイドでは豊かなアンバーにピンク味を持つ色。午後の日光から夕景への表現に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2002-storaro-orange"
+    },
+    {
+      "id": "rosco-roscolux-2003",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2003",
+        "color_name": "Storaro Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2003-storaro-yellow",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 64,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.55,
+          "y": 0.437
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光",
+          "暖色系",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式ガイドでは濃い黄〜アンバー。形を彫刻的に見せるほか、強い日光・肌を引き立てる表現に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2003",
+      "color_name": "Storaro Yellow",
+      "transmission": 64,
+      "transmission_display": "64%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光",
+        "暖色系",
+        "舞台"
+      ],
+      "notes": "Rosco公式ガイドでは濃い黄〜アンバー。形を彫刻的に見せるほか、強い日光・肌を引き立てる表現に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2003-storaro-yellow"
+    },
+    {
+      "id": "rosco-roscolux-2004",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2004",
+        "color_name": "Storaro Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2004-storaro-green",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 15,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.277,
+          "y": 0.629
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果",
+          "心理表現",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式ガイドでは強い支配的な緑。黄色味を抑えた緑として色彩効果に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2004",
+      "color_name": "Storaro Green",
+      "transmission": 15,
+      "transmission_display": "15%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果",
+        "心理表現",
+        "舞台"
+      ],
+      "notes": "Rosco公式ガイドでは強い支配的な緑。黄色味を抑えた緑として色彩効果に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2004-storaro-green"
+    },
+    {
+      "id": "rosco-roscolux-2005",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2005",
+        "color_name": "Storaro Cyan"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2005-storaro-cyan",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 18,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.239,
+          "y": 0.441
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系",
+          "背景",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式Color Resource Galleryで舞台背景のシルエット表現への使用例を確認。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2005",
+      "color_name": "Storaro Cyan",
+      "transmission": 18,
+      "transmission_display": "18%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系",
+        "背景",
+        "舞台"
+      ],
+      "notes": "Rosco公式Color Resource Galleryで舞台背景のシルエット表現への使用例を確認。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2005-storaro-cyan"
+    },
+    {
+      "id": "rosco-roscolux-2006",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2006",
+        "color_name": "Storaro Azure"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2006-storaro-azure",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 9,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.16,
+          "y": 0.21
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系",
+          "舞台",
+          "心理表現"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式事例で舞台のサイドライトに使用されたStoraro Azure。強い青系の色彩表現に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2006",
+      "color_name": "Storaro Azure",
+      "transmission": 9,
+      "transmission_display": "9%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系",
+        "舞台",
+        "心理表現"
+      ],
+      "notes": "Rosco公式事例で舞台のサイドライトに使用されたStoraro Azure。強い青系の色彩表現に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2006-storaro-azure"
+    },
+    {
+      "id": "rosco-roscolux-2007",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2007",
+        "color_name": "Storaro Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2007-storaro-blue",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 10,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.259,
+          "y": 0.267
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜",
+          "寒色系",
+          "背景",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式資料でStoraro Selectionの青。強い青系の色彩効果に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2007",
+      "color_name": "Storaro Blue",
+      "transmission": 10,
+      "transmission_display": "10%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜",
+        "寒色系",
+        "背景",
+        "舞台"
+      ],
+      "notes": "Rosco公式資料でStoraro Selectionの青。強い青系の色彩効果に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2007-storaro-blue"
+    },
+    {
+      "id": "rosco-roscolux-2008",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2008",
+        "color_name": "Storaro Indigo"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2008-storaro-indigo",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 4,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.233,
+          "y": 0.164
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり",
+          "夜",
+          "寒色系"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式ガイドでは紫味を含む深い氷青。月明かりのイリュージョンに使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2008",
+      "color_name": "Storaro Indigo",
+      "transmission": 4,
+      "transmission_display": "4%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり",
+        "夜",
+        "寒色系"
+      ],
+      "notes": "Rosco公式ガイドでは紫味を含む深い氷青。月明かりのイリュージョンに使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2008-storaro-indigo"
+    },
+    {
+      "id": "rosco-roscolux-2009",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2009",
+        "color_name": "Storaro Violet"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2009-storaro-violet",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 3,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.417,
+          "y": 0.231
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果",
+          "心理表現",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式ガイドでは深い赤紫。飽和したスペシャルアクセントに使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2009",
+      "color_name": "Storaro Violet",
+      "transmission": 3,
+      "transmission_display": "3%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果",
+        "心理表現",
+        "舞台"
+      ],
+      "notes": "Rosco公式ガイドでは深い赤紫。飽和したスペシャルアクセントに使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2009-storaro-violet"
+    },
+    {
+      "id": "rosco-roscolux-2010",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux / Cinegel — Storaro Selection",
+        "color_number": "2010",
+        "color_name": "Storaro Magenta"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r2010-storaro-magenta",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "source_a_tungsten",
+              "value": 28,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "colorimetry": {
+          "source": "Source A (tungsten)",
+          "x": 0.508,
+          "y": 0.291
+        },
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果",
+          "心理表現",
+          "舞台"
+        ],
+        "tags": [
+          "Storaro Selection"
+        ],
+        "notes": "Rosco公式資料でStoraro Selectionのマゼンタ。強い色彩効果・演出表現に使用。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.colorimetry",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式Cinegel一覧、Rosco公式Color Filter Guide / Filter Factsで製品名・用途・透過率・Source Aのx/yを確認。RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux / Cinegel — Storaro Selection",
+      "color_number": "2010",
+      "color_name": "Storaro Magenta",
+      "transmission": 28,
+      "transmission_display": "28%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果",
+        "心理表現",
+        "舞台"
+      ],
+      "notes": "Rosco公式資料でStoraro Selectionのマゼンタ。強い色彩効果・演出表現に使用。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r2010-storaro-magenta"
     }
   ]
 }
