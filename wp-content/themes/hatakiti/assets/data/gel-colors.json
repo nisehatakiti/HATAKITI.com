@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sample-r26",
+    "manufacturer": "Rosco",
+    "series": "Roscolux",
+    "color_number": "R26",
+    "color_name": "Light Red",
+    "transmission": null,
+    "transmission_display": "未登録",
+    "reference_rgb": null,
+    "reference_hex": null,
+    "reference_color_source": null,
+    "reference_color_method": null,
+    "uses": ["人物", "背景", "心理表現"],
+    "notes": "製品情報の確認用レコード。RGB参考色・透過率は根拠資料を確認してから登録します。",
+    "detail_url": ""
+  }
+]
