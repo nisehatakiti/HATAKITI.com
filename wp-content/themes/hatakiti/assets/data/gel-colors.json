@@ -19798,6 +19798,3398 @@
       ],
       "notes": "強いマゼンタ系。",
       "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r47",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R47",
+        "color_name": "Light Rose Purple"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R47 Light Rose Purple",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R47",
+      "color_name": "Light Rose Purple",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "淡いローズ・パープル系の舞台色。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r48",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R48",
+        "color_name": "Rose Purple"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R48 Rose Purple",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R48",
+      "color_name": "Rose Purple",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "ローズパープル系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r49",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R49",
+        "color_name": "Medium Purple"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R49 Medium Purple",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R49",
+      "color_name": "Medium Purple",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "中間的な紫。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r50",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R50",
+        "color_name": "Mauve"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R50 Mauve",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R50",
+      "color_name": "Mauve",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "モーブ系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r51",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R51",
+        "color_name": "Surprise Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R51 Surprise Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R51",
+      "color_name": "Surprise Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "鮮やかなピンク系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r52",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R52",
+        "color_name": "Light Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R52 Light Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R52",
+      "color_name": "Light Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "淡いラベンダー。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r53",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R53",
+        "color_name": "Pale Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R53 Pale Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R53",
+      "color_name": "Pale Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "淡いラベンダー。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r54",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R54",
+        "color_name": "Special Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R54 Special Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R54",
+      "color_name": "Special Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "月明かり・舞台のラベンダー系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r55",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R55",
+        "color_name": "Lilac"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R55 Lilac",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R55",
+      "color_name": "Lilac",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "ライラック系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r56",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R56",
+        "color_name": "Gypsy Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R56 Gypsy Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R56",
+      "color_name": "Gypsy Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "濃いラベンダー系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r57",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R57",
+        "color_name": "Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R57 Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R57",
+      "color_name": "Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "ラベンダー系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r58",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R58",
+        "color_name": "Deep Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R58 Deep Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R58",
+      "color_name": "Deep Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "深いラベンダー。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r59",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R59",
+        "color_name": "Indigo"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R59 Indigo",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R59",
+      "color_name": "Indigo",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "インディゴ系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r60",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R60",
+        "color_name": "No Color Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R60 No Color Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R60",
+      "color_name": "No Color Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "ほぼ無彩色の青系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r61",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R61",
+        "color_name": "Mist Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R61 Mist Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R61",
+      "color_name": "Mist Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "霧・夜のクールな青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r62",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R62",
+        "color_name": "Booster Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R62 Booster Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R62",
+      "color_name": "Booster Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "青を強調するブースター系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r63",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R63",
+        "color_name": "Pale Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R63 Pale Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R63",
+      "color_name": "Pale Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "淡い青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r64",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R64",
+        "color_name": "Light Steel Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R64 Light Steel Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R64",
+      "color_name": "Light Steel Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "淡いスチールブルー。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r65",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R65",
+        "color_name": "Daylight Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R65 Daylight Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R65",
+      "color_name": "Daylight Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "昼光系の青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r66",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R66",
+        "color_name": "Cool Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R66 Cool Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R66",
+      "color_name": "Cool Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "クールな青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r67",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R67",
+        "color_name": "Light Sky Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R67 Light Sky Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R67",
+      "color_name": "Light Sky Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "淡い空色。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r68",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R68",
+        "color_name": "Sky Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R68 Sky Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R68",
+      "color_name": "Sky Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "空色。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r69",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R69",
+        "color_name": "Brilliant Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R69 Brilliant Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R69",
+      "color_name": "Brilliant Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "鮮やかな青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r70",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R70",
+        "color_name": "Nile Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R70 Nile Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R70",
+      "color_name": "Nile Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "水・水中系の青緑。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r71",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R71",
+        "color_name": "Sea Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R71 Sea Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R71",
+      "color_name": "Sea Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "海・水中系の青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r72",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R72",
+        "color_name": "Azure Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R72 Azure Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R72",
+      "color_name": "Azure Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "明るい青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r73",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R73",
+        "color_name": "Peacock Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R73 Peacock Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R73",
+      "color_name": "Peacock Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "青緑系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r74",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R74",
+        "color_name": "Night Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R74 Night Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R74",
+      "color_name": "Night Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "夜・月明かり系の深い青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r75",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R75",
+        "color_name": "Evening Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R75 Evening Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R75",
+      "color_name": "Evening Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "夕暮れから夜の青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r76",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R76",
+        "color_name": "Light Green Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R76 Light Green Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R76",
+      "color_name": "Light Green Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "緑味を含む淡い青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r77",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R77",
+        "color_name": "Green Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R77 Green Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R77",
+      "color_name": "Green Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "青緑系の夜景色。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r78",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R78",
+        "color_name": "Trudy Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R78 Trudy Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R78",
+      "color_name": "Trudy Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "深い青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r79",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R79",
+        "color_name": "Bright Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R79 Bright Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R79",
+      "color_name": "Bright Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "鮮やかな青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r80",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R80",
+        "color_name": "Primary Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R80 Primary Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ホリゾント"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R80",
+      "color_name": "Primary Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ホリゾント"
+      ],
+      "notes": "三原色照明・ホリゾント（cyclorama）向けの原色青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r81",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R81",
+        "color_name": "Urban Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R81 Urban Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R81",
+      "color_name": "Urban Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "都市夜景・夜の青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r82",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R82",
+        "color_name": "Surprise Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R82 Surprise Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R82",
+      "color_name": "Surprise Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "非現実的な夜景向けの青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r83",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R83",
+        "color_name": "Medium Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R83 Medium Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R83",
+      "color_name": "Medium Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "非現実的な夜空向け。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r84",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R84",
+        "color_name": "Zephyr Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R84 Zephyr Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R84",
+      "color_name": "Zephyr Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "淡い青系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r85",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R85",
+        "color_name": "Deep Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R85 Deep Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R85",
+      "color_name": "Deep Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "深い青。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r86",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R86",
+        "color_name": "Pea Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R86 Pea Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R86",
+      "color_name": "Pea Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "黄緑系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r87",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R87",
+        "color_name": "Pale Yellow Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R87 Pale Yellow Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R87",
+      "color_name": "Pale Yellow Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "淡い黄緑。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r88",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R88",
+        "color_name": "Light Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R88 Light Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R88",
+      "color_name": "Light Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "明るい緑。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r89",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R89",
+        "color_name": "Moss Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R89 Moss Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R89",
+      "color_name": "Moss Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "苔・森系の緑。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r90",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R90",
+        "color_name": "Dark Yellow Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R90 Dark Yellow Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R90",
+      "color_name": "Dark Yellow Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "暗い黄緑。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r91",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R91",
+        "color_name": "Primary Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R91 Primary Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ホリゾント"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R91",
+      "color_name": "Primary Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ホリゾント"
+      ],
+      "notes": "原色緑。ホリゾント（cyclorama）向け。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r92",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R92",
+        "color_name": "Turquoise"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R92 Turquoise",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R92",
+      "color_name": "Turquoise",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "ターコイズ。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r93",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R93",
+        "color_name": "Blue Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R93 Blue Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R93",
+      "color_name": "Blue Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "青緑・幻想系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r94",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R94",
+        "color_name": "Kelly Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R94 Kelly Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R94",
+      "color_name": "Kelly Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "鮮やかな緑。非現実的な効果向け。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r95",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R95",
+        "color_name": "Medium Blue Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R95 Medium Blue Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R95",
+      "color_name": "Medium Blue Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "月明かり・夜の植栽や背景のムード作り。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r96",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R96",
+        "color_name": "Lime"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R96 Lime",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R96",
+      "color_name": "Lime",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "鮮やかなライム系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r97",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R97",
+        "color_name": "Light Grey"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R97 Light Grey",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R97",
+      "color_name": "Light Grey",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "色温度を変えずに光量を落とすニュートラルグレー。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r98",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R98",
+        "color_name": "Medium Grey"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R98 Medium Grey",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R98",
+      "color_name": "Medium Grey",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "器具間の明るさを合わせるニュートラルグレー。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r99",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R99",
+        "color_name": "Chocolate"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://emea.rosco.com/en/products/catalog/roscolux",
+          "title": "Rosco Roscolux R99 Chocolate",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Roscolux一覧およびColor Filters Guideの用途説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Roscolux標準色一覧で番号・色名を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R99",
+      "color_name": "Chocolate",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系"
+      ],
+      "notes": "光を暖め、光量も落とすブラウン系。",
+      "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
     }
   ]
 }
