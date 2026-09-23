@@ -98,3 +98,36 @@ function hatakiti_fallback_menu() {
     }
     echo '</ul>';
 }
+
+
+/**
+ * Virtual page: 演劇の教科書.
+ *
+ * The first version is intentionally a virtual route so the content can be
+ * published immediately without requiring a wp-admin Page record.
+ */
+function hatakiti_theatre_textbook_route( $template ) {
+    $path = trim( parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+    $base = trim( parse_url( home_url( '/' ), PHP_URL_PATH ), '/' );
+
+    if ( $base && 0 === strpos( $path, $base . '/' ) ) {
+        $path = substr( $path, strlen( $base ) + 1 );
+    }
+
+    if ( 'theatre-textbook' !== $path ) {
+        return $template;
+    }
+
+    status_header( 200 );
+    return get_template_directory() . '/page-theatre-textbook.php';
+}
+add_filter( 'template_include', 'hatakiti_theatre_textbook_route', 99 );
+
+function hatakiti_theatre_textbook_title( $parts ) {
+    $path = trim( parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+    if ( 'theatre-textbook' === $path || false !== strpos( $path, '/theatre-textbook' ) ) {
+        $parts['title'] = '演劇の教科書';
+    }
+    return $parts;
+}
+add_filter( 'document_title_parts', 'hatakiti_theatre_textbook_title', 99 );
