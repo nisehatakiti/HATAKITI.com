@@ -115,6 +115,32 @@ if ( ! isset( $methods[ $path ] ) ) {
 }
 
 $m = $methods[ $path ];
+
+// にゃかきちは HATAKITI Core の共通アセットとして管理する。
+$nyakakichi_base = content_url( 'plugins/hatakiti-core/assets/images/nyakakichi' );
+$method_images = array(
+    'theatre-textbook/stanislavski' => array(
+        'hero' => 'nyakakichi-stanislavski.png',
+        'question' => 'nyakakichi-question.png',
+        'practice' => 'nyakakichi-try.png',
+    ),
+    'theatre-textbook/method' => array(
+        'hero' => 'nyakakichi-method.png',
+        'question' => 'nyakakichi-question.png',
+        'practice' => 'nyakakichi-try.png',
+    ),
+    'theatre-textbook/meisner' => array(
+        'hero' => 'nyakakichi-meisner.png',
+        'question' => 'nyakakichi-question.png',
+        'practice' => 'nyakakichi-meisner-pair.png',
+    ),
+    'theatre-textbook/lecoq' => array(
+        'hero' => 'nyakakichi-lecoq-heavy.png',
+        'question' => 'nyakakichi-question.png',
+        'practice' => 'nyakakichi-lecoq-light.png',
+    ),
+);
+$images = $method_images[ $path ];
 get_header();
 ?>
 
@@ -127,9 +153,8 @@ get_header();
                 <span class="hk-method-number"><?php echo esc_html( $m['number'] ); ?></span>
                 <h1><?php echo esc_html( $m['title'] ); ?></h1>
             </div>
-            <div class="hk-nyakakichi-placeholder" aria-label="にゃかきち画像の配置予定">
-                <span>にゃかきち</span>
-                <small>画像配置予定</small>
+            <div class="hk-nyakakichi-image hero" aria-label="にゃかきち">
+                <img src="<?php echo esc_url( $nyakakichi_base . '/' . $images['hero'] ); ?>" alt="にゃかきち" loading="eager">
             </div>
         </div>
         <div class="hk-nyakakichi-bubble">
@@ -164,8 +189,8 @@ get_header();
             <span>03</span><h2>🐱 にゃかきちの「ちょっと待って！」</h2>
         </div>
         <div class="hk-method-question">
-            <div class="hk-nyakakichi-placeholder small" aria-label="にゃかきち画像の配置予定">
-                <span>にゃかきち</span><small>画像配置予定</small>
+            <div class="hk-nyakakichi-image small" aria-label="にゃかきち">
+                <img src="<?php echo esc_url( $nyakakichi_base . '/' . $images['question'] ); ?>" alt="にゃかきち" loading="lazy">
             </div>
             <div class="hk-nyakakichi-bubble"><?php echo esc_html( $m['character_open'] ); ?></div>
         </div>
@@ -185,7 +210,9 @@ get_header();
                 <?php endforeach; ?>
             </ol>
             <div class="hk-practice-character">
-                <div class="hk-nyakakichi-placeholder small"><span>にゃかきち</span><small>画像配置予定</small></div>
+                <div class="hk-nyakakichi-image small" aria-label="にゃかきち">
+                    <img src="<?php echo esc_url( $nyakakichi_base . '/' . $images['practice'] ); ?>" alt="にゃかきち" loading="lazy">
+                </div>
                 <strong>「やってみるニャ！」</strong>
             </div>
         </article>
@@ -202,8 +229,8 @@ get_header();
     </section>
 
     <section class="hk-method-ending">
-        <div class="hk-nyakakichi-placeholder" aria-label="にゃかきち画像の配置予定">
-            <span>にゃかきち</span><small>画像配置予定</small>
+        <div class="hk-nyakakichi-image ending" aria-label="にゃかきち">
+            <img src="<?php echo esc_url( $nyakakichi_base . '/nyakakichi-satisfied.png' ); ?>" alt="にゃかきち" loading="lazy">
         </div>
         <div>
             <p class="hk-textbook-kicker">にゃかきちのひとこと</p>
@@ -226,11 +253,11 @@ get_header();
 .hk-method-title-row{display:flex;align-items:center;justify-content:space-between;gap:40px}
 .hk-method-number{color:var(--hk-accent-warm);font-size:13px;letter-spacing:.15em}
 .hk-method-title-row h1{font-family:var(--hk-font-serif);font-size:40px;margin:8px 0 0}
-.hk-nyakakichi-placeholder{width:150px;height:150px;border:1px dashed var(--hk-accent-warm);background:var(--hk-bg-elevated);display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none;color:var(--hk-accent-warm);border-radius:50%}
-.hk-nyakakichi-placeholder span{font-family:var(--hk-font-serif);font-size:18px}
-.hk-nyakakichi-placeholder small{margin-top:7px;color:var(--hk-fg-faint);font-size:10px}
-.hk-nyakakichi-placeholder.small{width:88px;height:88px}
-.hk-nyakakichi-placeholder.small span{font-size:14px}
+.hk-nyakakichi-image{width:180px;height:180px;display:flex;align-items:center;justify-content:center;flex:none}
+.hk-nyakakichi-image img{display:block;width:100%;height:100%;object-fit:contain}
+.hk-nyakakichi-image.hero{width:220px;height:220px}
+.hk-nyakakichi-image.small{width:100px;height:100px}
+.hk-nyakakichi-image.ending{width:170px;height:170px}
 .hk-nyakakichi-bubble{position:relative;margin:28px 0 0;padding:20px 24px;background:var(--hk-bg-card);border:1px solid var(--hk-border);border-radius:18px;color:var(--hk-fg);font-size:18px;line-height:1.8}
 .hk-nyakakichi-bubble:before{content:"";position:absolute;left:55px;top:-10px;width:18px;height:18px;background:var(--hk-bg-card);border-left:1px solid var(--hk-border);border-top:1px solid var(--hk-border);transform:rotate(45deg)}
 .hk-method-section{max-width:900px;margin:0 auto 52px;padding:0 20px}
@@ -259,8 +286,8 @@ get_header();
 .hk-method-nav{max-width:900px;margin:0 auto 70px;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .hk-method-nav a{padding:13px 10px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg);font-size:12px}
 .hk-method-nav a:hover{border-color:var(--hk-accent-warm);text-decoration:none}
-@media(max-width:760px){.hk-method-title-row{align-items:flex-start}.hk-method-title-row h1{font-size:31px}.hk-method-points{grid-template-columns:1fr}.hk-method-nav{grid-template-columns:1fr 1fr}.hk-nyakakichi-placeholder{width:120px;height:120px}.hk-method-question{align-items:flex-start}}
-@media(max-width:520px){.hk-method-title-row{display:block}.hk-method-title-row .hk-nyakakichi-placeholder{margin:24px auto 0}.hk-method-title-row h1{font-size:27px}.hk-method-section{padding:0 16px}.hk-method-hero{padding:0 16px}.hk-method-nav{grid-template-columns:1fr}.hk-method-ending{padding:24px 16px}.hk-ending-quote{font-size:18px}}
+@media(max-width:760px){.hk-method-title-row{align-items:flex-start}.hk-method-title-row h1{font-size:31px}.hk-method-points{grid-template-columns:1fr}.hk-method-nav{grid-template-columns:1fr 1fr}.hk-nyakakichi-image.hero{width:150px;height:150px}.hk-nyakakichi-image{width:130px;height:130px}.hk-method-question{align-items:flex-start}}
+@media(max-width:520px){.hk-method-title-row{display:block}.hk-method-title-row .hk-nyakakichi-image{margin:24px auto 0}.hk-method-title-row h1{font-size:27px}.hk-method-section{padding:0 16px}.hk-method-hero{padding:0 16px}.hk-method-nav{grid-template-columns:1fr}.hk-method-ending{padding:24px 16px}.hk-ending-quote{font-size:18px}}
 </style>
 
 <?php get_footer(); ?>
