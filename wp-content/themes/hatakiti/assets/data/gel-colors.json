@@ -1,18 +1,1384 @@
-[
-  {
-    "id": "sample-r26",
-    "manufacturer": "Rosco",
-    "series": "Roscolux",
-    "color_number": "R26",
-    "color_name": "Light Red",
-    "transmission": null,
-    "transmission_display": "未登録",
-    "reference_rgb": null,
-    "reference_hex": null,
-    "reference_color_source": null,
-    "reference_color_method": null,
-    "uses": ["人物", "背景", "心理表現"],
-    "notes": "製品情報の確認用レコード。RGB参考色・透過率は根拠資料を確認してから登録します。",
-    "detail_url": ""
-  }
-]
+{
+  "schema_version": "1.0",
+  "description": "HATAKITI 舞台照明用カラーフィルター色見本データベース",
+  "records": [
+    {
+      "id": "rosco-roscolux-r00",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R00",
+        "color_name": "Clear"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r00-dempster-open-white",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "メーカー公式製品ページと公式スペック資料で製品情報を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r01",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R01",
+        "color_name": "Light Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r01-light-bastard-amber",
+        "transmission": 56,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://ca.rosco.com/en/search?page=1&search=bastard+amber",
+          "title": "Rosco Search - Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "顔・肌",
+          "日光",
+          "夕景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式検索結果では fair skin tones / strong sunlight の用途説明あり。用途タグはHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "透過率56%はRosco公式検索結果で確認。用途説明も同公式情報に基づく。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r02",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R02",
+        "color_name": "Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/filters/r02-bastard-amber",
+        "transmission": 78,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://ca.rosco.com/en/search?page=0&search=bastard+amber",
+          "title": "Rosco Search - Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "顔・肌",
+          "日光",
+          "室内"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式情報で自然な肌色、日光、warm area等の用途が確認できる。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "透過率78%はRosco公式検索結果で確認。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r03",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R03",
+        "color_name": "Dark Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://ca.rosco.com/en/products/filters/r03-dark-bastard-amber",
+        "transmission": 62,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://ca.rosco.com/en/search?page=1&search=bastard+amber",
+          "title": "Rosco Search - Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "日光",
+          "室内"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式情報で warm area / sunlight / practical / candle の用途キーワードを確認。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "透過率62%はRosco公式検索結果で確認。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r04",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R04",
+        "color_name": "Medium Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r04-medium-bastard-amber",
+        "transmission": 66,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://ca.rosco.com/en/search?page=0&search=bastard+amber",
+          "title": "Rosco Search - Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "顔・肌",
+          "日光"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式情報で natural sunlight / natural skin tones の用途説明を確認。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "透過率66%はRosco公式検索結果で確認。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r05",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R05",
+        "color_name": "Rose Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r05-rose-tint",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "顔・肌"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "用途は現時点では暫定的なHATAKITI分類。メーカー用途データの追加確認待ち。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r06",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R06",
+        "color_name": "No Color Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r06-no-color-straw",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "室内"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式Color Resource GalleryではR06を室内の暖かい環境のフロントライトに使用した事例を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページと公式事例を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r07",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R07",
+        "color_name": "Pale Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/filters/r07-pale-yellow",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r08",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R08",
+        "color_name": "Pale Gold"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r08-pale-gold",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式スペック資料で製品情報を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r09",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R09",
+        "color_name": "Pale Amber Gold"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r09-pale-amber-gold",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式Color Resource GalleryでR09をfront lightのsepia系パレットに使用した事例あり。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品情報と公式事例を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r10",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R10",
+        "color_name": "Medium Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r10-medium-yellow",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r11",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R11",
+        "color_name": "Light Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://cn.rosco.com/en/products/filters/r11-light-straw",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r12",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R12",
+        "color_name": "Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://emea.rosco.com/en/products/filters/r12-straw",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r13",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R13",
+        "color_name": "Straw Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r13-straw-tint",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "朝・昼",
+          "夕景",
+          "背景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式事例でR13を黄色・砂系のベースやsunset系の色として使用した事例を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品情報と公式事例を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r14",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R14",
+        "color_name": "Medium Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r14-medium-straw",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r15",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R15",
+        "color_name": "Deep Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r15-deep-straw",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品ページと公式スペック資料を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r16",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R16",
+        "color_name": "Light Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r16-light-amber",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "心理表現",
+          "朝・昼"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式Color Resource GalleryでR16を暖色シーンのsubconscious feelに使用した事例を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品情報と公式事例を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r17",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R17",
+        "color_name": "Light Flame"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r17-light-flame",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式のsunset事例でR17をR13/R16/R318と組み合わせて使用。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品情報と公式事例を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r18",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R18",
+        "color_name": "Flame"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r18-flame",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景",
+          "心理表現"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式事例でR18を暖色のバックライトとして使用した事例を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品情報と公式事例を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r19",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R19",
+        "color_name": "Fire"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r19-fire",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果",
+          "夕景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "色名から用途を推測して登録せず、用途の公式根拠を追加確認する予定。現用途は仮分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式製品情報を確認。透過率・RGB・用途根拠は未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r20",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R20",
+        "color_name": "Medium Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r20-medium-amber",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式スペック資料で製品情報を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r21",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R21",
+        "color_name": "Golden Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r21-golden-amber",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://jp.rosco.com/sites/default/files/content/resource/2022-10/Rosco_Guide_to_Color_Filters_22.pdf",
+          "title": "Guide to Color Filters",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景",
+          "背景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式Guideでamber cyc light / late sunsets用途を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Guideと公式製品体系を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r22",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R22",
+        "color_name": "Deep Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r22-deep-amber",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://jp.rosco.com/sites/default/files/content/resource/2022-10/Rosco_Guide_to_Color_Filters_22.pdf",
+          "title": "Guide to Color Filters",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景",
+          "特殊効果",
+          "夕景"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式Guideでbacklight / dramatic specials / firelight用途を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Guideで用途を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r23",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R23",
+        "color_name": "Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r23-orange",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式スペック資料で製品情報を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r24",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R24",
+        "color_name": "Scarlet"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r24-scarlet",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式スペック資料で製品情報を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r25",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R25",
+        "color_name": "Orange Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r25-orange-red",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-09/rosco_roscolux.pdf",
+          "title": "SPEC SHEET - ROSCOLUX",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": ""
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source"
+        ],
+        "notes": "公式スペック資料で製品情報を確認。透過率・RGBは未登録。"
+      }
+    },
+    {
+      "id": "rosco-roscolux-r26",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R26",
+        "color_name": "Light Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/en/products/filters/r26-light-red",
+        "transmission": null,
+        "transmission_unit": "%",
+        "source": {
+          "url": "https://jp.rosco.com/sites/default/files/content/resource/2022-10/Rosco_Guide_to_Color_Filters_22.pdf",
+          "title": "Guide to Color Filters",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景",
+          "特殊効果"
+        ],
+        "tags": [
+          "暖色系"
+        ],
+        "notes": "Rosco公式Guideでvibrant red / alternative primary用途を確認。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページと公式Guideを確認。透過率・RGBは未登録。"
+      }
+    }
+  ]
+}
