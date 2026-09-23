@@ -16044,6 +16044,1968 @@
       ],
       "notes": "A strong colour good for backlighting.",
       "detail_url": "https://leefilters.com/lighting/colour-effect-lighting-filters/"
+    },
+    {
+      "id": "lee-technical-226",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "226",
+        "color_name": "LEE U.V."
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "official_spec",
+              "value": "<50",
+              "unit": "%",
+              "metric": "transmission_at_410nm",
+              "source": {
+                "url": "https://leefilters.com/lighting/technical-filters/",
+                "title": "LEE Filters 226 LEE U.V.",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 226 LEE U.V.",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "226",
+      "color_name": "LEE U.V.",
+      "transmission": "<50%",
+      "transmission_display": "<50% @ 410nm",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "紫外域をカットするUV管理用フィルター。公式記載：410nmで透過率50%未満。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-230",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "230",
+        "color_name": "Super Correction L.C.T. Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 230 Super Correction L.C.T. Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "230",
+      "color_name": "Super Correction L.C.T. Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "低色温度のイエロー・カーボンアークをタングステンへ補正。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-232",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "232",
+        "color_name": "Super Correction W.F. Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 232 Super Correction W.F. Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "232",
+      "color_name": "Super Correction W.F. Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "White Flame arcを3200Kへ補正し、タングステンフィルム用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-236",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "236",
+        "color_name": "H.M.I. (to Tungsten)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 236 H.M.I. (to Tungsten)",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "236",
+      "color_name": "H.M.I. (to Tungsten)",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "HMIを3200Kへ補正し、タングステンフィルム用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-237",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "237",
+        "color_name": "C.I.D. (to Tungsten)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 237 C.I.D. (to Tungsten)",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "237",
+      "color_name": "C.I.D. (to Tungsten)",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "CIDを3200Kへ補正し、タングステンフィルム用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-238",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "238",
+        "color_name": "C.S.I. (to Tungsten)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 238 C.S.I. (to Tungsten)",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "238",
+      "color_name": "C.S.I. (to Tungsten)",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "CSIを3200Kへ補正し、タングステンフィルム用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-239",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "239",
+        "color_name": "Polariser"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 239 Polariser",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "偏光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "239",
+      "color_name": "Polariser",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "偏光"
+      ],
+      "notes": "偏光フィルター。LEE Polarising Camera Filterと組み合わせてグレアや反射を低減。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-242",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "242",
+        "color_name": "LEE Fluorescent 4300 Kelvin"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 242 LEE Fluorescent 4300 Kelvin",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "242",
+      "color_name": "LEE Fluorescent 4300 Kelvin",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "蛍光灯補正"
+      ],
+      "notes": "タングステンを4300Kの蛍光灯色へ変換。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-243",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "243",
+        "color_name": "LEE Fluorescent 3600 Kelvin"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 243 LEE Fluorescent 3600 Kelvin",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "243",
+      "color_name": "LEE Fluorescent 3600 Kelvin",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "蛍光灯補正"
+      ],
+      "notes": "タングステンを3600Kの蛍光灯色へ変換。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-246",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "246",
+        "color_name": "Quarter Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 246 Quarter Plus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "246",
+      "color_name": "Quarter Plus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "放電光源との色合わせ用の弱いPlus Green。約CC075 green camera filter相当。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-247",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "247",
+        "color_name": "LEE Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 247 LEE Minus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "247",
+      "color_name": "LEE Minus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "放電光源の不要なグリーンかぶりを除去。約CC30 magenta camera filter相当。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-248",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "248",
+        "color_name": "Half Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 248 Half Minus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "248",
+      "color_name": "Half Minus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "放電光源の不要なグリーンかぶりを除去。約CC15 magenta camera filter相当。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-249",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "249",
+        "color_name": "Quarter Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 249 Quarter Minus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "249",
+      "color_name": "Quarter Minus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "放電光源の不要なグリーンかぶりを除去。約CC075 magenta camera filter相当。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-275",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "275",
+        "color_name": "Black Scrim"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 275 Black Scrim",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "275",
+      "color_name": "Black Scrim",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "黒い両面の柔軟な有孔素材。窓で光量を下げ、不要な反射を抑える。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-278",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "278",
+        "color_name": "Eighth Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 278 Eighth Plus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "278",
+      "color_name": "Eighth Plus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "ごく弱いGreen補正。放電光源との色合わせ用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-279",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "279",
+        "color_name": "Eighth Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 279 Eighth Minus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "279",
+      "color_name": "Eighth Minus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "ごく弱いMinus Green補正。放電光源のグリーンかぶりを除去。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-283",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "283",
+        "color_name": "One and a Half C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 283 One and a Half C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "283",
+      "color_name": "One and a Half C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "タングステン3200Kを8888Kへ変換。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-286",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "286",
+        "color_name": "One and a Half C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 286 One and a Half C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "286",
+      "color_name": "One and a Half C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Daylight 6500Kを2507Kへ変換。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-287",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "287",
+        "color_name": "Double C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 287 Double C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "287",
+      "color_name": "Double C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Daylight 6500Kを2147Kへ変換。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-299",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "299",
+        "color_name": "1.2ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 299 1.2ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "299",
+      "color_name": "1.2ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "色を変えずに4ストップ減光。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-599",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "599",
+        "color_name": "Nocturnal Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 599 Nocturnal Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "昼夜変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "599",
+      "color_name": "Nocturnal Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "昼夜変換"
+      ],
+      "notes": "昼間の撮影を夜景風にする単枚フィルター。約8ストップ減光し、クールブルーを加える。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-642",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "642",
+        "color_name": "Half Mustard Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 642 Half Mustard Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "642",
+      "color_name": "Half Mustard Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Daylight光源でハーフ強度のSodium灯効果。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-650",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "650",
+        "color_name": "Industry Sodium"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 650 Industry Sodium",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "650",
+      "color_name": "Industry Sodium",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "タングステン光をSodium灯と馴染ませる。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-651",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "651",
+        "color_name": "HI Sodium"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 651 HI Sodium",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "651",
+      "color_name": "HI Sodium",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "タングステン光でHigh Pressure Sodium灯の見え方を作る。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-652",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "652",
+        "color_name": "Urban Sodium"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 652 Urban Sodium",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "652",
+      "color_name": "Urban Sodium",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "タングステン光でSodium灯特有のオレンジの光を作る。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-653",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "653",
+        "color_name": "LO Sodium"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 653 LO Sodium",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "653",
+      "color_name": "LO Sodium",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "タングステン光でLow Pressure Sodium灯の見え方を作る。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-740",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "740",
+        "color_name": "Aurora Borealis Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 740 Aurora Borealis Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "740",
+      "color_name": "Aurora Borealis Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "ジャングル系の緑。赤と青を一部除去し、Daylight電球での使用やSodium灯効果にも使用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-741",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "741",
+        "color_name": "Mustard Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters 741 Mustard Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "741",
+      "color_name": "Mustard Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "ヘイズで不気味な効果。赤と青を一部除去し、Daylight電球での使用やSodium灯効果にも使用。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-sc15",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "SC15",
+        "color_name": "Special Cyan 15"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters SC15 Special Cyan 15",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "SC15",
+      "color_name": "Special Cyan 15",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "400–600nmに対して600–700nmの赤成分を約25%低減。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
+    },
+    {
+      "id": "lee-technical-sc30",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical Filters",
+        "color_number": "SC30",
+        "color_name": "Special Cyan 30"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/lighting/technical-filters/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/technical-filters/",
+          "title": "LEE Filters SC30 Special Cyan 30",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Technical Filtersの説明に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式Technical Filters一覧で製品名・用途/効果を確認。数値は公式記載のもののみ登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical Filters",
+      "color_number": "SC30",
+      "color_name": "Special Cyan 30",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "400–600nmに対して600–700nmの赤成分を約50%低減。",
+      "detail_url": "https://leefilters.com/lighting/technical-filters/"
     }
   ]
 }
