@@ -1379,6 +1379,2051 @@
         ],
         "notes": "公式製品ページと公式Guideを確認。透過率・RGBは未登録。"
       }
+    },
+    {
+      "id": "lee-colour-002",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "002",
+        "color_name": "Rose Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/002-rose-pink/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 32.7,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/002-rose-pink/",
+                "title": "LEE Filters 002 Rose Pink",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 34.2,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/002-rose-pink/",
+                "title": "LEE Filters 002 Rose Pink",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/002-rose-pink/",
+          "title": "LEE Filters 002 Rose Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "002",
+      "color_name": "Rose Pink",
+      "transmission": 32.7,
+      "transmission_display": "Daylight 32.7% / Tungsten 34.2%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Strong pink wash, good for cycloramas.",
+      "detail_url": "https://leefilters.com/colour/002-rose-pink/"
+    },
+    {
+      "id": "lee-colour-003",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "003",
+        "color_name": "Lavender Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/003-lavender-tint/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 75.7,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/003-lavender-tint/",
+                "title": "LEE Filters 003 Lavender Tint",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 75,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/003-lavender-tint/",
+                "title": "LEE Filters 003 Lavender Tint",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/003-lavender-tint/",
+          "title": "LEE Filters 003 Lavender Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "003",
+      "color_name": "Lavender Tint",
+      "transmission": 75.7,
+      "transmission_display": "Daylight 75.7% / Tungsten 75%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Subtle cool wash for stage and studio lighting.",
+      "detail_url": "https://leefilters.com/colour/003-lavender-tint/"
+    },
+    {
+      "id": "lee-colour-004",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "004",
+        "color_name": "Medium Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/004-medium-bastard-amber/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 64.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/004-medium-bastard-amber/",
+                "title": "LEE Filters 004 Medium Bastard Amber",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 65.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/004-medium-bastard-amber/",
+                "title": "LEE Filters 004 Medium Bastard Amber",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/004-medium-bastard-amber/",
+          "title": "LEE Filters 004 Medium Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "004",
+      "color_name": "Medium Bastard Amber",
+      "transmission": 64.1,
+      "transmission_display": "Daylight 64.1% / Tungsten 65.5%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Naturally enhances skin tones.",
+      "detail_url": "https://leefilters.com/colour/004-medium-bastard-amber/"
+    },
+    {
+      "id": "lee-colour-007",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "007",
+        "color_name": "Pale Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/007-pale-yellow/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 85.4,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/007-pale-yellow/",
+                "title": "LEE Filters 007 Pale Yellow",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 87.2,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/007-pale-yellow/",
+                "title": "LEE Filters 007 Pale Yellow",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/007-pale-yellow/",
+          "title": "LEE Filters 007 Pale Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "007",
+      "color_name": "Pale Yellow",
+      "transmission": 85.4,
+      "transmission_display": "Daylight 85.4% / Tungsten 87.2%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "Sunlight.",
+      "detail_url": "https://leefilters.com/colour/007-pale-yellow/"
+    },
+    {
+      "id": "lee-colour-009",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "009",
+        "color_name": "Pale Amber Gold"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/009-pale-amber-gold/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 71.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/009-pale-amber-gold/",
+                "title": "LEE Filters 009 Pale Amber Gold",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 75,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/009-pale-amber-gold/",
+                "title": "LEE Filters 009 Pale Amber Gold",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/009-pale-amber-gold/",
+          "title": "LEE Filters 009 Pale Amber Gold",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "009",
+      "color_name": "Pale Amber Gold",
+      "transmission": 71.1,
+      "transmission_display": "Daylight 71.1% / Tungsten 75%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Perfect warm front light for any skin tone.",
+      "detail_url": "https://leefilters.com/colour/009-pale-amber-gold/"
+    },
+    {
+      "id": "lee-colour-010",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "010",
+        "color_name": "Medium Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/010-medium-yellow/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 86.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/010-medium-yellow/",
+                "title": "LEE Filters 010 Medium Yellow",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 88.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/010-medium-yellow/",
+                "title": "LEE Filters 010 Medium Yellow",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/010-medium-yellow/",
+          "title": "LEE Filters 010 Medium Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "010",
+      "color_name": "Medium Yellow",
+      "transmission": 86.5,
+      "transmission_display": "Daylight 86.5% / Tungsten 88.1%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "A pure bright yellow. Great for special effects and accents. Use with caution in acting areas.",
+      "detail_url": "https://leefilters.com/colour/010-medium-yellow/"
+    },
+    {
+      "id": "lee-colour-013",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "013",
+        "color_name": "Straw Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/013-straw-tint/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 72.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/013-straw-tint/",
+                "title": "LEE Filters 013 Straw Tint",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 75.7,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/013-straw-tint/",
+                "title": "LEE Filters 013 Straw Tint",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/013-straw-tint/",
+          "title": "LEE Filters 013 Straw Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "013",
+      "color_name": "Straw Tint",
+      "transmission": 72.1,
+      "transmission_display": "Daylight 72.1% / Tungsten 75.7%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "Warmer than other straw colours. A good sunlight effect when used in contrast with ambers and blues.",
+      "detail_url": "https://leefilters.com/colour/013-straw-tint/"
+    },
+    {
+      "id": "lee-colour-015",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "015",
+        "color_name": "Deep Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/015-deep-straw/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 60.8,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/015-deep-straw/",
+                "title": "LEE Filters 015 Deep Straw",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 67.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/015-deep-straw/",
+                "title": "LEE Filters 015 Deep Straw",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/015-deep-straw/",
+          "title": "LEE Filters 015 Deep Straw",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "015",
+      "color_name": "Deep Straw",
+      "transmission": 60.8,
+      "transmission_display": "Daylight 60.8% / Tungsten 67.5%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "A warm amber light. Good for effects such as candlelight and fire.",
+      "detail_url": "https://leefilters.com/colour/015-deep-straw/"
+    },
+    {
+      "id": "lee-colour-019",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "019",
+        "color_name": "Fire"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/019-fire/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 18.9,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/019-fire/",
+                "title": "LEE Filters 019 Fire",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 24,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/019-fire/",
+                "title": "LEE Filters 019 Fire",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/019-fire/",
+          "title": "LEE Filters 019 Fire",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "019",
+      "color_name": "Fire",
+      "transmission": 18.9,
+      "transmission_display": "Daylight 18.9% / Tungsten 24%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "A strong red/amber. Great for fire effects.",
+      "detail_url": "https://leefilters.com/colour/019-fire/"
+    },
+    {
+      "id": "lee-colour-020",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "020",
+        "color_name": "Medium Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/020-medium-amber/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 50.7,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/020-medium-amber/",
+                "title": "LEE Filters 020 Medium Amber",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 56.8,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/020-medium-amber/",
+                "title": "LEE Filters 020 Medium Amber",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/020-medium-amber/",
+          "title": "LEE Filters 020 Medium Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "020",
+      "color_name": "Medium Amber",
+      "transmission": 50.7,
+      "transmission_display": "Daylight 50.7% / Tungsten 56.8%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "Good for afternoon sunlight and candlelight. Also great for side lighting.",
+      "detail_url": "https://leefilters.com/colour/020-medium-amber/"
+    },
+    {
+      "id": "lee-colour-021",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "021",
+        "color_name": "Gold Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/021-gold-amber/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 31.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/021-gold-amber/",
+                "title": "LEE Filters 021 Gold Amber",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 39.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/021-gold-amber/",
+                "title": "LEE Filters 021 Gold Amber",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/021-gold-amber/",
+          "title": "LEE Filters 021 Gold Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "021",
+      "color_name": "Gold Amber",
+      "transmission": 31.1,
+      "transmission_display": "Daylight 31.1% / Tungsten 39.5%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "Great for sunsets, cyclorama lighting and fire effects.",
+      "detail_url": "https://leefilters.com/colour/021-gold-amber/"
+    },
+    {
+      "id": "lee-colour-022",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "022",
+        "color_name": "Dark Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/022-dark-amber/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 23.9,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/022-dark-amber/",
+                "title": "LEE Filters 022 Dark Amber",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 30.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/022-dark-amber/",
+                "title": "LEE Filters 022 Dark Amber",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/022-dark-amber/",
+          "title": "LEE Filters 022 Dark Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "022",
+      "color_name": "Dark Amber",
+      "transmission": 23.9,
+      "transmission_display": "Daylight 23.9% / Tungsten 30.5%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "A good backlight.",
+      "detail_url": "https://leefilters.com/colour/022-dark-amber/"
+    },
+    {
+      "id": "lee-colour-024",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "024",
+        "color_name": "Scarlet"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/024-scarlet/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/024-scarlet/",
+          "title": "LEE Filters 024 Scarlet",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "024",
+      "color_name": "Scarlet",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Great for pantomimes, ballroom sets and fire effects.",
+      "detail_url": "https://leefilters.com/colour/024-scarlet/"
+    },
+    {
+      "id": "lee-colour-025",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "025",
+        "color_name": "Sunset Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/025-sunset-red/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 26.4,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/025-sunset-red/",
+                "title": "LEE Filters 025 Sunset Red",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 34.2,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/025-sunset-red/",
+                "title": "LEE Filters 025 Sunset Red",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/025-sunset-red/",
+          "title": "LEE Filters 025 Sunset Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "025",
+      "color_name": "Sunset Red",
+      "transmission": 26.4,
+      "transmission_display": "Daylight 26.4% / Tungsten 34.2%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "A good warm stage wash, TV studio wash or sunset effect.",
+      "detail_url": "https://leefilters.com/colour/025-sunset-red/"
+    },
+    {
+      "id": "lee-colour-026",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "026",
+        "color_name": "Bright Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/026-bright-red/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 8.6,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/026-bright-red/",
+                "title": "LEE Filters 026 Bright Red",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 9.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/026-bright-red/",
+                "title": "LEE Filters 026 Bright Red",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/026-bright-red/",
+          "title": "LEE Filters 026 Bright Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "026",
+      "color_name": "Bright Red",
+      "transmission": 8.6,
+      "transmission_display": "Daylight 8.6% / Tungsten 9.1%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "A vibrant red, good for cyclorama lighting.",
+      "detail_url": "https://leefilters.com/colour/026-bright-red/"
+    },
+    {
+      "id": "lee-colour-027",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "027",
+        "color_name": "Medium Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/027-medium-red/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 3.6,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/027-medium-red/",
+                "title": "LEE Filters 027 Medium Red",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 5.3,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/027-medium-red/",
+                "title": "LEE Filters 027 Medium Red",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/027-medium-red/",
+          "title": "LEE Filters 027 Medium Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "027",
+      "color_name": "Medium Red",
+      "transmission": 3.6,
+      "transmission_display": "Daylight 3.6% / Tungsten 5.3%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Good for cyclorama lighting, side lighting and footlights. Also good for colour mixing.",
+      "detail_url": "https://leefilters.com/colour/027-medium-red/"
+    },
+    {
+      "id": "lee-colour-029",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "029",
+        "color_name": "Plasa Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/029-plasa-red/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/029-plasa-red/",
+          "title": "LEE Filters 029 Plasa Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "029",
+      "color_name": "Plasa Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Good for fire effects, musicals and cycloramas.",
+      "detail_url": "https://leefilters.com/colour/029-plasa-red/"
+    },
+    {
+      "id": "lee-colour-035",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "035",
+        "color_name": "Light Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/035-light-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/035-light-pink/",
+          "title": "LEE Filters 035 Light Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "035",
+      "color_name": "Light Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "A warm wash good for musical reviews.",
+      "detail_url": "https://leefilters.com/colour/035-light-pink/"
+    },
+    {
+      "id": "lee-colour-036",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "036",
+        "color_name": "Medium Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/036-medium-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/036-medium-pink/",
+          "title": "LEE Filters 036 Medium Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "036",
+      "color_name": "Medium Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Good for general washes and side lighting.",
+      "detail_url": "https://leefilters.com/colour/036-medium-pink/"
+    },
+    {
+      "id": "lee-colour-046",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "046",
+        "color_name": "Dark Magenta"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/046-dark-magenta/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/046-dark-magenta/",
+          "title": "LEE Filters 046 Dark Magenta",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "046",
+      "color_name": "Dark Magenta",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "A very strong pink, good for backlighting.",
+      "detail_url": "https://leefilters.com/colour/046-dark-magenta/"
+    },
+    {
+      "id": "lee-colour-107",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "107",
+        "color_name": "Light Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/107-light-rose/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 48,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/107-light-rose/",
+                "title": "LEE Filters 107 Light Rose",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 54,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/107-light-rose/",
+                "title": "LEE Filters 107 Light Rose",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/107-light-rose/",
+          "title": "LEE Filters 107 Light Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "107",
+      "color_name": "Light Rose",
+      "transmission": 48,
+      "transmission_display": "Daylight 48% / Tungsten 54%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Good for general washes and followspots.",
+      "detail_url": "https://leefilters.com/colour/107-light-rose/"
+    },
+    {
+      "id": "lee-colour-126",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "126",
+        "color_name": "Mauve"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/126-mauve/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 4.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/126-mauve/",
+                "title": "LEE Filters 126 Mauve",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/126-mauve/",
+                "title": "LEE Filters 126 Mauve",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/126-mauve/",
+          "title": "LEE Filters 126 Mauve",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "心理表現"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "126",
+      "color_name": "Mauve",
+      "transmission": 4.1,
+      "transmission_display": "Daylight 4.1% / Tungsten 5%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "心理表現"
+      ],
+      "notes": "Good for backlighting. Dark magenta / purple adds drama and mood.",
+      "detail_url": "https://leefilters.com/colour/126-mauve/"
+    },
+    {
+      "id": "lee-colour-139",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "139",
+        "color_name": "Primary Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/139-primary-green/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 11.9,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/139-primary-green/",
+                "title": "LEE Filters 139 Primary Green",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 10.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/139-primary-green/",
+                "title": "LEE Filters 139 Primary Green",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/139-primary-green/",
+          "title": "LEE Filters 139 Primary Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "139",
+      "color_name": "Primary Green",
+      "transmission": 11.9,
+      "transmission_display": "Daylight 11.9% / Tungsten 10.1%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Good for set lighting and cyclorama lighting.",
+      "detail_url": "https://leefilters.com/colour/139-primary-green/"
+    },
+    {
+      "id": "lee-colour-354",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "354",
+        "color_name": "Special Steel Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/354-special-steel-blue/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 39.2,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/354-special-steel-blue/",
+                "title": "LEE Filters 354 Special Steel Blue",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 31.1,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/354-special-steel-blue/",
+                "title": "LEE Filters 354 Special Steel Blue",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/354-special-steel-blue/",
+          "title": "LEE Filters 354 Special Steel Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.transmission",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "354",
+      "color_name": "Special Steel Blue",
+      "transmission": 39.2,
+      "transmission_display": "Daylight 39.2% / Tungsten 31.1%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "A cooling blue-green wash for stage and set lighting.",
+      "detail_url": "https://leefilters.com/colour/354-special-steel-blue/"
     }
   ]
 }
