@@ -157,7 +157,7 @@ get_header();
                 <img src="<?php echo esc_url( $nyakakichi_base . '/' . $images['hero'] ); ?>" alt="にゃかきち" loading="eager">
             </div>
         </div>
-        <div class="hk-nyakakichi-bubble">
+        <div class="hk-nyakakichi-bubble hero-bubble">
             <?php echo esc_html( $m['character_open'] ); ?>
         </div>
     </header>
@@ -192,7 +192,7 @@ get_header();
             <div class="hk-nyakakichi-image small" aria-label="にゃかきち">
                 <img src="<?php echo esc_url( $nyakakichi_base . '/' . $images['question'] ); ?>" alt="にゃかきち" loading="lazy">
             </div>
-            <div class="hk-nyakakichi-bubble"><?php echo esc_html( $m['character_open'] ); ?></div>
+            <div class="hk-nyakakichi-bubble question-bubble"><?php echo esc_html( $m['character_open'] ); ?></div>
         </div>
         <p class="hk-method-explanation"><?php echo esc_html( $m['misconception'] ); ?></p>
     </section>
@@ -259,7 +259,9 @@ get_header();
 .hk-nyakakichi-image.small{width:100px;height:100px}
 .hk-nyakakichi-image.ending{width:170px;height:170px}
 .hk-nyakakichi-bubble{position:relative;margin:28px 0 0;padding:20px 24px;background:var(--hk-bg-card);border:1px solid var(--hk-border);border-radius:18px;color:var(--hk-fg);font-size:18px;line-height:1.8}
-.hk-nyakakichi-bubble:before{content:"";position:absolute;left:55px;top:-10px;width:18px;height:18px;background:var(--hk-bg-card);border-left:1px solid var(--hk-border);border-top:1px solid var(--hk-border);transform:rotate(45deg)}
+.hk-nyakakichi-bubble:before{content:"";position:absolute;width:18px;height:18px;background:var(--hk-bg-card)}
+.hk-nyakakichi-bubble.hero-bubble:before{right:58px;top:-10px;border-left:1px solid var(--hk-border);border-top:1px solid var(--hk-border);transform:rotate(45deg)}
+.hk-nyakakichi-bubble.question-bubble:before{left:-10px;top:50%;margin-top:-9px;border-left:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border);transform:rotate(45deg)}
 .hk-method-section{max-width:900px;margin:0 auto 52px;padding:0 20px}
 .hk-method-section-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
 .hk-method-section-head>span{color:var(--hk-accent-warm);font-size:12px;letter-spacing:.12em}
