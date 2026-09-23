@@ -33238,6 +33238,646 @@
       ],
       "notes": "弱いMinus Green補正。",
       "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "rosco-r2001",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2001",
+        "color_name": "Storaro Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2001 Storaro Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2001",
+      "color_name": "Storaro Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "ヴィットリオ・ストラーロのStoraroカラー。強い赤。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2002",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2002",
+        "color_name": "Storaro Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2002 Storaro Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2002",
+      "color_name": "Storaro Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーのオレンジ。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2003",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2003",
+        "color_name": "Storaro Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2003 Storaro Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2003",
+      "color_name": "Storaro Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーの黄色。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2004",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2004",
+        "color_name": "Storaro Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2004 Storaro Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2004",
+      "color_name": "Storaro Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーの緑。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2005",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2005",
+        "color_name": "Storaro Cyan"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2005 Storaro Cyan",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2005",
+      "color_name": "Storaro Cyan",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーのシアン。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2006",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2006",
+        "color_name": "Storaro Azure"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2006 Storaro Azure",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2006",
+      "color_name": "Storaro Azure",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーのアジュール。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2007",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2007",
+        "color_name": "Storaro Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2007 Storaro Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2007",
+      "color_name": "Storaro Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーの青。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2008",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2008",
+        "color_name": "Storaro Indigo"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2008 Storaro Indigo",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2008",
+      "color_name": "Storaro Indigo",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "深いインディゴ。夜・幻想的な色彩表現。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2009",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2009",
+        "color_name": "Storaro Violet"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2009 Storaro Violet",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2009",
+      "color_name": "Storaro Violet",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーの紫。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r2010",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Storaro",
+        "color_number": "R2010",
+        "color_name": "Storaro Magenta"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/product/cinegel",
+          "title": "Rosco R2010 Storaro Magenta",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Storaro",
+      "color_number": "R2010",
+      "color_name": "Storaro Magenta",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Storaroカラーのマゼンタ。",
+      "detail_url": "https://jp.rosco.com/ja/product/cinegel"
     }
   ]
 }
