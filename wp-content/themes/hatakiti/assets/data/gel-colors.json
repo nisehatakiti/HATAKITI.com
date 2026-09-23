@@ -36468,6 +36468,3862 @@
       ],
       "notes": "Hampshire Frost の 1/8 濃度。光を柔らかく拡散する用途.",
       "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "rosco-e-colour-200",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "200",
+        "color_name": "Double C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "200",
+      "color_name": "Double C.T. Blue",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#200"
+    },
+    {
+      "id": "rosco-e-colour-201",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "201",
+        "color_name": "Full C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "201",
+      "color_name": "Full C.T. Blue",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#201"
+    },
+    {
+      "id": "rosco-e-colour-202",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "202",
+        "color_name": "1/2 C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "202",
+      "color_name": "1/2 C.T. Blue",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#202"
+    },
+    {
+      "id": "rosco-e-colour-203",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "203",
+        "color_name": "1/4 C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "203",
+      "color_name": "1/4 C.T. Blue",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#203"
+    },
+    {
+      "id": "rosco-e-colour-204",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "204",
+        "color_name": "Full C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "204",
+      "color_name": "Full C.T. Orange",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#204"
+    },
+    {
+      "id": "rosco-e-colour-205",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "205",
+        "color_name": "1/2 C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "205",
+      "color_name": "1/2 C.T. Orange",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#205"
+    },
+    {
+      "id": "rosco-e-colour-206",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "206",
+        "color_name": "1/4 C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "206",
+      "color_name": "1/4 C.T. Orange",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#206"
+    },
+    {
+      "id": "rosco-e-colour-207",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "207",
+        "color_name": "CTO +.3 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換",
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "207",
+      "color_name": "CTO +.3 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換",
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#207"
+    },
+    {
+      "id": "rosco-e-colour-208",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "208",
+        "color_name": "CTO +.6 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換",
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "208",
+      "color_name": "CTO +.6 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換",
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#208"
+    },
+    {
+      "id": "rosco-e-colour-209",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "209",
+        "color_name": ".3 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "209",
+      "color_name": ".3 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#209"
+    },
+    {
+      "id": "rosco-e-colour-210",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "210",
+        "color_name": ".6 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "210",
+      "color_name": ".6 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#210"
+    },
+    {
+      "id": "rosco-e-colour-211",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "211",
+        "color_name": ".9 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "211",
+      "color_name": ".9 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#211"
+    },
+    {
+      "id": "rosco-e-colour-212",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "212",
+        "color_name": "L.C.T. Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "212",
+      "color_name": "L.C.T. Yellow",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#212"
+    },
+    {
+      "id": "rosco-e-colour-213",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "213",
+        "color_name": "White Flame Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "213",
+      "color_name": "White Flame Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#213"
+    },
+    {
+      "id": "rosco-e-colour-214",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "214",
+        "color_name": "Full Tough Spun"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "214",
+      "color_name": "Full Tough Spun",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#214"
+    },
+    {
+      "id": "rosco-e-colour-215",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "215",
+        "color_name": "1/2 Tough Spun"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "215",
+      "color_name": "1/2 Tough Spun",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#215"
+    },
+    {
+      "id": "rosco-e-colour-216",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "216",
+        "color_name": "White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "216",
+      "color_name": "White Diffusion",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#216"
+    },
+    {
+      "id": "rosco-e-colour-217",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "217",
+        "color_name": "Blue Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "217",
+      "color_name": "Blue Diffusion",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#217"
+    },
+    {
+      "id": "rosco-e-colour-218",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "218",
+        "color_name": "1/8 C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "218",
+      "color_name": "1/8 C.T. Blue",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#218"
+    },
+    {
+      "id": "rosco-e-colour-219",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "219",
+        "color_name": "Fluorescent Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "219",
+      "color_name": "Fluorescent Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "蛍光灯補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#219"
+    },
+    {
+      "id": "rosco-e-colour-220",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "220",
+        "color_name": "White Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "220",
+      "color_name": "White Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#220"
+    },
+    {
+      "id": "rosco-e-colour-221",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "221",
+        "color_name": "Blue Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "221",
+      "color_name": "Blue Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#221"
+    },
+    {
+      "id": "rosco-e-colour-223",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "223",
+        "color_name": "1/8 C.T.O."
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "223",
+      "color_name": "1/8 C.T.O.",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#223"
+    },
+    {
+      "id": "rosco-e-colour-224",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "224",
+        "color_name": "Daylight Blue Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "224",
+      "color_name": "Daylight Blue Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#224"
+    },
+    {
+      "id": "rosco-e-colour-225",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "225",
+        "color_name": "Lee N.D. Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND",
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "225",
+      "color_name": "Lee N.D. Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND",
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#225"
+    },
+    {
+      "id": "rosco-e-colour-226",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "226",
+        "color_name": "Lee U.V."
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "226",
+      "color_name": "Lee U.V.",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#226"
+    },
+    {
+      "id": "rosco-e-colour-228",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "228",
+        "color_name": "Brushed Silk"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "228",
+      "color_name": "Brushed Silk",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#228"
+    },
+    {
+      "id": "rosco-e-colour-229",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "229",
+        "color_name": "1/4 Tough Spun"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "229",
+      "color_name": "1/4 Tough Spun",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#229"
+    },
+    {
+      "id": "rosco-e-colour-241",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "241",
+        "color_name": "Lee Fluor 5700K"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "241",
+      "color_name": "Lee Fluor 5700K",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "蛍光灯補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#241"
+    },
+    {
+      "id": "rosco-e-colour-242",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "242",
+        "color_name": "Lee Fluor 4300K"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "242",
+      "color_name": "Lee Fluor 4300K",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "蛍光灯補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#242"
+    },
+    {
+      "id": "rosco-e-colour-243",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "243",
+        "color_name": "Lee Fluor 3600K"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "243",
+      "color_name": "Lee Fluor 3600K",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "蛍光灯補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#243"
+    },
+    {
+      "id": "rosco-e-colour-244",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "244",
+        "color_name": "Lee Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "244",
+      "color_name": "Lee Plus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#244"
+    },
+    {
+      "id": "rosco-e-colour-245",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "245",
+        "color_name": "1/2 Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "245",
+      "color_name": "1/2 Plus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#245"
+    },
+    {
+      "id": "rosco-e-colour-246",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "246",
+        "color_name": "1/4 Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "246",
+      "color_name": "1/4 Plus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#246"
+    },
+    {
+      "id": "rosco-e-colour-247",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "247",
+        "color_name": "Lee Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "247",
+      "color_name": "Lee Minus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#247"
+    },
+    {
+      "id": "rosco-e-colour-248",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "248",
+        "color_name": "1/2 Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "248",
+      "color_name": "1/2 Minus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#248"
+    },
+    {
+      "id": "rosco-e-colour-249",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "249",
+        "color_name": "1/4 Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "249",
+      "color_name": "1/4 Minus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#249"
+    },
+    {
+      "id": "rosco-e-colour-250",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "250",
+        "color_name": "1/2 White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "250",
+      "color_name": "1/2 White Diffusion",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#250"
+    },
+    {
+      "id": "rosco-e-colour-251",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "251",
+        "color_name": "1/4 White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "251",
+      "color_name": "1/4 White Diffusion",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#251"
+    },
+    {
+      "id": "rosco-e-colour-252",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "252",
+        "color_name": "1/8 White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "252",
+      "color_name": "1/8 White Diffusion",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#252"
+    },
+    {
+      "id": "rosco-e-colour-253",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "253",
+        "color_name": "Hampshire Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "253",
+      "color_name": "Hampshire Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#253"
+    },
+    {
+      "id": "rosco-e-colour-255",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "255",
+        "color_name": "Hollywood Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "255",
+      "color_name": "Hollywood Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#255"
+    },
+    {
+      "id": "rosco-e-colour-256",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "256",
+        "color_name": "1/2 Hampshire Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "256",
+      "color_name": "1/2 Hampshire Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#256"
+    },
+    {
+      "id": "rosco-e-colour-257",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "257",
+        "color_name": "1/4 Hampshire Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "257",
+      "color_name": "1/4 Hampshire Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#257"
+    },
+    {
+      "id": "rosco-e-colour-258",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "258",
+        "color_name": "1/8 Hampshire Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "258",
+      "color_name": "1/8 Hampshire Frost",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#258"
+    },
+    {
+      "id": "rosco-e-colour-269",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "269",
+        "color_name": "Heat Shield"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "269",
+      "color_name": "Heat Shield",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#269"
+    },
+    {
+      "id": "rosco-e-colour-270",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "270",
+        "color_name": "Scrim"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "270",
+      "color_name": "Scrim",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#270"
+    },
+    {
+      "id": "rosco-e-colour-271",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "271",
+        "color_name": "Mirror Silver"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "271",
+      "color_name": "Mirror Silver",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#271"
+    },
+    {
+      "id": "rosco-e-colour-272",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "272",
+        "color_name": "Soft Gold Reflector"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "272",
+      "color_name": "Soft Gold Reflector",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#272"
+    },
+    {
+      "id": "rosco-e-colour-273",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "273",
+        "color_name": "Soft Silver Reflector"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "273",
+      "color_name": "Soft Silver Reflector",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#273"
+    },
+    {
+      "id": "rosco-e-colour-274",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "274",
+        "color_name": "Mirror Gold"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "274",
+      "color_name": "Mirror Gold",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#274"
+    },
+    {
+      "id": "rosco-e-colour-275",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "275",
+        "color_name": "Black Scrim"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "275",
+      "color_name": "Black Scrim",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#275"
+    },
+    {
+      "id": "rosco-e-colour-278",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "278",
+        "color_name": "Eighth Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正",
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "278",
+      "color_name": "Eighth Plus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正",
+        "蛍光灯補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#278"
+    },
+    {
+      "id": "rosco-e-colour-279",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "279",
+        "color_name": "Eighth Minus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正",
+          "蛍光灯補正"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "279",
+      "color_name": "Eighth Minus Green",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正",
+        "蛍光灯補正"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#279"
+    },
+    {
+      "id": "rosco-e-colour-281",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "281",
+        "color_name": "3/4 C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "281",
+      "color_name": "3/4 C.T. Blue",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#281"
+    },
+    {
+      "id": "rosco-e-colour-285",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "285",
+        "color_name": "3/4 C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "285",
+      "color_name": "3/4 C.T. Orange",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#285"
+    },
+    {
+      "id": "rosco-e-colour-298",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "298",
+        "color_name": ".15 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "298",
+      "color_name": ".15 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#298"
+    },
+    {
+      "id": "rosco-e-colour-299",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "E-Colour+",
+        "color_number": "299",
+        "color_name": "1.2 Neutral Density"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "製品名・シリーズはRosco公式資料に基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式のLee to Rosco EquivalentsおよびE-Colour+資料で製品番号・名称を確認。透過率は未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "E-Colour+",
+      "color_number": "299",
+      "color_name": "1.2 Neutral Density",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Rosco公式資料に基づくE-Colour+フィルター。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents#299"
     }
   ]
 }
