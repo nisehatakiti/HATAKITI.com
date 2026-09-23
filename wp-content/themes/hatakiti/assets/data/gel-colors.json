@@ -6506,6 +6506,1854 @@
       ],
       "notes": "A deep green for sinister forest scenes, cycloramas and backlighting.",
       "detail_url": "https://leefilters.com/colour/327-forest-green/"
+    },
+    {
+      "id": "lee-colour-135",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "135",
+        "color_name": "Deep Golden Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/135-deep-golden-amber/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/135-deep-golden-amber/",
+          "title": "LEE Filters 135 Deep Golden Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "135",
+      "color_name": "Deep Golden Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "A great fire effect.",
+      "detail_url": "https://leefilters.com/colour/135-deep-golden-amber/"
+    },
+    {
+      "id": "lee-colour-136",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "136",
+        "color_name": "Pale Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/136-pale-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/136-pale-lavender/",
+          "title": "LEE Filters 136 Pale Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "136",
+      "color_name": "Pale Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Great for pantomimes and ballroom sets. Also enhances dark skin tones in follow spots.",
+      "detail_url": "https://leefilters.com/colour/136-pale-lavender/"
+    },
+    {
+      "id": "lee-colour-137",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "137",
+        "color_name": "Special Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/137-special-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/137-special-lavender/",
+          "title": "LEE Filters 137 Special Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "137",
+      "color_name": "Special Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Good for moonlight and musical / romantic scenes. Enhances skin tones.",
+      "detail_url": "https://leefilters.com/colour/137-special-lavender/"
+    },
+    {
+      "id": "lee-colour-158",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "158",
+        "color_name": "Deep Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/158-deep-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/158-deep-orange/",
+          "title": "LEE Filters 158 Deep Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "158",
+      "color_name": "Deep Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "A great fire effect.",
+      "detail_url": "https://leefilters.com/colour/158-deep-orange/"
+    },
+    {
+      "id": "lee-colour-169",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "169",
+        "color_name": "Lilac Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/169-lilac-tint/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/169-lilac-tint/",
+          "title": "LEE Filters 169 Lilac Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "169",
+      "color_name": "Lilac Tint",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "A pale lavender. Good for almost white light with a cool tint.",
+      "detail_url": "https://leefilters.com/colour/169-lilac-tint/"
+    },
+    {
+      "id": "lee-colour-170",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "170",
+        "color_name": "Deep Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/170-deep-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/170-deep-lavender/",
+          "title": "LEE Filters 170 Deep Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "170",
+      "color_name": "Deep Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Great for set lighting, discos and theatres.",
+      "detail_url": "https://leefilters.com/colour/170-deep-lavender/"
+    },
+    {
+      "id": "lee-colour-172",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "172",
+        "color_name": "Lagoon Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/172-lagoon-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/172-lagoon-blue/",
+          "title": "LEE Filters 172 Lagoon Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "172",
+      "color_name": "Lagoon Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "A floodlit warm wash. Great for underwater scenes and ballet.",
+      "detail_url": "https://leefilters.com/colour/172-lagoon-blue/"
+    },
+    {
+      "id": "lee-colour-174",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "174",
+        "color_name": "Dark Steel Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/174-dark-steel-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/174-dark-steel-blue/",
+          "title": "LEE Filters 174 Dark Steel Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "174",
+      "color_name": "Dark Steel Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Great for set lighting. Creates good moonlight shadows.",
+      "detail_url": "https://leefilters.com/colour/174-dark-steel-blue/"
+    },
+    {
+      "id": "lee-colour-176",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "176",
+        "color_name": "Loving Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/176-loving-amber/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/176-loving-amber/",
+          "title": "LEE Filters 176 Loving Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "176",
+      "color_name": "Loving Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Used for backlighting and general areas. Great for sunrise effect and warming skin tones.",
+      "detail_url": "https://leefilters.com/colour/176-loving-amber/"
+    },
+    {
+      "id": "lee-colour-179",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "179",
+        "color_name": "Chrome Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/179-chrome-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/179-chrome-orange/",
+          "title": "LEE Filters 179 Chrome Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "179",
+      "color_name": "Chrome Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "A combination of 1/2 CTO and double strength 104, perfect for sunlight.",
+      "detail_url": "https://leefilters.com/colour/179-chrome-orange/"
+    },
+    {
+      "id": "lee-colour-180",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "180",
+        "color_name": "Dark Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/180-dark-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/180-dark-lavender/",
+          "title": "LEE Filters 180 Dark Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "180",
+      "color_name": "Dark Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "A pleasing effect for theatrical lighting and backlighting.",
+      "detail_url": "https://leefilters.com/colour/180-dark-lavender/"
+    },
+    {
+      "id": "lee-colour-184",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "184",
+        "color_name": "Cosmetic Peach"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/184-cosmetic-peach/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/184-cosmetic-peach/",
+          "title": "LEE Filters 184 Cosmetic Peach",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "184",
+      "color_name": "Cosmetic Peach",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "A warm highlight or front light; complimentary for most skin tones.",
+      "detail_url": "https://leefilters.com/colour/184-cosmetic-peach/"
+    },
+    {
+      "id": "lee-colour-186",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "186",
+        "color_name": "Cosmetic Silver Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/186-cosmetic-silver-rose/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/186-cosmetic-silver-rose/",
+          "title": "LEE Filters 186 Cosmetic Silver Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "186",
+      "color_name": "Cosmetic Silver Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "A warm highlight, leaning towards pink. Brings out pink pigment in skin tones.",
+      "detail_url": "https://leefilters.com/colour/186-cosmetic-silver-rose/"
+    },
+    {
+      "id": "lee-colour-187",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "187",
+        "color_name": "Cosmetic Rouge"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/187-cosmetic-rouge/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/187-cosmetic-rouge/",
+          "title": "LEE Filters 187 Cosmetic Rouge",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "187",
+      "color_name": "Cosmetic Rouge",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "A warm highlight leaning toward apricot, good for warm front light.",
+      "detail_url": "https://leefilters.com/colour/187-cosmetic-rouge/"
+    },
+    {
+      "id": "lee-colour-328",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "328",
+        "color_name": "Follies Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/328-follies-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/328-follies-pink/",
+          "title": "LEE Filters 328 Follies Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "328",
+      "color_name": "Follies Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Great for dramatic stage lighting.",
+      "detail_url": "https://leefilters.com/colour/328-follies-pink/"
+    },
+    {
+      "id": "lee-colour-332",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "332",
+        "color_name": "Special Rose Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/332-special-rose-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/332-special-rose-pink/",
+          "title": "LEE Filters 332 Special Rose Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "332",
+      "color_name": "Special Rose Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Great for Pantomimes, light entertainment etc. A good strong stage wash.",
+      "detail_url": "https://leefilters.com/colour/332-special-rose-pink/"
+    },
+    {
+      "id": "lee-colour-343",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "343",
+        "color_name": "Special Medium Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/343-special-medium-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/343-special-medium-lavender/",
+          "title": "LEE Filters 343 Special Medium Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "343",
+      "color_name": "Special Medium Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Good for theatre and T.V. effect lighting and backlighting.",
+      "detail_url": "https://leefilters.com/colour/343-special-medium-lavender/"
+    },
+    {
+      "id": "lee-colour-345",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "345",
+        "color_name": "Fuchsia Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/345-fuchsia-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/345-fuchsia-pink/",
+          "title": "LEE Filters 345 Fuchsia Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "345",
+      "color_name": "Fuchsia Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Good for musicals, pantomimes and sultry scenes.",
+      "detail_url": "https://leefilters.com/colour/345-fuchsia-pink/"
+    },
+    {
+      "id": "lee-colour-352",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "352",
+        "color_name": "Glacier Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/352-glacier-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/352-glacier-blue/",
+          "title": "LEE Filters 352 Glacier Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "352",
+      "color_name": "Glacier Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "A cold blue, good for cool atmospheric mood setting.",
+      "detail_url": "https://leefilters.com/colour/352-glacier-blue/"
+    },
+    {
+      "id": "lee-colour-353",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "353",
+        "color_name": "Lighter Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/353-lighter-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/353-lighter-blue/",
+          "title": "LEE Filters 353 Lighter Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "353",
+      "color_name": "Lighter Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "Good for daylight effects.",
+      "detail_url": "https://leefilters.com/colour/353-lighter-blue/"
+    },
+    {
+      "id": "lee-colour-363",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "363",
+        "color_name": "Special Medium Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/363-special-medium-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/363-special-medium-blue/",
+          "title": "LEE Filters 363 Special Medium Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "363",
+      "color_name": "Special Medium Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Great for cool moonlight and mood effects.",
+      "detail_url": "https://leefilters.com/colour/363-special-medium-blue/"
+    },
+    {
+      "id": "lee-colour-366",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "366",
+        "color_name": "Cornflower"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/366-cornflower/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/366-cornflower/",
+          "title": "LEE Filters 366 Cornflower",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "366",
+      "color_name": "Cornflower",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Great for pale moonlight and seasonal mood lighting.",
+      "detail_url": "https://leefilters.com/colour/366-cornflower/"
+    },
+    {
+      "id": "lee-colour-700",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "700",
+        "color_name": "Perfect Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/700-perfect-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/700-perfect-lavender/",
+          "title": "LEE Filters 700 Perfect Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "700",
+      "color_name": "Perfect Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Good for backlighting and romantic atmospheres.",
+      "detail_url": "https://leefilters.com/colour/700-perfect-lavender/"
+    },
+    {
+      "id": "lee-colour-702",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "702",
+        "color_name": "Special Pale Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/702-special-pale-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/702-special-pale-lavender/",
+          "title": "LEE Filters 702 Special Pale Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "702",
+      "color_name": "Special Pale Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "A cold lavender with a tungsten source; good as a fill for slow sunset fades.",
+      "detail_url": "https://leefilters.com/colour/702-special-pale-lavender/"
+    },
+    {
+      "id": "lee-colour-706",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "706",
+        "color_name": "King Fals Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/706-king-fals-lavender/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/706-king-fals-lavender/",
+          "title": "LEE Filters 706 King Fals Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "706",
+      "color_name": "King Fals Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "A cold lavender.",
+      "detail_url": "https://leefilters.com/colour/706-king-fals-lavender/"
+    },
+    {
+      "id": "lee-colour-707",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "707",
+        "color_name": "Ultimate Violet"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/707-ultimate-violet/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/707-ultimate-violet/",
+          "title": "LEE Filters 707 Ultimate Violet",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "707",
+      "color_name": "Ultimate Violet",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Used in musical performances for general colour washes and set lighting.",
+      "detail_url": "https://leefilters.com/colour/707-ultimate-violet/"
+    },
+    {
+      "id": "lee-colour-713",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "713",
+        "color_name": "J. Winter Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/713-j-winter-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/713-j-winter-blue/",
+          "title": "LEE Filters 713 J. Winter Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "713",
+      "color_name": "J. Winter Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "",
+      "detail_url": "https://leefilters.com/colour/713-j-winter-blue/"
+    },
+    {
+      "id": "lee-colour-797",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "797",
+        "color_name": "Deep Purple"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/797-deep-purple/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/797-deep-purple/",
+          "title": "LEE Filters 797 Deep Purple",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式情報で製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "797",
+      "color_name": "Deep Purple",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "",
+      "detail_url": "https://leefilters.com/colour/797-deep-purple/"
     }
   ]
 }
