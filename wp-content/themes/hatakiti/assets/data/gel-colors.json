@@ -11429,6 +11429,1956 @@
       ],
       "notes": "LED向けの暖かいサンシャインイエロー",
       "detail_url": "https://leefilters.com/colour/827-zircon-yellow/"
+    },
+    {
+      "id": "lee-filter-188",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "188",
+        "color_name": "Cosmetic Highlight"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/188-cosmetic-highlight/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 188 Cosmetic Highlight",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "188",
+      "color_name": "Cosmetic Highlight",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Warm highlight leaning amber; useful as warm front light.",
+      "detail_url": "https://leefilters.com/colour/188-cosmetic-highlight/"
+    },
+    {
+      "id": "lee-filter-191",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "191",
+        "color_name": "Cosmetic Aqua Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/191-cosmetic-aqua-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 191 Cosmetic Aqua Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "191",
+      "color_name": "Cosmetic Aqua Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Cool highlight leaning blue; useful as cool front light.",
+      "detail_url": "https://leefilters.com/colour/191-cosmetic-aqua-blue/"
+    },
+    {
+      "id": "lee-filter-200",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "200",
+        "color_name": "Double C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/200-double-c-t-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 200 Double C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "200",
+      "color_name": "Double C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts tungsten toward daylight; strong CTB correction.",
+      "detail_url": "https://leefilters.com/colour/200-double-c-t-blue/"
+    },
+    {
+      "id": "lee-filter-201",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "201",
+        "color_name": "Full C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/201-full-c-t-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 201 Full C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "201",
+      "color_name": "Full C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts tungsten 3200K to photographic daylight 5700K.",
+      "detail_url": "https://leefilters.com/colour/201-full-c-t-blue/"
+    },
+    {
+      "id": "lee-filter-202",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "202",
+        "color_name": "Half C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/202-half-c-t-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 202 Half C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "202",
+      "color_name": "Half C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts tungsten 3200K to daylight 4300K.",
+      "detail_url": "https://leefilters.com/colour/202-half-c-t-blue/"
+    },
+    {
+      "id": "lee-filter-203",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "203",
+        "color_name": "Quarter C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/203-quarter-c-t-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 203 Quarter C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "203",
+      "color_name": "Quarter C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts tungsten 3200K to daylight 3600K.",
+      "detail_url": "https://leefilters.com/colour/203-quarter-c-t-blue/"
+    },
+    {
+      "id": "lee-filter-209",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "209",
+        "color_name": "0.3ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/209-0-3nd/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 209 0.3ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "209",
+      "color_name": "0.3ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Reduces light by 1 stop without changing colour.",
+      "detail_url": "https://leefilters.com/colour/209-0-3nd/"
+    },
+    {
+      "id": "lee-filter-211",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "211",
+        "color_name": "0.9ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/211-0-9nd/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 211 0.9ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "211",
+      "color_name": "0.9ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Reduces light by 3 stops without changing colour.",
+      "detail_url": "https://leefilters.com/colour/211-0-9nd/"
+    },
+    {
+      "id": "lee-filter-219",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "219",
+        "color_name": "LEE Fluorescent Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/219-lee-fluorescent-green/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 219 LEE Fluorescent Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "219",
+      "color_name": "LEE Fluorescent Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "General tungsten-to-fluorescent correction when fluorescent colour temperature is unknown.",
+      "detail_url": "https://leefilters.com/colour/219-lee-fluorescent-green/"
+    },
+    {
+      "id": "lee-filter-224",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "224",
+        "color_name": "Daylight Blue Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/224-daylight-blue-frost/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 224 Daylight Blue Frost",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "224",
+      "color_name": "Daylight Blue Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Soft light effect combined with 201 Full CTB.",
+      "detail_url": "https://leefilters.com/colour/224-daylight-blue-frost/"
+    },
+    {
+      "id": "lee-filter-241",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "241",
+        "color_name": "LEE Fluorescent 5700 Kelvin"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/241-lee-fluorescent-5700-kelvin/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 241 LEE Fluorescent 5700 Kelvin",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "241",
+      "color_name": "LEE Fluorescent 5700 Kelvin",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Converts tungsten to 5700K fluorescent/daylight.",
+      "detail_url": "https://leefilters.com/colour/241-lee-fluorescent-5700-kelvin/"
+    },
+    {
+      "id": "lee-filter-244",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "244",
+        "color_name": "LEE Fluorescent Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/244-lee-fluorescent-green/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 244 LEE Fluorescent Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "244",
+      "color_name": "LEE Fluorescent Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Fluorescent correction filter.",
+      "detail_url": "https://leefilters.com/colour/244-lee-fluorescent-green/"
+    },
+    {
+      "id": "lee-filter-245",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "245",
+        "color_name": "LEE Plus Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/245-lee-plus-green/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 245 LEE Plus Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "245",
+      "color_name": "LEE Plus Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Adds green correction for fluorescent/green sources.",
+      "detail_url": "https://leefilters.com/colour/245-lee-plus-green/"
+    },
+    {
+      "id": "lee-filter-270",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "270",
+        "color_name": "LEE Scrim"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/270-lee-scrim/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 270 LEE Scrim",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "270",
+      "color_name": "LEE Scrim",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Perforated reflector producing a very soft reflection; silver one side, black reverse.",
+      "detail_url": "https://leefilters.com/colour/270-lee-scrim/"
+    },
+    {
+      "id": "lee-filter-271",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "271",
+        "color_name": "Mirror Silver"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/271-mirror-silver/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 271 Mirror Silver",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "271",
+      "color_name": "Mirror Silver",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Produces hard reflection; white backed.",
+      "detail_url": "https://leefilters.com/colour/271-mirror-silver/"
+    },
+    {
+      "id": "lee-filter-272",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "272",
+        "color_name": "Soft Gold Reflector"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/272-soft-gold-reflector/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 272 Soft Gold Reflector",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "272",
+      "color_name": "Soft Gold Reflector",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Produces soft reflection; white backed.",
+      "detail_url": "https://leefilters.com/colour/272-soft-gold-reflector/"
+    },
+    {
+      "id": "lee-filter-273",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "273",
+        "color_name": "Soft Silver Reflector"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/273-soft-silver-reflector/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 273 Soft Silver Reflector",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "273",
+      "color_name": "Soft Silver Reflector",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Produces soft reflection; white backed.",
+      "detail_url": "https://leefilters.com/colour/273-soft-silver-reflector/"
+    },
+    {
+      "id": "lee-filter-274",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "274",
+        "color_name": "Mirror Gold"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/274-mirror-gold/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 274 Mirror Gold",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "274",
+      "color_name": "Mirror Gold",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Produces hard reflection; white backed.",
+      "detail_url": "https://leefilters.com/colour/274-mirror-gold/"
+    },
+    {
+      "id": "lee-filter-280",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "280",
+        "color_name": "Black Foil"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/280-black-foil/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 280 Black Foil",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "反射・遮光"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "280",
+      "color_name": "Black Foil",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "反射・遮光"
+      ],
+      "notes": "Reduces unwanted light spill or controls unwanted reflection.",
+      "detail_url": "https://leefilters.com/colour/280-black-foil/"
+    },
+    {
+      "id": "lee-filter-281",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "281",
+        "color_name": "Three Quarter C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/281-three-quarter-c-t-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 281 Three Quarter C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "281",
+      "color_name": "Three Quarter C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts tungsten to daylight.",
+      "detail_url": "https://leefilters.com/colour/281-three-quarter-c-t-blue/"
+    },
+    {
+      "id": "lee-filter-298",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "298",
+        "color_name": "0.15ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/298-0-15nd/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 298 0.15ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "298",
+      "color_name": "0.15ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Reduces light by 1/2 stop without changing colour.",
+      "detail_url": "https://leefilters.com/colour/298-0-15nd/"
+    },
+    {
+      "id": "lee-filter-400",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "400",
+        "color_name": "LEELux"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/400-leelux/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 400 LEELux",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "400",
+      "color_name": "LEELux",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Dense white diffuser for wide beam spreads and an even soft field without shadows.",
+      "detail_url": "https://leefilters.com/colour/400-leelux/"
+    },
+    {
+      "id": "lee-filter-410",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "410",
+        "color_name": "Opal Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/410-opal-frost/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 410 Opal Frost",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "410",
+      "color_name": "Opal Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "フロスト"
+      ],
+      "notes": "Weak diffusion that softens spotlight beam edges without altering shape.",
+      "detail_url": "https://leefilters.com/colour/410-opal-frost/"
+    },
+    {
+      "id": "lee-filter-129",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "129",
+        "color_name": "Heavy Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/129-heavy-frost/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 129 Heavy Frost",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "129",
+      "color_name": "Heavy Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "フロスト"
+      ],
+      "notes": "Strong diffusion that eliminates nearly all shadows; flame retardant.",
+      "detail_url": "https://leefilters.com/colour/129-heavy-frost/"
+    },
+    {
+      "id": "lee-filter-144",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "144",
+        "color_name": "No Colour Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/144-no-colour-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 144 No Colour Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "144",
+      "color_name": "No Colour Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Clean blue with hints of green; good for moonlight and sidelight.",
+      "detail_url": "https://leefilters.com/colour/144-no-colour-blue/"
+    },
+    {
+      "id": "lee-filter-118",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "118",
+        "color_name": "Light Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/118-light-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 118 Light Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "118",
+      "color_name": "Light Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "Strong night effect.",
+      "detail_url": "https://leefilters.com/colour/118-light-blue/"
+    },
+    {
+      "id": "lee-filter-122",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "122",
+        "color_name": "Fern Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/122-fern-green/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 122 Fern Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "122",
+      "color_name": "Fern Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Good for cycloramas and mood creation.",
+      "detail_url": "https://leefilters.com/colour/122-fern-green/"
+    },
+    {
+      "id": "lee-filter-164",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "164",
+        "color_name": "Flame Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/164-flame-red/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 164 Flame Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "164",
+      "color_name": "Flame Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Great for fire effects.",
+      "detail_url": "https://leefilters.com/colour/164-flame-red/"
+    },
+    {
+      "id": "lee-filter-738",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "738",
+        "color_name": "JAS Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/738-jas-green/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 738 JAS Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "738",
+      "color_name": "JAS Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "Rich yellowish green; useful as concert stage wash where darker skin, costume and set are considerations.",
+      "detail_url": "https://leefilters.com/colour/738-jas-green/"
+    },
+    {
+      "id": "lee-filter-775",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion / Reflector",
+        "color_number": "775",
+        "color_name": "Soft Amber Key 2"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/775-soft-amber-key-2/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/lighting/lighting-filter-packs/",
+          "title": "LEE Filters 775 Soft Amber Key 2",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "LEE公式Lighting Filter Packs等の情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品情報・用途を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion / Reflector",
+      "color_number": "775",
+      "color_name": "Soft Amber Key 2",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Produces a warm key light colour; flame retardant.",
+      "detail_url": "https://leefilters.com/colour/775-soft-amber-key-2/"
     }
   ]
 }
