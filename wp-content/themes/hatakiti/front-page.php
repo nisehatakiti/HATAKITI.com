@@ -96,6 +96,9 @@ get_header();
             <a class="hk-tile" href="<?php echo esc_url( get_post_type_archive_link( 'theatre_record' ) ); ?>">
                 <span class="hk-tile-label">観劇記録</span>
             </a>
+            <a class="hk-tile" href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">
+                <span class="hk-tile-label">演劇の教科書</span>
+            </a>
             <a class="hk-tile" href="<?php echo esc_url( get_post_type_archive_link( 'film_record' ) ); ?>">
                 <span class="hk-tile-label">映画記録</span>
             </a>
