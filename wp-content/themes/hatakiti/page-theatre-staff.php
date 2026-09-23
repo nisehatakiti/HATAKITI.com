@@ -74,10 +74,8 @@ $gel_data_path = get_template_directory() . '/assets/data/gel-colors.json';
 $gel_records = array();
 if ( file_exists( $gel_data_path ) ) {
   $gel_json = file_get_contents( $gel_data_path );
-  $gel_records = json_decode( $gel_json, true );
-  if ( ! is_array( $gel_records ) ) {
-    $gel_records = array();
-  }
+  $gel_payload = json_decode( $gel_json, true );
+  $gel_records = isset( $gel_payload['records'] ) && is_array( $gel_payload['records'] ) ? $gel_payload['records'] : array();
 }
 ?>
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>ゼラ色見本データベース</h1><p>舞台照明用カラーフィルターを、メーカー・シリーズ・色番号・色名・透過率・用途から探し、画面上で参考表示色を比較できます。</p></header><?php
