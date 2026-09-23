@@ -3424,6 +3424,1174 @@
       ],
       "notes": "A cooling blue-green wash for stage and set lighting.",
       "detail_url": "https://leefilters.com/colour/354-special-steel-blue/"
+    },
+    {
+      "id": "lee-colour-008",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "008",
+        "color_name": "Dark Salmon"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/008-dark-salmon/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 62.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/008-dark-salmon/",
+                "title": "LEE Filters 008 Dark Salmon",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 65.4,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/008-dark-salmon/",
+                "title": "LEE Filters 008 Dark Salmon",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/008-dark-salmon/",
+          "title": "LEE Filters 008 Dark Salmon",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "008",
+      "color_name": "Dark Salmon",
+      "transmission": 62.5,
+      "transmission_display": "Daylight 62.5% / Tungsten 65.4%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Enhances dark skin tones, sunsets, ballroom sets.",
+      "detail_url": "https://leefilters.com/colour/008-dark-salmon/"
+    },
+    {
+      "id": "lee-colour-124",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "124",
+        "color_name": "Dark Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/124-dark-green/",
+        "transmission": {
+          "measurements": [
+            {
+              "source_type": "daylight",
+              "value": 11.5,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/124-dark-green/",
+                "title": "LEE Filters 124 Dark Green",
+                "accessed_at": "2026-09-24"
+              }
+            },
+            {
+              "source_type": "tungsten",
+              "value": 12.9,
+              "unit": "%",
+              "metric": "Y",
+              "source": {
+                "url": "https://leefilters.com/colour/124-dark-green/",
+                "title": "LEE Filters 124 Dark Green",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/124-dark-green/",
+          "title": "LEE Filters 124 Dark Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式個別製品ページで透過率Yを確認。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "124",
+      "color_name": "Dark Green",
+      "transmission": 11.5,
+      "transmission_display": "Daylight 11.5% / Tungsten 12.9%",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Good for cycloramas and backlighting.",
+      "detail_url": "https://leefilters.com/colour/124-dark-green/"
+    },
+    {
+      "id": "lee-colour-127",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "127",
+        "color_name": "Smokey Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/127-smokey-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/127-smokey-pink/",
+          "title": "LEE Filters 127 Smokey Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "127",
+      "color_name": "Smokey Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Good for cycloramas, set lighting and discos.",
+      "detail_url": "https://leefilters.com/colour/127-smokey-pink/"
+    },
+    {
+      "id": "lee-colour-128",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "128",
+        "color_name": "Bright Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/128-bright-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/128-bright-pink/",
+          "title": "LEE Filters 128 Bright Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "128",
+      "color_name": "Bright Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Created for use as backlighting and side lighting. Great for musicals.",
+      "detail_url": "https://leefilters.com/colour/128-bright-pink/"
+    },
+    {
+      "id": "lee-colour-131",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "131",
+        "color_name": "Marine Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/131-marine-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/131-marine-blue/",
+          "title": "LEE Filters 131 Marine Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "131",
+      "color_name": "Marine Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Good for romantic moonlight. Often used in ballet and underwater scenes.",
+      "detail_url": "https://leefilters.com/colour/131-marine-blue/"
+    },
+    {
+      "id": "lee-colour-132",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "132",
+        "color_name": "Medium Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/132-medium-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/132-medium-blue/",
+          "title": "LEE Filters 132 Medium Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "132",
+      "color_name": "Medium Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Deep moonlight. Great for colour mixing.",
+      "detail_url": "https://leefilters.com/colour/132-medium-blue/"
+    },
+    {
+      "id": "lee-colour-134",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "134",
+        "color_name": "Golden Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/134-golden-amber/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/134-golden-amber/",
+          "title": "LEE Filters 134 Golden Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "134",
+      "color_name": "Golden Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "Great for emulating a sunset. Also good for side lighting and cyclorama lighting.",
+      "detail_url": "https://leefilters.com/colour/134-golden-amber/"
+    },
+    {
+      "id": "lee-colour-181",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "181",
+        "color_name": "Congo Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/181-congo-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/181-congo-blue/",
+          "title": "LEE Filters 181 Congo Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "181",
+      "color_name": "Congo Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Looks like black light when used with a fluorescent source. Great effect colour. Very saturated.",
+      "detail_url": "https://leefilters.com/colour/181-congo-blue/"
+    },
+    {
+      "id": "lee-colour-182",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "182",
+        "color_name": "Light Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/182-light-red/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/182-light-red/",
+          "title": "LEE Filters 182 Light Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "182",
+      "color_name": "Light Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "Good for theatre and television effect lighting as well as cycloramas.",
+      "detail_url": "https://leefilters.com/colour/182-light-red/"
+    },
+    {
+      "id": "lee-colour-183",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "183",
+        "color_name": "Moonlight Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/183-moonlight-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/183-moonlight-blue/",
+          "title": "LEE Filters 183 Moonlight Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "183",
+      "color_name": "Moonlight Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Good for moonlight effect and cycloramas.",
+      "detail_url": "https://leefilters.com/colour/183-moonlight-blue/"
+    },
+    {
+      "id": "lee-colour-192",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "192",
+        "color_name": "Flesh Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/192-flesh-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/192-flesh-pink/",
+          "title": "LEE Filters 192 Flesh Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "192",
+      "color_name": "Flesh Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Good for musical and pantomime key lighting.",
+      "detail_url": "https://leefilters.com/colour/192-flesh-pink/"
+    },
+    {
+      "id": "lee-colour-194",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "194",
+        "color_name": "Surprise Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/194-surprise-pink/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/194-surprise-pink/",
+          "title": "LEE Filters 194 Surprise Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "194",
+      "color_name": "Surprise Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "Good for musicals.",
+      "detail_url": "https://leefilters.com/colour/194-surprise-pink/"
+    },
+    {
+      "id": "lee-colour-195",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "195",
+        "color_name": "Zenith Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/195-zenith-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/195-zenith-blue/",
+          "title": "LEE Filters 195 Zenith Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "195",
+      "color_name": "Zenith Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Creates a good moonlight effect on a dark set. Also good for cycloramas.",
+      "detail_url": "https://leefilters.com/colour/195-zenith-blue/"
+    },
+    {
+      "id": "lee-colour-196",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "196",
+        "color_name": "True Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/196-true-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/196-true-blue/",
+          "title": "LEE Filters 196 True Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "196",
+      "color_name": "True Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Great for moonlight effect.",
+      "detail_url": "https://leefilters.com/colour/196-true-blue/"
+    },
+    {
+      "id": "lee-colour-197",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "197",
+        "color_name": "Alice Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/197-alice-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/197-alice-blue/",
+          "title": "LEE Filters 197 Alice Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "197",
+      "color_name": "Alice Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "Great for cyclorama lighting and creating deep blue skies.",
+      "detail_url": "https://leefilters.com/colour/197-alice-blue/"
+    },
+    {
+      "id": "lee-colour-198",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "198",
+        "color_name": "Palace Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/198-palace-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/198-palace-blue/",
+          "title": "LEE Filters 198 Palace Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "198",
+      "color_name": "Palace Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "Good for dark moonlight or a romantic evening.",
+      "detail_url": "https://leefilters.com/colour/198-palace-blue/"
+    },
+    {
+      "id": "lee-colour-199",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Colour Effect Lighting Filters",
+        "color_number": "199",
+        "color_name": "Regal Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/199-regal-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/199-regal-blue/",
+          "title": "LEE Filters 199 Regal Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "用途説明はLEE公式製品ページに基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "公式製品ページで製品情報・用途を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Colour Effect Lighting Filters",
+      "color_number": "199",
+      "color_name": "Regal Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "A deep lavender blue that strongly enhances skin tones.",
+      "detail_url": "https://leefilters.com/colour/199-regal-blue/"
     }
   ]
 }
