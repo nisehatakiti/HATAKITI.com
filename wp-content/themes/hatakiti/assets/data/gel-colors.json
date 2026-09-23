@@ -23638,6 +23638,6406 @@
       ],
       "notes": "光を暖め、光量も落とすブラウン系。",
       "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r100",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R100",
+        "color_name": "Spring Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R100 Spring Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R100",
+      "color_name": "Spring Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "春の日差し・暖かな黄色系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r101",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R101",
+        "color_name": "Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R101 Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R101",
+      "color_name": "Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "明るい黄色。日光系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r102",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R102",
+        "color_name": "Light Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R102 Light Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R102",
+      "color_name": "Light Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系"
+      ],
+      "notes": "暖かなアンバー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r103",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R103",
+        "color_name": "Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R103 Straw",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R103",
+      "color_name": "Straw",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "ストロー系の日光色。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r104",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R104",
+        "color_name": "Deep Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R104 Deep Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R104",
+      "color_name": "Deep Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系"
+      ],
+      "notes": "深いアンバー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r105",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R105",
+        "color_name": "Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R105 Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R105",
+      "color_name": "Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "オレンジ系特殊効果。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r106",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R106",
+        "color_name": "Primary Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R106 Primary Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R106",
+      "color_name": "Primary Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "原色赤。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r107",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R107",
+        "color_name": "Light Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R107 Light Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R107",
+      "color_name": "Light Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "淡いローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r108",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R108",
+        "color_name": "English Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R108 English Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R108",
+      "color_name": "English Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "暖かなローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r109",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R109",
+        "color_name": "Light Salmon"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R109 Light Salmon",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R109",
+      "color_name": "Light Salmon",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "淡いサーモン。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r110",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R110",
+        "color_name": "Middle Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R110 Middle Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R110",
+      "color_name": "Middle Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "中間的ローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r111",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R111",
+        "color_name": "Dark Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R111 Dark Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R111",
+      "color_name": "Dark Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "濃いピンク。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r112",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R112",
+        "color_name": "Dark Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R112 Dark Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R112",
+      "color_name": "Dark Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "濃いピンク系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r113",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R113",
+        "color_name": "Magenta"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R113 Magenta",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R113",
+      "color_name": "Magenta",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "強いマゼンタ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r114",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R114",
+        "color_name": "Peacock Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R114 Peacock Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R114",
+      "color_name": "Peacock Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "青緑系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r115",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R115",
+        "color_name": "Peacock Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R115 Peacock Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R115",
+      "color_name": "Peacock Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "水・青緑系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r116",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R116",
+        "color_name": "Medium Blue-Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R116 Medium Blue-Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R116",
+      "color_name": "Medium Blue-Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "青緑系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r117",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R117",
+        "color_name": "Steel Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R117 Steel Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R117",
+      "color_name": "Steel Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "スチールブルー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r118",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R118",
+        "color_name": "Light Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R118 Light Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R118",
+      "color_name": "Light Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "夜景向けの淡い青。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r119",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R119",
+        "color_name": "Dark Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R119 Dark Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R119",
+      "color_name": "Dark Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "深い青。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r120",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R120",
+        "color_name": "Deep Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R120 Deep Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R120",
+      "color_name": "Deep Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "深い夜色の青。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r121",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R121",
+        "color_name": "LEE Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R121 LEE Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R121",
+      "color_name": "LEE Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "緑系背景色。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r122",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R122",
+        "color_name": "Fern Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R122 Fern Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R122",
+      "color_name": "Fern Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "森林・植物系の緑。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r123",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R123",
+        "color_name": "Dark Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R123 Dark Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R123",
+      "color_name": "Dark Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "深い緑。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r124",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R124",
+        "color_name": "Dark Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R124 Dark Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R124",
+      "color_name": "Dark Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "深い緑。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r125",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R125",
+        "color_name": "Blue Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R125 Blue Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R125",
+      "color_name": "Blue Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "青緑系特殊色。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r126",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R126",
+        "color_name": "Mauve"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R126 Mauve",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R126",
+      "color_name": "Mauve",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "モーブ系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r127",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R127",
+        "color_name": "Smokey Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R127 Smokey Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R127",
+      "color_name": "Smokey Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "スモーキーピンク。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r128",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R128",
+        "color_name": "Bright Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R128 Bright Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R128",
+      "color_name": "Bright Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "鮮やかなピンク。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r129",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R129",
+        "color_name": "Heavy Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R129 Heavy Frost",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R129",
+      "color_name": "Heavy Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "強いフロスト。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r130",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R130",
+        "color_name": "Clear"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R130 Clear",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R130",
+      "color_name": "Clear",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "クリア。投影・特殊用途。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r131",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R131",
+        "color_name": "Marine Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R131 Marine Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R131",
+      "color_name": "Marine Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "海・月明かり系の青。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r132",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R132",
+        "color_name": "Medium Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R132 Medium Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R132",
+      "color_name": "Medium Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "深い月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r133",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R133",
+        "color_name": "Med Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R133 Med Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R133",
+      "color_name": "Med Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "中間的な青。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r134",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R134",
+        "color_name": "Golden Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R134 Golden Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R134",
+      "color_name": "Golden Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "夕景・ゴールデン系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r135",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R135",
+        "color_name": "Deep Golden Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R135 Deep Golden Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R135",
+      "color_name": "Deep Golden Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "炎・火の深いアンバー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r136",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R136",
+        "color_name": "Pale Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R136 Pale Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R136",
+      "color_name": "Pale Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "淡いラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r137",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R137",
+        "color_name": "Special Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R137 Special Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R137",
+      "color_name": "Special Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "月明かり・ロマンチックな場面。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r138",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R138",
+        "color_name": "Pale Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R138 Pale Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "背景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R138",
+      "color_name": "Pale Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "背景"
+      ],
+      "notes": "淡い緑。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r139",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R139",
+        "color_name": "Primary Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R139 Primary Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ホリゾント"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R139",
+      "color_name": "Primary Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ホリゾント"
+      ],
+      "notes": "原色緑。ホリゾント（cyclorama）向け。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r140",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R140",
+        "color_name": "Summer Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R140 Summer Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R140",
+      "color_name": "Summer Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "昼の空・淡い青。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r141",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R141",
+        "color_name": "Bright Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R141 Bright Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R141",
+      "color_name": "Bright Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "ドラマチックな月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r142",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R142",
+        "color_name": "Pale Violet"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R142 Pale Violet",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R142",
+      "color_name": "Pale Violet",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "淡い紫の月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r143",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R143",
+        "color_name": "Pale Navy Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R143 Pale Navy Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R143",
+      "color_name": "Pale Navy Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜"
+      ],
+      "notes": "夜・月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r144",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R144",
+        "color_name": "No Colour Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R144 No Colour Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R144",
+      "color_name": "No Colour Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "クリーンな青。月明かり・サイドライト。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r145",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R145",
+        "color_name": "Congo Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R145 Congo Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R145",
+      "color_name": "Congo Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "深い青の特殊効果。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r146",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R146",
+        "color_name": "Mauve"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R146 Mauve",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R146",
+      "color_name": "Mauve",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "モーブ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r147",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R147",
+        "color_name": "Apricot"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R147 Apricot",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R147",
+      "color_name": "Apricot",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景"
+      ],
+      "notes": "朝焼け・夕焼け・ランプ光。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r148",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R148",
+        "color_name": "Bright Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R148 Bright Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R148",
+      "color_name": "Bright Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "火・舞台向けの鮮やかなローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r149",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R149",
+        "color_name": "Bright Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R149 Bright Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R149",
+      "color_name": "Bright Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "鮮やかなローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r150",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R150",
+        "color_name": "Deep Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R150 Deep Straw",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R150",
+      "color_name": "Deep Straw",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "深いストロー系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r151",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R151",
+        "color_name": "Gold Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R151 Gold Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R151",
+      "color_name": "Gold Tint",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "ゴールド系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r152",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R152",
+        "color_name": "Pale Gold"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R152 Pale Gold",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R152",
+      "color_name": "Pale Gold",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "肌を強調する淡いゴールド。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r153",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R153",
+        "color_name": "Pale Salmon"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R153 Pale Salmon",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R153",
+      "color_name": "Pale Salmon",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "淡いサーモン。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r154",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R154",
+        "color_name": "Pale Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R154 Pale Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R154",
+      "color_name": "Pale Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "淡いローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r155",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R155",
+        "color_name": "Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R155 Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R155",
+      "color_name": "Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "ローズ系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r156",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R156",
+        "color_name": "Chocolate"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R156 Chocolate",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R156",
+      "color_name": "Chocolate",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系"
+      ],
+      "notes": "暖色化と減光。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r157",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R157",
+        "color_name": "Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R157 Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R157",
+      "color_name": "Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "ダンス・衣装向けのピンク。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r158",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R158",
+        "color_name": "Deep Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R158 Deep Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R158",
+      "color_name": "Deep Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "炎の特殊効果。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r159",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R159",
+        "color_name": "No Color Straw"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R159 No Color Straw",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R159",
+      "color_name": "No Color Straw",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "暖かな日光。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r160",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R160",
+        "color_name": "Dark Yellow Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R160 Dark Yellow Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R160",
+      "color_name": "Dark Yellow Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "暗い黄緑。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r161",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R161",
+        "color_name": "Slate Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R161 Slate Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R161",
+      "color_name": "Slate Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "空・月明かり・夕暮れ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r162",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R162",
+        "color_name": "Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R162 Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R162",
+      "color_name": "Bastard Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系"
+      ],
+      "notes": "暖白色・ランプ光。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r163",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R163",
+        "color_name": "Bastard Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R163 Bastard Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R163",
+      "color_name": "Bastard Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "人物用の暖かなピンク。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r164",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R164",
+        "color_name": "Flame Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R164 Flame Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R164",
+      "color_name": "Flame Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "炎の赤。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r165",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R165",
+        "color_name": "Daylight Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R165 Daylight Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R165",
+      "color_name": "Daylight Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r166",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R166",
+        "color_name": "Pale Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R166 Pale Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R166",
+      "color_name": "Pale Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "淡い赤。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r167",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R167",
+        "color_name": "Apricot"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R167 Apricot",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R167",
+      "color_name": "Apricot",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "暖かなアプリコット。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r168",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R168",
+        "color_name": "Lilac Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R168 Lilac Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R168",
+      "color_name": "Lilac Tint",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "淡いライラック。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r169",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R169",
+        "color_name": "Lilac Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R169 Lilac Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R169",
+      "color_name": "Lilac Tint",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "淡いラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r170",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R170",
+        "color_name": "Deep Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R170 Deep Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R170",
+      "color_name": "Deep Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "深いラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r171",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R171",
+        "color_name": "Lilac Tint"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R171 Lilac Tint",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R171",
+      "color_name": "Lilac Tint",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "寒色系"
+      ],
+      "notes": "ライラック系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r172",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R172",
+        "color_name": "Lagoon Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R172 Lagoon Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "水中"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R172",
+      "color_name": "Lagoon Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "水中"
+      ],
+      "notes": "水中・バレエ・暖色系背景。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r173",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R173",
+        "color_name": "Dark Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R173 Dark Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R173",
+      "color_name": "Dark Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "濃いラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r174",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R174",
+        "color_name": "Dark Steel Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R174 Dark Steel Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R174",
+      "color_name": "Dark Steel Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "月明かりの影。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r175",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R175",
+        "color_name": "Lily Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R175 Lily Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R175",
+      "color_name": "Lily Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "肌色を補うラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r176",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R176",
+        "color_name": "Loving Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R176 Loving Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R176",
+      "color_name": "Loving Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "日の出・肌を暖めるアンバー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r177",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R177",
+        "color_name": "Pale Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R177 Pale Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R177",
+      "color_name": "Pale Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "淡いラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r178",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R178",
+        "color_name": "Chrome Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R178 Chrome Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R178",
+      "color_name": "Chrome Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "日光系。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r179",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R179",
+        "color_name": "Chrome Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R179 Chrome Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "日光"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R179",
+      "color_name": "Chrome Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "日光"
+      ],
+      "notes": "日光系の強いオレンジ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r180",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R180",
+        "color_name": "Dark Lavender"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R180 Dark Lavender",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "舞台"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R180",
+      "color_name": "Dark Lavender",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "舞台"
+      ],
+      "notes": "濃いラベンダー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r181",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R181",
+        "color_name": "Congo Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R181 Congo Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R181",
+      "color_name": "Congo Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "蛍光光源と組み合わせる特殊効果。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r182",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R182",
+        "color_name": "Light Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R182 Light Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R182",
+      "color_name": "Light Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "特殊効果"
+      ],
+      "notes": "舞台・テレビの赤系効果。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r183",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R183",
+        "color_name": "Moonlight Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R183 Moonlight Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R183",
+      "color_name": "Moonlight Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "月明かり・ホリゾント。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r184",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R184",
+        "color_name": "Cosmetic Peach"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R184 Cosmetic Peach",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R184",
+      "color_name": "Cosmetic Peach",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "暖色系の人物用ハイライト。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r185",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R185",
+        "color_name": "Cosmetic Burgundy"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R185 Cosmetic Burgundy",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R185",
+      "color_name": "Cosmetic Burgundy",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "人物用の深い暖色。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r186",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R186",
+        "color_name": "Cosmetic Silver Rose"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R186 Cosmetic Silver Rose",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R186",
+      "color_name": "Cosmetic Silver Rose",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "肌色を補う暖かなローズ。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r187",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R187",
+        "color_name": "Cosmetic Rouge"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R187 Cosmetic Rouge",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R187",
+      "color_name": "Cosmetic Rouge",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "アプリコット系の暖かな前明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r188",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R188",
+        "color_name": "Cosmetic Highlight"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R188 Cosmetic Highlight",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R188",
+      "color_name": "Cosmetic Highlight",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "暖色ハイライト。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r189",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R189",
+        "color_name": "Cosmetic Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R189 Cosmetic Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R189",
+      "color_name": "Cosmetic Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "肌補正系のグリーン。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r190",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R190",
+        "color_name": "Cosmetic Burgundy"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R190 Cosmetic Burgundy",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R190",
+      "color_name": "Cosmetic Burgundy",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "深い暖色。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r191",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R191",
+        "color_name": "Cosmetic Aqua Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R191 Cosmetic Aqua Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R191",
+      "color_name": "Cosmetic Aqua Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "冷色系人物ハイライト。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r192",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R192",
+        "color_name": "Flesh Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R192 Flesh Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R192",
+      "color_name": "Flesh Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "人物・ミュージカル向け。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r193",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R193",
+        "color_name": "Rosy Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R193 Rosy Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R193",
+      "color_name": "Rosy Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "肌を暖めるアンバー。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r194",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R194",
+        "color_name": "Surprise Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R194 Surprise Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R194",
+      "color_name": "Surprise Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "ミュージカル向け。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r195",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R195",
+        "color_name": "Zenith Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R195 Zenith Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R195",
+      "color_name": "Zenith Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "暗い舞台の月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r196",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R196",
+        "color_name": "True Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R196 True Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R196",
+      "color_name": "True Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "月明かり。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r197",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R197",
+        "color_name": "Alice Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R197 Alice Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ホリゾント"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R197",
+      "color_name": "Alice Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ホリゾント"
+      ],
+      "notes": "ホリゾント（cyclorama）・空。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r198",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R198",
+        "color_name": "Palace Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R198 Palace Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "月明かり"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R198",
+      "color_name": "Palace Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "月明かり"
+      ],
+      "notes": "暗い月明かり・ロマンチックな夜。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r199",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R199",
+        "color_name": "Regal Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux R199 Regal Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物"
+        ],
+        "tags": [],
+        "notes": "Rosco公式資料に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.source"
+        ],
+        "notes": "Rosco公式資料で番号・名称・用途を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R199",
+      "color_name": "Regal Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物"
+      ],
+      "notes": "肌色を強調する深い青紫。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
     }
   ]
 }
