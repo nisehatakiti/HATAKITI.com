@@ -42144,6 +42144,628 @@
       ],
       "notes": "光を暖め、光量も落とすブラウン系。",
       "detail_url": "https://emea.rosco.com/en/products/catalog/roscolux"
+    },
+    {
+      "id": "roscolux-r302",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R302",
+        "color_name": "Pale Bastard Amber"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://la.rosco.com/en/products/filters/r302-pale-bastard-amber",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://la.rosco.com/en/products/filters/r302-pale-bastard-amber",
+          "title": "Rosco — R302 Pale Bastard Amber",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R302",
+      "color_name": "Pale Bastard Amber",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://la.rosco.com/en/products/filters/r302-pale-bastard-amber"
+    },
+    {
+      "id": "roscolux-r303",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R303",
+        "color_name": "Warm Peach"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r303-warm-peach",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/products/filters/r303-warm-peach",
+          "title": "Rosco — R303 Warm Peach",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "顔・肌",
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R303",
+      "color_name": "Warm Peach",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物",
+        "顔・肌",
+        "暖色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://us.rosco.com/en/products/filters/r303-warm-peach"
+    },
+    {
+      "id": "roscolux-r313",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R313",
+        "color_name": "Light Relief Yellow"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r313-light-relief-yellow",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/products/filters/r313-light-relief-yellow",
+          "title": "Rosco — R313 Light Relief Yellow",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系",
+          "朝・昼"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R313",
+      "color_name": "Light Relief Yellow",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系",
+        "朝・昼"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://us.rosco.com/en/products/filters/r313-light-relief-yellow"
+    },
+    {
+      "id": "roscolux-r324",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R324",
+        "color_name": "Cherry Red"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r324-cherry-red",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://admin.rosco.com/en/products/filters/r324-cherry-red",
+          "title": "Rosco — R324 Cherry Red",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "暖色系",
+          "特殊効果"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R324",
+      "color_name": "Cherry Red",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "暖色系",
+        "特殊効果"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r324-cherry-red"
+    },
+    {
+      "id": "roscolux-r325",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R325",
+        "color_name": "Henna Sky"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://cn.rosco.com/en/products/filters/r325-henna-sky",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://cn.rosco.com/en/products/filters/r325-henna-sky",
+          "title": "Rosco — R325 Henna Sky",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夕景",
+          "空間",
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R325",
+      "color_name": "Henna Sky",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夕景",
+        "空間",
+        "暖色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://cn.rosco.com/en/products/filters/r325-henna-sky"
+    },
+    {
+      "id": "roscolux-r331",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R331",
+        "color_name": "Shell Pink"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://admin.rosco.com/en/products/filters/r331-shell-pink",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://admin.rosco.com/en/products/filters/r331-shell-pink",
+          "title": "Rosco — R331 Shell Pink",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "人物",
+          "顔・肌",
+          "暖色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R331",
+      "color_name": "Shell Pink",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "人物",
+        "顔・肌",
+        "暖色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://admin.rosco.com/en/products/filters/r331-shell-pink"
+    },
+    {
+      "id": "roscolux-r368",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R368",
+        "color_name": "Winkler Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r368-winkler-blue",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/products/filters/r368-winkler-blue",
+          "title": "Rosco — R368 Winkler Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜",
+          "月明かり",
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R368",
+      "color_name": "Winkler Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜",
+        "月明かり",
+        "寒色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://us.rosco.com/en/products/filters/r368-winkler-blue"
+    },
+    {
+      "id": "roscolux-r375",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R375",
+        "color_name": "Cerulean Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r375-cerulean-blue",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/products/filters/r375-cerulean-blue",
+          "title": "Rosco — R375 Cerulean Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "空間",
+          "夜",
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R375",
+      "color_name": "Cerulean Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "空間",
+        "夜",
+        "寒色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://us.rosco.com/en/products/filters/r375-cerulean-blue"
+    },
+    {
+      "id": "roscolux-r381",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R381",
+        "color_name": "Baldassari Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/products/filters/r381-baldassari-blue",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/products/filters/r381-baldassari-blue",
+          "title": "Rosco — R381 Baldassari Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "夜",
+          "月明かり",
+          "寒色系"
+        ],
+        "tags": [],
+        "notes": "製品名はRosco公式製品ページに基づく。用途はHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式製品ページおよびRoscolux公式資料で製品番号・名称を確認。透過率/RGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R381",
+      "color_name": "Baldassari Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "夜",
+        "月明かり",
+        "寒色系"
+      ],
+      "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
+      "detail_url": "https://us.rosco.com/en/products/filters/r381-baldassari-blue"
     }
   ]
 }
