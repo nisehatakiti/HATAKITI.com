@@ -43678,6 +43678,204 @@
       ],
       "notes": "Rosco公式資料でStoraro Selectionのマゼンタ。強い色彩効果・演出表現に使用。",
       "detail_url": "https://admin.rosco.com/en/products/filters/r2010-storaro-magenta"
+    },
+    {
+      "id": "rosco-roscolux-236",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "236",
+        "color_name": "HMI (to Tungsten)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://au.rosco.com/en/lee-rosco-equivalents",
+          "title": "Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE→Rosco対応表に掲載された名称を基にしたHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式対応表で製品番号・名称を確認。透過率とRGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "236",
+      "color_name": "HMI (to Tungsten)",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式対応表掲載名称。",
+      "detail_url": "https://au.rosco.com/en/lee-rosco-equivalents"
+    },
+    {
+      "id": "rosco-roscolux-237",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "237",
+        "color_name": "C.I.D. (to Tungsten)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://au.rosco.com/en/lee-rosco-equivalents",
+          "title": "Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE→Rosco対応表に掲載された名称を基にしたHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式対応表で製品番号・名称を確認。透過率とRGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "237",
+      "color_name": "C.I.D. (to Tungsten)",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式対応表掲載名称。",
+      "detail_url": "https://au.rosco.com/en/lee-rosco-equivalents"
+    },
+    {
+      "id": "rosco-roscolux-238",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "238",
+        "color_name": "C.S.I. (to Tungsten)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/product/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://au.rosco.com/en/lee-rosco-equivalents",
+          "title": "Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE→Rosco対応表に掲載された名称を基にしたHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "verified",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式対応表で製品番号・名称を確認。透過率とRGBは未登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "238",
+      "color_name": "C.S.I. (to Tungsten)",
+      "transmission": null,
+      "transmission_display": "",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Rosco公式対応表掲載名称。",
+      "detail_url": "https://au.rosco.com/en/lee-rosco-equivalents"
     }
   ]
 }
