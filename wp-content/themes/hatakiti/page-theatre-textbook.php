@@ -36,7 +36,7 @@ get_header();
                 <h3>演技論・演技システム</h3>
                 <p>スタニスラフスキー、メソッド、マイズナー、ルコックなど。</p>
             </a>
-            <a class="hk-textbook-card" href="#etudеs">
+            <a class="hk-textbook-card" href="#etudes">
                 <span class="hk-textbook-number">03</span>
                 <h3>エチュード</h3>
                 <p>一人、二人、グループ。実際に身体を動かして試す練習。</p>
@@ -82,20 +82,20 @@ get_header();
         <p class="hk-textbook-note">※ ここでは各方法を単純な「違い」だけでなく、歴史的背景、基本用語、代表的な練習へと掘り下げていきます。</p>
     </section>
 
-    <section class="hk-section" id="etudеs">
+    <section class="hk-section" id="etudes">
         <div class="hk-section-head"><h2>03　エチュード</h2></div>
-        <div class="hk-etuде-grid">
-            <article class="hk-etuде-card">
+        <div class="hk-etude-grid">
+            <article class="hk-etude-card">
                 <span>身体表現</span>
                 <h3>重い箱</h3>
                 <p>実際には何もない箱を、重さの違う箱として扱う。身体の変化だけで重量を伝える。</p>
             </article>
-            <article class="hk-etuде-card">
+            <article class="hk-etude-card">
                 <span>二人</span>
                 <h3>待ち合わせ</h3>
                 <p>同じ場所にいる二人。それぞれが相手に言えない目的を一つ持って始める。</p>
             </article>
-            <article class="hk-etuде-card">
+            <article class="hk-etude-card">
                 <span>即興</span>
                 <h3>一人だけ知っている</h3>
                 <p>二人のうち一人だけが重要な事実を知っている。説明せず、行動で伝える。</p>
@@ -147,12 +147,12 @@ get_header();
 .hk-textbook-hero h1{font-family:var(--hk-font-serif);font-size:34px}
 .hk-textbook-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}
 .hk-textbook-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.hk-textbook-card,.hk-textbook-panel,.hk-etuде-card,.hk-script-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}
+.hk-textbook-card,.hk-textbook-panel,.hk-etude-card,.hk-script-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}
 .hk-textbook-card{padding:24px 20px;color:var(--hk-fg)}
 .hk-textbook-card:hover{border-color:var(--hk-accent-warm);text-decoration:none}
 .hk-textbook-number{display:block;color:var(--hk-accent-warm);font-size:12px;letter-spacing:.12em}
 .hk-textbook-card h3{font-size:17px;margin:10px 0}
-.hk-textbook-card p,.hk-textbook-panel p,.hk-etuде-card p{margin:0;color:var(--hk-fg-dim);font-size:14px}
+.hk-textbook-card p,.hk-textbook-panel p,.hk-etude-card p{margin:0;color:var(--hk-fg-dim);font-size:14px}
 .hk-textbook-panel{padding:28px}
 .hk-history-flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;color:var(--hk-fg)}
 .hk-history-flow b{color:var(--hk-accent-warm)}
@@ -162,17 +162,17 @@ get_header();
 .hk-method-table th{color:var(--hk-accent-warm);font-size:13px}
 .hk-method-table td{font-size:14px}
 .hk-textbook-note{margin-top:16px;color:var(--hk-fg-faint);font-size:13px}
-.hk-etuде-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.hk-etuде-card{padding:24px}
-.hk-etuде-card>span{font-size:11px;color:var(--hk-accent-cool)}
-.hk-etuде-card h3{margin:8px 0}
+.hk-etude-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hk-etude-card{padding:24px}
+.hk-etude-card>span{font-size:11px;color:var(--hk-accent-cool)}
+.hk-etude-card h3{margin:8px 0}
 .hk-script-card{padding:32px;max-width:760px;margin:auto}
 .hk-script-card h3{font-family:var(--hk-font-serif);font-size:26px}
 .hk-script-meta{font-size:12px;color:var(--hk-fg-faint);border-bottom:1px solid var(--hk-border);padding-bottom:16px;margin-bottom:24px}
 .hk-script p{margin:0 0 9px}
 .hk-exercise{margin-top:30px;padding:22px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card)}
 .hk-exercise h4{margin-bottom:10px}
-@media(max-width:900px){.hk-textbook-grid{grid-template-columns:repeat(2,1fr)}.hk-etuде-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.hk-textbook-grid{grid-template-columns:repeat(2,1fr)}.hk-etude-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.hk-textbook-hero h1{font-size:27px}.hk-textbook-grid{grid-template-columns:1fr}.hk-method-table{min-width:680px}.hk-script-card{padding:24px 18px}}
 </style>
 
