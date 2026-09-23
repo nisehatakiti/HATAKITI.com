@@ -67,7 +67,13 @@ get_header();
     <section class="hk-section" id="methods">
         <div class="hk-section-head"><h2>02　演技論・演技システム</h2></div>
         <div class="hk-method-table-wrap">
-            <table class="hk-method-table">
+            <div class="hk-method-links">
+            <a href="<?php echo esc_url( home_url( '/theatre-textbook/stanislavski/' ) ); ?>"><strong>スタニスラフスキー</strong><span>状況・目的・行動</span></a>
+            <a href="<?php echo esc_url( home_url( '/theatre-textbook/method/' ) ); ?>"><strong>メソッド演技</strong><span>感覚・想像力・内面</span></a>
+            <a href="<?php echo esc_url( home_url( '/theatre-textbook/meisner/' ) ); ?>"><strong>マイズナー</strong><span>相手・反応・瞬間</span></a>
+            <a href="<?php echo esc_url( home_url( '/theatre-textbook/lecoq/' ) ); ?>"><strong>ルコック</strong><span>身体・動き・空間</span></a>
+        </div>
+        <table class="hk-method-table">
                 <thead>
                     <tr><th>方法</th><th>入口になる問い</th><th>主な関心</th></tr>
                 </thead>
@@ -156,6 +162,11 @@ get_header();
 .hk-textbook-panel{padding:28px}
 .hk-history-flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;color:var(--hk-fg)}
 .hk-history-flow b{color:var(--hk-accent-warm)}
+.hk-method-links{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.hk-method-links a{display:flex;flex-direction:column;gap:6px;padding:16px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg)}
+.hk-method-links a:hover{border-color:var(--hk-accent-warm);text-decoration:none}
+.hk-method-links strong{font-family:var(--hk-font-serif)}
+.hk-method-links span{font-size:11px;color:var(--hk-fg-dim)}
 .hk-method-table-wrap{overflow-x:auto}
 .hk-method-table{width:100%;border-collapse:collapse;background:var(--hk-bg-elevated)}
 .hk-method-table th,.hk-method-table td{border:1px solid var(--hk-border);padding:14px 16px;text-align:left;vertical-align:top}
@@ -172,8 +183,8 @@ get_header();
 .hk-script p{margin:0 0 9px}
 .hk-exercise{margin-top:30px;padding:22px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card)}
 .hk-exercise h4{margin-bottom:10px}
-@media(max-width:900px){.hk-textbook-grid{grid-template-columns:repeat(2,1fr)}.hk-etude-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.hk-textbook-hero h1{font-size:27px}.hk-textbook-grid{grid-template-columns:1fr}.hk-method-table{min-width:680px}.hk-script-card{padding:24px 18px}}
+@media(max-width:900px){.hk-textbook-grid{grid-template-columns:repeat(2,1fr)}.hk-etude-grid{grid-template-columns:1fr}.hk-method-links{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hk-textbook-hero h1{font-size:27px}.hk-textbook-grid{grid-template-columns:1fr}.hk-method-links{grid-template-columns:1fr}.hk-method-table{min-width:680px}.hk-script-card{padding:24px 18px}}
 </style>
 
 <?php get_footer(); ?>
