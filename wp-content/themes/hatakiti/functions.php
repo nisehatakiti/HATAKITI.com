@@ -120,6 +120,16 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/method',
         'theatre-textbook/meisner',
         'theatre-textbook/lecoq',
+        'theatre-textbook/theatre-world',
+        'theatre-textbook/theatre-world/high-school',
+        'theatre-textbook/theatre-world/commercial',
+        'theatre-textbook/theatre-world/student',
+        'theatre-textbook/theatre-world/small-theatre',
+        'theatre-textbook/theatre-world/production',
+        'theatre-textbook/staff',
+        'theatre-textbook/staff/lighting',
+        'theatre-textbook/staff/sound',
+        'theatre-textbook/staff/stage-management',
     );
 
     if ( ! in_array( $path, $theatre_textbook_routes, true ) ) {
@@ -130,6 +140,14 @@ function hatakiti_theatre_textbook_route( $template ) {
 
     if ( 'theatre-textbook' === $path ) {
         return get_template_directory() . '/page-theatre-textbook.php';
+    }
+
+    if ( 0 === strpos( $path, 'theatre-textbook/theatre-world' ) ) {
+        return get_template_directory() . '/page-theatre-world.php';
+    }
+
+    if ( 0 === strpos( $path, 'theatre-textbook/staff' ) ) {
+        return get_template_directory() . '/page-theatre-staff.php';
     }
 
     return get_template_directory() . '/page-theatre-method.php';
@@ -148,6 +166,14 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = 'マイズナー・テクニック｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/lecoq' ) ) {
         $parts['title'] = 'ルコック・システム｜演劇の教科書';
+    } elseif ( 'theatre-textbook/theatre-world' === $path ) {
+        $parts['title'] = '演劇の現場を知る｜演劇の教科書';
+    } elseif ( false !== strpos( $path, 'theatre-textbook/theatre-world/' ) ) {
+        $parts['title'] = '演劇の現場｜演劇の教科書';
+    } elseif ( 'theatre-textbook/staff' === $path ) {
+        $parts['title'] = '舞台スタッフの仕事｜演劇の教科書';
+    } elseif ( false !== strpos( $path, 'theatre-textbook/staff/' ) ) {
+        $parts['title'] = '舞台スタッフ｜演劇の教科書';
     }
     return $parts;
 }
