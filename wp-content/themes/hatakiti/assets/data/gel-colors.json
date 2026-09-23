@@ -36204,6 +36204,270 @@
       ],
       "notes": "Storaroカラーのマゼンタ。",
       "detail_url": "https://jp.rosco.com/ja/product/cinegel"
+    },
+    {
+      "id": "rosco-r255",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R255",
+        "color_name": "Hollywood Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R255",
+      "color_name": "Hollywood Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "LEE 255 Hollywood Frost 相当のRoscoフィルター。光を柔らかく拡散する用途。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "rosco-r256",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R256",
+        "color_name": "1/2 Hamp Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R256",
+      "color_name": "1/2 Hamp Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Hampshire Frost の 1/2 濃度。光を柔らかく拡散する用途。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "rosco-r257",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R257",
+        "color_name": "1/4 Hamp Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R257",
+      "color_name": "1/4 Hamp Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Hampshire Frost の 1/4 濃度。光を柔らかく拡散する用途。",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
+    },
+    {
+      "id": "rosco-r258",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R258",
+        "color_name": "1/8 Hamp Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://jp.rosco.com/ja/products/catalog/roscolux",
+          "title": "Rosco Roscolux",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R258",
+      "color_name": "1/8 Hamp Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Hampshire Frost の 1/8 濃度。光を柔らかく拡散する用途.",
+      "detail_url": "https://jp.rosco.com/ja/products/catalog/roscolux"
     }
   ]
 }
