@@ -8354,6 +8354,1326 @@
       ],
       "notes": "",
       "detail_url": "https://leefilters.com/colour/797-deep-purple/"
+    },
+    {
+      "id": "lee-technical-204",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "204",
+        "color_name": "Full C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/204-full-c-t-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/204-full-c-t-orange/",
+          "title": "LEE Filters 204 Full C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "204",
+      "color_name": "Full C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten light (3200K).",
+      "detail_url": "https://leefilters.com/colour/204-full-c-t-orange/"
+    },
+    {
+      "id": "lee-technical-205",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "205",
+        "color_name": "Half C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/205-half-c-t-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/205-half-c-t-orange/",
+          "title": "LEE Filters 205 Half C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "205",
+      "color_name": "Half C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten light (3800K).",
+      "detail_url": "https://leefilters.com/colour/205-half-c-t-orange/"
+    },
+    {
+      "id": "lee-technical-206",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "206",
+        "color_name": "Quarter C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/206-quarter-c-t-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/206-quarter-c-t-orange/",
+          "title": "LEE Filters 206 Quarter C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "206",
+      "color_name": "Quarter C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten light (4600K).",
+      "detail_url": "https://leefilters.com/colour/206-quarter-c-t-orange/"
+    },
+    {
+      "id": "lee-technical-207",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "207",
+        "color_name": "Full C.T. Orange + .3ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/207-full-c-t-orange-3nd/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/207-full-c-t-orange-3nd/",
+          "title": "LEE Filters 207 Full C.T. Orange + .3ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "207",
+      "color_name": "Full C.T. Orange + .3ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten (3200K) and reduces light 1 stop.",
+      "detail_url": "https://leefilters.com/colour/207-full-c-t-orange-3nd/"
+    },
+    {
+      "id": "lee-technical-208",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "208",
+        "color_name": "Full C.T. Orange + .6ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/208-full-c-t-orange-6nd/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/208-full-c-t-orange-6nd/",
+          "title": "LEE Filters 208 Full C.T. Orange + .6ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "208",
+      "color_name": "Full C.T. Orange + .6ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten (3200K) and reduces light 2 stops.",
+      "detail_url": "https://leefilters.com/colour/208-full-c-t-orange-6nd/"
+    },
+    {
+      "id": "lee-technical-218",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "218",
+        "color_name": "Eighth C.T. Blue"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/218-eighth-c-t-blue/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/218-eighth-c-t-blue/",
+          "title": "LEE Filters 218 Eighth C.T. Blue",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "218",
+      "color_name": "Eighth C.T. Blue",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts tungsten (3200K) to daylight (3400K).",
+      "detail_url": "https://leefilters.com/colour/218-eighth-c-t-blue/"
+    },
+    {
+      "id": "lee-technical-216",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "216",
+        "color_name": "White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/216-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/216-white-diffusion/",
+          "title": "LEE Filters 216 White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "216",
+      "color_name": "White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Strong diffusion used for soft light effects.",
+      "detail_url": "https://leefilters.com/colour/216-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-250",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "250",
+        "color_name": "Half White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/250-half-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/250-half-white-diffusion/",
+          "title": "LEE Filters 250 Half White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "250",
+      "color_name": "Half White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Medium diffusion used for soft light effects.",
+      "detail_url": "https://leefilters.com/colour/250-half-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-251",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "251",
+        "color_name": "Quarter White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/251-quarter-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/251-quarter-white-diffusion/",
+          "title": "LEE Filters 251 Quarter White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "251",
+      "color_name": "Quarter White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Weak diffusion used for soft light effects.",
+      "detail_url": "https://leefilters.com/colour/251-quarter-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-252",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "252",
+        "color_name": "Eighth White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/252-eighth-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/252-eighth-white-diffusion/",
+          "title": "LEE Filters 252 Eighth White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "252",
+      "color_name": "Eighth White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Weak diffusion used for soft light effects.",
+      "detail_url": "https://leefilters.com/colour/252-eighth-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-253",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "253",
+        "color_name": "Hampshire Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/253-hampshire-frost/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/253-hampshire-frost/",
+          "title": "LEE Filters 253 Hampshire Frost",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "253",
+      "color_name": "Hampshire Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "フロスト"
+      ],
+      "notes": "A light frost effect.",
+      "detail_url": "https://leefilters.com/colour/253-hampshire-frost/"
+    },
+    {
+      "id": "lee-technical-416",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "416",
+        "color_name": "Three Quarter White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/416-three-quarter-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/416-three-quarter-white-diffusion/",
+          "title": "LEE Filters 416 Three Quarter White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "416",
+      "color_name": "Three Quarter White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Strong to medium diffusion used for soft light effects.",
+      "detail_url": "https://leefilters.com/colour/416-three-quarter-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-450",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "450",
+        "color_name": "Three Eighth White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/450-three-eighth-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/450-three-eighth-white-diffusion/",
+          "title": "LEE Filters 450 Three Eighth White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "450",
+      "color_name": "Three Eighth White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Medium/weak diffusion used for soft light effects.",
+      "detail_url": "https://leefilters.com/colour/450-three-eighth-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-452",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "452",
+        "color_name": "Sixteenth White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/452-sixteenth-white-diffusion/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/452-sixteenth-white-diffusion/",
+          "title": "LEE Filters 452 Sixteenth White Diffusion",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "452",
+      "color_name": "Sixteenth White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Very light diffusion.",
+      "detail_url": "https://leefilters.com/colour/452-sixteenth-white-diffusion/"
+    },
+    {
+      "id": "lee-technical-228",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "228",
+        "color_name": "Brushed Silk"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/228-brushed-silk/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/228-brushed-silk/",
+          "title": "LEE Filters 228 Brushed Silk",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "228",
+      "color_name": "Brushed Silk",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "Directional soft lighting effect used for scattering light in one direction only.",
+      "detail_url": "https://leefilters.com/colour/228-brushed-silk/"
+    },
+    {
+      "id": "lee-technical-210",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "210",
+        "color_name": "0.6ND"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/210-0-6nd/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/210-0-6nd/",
+          "title": "LEE Filters 210 0.6ND",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ND"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "210",
+      "color_name": "0.6ND",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ND"
+      ],
+      "notes": "Reduces light 2 stops without changing colour.",
+      "detail_url": "https://leefilters.com/colour/210-0-6nd/"
+    },
+    {
+      "id": "lee-technical-213",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "213",
+        "color_name": "White Flame Green"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/213-white-flame-green/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/213-white-flame-green/",
+          "title": "LEE Filters 213 White Flame Green",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "213",
+      "color_name": "White Flame Green",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Corrects white flame carbon arcs by absorbing ultra violet.",
+      "detail_url": "https://leefilters.com/colour/213-white-flame-green/"
+    },
+    {
+      "id": "lee-technical-285",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "285",
+        "color_name": "Three Quarter C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/285-three-quarter-c-t-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/285-three-quarter-c-t-orange/",
+          "title": "LEE Filters 285 Three Quarter C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "285",
+      "color_name": "Three Quarter C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten light (3600K).",
+      "detail_url": "https://leefilters.com/colour/285-three-quarter-c-t-orange/"
+    },
+    {
+      "id": "lee-technical-223",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "223",
+        "color_name": "Eighth C.T. Orange"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/223-eighth-c-t-orange/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/223-eighth-c-t-orange/",
+          "title": "LEE Filters 223 Eighth C.T. Orange",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "色温度変換"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "223",
+      "color_name": "Eighth C.T. Orange",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "色温度変換"
+      ],
+      "notes": "Converts daylight (6500K) to tungsten light (5550K).",
+      "detail_url": "https://leefilters.com/colour/223-eighth-c-t-orange/"
+    },
+    {
+      "id": "lee-technical-212",
+      "product": {
+        "manufacturer": "LEE Filters",
+        "series": "Technical / Diffusion Filters",
+        "color_number": "212",
+        "color_name": "L.C.T. Yellow (Y1)"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://leefilters.com/colour/212-l-c-t-yellow-y1/",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://leefilters.com/colour/212-l-c-t-yellow-y1/",
+          "title": "LEE Filters 212 L.C.T. Yellow (Y1)",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "補正"
+        ],
+        "tags": [],
+        "notes": "技術フィルター。色効果ゼラとは別カテゴリとして検索可能にする想定。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "LEE公式情報で製品名・用途/効果を確認。透過率は未登録。"
+      },
+      "manufacturer": "LEE Filters",
+      "series": "Technical / Diffusion Filters",
+      "color_number": "212",
+      "color_name": "L.C.T. Yellow (Y1)",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "補正"
+      ],
+      "notes": "Reduces colour temperature of low carbon arcs to 3200K.",
+      "detail_url": "https://leefilters.com/colour/212-l-c-t-yellow-y1/"
     }
   ]
 }
