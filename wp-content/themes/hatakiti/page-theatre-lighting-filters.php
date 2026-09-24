@@ -195,7 +195,7 @@ $detail_source = $selected_record['detail_url'] ?? '';
                         <label><input type="checkbox" value="<?php echo esc_attr( $use ); ?>"> <?php echo esc_html( $use ); ?></label>
                     <?php endforeach; ?>
                 </div>
-                <small class="hk-gel-filter-help">複数選択した用途は、すべて登録されている色を表示します。</small>
+                <small class="hk-gel-filter-help">同じ目的グループ内はOR、別の目的グループを選ぶとANDで絞り込みます。例：人物＋（夜 OR 月明かり）＋寒色。</small>
             </div>
 
             <div class="hk-gel-transmission">
@@ -438,6 +438,12 @@ $detail_source = $selected_record['detail_url'] ?? '';
         return score;
     }
 
+    const useGroups={
+        target:['人物','顔・肌','背景','空間'],
+        time:['朝・昼','夕景','夜','月明かり','日光'],
+        mood:['暖色系の演出','寒色系の演出','心理表現','ファンタジー','特殊効果']
+    };
+
     function filterRecords(){
         const makers=checked('hk-gel-manufacturers');
         const series=checked('hk-gel-series');
@@ -458,7 +464,11 @@ $detail_source = $selected_record['detail_url'] ?? '';
             if(min!==null && (!Number.isFinite(t) || t<min)) return false;
             if(max!==null && (!Number.isFinite(t) || t>max)) return false;
 
-            if(uses.length && !uses.every(use=>(record.uses||[]).includes(use))) return false;
+            if(uses.length){
+                const recordUses=record.uses||[];
+                const selectedGroups=Object.values(useGroups).filter(group=>uses.some(use=>group.includes(use)));
+                if(selectedGroups.some(group=>!group.some(use=>uses.includes(use) && recordUses.includes(use)))) return false;
+            }
             return true;
         });
 
