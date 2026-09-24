@@ -15,86 +15,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Wait for uploaded LEE source data
+        id: source
+        run: |
+          if [ ! -f _temp/lee-colors-328.json ]; then
+            echo "LEE source data is not present yet; this run is intentionally a no-op."
+            exit 0
+          fi
+
       - name: Update LEE RGB and HEX
+        if: steps.source.outcome == 'success' && hashFiles('_temp/lee-colors-328.json') != ''
         run: |
           python3 <<'PY'
-          import json, re, urllib.request
-          from html import unescape
-          from html.parser import HTMLParser
+          import json
           from pathlib import Path
 
-          URL = "https://leefilters.com/lighting/colour-effect-lighting-filters/"
-          PATH = Path("wp-content/themes/hatakiti/assets/data/gel-colors.json")
+          source = json.loads(Path("_temp/lee-colors-328.json").read_text(encoding="utf-8"))
+          path = Path("wp-content/themes/hatakiti/assets/data/gel-colors.json")
 
-          class ColourParser(HTMLParser):
-              def __init__(self):
-                  super().__init__()
-                  self.current = None
-                  self.capture_number = False
-                  self.capture_name = False
-                  self.number_buf = []
-                  self.name_buf = []
-                  self.name_href = ""
-                  self.colours = {}
+          if len(source) != 328:
+              raise SystemExit(f"LEE source count was {len(source)}, expected 328")
 
-              def handle_starttag(self, tag, attrs):
-                  attrs = dict(attrs)
-                  if tag == "li":
-                      classes = attrs.get("class", "").split()
-                      if "colours-list__colour" in classes:
-                          style = attrs.get("style", "")
-                          m = re.search(r"--colour\\s*:\\s*(#[0-9A-Fa-f]{6})", style)
-                          self.current = {
-                              "hex": m.group(1).upper() if m else None,
-                              "number": "",
-                              "name": "",
-                              "url": "",
-                          }
-                  elif self.current and tag == "span" and not self.current["number"]:
-                      self.capture_number = True
-                      self.number_buf = []
-                  elif self.current and tag == "a":
-                      classes = attrs.get("class", "").split()
-                      if "name" in classes:
-                          self.capture_name = True
-                          self.name_buf = []
-                          self.name_href = attrs.get("href", "")
-
-              def handle_data(self, data):
-                  if self.capture_number:
-                      self.number_buf.append(data)
-                  if self.capture_name:
-                      self.name_buf.append(data)
-
-              def handle_endtag(self, tag):
-                  if tag == "span" and self.capture_number:
-                      text = " ".join("".join(self.number_buf).split())
-                      if re.fullmatch(r"\\d{3}", text):
-                          self.current["number"] = text
-                      self.capture_number = False
-                  elif tag == "a" and self.capture_name:
-                      text = " ".join("".join(self.name_buf).split())
-                      m = re.match(r"^(\\d{3})\\s+(.+)$", text)
-                      self.current["name"] = (m.group(2) if m else text).strip()
-                      self.current["url"] = self.name_href
-                      self.capture_name = False
-                  elif tag == "li" and self.current:
-                      c = self.current
-                      if c["number"] and c["hex"]:
-                          rgb = [int(c["hex"][1:3],16), int(c["hex"][3:5],16), int(c["hex"][5:7],16)]
-                          self.colours[c["number"]] = {**c, "rgb": rgb}
-                      self.current = None
-
-          req = urllib.request.Request(URL, headers={"User-Agent": "Mozilla/5.0"})
-          html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
-          parser = ColourParser()
-          parser.feed(html)
-          colours = parser.colours
-
-          if len(colours) < 300:
-              raise SystemExit(f"LEE extraction unexpectedly small: {len(colours)}")
-
-          obj = json.loads(PATH.read_text(encoding="utf-8"))
+          source_map = {str(x["number"]).zfill(3): x for x in source}
+          obj = json.loads(path.read_text(encoding="utf-8"))
           matched = changed = 0
 
           for rec in obj["records"]:
@@ -104,26 +47,26 @@ jobs:
 
               raw = rec.get("product", {}).get("color_number", rec.get("color_number", ""))
               number = str(raw).lstrip("Ll").zfill(3)
-              src = colours.get(number)
+              src = source_map.get(number)
               if not src:
                   continue
 
               matched += 1
               old = (rec.get("reference_rgb"), rec.get("reference_hex"))
-              new = (src["rgb"], src["hex"])
+              new = (src["rgb"], src["hex"].upper())
               if old != new:
                   changed += 1
 
               rec["reference_rgb"] = src["rgb"]
-              rec["reference_hex"] = src["hex"]
+              rec["reference_hex"] = src["hex"].upper()
               rec["reference_color_source"] = "LEE Filters"
               rec["reference_color_method"] = "Official LEE Filters colour page"
               rec["reference_color"] = {
                   "rgb": {"r": src["rgb"][0], "g": src["rgb"][1], "b": src["rgb"][2]},
-                  "hex": src["hex"],
+                  "hex": src["hex"].upper(),
                   "source": {
                       "type": "manufacturer_official",
-                      "url": src["url"],
+                      "url": src.get("url", ""),
                       "title": f"LEE Filters — {src['number']} {src['name']}",
                       "accessed_at": "2026-09-24",
                   },
@@ -144,17 +87,18 @@ jobs:
           if matched != 328:
               raise SystemExit(f"LEE record match count was {matched}, expected 328")
 
-          PATH.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          print(f"LEE source colours: {len(colours)}")
+          path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(f"LEE source colours: {len(source)}")
           print(f"LEE records matched: {matched}")
           print(f"LEE records changed: {changed}")
           PY
 
-      - name: Commit result and remove temporary workflow
+      - name: Commit result and remove temporary files
+        if: hashFiles('_temp/lee-colors-328.json') != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm .github/workflows/_temp_update_lee.yml
+          git rm .github/workflows/_temp_update_lee.yml _temp/lee-colors-328.json
           git add wp-content/themes/hatakiti/assets/data/gel-colors.json
           git commit -m "Add verified LEE Filters RGB and HEX data"
           git push
