@@ -57,6 +57,128 @@ get_header();
 <div class="hk-panel hk-lighting-note"><strong>覚え方：</strong>「何を見せる？ → どこから？ → どこまで？ → 何色？ → どんな影？」の順に考えると、器具選びと明かり作りを結びつけやすくなります。</div>
 </section>
 
+<section class="hk-section hk-lighting-intro-illustration">
+<div class="hk-section-head"><h2>にゃかきちと照明を考える</h2><p>ここからは、にゃかきちが「これ、どうなってるの？」と疑問を持ちながら、灯体・配置・操作を順番に見ていきます。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 01</div>
+  <div class="hk-illustration-placeholder-file">lighting-01-light-directions.png</div>
+  <p>舞台を上から見た模式図。正面光・サイド・バック・トップなど、光の方向を人物に向けて矢印で示す。にゃかきちは舞台袖から「同じ人でも、光が横から来ると違って見えるの？」と疑問を持つ。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>灯体は「光を作って、整えて、届ける」</h2><p>灯体の内部では、光源から出た光をそのまま舞台へ飛ばしているわけではありません。器具によって方法は違いますが、光を集めたり、形を整えたりしてから舞台へ送ります。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 02</div>
+  <div class="hk-illustration-placeholder-file">lighting-02-fixture-anatomy.png</div>
+  <p>灯体の断面模式図。光源→反射・集光→レンズ→絞り／カッター→フィルターホルダー→舞台上の光、という流れを示す。灯体によって部品構成が異なることも注記。</p>
+</div>
+<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「じゃあ、灯体の種類が違うと、光の出方も違うの？」</p><p>その通りです。レンズ、反射鏡、配光、カッターの有無などが違うため、同じ場所を照らしても光の広がり方や境界が変わります。</p></div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>代表的な灯体を比べてみる</h2><p>器具名を暗記するのではなく、「どんな光が出るか」で比べます。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 03</div>
+  <div class="hk-illustration-placeholder-file">lighting-03-fixture-comparison.png</div>
+  <p>凸・フレネル・エリスポット・PARの横並び比較。灯体の外観を簡略化し、それぞれの光を舞台上に投射した断面図を同じ条件で表示。光の境界、広がり、形を比較できる構成。</p>
+</div>
+<div class="hk-term-grid">
+<div><h3>凸（平凸）</h3><p>狙った場所へ比較的輪郭のある光を置きたいときに考えます。</p></div>
+<div><h3>フレネル</h3><p>比較的柔らかな境界で人物やエリアをつなげたいときに考えます。</p></div>
+<div><h3>エリスポット</h3><p>カッターなどで光の形を細かく制御したいときに考えます。</p></div>
+<div><h3>PAR</h3><p>配光の種類やレンズとの組み合わせを確認し、広がりや光量を活かします。</p></div>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>凸：狙った場所に光を置く</h2><p>比較的はっきりした光を作りやすい灯体として、まず凸を見てみます。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 04</div>
+  <div class="hk-illustration-placeholder-file">lighting-04_profile_spot.png</div>
+  <p>凸の簡略断面図。光源、反射鏡、平凸レンズ、前方へ出る光を示す。フォーカス操作によって光の大きさ・輪郭を調整するイメージを併記。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>フレネル：柔らかくつなぐ</h2><p>フレネルレンズを使った灯体は、比較的柔らかな境界の光を作りやすいのが特徴です。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 05</div>
+  <div class="hk-illustration-placeholder-file">lighting-05_fresnel.png</div>
+  <p>フレネル灯体の簡略断面図。フレネルレンズと光源の関係、スポット／フラッド方向の変化、舞台上の比較的柔らかな光の境界を示す。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>エリスポット：光の形を作る</h2><p>エリスポットでは、レンズによる光にカッターやゴボなどを組み合わせ、光の形そのものを設計できます。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 06</div>
+  <div class="hk-illustration-placeholder-file">lighting-06_ellipsoidal_cutters_gobo.png</div>
+  <p>エリスポットの側面模式図。光源→レンズ→カッター4枚→ゴボ→レンズ→舞台の順を示し、窓枠・木漏れ日などの投影例を小さく添える。</p>
+</div>
+<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「カッターって、光を暗くするためのもの？」</p><p>主な役割は、必要な場所だけに光を残すことです。明るさを下げるというより、光の形や境界を切って不要な光を当てないために使います。</p></div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>PAR：レンズと配光を確認する</h2><p>PARは一種類の光だけを出す器具名ではなく、実際には使用するレンズや配光などによって見え方が変わります。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 07</div>
+  <div class="hk-illustration-placeholder-file">lighting-07_par_beam.png</div>
+  <p>PAR灯体の簡略図と、配光の違う例を横並びで表示。光の広がりと用途を比較し、機種によって仕様が異なることを注記。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>ホリゾントライト：背景を作る</h2><p>ホリゾント系の灯体は、人物を狙うというより、舞台奥の背景面を均一または意図した色・明るさで作るために使います。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 08</div>
+  <div class="hk-illustration-placeholder-file">lighting-08_horizont.png</div>
+  <p>舞台断面図。ホリゾント幕と、その下部または上部から背景面へ光を送るホリゾント系灯体を示す。背景面が色で染まる様子を表現。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>サイドスポット（SS）は「灯体の種類」ではなく配置の考え方</h2><p>SSは特定の一種類の灯体を意味する言葉ではなく、舞台の横方向から人物や身体へ光を入れる配置・役割を指して使われます。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 09</div>
+  <div class="hk-illustration-placeholder-file">lighting-09_side_spot_rolling.png</div>
+  <p>舞台平面図＋断面図。左右の袖に配置されたSS、床置きのコロガシ、そこから人物へ入る横光を表示。高い位置・低い位置で身体への当たり方が変わることも示す。</p>
+</div>
+<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「SSという名前の特別な灯体があるの？」</p><p>ここではそう考えない方が分かりやすいです。SSは「横から入れる」という<strong>配置・役割</strong>の言葉として覚え、実際に何の灯体を使うかは現場や目的で決まります。</p></div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>サスバトンとコロガシ：どこに灯体を置くのか</h2><p>灯体そのものだけでなく、どこに取り付けるか・置くかによって光の方向が決まります。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 10</div>
+  <div class="hk-illustration-placeholder-file">lighting-10_batten_and_rolling.png</div>
+  <p>舞台断面図。上部のサスバトンに吊られた灯体と、舞台袖・舞台床に置かれたコロガシを同時に表示。バトンからのトップ／前方光と、床付近からの低いサイド光を対比。</p>
+</div>
+<div class="hk-term-grid">
+<div><h3>サスバトン</h3><p>劇場上部から吊り下げられた、照明器具などを取り付けるための棒状の設備。バトンの位置によって灯体の高さと照射方向の基準が変わります。</p></div>
+<div><h3>コロガシ</h3><p>灯体を床置きして使う配置。低い位置からの光を作れるため、SSなどの横光や足元方向の光に利用されます。実際の器具・固定方法は現場の安全手順に従います。</p></div>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>フェーダーと調光器：操作と電力制御をつなぐ</h2><p>「フェーダーを上げると灯体が明るくなる」の裏側には、操作する人と電力を制御する機器の関係があります。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 11</div>
+  <div class="hk-illustration-placeholder-file">lighting-11_fader_dimmer_power.png</div>
+  <p>信号・電力の流れを分けた模式図。操作卓のフェーダー→制御信号→調光器→同一系統の電源→灯体、という流れを示す。「フェーダー＝操作するもの」「調光器＝電力を制御するもの」を明確にする。同一の調光回路に接続された灯体は、その回路の制御に応じて明るさが変わる例も示す。</p>
+</div>
+<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「フェーダーと調光器って同じものじゃないの？」</p><p>現場では会話の中で近い意味に感じることもありますが、教材では分けて覚えます。<strong>フェーダーは人が操作するためのコントロール</strong>、<strong>調光器は電力を制御して灯体の明るさを変える装置</strong>です。現在のシステムでは制御信号の方式もさまざまなので、実際の劇場設備に従います。</p></div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>灯体・配置・操作を一本につなげる</h2><p>「どの灯体を使うか」だけでなく、「どこに置き、どう操作し、どこへ光を当てるか」を一つの流れで考えます。</p></div>
+<div class="hk-illustration-placeholder">
+  <div class="hk-illustration-placeholder-label">ILLUSTRATION 12</div>
+  <div class="hk-illustration-placeholder-file">lighting-12_fixture_position_control.png</div>
+  <p>舞台断面＋制御系の総合図。サスバトン上の灯体、SS、コロガシ、ホリゾント、操作卓、調光器を一枚につなぎ、「位置→灯体→回路→フェーダー→舞台上の光」の関係を示す。</p>
+</div>
+</section>
+
 <section class="hk-section">
 <div class="hk-section-head"><h2>光の方向を詳しく見る</h2><p>同じ人物でも、方向が変わるだけで顔の見え方と身体の立体感は大きく変わります。</p></div>
 <div class="hk-equipment hk-direction-grid">
