@@ -1,0 +1,127 @@
+name: Temporary LEE color update
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-lee-colors:
+    if: ${{ !contains(github.event.head_commit.message, 'Add verified LEE Filters RGB and HEX data') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update LEE RGB and HEX
+        run: |
+          python3 <<'PY'
+          import json, re, urllib.request
+          from html import unescape
+          from pathlib import Path
+
+          URL = "https://leefilters.com/lighting/colour-effect-lighting-filters/"
+          PATH = Path("wp-content/themes/hatakiti/assets/data/gel-colors.json")
+
+          req = urllib.request.Request(URL, headers={"User-Agent": "Mozilla/5.0"})
+          html = urllib.request.urlopen(req, timeout=30).read().decode("utf-8", "replace")
+
+          pattern = re.compile(
+              r'(<li\\b(?=[^>]*class=["\\'][^"\\']*colours-list__colour[^"\\']*["\\'])[^>]*>)(.*?)</li>',
+              re.S | re.I,
+          )
+
+          colours = {}
+          for opening, body in pattern.findall(html):
+              nm = re.search(r'<span[^>]*>\\s*(\\d{3})\\s*</span>', body, re.S | re.I)
+              if not nm:
+                  continue
+              number = nm.group(1)
+
+              sm = re.search(r'--colour\\s*:\\s*(#[0-9A-Fa-f]{6})', opening)
+              if not sm:
+                  continue
+              hexc = sm.group(1).upper()
+
+              name_m = re.search(r'<a[^>]*class=["\\'][^"\\']*\\bname\\b[^"\\']*["\\'][^>]*>(.*?)</a>', body, re.S | re.I)
+              name = re.sub(r'<[^>]+>', ' ', name_m.group(1)) if name_m else ""
+              name = " ".join(unescape(name).split())
+              rgb = [int(hexc[1:3],16), int(hexc[3:5],16), int(hexc[5:7],16)]
+
+              colours[number] = {
+                  "number": number,
+                  "name": name,
+                  "hex": hexc,
+                  "rgb": rgb,
+                  "url": f"https://leefilters.com/colour/{number}-{re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')}/",
+              }
+
+          if len(colours) < 300:
+              raise SystemExit(f"LEE extraction unexpectedly small: {len(colours)}")
+
+          obj = json.loads(PATH.read_text(encoding="utf-8"))
+          matched = changed = 0
+
+          for rec in obj["records"]:
+              manufacturer = rec.get("product", {}).get("manufacturer", rec.get("manufacturer"))
+              if str(manufacturer).lower() != "lee":
+                  continue
+
+              raw = rec.get("product", {}).get("color_number", rec.get("color_number", ""))
+              number = str(raw).lstrip("Ll").zfill(3)
+              src = colours.get(number)
+              if not src:
+                  continue
+
+              matched += 1
+              old = (rec.get("reference_rgb"), rec.get("reference_hex"))
+              new = (src["rgb"], src["hex"])
+              if old != new:
+                  changed += 1
+
+              rec["reference_rgb"] = src["rgb"]
+              rec["reference_hex"] = src["hex"]
+              rec["reference_color_source"] = "LEE Filters"
+              rec["reference_color_method"] = "Official LEE Filters colour page"
+              rec["reference_color"] = {
+                  "rgb": {"r": src["rgb"][0], "g": src["rgb"][1], "b": src["rgb"][2]},
+                  "hex": src["hex"],
+                  "source": {
+                      "type": "manufacturer_official",
+                      "url": src["url"],
+                      "title": f"LEE Filters — {src['number']} {src['name']}",
+                      "accessed_at": "2026-09-24",
+                  },
+                  "method": "Official LEE Filters colour page",
+                  "confidence": "verified",
+              }
+
+              verification = rec.setdefault("verification", {})
+              verification["status"] = "verified"
+              verification["last_verified_at"] = "2026-09-24"
+              fields = list(dict.fromkeys(verification.get("verified_fields", [])))
+              for field in ("product", "manufacturer_data.source", "reference_color"):
+                  if field not in fields:
+                      fields.append(field)
+              verification["verified_fields"] = fields
+              verification["notes"] = "LEE Filters公式カラー情報に基づき製品番号・名称・RGB・HEXを確認。"
+
+          if matched != 328:
+              raise SystemExit(f"LEE record match count was {matched}, expected 328")
+
+          PATH.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(f"LEE source colours: {len(colours)}")
+          print(f"LEE records matched: {matched}")
+          print(f"LEE records changed: {changed}")
+          PY
+
+      - name: Commit result and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/_temp_update_lee.yml
+          git add wp-content/themes/hatakiti/assets/data/gel-colors.json
+          git commit -m "Add verified LEE Filters RGB and HEX data"
+          git push
