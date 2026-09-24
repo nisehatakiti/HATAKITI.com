@@ -406,6 +406,7 @@ $detail_source = $selected_record['detail_url'] ?? '';
         if(!query) return true;
         const source=String(value ?? '').trim().toLowerCase();
         const q=query.toLowerCase();
+        if(/^\\d+x+$/.test(q)) return source.startsWith(q.replace(/x+$/,''));
         return source===q || source.startsWith(q);
     }
 
