@@ -20507,6 +20507,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 12,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20515,19 +20526,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 14.536,
+              "x": 0.677,
+              "y": 0.316
+            },
+            {
+              "illuminant": "D65",
+              "Y": 8.452,
+              "x": 0.648,
+              "y": 0.306
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 225,
+          "g": 7,
+          "b": 0
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#E10700",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -20542,9 +20579,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -20552,10 +20591,14 @@
       "color_name": "Storaro Red",
       "transmission": 12,
       "transmission_display": "12%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        225,
+        7,
+        0
+      ],
+      "reference_hex": "#E10700",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -20584,6 +20627,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 23,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20592,19 +20646,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 34.72,
+              "x": 0.591,
+              "y": 0.385
+            },
+            {
+              "illuminant": "D65",
+              "Y": 27.148,
+              "x": 0.522,
+              "y": 0.4
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 255,
+          "g": 108,
+          "b": 0
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#FF6C00",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -20619,9 +20699,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -20629,10 +20711,14 @@
       "color_name": "Storaro Orange",
       "transmission": 23,
       "transmission_display": "23%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        255,
+        108,
+        0
+      ],
+      "reference_hex": "#FF6C00",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -20661,6 +20747,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 64,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20669,19 +20766,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 69.78,
+              "x": 0.55,
+              "y": 0.437
+            },
+            {
+              "illuminant": "D65",
+              "Y": 59.603,
+              "x": 0.494,
+              "y": 0.467
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 255,
+          "g": 203,
+          "b": 4
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#FFCB04",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -20696,9 +20819,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -20706,10 +20831,14 @@
       "color_name": "Storaro Yellow",
       "transmission": 64,
       "transmission_display": "64%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        255,
+        203,
+        4
+      ],
+      "reference_hex": "#FFCB04",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -20738,6 +20867,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 15,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20746,19 +20886,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 9.19,
+              "x": 0.277,
+              "y": 0.629
+            },
+            {
+              "illuminant": "D65",
+              "Y": 11.673,
+              "x": 0.224,
+              "y": 0.631
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 31,
+          "g": 146,
+          "b": 1
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#1F9201",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -20773,9 +20939,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -20783,10 +20951,14 @@
       "color_name": "Storaro Green",
       "transmission": 15,
       "transmission_display": "15%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        31,
+        146,
+        1
+      ],
+      "reference_hex": "#1F9201",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -20815,6 +20987,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 18,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20823,19 +21006,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 15.88,
+              "x": 0.239,
+              "y": 0.441
+            },
+            {
+              "illuminant": "D65",
+              "Y": 21.491,
+              "x": 0.178,
+              "y": 0.323
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 0,
+          "g": 149,
+          "b": 168
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#0095A8",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -20850,9 +21059,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -20860,10 +21071,14 @@
       "color_name": "Storaro Cyan",
       "transmission": 18,
       "transmission_display": "18%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        0,
+        149,
+        168
+      ],
+      "reference_hex": "#0095A8",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -20892,6 +21107,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 9,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20900,19 +21126,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 5.949,
+              "x": 0.16,
+              "y": 0.21
+            },
+            {
+              "illuminant": "D65",
+              "Y": 10.464,
+              "x": 0.143,
+              "y": 0.133
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 0,
+          "g": 72,
+          "b": 255
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#0048FF",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -20927,9 +21179,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -20937,10 +21191,14 @@
       "color_name": "Storaro Azure",
       "transmission": 9,
       "transmission_display": "9%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        0,
+        72,
+        255
+      ],
+      "reference_hex": "#0048FF",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -20969,6 +21227,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 10,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -20977,19 +21246,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 8.056,
+              "x": 0.259,
+              "y": 0.267
+            },
+            {
+              "illuminant": "D65",
+              "Y": 10.777,
+              "x": 0.181,
+              "y": 0.154
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 58,
+          "g": 84,
+          "b": 255
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#3A54FF",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -21004,9 +21299,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -21014,10 +21311,14 @@
       "color_name": "Storaro Blue",
       "transmission": 10,
       "transmission_display": "10%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        58,
+        84,
+        255
+      ],
+      "reference_hex": "#3A54FF",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -21046,6 +21347,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 4,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -21054,19 +21366,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 1.749,
+              "x": 0.233,
+              "y": 0.164
+            },
+            {
+              "illuminant": "D65",
+              "Y": 2.582,
+              "x": 0.171,
+              "y": 0.087
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 65,
+          "g": 0,
+          "b": 212
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#4100D4",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -21081,9 +21419,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -21091,10 +21431,14 @@
       "color_name": "Storaro Indigo",
       "transmission": 4,
       "transmission_display": "4%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        65,
+        0,
+        212
+      ],
+      "reference_hex": "#4100D4",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "夜"
       ],
@@ -21123,6 +21467,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 3,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -21131,19 +21486,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 2.946,
+              "x": 0.417,
+              "y": 0.231
+            },
+            {
+              "illuminant": "D65",
+              "Y": 2.911,
+              "x": 0.228,
+              "y": 0.125
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 99,
+          "g": 0,
+          "b": 145
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#630091",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -21158,9 +21539,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -21168,10 +21551,14 @@
       "color_name": "Storaro Violet",
       "transmission": 3,
       "transmission_display": "3%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        99,
+        0,
+        145
+      ],
+      "reference_hex": "#630091",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
@@ -21200,6 +21587,17 @@
                 "title": "Rosco Filter Facts — The Storaro Selection",
                 "accessed_at": "2026-09-24"
               }
+            },
+            {
+              "source_type": "official_mycolor",
+              "value": 28,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+                "title": "Rosco myColor — Color Data",
+                "accessed_at": "2026-09-24"
+              }
             }
           ]
         },
@@ -21208,19 +21606,45 @@
           "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
-        "source_type": "manufacturer_official"
+        "source_type": "manufacturer_official",
+        "colorimetry": {
+          "source_type": "official_mycolor",
+          "coordinates": [
+            {
+              "illuminant": "A",
+              "Y": 21.072,
+              "x": 0.508,
+              "y": 0.291
+            },
+            {
+              "illuminant": "D65",
+              "Y": 17.556,
+              "x": 0.312,
+              "y": 0.184
+            }
+          ],
+          "source": {
+            "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+            "title": "Rosco myColor — Color Data",
+            "accessed_at": "2026-09-24"
+          }
+        }
       },
       "reference_color": {
-        "rgb": null,
-        "hex": null,
-        "source": {
-          "type": "unknown",
-          "url": "",
-          "title": "",
-          "accessed_at": ""
+        "rgb": {
+          "r": 236,
+          "g": 0,
+          "b": 140
         },
-        "method": "",
-        "confidence": "unverified"
+        "hex": "#EC008C",
+        "source": {
+          "type": "official_mycolor",
+          "url": "https://legacy.rosco.com/mycolor/mycolor.cfm",
+          "title": "Rosco myColor — Color Data",
+          "accessed_at": "2026-09-24"
+        },
+        "method": "Rosco myColor palette DOM reference color",
+        "confidence": "verified"
       },
       "hatakiti": {
         "uses": [
@@ -21235,9 +21659,11 @@
         "verified_fields": [
           "product",
           "manufacturer_data.source",
-          "manufacturer_data.transmission"
+          "manufacturer_data.transmission",
+          "reference_color",
+          "manufacturer_data.colorimetry"
         ],
-        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
+        "notes": "Rosco公式Filter Factsで透過率を確認し、公式myColorのColor Data/パレットDOMからRGB・HEX・CIE（A/D65）を確認。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
@@ -21245,10 +21671,14 @@
       "color_name": "Storaro Magenta",
       "transmission": 28,
       "transmission_display": "28%",
-      "reference_rgb": null,
-      "reference_hex": null,
-      "reference_color_source": "未登録",
-      "reference_color_method": "",
+      "reference_rgb": [
+        236,
+        0,
+        140
+      ],
+      "reference_hex": "#EC008C",
+      "reference_color_source": "Rosco myColor",
+      "reference_color_method": "Rosco myColor palette DOM reference color",
       "uses": [
         "特殊効果"
       ],
