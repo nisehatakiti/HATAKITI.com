@@ -15,63 +15,64 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Wait for uploaded LEE source data
-        id: source
-        run: |
-          if [ ! -f _temp/lee-colors-328.json ]; then
-            echo "LEE source data is not present yet; this run is intentionally a no-op."
-            exit 0
-          fi
-
-      - name: Update LEE RGB and HEX
-        if: steps.source.outcome == 'success' && hashFiles('_temp/lee-colors-328.json') != ''
+      - name: Restore known-good database and apply LEE data
         run: |
           python3 <<'PY'
-          import json
+          import json, urllib.request
           from pathlib import Path
 
-          source = json.loads(Path("_temp/lee-colors-328.json").read_text(encoding="utf-8"))
-          path = Path("wp-content/themes/hatakiti/assets/data/gel-colors.json")
+          base_url = "https://raw.githubusercontent.com/nisehatakiti/HATAKITI.com/3c1af86d2a09366a4d10997f204aa2f5df265906/wp-content/themes/hatakiti/assets/data/gel-colors.json"
+          source_path = Path("_temp/lee-colors-328.json")
+          target_path = Path("wp-content/themes/hatakiti/assets/data/gel-colors.json")
 
+          req = urllib.request.Request(base_url, headers={"User-Agent": "Mozilla/5.0"})
+          with urllib.request.urlopen(req, timeout=60) as r:
+              base = json.loads(r.read().decode("utf-8"))
+
+          source = json.loads(source_path.read_text(encoding="utf-8"))
           if len(source) != 328:
               raise SystemExit(f"LEE source count was {len(source)}, expected 328")
+          if len(base.get("records", [])) != 663:
+              raise SystemExit(f"Known-good base record count was {len(base.get('records', []))}, expected 663")
 
           source_map = {str(x["number"]).zfill(3): x for x in source}
-          obj = json.loads(path.read_text(encoding="utf-8"))
+          lee_records = [
+              r for r in base["records"]
+              if str(r.get("product", {}).get("manufacturer", r.get("manufacturer", ""))).lower() == "lee filters"
+          ]
+
           matched = changed = 0
+          missing = []
 
-          for rec in obj["records"]:
-              manufacturer = rec.get("product", {}).get("manufacturer", rec.get("manufacturer"))
-              if str(manufacturer).lower() != "lee":
-                  continue
-
+          for rec in lee_records:
               raw = rec.get("product", {}).get("color_number", rec.get("color_number", ""))
               number = str(raw).lstrip("Ll").zfill(3)
               src = source_map.get(number)
               if not src:
+                  missing.append(number)
                   continue
 
               matched += 1
-              old = (rec.get("reference_rgb"), rec.get("reference_hex"))
-              new = (src["rgb"], src["hex"].upper())
-              if old != new:
+              rgb = src["rgb"]
+              hexc = src["hex"].upper()
+              if (rec.get("reference_rgb"), rec.get("reference_hex")) != (rgb, hexc):
                   changed += 1
 
-              rec["reference_rgb"] = src["rgb"]
-              rec["reference_hex"] = src["hex"].upper()
+              rec["reference_rgb"] = rgb
+              rec["reference_hex"] = hexc
               rec["reference_color_source"] = "LEE Filters"
               rec["reference_color_method"] = "Official LEE Filters colour page"
               rec["reference_color"] = {
-                  "rgb": {"r": src["rgb"][0], "g": src["rgb"][1], "b": src["rgb"][2]},
-                  "hex": src["hex"].upper(),
+                  "rgb": {"r": rgb[0], "g": rgb[1], "b": rgb[2]},
+                  "hex": hexc,
                   "source": {
                       "type": "manufacturer_official",
                       "url": src.get("url", ""),
                       "title": f"LEE Filters — {src['number']} {src['name']}",
-                      "accessed_at": "2026-09-24",
+                      "accessed_at": "2026-09-24"
                   },
                   "method": "Official LEE Filters colour page",
-                  "confidence": "verified",
+                  "confidence": "verified"
               }
 
               verification = rec.setdefault("verification", {})
@@ -84,21 +85,21 @@ jobs:
               verification["verified_fields"] = fields
               verification["notes"] = "LEE Filters公式カラー情報に基づき製品番号・名称・RGB・HEXを確認。"
 
-          if matched != 328:
-              raise SystemExit(f"LEE record match count was {matched}, expected 328")
+          if missing:
+              raise SystemExit(f"LEE records missing from source data: {missing[:20]}")
 
-          path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          target_path.write_text(json.dumps(base, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(f"Known-good base records: {len(base['records'])}")
           print(f"LEE source colours: {len(source)}")
+          print(f"LEE records in database: {len(lee_records)}")
           print(f"LEE records matched: {matched}")
           print(f"LEE records changed: {changed}")
           PY
 
-      - name: Commit result and remove temporary files
-        if: hashFiles('_temp/lee-colors-328.json') != ''
+      - name: Commit result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git rm .github/workflows/_temp_update_lee.yml _temp/lee-colors-328.json
           git add wp-content/themes/hatakiti/assets/data/gel-colors.json
           git commit -m "Add verified LEE Filters RGB and HEX data"
           git push
