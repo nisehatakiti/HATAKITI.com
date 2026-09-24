@@ -132,8 +132,10 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/staff/sound',
         'theatre-textbook/staff/stage-management',
     );
+    $is_gel_filter_route = 'theatre-textbook/staff/lighting/filters' === $path
+        || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' );
 
-    if ( ! in_array( $path, $theatre_textbook_routes, true ) ) {
+    if ( ! in_array( $path, $theatre_textbook_routes, true ) && ! $is_gel_filter_route ) {
         return $template;
     }
 
