@@ -20496,11 +20496,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 12,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2001 Storaro Red",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20525,20 +20537,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2001",
       "color_name": "Storaro Red",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 12,
+      "transmission_display": "12%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20560,11 +20573,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 23,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2002 Storaro Orange",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20589,20 +20614,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2002",
       "color_name": "Storaro Orange",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 23,
+      "transmission_display": "23%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20624,11 +20650,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 64,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2003 Storaro Yellow",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20653,20 +20691,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2003",
       "color_name": "Storaro Yellow",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 64,
+      "transmission_display": "64%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20688,11 +20727,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 15,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2004 Storaro Green",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20717,20 +20768,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2004",
       "color_name": "Storaro Green",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 15,
+      "transmission_display": "15%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20752,11 +20804,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 18,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2005 Storaro Cyan",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20781,20 +20845,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2005",
       "color_name": "Storaro Cyan",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 18,
+      "transmission_display": "18%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20816,11 +20881,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 9,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2006 Storaro Azure",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20845,20 +20922,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2006",
       "color_name": "Storaro Azure",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 9,
+      "transmission_display": "9%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20880,11 +20958,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 10,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2007 Storaro Blue",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20909,20 +20999,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2007",
       "color_name": "Storaro Blue",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 10,
+      "transmission_display": "10%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -20944,11 +21035,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 4,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2008 Storaro Indigo",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -20973,20 +21076,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2008",
       "color_name": "Storaro Indigo",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 4,
+      "transmission_display": "4%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -21008,11 +21112,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 3,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2009 Storaro Violet",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -21037,20 +21153,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2009",
       "color_name": "Storaro Violet",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 3,
+      "transmission_display": "3%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
@@ -21072,11 +21189,23 @@
       "manufacturer_data": {
         "official_product_url": "https://jp.rosco.com/ja/product/cinegel",
         "transmission": {
-          "measurements": []
+          "measurements": [
+            {
+              "source_type": "official_filter_facts",
+              "value": 28,
+              "unit": "%",
+              "metric": "T",
+              "source": {
+                "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+                "title": "Rosco Filter Facts — The Storaro Selection",
+                "accessed_at": "2026-09-24"
+              }
+            }
+          ]
         },
         "source": {
-          "url": "https://jp.rosco.com/ja/product/cinegel",
-          "title": "Rosco R2010 Storaro Magenta",
+          "url": "https://emea.rosco.com/sites/default/files/content/resource/2016-10/RoscoUKFilterFacts_nov09.pdf",
+          "title": "Rosco Filter Facts — The Storaro Selection",
           "accessed_at": "2026-09-24"
         },
         "source_type": "manufacturer_official"
@@ -21101,20 +21230,21 @@
         "notes": "Rosco公式Storaro/Cinegel情報に基づくHATAKITI編集分類。"
       },
       "verification": {
-        "status": "partial",
+        "status": "verified",
         "last_verified_at": "2026-09-24",
         "verified_fields": [
           "product",
-          "manufacturer_data.source"
+          "manufacturer_data.source",
+          "manufacturer_data.transmission"
         ],
-        "notes": "Rosco公式Cinegel/Storaro一覧で番号・名称を確認。透過率/RGBは公式確認後に登録。"
+        "notes": "Rosco公式Filter FactsのStoraro Selectionで番号・名称・透過率を確認。RGBは登録していない。"
       },
       "manufacturer": "Rosco",
       "series": "Storaro",
       "color_number": "R2010",
       "color_name": "Storaro Magenta",
-      "transmission": null,
-      "transmission_display": "未登録",
+      "transmission": 28,
+      "transmission_display": "28%",
       "reference_rgb": null,
       "reference_hex": null,
       "reference_color_source": "未登録",
