@@ -49,7 +49,8 @@ jobs:
               number = str(raw).lstrip("Ll").zfill(3)
               src = source_map.get(number)
               if not src:
-                  missing.append(number)
+                  if number.isdigit():
+                      missing.append(number)
                   continue
 
               matched += 1
