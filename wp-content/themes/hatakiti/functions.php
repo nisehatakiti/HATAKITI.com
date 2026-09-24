@@ -145,6 +145,10 @@ function hatakiti_theatre_textbook_route( $template ) {
         return get_template_directory() . '/page-theatre-textbook.php';
     }
 
+    if ( 'theatre-textbook/staff/lighting/filters' === $path || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' ) ) {
+        return get_template_directory() . '/page-theatre-lighting-filters.php';
+    }
+
     if ( 0 === strpos( $path, 'theatre-textbook/theatre-world' ) ) {
         return get_template_directory() . '/page-theatre-world.php';
     }
