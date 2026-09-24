@@ -43652,6 +43652,272 @@
       ],
       "notes": "Rosco公式資料に基づくRoscoluxフィルター。",
       "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents"
+    },
+    {
+      "id": "roscolux-r250",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R250",
+        "color_name": "1/2 White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R250",
+      "color_name": "1/2 White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "White Diffusion の 1/2 濃度。光を柔らかく拡散する用途。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents"
+    },
+    {
+      "id": "roscolux-r251",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R251",
+        "color_name": "1/4 White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R251",
+      "color_name": "1/4 White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "White Diffusion の 1/4 濃度。光を柔らかく拡散する用途。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents"
+    },
+    {
+      "id": "roscolux-r252",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R252",
+        "color_name": "1/8 White Diffusion"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R252",
+      "color_name": "1/8 White Diffusion",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン"
+      ],
+      "notes": "White Diffusion の 1/8 濃度。軽い拡散に使う用途。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents"
+    },
+    {
+      "id": "roscolux-r253",
+      "product": {
+        "manufacturer": "Rosco",
+        "series": "Roscolux",
+        "color_number": "R253",
+        "color_name": "Hampshire Frost"
+      },
+      "manufacturer_data": {
+        "official_product_url": "https://us.rosco.com/en/lee-rosco-equivalents",
+        "transmission": {
+          "measurements": []
+        },
+        "source": {
+          "url": "https://us.rosco.com/en/lee-rosco-equivalents",
+          "title": "Rosco — Lee to Rosco Equivalents",
+          "accessed_at": "2026-09-24"
+        },
+        "source_type": "manufacturer_official"
+      },
+      "reference_color": {
+        "rgb": null,
+        "hex": null,
+        "source": {
+          "type": "unknown",
+          "url": "",
+          "title": "",
+          "accessed_at": ""
+        },
+        "method": "",
+        "confidence": "unverified"
+      },
+      "hatakiti": {
+        "uses": [
+          "ディフュージョン",
+          "フロスト"
+        ],
+        "tags": [],
+        "notes": "Rosco公式のLEE to Rosco Equivalents情報に基づくHATAKITI編集分類。"
+      },
+      "verification": {
+        "status": "partial",
+        "last_verified_at": "2026-09-24",
+        "verified_fields": [
+          "product",
+          "manufacturer_data.official_product_url",
+          "manufacturer_data.source",
+          "hatakiti.uses"
+        ],
+        "notes": "Rosco公式LEE to Rosco Equivalentsで番号・名称を確認。透過率/RGBは公式確認後に登録。"
+      },
+      "manufacturer": "Rosco",
+      "series": "Roscolux",
+      "color_number": "R253",
+      "color_name": "Hampshire Frost",
+      "transmission": null,
+      "transmission_display": "未登録",
+      "reference_rgb": null,
+      "reference_hex": null,
+      "reference_color_source": "未登録",
+      "reference_color_method": "",
+      "uses": [
+        "ディフュージョン",
+        "フロスト"
+      ],
+      "notes": "Hampshire Frost 系の拡散フィルター。光を柔らかくする用途。",
+      "detail_url": "https://us.rosco.com/en/lee-rosco-equivalents"
     }
   ]
 }
