@@ -62,7 +62,9 @@ get_header();
 <tr><td>番号</td><td>製品カタログ上の番号</td></tr>
 <tr><td>色名</td><td>色名だけでなく実際の透過光を見る</td></tr>
 <tr><td>用途</td><td>人物、背景、時間、季節、心理など何を表現するか</td></tr>
-</tbody></table></div></section>
+</tbody></table>
+<p style="margin-top:18px"><a class="hk-gel-cta" href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベースで色を探す →</a></p>
+</div></section>
 
 <section class="hk-section"><div class="hk-section-head"><h2>仕込みから本番まで</h2></div><div class="hk-steps"><span>器具・回路を確認</span><b>→</b><span>吊り込み</span><b>→</b><span>ケーブル・回路</span><b>→</b><span>フォーカス</span><b>→</b><span>明かり合わせ</span><b>→</b><span>場当たり</span><b>→</b><span>本番</span></div></section>
 
