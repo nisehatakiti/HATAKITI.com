@@ -129,6 +129,66 @@ get_header();
 </div>
 </section>
 
+<section class="hk-section">
+<div class="hk-section-head"><h2>灯体の仕組みを知る</h2><p>照明は「スイッチを入れると光る箱」ではありません。光源から出た光を、反射・レンズ・シャッター類で整えて、舞台上の必要な場所へ届けています。</p></div>
+<div class="hk-light-fixture-diagram" role="img" aria-label="舞台照明灯体の基本構造を示す模式図">
+  <div class="hk-fixture-part hk-fixture-source"><strong>光源</strong><small>LED・ランプなど</small></div>
+  <div class="hk-fixture-arrow">→</div>
+  <div class="hk-fixture-part"><strong>反射・集光</strong><small>光を前方へ集める</small></div>
+  <div class="hk-fixture-arrow">→</div>
+  <div class="hk-fixture-part"><strong>絞り・カッター</strong><small>光の範囲・形を整える</small></div>
+  <div class="hk-fixture-arrow">→</div>
+  <div class="hk-fixture-part"><strong>レンズ</strong><small>配光・焦点を整える</small></div>
+  <div class="hk-fixture-arrow">→</div>
+  <div class="hk-fixture-part hk-fixture-output"><strong>舞台上の光</strong><small>人物・背景・床など</small></div>
+</div>
+<p class="hk-diagram-caption">※これは灯体の種類を横断して考えるための概念図です。実際の構造・配置は器具によって異なります。</p>
+<div class="hk-term-grid">
+<div><h3>光源</h3><p>LEDやランプなど、実際に光を発生させる部分。光源の種類によって色、出力、発熱、制御方法などが変わります。</p></div>
+<div><h3>反射・集光</h3><p>発生した光を前方へ効率よく送り、レンズなどと組み合わせて必要な配光を作ります。</p></div>
+<div><h3>レンズ</h3><p>光の広がり方や焦点を整えます。凸、フレネル、エリスポットなど、器具によって光の性質が変わります。</p></div>
+<div><h3>光を切る・絞る部分</h3><p>必要な場所だけを照らすために、絞りやカッターなどで光の範囲・形を調整します。</p></div>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>「絞り」と「カッター」は何が違う？</h2><p>どちらも光を制御しますが、考え方が違います。</p></div>
+<div class="hk-control-diagram">
+  <div class="hk-control-card"><div class="hk-beam hk-beam-wide"></div><h3>絞り（アイリス）</h3><p>光の開口を全体として狭くしたり広くしたりします。円形に近い光の大きさを調整するイメージです。</p><strong>「光の大きさを変える」</strong></div>
+  <div class="hk-control-card"><div class="hk-beam hk-beam-cut"></div><h3>カッター（シャッター）</h3><p>器具内部のカッターを差し込んで、光の一部を直線的に切ります。窓や舞台袖など、不要な場所への光漏れを止めるのにも使います。</p><strong>「光の形・境界を切る」</strong></div>
+</div>
+<div class="hk-panel hk-lighting-note"><strong>実際のフォーカスでは：</strong>まず照らしたい範囲を決め、必要なら絞りで大きさを整え、カッターで舞台装置や袖などに当たる不要な光を切ります。その後、周囲の明かりとのつながりを確認します。</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>カッターの使い方</h2><p>「光をきれいにする」のではなく、「光を当てたくない場所を決める」と考えると分かりやすくなります。</p></div>
+<div class="hk-steps"><span>照らしたい範囲を決める</span><b>→</b><span>余計な光を探す</span><b>→</b><span>カッターを少し入れる</span><b>→</b><span>境界を見る</span><b>→</b><span>舞台上で再確認</span></div>
+<div class="hk-term-grid">
+<div><h3>舞台袖を切る</h3><p>袖幕や舞台袖に光が漏れると、暗転時などに意図しない場所が見えることがあります。カッターで光を止めます。</p></div>
+<div><h3>装置を切る</h3><p>壁やセットの一部だけを照らしたくない場合、カッターで境界を作ります。</p></div>
+<div><h3>床を切る</h3><p>人物の上半身を中心に見せたいなど、床への余分な光を抑える場合にも使います。</p></div>
+<div><h3>境界を観察する</h3><p>カッターを入れすぎると人物の一部まで欠けます。舞台全体を見ながら少しずつ調整します。</p></div>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>ゼラは「光の前に色を置く」</h2><p>カラーフィルターは、灯体から出た光に色を与えるために使います。</p></div>
+<div class="hk-gel-use-diagram">
+  <div class="hk-gel-diagram-item"><span class="hk-gel-light">白色光</span><small>灯体から出る光</small></div>
+  <b>→</b>
+  <div class="hk-gel-frame">ゼラ<br><small>フィルター</small></div>
+  <b>→</b>
+  <div class="hk-gel-stage">色のついた光<br><small>舞台上へ</small></div>
+</div>
+<div class="hk-term-grid">
+<div><h3>ゼラを入れる場所</h3><p>一般的な灯体では、専用のフィルターホルダーやフレームにカラーフィルターをセットします。具体的な位置や固定方法は灯体の機種に従います。</p></div>
+<div><h3>ゼラを選ぶ</h3><p>「青だから夜」と単純に決めず、人物、背景、時間、空間、心理など、何を表現するための色なのかを考えます。</p></div>
+<div><h3>ゼラを重ねる</h3><p>複数枚を重ねると光量低下や色の変化が起こります。必要な場合以外は、目的を明確にして使います。</p></div>
+<div><h3>熱に注意する</h3><p>従来型ランプ器具ではフィルターが高温になるため、フィルターの種類・耐熱性・器具の指定方法を確認します。LED器具でも機種ごとの指定を守ります。</p></div>
+</div>
+<div class="hk-warning"><strong>重要：</strong>灯体ごとにフィルターホルダーの位置、カッターや絞りの有無、操作方法が違います。ここでは共通する考え方を学び、実際の仕込みでは使用する器具の取扱説明書と劇場・現場の手順を優先します。</div>
+</section>
+
 <section class="hk-section"><div class="hk-section-head"><h2>代表的な器具</h2></div>
 <div class="hk-equipment">
 <article><h3>凸（平凸レンズスポット）</h3><p>比較的輪郭のはっきりした光を作りやすいスポット。舞台ではC8など、レンズ口径をインチで表す呼び方もあります。</p><p class="hk-tip">向いている考え方：<strong>「ここを狙って照らしたい」</strong></p></article>
@@ -329,7 +389,7 @@ if ( $selected_gel ) :
 <style>
 .hk-staff-hero{max-width:820px;margin:64px auto;padding:0 20px;text-align:center}.hk-staff-hero h1{font-family:var(--hk-font-serif);font-size:38px}.hk-staff-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}
 .hk-staff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.hk-staff-card,.hk-panel,.hk-four>div,.hk-equipment article,.hk-term-grid>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:24px;color:var(--hk-fg)}.hk-staff-card:hover{border-color:var(--hk-accent-warm);text-decoration:none}.hk-staff-card p,.hk-panel p,.hk-four p,.hk-equipment p,.hk-term-grid p{color:var(--hk-fg-dim);line-height:1.9}.hk-staff-card span,.hk-tip{color:var(--hk-accent-warm)}
-.hk-four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.hk-four b{font-family:var(--hk-font-serif);font-size:18px}.hk-equipment{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-equipment h3,.hk-term-grid h3{font-family:var(--hk-font-serif);margin-top:0}.hk-warning{margin:20px 0;padding:18px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);line-height:1.8}.hk-filter-table{width:100%;border-collapse:collapse}.hk-filter-table th,.hk-filter-table td{border:1px solid var(--hk-border);padding:12px;text-align:left}.hk-filter-table th{color:var(--hk-accent-warm)}.hk-steps{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--hk-border);padding:24px;background:var(--hk-bg-elevated)}.hk-steps b{color:var(--hk-accent-warm)}.hk-term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-exercise{border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:24px;line-height:1.9}.hk-exercise li{margin:8px 0}
+.hk-four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.hk-four b{font-family:var(--hk-font-serif);font-size:18px}.hk-equipment{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-equipment h3,.hk-term-grid h3{font-family:var(--hk-font-serif);margin-top:0}.hk-warning{margin:20px 0;padding:18px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);line-height:1.8}.hk-filter-table{width:100%;border-collapse:collapse}.hk-filter-table th,.hk-filter-table td{border:1px solid var(--hk-border);padding:12px;text-align:left}.hk-filter-table th{color:var(--hk-accent-warm)}.hk-light-fixture-diagram{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:26px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-fixture-part{min-width:115px;padding:18px 12px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-fixture-part strong{display:block;font-family:var(--hk-font-serif)}.hk-fixture-part small{display:block;margin-top:6px;color:var(--hk-fg-dim);font-size:11px;line-height:1.5}.hk-fixture-output{border-color:var(--hk-accent-warm)}.hk-fixture-arrow{font-size:20px;color:var(--hk-accent-warm)}.hk-diagram-caption{font-size:11px;color:var(--hk-fg-faint);margin-top:9px}.hk-control-diagram{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hk-control-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:20px}.hk-control-card h3{font-family:var(--hk-font-serif)}.hk-control-card>strong{color:var(--hk-accent-warm)}.hk-beam{height:105px;position:relative;margin-bottom:18px;overflow:hidden;background:var(--hk-bg-card)}.hk-beam:after{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-top:88px solid var(--hk-accent-warm);opacity:.7}.hk-beam-wide:after{border-left-width:105px;border-right-width:105px}.hk-beam-cut:after{clip-path:polygon(0 0,100% 0,78% 100%,0 100%)}.hk-gel-use-diagram{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:28px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-gel-diagram-item,.hk-gel-frame,.hk-gel-stage{min-width:125px;min-height:75px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;border:1px solid var(--hk-border)}.hk-gel-light{font-weight:700}.hk-gel-frame{border-color:var(--hk-accent-warm)}.hk-gel-stage{background:var(--hk-bg-card)}.hk-gel-diagram-item small,.hk-gel-frame small,.hk-gel-stage small{display:block;font-size:10px;color:var(--hk-fg-dim)}@media(max-width:700px){.hk-control-diagram{grid-template-columns:1fr}.hk-light-fixture-diagram,.hk-gel-use-diagram{justify-content:flex-start}.hk-fixture-arrow{transform:rotate(90deg)}}.hk-steps{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--hk-border);padding:24px;background:var(--hk-bg-elevated)}.hk-steps b{color:var(--hk-accent-warm)}.hk-term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-exercise{border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:24px;line-height:1.9}.hk-exercise li{margin:8px 0}
 @media(max-width:850px){.hk-four{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.hk-staff-hero h1{font-size:30px}.hk-staff-grid,.hk-equipment,.hk-term-grid,.hk-four{grid-template-columns:1fr}.hk-steps{justify-content:flex-start}}
 .hk-gel-detail{border-top:1px solid var(--hk-border)}.hk-gel-detail-top{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:28px;align-items:center}.hk-gel-detail-swatch{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.55)}.hk-gel-detail-swatch span{font-size:12px}.hk-gel-detail-swatch strong{font-size:28px;margin-top:8px}.hk-gel-detail-swatch.is-missing{background:repeating-linear-gradient(135deg,var(--hk-bg-card),var(--hk-bg-card) 12px,var(--hk-bg-elevated) 12px,var(--hk-bg-elevated) 24px);color:var(--hk-fg-dim);text-shadow:none;text-align:center}.hk-gel-detail-top h2{font-family:var(--hk-font-serif);font-size:30px}.hk-gel-detail-brand{color:var(--hk-accent-warm)}.hk-gel-detail-warning{border-left:3px solid var(--hk-accent-warm);padding:12px 15px;background:var(--hk-bg-card);color:var(--hk-fg-dim);line-height:1.8}.hk-gel-detail-values{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.hk-gel-detail-values>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-gel-detail-values span{display:block;font-size:10px;color:var(--hk-accent-warm)}.hk-gel-detail-values strong{display:block;margin-top:6px}.hk-gel-detail-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.hk-gel-detail-columns>div{border:1px solid var(--hk-border);padding:18px;background:var(--hk-bg-elevated)}.hk-gel-detail-columns h3{font-family:var(--hk-font-serif);margin-top:0}.hk-gel-detail-columns p{color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-gel-back{display:inline-block;margin-top:20px;color:var(--hk-accent-warm)}@media(max-width:700px){.hk-gel-detail-top,.hk-gel-detail-values,.hk-gel-detail-columns{grid-template-columns:1fr}.hk-gel-detail-swatch{min-height:220px}}.hk-gel-notice{margin-top:0}.hk-gel-notice-inner{border:1px solid var(--hk-border);border-left:4px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:22px}.hk-gel-notice-inner p{color:var(--hk-fg-dim);line-height:1.9;margin:.7em 0}.hk-gel-caution{font-weight:700;color:var(--hk-fg)!important}.hk-gel-search{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-gel-search label{font-size:12px;color:var(--hk-fg-dim);position:relative}.hk-gel-search input,.hk-gel-search select{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:11px;border:1px solid var(--hk-border);background:var(--hk-bg-card);color:var(--hk-fg)}.hk-gel-unit{float:right;font-size:11px}.hk-gel-sort-wrap,.hk-gel-actions{display:flex;align-items:end}.hk-gel-actions button{width:100%;padding:11px;border:1px solid var(--hk-border);background:transparent;color:var(--hk-fg);cursor:pointer}.hk-gel-actions button:hover{border-color:var(--hk-accent-warm);color:var(--hk-accent-warm)}.hk-gel-usage{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;padding:15px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-gel-usage>span{width:100%;font-size:12px;color:var(--hk-accent-warm);margin-bottom:2px}.hk-gel-usage label{font-size:12px}.hk-gel-usage input{margin-right:4px}.hk-gel-result-head{display:flex;justify-content:space-between;align-items:end}.hk-gel-result-head #hk-gel-count{color:var(--hk-fg-dim);font-size:13px}.hk-gel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.hk-gel-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);overflow:hidden}.hk-gel-card:hover{border-color:var(--hk-accent-warm)}.hk-gel-card-link{display:block;color:inherit;text-decoration:none}.hk-gel-swatch{height:180px;background:var(--hk-gel-color);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-shadow:0 1px 2px rgba(0,0,0,.5);color:#fff}.hk-gel-swatch span{font-size:11px;letter-spacing:.08em}.hk-gel-swatch strong{font-size:20px}.hk-gel-swatch small{font-size:11px}.hk-gel-swatch-missing{background:repeating-linear-gradient(135deg,var(--hk-bg-card),var(--hk-bg-card) 10px,var(--hk-bg-elevated) 10px,var(--hk-bg-elevated) 20px);text-align:center;text-shadow:none;color:var(--hk-fg-dim)}.hk-gel-meta{padding:18px}.hk-gel-brand{font-size:11px;color:var(--hk-accent-warm)}.hk-gel-meta h3{margin:5px 0 14px;font-family:var(--hk-font-serif)}.hk-gel-meta dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}.hk-gel-meta dl div{border-top:1px solid var(--hk-border);padding-top:8px}.hk-gel-meta dt{font-size:10px;color:var(--hk-fg-dim)}.hk-gel-meta dd{margin:3px 0 0;font-size:13px}.hk-gel-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:13px}.hk-gel-tags span{font-size:10px;border:1px solid var(--hk-border);padding:4px 7px;color:var(--hk-fg-dim)}.hk-gel-card-note{font-size:10px;color:var(--hk-fg-faint);margin-bottom:0}.hk-gel-empty{border:1px dashed var(--hk-border);padding:35px;text-align:center;color:var(--hk-fg-dim)}.hk-gel-detail-rule{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-gel-detail-rule>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-gel-detail-rule b{color:var(--hk-accent-warm)}.hk-gel-detail-rule p{color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-filter-note strong{color:var(--hk-fg)}
 @media(max-width:900px){.hk-gel-search{grid-template-columns:repeat(2,1fr)}.hk-gel-grid{grid-template-columns:repeat(2,1fr)}.hk-gel-detail-rule{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.hk-gel-search,.hk-gel-grid,.hk-gel-detail-rule{grid-template-columns:1fr}}
