@@ -401,6 +401,144 @@ get_header();
 <?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
   <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png' ) ); ?>" alt="灯体内部の光源、反射鏡、レンズ、絞り、カッター、ゼラホルダーの位置を示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-12-fixture-parts.png</div>
+    <p>この位置に灯体内部の部品配置図を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>灯体の中では、光源から出た光を反射・集光・整形し、必要な光に加工します。絞り・カッター・ゼラホルダーがどこにあるかも、この図で確認できます。</figcaption>
+</figure>
+
+  <section class="hk-subsection">
+    <h3>3-1　光源</h3>
+    <p>まず、光そのものを出す部分が<strong>光源</strong>です。</p>
+    <p>昔から使われてきた舞台照明ではハロゲンランプなどの電球が代表的でした。現在はLEDを光源にした灯体も増えています。</p>
+    <p>光源が変わると、消費電力、発熱、色の作り方、調光方法などにも違いが出ます。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「光源って、要するに電球みたいなもの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そうです。まず「光を生み出すところ」が光源です。ただし、舞台照明では光源そのものを見るのではなく、その光を灯体の中でどう使うかが重要になります。</p></div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-2　反射鏡</h3>
+    <p>光源から出た光は、すべてが舞台に向かって進むわけではありません。そこで使われるのが<strong>反射鏡</strong>です。</p>
+    <p>反射鏡で光を反射させることで、光源から出た光を前方へ効率よく導きます。</p>
+    <p>灯体によって反射鏡の形や配置は異なります。つまり、反射鏡も光の「広がり方」や「集まり方」に関係する重要な部分です。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-3　レンズ</h3>
+    <p>次にレンズです。レンズは光の進む方向を変え、光を集めたり、広げたりするために使われます。</p>
+    <p>第2章で見た<strong>凸レンズ</strong>や<strong>フレネルレンズ</strong>も、この役割を担っています。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「レンズを動かすと、光の広がりも変わるの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>変わります。灯体によって仕組みは違いますが、レンズや光源との位置関係を変えることで、光の広がり方を調整できるものがあります。</p></div>
+
+    <p>この「光をどこまで広げるか」は、第1章で出てきた<strong>5つの視点の「広がり」</strong>につながっています。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-4　光軸とビーム</h3>
+    <p>灯体から出ていく光を考えるとき、中心となる方向を<strong>光軸</strong>として考えると分かりやすくなります。</p>
+    <p>そして、灯体から舞台へ向かって進む光のまとまりを<strong>ビーム</strong>として捉えます。</p>
+    <p>照明を仕込むときは、「どこに灯体があるか」だけでなく、<strong>その灯体からどの方向へ、どれくらいの範囲の光が出るのか</strong>を考えます。</p>
+
+    <div class="hk-panel">
+      <h3>光を考えるときの基本</h3>
+      <p><strong>灯体の位置 ＋ 光軸の方向 ＋ ビームの広がり</strong></p>
+      <p>この3つを合わせて考えると、「この灯体をどこへ向ければ、どこが照らされるか」をイメージしやすくなります。</p>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-5　絞り</h3>
+    <p>灯体によっては、光の広がりを調整するための<strong>絞り</strong>があります。</p>
+    <p>ここでいう絞りは、単純に「暗くする」という意味ではありません。<strong>光の広がる範囲を狭くする</strong>ための機構として考えると分かりやすいでしょう。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「絞るって、暗くするってことじゃないの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>照明では、そこを分けて考えます。明るさを変えるのは調光の仕事。絞りは、光をどこまで広げるかを調整するためのものです。</p></div>
+
+    <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png' ) ); ?>" alt="広いビームと狭いビームの違いを、灯体から出る光の広がりと照射範囲で比較した図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-11-beam-width.png</div>
+    <p>この位置に広いビームと狭いビームの比較図を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>ビーム角が広いと照射範囲が広がり、狭いと光が集中します。同じ高さ・同じ出力でも、光の広がり方によって照射範囲が変わります。</figcaption>
+</figure>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-6　カッター</h3>
+    <p>エリスポットなどに備わっている<strong>カッター</strong>は、光の一部を遮って、光の形や境界を作るための機構です。</p>
+    <p>たとえば、舞台の床には当てたいけれど、背景の幕には光を当てたくない。あるいは、窓のような四角い範囲だけを照らしたい。</p>
+    <p>そんなときに、カッターを使って<strong>「光をどこまで当てるか」</strong>を細かく決めます。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「光を切って、形まで作れるんだ！」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そうです。カッターは「光を減らす部品」ではなく、<strong>光の境界を作るための道具</strong>として考えると理解しやすくなります。</p></div>
+
+    <div class="hk-panel hk-warning">
+      <strong>絞りとカッターの違い</strong>
+      <p><strong>絞り：</strong>光の広がりを調整する。</p>
+      <p><strong>カッター：</strong>光の一部を遮って、境界や形を作る。</p>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-7　ゼラホルダー</h3>
+    <p>従来型の灯体では、光の色を変えるために<strong>カラーフィルター（通称：ゼラ）</strong>を使うことがあります。</p>
+    <p>そのゼラを灯体の前に固定するための部分が<strong>ゼラホルダー</strong>です。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「じゃあ、色を変えたいときは、このゼラホルダーにゼラを入れるんだね？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>その通りです。灯体によってホルダーの位置やサイズは異なりますが、基本的には灯体の光がゼラを通るように取り付けます。</p></div>
+
+    <p>ゼラそのものについては、<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベース</a>で色番号や透過率などを確認できます。</p>
+  </section>
+
+  <div class="hk-panel hk-summary">
+    <h3>第3章まとめ</h3>
+    <p>灯体の中では、光源から出た光をそのまま舞台へ送っているわけではありません。</p>
+    <p><strong>光源 → 反射鏡 → レンズ → 絞り・カッター → 舞台</strong>というように、光を整えながら必要な形に近づけています。</p>
+    <p>灯体によって構造は違いますが、<strong>「光を作る」ではなく「必要な光に加工する」</strong>と考えると、灯体の役割が分かりやすくなります。</p>
+  </div>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「中の仕組みが分かると、灯体の違いも少し分かってきた！」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup">
+    <p>次は、灯体を「どこから当てるか」です。</p>
+    <p>同じ灯体でも、取り付ける場所や方向が変われば、舞台に届く光は大きく変わります。</p>
+  </div>
+</section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
+
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-4' === $path ) : ?>
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第4章　光をどこから当てる？</h1><p>同じ灯体でも、取り付ける場所と向きを変えると舞台の見え方は大きく変わります。ここでは照明の「位置」と「方向」を整理します。</p></header>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
@@ -556,143 +694,6 @@ get_header();
 </section>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
-</nav>
-<?php else : ?>
-  <div class="hk-illustration-placeholder" aria-label="図解準備中">
-    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
-    <div class="hk-illustration-placeholder-file">lighting-12-fixture-parts.png</div>
-    <p>この位置に灯体内部の部品配置図を配置します。</p>
-  </div>
-<?php endif; ?>
-<figcaption>灯体の中では、光源から出た光を反射・集光・整形し、必要な光に加工します。絞り・カッター・ゼラホルダーがどこにあるかも、この図で確認できます。</figcaption>
-</figure>
-
-  <section class="hk-subsection">
-    <h3>3-1　光源</h3>
-    <p>まず、光そのものを出す部分が<strong>光源</strong>です。</p>
-    <p>昔から使われてきた舞台照明ではハロゲンランプなどの電球が代表的でした。現在はLEDを光源にした灯体も増えています。</p>
-    <p>光源が変わると、消費電力、発熱、色の作り方、調光方法などにも違いが出ます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「光源って、要するに電球みたいなもの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。まず「光を生み出すところ」が光源です。ただし、舞台照明では光源そのものを見るのではなく、その光を灯体の中でどう使うかが重要になります。</p></div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-2　反射鏡</h3>
-    <p>光源から出た光は、すべてが舞台に向かって進むわけではありません。そこで使われるのが<strong>反射鏡</strong>です。</p>
-    <p>反射鏡で光を反射させることで、光源から出た光を前方へ効率よく導きます。</p>
-    <p>灯体によって反射鏡の形や配置は異なります。つまり、反射鏡も光の「広がり方」や「集まり方」に関係する重要な部分です。</p>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-3　レンズ</h3>
-    <p>次にレンズです。レンズは光の進む方向を変え、光を集めたり、広げたりするために使われます。</p>
-    <p>第2章で見た<strong>凸レンズ</strong>や<strong>フレネルレンズ</strong>も、この役割を担っています。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「レンズを動かすと、光の広がりも変わるの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>変わります。灯体によって仕組みは違いますが、レンズや光源との位置関係を変えることで、光の広がり方を調整できるものがあります。</p></div>
-
-    <p>この「光をどこまで広げるか」は、第1章で出てきた<strong>5つの視点の「広がり」</strong>につながっています。</p>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-4　光軸とビーム</h3>
-    <p>灯体から出ていく光を考えるとき、中心となる方向を<strong>光軸</strong>として考えると分かりやすくなります。</p>
-    <p>そして、灯体から舞台へ向かって進む光のまとまりを<strong>ビーム</strong>として捉えます。</p>
-    <p>照明を仕込むときは、「どこに灯体があるか」だけでなく、<strong>その灯体からどの方向へ、どれくらいの範囲の光が出るのか</strong>を考えます。</p>
-
-    <div class="hk-panel">
-      <h3>光を考えるときの基本</h3>
-      <p><strong>灯体の位置 ＋ 光軸の方向 ＋ ビームの広がり</strong></p>
-      <p>この3つを合わせて考えると、「この灯体をどこへ向ければ、どこが照らされるか」をイメージしやすくなります。</p>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-5　絞り</h3>
-    <p>灯体によっては、光の広がりを調整するための<strong>絞り</strong>があります。</p>
-    <p>ここでいう絞りは、単純に「暗くする」という意味ではありません。<strong>光の広がる範囲を狭くする</strong>ための機構として考えると分かりやすいでしょう。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「絞るって、暗くするってことじゃないの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>照明では、そこを分けて考えます。明るさを変えるのは調光の仕事。絞りは、光をどこまで広げるかを調整するためのものです。</p></div>
-
-    <figure class="hk-illustration">
-<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png'; ?>
-<?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png' ) ); ?>" alt="広いビームと狭いビームの違いを、灯体から出る光の広がりと照射範囲で比較した図" loading="lazy">
-<?php else : ?>
-  <div class="hk-illustration-placeholder" aria-label="図解準備中">
-    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
-    <div class="hk-illustration-placeholder-file">lighting-11-beam-width.png</div>
-    <p>この位置に広いビームと狭いビームの比較図を配置します。</p>
-  </div>
-<?php endif; ?>
-<figcaption>ビーム角が広いと照射範囲が広がり、狭いと光が集中します。同じ高さ・同じ出力でも、光の広がり方によって照射範囲が変わります。</figcaption>
-</figure>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-6　カッター</h3>
-    <p>エリスポットなどに備わっている<strong>カッター</strong>は、光の一部を遮って、光の形や境界を作るための機構です。</p>
-    <p>たとえば、舞台の床には当てたいけれど、背景の幕には光を当てたくない。あるいは、窓のような四角い範囲だけを照らしたい。</p>
-    <p>そんなときに、カッターを使って<strong>「光をどこまで当てるか」</strong>を細かく決めます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「光を切って、形まで作れるんだ！」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。カッターは「光を減らす部品」ではなく、<strong>光の境界を作るための道具</strong>として考えると理解しやすくなります。</p></div>
-
-    <div class="hk-panel hk-warning">
-      <strong>絞りとカッターの違い</strong>
-      <p><strong>絞り：</strong>光の広がりを調整する。</p>
-      <p><strong>カッター：</strong>光の一部を遮って、境界や形を作る。</p>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-7　ゼラホルダー</h3>
-    <p>従来型の灯体では、光の色を変えるために<strong>カラーフィルター（通称：ゼラ）</strong>を使うことがあります。</p>
-    <p>そのゼラを灯体の前に固定するための部分が<strong>ゼラホルダー</strong>です。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「じゃあ、色を変えたいときは、このゼラホルダーにゼラを入れるんだね？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>その通りです。灯体によってホルダーの位置やサイズは異なりますが、基本的には灯体の光がゼラを通るように取り付けます。</p></div>
-
-    <p>ゼラそのものについては、<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベース</a>で色番号や透過率などを確認できます。</p>
-  </section>
-
-  <div class="hk-panel hk-summary">
-    <h3>第3章まとめ</h3>
-    <p>灯体の中では、光源から出た光をそのまま舞台へ送っているわけではありません。</p>
-    <p><strong>光源 → 反射鏡 → レンズ → 絞り・カッター → 舞台</strong>というように、光を整えながら必要な形に近づけています。</p>
-    <p>灯体によって構造は違いますが、<strong>「光を作る」ではなく「必要な光に加工する」</strong>と考えると、灯体の役割が分かりやすくなります。</p>
-  </div>
-
-  <div class="hk-nyakakichi">
-    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
-    <div class="hk-nyakakichi-question"><p>「中の仕組みが分かると、灯体の違いも少し分かってきた！」</p></div>
-  </div>
-  <div class="hk-nyakakichi-followup">
-    <p>次は、灯体を「どこから当てるか」です。</p>
-    <p>同じ灯体でも、取り付ける場所や方向が変われば、舞台に届く光は大きく変わります。</p>
-  </div>
-</section>
-<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 前へ</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
   <span class="hk-chapter-nav-disabled">次の章 →</span>
 </nav>
