@@ -401,164 +401,6 @@ get_header();
 <?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
   <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png' ) ); ?>" alt="灯体内部の光源、反射鏡、レンズ、絞り、カッター、ゼラホルダーの位置を示す図" loading="lazy">
-<?php elseif ( 'theatre-textbook/staff/lighting/chapter-4' === $path ) : ?>
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第4章　光をどこから当てる？</h1><p>同じ灯体でも、取り付ける場所と向きを変えると舞台の見え方は大きく変わります。ここでは照明の「位置」と「方向」を整理します。</p></header>
-<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
-</nav>
-<section class="hk-section">
-  <div class="hk-section-head">
-    <h2>導入　「どこから当てるか」で光は変わる</h2>
-    <p>第1章で、照明には「方向」という視点があることを学びました。第4章では、その方向を舞台上の具体的な位置として見ていきます。</p>
-  </div>
-  <p>同じ明るさの灯体でも、客席側から当てるのか、横から当てるのか、後ろから当てるのかで、人物の立体感や影の出方は大きく変わります。</p>
-  <p>照明では「灯体を何台使うか」だけでなく、<strong>「どこに置き、どこへ向けるか」</strong>がとても重要です。</p>
-
-  <div class="hk-nyakakichi">
-    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
-    <div class="hk-nyakakichi-question"><p>「同じ灯体でも、置く場所が違うだけでそんなに変わるの？」</p></div>
-  </div>
-  <div class="hk-nyakakichi-followup"><p>変わります。まずは、舞台のどの方向から光が来るのかを言葉で整理してみましょう。</p></div>
-
-  <div class="hk-panel">
-    <h3>照明位置を考える基本</h3>
-    <p><strong>前・横・後ろ・上・下／ホリゾント</strong>など、光の入口を分けて考えます。</p>
-    <p>実際の劇場では、これらを組み合わせて一つの明かりを作ります。</p>
-  </div>
-</section>
-
-<section class="hk-section">
-  <div class="hk-section-head"><h2>第4章　舞台のどこから光を入れる？</h2><p>まずは代表的な照明位置を、一つずつ見ていきます。</p></div>
-
-  <section class="hk-subsection">
-    <h3>4-1　前明かり</h3>
-    <p><strong>前明かり</strong>は、客席側から舞台上の人物や空間へ向ける光です。</p>
-    <p>人物の顔や表情を観客に見せるための基本的な光として使われます。舞台全体を見せるためのベースとして考えることもできます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「客席から舞台に向かって当てるのが前明かりなんだね！」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。正面だけでなく、少し斜め上から当てるなど、劇場やプランによって角度を調整します。</p></div>
-
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-front">↗</span><span class="hk-position-label hk-position-front">前明かり</span><span class="hk-audience">客席</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>4-2　サイドライト</h3>
-    <p><strong>サイドライト</strong>は、舞台の左右方向から入れる光です。</p>
-    <p>横から光を当てると、身体の輪郭や立体感が出やすくなります。ダンスや身体表現では、身体のラインを見せるために使われることもあります。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「横から当てると、顔より身体の形が目立つの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そういう傾向があります。もちろん角度や高さによって変わりますが、正面からの光とは違う立体感を作れます。</p></div>
-
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-side-left">→</span><span class="hk-light-ray hk-ray-side-right">←</span>
-        <span class="hk-position-label hk-position-left">サイド</span><span class="hk-position-label hk-position-right">サイド</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>4-3　バックライト</h3>
-    <p><strong>バックライト</strong>は、人物の後ろ側から客席方向へ向ける光です。</p>
-    <p>人物の輪郭を浮かび上がらせたり、背景との分離を作ったりするのに役立ちます。人物の正面を直接照らす光とは役割が異なります。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「後ろから光を当てたら、顔が見えなくならない？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>正面からの光が弱ければ、そうなることがあります。でも、それが目的ならシルエットとして使えます。前明かりなどと組み合わせれば、輪郭を出しながら人物も見せられます。</p></div>
-
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-back">↙</span><span class="hk-position-label hk-position-back">バック</span><span class="hk-audience">客席</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>4-4　トップライト</h3>
-    <p><strong>トップライト</strong>は、人物や舞台空間の上方から下向きに入れる光です。</p>
-    <p>頭や肩、床などに特徴的な影を作りやすく、人物を周囲の空間から切り出すように見せることもできます。</p>
-    <p>ただし、真上に近いほど顔の目の周りに影ができやすいため、人物をきれいに見せたい場合は他の方向の光と組み合わせます。</p>
-
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram hk-stage-top">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-top">↓</span><span class="hk-position-label hk-position-top">トップ</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>4-5　ホリゾントからの光</h3>
-    <p>舞台奥のホリゾント幕や背景を照らすための光には、<strong>ローホリゾント</strong>と<strong>アッパーホリゾント</strong>があります。</p>
-    <p>ローホリは下側から、アッパーホリは上側からホリゾントへ光を入れます。どちらも背景の明るさや色を作るために使われます。</p>
-
-    <div class="hk-panel">
-      <h3>ローホリとアッパーホリ</h3>
-      <p><strong>ローホリ：</strong>舞台床付近から上向きにホリゾントを照らす。</p>
-      <p><strong>アッパーホリ：</strong>舞台上方から下向きにホリゾントを照らす。</p>
-      <p>上下から組み合わせることで、背景を均一に近づけたり、グラデーションを作ったりすることもできます。</p>
-    </div>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「ホリゾントライトって、舞台上の人を照らすライトじゃなくて背景用なんだ！」</p></div>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>4-6　SSって何？</h3>
-    <p>舞台照明でよく出てくる<strong>SS</strong>は、灯体の種類ではありません。</p>
-    <p>SSは一般に<strong>サイド・サイド</strong>の位置、つまり舞台の左右側方から入れるサイド光を指す言葉として使われます。劇場や現場によって呼び方や細かな区分は異なることがあります。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「SSっていう名前のライトがあるのかと思ってた！」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>ここは初心者が混乱しやすいところです。「SSを入れる」は、基本的にはサイド方向から光を入れる、という意味で使われます。</p></div>
-  </section>
-</section>
-
-<section class="hk-section">
-  <div class="hk-section-head"><h2>4-7　組み合わせて考える</h2><p>実際の舞台では、前明かりだけ、サイドだけというように一種類だけで終わることは多くありません。</p></div>
-  <p>たとえば人物を見せたいなら、前明かりで顔を見せながら、サイドで身体の立体感を作り、バックで輪郭を出す、といった組み合わせが考えられます。</p>
-  <p>重要なのは「この位置の光が正解」と覚えることではありません。<strong>どんな見え方が欲しいから、どの方向の光を足すのか</strong>を考えることです。</p>
-
-  <div class="hk-nyakakichi">
-    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
-    <div class="hk-nyakakichi-question"><p>「なるほど。灯体の名前より先に、どこから光が欲しいかを考えるんだね！」</p></div>
-  </div>
-  <div class="hk-nyakakichi-followup"><p>その通りです。次の章では、その光を実際に図面の上でどう配置するのかを見ていきます。</p></div>
-
-  <div class="hk-panel hk-summary">
-    <h3>第4章まとめ</h3>
-    <p>代表的な照明位置には、<strong>前明かり・サイド・バック・トップ・ホリゾント</strong>があります。</p>
-    <p>ローホリとアッパーホリは、ホリゾントを照らすための上下方向の光です。</p>
-    <p>そして<strong>SSは灯体の種類ではなく、サイド方向の照明位置を表す言葉</strong>です。</p>
-    <p>照明を考えるときは、「何の灯体を使うか」だけでなく、「どこから光が来てほしいか」を先に考えると整理しやすくなります。</p>
-  </div>
-</section>
-<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
-</nav>
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -845,54 +687,163 @@ if ( $selected_gel ) :
 })();
 </script>
 
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-4' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第4章　光をどこから当てる？</h1><p>同じ灯体でも、取り付ける場所と向きを変えると舞台の見え方は大きく変わります。ここでは照明の「位置」と「方向」を整理します。</p></header>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>導入　「どこから当てるか」で光は変わる</h2>
+    <p>第1章で、照明には「方向」という視点があることを学びました。第4章では、その方向を舞台上の具体的な位置として見ていきます。</p>
+  </div>
+  <p>同じ明るさの灯体でも、客席側から当てるのか、横から当てるのか、後ろから当てるのかで、人物の立体感や影の出方は大きく変わります。</p>
+  <p>照明では「灯体を何台使うか」だけでなく、<strong>「どこに置き、どこへ向けるか」</strong>がとても重要です。</p>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「同じ灯体でも、置く場所が違うだけでそんなに変わるの？」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>変わります。まずは、舞台のどの方向から光が来るのかを言葉で整理してみましょう。</p></div>
+
+  <div class="hk-panel">
+    <h3>照明位置を考える基本</h3>
+    <p><strong>前・横・後ろ・上・下／ホリゾント</strong>など、光の入口を分けて考えます。</p>
+    <p>実際の劇場では、これらを組み合わせて一つの明かりを作ります。</p>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>第4章　舞台のどこから光を入れる？</h2><p>まずは代表的な照明位置を、一つずつ見ていきます。</p></div>
+
+  <section class="hk-subsection">
+    <h3>4-1　前明かり</h3>
+    <p><strong>前明かり</strong>は、客席側から舞台上の人物や空間へ向ける光です。</p>
+    <p>人物の顔や表情を観客に見せるための基本的な光として使われます。舞台全体を見せるためのベースとして考えることもできます。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「客席から舞台に向かって当てるのが前明かりなんだね！」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そうです。正面だけでなく、少し斜め上から当てるなど、劇場やプランによって角度を調整します。</p></div>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-front">↗</span><span class="hk-position-label hk-position-front">前明かり</span><span class="hk-audience">客席</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-2　サイドライト</h3>
+    <p><strong>サイドライト</strong>は、舞台の左右方向から入れる光です。</p>
+    <p>横から光を当てると、身体の輪郭や立体感が出やすくなります。ダンスや身体表現では、身体のラインを見せるために使われることもあります。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「横から当てると、顔より身体の形が目立つの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そういう傾向があります。もちろん角度や高さによって変わりますが、正面からの光とは違う立体感を作れます。</p></div>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-side-left">→</span><span class="hk-light-ray hk-ray-side-right">←</span>
+        <span class="hk-position-label hk-position-left">サイド</span><span class="hk-position-label hk-position-right">サイド</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-3　バックライト</h3>
+    <p><strong>バックライト</strong>は、人物の後ろ側から客席方向へ向ける光です。</p>
+    <p>人物の輪郭を浮かび上がらせたり、背景との分離を作ったりするのに役立ちます。人物の正面を直接照らす光とは役割が異なります。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「後ろから光を当てたら、顔が見えなくならない？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>正面からの光が弱ければ、そうなることがあります。でも、それが目的ならシルエットとして使えます。前明かりなどと組み合わせれば、輪郭を出しながら人物も見せられます。</p></div>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-back">↙</span><span class="hk-position-label hk-position-back">バック</span><span class="hk-audience">客席</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-4　トップライト</h3>
+    <p><strong>トップライト</strong>は、人物や舞台空間の上方から下向きに入れる光です。</p>
+    <p>頭や肩、床などに特徴的な影を作りやすく、人物を周囲の空間から切り出すように見せることもできます。</p>
+    <p>ただし、真上に近いほど顔の目の周りに影ができやすいため、人物をきれいに見せたい場合は他の方向の光と組み合わせます。</p>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram hk-stage-top">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-top">↓</span><span class="hk-position-label hk-position-top">トップ</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-5　ホリゾントからの光</h3>
+    <p>舞台奥のホリゾント幕や背景を照らすための光には、<strong>ローホリゾント</strong>と<strong>アッパーホリゾント</strong>があります。</p>
+    <p>ローホリは下側から、アッパーホリは上側からホリゾントへ光を入れます。どちらも背景の明るさや色を作るために使われます。</p>
+
+    <div class="hk-panel">
+      <h3>ローホリとアッパーホリ</h3>
+      <p><strong>ローホリ：</strong>舞台床付近から上向きにホリゾントを照らす。</p>
+      <p><strong>アッパーホリ：</strong>舞台上方から下向きにホリゾントを照らす。</p>
+      <p>上下から組み合わせることで、背景を均一に近づけたり、グラデーションを作ったりすることもできます。</p>
+    </div>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「ホリゾントライトって、舞台上の人を照らすライトじゃなくて背景用なんだ！」</p></div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-6　SSって何？</h3>
+    <p>舞台照明でよく出てくる<strong>SS</strong>は、灯体の種類ではありません。</p>
+    <p>SSは一般に<strong>サイド・サイド</strong>の位置、つまり舞台の左右側方から入れるサイド光を指す言葉として使われます。劇場や現場によって呼び方や細かな区分は異なることがあります。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「SSっていう名前のライトがあるのかと思ってた！」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>ここは初心者が混乱しやすいところです。「SSを入れる」は、基本的にはサイド方向から光を入れる、という意味で使われます。</p></div>
+  </section>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>4-7　組み合わせて考える</h2><p>実際の舞台では、前明かりだけ、サイドだけというように一種類だけで終わることは多くありません。</p></div>
+  <p>たとえば人物を見せたいなら、前明かりで顔を見せながら、サイドで身体の立体感を作り、バックで輪郭を出す、といった組み合わせが考えられます。</p>
+  <p>重要なのは「この位置の光が正解」と覚えることではありません。<strong>どんな見え方が欲しいから、どの方向の光を足すのか</strong>を考えることです。</p>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「なるほど。灯体の名前より先に、どこから光が欲しいかを考えるんだね！」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>その通りです。次の章では、その光を実際に図面の上でどう配置するのかを見ていきます。</p></div>
+
+  <div class="hk-panel hk-summary">
+    <h3>第4章まとめ</h3>
+    <p>代表的な照明位置には、<strong>前明かり・サイド・バック・トップ・ホリゾント</strong>があります。</p>
+    <p>ローホリとアッパーホリは、ホリゾントを照らすための上下方向の光です。</p>
+    <p>そして<strong>SSは灯体の種類ではなく、サイド方向の照明位置を表す言葉</strong>です。</p>
+    <p>照明を考えるときは、「何の灯体を使うか」だけでなく、「どこから光が来てほしいか」を先に考えると整理しやすくなります。</p>
+  </div>
+</section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
+
 <?php elseif ( isset( $pages[$path] ) && 'theatre-textbook/staff/sound' === $path ) : ?>
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p><h1>音響</h1><p><?php echo esc_html($pages[$path]['lead']); ?></p></header>
-<section class="hk-section"><div class="hk-section-head"><h2>音響スタッフが扱うもの</h2></div><div class="hk-four">
-<div><b>マイク</b><p>声や音を電気信号に変える入口。種類や設置方法で拾い方が変わります。</p></div>
-<div><b>ミキサー</b><p>複数の音をまとめ、レベルや音質などを調整します。</p></div>
-<div><b>スピーカー</b><p>客席へ音を届ける出口。配置や向きも重要です。</p></div>
-<div><b>SE・BGM</b><p>音楽だけでなく、足音、ドア、環境音なども演出材料になります。</p></div>
-</div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>まず覚える音響用語</h2></div><div class="hk-term-grid">
-<div><h3>ゲイン</h3><p>入力段で信号をどの程度扱うかを調整する考え方。単純な「客席の音量」と同じではありません。</p></div>
-<div><h3>フェーダー</h3><p>各チャンネルなどのレベルを操作するためのコントロール。</p></div>
-<div><h3>EQ</h3><p>周波数帯域ごとのバランスを調整し、音色や聞こえ方を整えます。</p></div>
-<div><h3>ハウリング</h3><p>マイクがスピーカーから出た音を再び拾うなどして、特定周波数が増幅される現象。配置やゲインなど複数の要因を確認します。</p></div>
-</div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>音響プランを考える</h2></div><div class="hk-panel"><p>「音を入れる」こと自体が目的ではありません。観客に何を感じ、何を想像してほしいのかから逆算します。</p><ul><li>現実音として聞かせる</li><li>時間・場所を示す</li><li>心理を補助する</li><li>場面転換をつなぐ</li><li>あえて無音にする</li></ul></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>5分音響エチュード</h2></div><div class="hk-exercise"><h3>「待つ」に音をつける</h3><ol><li>俳優が何もせず30秒待つ。</li><li>時計の音だけを加える。</li><li>遠くの環境音を加える。</li><li>BGMを加える。</li><li>最後に全部なくして無音にする。</li></ol><p>同じ演技でも、音によって観客が受け取る時間感覚や心理が変わることを確認します。</p></div></section>
-
-<?php elseif ( isset( $pages[$path] ) ) : ?>
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p><h1>舞台監督</h1><p><?php echo esc_html($pages[$path]['lead']); ?></p></header>
-<section class="hk-section"><div class="hk-section-head"><h2>公演を動かす</h2></div><div class="hk-panel"><p>舞台監督の仕事は劇場や公演形態によって異なりますが、稽古から仕込み、場当たり、ゲネプロ、本番まで、舞台進行に関わる多くの情報を整理し、関係者をつなぎます。</p></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>キューを理解する</h2></div><div class="hk-steps"><span>芝居</span><b>→</b><span>照明キュー</span><b>→</b><span>音響キュー</span><b>→</b><span>転換</span><b>→</b><span>次の場面</span></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>5分舞台監督エチュード</h2></div><div class="hk-exercise"><h3>開演5分前</h3><p>「開演5分前。しかし出演者1人がまだ舞台袖に来ていない」という状況を設定します。</p><ol><li>まず何を確認するか。</li><li>誰に連絡するか。</li><li>代替案が必要か。</li><li>照明・音響・受付など、誰に何を伝えるか。</li></ol><p>正解を一つに決めるのではなく、<strong>状況を整理して優先順位をつける</strong>練習です。</p></div></section>
-<?php endif; ?>
-</main>
-<style>
-.hk-staff-hero{max-width:820px;margin:64px auto;padding:0 20px;text-align:center}.hk-staff-hero h1{font-family:var(--hk-font-serif);font-size:38px}.hk-staff-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}
-.hk-staff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.hk-staff-card,.hk-panel,.hk-four>div,.hk-equipment article,.hk-term-grid>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:24px;color:var(--hk-fg)}.hk-staff-card:hover{border-color:var(--hk-accent-warm);text-decoration:none}.hk-staff-card p,.hk-panel p,.hk-four p,.hk-equipment p,.hk-term-grid p{color:var(--hk-fg-dim);line-height:1.9}.hk-staff-card span,.hk-tip{color:var(--hk-accent-warm)}
-.hk-four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.hk-four b{font-family:var(--hk-font-serif);font-size:18px}.hk-equipment{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-equipment h3,.hk-term-grid h3{font-family:var(--hk-font-serif);margin-top:0}.hk-warning{margin:20px 0;padding:18px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);line-height:1.8}.hk-filter-table{width:100%;border-collapse:collapse}.hk-filter-table th,.hk-filter-table td{border:1px solid var(--hk-border);padding:12px;text-align:left}.hk-filter-table th{color:var(--hk-accent-warm)}.hk-light-fixture-diagram{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:26px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-fixture-part{min-width:115px;padding:18px 12px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-fixture-part strong{display:block;font-family:var(--hk-font-serif)}.hk-fixture-part small{display:block;margin-top:6px;color:var(--hk-fg-dim);font-size:11px;line-height:1.5}.hk-fixture-output{border-color:var(--hk-accent-warm)}.hk-fixture-arrow{font-size:20px;color:var(--hk-accent-warm)}.hk-diagram-caption{font-size:11px;color:var(--hk-fg-faint);margin-top:9px}.hk-control-diagram{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hk-control-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:20px}.hk-control-card h3{font-family:var(--hk-font-serif)}.hk-control-card>strong{color:var(--hk-accent-warm)}.hk-beam{height:105px;position:relative;margin-bottom:18px;overflow:hidden;background:var(--hk-bg-card)}.hk-beam:after{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-top:88px solid var(--hk-accent-warm);opacity:.7}.hk-beam-wide:after{border-left-width:105px;border-right-width:105px}.hk-beam-cut:after{clip-path:polygon(0 0,100% 0,78% 100%,0 100%)}.hk-gel-use-diagram{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:28px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-gel-diagram-item,.hk-gel-frame,.hk-gel-stage{min-width:125px;min-height:75px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;border:1px solid var(--hk-border)}.hk-gel-light{font-weight:700}.hk-gel-frame{border-color:var(--hk-accent-warm)}.hk-gel-stage{background:var(--hk-bg-card)}.hk-gel-diagram-item small,.hk-gel-frame small,.hk-gel-stage small{display:block;font-size:10px;color:var(--hk-fg-dim)}@media(max-width:700px){.hk-control-diagram{grid-template-columns:1fr}.hk-light-fixture-diagram,.hk-gel-use-diagram{justify-content:flex-start}.hk-fixture-arrow{transform:rotate(90deg)}}.hk-steps{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--hk-border);padding:24px;background:var(--hk-bg-elevated)}.hk-steps b{color:var(--hk-accent-warm)}.hk-term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-exercise{border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:24px;line-height:1.9}.hk-exercise li{margin:8px 0}
-@media(max-width:850px){.hk-four{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.hk-staff-hero h1{font-size:30px}.hk-staff-grid,.hk-equipment,.hk-term-grid,.hk-four{grid-template-columns:1fr}.hk-steps{justify-content:flex-start}}
-.hk-gel-detail{border-top:1px solid var(--hk-border)}.hk-gel-detail-top{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:28px;align-items:center}.hk-gel-detail-swatch{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.55)}.hk-gel-detail-swatch span{font-size:12px}.hk-gel-detail-swatch strong{font-size:28px;margin-top:8px}.hk-gel-detail-swatch.is-missing{background:repeating-linear-gradient(135deg,var(--hk-bg-card),var(--hk-bg-card) 12px,var(--hk-bg-elevated) 12px,var(--hk-bg-elevated) 24px);color:var(--hk-fg-dim);text-shadow:none;text-align:center}.hk-gel-detail-top h2{font-family:var(--hk-font-serif);font-size:30px}.hk-gel-detail-brand{color:var(--hk-accent-warm)}.hk-gel-detail-warning{border-left:3px solid var(--hk-accent-warm);padding:12px 15px;background:var(--hk-bg-card);color:var(--hk-fg-dim);line-height:1.8}.hk-gel-detail-values{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.hk-gel-detail-values>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-gel-detail-values span{display:block;font-size:10px;color:var(--hk-accent-warm)}.hk-gel-detail-values strong{display:block;margin-top:6px}.hk-gel-detail-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.hk-gel-detail-columns>div{border:1px solid var(--hk-border);padding:18px;background:var(--hk-bg-elevated)}.hk-gel-detail-columns h3{font-family:var(--hk-font-serif);margin-top:0}.hk-gel-detail-columns p{color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-gel-back{display:inline-block;margin-top:20px;color:var(--hk-accent-warm)}@media(max-width:700px){.hk-gel-detail-top,.hk-gel-detail-values,.hk-gel-detail-columns{grid-template-columns:1fr}.hk-gel-detail-swatch{min-height:220px}}.hk-gel-notice{margin-top:0}.hk-gel-notice-inner{border:1px solid var(--hk-border);border-left:4px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:22px}.hk-gel-notice-inner p{color:var(--hk-fg-dim);line-height:1.9;margin:.7em 0}.hk-gel-caution{font-weight:700;color:var(--hk-fg)!important}.hk-gel-search{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-gel-search label{font-size:12px;color:var(--hk-fg-dim);position:relative}.hk-gel-search input,.hk-gel-search select{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:11px;border:1px solid var(--hk-border);background:var(--hk-bg-card);color:var(--hk-fg)}.hk-gel-unit{float:right;font-size:11px}.hk-gel-sort-wrap,.hk-gel-actions{display:flex;align-items:end}.hk-gel-actions button{width:100%;padding:11px;border:1px solid var(--hk-border);background:transparent;color:var(--hk-fg);cursor:pointer}.hk-gel-actions button:hover{border-color:var(--hk-accent-warm);color:var(--hk-accent-warm)}.hk-gel-usage{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;padding:15px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-gel-usage>span{width:100%;font-size:12px;color:var(--hk-accent-warm);margin-bottom:2px}.hk-gel-usage label{font-size:12px}.hk-gel-usage input{margin-right:4px}.hk-gel-result-head{display:flex;justify-content:space-between;align-items:end}.hk-gel-result-head #hk-gel-count{color:var(--hk-fg-dim);font-size:13px}.hk-gel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.hk-gel-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);overflow:hidden}.hk-gel-card:hover{border-color:var(--hk-accent-warm)}.hk-gel-card-link{display:block;color:inherit;text-decoration:none}.hk-gel-swatch{height:180px;background:var(--hk-gel-color);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-shadow:0 1px 2px rgba(0,0,0,.5);color:#fff}.hk-gel-swatch span{font-size:11px;letter-spacing:.08em}.hk-gel-swatch strong{font-size:20px}.hk-gel-swatch small{font-size:11px}.hk-gel-swatch-missing{background:repeating-linear-gradient(135deg,var(--hk-bg-card),var(--hk-bg-card) 10px,var(--hk-bg-elevated) 10px,var(--hk-bg-elevated) 20px);text-align:center;text-shadow:none;color:var(--hk-fg-dim)}.hk-gel-meta{padding:18px}.hk-gel-brand{font-size:11px;color:var(--hk-accent-warm)}.hk-gel-meta h3{margin:5px 0 14px;font-family:var(--hk-font-serif)}.hk-gel-meta dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}.hk-gel-meta dl div{border-top:1px solid var(--hk-border);padding-top:8px}.hk-gel-meta dt{font-size:10px;color:var(--hk-fg-dim)}.hk-gel-meta dd{margin:3px 0 0;font-size:13px}.hk-gel-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:13px}.hk-gel-tags span{font-size:10px;border:1px solid var(--hk-border);padding:4px 7px;color:var(--hk-fg-dim)}.hk-gel-card-note{font-size:10px;color:var(--hk-fg-faint);margin-bottom:0}.hk-gel-empty{border:1px dashed var(--hk-border);padding:35px;text-align:center;color:var(--hk-fg-dim)}.hk-gel-detail-rule{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-gel-detail-rule>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-gel-detail-rule b{color:var(--hk-accent-warm)}.hk-gel-detail-rule p{color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-filter-note strong{color:var(--hk-fg)}
-@media(max-width:900px){.hk-gel-search{grid-template-columns:repeat(2,1fr)}.hk-gel-grid{grid-template-columns:repeat(2,1fr)}.hk-gel-detail-rule{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.hk-gel-search,.hk-gel-grid,.hk-gel-detail-rule{grid-template-columns:1fr}}
-.hk-filter-search{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-filter-search label{font-size:12px;color:var(--hk-fg-dim)}.hk-filter-search input{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:11px;border:1px solid var(--hk-border);background:var(--hk-bg-card);color:var(--hk-fg)}.hk-filter-note{font-size:13px;color:var(--hk-fg-dim);line-height:1.8}.hk-filter-record{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.hk-filter-record>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-filter-record span{display:block;font-size:11px;color:var(--hk-accent-warm);margin-bottom:7px}.hk-filter-record strong{display:block}.hk-filter-record small{display:block;color:var(--hk-fg-faint);margin-top:8px}.hk-filter-table-wrap{overflow-x:auto}.hk-filter-database{width:100%;min-width:1050px;border-collapse:collapse}.hk-filter-database th,.hk-filter-database td{border:1px solid var(--hk-border);padding:11px;text-align:left;vertical-align:top}.hk-filter-database th{color:var(--hk-accent-warm);font-size:12px}.hk-filter-database td{font-size:13px}.hk-swatch-placeholder{width:58px;height:42px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--hk-border);font-size:10px;color:var(--hk-fg-faint)}
-@media(max-width:700px){.hk-filter-search,.hk-filter-record{grid-template-columns:1fr}}
-
-.hk-illustration-placeholder{margin:18px 0 0;border:1px dashed var(--hk-border);background:var(--hk-bg-card);min-height:260px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-sizing:border-box}.hk-illustration-placeholder-label{font-size:11px;letter-spacing:.14em;color:var(--hk-accent-warm);margin-bottom:8px}.hk-illustration-placeholder-file{font-family:monospace;font-size:16px;color:var(--hk-fg);margin-bottom:14px}.hk-illustration-placeholder p{max-width:760px;margin:0;color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-lighting-intro-illustration .hk-illustration-placeholder{min-height:220px}
-
-.hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question strong{color:#fff}.hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}.hk-nyakakichi-followup p{margin:0 0 8px}.hk-nyakakichi-followup p:last-child{margin-bottom:0}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}
-.hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}
-.hk-chapter-nav a,.hk-chapter-nav-disabled{padding:10px 14px;color:var(--hk-accent-warm);text-decoration:none}
-.hk-chapter-nav a:hover{text-decoration:underline}
-.hk-chapter-nav-disabled{color:var(--hk-fg-faint)}
-.hk-chapter-list{display:grid;grid-template-columns:1fr;gap:14px}
-.hk-chapter-list a{display:grid;grid-template-columns:90px 1fr;column-gap:18px;row-gap:5px;padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg);text-decoration:none}
-.hk-chapter-list a:hover{border-color:var(--hk-accent-warm);text-decoration:none}
-.hk-chapter-list span{grid-row:1 / span 2;color:var(--hk-accent-warm);font-family:var(--hk-font-serif);font-size:18px}
-.hk-chapter-list strong{font-family:var(--hk-font-serif);font-size:19px}
-.hk-chapter-list small{color:var(--hk-fg-dim);line-height:1.7}
-@media(max-width:600px){.hk-chapter-nav{gap:4px}.hk-chapter-nav a,.hk-chapter-nav-disabled{padding:8px 6px;font-size:12px}.hk-chapter-list a{grid-template-columns:1fr}.hk-chapter-list span{grid-row:auto}.hk-chapter-list strong{font-size:17px}}
-
-</style>
-<?php get_footer(); ?>
