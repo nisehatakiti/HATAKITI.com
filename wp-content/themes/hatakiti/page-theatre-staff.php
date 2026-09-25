@@ -35,13 +35,32 @@ get_header();
 <div class="hk-staff-card"><h2>衣裳・ヘアメイク</h2><p>人物の時代、職業、関係性、変化を視覚的に支えます。</p></div>
 <div class="hk-staff-card"><h2>小道具</h2><p>俳優が使う物を用意し、場面のリアリティや演出上の意味を支えます。</p></div>
 </div></section>
-<?php elseif ( isset( $pages[$path] ) && 'theatre-textbook/staff/lighting' === $path ) : ?>
+<?php elseif ( 'theatre-textbook/staff/lighting' === $path ) : ?>
 <header class="hk-staff-hero">
   <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p>
   <h1>照明</h1>
   <p>光の方向、広がり、明るさ、色、影を設計し、舞台上の時間・場所・人物・空気を観客に伝える仕事。</p>
 </header>
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>照明を学ぶ</h2>
+    <p>照明は「暗い舞台を明るくする」だけではありません。光をどう作り、どこへ届け、何を見せるのかを順番に学んでいきます。</p>
+  </div>
+  <div class="hk-chapter-list">
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>"><span>第1章</span><strong>光を考える5つの視点</strong><small>明るさ・方向・広がり・色・影</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>"><span>第2章</span><strong>灯体を知る</strong><small>凸・フレネル・PAR・エリスポット・ホリゾント・LED</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>"><span>第3章</span><strong>灯体の中で光はどうなっている？</strong><small>光源・反射鏡・レンズ・光軸・絞り・カッター・ゼラホルダー</small></a>
+  </div>
+</section>
 
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第1章　光を考える5つの視点</h1><p>照明を考えるときに、まず押さえておきたい「明るさ・方向・広がり・色・影」の5つの視点を学びます。</p></header>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <span class="hk-chapter-nav-disabled">← 前の章</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">次へ →</a>
+</nav>
 <section class="hk-section">
   <div class="hk-section-head">
     <h2>導入　照明って何をしている？</h2>
@@ -80,6 +99,20 @@ get_header();
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、照明を考えるときって、何を考えればいいの？」</p></div></div><div class="hk-nyakakichi-followup"><p>まずは、光を5つの視点に分けて考えてみましょう。</p></div>
 </section>
 
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <span class="hk-chapter-nav-disabled">← 前の章</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">次へ →</a>
+</nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-2' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第2章　灯体を知る</h1><p>舞台照明で使われる代表的な灯体と、それぞれが得意とする光を学びます。</p></header>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>">← ← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">次へ →</a>
+</nav>
 <section class="hk-section">
   <div class="hk-section-head">
     <h2>第1章　光を考える5つの視点</h2>
@@ -201,6 +234,20 @@ get_header();
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「なるほど……。でも、実際にその光を出すには、どんな機械を使うの？」</p></div></div><div class="hk-nyakakichi-followup"><p>ここから、いよいよ灯体を見ていきます。</p></div>
 </section>
 
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>">← ← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">次へ →</a>
+</nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-3' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第3章　灯体の中で光はどうなっている？</h1><p>光源から出た光が、灯体の中でどのように反射・集光・整形され、舞台へ届くのかを学びます。</p></header>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← ← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
 <section class="hk-section">
   <div class="hk-section-head">
     <h2>第2章　灯体を知る</h2>
@@ -340,152 +387,11 @@ get_header();
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-happy.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「灯体って、ただ光る箱じゃないんだね。」</p></div></div><div class="hk-nyakakichi-followup"><p>そうです。灯体の中では、光源から出た光を反射させたり、レンズで整えたり、広がりを調整したりして、舞台に必要な光へ変えています。</p><p>次は、その「灯体の中」を実際に見てみましょう。</p></div>
 </section>
 
-<?php
-/* 第3章：灯体の中で光はどうなっている？ */
-?>
-<section class="hk-section">
-  <div class="hk-section-head">
-    <h2>第3章　灯体の中で光はどうなっている？</h2>
-    <p>灯体は、ただ光を出す箱ではありません。光源から出た光を、反射・集光・整形し、舞台に必要な形へ変えていきます。</p>
-  </div>
-
-  <p>第2章では、凸、フレネル、PAR、エリスポット、ホリゾントライト、LED灯体など、いろいろな灯体を見ました。</p>
-  <p>ここでは一歩中に入って、<strong>「灯体の中で、光がどう加工されているのか」</strong>を見てみます。</p>
-
-  <div class="hk-light-fixture-diagram" aria-label="灯体の中の光の流れ">
-    <div class="hk-fixture-part"><strong>光源</strong><small>ランプ・LEDなど<br>光を出す</small></div>
-    <span class="hk-fixture-arrow">→</span>
-    <div class="hk-fixture-part"><strong>反射鏡</strong><small>光を反射して<br>利用しやすくする</small></div>
-    <span class="hk-fixture-arrow">→</span>
-    <div class="hk-fixture-part"><strong>レンズ</strong><small>光を集めたり<br>広げたりする</small></div>
-    <span class="hk-fixture-arrow">→</span>
-    <div class="hk-fixture-part"><strong>絞り・カッター</strong><small>光の範囲や形を<br>調整する</small></div>
-    <span class="hk-fixture-arrow">→</span>
-    <div class="hk-fixture-part hk-fixture-output"><strong>舞台の光</strong><small>必要な場所へ<br>必要な形で届ける</small></div>
-  </div>
-  <p class="hk-diagram-caption">※すべての灯体が同じ構造ではありません。ここでは、照明器具を理解するための基本的な考え方として整理しています。</p>
-
-  <section class="hk-subsection">
-    <h3>3-1　光源</h3>
-    <p>まず、光そのものを出す部分が<strong>光源</strong>です。</p>
-    <p>昔から使われてきた舞台照明ではハロゲンランプなどの電球が代表的でした。現在はLEDを光源にした灯体も増えています。</p>
-    <p>光源が変わると、消費電力、発熱、色の作り方、調光方法などにも違いが出ます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「光源って、要するに電球みたいなもの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。まず「光を生み出すところ」が光源です。ただし、舞台照明では光源そのものを見るのではなく、その光を灯体の中でどう使うかが重要になります。</p></div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-2　反射鏡</h3>
-    <p>光源から出た光は、すべてが舞台に向かって進むわけではありません。そこで使われるのが<strong>反射鏡</strong>です。</p>
-    <p>反射鏡で光を反射させることで、光源から出た光を前方へ効率よく導きます。</p>
-    <p>灯体によって反射鏡の形や配置は異なります。つまり、反射鏡も光の「広がり方」や「集まり方」に関係する重要な部分です。</p>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-3　レンズ</h3>
-    <p>次にレンズです。レンズは光の進む方向を変え、光を集めたり、広げたりするために使われます。</p>
-    <p>第2章で見た<strong>凸レンズ</strong>や<strong>フレネルレンズ</strong>も、この役割を担っています。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「レンズを動かすと、光の広がりも変わるの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>変わります。灯体によって仕組みは違いますが、レンズや光源との位置関係を変えることで、光の広がり方を調整できるものがあります。</p></div>
-
-    <p>この「光をどこまで広げるか」は、第1章で出てきた<strong>5つの視点の「広がり」</strong>につながっています。</p>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-4　光軸とビーム</h3>
-    <p>灯体から出ていく光を考えるとき、中心となる方向を<strong>光軸</strong>として考えると分かりやすくなります。</p>
-    <p>そして、灯体から舞台へ向かって進む光のまとまりを<strong>ビーム</strong>として捉えます。</p>
-    <p>照明を仕込むときは、「どこに灯体があるか」だけでなく、<strong>その灯体からどの方向へ、どれくらいの範囲の光が出るのか</strong>を考えます。</p>
-
-    <div class="hk-panel">
-      <h3>光を考えるときの基本</h3>
-      <p><strong>灯体の位置 ＋ 光軸の方向 ＋ ビームの広がり</strong></p>
-      <p>この3つを合わせて考えると、「この灯体をどこへ向ければ、どこが照らされるか」をイメージしやすくなります。</p>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-5　絞り</h3>
-    <p>灯体によっては、光の広がりを調整するための<strong>絞り</strong>があります。</p>
-    <p>ここでいう絞りは、単純に「暗くする」という意味ではありません。<strong>光の広がる範囲を狭くする</strong>ための機構として考えると分かりやすいでしょう。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「絞るって、暗くするってことじゃないの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>照明では、そこを分けて考えます。明るさを変えるのは調光の仕事。絞りは、光をどこまで広げるかを調整するためのものです。</p></div>
-
-    <div class="hk-control-diagram">
-      <div class="hk-control-card">
-        <h3>広いビーム</h3>
-        <div class="hk-beam hk-beam-wide"></div>
-        <strong>広い範囲を照らす</strong>
-      </div>
-      <div class="hk-control-card">
-        <h3>狭いビーム</h3>
-        <div class="hk-beam"></div>
-        <strong>狙った範囲に光を集める</strong>
-      </div>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-6　カッター</h3>
-    <p>エリスポットなどに備わっている<strong>カッター</strong>は、光の一部を遮って、光の形や境界を作るための機構です。</p>
-    <p>たとえば、舞台の床には当てたいけれど、背景の幕には光を当てたくない。あるいは、窓のような四角い範囲だけを照らしたい。</p>
-    <p>そんなときに、カッターを使って<strong>「光をどこまで当てるか」</strong>を細かく決めます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「光を切って、形まで作れるんだ！」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。カッターは「光を減らす部品」ではなく、<strong>光の境界を作るための道具</strong>として考えると理解しやすくなります。</p></div>
-
-    <div class="hk-panel hk-warning">
-      <strong>絞りとカッターの違い</strong>
-      <p><strong>絞り：</strong>光の広がりを調整する。</p>
-      <p><strong>カッター：</strong>光の一部を遮って、境界や形を作る。</p>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-7　ゼラホルダー</h3>
-    <p>従来型の灯体では、光の色を変えるために<strong>カラーフィルター（通称：ゼラ）</strong>を使うことがあります。</p>
-    <p>そのゼラを灯体の前に固定するための部分が<strong>ゼラホルダー</strong>です。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「じゃあ、色を変えたいときは、このゼラホルダーにゼラを入れるんだね？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>その通りです。灯体によってホルダーの位置やサイズは異なりますが、基本的には灯体の光がゼラを通るように取り付けます。</p></div>
-
-    <p>ゼラそのものについては、<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベース</a>で色番号や透過率などを確認できます。</p>
-  </section>
-
-  <div class="hk-panel hk-summary">
-    <h3>第3章まとめ</h3>
-    <p>灯体の中では、光源から出た光をそのまま舞台へ送っているわけではありません。</p>
-    <p><strong>光源 → 反射鏡 → レンズ → 絞り・カッター → 舞台</strong>というように、光を整えながら必要な形に近づけています。</p>
-    <p>灯体によって構造は違いますが、<strong>「光を作る」ではなく「必要な光に加工する」</strong>と考えると、灯体の役割が分かりやすくなります。</p>
-  </div>
-
-  <div class="hk-nyakakichi">
-    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
-    <div class="hk-nyakakichi-question"><p>「中の仕組みが分かると、灯体の違いも少し分かってきた！」</p></div>
-  </div>
-  <div class="hk-nyakakichi-followup">
-    <p>次は、灯体を「どこから当てるか」です。</p>
-    <p>同じ灯体でも、取り付ける場所や方向が変われば、舞台に届く光は大きく変わります。</p>
-  </div>
-</section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← ← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
 <?php
@@ -671,5 +577,18 @@ if ( $selected_gel ) :
 
 .hk-illustration-placeholder{margin:18px 0 0;border:1px dashed var(--hk-border);background:var(--hk-bg-card);min-height:260px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-sizing:border-box}.hk-illustration-placeholder-label{font-size:11px;letter-spacing:.14em;color:var(--hk-accent-warm);margin-bottom:8px}.hk-illustration-placeholder-file{font-family:monospace;font-size:16px;color:var(--hk-fg);margin-bottom:14px}.hk-illustration-placeholder p{max-width:760px;margin:0;color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-lighting-intro-illustration .hk-illustration-placeholder{min-height:220px}
 
-.hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question strong{color:#fff}.hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}.hk-nyakakichi-followup p{margin:0 0 8px}.hk-nyakakichi-followup p:last-child{margin-bottom:0}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}</style>
+.hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question strong{color:#fff}.hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}.hk-nyakakichi-followup p{margin:0 0 8px}.hk-nyakakichi-followup p:last-child{margin-bottom:0}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}
+.hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}
+.hk-chapter-nav a,.hk-chapter-nav-disabled{padding:10px 14px;color:var(--hk-accent-warm);text-decoration:none}
+.hk-chapter-nav a:hover{text-decoration:underline}
+.hk-chapter-nav-disabled{color:var(--hk-fg-faint)}
+.hk-chapter-list{display:grid;grid-template-columns:1fr;gap:14px}
+.hk-chapter-list a{display:grid;grid-template-columns:90px 1fr;column-gap:18px;row-gap:5px;padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg);text-decoration:none}
+.hk-chapter-list a:hover{border-color:var(--hk-accent-warm);text-decoration:none}
+.hk-chapter-list span{grid-row:1 / span 2;color:var(--hk-accent-warm);font-family:var(--hk-font-serif);font-size:18px}
+.hk-chapter-list strong{font-family:var(--hk-font-serif);font-size:19px}
+.hk-chapter-list small{color:var(--hk-fg-dim);line-height:1.7}
+@media(max-width:600px){.hk-chapter-nav{gap:4px}.hk-chapter-nav a,.hk-chapter-nav-disabled{padding:8px 6px;font-size:12px}.hk-chapter-list a{grid-template-columns:1fr}.hk-chapter-list span{grid-row:auto}.hk-chapter-list strong{font-size:17px}}
+
+</style>
 <?php get_footer(); ?>
