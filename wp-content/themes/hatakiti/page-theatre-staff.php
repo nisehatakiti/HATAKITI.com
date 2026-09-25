@@ -55,9 +55,9 @@ get_header();
 
   
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-01-same-stage.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-01-same-stage.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-01-same-stage.png' ); ?>" alt="同じ舞台でも照明によって見え方が変わることを示す図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-01-same-stage.png' ) ); ?>" alt="同じ舞台でも照明によって見え方が変わることを示す図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -88,9 +88,9 @@ get_header();
 
   
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-02-five-viewpoints.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-02-five-viewpoints.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-02-five-viewpoints.png' ); ?>" alt="照明を考える5つの視点を示す図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-02-five-viewpoints.png' ) ); ?>" alt="照明を考える5つの視点を示す図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -117,9 +117,9 @@ get_header();
     <p>明るければ明るいほど良い、というわけではありません。全部が同じ明るさだと、どこを見ればよいのか分かりにくくなることがあります。</p>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-03-brightness.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-03-brightness.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-03-brightness.png' ); ?>" alt="舞台全体を同じ明るさにした場合と見せたい場所を明るくした場合の比較図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-03-brightness.png' ) ); ?>" alt="舞台全体を同じ明るさにした場合と見せたい場所を明るくした場合の比較図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -147,9 +147,9 @@ get_header();
     <p>できます。灯体の種類やレンズ、絞りなどを使って、光の広がり方を調整します。</p>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-04-beam-spread.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-04-beam-spread.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-04-beam-spread.png' ); ?>" alt="広い光・中くらいの光・狭い光を比較する図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-04-beam-spread.png' ) ); ?>" alt="広い光・中くらいの光・狭い光を比較する図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -178,9 +178,9 @@ get_header();
     <p>つまり、<strong>照明を考えることは、影をどう作るかを考えることでもあります。</strong></p>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-05-light-and-shadow.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-05-light-and-shadow.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-05-light-and-shadow.png' ); ?>" alt="光の方向によって人物の影の出方が変わることを示す図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-05-light-and-shadow.png' ) ); ?>" alt="光の方向によって人物の影の出方が変わることを示す図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -217,9 +217,9 @@ get_header();
     <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「なんで『凸』っていうの？」</p></div></div>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-06-convex-lens.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-06-convex-lens.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-06-convex-lens.png' ); ?>" alt="凸レンズの断面と形の由来を示す図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-06-convex-lens.png' ) ); ?>" alt="凸レンズの断面と形の由来を示す図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -239,9 +239,9 @@ get_header();
     <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「凸とフレネルって、どっちもレンズなのに何が違うの？」</p></div></div>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-07-convex-vs-fresnel.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-07-convex-vs-fresnel.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-07-convex-vs-fresnel.png' ); ?>" alt="凸レンズとフレネルレンズの構造を比較する図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-07-convex-vs-fresnel.png' ) ); ?>" alt="凸レンズとフレネルレンズの構造を比較する図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -261,9 +261,9 @@ get_header();
     <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「PARって、普通のスポットと違うの？」</p></div></div>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-08-par-beam.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-08-par-beam.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-08-par-beam.png' ); ?>" alt="PAR灯体と方向性のある光を示す図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-08-par-beam.png' ) ); ?>" alt="PAR灯体と方向性のある光を示す図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -291,9 +291,9 @@ get_header();
     <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物を照らすライトとは違って、背景を照らすライトもあるんだ？」</p></div></div>
     
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-09-horizont.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-09-horizont.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-09-horizont.png' ); ?>" alt="ホリゾントライトで舞台奥の背景を照らす断面図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-09-horizont.png' ) ); ?>" alt="ホリゾントライトで舞台奥の背景を照らす断面図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
@@ -317,9 +317,9 @@ get_header();
 
   
 <figure class="hk-illustration">
-<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-10-fixture-overview.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-10-fixture-overview.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-10-fixture-overview.png' ); ?>" alt="舞台照明の代表的な灯体と、それぞれの得意な光をまとめた図" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-10-fixture-overview.png' ) ); ?>" alt="舞台照明の代表的な灯体と、それぞれの得意な光をまとめた図" loading="lazy">
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
