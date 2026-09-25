@@ -396,6 +396,20 @@ get_header();
   </div>
   <p class="hk-diagram-caption">※すべての灯体が同じ構造ではありません。ここでは、照明器具を理解するための基本的な考え方として整理しています。</p>
 
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png' ) ); ?>" alt="灯体内部の光源、反射鏡、レンズ、絞り、カッター、ゼラホルダーの位置を示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-12-fixture-parts.png</div>
+    <p>この位置に灯体内部の部品配置図を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>灯体の中では、光源から出た光を反射・集光・整形し、必要な光に加工します。絞り・カッター・ゼラホルダーがどこにあるかも、この図で確認できます。</figcaption>
+</figure>
+
   <section class="hk-subsection">
     <h3>3-1　光源</h3>
     <p>まず、光そのものを出す部分が<strong>光源</strong>です。</p>
@@ -454,18 +468,19 @@ get_header();
     </div>
     <div class="hk-nyakakichi-followup"><p>照明では、そこを分けて考えます。明るさを変えるのは調光の仕事。絞りは、光をどこまで広げるかを調整するためのものです。</p></div>
 
-    <div class="hk-control-diagram">
-      <div class="hk-control-card">
-        <h3>広いビーム</h3>
-        <div class="hk-beam hk-beam-wide"></div>
-        <strong>広い範囲を照らす</strong>
-      </div>
-      <div class="hk-control-card">
-        <h3>狭いビーム</h3>
-        <div class="hk-beam"></div>
-        <strong>狙った範囲に光を集める</strong>
-      </div>
-    </div>
+    <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png' ) ); ?>" alt="広いビームと狭いビームの違いを、灯体から出る光の広がりと照射範囲で比較した図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-11-beam-width.png</div>
+    <p>この位置に広いビームと狭いビームの比較図を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>ビーム角が広いと照射範囲が広がり、狭いと光が集中します。同じ高さ・同じ出力でも、光の広がり方によって照射範囲が変わります。</figcaption>
+</figure>
   </section>
 
   <section class="hk-subsection">
