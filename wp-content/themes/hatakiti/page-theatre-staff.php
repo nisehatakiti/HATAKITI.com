@@ -581,12 +581,10 @@ get_header();
     </div>
     <div class="hk-nyakakichi-followup"><p>そうです。正面だけでなく、少し斜め上から当てるなど、劇場やプランによって角度を調整します。</p></div>
 
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-front">↗</span><span class="hk-position-label hk-position-front">前明かり</span><span class="hk-audience">客席</span>
-      </div>
-    </div>
+    <figure class="hk-illustration">
+      <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-13-front-light.png' ) ); ?>" alt="前明かりを上から見た図と客席から見た図。客席側から舞台上の人物へ光を当てる位置関係を示す図" loading="lazy">
+      <figcaption>前明かりは客席側から舞台へ向けて入れる光です。上から見ると、客席側にある灯体から舞台上へ光が向かっていることが分かります。</figcaption>
+    </figure>
   </section>
 
   <section class="hk-subsection">
@@ -600,13 +598,10 @@ get_header();
     </div>
     <div class="hk-nyakakichi-followup"><p>そういう傾向があります。もちろん角度や高さによって変わりますが、正面からの光とは違う立体感を作れます。</p></div>
 
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-side-left">→</span><span class="hk-light-ray hk-ray-side-right">←</span>
-        <span class="hk-position-label hk-position-left">サイド</span><span class="hk-position-label hk-position-right">サイド</span>
-      </div>
-    </div>
+    <figure class="hk-illustration">
+      <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-14-side-light.png' ) ); ?>" alt="サイドライトを上から見た図と客席から見た図。舞台の左右から人物へ光を当てる位置関係を示す図" loading="lazy">
+      <figcaption>サイドライトは舞台の左右方向から入る光です。上から見ると左右から光が入り、正面から見ると身体の側面や輪郭に光が当たることが分かります。</figcaption>
+    </figure>
   </section>
 
   <section class="hk-subsection">
@@ -620,12 +615,10 @@ get_header();
     </div>
     <div class="hk-nyakakichi-followup"><p>正面からの光が弱ければ、そうなることがあります。でも、それが目的ならシルエットとして使えます。前明かりなどと組み合わせれば、輪郭を出しながら人物も見せられます。</p></div>
 
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-back">↙</span><span class="hk-position-label hk-position-back">バック</span><span class="hk-audience">客席</span>
-      </div>
-    </div>
+    <figure class="hk-illustration">
+      <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-15-back-light.png' ) ); ?>" alt="バックライトを上から見た図と客席から見た図。人物の後ろ側から客席方向へ光を当てる位置関係を示す図" loading="lazy">
+      <figcaption>バックライトは人物の後ろ側から入る光です。正面から見ると、人物の輪郭が光によって浮かび上がります。</figcaption>
+    </figure>
   </section>
 
   <section class="hk-subsection">
@@ -634,12 +627,10 @@ get_header();
     <p>頭や肩、床などに特徴的な影を作りやすく、人物を周囲の空間から切り出すように見せることもできます。</p>
     <p>ただし、真上に近いほど顔の目の周りに影ができやすいため、人物をきれいに見せたい場合は他の方向の光と組み合わせます。</p>
 
-    <div class="hk-light-position-diagram">
-      <div class="hk-stage-diagram hk-stage-top">
-        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
-        <span class="hk-light-ray hk-ray-top">↓</span><span class="hk-position-label hk-position-top">トップ</span>
-      </div>
-    </div>
+    <figure class="hk-illustration">
+      <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-16-top-light.png' ) ); ?>" alt="トップライトを上から見た図と客席から見た図。舞台上方から人物へ下向きに光を当てる位置関係を示す図" loading="lazy">
+      <figcaption>トップライトは舞台や人物の上方から下向きに入る光です。正面から見ると、頭や肩、床に特徴的な影ができます。</figcaption>
+    </figure>
   </section>
 
   <section class="hk-subsection">
