@@ -43,6 +43,7 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>"><span>第1章</span><strong>光を考える5つの視点</strong><small>明るさ・方向・広がり・色・影</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>"><span>第2章</span><strong>灯体を知る</strong><small>凸・フレネル・PAR・エリスポット・ホリゾント・LED</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>"><span>第3章</span><strong>灯体の中で光はどうなっている？</strong><small>光源・反射鏡・レンズ・光軸・絞り・カッター・ゼラホルダー</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>"><span>第4章</span><strong>光をどこから当てる？</strong><small>前明かり・サイド・バック・トップ・ホリゾント・SS</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -400,6 +401,164 @@ get_header();
 <?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
   <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png' ) ); ?>" alt="灯体内部の光源、反射鏡、レンズ、絞り、カッター、ゼラホルダーの位置を示す図" loading="lazy">
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-4' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第4章　光をどこから当てる？</h1><p>同じ灯体でも、取り付ける場所と向きを変えると舞台の見え方は大きく変わります。ここでは照明の「位置」と「方向」を整理します。</p></header>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">第5章 →</a>
+</nav>
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>導入　「どこから当てるか」で光は変わる</h2>
+    <p>第1章で、照明には「方向」という視点があることを学びました。第4章では、その方向を舞台上の具体的な位置として見ていきます。</p>
+  </div>
+  <p>同じ明るさの灯体でも、客席側から当てるのか、横から当てるのか、後ろから当てるのかで、人物の立体感や影の出方は大きく変わります。</p>
+  <p>照明では「灯体を何台使うか」だけでなく、<strong>「どこに置き、どこへ向けるか」</strong>がとても重要です。</p>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「同じ灯体でも、置く場所が違うだけでそんなに変わるの？」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>変わります。まずは、舞台のどの方向から光が来るのかを言葉で整理してみましょう。</p></div>
+
+  <div class="hk-panel">
+    <h3>照明位置を考える基本</h3>
+    <p><strong>前・横・後ろ・上・下／ホリゾント</strong>など、光の入口を分けて考えます。</p>
+    <p>実際の劇場では、これらを組み合わせて一つの明かりを作ります。</p>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>第4章　舞台のどこから光を入れる？</h2><p>まずは代表的な照明位置を、一つずつ見ていきます。</p></div>
+
+  <section class="hk-subsection">
+    <h3>4-1　前明かり</h3>
+    <p><strong>前明かり</strong>は、客席側から舞台上の人物や空間へ向ける光です。</p>
+    <p>人物の顔や表情を観客に見せるための基本的な光として使われます。舞台全体を見せるためのベースとして考えることもできます。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「客席から舞台に向かって当てるのが前明かりなんだね！」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そうです。正面だけでなく、少し斜め上から当てるなど、劇場やプランによって角度を調整します。</p></div>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-front">↗</span><span class="hk-position-label hk-position-front">前明かり</span><span class="hk-audience">客席</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-2　サイドライト</h3>
+    <p><strong>サイドライト</strong>は、舞台の左右方向から入れる光です。</p>
+    <p>横から光を当てると、身体の輪郭や立体感が出やすくなります。ダンスや身体表現では、身体のラインを見せるために使われることもあります。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「横から当てると、顔より身体の形が目立つの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そういう傾向があります。もちろん角度や高さによって変わりますが、正面からの光とは違う立体感を作れます。</p></div>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-side-left">→</span><span class="hk-light-ray hk-ray-side-right">←</span>
+        <span class="hk-position-label hk-position-left">サイド</span><span class="hk-position-label hk-position-right">サイド</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-3　バックライト</h3>
+    <p><strong>バックライト</strong>は、人物の後ろ側から客席方向へ向ける光です。</p>
+    <p>人物の輪郭を浮かび上がらせたり、背景との分離を作ったりするのに役立ちます。人物の正面を直接照らす光とは役割が異なります。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「後ろから光を当てたら、顔が見えなくならない？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>正面からの光が弱ければ、そうなることがあります。でも、それが目的ならシルエットとして使えます。前明かりなどと組み合わせれば、輪郭を出しながら人物も見せられます。</p></div>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-back">↙</span><span class="hk-position-label hk-position-back">バック</span><span class="hk-audience">客席</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-4　トップライト</h3>
+    <p><strong>トップライト</strong>は、人物や舞台空間の上方から下向きに入れる光です。</p>
+    <p>頭や肩、床などに特徴的な影を作りやすく、人物を周囲の空間から切り出すように見せることもできます。</p>
+    <p>ただし、真上に近いほど顔の目の周りに影ができやすいため、人物をきれいに見せたい場合は他の方向の光と組み合わせます。</p>
+
+    <div class="hk-light-position-diagram">
+      <div class="hk-stage-diagram hk-stage-top">
+        <span class="hk-stage-label">舞台</span><span class="hk-actor">●</span>
+        <span class="hk-light-ray hk-ray-top">↓</span><span class="hk-position-label hk-position-top">トップ</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-5　ホリゾントからの光</h3>
+    <p>舞台奥のホリゾント幕や背景を照らすための光には、<strong>ローホリゾント</strong>と<strong>アッパーホリゾント</strong>があります。</p>
+    <p>ローホリは下側から、アッパーホリは上側からホリゾントへ光を入れます。どちらも背景の明るさや色を作るために使われます。</p>
+
+    <div class="hk-panel">
+      <h3>ローホリとアッパーホリ</h3>
+      <p><strong>ローホリ：</strong>舞台床付近から上向きにホリゾントを照らす。</p>
+      <p><strong>アッパーホリ：</strong>舞台上方から下向きにホリゾントを照らす。</p>
+      <p>上下から組み合わせることで、背景を均一に近づけたり、グラデーションを作ったりすることもできます。</p>
+    </div>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「ホリゾントライトって、舞台上の人を照らすライトじゃなくて背景用なんだ！」</p></div>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>4-6　SSって何？</h3>
+    <p>舞台照明でよく出てくる<strong>SS</strong>は、灯体の種類ではありません。</p>
+    <p>SSは一般に<strong>サイド・サイド</strong>の位置、つまり舞台の左右側方から入れるサイド光を指す言葉として使われます。劇場や現場によって呼び方や細かな区分は異なることがあります。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「SSっていう名前のライトがあるのかと思ってた！」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>ここは初心者が混乱しやすいところです。「SSを入れる」は、基本的にはサイド方向から光を入れる、という意味で使われます。</p></div>
+  </section>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>4-7　組み合わせて考える</h2><p>実際の舞台では、前明かりだけ、サイドだけというように一種類だけで終わることは多くありません。</p></div>
+  <p>たとえば人物を見せたいなら、前明かりで顔を見せながら、サイドで身体の立体感を作り、バックで輪郭を出す、といった組み合わせが考えられます。</p>
+  <p>重要なのは「この位置の光が正解」と覚えることではありません。<strong>どんな見え方が欲しいから、どの方向の光を足すのか</strong>を考えることです。</p>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「なるほど。灯体の名前より先に、どこから光が欲しいかを考えるんだね！」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>その通りです。次の章では、その光を実際に図面の上でどう配置するのかを見ていきます。</p></div>
+
+  <div class="hk-panel hk-summary">
+    <h3>第4章まとめ</h3>
+    <p>代表的な照明位置には、<strong>前明かり・サイド・バック・トップ・ホリゾント</strong>があります。</p>
+    <p>ローホリとアッパーホリは、ホリゾントを照らすための上下方向の光です。</p>
+    <p>そして<strong>SSは灯体の種類ではなく、サイド方向の照明位置を表す言葉</strong>です。</p>
+    <p>照明を考えるときは、「何の灯体を使うか」だけでなく、「どこから光が来てほしいか」を先に考えると整理しやすくなります。</p>
+  </div>
+</section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
 <?php else : ?>
   <div class="hk-illustration-placeholder" aria-label="図解準備中">
     <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
