@@ -44,6 +44,7 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>"><span>第2章</span><strong>灯体を知る</strong><small>凸・フレネル・PAR・エリスポット・ホリゾント・LED</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>"><span>第3章</span><strong>灯体の中で光はどうなっている？</strong><small>光源・反射鏡・レンズ・光軸・絞り・カッター・ゼラホルダー</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>"><span>第4章</span><strong>光をどこから当てる？</strong><small>前明かり・サイド・バック・トップ・ホリゾント・SS</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>"><span>第5章</span><strong>照明図を読む</strong><small>平面図・立面図・灯体・回路・色・方向</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -689,6 +690,191 @@ get_header();
   <span class="hk-chapter-nav-disabled">次の章 →</span>
 </nav>
 
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-5' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第5章　照明図を読む</h1><p>照明を実際に仕込むときは、「どこに、どの灯体を、どの方向へ向けるか」を図面に落とします。ここでは照明図を読むための基本を学びます。</p></header>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>">← 第4章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第6章 →</span>
+</nav>
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>導入　照明を「図」にする</h2>
+    <p>頭の中で「ここから当てたい」と考えるだけでは、実際の仕込みにはつながりません。照明では、その情報を図面にしてスタッフ同士で共有します。</p>
+  </div>
+  <p>照明図は、単なる「きれいな絵」ではありません。</p>
+  <p><strong>どこに灯体があり、何を使い、どの方向を向き、どの回路につながり、どんな色を使うのか。</strong>そうした情報を整理するための道具です。</p>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「照明図って、舞台の上にある灯体を上から見た絵なの？」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>その考え方が基本です。ただし、上から見た図だけでは分からない情報もあるので、目的に応じて別の図も使います。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>5-1　まずは平面図を読む</h2>
+    <p>平面図は、舞台を上から見た図です。灯体の位置や向きを把握するのに向いています。</p>
+  </div>
+
+  <div class="hk-lighting-plot" aria-label="照明平面図の簡易例">
+    <div class="hk-lighting-plot-audience">客席</div>
+    <div class="hk-lighting-plot-stage">
+      <div class="hk-lighting-plot-beam hk-plot-beam-left"></div>
+      <div class="hk-lighting-plot-beam hk-plot-beam-center"></div>
+      <div class="hk-lighting-plot-beam hk-plot-beam-right"></div>
+      <div class="hk-lighting-plot-person">人物</div>
+    </div>
+    <div class="hk-lighting-plot-fixtures">
+      <span>前明かり</span><span>サイド</span><span>バック</span>
+    </div>
+  </div>
+  <p class="hk-diagram-caption">簡易的な平面図のイメージ。実際の図面では、劇場ごとの舞台寸法やバトン位置、灯体記号などを使って情報を記入します。</p>
+
+  <p>平面図を見るときは、まず<strong>「舞台はどこか」「客席はどこか」</strong>を確認します。</p>
+  <p>そのうえで、灯体がどこに取り付けられ、どちらを向いているのかを読みます。</p>
+
+  <div class="hk-four">
+    <div><b>位置</b><p>どのバトン、サイド、床置きなどに灯体があるか。</p></div>
+    <div><b>向き</b><p>光軸がどの方向を向いているか。</p></div>
+    <div><b>種類</b><p>凸、フレネル、PAR、エリスポットなど何の灯体か。</p></div>
+    <div><b>番号</b><p>その灯体を仕込み・操作するときに識別するための情報。</p></div>
+  </div>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「同じ場所に灯体が2台あったら、どうやって見分けるの？」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>そこで、灯体番号や回路番号などを使って区別します。劇場や現場によって表記方法は異なりますが、「一台ずつ識別できるようにする」という考え方は共通しています。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>5-2　灯体の記号を見る</h2>
+    <p>照明図では、灯体を実物そっくりに描くのではなく、記号で表すことが多くあります。</p>
+  </div>
+  <p>記号そのものは劇場、学校、劇団、照明会社などによって違う場合があります。そのため、<strong>「この形なら必ずこの灯体」と決めつけない</strong>ことが大切です。</p>
+
+  <div class="hk-lighting-symbols">
+    <div><span class="hk-lighting-symbol hk-symbol-circle">○</span><strong>灯体</strong><small>器具を表す記号の例</small></div>
+    <div><span class="hk-lighting-symbol hk-symbol-arrow">↗</span><strong>光の方向</strong><small>光軸・照射方向の例</small></div>
+    <div><span class="hk-lighting-symbol hk-symbol-number">12</span><strong>番号</strong><small>灯体を識別する情報の例</small></div>
+  </div>
+
+  <p>大切なのは記号を暗記することではありません。</p>
+  <p><strong>「この記号は何を表しているのか」を図面の凡例や現場のルールから確認する。</strong>これが基本です。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>5-3　立面図・断面図で高さを見る</h2>
+    <p>平面図は上から見た位置関係には強い一方で、「どの高さにあるか」は分かりにくいことがあります。</p>
+  </div>
+  <p>そこで、横から見た立面図や断面図を使います。</p>
+
+  <div class="hk-lighting-elevation">
+    <div class="hk-elevation-stage">
+      <div class="hk-elevation-floor">舞台</div>
+      <div class="hk-elevation-person">人物</div>
+      <div class="hk-elevation-light hk-elevation-front">前明かり</div>
+      <div class="hk-elevation-light hk-elevation-top">トップ</div>
+      <div class="hk-elevation-light hk-elevation-back">バック</div>
+    </div>
+  </div>
+  <p class="hk-diagram-caption">横から見た簡易イメージ。実際の図面では、バトンや灯体の高さ、舞台面との位置関係などを確認します。</p>
+
+  <div class="hk-term-grid">
+    <div><h3>平面図</h3><p>上から見て、舞台上の位置と方向を確認する図。</p></div>
+    <div><h3>立面図</h3><p>横から見て、高さや上下方向の関係を確認する図。</p></div>
+    <div><h3>断面図</h3><p>舞台と客席などを切った断面として、空間の高さや奥行きを確認する図。</p></div>
+    <div><h3>凡例</h3><p>図面で使っている記号や略号が何を意味するのかを示す説明。</p></div>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>5-4　「灯体・回路・色」を分けて考える</h2>
+    <p>照明図を読むときに混乱しやすいのが、灯体そのものと電気的な情報を同じものとして考えてしまうことです。</p>
+  </div>
+
+  <div class="hk-lighting-flow">
+    <div><strong>灯体</strong><small>何の器具か</small></div>
+    <b>＋</b>
+    <div><strong>位置・方向</strong><small>どこからどこへ当てるか</small></div>
+    <b>＋</b>
+    <div><strong>回路</strong><small>どの系統で操作するか</small></div>
+    <b>＋</b>
+    <div><strong>色</strong><small>どんな光にするか</small></div>
+  </div>
+
+  <p>たとえば、「フレネルを1台使う」という情報だけでは、照明プランは完成しません。</p>
+  <p>どこに吊るのか。どこへ向けるのか。どの回路につなぐのか。ゼラを入れるのか。必要ならどれくらいの明るさにするのか。</p>
+  <p>このように、<strong>一台の灯体にも複数の情報が組み合わさっています。</strong></p>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「じゃあ、照明図は灯体の場所だけ書けばいいわけじゃないんだね？」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>その通りです。現場で必要な情報を、誰が見ても分かる形に整理するのが照明図の役割です。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>5-5　照明図を読む順番</h2>
+    <p>情報が多い図面は、最初から全部を読もうとすると混乱します。順番を決めて見ると読みやすくなります。</p>
+  </div>
+
+  <div class="hk-steps">
+    <span>① 舞台・客席を確認</span><b>→</b>
+    <span>② 灯体の位置を見る</span><b>→</b>
+    <span>③ 向きを見る</span><b>→</b>
+    <span>④ 灯体の種類を見る</span><b>→</b>
+    <span>⑤ 番号・回路を見る</span><b>→</b>
+    <span>⑥ 色・備考を見る</span>
+  </div>
+
+  <p>この順番で見ると、「どこにあるのか」から「何をする灯体なのか」へ、少しずつ情報を増やしていけます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>5-6　照明図から実際の仕込みを想像する</h2>
+    <p>図面を読めるようになると、まだ劇場に入っていなくても仕込みの準備を考えられるようになります。</p>
+  </div>
+
+  <div class="hk-exercise">
+    <h3>5分照明エチュード「図面から光を想像する」</h3>
+    <ol>
+      <li>舞台中央に俳優が一人立っているとします。</li>
+      <li>前明かり、サイド、バックの3方向から光がある平面図を想像します。</li>
+      <li>それぞれの光だけを一つずつ点灯したら、人物のどこが明るくなり、どこに影ができるか考えます。</li>
+      <li>3つを同時に点灯したとき、影や立体感がどう変わるか考えます。</li>
+      <li>最後に「この場面で一番見せたいものは何か」を一文で書きます。</li>
+    </ol>
+    <p>答え合わせは「正しい配置を当てる」ことではありません。<strong>図面上の情報から、舞台上の光を頭の中で想像する</strong>練習です。</p>
+  </div>
+
+  <div class="hk-panel hk-summary">
+    <h3>第5章まとめ</h3>
+    <p>照明図は、舞台上の光をスタッフ同士で共有するための設計図です。</p>
+    <p><strong>平面図で位置と方向、立面図・断面図で高さや空間の関係</strong>を読みます。</p>
+    <p>さらに、灯体の種類、番号、回路、色などの情報を組み合わせて、一台ずつの役割を整理します。</p>
+    <p>図面を読むときは、まず「どこにあるか」、次に「どこへ向いているか」、そして「何の灯体で、どう操作するか」という順番で考えると分かりやすくなります。</p>
+  </div>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「図面が読めると、実際の舞台でどんな光になるか想像できるんだね！」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>そうです。次は、その灯体を実際に電気につなぎ、操作するための仕組みを見ていきます。</p></div>
+</section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>">← 第4章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第6章 →</span>
+</nav>
+
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
 <?php
 $gel_data_path = get_template_directory() . '/assets/data/gel-colors.json';
@@ -875,6 +1061,36 @@ if ( $selected_gel ) :
 
 .hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question strong{color:#fff}.hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}.hk-nyakakichi-followup p{margin:0 0 8px}.hk-nyakakichi-followup p:last-child{margin-bottom:0}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}
 .hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}
+.hk-lighting-plot{margin:24px 0 8px;padding:18px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}
+.hk-lighting-plot-audience{padding:10px;text-align:center;background:var(--hk-bg-card);color:var(--hk-fg-dim);font-size:12px}
+.hk-lighting-plot-stage{position:relative;height:250px;margin:14px auto;max-width:620px;border:2px solid var(--hk-fg-dim);background:var(--hk-bg-card);overflow:hidden}
+.hk-lighting-plot-beam{position:absolute;bottom:18px;width:150px;height:210px;background:var(--hk-accent-warm);opacity:.16;transform-origin:bottom center;clip-path:polygon(42% 0,58% 0,100% 100%,0 100%)}
+.hk-plot-beam-left{left:8%;transform:rotate(16deg)}
+.hk-plot-beam-center{left:38%;transform:rotate(0)}
+.hk-plot-beam-right{right:8%;transform:rotate(-16deg)}
+.hk-lighting-plot-person{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);padding:8px 12px;border:1px solid var(--hk-accent-warm);background:var(--hk-bg-elevated);font-size:12px}
+.hk-lighting-plot-fixtures{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;color:var(--hk-fg-dim);font-size:11px}
+.hk-lighting-plot-fixtures span{padding:5px 9px;border:1px solid var(--hk-border)}
+.hk-lighting-symbols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+.hk-lighting-symbols>div{display:grid;grid-template-columns:62px 1fr;grid-template-rows:auto auto;column-gap:12px;align-items:center;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:16px}
+.hk-lighting-symbol{grid-row:1 / span 2;display:flex;align-items:center;justify-content:center;height:54px;border:1px solid var(--hk-border);font-size:25px;color:var(--hk-accent-warm)}
+.hk-lighting-symbols strong{font-family:var(--hk-font-serif)}
+.hk-lighting-symbols small{color:var(--hk-fg-dim);line-height:1.5}
+.hk-lighting-elevation{margin:24px 0 8px;padding:18px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}
+.hk-elevation-stage{position:relative;height:260px;max-width:720px;margin:0 auto;border-bottom:3px solid var(--hk-fg-dim)}
+.hk-elevation-floor{position:absolute;left:0;bottom:-1px;width:100%;padding-top:8px;text-align:center;font-size:11px;color:var(--hk-fg-dim)}
+.hk-elevation-person{position:absolute;left:48%;bottom:25px;padding:18px 10px 8px;border:1px solid var(--hk-accent-warm);background:var(--hk-bg-card);font-size:11px}
+.hk-elevation-light{position:absolute;padding:8px 10px;border:1px solid var(--hk-border);background:var(--hk-bg-card);font-size:11px;color:var(--hk-fg)}
+.hk-elevation-front{left:12%;bottom:95px}
+.hk-elevation-top{left:44%;top:15px}
+.hk-elevation-back{right:10%;bottom:125px}
+.hk-lighting-flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:24px 0}
+.hk-lighting-flow>div{min-width:125px;padding:16px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);text-align:center}
+.hk-lighting-flow strong{display:block;font-family:var(--hk-font-serif)}
+.hk-lighting-flow small{display:block;margin-top:6px;color:var(--hk-fg-dim);line-height:1.5}
+.hk-lighting-flow>b{color:var(--hk-accent-warm)}
+@media(max-width:700px){.hk-lighting-symbols{grid-template-columns:1fr}.hk-lighting-plot-stage{height:210px}.hk-elevation-stage{height:220px}.hk-lighting-flow{justify-content:flex-start}.hk-lighting-flow>b{display:none}}
+
 .hk-chapter-nav a,.hk-chapter-nav-disabled{padding:10px 14px;color:var(--hk-accent-warm);text-decoration:none}
 .hk-chapter-nav a:hover{text-decoration:underline}
 .hk-chapter-nav-disabled{color:var(--hk-fg-faint)}
