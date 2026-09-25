@@ -663,3 +663,20 @@ ul, ol { padding-left: 1.4em; }
 
     .hk-stageart { flex-direction: column; text-align: center; }
 }
+
+/* Lighting chapter 4: light position diagrams */
+.hk-light-position-diagram{margin:22px 0;padding:20px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);overflow:hidden}
+.hk-stage-diagram{position:relative;min-height:180px;border:1px solid var(--hk-border);background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.07),transparent 48%);display:flex;align-items:center;justify-content:center}
+.hk-stage-label{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:12px 34px;border:1px solid var(--hk-accent-warm);background:rgba(0,0,0,.35);font-family:var(--hk-font-serif);font-size:18px}
+.hk-actor{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:34px;color:var(--hk-accent-warm);text-shadow:0 0 18px rgba(255,180,70,.7)}
+.hk-light-ray{position:absolute;color:#ffd27a;font-size:46px;font-weight:700;text-shadow:0 0 14px rgba(255,180,70,.7)}
+.hk-ray-front{left:32%;top:56%;transform:rotate(-20deg)}
+.hk-ray-side-left{left:25%;top:45%}
+.hk-ray-side-right{right:25%;top:45%}
+.hk-ray-back{right:32%;top:38%;transform:rotate(20deg)}
+.hk-ray-top{left:50%;top:18%;transform:translateX(-50%);font-size:52px}
+.hk-position-label{position:absolute;color:var(--hk-fg-dim);font-size:13px}
+.hk-position-front{left:12%;bottom:18px}.hk-position-left{left:8%;top:18px}.hk-position-right{right:8%;top:18px}.hk-position-back{right:12%;top:18px}.hk-position-top{left:50%;top:8px;transform:translateX(-50%)}
+.hk-audience{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);color:var(--hk-fg-faint);font-size:12px}
+@media(max-width:600px){.hk-light-position-diagram{padding:10px}.hk-stage-diagram{min-height:150px}.hk-stage-label{padding:9px 22px;font-size:15px}.hk-light-ray{font-size:36px}.hk-position-label{font-size:11px}}
+
