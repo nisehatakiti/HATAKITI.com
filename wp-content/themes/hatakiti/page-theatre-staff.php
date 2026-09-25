@@ -36,305 +36,322 @@ get_header();
 <div class="hk-staff-card"><h2>小道具</h2><p>俳優が使う物を用意し、場面のリアリティや演出上の意味を支えます。</p></div>
 </div></section>
 <?php elseif ( isset( $pages[$path] ) && 'theatre-textbook/staff/lighting' === $path ) : ?>
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p><h1>照明</h1><p><?php echo esc_html($pages[$path]['lead']); ?></p></header>
-
-<section class="hk-section"><div class="hk-section-head"><h2>まず覚える4つ</h2></div><div class="hk-four">
-<div><b>光源</b><p>何から光を出すか。従来のハロゲン器具からLEDまで、器具によって光の性質や扱いが変わります。</p></div>
-<div><b>方向</b><p>前、横、後ろ、上など、光の方向で顔・身体・空間の見え方が変わります。</p></div>
-<div><b>広がり</b><p>一点を狙うのか、広いエリアを柔らかく照らすのか。レンズや器具を使い分けます。</p></div>
-<div><b>色</b><p>フィルターやLEDの色を使って、時間・場所・温度・心理的な印象を作ります。</p></div>
-</div></section>
+<header class="hk-staff-hero">
+  <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p>
+  <h1>照明</h1>
+  <p>光の方向、広がり、明るさ、色、影を設計し、舞台上の時間・場所・人物・空気を観客に伝える仕事。</p>
+</header>
 
 <section class="hk-section">
-<div class="hk-section-head"><h2>照明を設計するときの5つの視点</h2><p>「何色を入れるか」だけでなく、光が舞台上で何をしているのかを分解して考えます。</p></div>
-<div class="hk-four hk-lighting-five">
-<div><b>1. 明るさ</b><p>何を見せ、何を見せないかを決めます。明るくすることは単純に「良い」ことではなく、暗がりも演出になります。</p></div>
-<div><b>2. 方向</b><p>光がどこから来るかで、顔の陰影、身体の立体感、舞台空間の奥行きが変わります。</p></div>
-<div><b>3. 広がり</b><p>狙った範囲だけを照らすのか、周囲までつなげるのか。光の境界そのものが舞台上の線になります。</p></div>
-<div><b>4. 色</b><p>時間・場所・季節・温度感・心理などを表現します。色そのものだけでなく、誰にどの方向から当たるかも重要です。</p></div>
-<div><b>5. 影</b><p>照明は「明るくする仕事」であると同時に「影を作る仕事」でもあります。影の位置と濃さを観察します。</p></div>
-</div>
-<div class="hk-panel hk-lighting-note"><strong>覚え方：</strong>「何を見せる？ → どこから？ → どこまで？ → 何色？ → どんな影？」の順に考えると、器具選びと明かり作りを結びつけやすくなります。</div>
-</section>
+  <div class="hk-section-head">
+    <h2>導入　照明って何をしている？</h2>
+    <p>照明は、ただ暗い舞台を明るくするだけではありません。観客に何を見せるのかを、光によって作る仕事です。</p>
+  </div>
+  <p>舞台に立っている俳優を、客席から見る。当たり前のように見えるこの光も、偶然そこにあるわけではありません。</p>
+  <p>どこを明るくするのか。どこを暗くするのか。どの方向から光を当てるのか。どんな色にするのか。光をどこまで広げるのか。</p>
+  <p>照明は、それらを一つひとつ考えて作られています。</p>
 
-<section class="hk-section hk-lighting-intro-illustration">
-<div class="hk-section-head"><h2>にゃかきちと照明を考える</h2><p>ここからは、にゃかきちが「これ、どうなってるの？」と疑問を持ちながら、灯体・配置・操作を順番に見ていきます。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 01</div>
-  <div class="hk-illustration-placeholder-file">lighting-01-light-directions.png</div>
-  <p>舞台を上から見た模式図。正面光・サイド・バック・トップなど、光の方向を人物に向けて矢印で示す。にゃかきちは舞台袖から「同じ人でも、光が横から来ると違って見えるの？」と疑問を持つ。</p>
-</div>
-</section>
+  <div class="hk-panel hk-nyakakichi">
+    <p><strong>にゃかきち：</strong>「照明って、暗い舞台を明るくするためのものじゃないの？」</p>
+    <p>もちろん、それも大切な仕事です。でも、照明にはそれ以上の役割があります。</p>
+  </div>
 
-<section class="hk-section">
-<div class="hk-section-head"><h2>灯体は「光を作って、整えて、届ける」</h2><p>灯体の内部では、光源から出た光をそのまま舞台へ飛ばしているわけではありません。器具によって方法は違いますが、光を集めたり、形を整えたりしてから舞台へ送ります。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 02</div>
-  <div class="hk-illustration-placeholder-file">lighting-02-fixture-anatomy.png</div>
-  <p>灯体の断面模式図。光源→反射・集光→レンズ→絞り／カッター→フィルターホルダー→舞台上の光、という流れを示す。灯体によって部品構成が異なることも注記。</p>
-</div>
-<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「じゃあ、灯体の種類が違うと、光の出方も違うの？」</p><p>その通りです。レンズ、反射鏡、配光、カッターの有無などが違うため、同じ場所を照らしても光の広がり方や境界が変わります。</p></div>
-</section>
+  
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-01-same-stage.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-01-same-stage.png' ); ?>" alt="同じ舞台でも照明によって見え方が変わることを示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-01-same-stage.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>同じ舞台でも、照明を変えると「見え方」や観客の視線が変わります。</figcaption>
+</figure>
 
-<section class="hk-section">
-<div class="hk-section-head"><h2>代表的な灯体を比べてみる</h2><p>器具名を暗記するのではなく、「どんな光が出るか」で比べます。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 03</div>
-  <div class="hk-illustration-placeholder-file">lighting-03-fixture-comparison.png</div>
-  <p>凸・フレネル・エリスポット・PARの横並び比較。灯体の外観を簡略化し、それぞれの光を舞台上に投射した断面図を同じ条件で表示。光の境界、広がり、形を比較できる構成。</p>
-</div>
-<div class="hk-term-grid">
-<div><h3>凸（平凸）</h3><p>狙った場所へ比較的輪郭のある光を置きたいときに考えます。</p></div>
-<div><h3>フレネル</h3><p>比較的柔らかな境界で人物やエリアをつなげたいときに考えます。</p></div>
-<div><h3>エリスポット</h3><p>カッターなどで光の形を細かく制御したいときに考えます。</p></div>
-<div><h3>PAR</h3><p>配光の種類やレンズとの組み合わせを確認し、広がりや光量を活かします。</p></div>
-</div>
+  <div class="hk-term-grid">
+    <div><h3>人物を見せる</h3><p>俳優の顔や表情、身体の動きを観客に見せます。</p></div>
+    <div><h3>場所を見せる</h3><p>屋外、部屋、森、夜の街など、空間の印象を作ります。</p></div>
+    <div><h3>時間を見せる</h3><p>朝、昼、夕方、夜など、時間の変化を光で表現できます。</p></div>
+    <div><h3>視線を誘導する</h3><p>見てほしい場所に光を集め、観客の視線を導きます。</p></div>
+    <div><h3>空間を分ける</h3><p>一つの舞台の中に複数の場所やエリアを作ることができます。</p></div>
+    <div><h3>見せない</h3><p>暗くすることで、見せたくない場所を隠したり、観客に想像させたりできます。</p></div>
+  </div>
+
+  <div class="hk-panel hk-nyakakichi">
+    <p><strong>にゃかきち：</strong>「じゃあ、照明を考えるときって、何を考えればいいの？」</p>
+    <p>まずは、光を5つの視点に分けて考えてみましょう。</p>
+  </div>
 </section>
 
 <section class="hk-section">
-<div class="hk-section-head"><h2>凸：狙った場所に光を置く</h2><p>比較的はっきりした光を作りやすい灯体として、まず凸を見てみます。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 04</div>
-  <div class="hk-illustration-placeholder-file">lighting-04_profile_spot.png</div>
-  <p>凸の簡略断面図。光源、反射鏡、平凸レンズ、前方へ出る光を示す。フォーカス操作によって光の大きさ・輪郭を調整するイメージを併記。</p>
-</div>
+  <div class="hk-section-head">
+    <h2>第1章　光を考える5つの視点</h2>
+    <p>最初から「この灯体を使おう」と考えるのではなく、まず「どんな光が必要なのか」を考えます。</p>
+  </div>
+
+  
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-02-five-viewpoints.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-02-five-viewpoints.png' ); ?>" alt="照明を考える5つの視点を示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-02-five-viewpoints.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>照明を考える基本は、明るさ・方向・広がり・色・影の5つです。</figcaption>
+</figure>
+
+  <p>舞台照明では、特に次の5つの視点が基本になります。</p>
+  <div class="hk-four hk-lighting-five">
+    <div><b>1. 明るさ</b><p>どこを、どれくらい明るくするのか。</p></div>
+    <div><b>2. 方向</b><p>どこから光を当てるのか。</p></div>
+    <div><b>3. 広がり</b><p>どこまで光を広げるのか。</p></div>
+    <div><b>4. 色</b><p>どんな色の光にするのか。</p></div>
+    <div><b>5. 影</b><p>どんな影を作るのか、あるいは消すのか。</p></div>
+  </div>
+
+  <section class="hk-subsection">
+    <h3>1-1　明るさ</h3>
+    <p>まず考えるのは、どれくらい明るくするのかです。舞台全体を明るくする必要がある場面もあれば、人物だけを明るくしたい場面もあります。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「じゃあ、舞台全部を一番明るくすれば見やすいんじゃない？」</p></div>
+    <p>明るければ明るいほど良い、というわけではありません。全部が同じ明るさだと、どこを見ればよいのか分かりにくくなることがあります。</p>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-03-brightness.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-03-brightness.png' ); ?>" alt="舞台全体を同じ明るさにした場合と見せたい場所を明るくした場合の比較図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-03-brightness.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>明るさは「見えるかどうか」だけでなく、「どこを見るか」にも関係します。</figcaption>
+</figure>
+    <p>照明では、<strong>「どこを明るくするか」</strong>が重要です。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>1-2　方向</h3>
+    <p>同じ人物でも、正面、斜め前、横、後ろ、上、下など、どこから光を当てるかによって見え方が変わります。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「同じ明るさでも、向きが違うだけでそんなに変わるの？」</p></div>
+    <p>変わります。光がどこから来ているように見えるかによって、顔の陰影、身体の立体感、空間の奥行きが変わります。</p>
+    <p>方向については第4章で詳しく扱います。ここでは、<strong>「光の向きも照明の設計要素」</strong>だと覚えておきましょう。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>1-3　広がり</h3>
+    <p>次に考えるのが、光をどこまで広げるかです。一人だけを照らす狭い光もあれば、舞台全体を覆うような広い光もあります。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「じゃあ、光って広げたり狭くしたりできるの？」</p></div>
+    <p>できます。灯体の種類やレンズ、絞りなどを使って、光の広がり方を調整します。</p>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-04-beam-spread.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-04-beam-spread.png' ); ?>" alt="広い光・中くらいの光・狭い光を比較する図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-04-beam-spread.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>光の広がりを変えると、舞台上で同じ明かりとして扱う範囲も変わります。</figcaption>
+</figure>
+    <p>なお、<strong>「狭い光＝暗い光」ではありません。</strong>光の明るさと広がりは別の考え方です。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>1-4　色</h3>
+    <p>白い光だけでなく、青、赤、オレンジ、緑、紫など、さまざまな色の光を使うことができます。</p>
+    <p>ただし、「夜だから青」「夕方だから赤」というように、色だけで照明を決める必要はありません。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「赤い光を当てたら、全部『怖い場面』になるの？」</p></div>
+    <p>そうとは限りません。同じ赤でも、明るさ、方向、周囲の色、影との組み合わせによって印象は変わります。</p>
+    <p><strong>色は、照明を作るための一つの手段です。</strong></p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>1-5　影</h3>
+    <p>最後が影です。照明を考えるとき、つい「どこを明るくするか」ばかり考えてしまいます。でも、実は影も重要です。</p>
+    <p>光があれば、どこかに影ができます。光の方向を変えれば影の方向も変わります。複数方向から光を当てれば、影が薄くなることもあります。</p>
+    <p>つまり、<strong>照明を考えることは、影をどう作るかを考えることでもあります。</strong></p>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-05-light-and-shadow.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-05-light-and-shadow.png' ); ?>" alt="光の方向によって人物の影の出方が変わることを示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-05-light-and-shadow.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>光の方向が変わると、影の位置や濃さが変わり、人物の見え方も変わります。</figcaption>
+</figure>
+  </section>
+
+  <div class="hk-panel hk-summary">
+    <h3>第1章まとめ</h3>
+    <p>照明を考えるときは、<strong>明るさ・方向・広がり・色・影</strong>の5つを意識します。</p>
+    <p>この5つを組み合わせることで、舞台の「見え方」を作っていきます。</p>
+  </div>
+
+  <div class="hk-panel hk-nyakakichi">
+    <p><strong>にゃかきち：</strong>「なるほど……。でも、実際にその光を出すには、どんな機械を使うの？」</p>
+    <p>ここから、いよいよ灯体を見ていきます。</p>
+  </div>
 </section>
 
 <section class="hk-section">
-<div class="hk-section-head"><h2>フレネル：柔らかくつなぐ</h2><p>フレネルレンズを使った灯体は、比較的柔らかな境界の光を作りやすいのが特徴です。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 05</div>
-  <div class="hk-illustration-placeholder-file">lighting-05_fresnel.png</div>
-  <p>フレネル灯体の簡略断面図。フレネルレンズと光源の関係、スポット／フラッド方向の変化、舞台上の比較的柔らかな光の境界を示す。</p>
-</div>
+  <div class="hk-section-head">
+    <h2>第2章　灯体を知る</h2>
+    <p>舞台照明では、光を作るための器具を「灯体」と呼びます。灯体には、それぞれ得意な光があります。</p>
+  </div>
+
+  <p>広い範囲を照らすもの。狭い範囲を照らすもの。輪郭を作るもの。背景を照らすもの。形を切り取るもの。</p>
+  <p>だから、「一番明るい灯体を使えばいい」というわけではありません。</p>
+  <p><strong>どんな光が必要なのかに合わせて、灯体を選ぶ。</strong>これが基本です。</p>
+
+  <section class="hk-subsection">
+    <h3>2-1　凸（平凸）</h3>
+    <p>舞台照明でよく使われる灯体の一つが、凸レンズを使ったスポットです。「凸」や「平凸」と呼ばれることがあります。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「なんで『凸』っていうの？」</p></div>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-06-convex-lens.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-06-convex-lens.png' ); ?>" alt="凸レンズの断面と形の由来を示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-06-convex-lens.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>凸レンズは中央が厚く、外側に向かって薄くなる形をしています。</figcaption>
+</figure>
+    <p>凸レンズは、光を集めたり、光の広がり方を調整したりするために使われます。凸系の灯体では、比較的しっかりした光を作ることができます。</p>
+    <p>そのため、人物や特定の場所を照らしたり、光の範囲を調整したりする用途で使われます。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>2-2　フレネル</h3>
+    <p>次にフレネルです。フレネルもレンズを使った灯体ですが、凸とは少し違った構造になっています。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「凸とフレネルって、どっちもレンズなのに何が違うの？」</p></div>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-07-convex-vs-fresnel.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-07-convex-vs-fresnel.png' ); ?>" alt="凸レンズとフレネルレンズの構造を比較する図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-07-convex-vs-fresnel.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>フレネルレンズは、レンズの働きを段階的な形状で実現した構造です。</figcaption>
+</figure>
+    <p>舞台照明では、比較的柔らかな境界の光を作りながら、光の広がりを調整する用途などで使われます。</p>
+    <p>凸とフレネルは、どちらが「上」というものではありません。<strong>必要な光に応じて使い分けるもの</strong>です。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>2-3　PAR</h3>
+    <p>PARは、レンズや反射鏡などを利用して、特徴のある方向性を持った光を作るタイプの灯体です。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「PARって、普通のスポットと違うの？」</p></div>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-08-par-beam.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-08-par-beam.png' ); ?>" alt="PAR灯体と方向性のある光を示す図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-08-par-beam.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>PARでは、機種や配光によって光の広がり方が変わります。実際の仕様を確認して使います。</figcaption>
+</figure>
+    <p>PARは、空間に方向性のある光を作ったり、複数台を組み合わせたりする用途があります。</p>
+    <p>ここでも大切なのは、<strong>「PARだから何でもできる」ではなく、「PARが得意な光を利用する」</strong>という考え方です。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>2-4　エリスポット</h3>
+    <p>エリスポットは、光の形や範囲を比較的細かくコントロールできるタイプの灯体です。</p>
+    <p>特定の人物、特定の場所、特定の範囲を狙って照らしたいときに活躍します。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「この灯体だけ、光の形まで作れるの？」</p></div>
+    <p>レンズによる光に、カッターやゴボなどを組み合わせることで、光の形そのものを設計できます。カッターについては後の章で詳しく扱います。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>2-5　ホリゾントライト</h3>
+    <p>舞台の奥にある壁や幕など、背景を広く照らすために使われるのがホリゾントライトです。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「人物を照らすライトとは違って、背景を照らすライトもあるんだ？」</p></div>
+    
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-09-horizont.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-09-horizont.png' ); ?>" alt="ホリゾントライトで舞台奥の背景を照らす断面図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-09-horizont.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>ホリゾント系の灯体は、舞台奥の背景面を広く照らすために使われます。</figcaption>
+</figure>
+    <p>人物だけを照らしても、背景が真っ暗なら舞台全体の印象は大きく変わります。背景を一つの面として作ることで、舞台空間の印象を整えることができます。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>2-6　LED灯体</h3>
+    <p>最近の舞台照明では、LEDを光源として使う灯体も多くなっています。</p>
+    <p>LED灯体には、白色光を出すものもあれば、赤・緑・青などを組み合わせて色を作るものもあります。さらに、明るさや色などを電子的に制御できるものもあります。</p>
+    <div class="hk-panel hk-nyakakichi"><p><strong>にゃかきち：</strong>「じゃあ、LEDならゼラを入れなくても色を変えられるの？」</p></div>
+    <p>灯体によります。LEDの光源そのものの組み合わせで色を作れる器具もあります。一方で、従来型の灯体ではカラーフィルターを使って光の色を変えることがあります。</p>
+    <p><strong>「LED＝ゼラが絶対にいらない」</strong>という単純な話ではありません。灯体の種類や使い方によって、色の作り方は変わります。</p>
+  </section>
+
+  
+<figure class="hk-illustration">
+<?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-10-fixture-overview.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/theatre/lighting/lighting-10-fixture-overview.png' ); ?>" alt="舞台照明の代表的な灯体と、それぞれの得意な光をまとめた図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-10-fixture-overview.png</div>
+    <p>この位置に図解を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>灯体にはそれぞれ得意な光があります。「何を使うか」より先に「どんな光が必要か」を考えます。</figcaption>
+</figure>
+
+  <div class="hk-panel hk-summary">
+    <h3>第2章まとめ</h3>
+    <p>ここで覚えてほしいのは、器具の細かな仕様ではありません。</p>
+    <p><strong>灯体には、それぞれ得意な光がある。</strong></p>
+    <p>そして、<strong>「何を使うか」より先に、「どんな光が必要なのか」を考える。</strong>これが照明を考えるときの基本です。</p>
+  </div>
+
+  <div class="hk-panel hk-nyakakichi">
+    <p><strong>にゃかきち：</strong>「灯体って、ただ光る箱じゃないんだね。」</p>
+    <p>そうです。灯体の中では、光源から出た光を反射させたり、レンズで整えたり、広がりを調整したりして、舞台に必要な光へ変えています。</p>
+    <p>次は、その「灯体の中」を実際に見てみましょう。</p>
+  </div>
 </section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>エリスポット：光の形を作る</h2><p>エリスポットでは、レンズによる光にカッターやゴボなどを組み合わせ、光の形そのものを設計できます。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 06</div>
-  <div class="hk-illustration-placeholder-file">lighting-06_ellipsoidal_cutters_gobo.png</div>
-  <p>エリスポットの側面模式図。光源→レンズ→カッター4枚→ゴボ→レンズ→舞台の順を示し、窓枠・木漏れ日などの投影例を小さく添える。</p>
-</div>
-<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「カッターって、光を暗くするためのもの？」</p><p>主な役割は、必要な場所だけに光を残すことです。明るさを下げるというより、光の形や境界を切って不要な光を当てないために使います。</p></div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>PAR：レンズと配光を確認する</h2><p>PARは一種類の光だけを出す器具名ではなく、実際には使用するレンズや配光などによって見え方が変わります。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 07</div>
-  <div class="hk-illustration-placeholder-file">lighting-07_par_beam.png</div>
-  <p>PAR灯体の簡略図と、配光の違う例を横並びで表示。光の広がりと用途を比較し、機種によって仕様が異なることを注記。</p>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>ホリゾントライト：背景を作る</h2><p>ホリゾント系の灯体は、人物を狙うというより、舞台奥の背景面を均一または意図した色・明るさで作るために使います。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 08</div>
-  <div class="hk-illustration-placeholder-file">lighting-08_horizont.png</div>
-  <p>舞台断面図。ホリゾント幕と、その下部または上部から背景面へ光を送るホリゾント系灯体を示す。背景面が色で染まる様子を表現。</p>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>サイドスポット（SS）は「灯体の種類」ではなく配置の考え方</h2><p>SSは特定の一種類の灯体を意味する言葉ではなく、舞台の横方向から人物や身体へ光を入れる配置・役割を指して使われます。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 09</div>
-  <div class="hk-illustration-placeholder-file">lighting-09_side_spot_rolling.png</div>
-  <p>舞台平面図＋断面図。左右の袖に配置されたSS、床置きのコロガシ、そこから人物へ入る横光を表示。高い位置・低い位置で身体への当たり方が変わることも示す。</p>
-</div>
-<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「SSという名前の特別な灯体があるの？」</p><p>ここではそう考えない方が分かりやすいです。SSは「横から入れる」という<strong>配置・役割</strong>の言葉として覚え、実際に何の灯体を使うかは現場や目的で決まります。</p></div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>サスバトンとコロガシ：どこに灯体を置くのか</h2><p>灯体そのものだけでなく、どこに取り付けるか・置くかによって光の方向が決まります。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 10</div>
-  <div class="hk-illustration-placeholder-file">lighting-10_batten_and_rolling.png</div>
-  <p>舞台断面図。上部のサスバトンに吊られた灯体と、舞台袖・舞台床に置かれたコロガシを同時に表示。バトンからのトップ／前方光と、床付近からの低いサイド光を対比。</p>
-</div>
-<div class="hk-term-grid">
-<div><h3>サスバトン</h3><p>劇場上部から吊り下げられた、照明器具などを取り付けるための棒状の設備。バトンの位置によって灯体の高さと照射方向の基準が変わります。</p></div>
-<div><h3>コロガシ</h3><p>灯体を床置きして使う配置。低い位置からの光を作れるため、SSなどの横光や足元方向の光に利用されます。実際の器具・固定方法は現場の安全手順に従います。</p></div>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>フェーダーと調光器：操作と電力制御をつなぐ</h2><p>「フェーダーを上げると灯体が明るくなる」の裏側には、操作する人と電力を制御する機器の関係があります。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 11</div>
-  <div class="hk-illustration-placeholder-file">lighting-11_fader_dimmer_power.png</div>
-  <p>信号・電力の流れを分けた模式図。操作卓のフェーダー→制御信号→調光器→同一系統の電源→灯体、という流れを示す。「フェーダー＝操作するもの」「調光器＝電力を制御するもの」を明確にする。同一の調光回路に接続された灯体は、その回路の制御に応じて明るさが変わる例も示す。</p>
-</div>
-<div class="hk-panel"><p><strong>にゃかきちの疑問：</strong>「フェーダーと調光器って同じものじゃないの？」</p><p>現場では会話の中で近い意味に感じることもありますが、教材では分けて覚えます。<strong>フェーダーは人が操作するためのコントロール</strong>、<strong>調光器は電力を制御して灯体の明るさを変える装置</strong>です。現在のシステムでは制御信号の方式もさまざまなので、実際の劇場設備に従います。</p></div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>灯体・配置・操作を一本につなげる</h2><p>「どの灯体を使うか」だけでなく、「どこに置き、どう操作し、どこへ光を当てるか」を一つの流れで考えます。</p></div>
-<div class="hk-illustration-placeholder">
-  <div class="hk-illustration-placeholder-label">ILLUSTRATION 12</div>
-  <div class="hk-illustration-placeholder-file">lighting-12_fixture_position_control.png</div>
-  <p>舞台断面＋制御系の総合図。サスバトン上の灯体、SS、コロガシ、ホリゾント、操作卓、調光器を一枚につなぎ、「位置→灯体→回路→フェーダー→舞台上の光」の関係を示す。</p>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>光の方向を詳しく見る</h2><p>同じ人物でも、方向が変わるだけで顔の見え方と身体の立体感は大きく変わります。</p></div>
-<div class="hk-equipment hk-direction-grid">
-<article><h3>正面光</h3><p>顔や身体を観客から見えやすくする基本的な方向。影を減らしやすい一方、立体感が弱くなることもあります。</p><p class="hk-tip">考えること：<strong>表情をどこまで明確に見せるか</strong></p></article>
-<article><h3>斜め前・サイド前</h3><p>正面より陰影が生まれ、人物の立体感を作りやすくなります。左右の光量差でも印象が変わります。</p><p class="hk-tip">考えること：<strong>顔のどちら側に影を置くか</strong></p></article>
-<article><h3>サイド光</h3><p>身体の輪郭や動きを強調しやすい方向。ダンスや身体表現だけでなく、心理的な緊張感にも使えます。</p><p class="hk-tip">考えること：<strong>身体を「面」ではなく「線」として見せるか</strong></p></article>
-<article><h3>逆光・バックライト</h3><p>人物の輪郭を背景から分離しやすく、奥行きやシルエットを作るのに向いています。顔は暗くなりやすいため、前方の光との関係を考えます。</p><p class="hk-tip">考えること：<strong>人物を見せるのか、輪郭を見せるのか</strong></p></article>
-<article><h3>トップ・上方光</h3><p>上からの光は目の周囲や顔の下側に影を作りやすく、時間帯や場所の表現、緊張感のある場面などにも使えます。</p><p class="hk-tip">考えること：<strong>顔にできる影を意図して使うか</strong></p></article>
-<article><h3>足元・低い位置から</h3><p>日常的な自然光とは異なる影を作りやすく、通常とは違う身体の見え方を作れます。特殊な表現として扱います。</p><p class="hk-tip">考えること：<strong>「普段見ない方向からの光」に意味を持たせるか</strong></p></article>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>光の広がりと境界</h2><p>照明の「広がり」は、舞台上のどこまでを同じ光として扱うかという設計です。</p></div>
-<div class="hk-term-grid">
-<div><h3>狭く狙う</h3><p>特定の人物や場所に視線を集めやすくなります。周囲との明暗差が大きいほど、舞台上の焦点が明確になります。</p></div>
-<div><h3>広く照らす</h3><p>複数の人物や空間を同じ光の中に置きやすくなります。場面全体のつながりを作るのに向いています。</p></div>
-<div><h3>境界を硬くする</h3><p>光が当たる場所と当たらない場所の違いをはっきりさせます。エリア分けや形のある光を作るときに意識します。</p></div>
-<div><h3>境界を柔らかくする</h3><p>隣り合う明かりを自然につなぎやすくなります。フレネルなど、比較的柔らかい境界を作りやすい器具が役立ちます。</p></div>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>明るさは「何を見せるか」で決める</h2></div>
-<div class="hk-panel">
-<p>照明の明るさは、単独の数値だけで決めるものではありません。人物、背景、床、装置などの明るさの<strong>相対的な関係</strong>を見ることが重要です。</p>
-<ul>
-<li><strong>人物を見せたい：</strong>顔や身体に必要な明るさを確保する。</li>
-<li><strong>背景を見せたい：</strong>人物との明暗差を調整し、空間の情報を残す。</li>
-<li><strong>視線を集めたい：</strong>見せたい場所と、それ以外の明るさの差を利用する。</li>
-<li><strong>時間を感じさせたい：</strong>明るさだけでなく色・方向・影を組み合わせる。</li>
-<li><strong>暗さを演出したい：</strong>全部を明るくせず、見せる範囲を意図的に限定する。</li>
-</ul>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>照明器具の選び方</h2><p>器具名を覚えることより、「欲しい光の性質」から器具を選べるようになることを目標にします。</p></div>
-<div class="hk-term-grid">
-<div><h3>凸（平凸）</h3><p>比較的輪郭のある光を作りやすいスポット。狙った場所へ光を置きたいときに考えます。</p></div>
-<div><h3>フレネル</h3><p>光の境界を比較的柔らかくしやすいスポット。人物やエリアを自然につなげたいときに考えます。</p></div>
-<div><h3>PAR</h3><p>器具・レンズ・配光の組み合わせによって特徴が変わります。広がりや光量、設置位置との関係を確認します。</p></div>
-<div><h3>エリスポット</h3><p>光の形をカッターやゴボなどで制御できるタイプ。窓、木漏れ日、特定の場所だけに落ちる光など、形を作りたいときに使います。</p></div>
-<div><h3>LED器具</h3><p>色を電子的に変えられる機種など、多様なタイプがあります。器具によって配光、色再現、出力、制御方法が異なるため、機種仕様を確認します。</p></div>
-<div><h3>器具を組み合わせる</h3><p>一台ですべてを解決しようとせず、「人物を見せる光」「背景を作る光」「輪郭を作る光」のように役割を分けて考えます。</p></div>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>フォーカスを学ぶ</h2><p>フォーカスは、器具をどこへ向けるかだけではなく、「どこに光を置くか」を決める作業です。</p></div>
-<div class="hk-steps"><span>照らす対象を決める</span><b>→</b><span>器具の位置を確認</span><b>→</b><span>光軸を合わせる</span><b>→</b><span>広がりを調整</span><b>→</b><span>不要な光を確認</span><b>→</b><span>隣の明かりとつなぐ</span></div>
-<div class="hk-panel" style="margin-top:14px"><p><strong>チェックするもの：</strong>人物の顔だけでなく、足元・背景・舞台袖・客席側への漏れ光まで確認します。フォーカスは「狙った場所に当たった」で終わらず、「狙っていない場所に余計な光がない」ことも重要です。</p></div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>明かり合わせを理解する</h2><p>仕込みが終わった照明を、実際の舞台上で作品に合わせて整えていく段階です。</p></div>
-<div class="hk-steps"><span>明かりを点ける</span><b>→</b><span>人物を見る</span><b>→</b><span>背景を見る</span><b>→</b><span>影を見る</span><b>→</b><span>色を見る</span><b>→</b><span>明るさを調整</span><b>→</b><span>全体を確認</span></div>
-<div class="hk-panel" style="margin-top:14px"><p>ここでは「一灯ずつきれいにする」だけでなく、複数の明かりが重なったときに人物の顔、衣裳、背景、舞台装置がどう見えるかを確認します。最終的には場面転換やキューまで含めて、作品全体の流れの中で判断します。</p></div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>ホリゾント系のライトとサイドスポット（SS）</h2><p>舞台照明では、人物を照らす器具だけでなく、背景や身体の輪郭を作るための専用・定番の明かりがあります。</p></div>
-<div class="hk-equipment">
-<article><h3>ホリゾントライト</h3><p>ホリゾント幕など、舞台奥の背景面を広く照らすための器具です。上向き・下向きなど、機種や設置方法によって配光が異なります。</p><p class="hk-tip">向いている考え方：<strong>「舞台の奥を一枚の面として作りたい」</strong></p></article>
-<article><h3>ホリゾント系のLEDライト</h3><p>現在はLEDタイプもあり、複数の色を組み合わせて背景の色やグラデーションを作りやすい機種があります。色を変えられることと、舞台上の人物を直接照らすことは別の役割として考えます。</p><p class="hk-tip">考えること：<strong>「背景の色をどう変化させるか」</strong></p></article>
-<article><h3>サイドスポット（SS）</h3><p>舞台袖側など、舞台の横方向から人物や身体を照らすスポットです。「SS」は現場でサイドスポットを指す略称として使われることがあります。身体の側面や輪郭に光を入れやすく、立体感や動きを強調できます。</p><p class="hk-tip">向いている考え方：<strong>「横から身体をどう見せるか」</strong></p></article>
-<article><h3>SSを使うときのポイント</h3><p>左右のサイド光を組み合わせる場合は、片側だけが強くならないか、顔の影がどう出るか、足元まで光が届いているかを確認します。高さを変えると、身体のどの部分に光が入るかも変わります。</p><p class="hk-tip">チェックすること：<strong>「顔・胸・腰・足のどこに光があるか」</strong></p></article>
-<article><h3>ホリゾントとSSの違い</h3><p>ホリゾント系は主に<strong>背景面</strong>、SSは主に<strong>人物や身体の側面</strong>を扱います。同じ「色のついた明かり」でも、照らす対象と方向が違います。</p></article>
-<article><h3>組み合わせて考える</h3><p>たとえば、ホリゾントで夜の青い背景を作り、SSで人物の輪郭や身体の動きを拾う、といった役割分担ができます。さらに正面光やバックライトを加えて、人物の見え方を調整します。</p></article>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>灯体の仕組みを知る</h2><p>照明は「スイッチを入れると光る箱」ではありません。光源から出た光を、反射・レンズ・シャッター類で整えて、舞台上の必要な場所へ届けています。</p></div>
-<div class="hk-light-fixture-diagram" role="img" aria-label="舞台照明灯体の基本構造を示す模式図">
-  <div class="hk-fixture-part hk-fixture-source"><strong>光源</strong><small>LED・ランプなど</small></div>
-  <div class="hk-fixture-arrow">→</div>
-  <div class="hk-fixture-part"><strong>反射・集光</strong><small>光を前方へ集める</small></div>
-  <div class="hk-fixture-arrow">→</div>
-  <div class="hk-fixture-part"><strong>絞り・カッター</strong><small>光の範囲・形を整える</small></div>
-  <div class="hk-fixture-arrow">→</div>
-  <div class="hk-fixture-part"><strong>レンズ</strong><small>配光・焦点を整える</small></div>
-  <div class="hk-fixture-arrow">→</div>
-  <div class="hk-fixture-part hk-fixture-output"><strong>舞台上の光</strong><small>人物・背景・床など</small></div>
-</div>
-<p class="hk-diagram-caption">※これは灯体の種類を横断して考えるための概念図です。実際の構造・配置は器具によって異なります。</p>
-<div class="hk-term-grid">
-<div><h3>光源</h3><p>LEDやランプなど、実際に光を発生させる部分。光源の種類によって色、出力、発熱、制御方法などが変わります。</p></div>
-<div><h3>反射・集光</h3><p>発生した光を前方へ効率よく送り、レンズなどと組み合わせて必要な配光を作ります。</p></div>
-<div><h3>レンズ</h3><p>光の広がり方や焦点を整えます。凸、フレネル、エリスポットなど、器具によって光の性質が変わります。</p></div>
-<div><h3>光を切る・絞る部分</h3><p>必要な場所だけを照らすために、絞りやカッターなどで光の範囲・形を調整します。</p></div>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>「絞り」と「カッター」は何が違う？</h2><p>どちらも光を制御しますが、考え方が違います。</p></div>
-<div class="hk-control-diagram">
-  <div class="hk-control-card"><div class="hk-beam hk-beam-wide"></div><h3>絞り（アイリス）</h3><p>光の開口を全体として狭くしたり広くしたりします。円形に近い光の大きさを調整するイメージです。</p><strong>「光の大きさを変える」</strong></div>
-  <div class="hk-control-card"><div class="hk-beam hk-beam-cut"></div><h3>カッター（シャッター）</h3><p>器具内部のカッターを差し込んで、光の一部を直線的に切ります。窓や舞台袖など、不要な場所への光漏れを止めるのにも使います。</p><strong>「光の形・境界を切る」</strong></div>
-</div>
-<div class="hk-panel hk-lighting-note"><strong>実際のフォーカスでは：</strong>まず照らしたい範囲を決め、必要なら絞りで大きさを整え、カッターで舞台装置や袖などに当たる不要な光を切ります。その後、周囲の明かりとのつながりを確認します。</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>カッターの使い方</h2><p>「光をきれいにする」のではなく、「光を当てたくない場所を決める」と考えると分かりやすくなります。</p></div>
-<div class="hk-steps"><span>照らしたい範囲を決める</span><b>→</b><span>余計な光を探す</span><b>→</b><span>カッターを少し入れる</span><b>→</b><span>境界を見る</span><b>→</b><span>舞台上で再確認</span></div>
-<div class="hk-term-grid">
-<div><h3>舞台袖を切る</h3><p>袖幕や舞台袖に光が漏れると、暗転時などに意図しない場所が見えることがあります。カッターで光を止めます。</p></div>
-<div><h3>装置を切る</h3><p>壁やセットの一部だけを照らしたくない場合、カッターで境界を作ります。</p></div>
-<div><h3>床を切る</h3><p>人物の上半身を中心に見せたいなど、床への余分な光を抑える場合にも使います。</p></div>
-<div><h3>境界を観察する</h3><p>カッターを入れすぎると人物の一部まで欠けます。舞台全体を見ながら少しずつ調整します。</p></div>
-</div>
-</section>
-
-<section class="hk-section">
-<div class="hk-section-head"><h2>ゼラは「光の前に色を置く」</h2><p>カラーフィルターは、灯体から出た光に色を与えるために使います。</p></div>
-<div class="hk-gel-use-diagram">
-  <div class="hk-gel-diagram-item"><span class="hk-gel-light">白色光</span><small>灯体から出る光</small></div>
-  <b>→</b>
-  <div class="hk-gel-frame">ゼラ<br><small>フィルター</small></div>
-  <b>→</b>
-  <div class="hk-gel-stage">色のついた光<br><small>舞台上へ</small></div>
-</div>
-<div class="hk-term-grid">
-<div><h3>ゼラを入れる場所</h3><p>一般的な灯体では、専用のフィルターホルダーやフレームにカラーフィルターをセットします。具体的な位置や固定方法は灯体の機種に従います。</p></div>
-<div><h3>ゼラを選ぶ</h3><p>「青だから夜」と単純に決めず、人物、背景、時間、空間、心理など、何を表現するための色なのかを考えます。</p></div>
-<div><h3>ゼラを重ねる</h3><p>複数枚を重ねると光量低下や色の変化が起こります。必要な場合以外は、目的を明確にして使います。</p></div>
-<div><h3>熱に注意する</h3><p>従来型ランプ器具ではフィルターが高温になるため、フィルターの種類・耐熱性・器具の指定方法を確認します。LED器具でも機種ごとの指定を守ります。</p></div>
-</div>
-<div class="hk-warning"><strong>重要：</strong>灯体ごとにフィルターホルダーの位置、カッターや絞りの有無、操作方法が違います。ここでは共通する考え方を学び、実際の仕込みでは使用する器具の取扱説明書と劇場・現場の手順を優先します。</div>
-</section>
-
-<section class="hk-section"><div class="hk-section-head"><h2>代表的な器具</h2></div>
-<div class="hk-equipment">
-<article><h3>凸（平凸レンズスポット）</h3><p>比較的輪郭のはっきりした光を作りやすいスポット。舞台ではC8など、レンズ口径をインチで表す呼び方もあります。</p><p class="hk-tip">向いている考え方：<strong>「ここを狙って照らしたい」</strong></p></article>
-<article><h3>フレネル</h3><p>フレネルレンズを使ったスポット。凸に比べて光の境界を柔らかくしやすく、エリアをふんわり照らす用途にも使いやすい器具です。</p><p class="hk-tip">向いている考え方：<strong>「この辺りを自然につなげたい」</strong></p></article>
-<article><h3>PAR</h3><p>レンズと反射鏡を一体化したPAR型器具など。配光の種類や用途を確認して使います。</p></article>
-<article><h3>エリスポット</h3><p>レンズによる比較的明確な光を作り、カッターやゴボなどで光を成形できるタイプ。機種によって機能が異なります。</p></article>
-<article><h3>LED照明</h3><p>色を電子的に変えられる器具など、現在の舞台では多様なLED器具が使われています。機種ごとの仕様確認が重要です。</p></article>
-</div></section>
-
-<section class="hk-section"><div class="hk-section-head"><h2>ゼラ・カラーフィルター</h2></div>
-<div class="hk-panel"><p>「ゼラ」は舞台照明で使われるカラーフィルターを指す通称として広く使われます。現在は製品素材も多様で、メーカーごとに名称・番号体系があります。</p><div class="hk-warning"><strong>番号はメーカーと製品体系をセットで覚える。</strong><br>たとえばRoscoにはRoscolux、Supergel、e-colour+など複数の体系があります。同じ数字を「舞台照明共通の色番号」と考えないことが大切です。</div>
-<table class="hk-filter-table"><thead><tr><th>見る項目</th><th>教材で覚えること</th></tr></thead><tbody>
-<tr><td>メーカー</td><td>Rosco、LEEなど</td></tr>
-<tr><td>シリーズ</td><td>どの製品体系の番号なのか</td></tr>
-<tr><td>番号</td><td>製品カタログ上の番号</td></tr>
-<tr><td>色名</td><td>色名だけでなく実際の透過光を見る</td></tr>
-<tr><td>用途</td><td>人物、背景、時間、季節、心理など何を表現するか</td></tr>
-</tbody></table>
-<p style="margin-top:18px"><a class="hk-gel-cta" href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベースで色を探す →</a></p>
-</div></section>
-
-<section class="hk-section"><div class="hk-section-head"><h2>仕込みから本番まで</h2></div><div class="hk-steps"><span>器具・回路を確認</span><b>→</b><span>吊り込み</span><b>→</b><span>ケーブル・回路</span><b>→</b><span>フォーカス</span><b>→</b><span>明かり合わせ</span><b>→</b><span>場当たり</span><b>→</b><span>本番</span></div></section>
-
-<section class="hk-section"><div class="hk-section-head"><h2>5分照明エチュード</h2></div><div class="hk-exercise"><h3>同じ人物を、3つの光で見せる</h3><ol><li>まず正面から普通に照らした人物を見る。</li><li>横からの光に変えて、顔や身体の影を観察する。</li><li>後ろからの光に変えて、輪郭がどう変わるかを見る。</li><li>「安心」「不安」「孤独」のどれかを、光の方向・強さ・色だけで表現する。</li></ol><p>ポイントは「きれいな照明を作る」ことではなく、<strong>光を変えると観客の読み方がどう変わるか</strong>を考えること。</p></div></section>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
 <?php
