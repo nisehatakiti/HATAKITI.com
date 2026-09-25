@@ -51,7 +51,7 @@ get_header();
   <p>どこを明るくするのか。どこを暗くするのか。どの方向から光を当てるのか。どんな色にするのか。光をどこまで広げるのか。</p>
   <p>照明は、それらを一つひとつ考えて作られています。</p>
 
-  <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「照明って、暗い舞台を明るくするためのものじゃないの？」</p><p>もちろん、それも大切な仕事です。でも、照明にはそれ以上の役割があります。</p></div></div>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「照明って、暗い舞台を明るくするためのものじゃないの？」</p></div></div><div class="hk-nyakakichi-followup"><p>もちろん、それも大切な仕事です。でも、照明にはそれ以上の役割があります。</p></div>
 
   
 <figure class="hk-illustration">
@@ -77,10 +77,7 @@ get_header();
     <div><h3>見せない</h3><p>暗くすることで、見せたくない場所を隠したり、観客に想像させたりできます。</p></div>
   </div>
 
-  <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question">
-    <p><strong>にゃかきち：</strong>「じゃあ、照明を考えるときって、何を考えればいいの？」</p>
-    <p>まずは、光を5つの視点に分けて考えてみましょう。</p>
-  </div></div>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、照明を考えるときって、何を考えればいいの？」</p></div></div><div class="hk-nyakakichi-followup"><p>まずは、光を5つの視点に分けて考えてみましょう。</p></div>
 </section>
 
 <section class="hk-section">
@@ -116,7 +113,7 @@ get_header();
   <section class="hk-subsection">
     <h3>1-1　明るさ</h3>
     <p>まず考えるのは、どれくらい明るくするのかです。舞台全体を明るくする必要がある場面もあれば、人物だけを明るくしたい場面もあります。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「じゃあ、舞台全部を一番明るくすれば見やすいんじゃない？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、舞台全部を一番明るくすれば見やすいんじゃない？」</p></div></div>
     <p>明るければ明るいほど良い、というわけではありません。全部が同じ明るさだと、どこを見ればよいのか分かりにくくなることがあります。</p>
     
 <figure class="hk-illustration">
@@ -138,7 +135,7 @@ get_header();
   <section class="hk-subsection">
     <h3>1-2　方向</h3>
     <p>同じ人物でも、正面、斜め前、横、後ろ、上、下など、どこから光を当てるかによって見え方が変わります。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「同じ明るさでも、向きが違うだけでそんなに変わるの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「同じ明るさでも、向きが違うだけでそんなに変わるの？」</p></div></div>
     <p>変わります。光がどこから来ているように見えるかによって、顔の陰影、身体の立体感、空間の奥行きが変わります。</p>
     <p>方向については第4章で詳しく扱います。ここでは、<strong>「光の向きも照明の設計要素」</strong>だと覚えておきましょう。</p>
   </section>
@@ -146,7 +143,7 @@ get_header();
   <section class="hk-subsection">
     <h3>1-3　広がり</h3>
     <p>次に考えるのが、光をどこまで広げるかです。一人だけを照らす狭い光もあれば、舞台全体を覆うような広い光もあります。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「じゃあ、光って広げたり狭くしたりできるの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、光って広げたり狭くしたりできるの？」</p></div></div>
     <p>できます。灯体の種類やレンズ、絞りなどを使って、光の広がり方を調整します。</p>
     
 <figure class="hk-illustration">
@@ -169,7 +166,7 @@ get_header();
     <h3>1-4　色</h3>
     <p>白い光だけでなく、青、赤、オレンジ、緑、紫など、さまざまな色の光を使うことができます。</p>
     <p>ただし、「夜だから青」「夕方だから赤」というように、色だけで照明を決める必要はありません。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「赤い光を当てたら、全部『怖い場面』になるの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「赤い光を当てたら、全部『怖い場面』になるの？」</p></div></div>
     <p>そうとは限りません。同じ赤でも、明るさ、方向、周囲の色、影との組み合わせによって印象は変わります。</p>
     <p><strong>色は、照明を作るための一つの手段です。</strong></p>
   </section>
@@ -201,10 +198,7 @@ get_header();
     <p>この5つを組み合わせることで、舞台の「見え方」を作っていきます。</p>
   </div>
 
-  <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question">
-    <p><strong>にゃかきち：</strong>「なるほど……。でも、実際にその光を出すには、どんな機械を使うの？」</p>
-    <p>ここから、いよいよ灯体を見ていきます。</p>
-  </div></div>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「なるほど……。でも、実際にその光を出すには、どんな機械を使うの？」</p></div></div><div class="hk-nyakakichi-followup"><p>ここから、いよいよ灯体を見ていきます。</p></div>
 </section>
 
 <section class="hk-section">
@@ -220,7 +214,7 @@ get_header();
   <section class="hk-subsection">
     <h3>2-1　凸（平凸）</h3>
     <p>舞台照明でよく使われる灯体の一つが、凸レンズを使ったスポットです。「凸」や「平凸」と呼ばれることがあります。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「なんで『凸』っていうの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「なんで『凸』っていうの？」</p></div></div>
     
 <figure class="hk-illustration">
 <?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-06-convex-lens.png'; ?>
@@ -242,7 +236,7 @@ get_header();
   <section class="hk-subsection">
     <h3>2-2　フレネル</h3>
     <p>次にフレネルです。フレネルもレンズを使った灯体ですが、凸とは少し違った構造になっています。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「凸とフレネルって、どっちもレンズなのに何が違うの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「凸とフレネルって、どっちもレンズなのに何が違うの？」</p></div></div>
     
 <figure class="hk-illustration">
 <?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-07-convex-vs-fresnel.png'; ?>
@@ -264,7 +258,7 @@ get_header();
   <section class="hk-subsection">
     <h3>2-3　PAR</h3>
     <p>PARは、レンズや反射鏡などを利用して、特徴のある方向性を持った光を作るタイプの灯体です。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「PARって、普通のスポットと違うの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「PARって、普通のスポットと違うの？」</p></div></div>
     
 <figure class="hk-illustration">
 <?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-08-par-beam.png'; ?>
@@ -287,14 +281,14 @@ get_header();
     <h3>2-4　エリスポット</h3>
     <p>エリスポットは、光の形や範囲を比較的細かくコントロールできるタイプの灯体です。</p>
     <p>特定の人物、特定の場所、特定の範囲を狙って照らしたいときに活躍します。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「この灯体だけ、光の形まで作れるの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-surprised.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「この灯体だけ、光の形まで作れるの？」</p></div></div>
     <p>レンズによる光に、カッターやゴボなどを組み合わせることで、光の形そのものを設計できます。カッターについては後の章で詳しく扱います。</p>
   </section>
 
   <section class="hk-subsection">
     <h3>2-5　ホリゾントライト</h3>
     <p>舞台の奥にある壁や幕など、背景を広く照らすために使われるのがホリゾントライトです。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「人物を照らすライトとは違って、背景を照らすライトもあるんだ？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物を照らすライトとは違って、背景を照らすライトもあるんだ？」</p></div></div>
     
 <figure class="hk-illustration">
 <?php $lighting_image_path = get_template_directory() . '/assets/img/theatre/lighting/lighting-09-horizont.png'; ?>
@@ -316,7 +310,7 @@ get_header();
     <h3>2-6　LED灯体</h3>
     <p>最近の舞台照明では、LEDを光源として使う灯体も多くなっています。</p>
     <p>LED灯体には、白色光を出すものもあれば、赤・緑・青などを組み合わせて色を作るものもあります。さらに、明るさや色などを電子的に制御できるものもあります。</p>
-    <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p><strong>にゃかきち：</strong>「じゃあ、LEDならゼラを入れなくても色を変えられるの？」</p></div></div>
+    <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、LEDならゼラを入れなくても色を変えられるの？」</p></div></div>
     <p>灯体によります。LEDの光源そのものの組み合わせで色を作れる器具もあります。一方で、従来型の灯体ではカラーフィルターを使って光の色を変えることがあります。</p>
     <p><strong>「LED＝ゼラが絶対にいらない」</strong>という単純な話ではありません。灯体の種類や使い方によって、色の作り方は変わります。</p>
   </section>
@@ -343,11 +337,7 @@ get_header();
     <p>そして、<strong>「何を使うか」より先に、「どんな光が必要なのか」を考える。</strong>これが照明を考えるときの基本です。</p>
   </div>
 
-  <div class="hk-panel hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-happy.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question">
-    <p><strong>にゃかきち：</strong>「灯体って、ただ光る箱じゃないんだね。」</p>
-    <p>そうです。灯体の中では、光源から出た光を反射させたり、レンズで整えたり、広がりを調整したりして、舞台に必要な光へ変えています。</p>
-    <p>次は、その「灯体の中」を実際に見てみましょう。</p>
-  </div></div>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-happy.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「灯体って、ただ光る箱じゃないんだね。」</p></div></div><div class="hk-nyakakichi-followup"><p>そうです。灯体の中では、光源から出た光を反射させたり、レンズで整えたり、広がりを調整したりして、舞台に必要な光へ変えています。</p><p>次は、その「灯体の中」を実際に見てみましょう。</p></div>
 </section>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
@@ -534,6 +524,5 @@ if ( $selected_gel ) :
 
 .hk-illustration-placeholder{margin:18px 0 0;border:1px dashed var(--hk-border);background:var(--hk-bg-card);min-height:260px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-sizing:border-box}.hk-illustration-placeholder-label{font-size:11px;letter-spacing:.14em;color:var(--hk-accent-warm);margin-bottom:8px}.hk-illustration-placeholder-file{font-family:monospace;font-size:16px;color:var(--hk-fg);margin-bottom:14px}.hk-illustration-placeholder p{max-width:760px;margin:0;color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-lighting-intro-illustration .hk-illustration-placeholder{min-height:220px}
 
-.hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:24px 0;padding:18px 20px;background:#353535;border:0;border-radius:18px;color:#fff;position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:15px 18px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question p+p{margin-top:10px}.hk-nyakakichi-question strong{color:#fff}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;padding:14px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}}
-</style>
+.hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question strong{color:#fff}.hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}.hk-nyakakichi-followup p{margin:0 0 8px}.hk-nyakakichi-followup p:last-child{margin-bottom:0}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}</style>
 <?php get_footer(); ?>
