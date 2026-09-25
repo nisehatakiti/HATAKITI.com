@@ -401,150 +401,12 @@ get_header();
 <?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
   <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-12-fixture-parts.png' ) ); ?>" alt="灯体内部の光源、反射鏡、レンズ、絞り、カッター、ゼラホルダーの位置を示す図" loading="lazy">
-<?php else : ?>
-  <div class="hk-illustration-placeholder" aria-label="図解準備中">
-    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
-    <div class="hk-illustration-placeholder-file">lighting-12-fixture-parts.png</div>
-    <p>この位置に灯体内部の部品配置図を配置します。</p>
-  </div>
-<?php endif; ?>
-<figcaption>灯体の中では、光源から出た光を反射・集光・整形し、必要な光に加工します。絞り・カッター・ゼラホルダーがどこにあるかも、この図で確認できます。</figcaption>
-</figure>
-
-  <section class="hk-subsection">
-    <h3>3-1　光源</h3>
-    <p>まず、光そのものを出す部分が<strong>光源</strong>です。</p>
-    <p>昔から使われてきた舞台照明ではハロゲンランプなどの電球が代表的でした。現在はLEDを光源にした灯体も増えています。</p>
-    <p>光源が変わると、消費電力、発熱、色の作り方、調光方法などにも違いが出ます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「光源って、要するに電球みたいなもの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。まず「光を生み出すところ」が光源です。ただし、舞台照明では光源そのものを見るのではなく、その光を灯体の中でどう使うかが重要になります。</p></div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-2　反射鏡</h3>
-    <p>光源から出た光は、すべてが舞台に向かって進むわけではありません。そこで使われるのが<strong>反射鏡</strong>です。</p>
-    <p>反射鏡で光を反射させることで、光源から出た光を前方へ効率よく導きます。</p>
-    <p>灯体によって反射鏡の形や配置は異なります。つまり、反射鏡も光の「広がり方」や「集まり方」に関係する重要な部分です。</p>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-3　レンズ</h3>
-    <p>次にレンズです。レンズは光の進む方向を変え、光を集めたり、広げたりするために使われます。</p>
-    <p>第2章で見た<strong>凸レンズ</strong>や<strong>フレネルレンズ</strong>も、この役割を担っています。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「レンズを動かすと、光の広がりも変わるの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>変わります。灯体によって仕組みは違いますが、レンズや光源との位置関係を変えることで、光の広がり方を調整できるものがあります。</p></div>
-
-    <p>この「光をどこまで広げるか」は、第1章で出てきた<strong>5つの視点の「広がり」</strong>につながっています。</p>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-4　光軸とビーム</h3>
-    <p>灯体から出ていく光を考えるとき、中心となる方向を<strong>光軸</strong>として考えると分かりやすくなります。</p>
-    <p>そして、灯体から舞台へ向かって進む光のまとまりを<strong>ビーム</strong>として捉えます。</p>
-    <p>照明を仕込むときは、「どこに灯体があるか」だけでなく、<strong>その灯体からどの方向へ、どれくらいの範囲の光が出るのか</strong>を考えます。</p>
-
-    <div class="hk-panel">
-      <h3>光を考えるときの基本</h3>
-      <p><strong>灯体の位置 ＋ 光軸の方向 ＋ ビームの広がり</strong></p>
-      <p>この3つを合わせて考えると、「この灯体をどこへ向ければ、どこが照らされるか」をイメージしやすくなります。</p>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-5　絞り</h3>
-    <p>灯体によっては、光の広がりを調整するための<strong>絞り</strong>があります。</p>
-    <p>ここでいう絞りは、単純に「暗くする」という意味ではありません。<strong>光の広がる範囲を狭くする</strong>ための機構として考えると分かりやすいでしょう。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「絞るって、暗くするってことじゃないの？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>照明では、そこを分けて考えます。明るさを変えるのは調光の仕事。絞りは、光をどこまで広げるかを調整するためのものです。</p></div>
-
-    <figure class="hk-illustration">
-<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png'; ?>
-<?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png' ) ); ?>" alt="広いビームと狭いビームの違いを、灯体から出る光の広がりと照射範囲で比較した図" loading="lazy">
-<?php else : ?>
-  <div class="hk-illustration-placeholder" aria-label="図解準備中">
-    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
-    <div class="hk-illustration-placeholder-file">lighting-11-beam-width.png</div>
-    <p>この位置に広いビームと狭いビームの比較図を配置します。</p>
-  </div>
-<?php endif; ?>
-<figcaption>ビーム角が広いと照射範囲が広がり、狭いと光が集中します。同じ高さ・同じ出力でも、光の広がり方によって照射範囲が変わります。</figcaption>
-</figure>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-6　カッター</h3>
-    <p>エリスポットなどに備わっている<strong>カッター</strong>は、光の一部を遮って、光の形や境界を作るための機構です。</p>
-    <p>たとえば、舞台の床には当てたいけれど、背景の幕には光を当てたくない。あるいは、窓のような四角い範囲だけを照らしたい。</p>
-    <p>そんなときに、カッターを使って<strong>「光をどこまで当てるか」</strong>を細かく決めます。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「光を切って、形まで作れるんだ！」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>そうです。カッターは「光を減らす部品」ではなく、<strong>光の境界を作るための道具</strong>として考えると理解しやすくなります。</p></div>
-
-    <div class="hk-panel hk-warning">
-      <strong>絞りとカッターの違い</strong>
-      <p><strong>絞り：</strong>光の広がりを調整する。</p>
-      <p><strong>カッター：</strong>光の一部を遮って、境界や形を作る。</p>
-    </div>
-  </section>
-
-  <section class="hk-subsection">
-    <h3>3-7　ゼラホルダー</h3>
-    <p>従来型の灯体では、光の色を変えるために<strong>カラーフィルター（通称：ゼラ）</strong>を使うことがあります。</p>
-    <p>そのゼラを灯体の前に固定するための部分が<strong>ゼラホルダー</strong>です。</p>
-
-    <div class="hk-nyakakichi">
-      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
-      <div class="hk-nyakakichi-question"><p>「じゃあ、色を変えたいときは、このゼラホルダーにゼラを入れるんだね？」</p></div>
-    </div>
-    <div class="hk-nyakakichi-followup"><p>その通りです。灯体によってホルダーの位置やサイズは異なりますが、基本的には灯体の光がゼラを通るように取り付けます。</p></div>
-
-    <p>ゼラそのものについては、<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベース</a>で色番号や透過率などを確認できます。</p>
-  </section>
-
-  <div class="hk-panel hk-summary">
-    <h3>第3章まとめ</h3>
-    <p>灯体の中では、光源から出た光をそのまま舞台へ送っているわけではありません。</p>
-    <p><strong>光源 → 反射鏡 → レンズ → 絞り・カッター → 舞台</strong>というように、光を整えながら必要な形に近づけています。</p>
-    <p>灯体によって構造は違いますが、<strong>「光を作る」ではなく「必要な光に加工する」</strong>と考えると、灯体の役割が分かりやすくなります。</p>
-  </div>
-
-  <div class="hk-nyakakichi">
-    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
-    <div class="hk-nyakakichi-question"><p>「中の仕組みが分かると、灯体の違いも少し分かってきた！」</p></div>
-  </div>
-  <div class="hk-nyakakichi-followup">
-    <p>次は、灯体を「どこから当てるか」です。</p>
-    <p>同じ灯体でも、取り付ける場所や方向が変われば、舞台に届く光は大きく変わります。</p>
-  </div>
-</section>
-<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 前へ</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
-</nav>
-
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-4' === $path ) : ?>
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第4章　光をどこから当てる？</h1><p>同じ灯体でも、取り付ける場所と向きを変えると舞台の見え方は大きく変わります。ここでは照明の「位置」と「方向」を整理します。</p></header>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">第5章 →</a>
 </nav>
 <section class="hk-section">
   <div class="hk-section-head">
@@ -694,6 +556,143 @@ get_header();
 </section>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">次の章 →</span>
+</nav>
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-12-fixture-parts.png</div>
+    <p>この位置に灯体内部の部品配置図を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>灯体の中では、光源から出た光を反射・集光・整形し、必要な光に加工します。絞り・カッター・ゼラホルダーがどこにあるかも、この図で確認できます。</figcaption>
+</figure>
+
+  <section class="hk-subsection">
+    <h3>3-1　光源</h3>
+    <p>まず、光そのものを出す部分が<strong>光源</strong>です。</p>
+    <p>昔から使われてきた舞台照明ではハロゲンランプなどの電球が代表的でした。現在はLEDを光源にした灯体も増えています。</p>
+    <p>光源が変わると、消費電力、発熱、色の作り方、調光方法などにも違いが出ます。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「光源って、要するに電球みたいなもの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そうです。まず「光を生み出すところ」が光源です。ただし、舞台照明では光源そのものを見るのではなく、その光を灯体の中でどう使うかが重要になります。</p></div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-2　反射鏡</h3>
+    <p>光源から出た光は、すべてが舞台に向かって進むわけではありません。そこで使われるのが<strong>反射鏡</strong>です。</p>
+    <p>反射鏡で光を反射させることで、光源から出た光を前方へ効率よく導きます。</p>
+    <p>灯体によって反射鏡の形や配置は異なります。つまり、反射鏡も光の「広がり方」や「集まり方」に関係する重要な部分です。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-3　レンズ</h3>
+    <p>次にレンズです。レンズは光の進む方向を変え、光を集めたり、広げたりするために使われます。</p>
+    <p>第2章で見た<strong>凸レンズ</strong>や<strong>フレネルレンズ</strong>も、この役割を担っています。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「レンズを動かすと、光の広がりも変わるの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>変わります。灯体によって仕組みは違いますが、レンズや光源との位置関係を変えることで、光の広がり方を調整できるものがあります。</p></div>
+
+    <p>この「光をどこまで広げるか」は、第1章で出てきた<strong>5つの視点の「広がり」</strong>につながっています。</p>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-4　光軸とビーム</h3>
+    <p>灯体から出ていく光を考えるとき、中心となる方向を<strong>光軸</strong>として考えると分かりやすくなります。</p>
+    <p>そして、灯体から舞台へ向かって進む光のまとまりを<strong>ビーム</strong>として捉えます。</p>
+    <p>照明を仕込むときは、「どこに灯体があるか」だけでなく、<strong>その灯体からどの方向へ、どれくらいの範囲の光が出るのか</strong>を考えます。</p>
+
+    <div class="hk-panel">
+      <h3>光を考えるときの基本</h3>
+      <p><strong>灯体の位置 ＋ 光軸の方向 ＋ ビームの広がり</strong></p>
+      <p>この3つを合わせて考えると、「この灯体をどこへ向ければ、どこが照らされるか」をイメージしやすくなります。</p>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-5　絞り</h3>
+    <p>灯体によっては、光の広がりを調整するための<strong>絞り</strong>があります。</p>
+    <p>ここでいう絞りは、単純に「暗くする」という意味ではありません。<strong>光の広がる範囲を狭くする</strong>ための機構として考えると分かりやすいでしょう。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-confused.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「絞るって、暗くするってことじゃないの？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>照明では、そこを分けて考えます。明るさを変えるのは調光の仕事。絞りは、光をどこまで広げるかを調整するためのものです。</p></div>
+
+    <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-11-beam-width.png' ) ); ?>" alt="広いビームと狭いビームの違いを、灯体から出る光の広がりと照射範囲で比較した図" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中">
+    <div class="hk-illustration-placeholder-label">ILLUSTRATION</div>
+    <div class="hk-illustration-placeholder-file">lighting-11-beam-width.png</div>
+    <p>この位置に広いビームと狭いビームの比較図を配置します。</p>
+  </div>
+<?php endif; ?>
+<figcaption>ビーム角が広いと照射範囲が広がり、狭いと光が集中します。同じ高さ・同じ出力でも、光の広がり方によって照射範囲が変わります。</figcaption>
+</figure>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-6　カッター</h3>
+    <p>エリスポットなどに備わっている<strong>カッター</strong>は、光の一部を遮って、光の形や境界を作るための機構です。</p>
+    <p>たとえば、舞台の床には当てたいけれど、背景の幕には光を当てたくない。あるいは、窓のような四角い範囲だけを照らしたい。</p>
+    <p>そんなときに、カッターを使って<strong>「光をどこまで当てるか」</strong>を細かく決めます。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「光を切って、形まで作れるんだ！」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>そうです。カッターは「光を減らす部品」ではなく、<strong>光の境界を作るための道具</strong>として考えると理解しやすくなります。</p></div>
+
+    <div class="hk-panel hk-warning">
+      <strong>絞りとカッターの違い</strong>
+      <p><strong>絞り：</strong>光の広がりを調整する。</p>
+      <p><strong>カッター：</strong>光の一部を遮って、境界や形を作る。</p>
+    </div>
+  </section>
+
+  <section class="hk-subsection">
+    <h3>3-7　ゼラホルダー</h3>
+    <p>従来型の灯体では、光の色を変えるために<strong>カラーフィルター（通称：ゼラ）</strong>を使うことがあります。</p>
+    <p>そのゼラを灯体の前に固定するための部分が<strong>ゼラホルダー</strong>です。</p>
+
+    <div class="hk-nyakakichi">
+      <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-idea.png" alt="にゃかきち" loading="lazy"></div>
+      <div class="hk-nyakakichi-question"><p>「じゃあ、色を変えたいときは、このゼラホルダーにゼラを入れるんだね？」</p></div>
+    </div>
+    <div class="hk-nyakakichi-followup"><p>その通りです。灯体によってホルダーの位置やサイズは異なりますが、基本的には灯体の光がゼラを通るように取り付けます。</p></div>
+
+    <p>ゼラそのものについては、<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ色見本データベース</a>で色番号や透過率などを確認できます。</p>
+  </section>
+
+  <div class="hk-panel hk-summary">
+    <h3>第3章まとめ</h3>
+    <p>灯体の中では、光源から出た光をそのまま舞台へ送っているわけではありません。</p>
+    <p><strong>光源 → 反射鏡 → レンズ → 絞り・カッター → 舞台</strong>というように、光を整えながら必要な形に近づけています。</p>
+    <p>灯体によって構造は違いますが、<strong>「光を作る」ではなく「必要な光に加工する」</strong>と考えると、灯体の役割が分かりやすくなります。</p>
+  </div>
+
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-pointing.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「中の仕組みが分かると、灯体の違いも少し分かってきた！」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup">
+    <p>次は、灯体を「どこから当てるか」です。</p>
+    <p>同じ灯体でも、取り付ける場所や方向が変われば、舞台に届く光は大きく変わります。</p>
+  </div>
+</section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 前へ</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
   <span class="hk-chapter-nav-disabled">次の章 →</span>
 </nav>
@@ -847,3 +846,53 @@ if ( $selected_gel ) :
 </script>
 
 <?php elseif ( isset( $pages[$path] ) && 'theatre-textbook/staff/sound' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p><h1>音響</h1><p><?php echo esc_html($pages[$path]['lead']); ?></p></header>
+<section class="hk-section"><div class="hk-section-head"><h2>音響スタッフが扱うもの</h2></div><div class="hk-four">
+<div><b>マイク</b><p>声や音を電気信号に変える入口。種類や設置方法で拾い方が変わります。</p></div>
+<div><b>ミキサー</b><p>複数の音をまとめ、レベルや音質などを調整します。</p></div>
+<div><b>スピーカー</b><p>客席へ音を届ける出口。配置や向きも重要です。</p></div>
+<div><b>SE・BGM</b><p>音楽だけでなく、足音、ドア、環境音なども演出材料になります。</p></div>
+</div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>まず覚える音響用語</h2></div><div class="hk-term-grid">
+<div><h3>ゲイン</h3><p>入力段で信号をどの程度扱うかを調整する考え方。単純な「客席の音量」と同じではありません。</p></div>
+<div><h3>フェーダー</h3><p>各チャンネルなどのレベルを操作するためのコントロール。</p></div>
+<div><h3>EQ</h3><p>周波数帯域ごとのバランスを調整し、音色や聞こえ方を整えます。</p></div>
+<div><h3>ハウリング</h3><p>マイクがスピーカーから出た音を再び拾うなどして、特定周波数が増幅される現象。配置やゲインなど複数の要因を確認します。</p></div>
+</div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>音響プランを考える</h2></div><div class="hk-panel"><p>「音を入れる」こと自体が目的ではありません。観客に何を感じ、何を想像してほしいのかから逆算します。</p><ul><li>現実音として聞かせる</li><li>時間・場所を示す</li><li>心理を補助する</li><li>場面転換をつなぐ</li><li>あえて無音にする</li></ul></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>5分音響エチュード</h2></div><div class="hk-exercise"><h3>「待つ」に音をつける</h3><ol><li>俳優が何もせず30秒待つ。</li><li>時計の音だけを加える。</li><li>遠くの環境音を加える。</li><li>BGMを加える。</li><li>最後に全部なくして無音にする。</li></ol><p>同じ演技でも、音によって観客が受け取る時間感覚や心理が変わることを確認します。</p></div></section>
+
+<?php elseif ( isset( $pages[$path] ) ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜舞台を作る</p><h1>舞台監督</h1><p><?php echo esc_html($pages[$path]['lead']); ?></p></header>
+<section class="hk-section"><div class="hk-section-head"><h2>公演を動かす</h2></div><div class="hk-panel"><p>舞台監督の仕事は劇場や公演形態によって異なりますが、稽古から仕込み、場当たり、ゲネプロ、本番まで、舞台進行に関わる多くの情報を整理し、関係者をつなぎます。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>キューを理解する</h2></div><div class="hk-steps"><span>芝居</span><b>→</b><span>照明キュー</span><b>→</b><span>音響キュー</span><b>→</b><span>転換</span><b>→</b><span>次の場面</span></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>5分舞台監督エチュード</h2></div><div class="hk-exercise"><h3>開演5分前</h3><p>「開演5分前。しかし出演者1人がまだ舞台袖に来ていない」という状況を設定します。</p><ol><li>まず何を確認するか。</li><li>誰に連絡するか。</li><li>代替案が必要か。</li><li>照明・音響・受付など、誰に何を伝えるか。</li></ol><p>正解を一つに決めるのではなく、<strong>状況を整理して優先順位をつける</strong>練習です。</p></div></section>
+<?php endif; ?>
+</main>
+<style>
+.hk-staff-hero{max-width:820px;margin:64px auto;padding:0 20px;text-align:center}.hk-staff-hero h1{font-family:var(--hk-font-serif);font-size:38px}.hk-staff-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}
+.hk-staff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.hk-staff-card,.hk-panel,.hk-four>div,.hk-equipment article,.hk-term-grid>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:24px;color:var(--hk-fg)}.hk-staff-card:hover{border-color:var(--hk-accent-warm);text-decoration:none}.hk-staff-card p,.hk-panel p,.hk-four p,.hk-equipment p,.hk-term-grid p{color:var(--hk-fg-dim);line-height:1.9}.hk-staff-card span,.hk-tip{color:var(--hk-accent-warm)}
+.hk-four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.hk-four b{font-family:var(--hk-font-serif);font-size:18px}.hk-equipment{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-equipment h3,.hk-term-grid h3{font-family:var(--hk-font-serif);margin-top:0}.hk-warning{margin:20px 0;padding:18px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);line-height:1.8}.hk-filter-table{width:100%;border-collapse:collapse}.hk-filter-table th,.hk-filter-table td{border:1px solid var(--hk-border);padding:12px;text-align:left}.hk-filter-table th{color:var(--hk-accent-warm)}.hk-light-fixture-diagram{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:26px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-fixture-part{min-width:115px;padding:18px 12px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-fixture-part strong{display:block;font-family:var(--hk-font-serif)}.hk-fixture-part small{display:block;margin-top:6px;color:var(--hk-fg-dim);font-size:11px;line-height:1.5}.hk-fixture-output{border-color:var(--hk-accent-warm)}.hk-fixture-arrow{font-size:20px;color:var(--hk-accent-warm)}.hk-diagram-caption{font-size:11px;color:var(--hk-fg-faint);margin-top:9px}.hk-control-diagram{display:grid;grid-template-columns:1fr 1fr;gap:16px}.hk-control-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:20px}.hk-control-card h3{font-family:var(--hk-font-serif)}.hk-control-card>strong{color:var(--hk-accent-warm)}.hk-beam{height:105px;position:relative;margin-bottom:18px;overflow:hidden;background:var(--hk-bg-card)}.hk-beam:after{content:"";position:absolute;left:50%;top:8px;transform:translateX(-50%);width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-top:88px solid var(--hk-accent-warm);opacity:.7}.hk-beam-wide:after{border-left-width:105px;border-right-width:105px}.hk-beam-cut:after{clip-path:polygon(0 0,100% 0,78% 100%,0 100%)}.hk-gel-use-diagram{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:28px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-gel-diagram-item,.hk-gel-frame,.hk-gel-stage{min-width:125px;min-height:75px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;border:1px solid var(--hk-border)}.hk-gel-light{font-weight:700}.hk-gel-frame{border-color:var(--hk-accent-warm)}.hk-gel-stage{background:var(--hk-bg-card)}.hk-gel-diagram-item small,.hk-gel-frame small,.hk-gel-stage small{display:block;font-size:10px;color:var(--hk-fg-dim)}@media(max-width:700px){.hk-control-diagram{grid-template-columns:1fr}.hk-light-fixture-diagram,.hk-gel-use-diagram{justify-content:flex-start}.hk-fixture-arrow{transform:rotate(90deg)}}.hk-steps{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--hk-border);padding:24px;background:var(--hk-bg-elevated)}.hk-steps b{color:var(--hk-accent-warm)}.hk-term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.hk-exercise{border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:24px;line-height:1.9}.hk-exercise li{margin:8px 0}
+@media(max-width:850px){.hk-four{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.hk-staff-hero h1{font-size:30px}.hk-staff-grid,.hk-equipment,.hk-term-grid,.hk-four{grid-template-columns:1fr}.hk-steps{justify-content:flex-start}}
+.hk-gel-detail{border-top:1px solid var(--hk-border)}.hk-gel-detail-top{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:28px;align-items:center}.hk-gel-detail-swatch{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.55)}.hk-gel-detail-swatch span{font-size:12px}.hk-gel-detail-swatch strong{font-size:28px;margin-top:8px}.hk-gel-detail-swatch.is-missing{background:repeating-linear-gradient(135deg,var(--hk-bg-card),var(--hk-bg-card) 12px,var(--hk-bg-elevated) 12px,var(--hk-bg-elevated) 24px);color:var(--hk-fg-dim);text-shadow:none;text-align:center}.hk-gel-detail-top h2{font-family:var(--hk-font-serif);font-size:30px}.hk-gel-detail-brand{color:var(--hk-accent-warm)}.hk-gel-detail-warning{border-left:3px solid var(--hk-accent-warm);padding:12px 15px;background:var(--hk-bg-card);color:var(--hk-fg-dim);line-height:1.8}.hk-gel-detail-values{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.hk-gel-detail-values>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-gel-detail-values span{display:block;font-size:10px;color:var(--hk-accent-warm)}.hk-gel-detail-values strong{display:block;margin-top:6px}.hk-gel-detail-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}.hk-gel-detail-columns>div{border:1px solid var(--hk-border);padding:18px;background:var(--hk-bg-elevated)}.hk-gel-detail-columns h3{font-family:var(--hk-font-serif);margin-top:0}.hk-gel-detail-columns p{color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-gel-back{display:inline-block;margin-top:20px;color:var(--hk-accent-warm)}@media(max-width:700px){.hk-gel-detail-top,.hk-gel-detail-values,.hk-gel-detail-columns{grid-template-columns:1fr}.hk-gel-detail-swatch{min-height:220px}}.hk-gel-notice{margin-top:0}.hk-gel-notice-inner{border:1px solid var(--hk-border);border-left:4px solid var(--hk-accent-warm);background:var(--hk-bg-card);padding:22px}.hk-gel-notice-inner p{color:var(--hk-fg-dim);line-height:1.9;margin:.7em 0}.hk-gel-caution{font-weight:700;color:var(--hk-fg)!important}.hk-gel-search{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-gel-search label{font-size:12px;color:var(--hk-fg-dim);position:relative}.hk-gel-search input,.hk-gel-search select{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:11px;border:1px solid var(--hk-border);background:var(--hk-bg-card);color:var(--hk-fg)}.hk-gel-unit{float:right;font-size:11px}.hk-gel-sort-wrap,.hk-gel-actions{display:flex;align-items:end}.hk-gel-actions button{width:100%;padding:11px;border:1px solid var(--hk-border);background:transparent;color:var(--hk-fg);cursor:pointer}.hk-gel-actions button:hover{border-color:var(--hk-accent-warm);color:var(--hk-accent-warm)}.hk-gel-usage{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;padding:15px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-gel-usage>span{width:100%;font-size:12px;color:var(--hk-accent-warm);margin-bottom:2px}.hk-gel-usage label{font-size:12px}.hk-gel-usage input{margin-right:4px}.hk-gel-result-head{display:flex;justify-content:space-between;align-items:end}.hk-gel-result-head #hk-gel-count{color:var(--hk-fg-dim);font-size:13px}.hk-gel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.hk-gel-card{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);overflow:hidden}.hk-gel-card:hover{border-color:var(--hk-accent-warm)}.hk-gel-card-link{display:block;color:inherit;text-decoration:none}.hk-gel-swatch{height:180px;background:var(--hk-gel-color);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-shadow:0 1px 2px rgba(0,0,0,.5);color:#fff}.hk-gel-swatch span{font-size:11px;letter-spacing:.08em}.hk-gel-swatch strong{font-size:20px}.hk-gel-swatch small{font-size:11px}.hk-gel-swatch-missing{background:repeating-linear-gradient(135deg,var(--hk-bg-card),var(--hk-bg-card) 10px,var(--hk-bg-elevated) 10px,var(--hk-bg-elevated) 20px);text-align:center;text-shadow:none;color:var(--hk-fg-dim)}.hk-gel-meta{padding:18px}.hk-gel-brand{font-size:11px;color:var(--hk-accent-warm)}.hk-gel-meta h3{margin:5px 0 14px;font-family:var(--hk-font-serif)}.hk-gel-meta dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}.hk-gel-meta dl div{border-top:1px solid var(--hk-border);padding-top:8px}.hk-gel-meta dt{font-size:10px;color:var(--hk-fg-dim)}.hk-gel-meta dd{margin:3px 0 0;font-size:13px}.hk-gel-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:13px}.hk-gel-tags span{font-size:10px;border:1px solid var(--hk-border);padding:4px 7px;color:var(--hk-fg-dim)}.hk-gel-card-note{font-size:10px;color:var(--hk-fg-faint);margin-bottom:0}.hk-gel-empty{border:1px dashed var(--hk-border);padding:35px;text-align:center;color:var(--hk-fg-dim)}.hk-gel-detail-rule{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-gel-detail-rule>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-gel-detail-rule b{color:var(--hk-accent-warm)}.hk-gel-detail-rule p{color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-filter-note strong{color:var(--hk-fg)}
+@media(max-width:900px){.hk-gel-search{grid-template-columns:repeat(2,1fr)}.hk-gel-grid{grid-template-columns:repeat(2,1fr)}.hk-gel-detail-rule{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.hk-gel-search,.hk-gel-grid,.hk-gel-detail-rule{grid-template-columns:1fr}}
+.hk-filter-search{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.hk-filter-search label{font-size:12px;color:var(--hk-fg-dim)}.hk-filter-search input{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:11px;border:1px solid var(--hk-border);background:var(--hk-bg-card);color:var(--hk-fg)}.hk-filter-note{font-size:13px;color:var(--hk-fg-dim);line-height:1.8}.hk-filter-record{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.hk-filter-record>div{border:1px solid var(--hk-border);background:var(--hk-bg-elevated);padding:18px}.hk-filter-record span{display:block;font-size:11px;color:var(--hk-accent-warm);margin-bottom:7px}.hk-filter-record strong{display:block}.hk-filter-record small{display:block;color:var(--hk-fg-faint);margin-top:8px}.hk-filter-table-wrap{overflow-x:auto}.hk-filter-database{width:100%;min-width:1050px;border-collapse:collapse}.hk-filter-database th,.hk-filter-database td{border:1px solid var(--hk-border);padding:11px;text-align:left;vertical-align:top}.hk-filter-database th{color:var(--hk-accent-warm);font-size:12px}.hk-filter-database td{font-size:13px}.hk-swatch-placeholder{width:58px;height:42px;display:flex;align-items:center;justify-content:center;border:1px dashed var(--hk-border);font-size:10px;color:var(--hk-fg-faint)}
+@media(max-width:700px){.hk-filter-search,.hk-filter-record{grid-template-columns:1fr}}
+
+.hk-illustration-placeholder{margin:18px 0 0;border:1px dashed var(--hk-border);background:var(--hk-bg-card);min-height:260px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-sizing:border-box}.hk-illustration-placeholder-label{font-size:11px;letter-spacing:.14em;color:var(--hk-accent-warm);margin-bottom:8px}.hk-illustration-placeholder-file{font-family:monospace;font-size:16px;color:var(--hk-fg);margin-bottom:14px}.hk-illustration-placeholder p{max-width:760px;margin:0;color:var(--hk-fg-dim);line-height:1.8;font-size:13px}.hk-lighting-intro-illustration .hk-illustration-placeholder{min-height:220px}
+
+.hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}.hk-nyakakichi-image{flex:0 0 110px;text-align:center}.hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}.hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}.hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}.hk-nyakakichi-question p{margin:0;color:#fff}.hk-nyakakichi-question strong{color:#fff}.hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}.hk-nyakakichi-followup p{margin:0 0 8px}.hk-nyakakichi-followup p:last-child{margin-bottom:0}@media(max-width:600px){.hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-nyakakichi-image{flex-basis:90px}.hk-nyakakichi-image img{width:90px;max-height:145px}.hk-nyakakichi-question{padding:13px 15px}.hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}
+.hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}
+.hk-chapter-nav a,.hk-chapter-nav-disabled{padding:10px 14px;color:var(--hk-accent-warm);text-decoration:none}
+.hk-chapter-nav a:hover{text-decoration:underline}
+.hk-chapter-nav-disabled{color:var(--hk-fg-faint)}
+.hk-chapter-list{display:grid;grid-template-columns:1fr;gap:14px}
+.hk-chapter-list a{display:grid;grid-template-columns:90px 1fr;column-gap:18px;row-gap:5px;padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg);text-decoration:none}
+.hk-chapter-list a:hover{border-color:var(--hk-accent-warm);text-decoration:none}
+.hk-chapter-list span{grid-row:1 / span 2;color:var(--hk-accent-warm);font-family:var(--hk-font-serif);font-size:18px}
+.hk-chapter-list strong{font-family:var(--hk-font-serif);font-size:19px}
+.hk-chapter-list small{color:var(--hk-fg-dim);line-height:1.7}
+@media(max-width:600px){.hk-chapter-nav{gap:4px}.hk-chapter-nav a,.hk-chapter-nav-disabled{padding:8px 6px;font-size:12px}.hk-chapter-list a{grid-template-columns:1fr}.hk-chapter-list span{grid-row:auto}.hk-chapter-list strong{font-size:17px}}
+
+</style>
+<?php get_footer(); ?>
