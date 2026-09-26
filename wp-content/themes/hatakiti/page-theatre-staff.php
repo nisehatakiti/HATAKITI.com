@@ -890,12 +890,23 @@ get_header();
   <p>仕込み図に「回路番号」が書かれているのは、灯体がどの電源系統につながるのかを識別するためです。</p>
   <div class="hk-lighting-flow"><div><strong>灯体</strong><small>舞台上の器具</small></div><b>→</b><div><strong>回路</strong><small>電源につながる系統</small></div><b>→</b><div><strong>調光・制御</strong><small>明るさや動作を管理</small></div></div>
   <p>仕込み図の「回路番号」や記号は、劇場によって表記方法が違う場合があります。<strong>番号だけで判断せず、図面の凡例や劇場の設備表を見る</strong>のが基本です。</p>
+  <figure class="hk-control-diagram" aria-label="灯体から電源と操作までの基本的な流れ">
+    <div class="hk-control-card"><strong>電源側</strong><div class="hk-signal-box"><span>電源</span><b>→</b><span>分電盤・回路</span><b>→</b><span>調光器</span></div><p>灯体へ必要な電力を送る側の仕組みです。</p></div>
+    <div class="hk-control-card"><strong>操作側</strong><div class="hk-signal-box"><span>照明卓</span><b>→</b><span>チャンネル</span><b>→</b><span>回路・灯体</span></div><p>「どの灯体を、どれくらい動かすか」を指示する側です。</p></div>
+  </figure>
+  <figcaption class="hk-figure-caption">照明は「電源の流れ」と「操作の流れ」を分けて考えると整理しやすくなります。</figcaption>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-2　調光器（Dimmer）は何をしている？</h2><p>従来型の舞台照明では、調光器が灯体への電力を調整して明るさを変えます。</p></div>
   <p>第3章で出てきた「絞り」と「調光器」は別物です。</p>
   <div class="hk-term-grid"><div><h3>絞り</h3><p>灯体の光学系で、光の広がりや出方を調整するもの。</p></div><div><h3>調光器</h3><p>電気側で、対応する灯体への出力を調整するもの。</p></div><div><h3>フェーダー</h3><p>操作卓などで、明るさや制御値を操作するための操作子。</p></div><div><h3>チャンネル</h3><p>操作卓上で、照明を一つの操作単位として扱うための番号・制御単位。</p></div></div>
   <p><strong>フェーダーを上げる＝灯体の絞りが開く、ではありません。</strong>操作卓から制御情報が送られ、その先の機器が設定に応じて灯体を動かします。</p>
+  <div class="hk-dimmer-diagram">
+    <div><span>入力</span><strong>電力</strong></div><b>→</b>
+    <div><span>調光器</span><strong>出力を調整</strong></div><b>→</b>
+    <div><span>回路</span><strong>灯体へ</strong></div>
+  </div>
+  <p class="hk-figure-caption">調光器は、対応する灯体への電力を調整する「電気側」の機器です。</p>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-3　フェーダーとチャンネルを分けて考える</h2><p>「回路番号」と「チャンネル番号」は、同じものを指しているとは限りません。</p></div>
@@ -904,17 +915,36 @@ get_header();
   <p>つまり、<strong>「どこにつながっているか」と「どう操作するか」は別の情報</strong>です。パッチ（割り当て）の方法や呼び方は劇場によって異なるので、実際の現場ではその劇場の表を確認します。</p>
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、回路番号とフェーダー番号が同じとは限らないんだね？」</p></div></div>
   <div class="hk-nyakakichi-followup"><p>そうです。この二つを分けて考えられると、照明図と操作卓の関係が分かりやすくなります。</p></div>
+  <figure class="hk-patch-diagram" aria-label="回路番号とチャンネルの対応例">
+    <div class="hk-patch-column"><h3>設備側</h3><span>回路 101</span><span>回路 102</span><span>回路 201</span></div>
+    <div class="hk-patch-arrow">↘<br>↓<br>↗</div>
+    <div class="hk-patch-column hk-patch-channel"><h3>操作側</h3><span>Ch 1<br><small>前明かり</small></span><span>Ch 2<br><small>サイド</small></span></div>
+  </figure>
+  <figcaption class="hk-figure-caption">パッチは「設備側の回路」と「操作卓側の操作単位」を対応づける作業です。実際の割り当ては劇場・卓の構成によって異なります。</figcaption>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-4　LED灯体では何が変わる？</h2><p>LED灯体では、明るさだけでなく色なども電気的に制御できるものがあります。</p></div>
   <p>白熱灯では、ゼラを入れて色を作る方法が基本でした。一方、カラーLED灯体では、灯体内部の複数のLEDを組み合わせて色を作れる機種があります。</p>
   <p>そのため、LEDでは<strong>「電源」と「制御信号」</strong>を分けて考えることが重要です。</p>
   <div class="hk-panel"><h3>DMXという言葉</h3><p><strong>DMX</strong>は、舞台照明などで機器を制御するために広く使われている通信方式です。</p><p>操作卓からDMX信号を送り、対応する灯体や機器がその情報を受け取って、明るさ・色・動きなどを制御します。</p><p>DMXでは「アドレス」という考え方が出てきます。どの制御値をどの機器が受け取るかを区別するための番号です。</p></div>
+  <div class="hk-dmx-diagram">
+    <div><strong>照明卓</strong><small>制御データを作る</small></div><b>DMX →</b>
+    <div><strong>DMX機器</strong><small>信号を受け取る</small></div><b>→</b>
+    <div><strong>LED灯体</strong><small>明るさ・色などを変える</small></div>
+  </div>
+  <p class="hk-figure-caption">DMXは「電源そのもの」ではなく、照明機器を制御するための信号です。</p>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-5　照明卓では何を操作している？</h2><p>照明卓は、舞台上の灯体を直接手で動かしているわけではありません。設定された制御情報を、必要な機器へ送っています。</p></div>
   <p>初心者のうちは、まず「フェーダーを上げると明るくなる」という体験から始めて構いません。</p>
   <p>その裏側には、<strong>回路・調光器・チャンネル・パッチ・DMXアドレス</strong>など、複数の仕組みがあります。</p>
+  <div class="hk-console-diagram">
+    <div><span>① 選ぶ</span><strong>チャンネル</strong></div>
+    <b>→</b><div><span>② 動かす</span><strong>フェーダー</strong></div>
+    <b>→</b><div><span>③ 反映</span><strong>灯体の明るさ</strong></div>
+    <b>→</b><div><span>④ 記憶</span><strong>シーン</strong></div>
+  </div>
+  <p class="hk-figure-caption">操作卓では、個々の灯体を直接操作するのではなく、設定された操作単位を組み合わせて照明を作ります。</p>
   <div class="hk-steps"><span>① 灯体を仕込む</span><b>→</b><span>② 回路・電源を確認</span><b>→</b><span>③ 制御先を割り当てる</span><b>→</b><span>④ 操作卓から操作</span></div>
 </section>
 <section class="hk-section">
@@ -1141,6 +1171,7 @@ if ( $selected_gel ) :
 .hk-lighting-flow>b{color:var(--hk-accent-warm)}
 @media(max-width:700px){.hk-lighting-symbols{grid-template-columns:1fr}.hk-lighting-plot-stage{height:210px}.hk-elevation-stage{height:220px}.hk-lighting-flow{justify-content:flex-start}.hk-lighting-flow>b{display:none}}
 
+.hk-signal-box{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:16px 0;padding:16px;background:var(--hk-bg-card);border:1px solid var(--hk-border)}.hk-signal-box span{padding:10px 12px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);font-weight:700}.hk-signal-box b{color:var(--hk-accent-warm)}.hk-figure-caption{margin:8px 0 24px;color:var(--hk-fg-faint);font-size:12px;line-height:1.7}.hk-dimmer-diagram,.hk-dmx-diagram,.hk-console-diagram{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0 4px;padding:20px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-dimmer-diagram>div,.hk-dmx-diagram>div,.hk-console-diagram>div{min-width:130px;padding:15px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-dimmer-diagram span,.hk-dmx-diagram small,.hk-console-diagram span{display:block;font-size:11px;color:var(--hk-accent-warm);margin-bottom:6px}.hk-dimmer-diagram strong,.hk-dmx-diagram strong,.hk-console-diagram strong{font-family:var(--hk-font-serif)}.hk-dimmer-diagram>b,.hk-dmx-diagram>b,.hk-console-diagram>b{color:var(--hk-accent-warm);font-size:20px}.hk-patch-diagram{display:flex;align-items:center;justify-content:center;gap:20px;margin:22px 0 4px;padding:20px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated)}.hk-patch-column{display:flex;flex-direction:column;gap:8px;min-width:180px}.hk-patch-column h3{margin:0 0 4px;font-family:var(--hk-font-serif);color:var(--hk-accent-warm)}.hk-patch-column span{padding:10px 14px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-patch-channel span{text-align:center}.hk-patch-column small{color:var(--hk-fg-dim)}.hk-patch-arrow{font-size:24px;color:var(--hk-accent-warm);line-height:1.1;text-align:center}@media(max-width:700px){.hk-control-diagram{grid-template-columns:1fr}.hk-dimmer-diagram,.hk-dmx-diagram,.hk-console-diagram{justify-content:flex-start}.hk-dimmer-diagram>b,.hk-dmx-diagram>b,.hk-console-diagram>b{display:none}.hk-patch-diagram{gap:8px}.hk-patch-column{min-width:130px}.hk-patch-arrow{font-size:18px}}
 .hk-chapter-nav a,.hk-chapter-nav-disabled{padding:10px 14px;color:var(--hk-accent-warm);text-decoration:none}
 .hk-chapter-nav a:hover{text-decoration:underline}
 .hk-chapter-nav-disabled{color:var(--hk-fg-faint)}
