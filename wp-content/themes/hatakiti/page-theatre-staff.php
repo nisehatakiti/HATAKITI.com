@@ -918,6 +918,7 @@ get_header();
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、回路番号とフェーダー番号が同じとは限らないんだね？」</p></div></div>
   <div class="hk-nyakakichi-followup"><p>そうです。この二つを分けて考えられると、照明図と操作卓の関係が分かりやすくなります。</p></div>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-23-channel-patch.png" alt="照明卓のフェーダー、チャンネル、パッチ、回路、灯体の関係を示す図" loading="lazy"><figcaption>フェーダーで操作するチャンネルと、実際の回路・灯体をパッチで対応づけます。</figcaption></figure>
+  <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-23-channel-patch-detail.png" alt="設備側の実際の回路と灯体、操作側のチャンネル、そしてパッチによる対応関係を詳しく示す図" loading="lazy"><figcaption>設備側にある実際の回路・灯体と、照明卓で操作するチャンネルは、パッチによって対応づけられます。</figcaption></figure>
   <figure class="hk-patch-diagram" aria-label="回路番号とチャンネルの対応例">
     <div class="hk-patch-column"><h3>設備側</h3><span>回路 101</span><span>回路 102</span><span>回路 201</span></div>
     <div class="hk-patch-arrow">↘<br>↓<br>↗</div>
