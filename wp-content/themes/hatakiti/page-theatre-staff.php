@@ -919,12 +919,7 @@ get_header();
   <div class="hk-nyakakichi-followup"><p>そうです。この二つを分けて考えられると、照明図と操作卓の関係が分かりやすくなります。</p></div>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-23-channel-patch.png" alt="照明卓のフェーダー、チャンネル、パッチ、回路、灯体の関係を示す図" loading="lazy"><figcaption>フェーダーで操作するチャンネルと、実際の回路・灯体をパッチで対応づけます。</figcaption></figure>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-23-channel-patch-detail.png" alt="設備側の実際の回路と灯体、操作側のチャンネル、そしてパッチによる対応関係を詳しく示す図" loading="lazy"><figcaption>設備側にある実際の回路・灯体と、照明卓で操作するチャンネルは、パッチによって対応づけられます。</figcaption></figure>
-  <figure class="hk-patch-diagram" aria-label="回路番号とチャンネルの対応例">
-    <div class="hk-patch-column"><h3>設備側</h3><span>回路 101</span><span>回路 102</span><span>回路 201</span></div>
-    <div class="hk-patch-arrow">↘<br>↓<br>↗</div>
-    <div class="hk-patch-column hk-patch-channel"><h3>操作側</h3><span>Ch 1<br><small>前明かり</small></span><span>Ch 2<br><small>サイド</small></span></div>
-  </figure>
-  <figcaption class="hk-figure-caption">パッチは「設備側の回路」と「操作卓側の操作単位」を対応づける作業です。実際の割り当ては劇場・卓の構成によって異なります。</figcaption>
+
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-4　LED灯体では何が変わる？</h2><p>LED灯体では、明るさだけでなく色なども電気的に制御できるものがあります。</p></div>
@@ -943,6 +938,7 @@ get_header();
   <div class="hk-section-head"><h2>6-5　照明卓では何を操作している？</h2><p>照明卓は、舞台上の灯体を直接手で動かしているわけではありません。設定された制御情報を、必要な機器へ送っています。</p></div>
   <p>初心者のうちは、まず「フェーダーを上げると明るくなる」という体験から始めて構いません。</p>
   <p>その裏側には、<strong>回路・調光器・チャンネル・パッチ・DMXアドレス</strong>など、複数の仕組みがあります。</p>
+  <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-25-console-operation.png" alt="照明卓の基本操作の流れを示す図。チャンネル選択、フェーダー操作、色や動きの調整、シーンの記憶と再生を説明する" loading="lazy"><figcaption>照明卓では、チャンネルを選び、必要な値を調整し、その状態をシーンとして記憶・再生できます。</figcaption></figure>
   <div class="hk-console-diagram">
     <div><span>① 選ぶ</span><strong>チャンネル</strong></div>
     <b>→</b><div><span>② 動かす</span><strong>フェーダー</strong></div>
