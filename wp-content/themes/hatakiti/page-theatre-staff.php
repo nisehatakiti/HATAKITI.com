@@ -1165,6 +1165,140 @@ get_header();
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">第9章 →</a>
 </nav>
 
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-9' === $path ) : ?>
+<header class="hk-staff-hero">
+  <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p>
+  <h1>第9章　光を組み合わせる</h1>
+  <p>一灯ずつ合わせた光を重ね、人物・舞台・背景をひとつの空間として見せる方法を学びます。</p>
+</header>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">← 第8章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第10章 →</span>
+</nav>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>導入　照明は「一灯」では完成しない</h2>
+    <p>第8章では、一灯ずつフォーカスを合わせ、最後に全体を点灯して確認しました。第9章では、その光を「役割の違う光」として組み合わせます。</p>
+  </div>
+  <p>前明かりだけなら人物の顔は見えやすくなります。サイドライトを加えれば身体の立体感が出ます。バックライトを加えれば輪郭や奥行きが生まれます。</p>
+  <p>つまり、照明では「明るい灯体をたくさん点ける」ことより、<strong>それぞれの光に役割を持たせる</strong>ことが大切です。</p>
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「一灯ずつ合わせた光を、今度は組み合わせていくんだね？」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>そうです。ここからは「この光は何のため？」と考えながら、必要な光だけを重ねていきます。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-1　まず「主役の光」を決める</h2><p>最初に、その場面で観客に見せたいものを決めます。</p></div>
+  <p>人物が主役なら、その人物が見えるための光を基準にします。舞台美術が重要なら、美術を見せる光も必要になります。</p>
+  <p>ここで大切なのは、全部を同じ明るさにしようとしないことです。</p>
+  <div class="hk-term-grid">
+    <div><h3>主役</h3><p>その場面で観客にまず見てほしいもの。</p></div>
+    <div><h3>補助</h3><p>主役が見えるように支えたり、立体感を加えたりする光。</p></div>
+    <div><h3>背景・空間</h3><p>人物がどこにいるのか、時間や場所を感じさせる光。</p></div>
+  </div>
+  <p>「何を見せたいか」を先に決めると、必要な灯体と明るさを選びやすくなります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-2　前明かり・サイド・バックの役割を重ねる</h2><p>方向の違う光には、それぞれ違う役割があります。</p></div>
+  <div class="hk-term-grid">
+    <div><h3>前明かり</h3><p>顔や表情など、人物を見せるための基本となる光。</p></div>
+    <div><h3>サイドライト</h3><p>身体の側面を照らし、立体感や動きを見せる光。</p></div>
+    <div><h3>バックライト</h3><p>人物の輪郭を浮かせ、背景との距離感を作る光。</p></div>
+    <div><h3>トップライト</h3><p>人物の上から光を加え、空間の高さや影の印象を作る光。</p></div>
+  </div>
+  <p>これらを同じ強さで点ける必要はありません。場面の目的に合わせて、強くする光と弱くする光を決めます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-3　明るさのバランスを考える</h2><p>照明を重ねるときは、個々の灯体だけでなく、舞台全体のバランスを見ます。</p></div>
+  <p>例えば、前明かりを強くしすぎると、サイドやバックで作った立体感が弱く見えることがあります。</p>
+  <p>逆にバックライトだけが強すぎると、人物の輪郭は目立っても顔が暗く見えることがあります。</p>
+  <div class="hk-panel">
+    <h3>明るさを見る3つの視点</h3>
+    <ul>
+      <li><strong>人物：</strong>顔・身体が必要なだけ見えているか。</li>
+      <li><strong>空間：</strong>舞台の奥行きや場所が感じられるか。</li>
+      <li><strong>視線：</strong>観客の目が自然に見せたい場所へ向くか。</li>
+    </ul>
+  </div>
+  <p>照明の「正解の明るさ」は一つではありません。演出の目的に合わせてバランスを作ります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-4　光を重ねる順番</h2><p>迷ったときは、役割の分かりやすい順に一つずつ重ねてみます。</p></div>
+  <ol>
+    <li><strong>主役を見せる光</strong>を作る。</li>
+    <li><strong>身体の立体感を作る光</strong>を加える。</li>
+    <li><strong>輪郭や奥行きを作る光</strong>を加える。</li>
+    <li><strong>背景や空間を作る光</strong>を加える。</li>
+    <li>全部を点灯し、不要な光や明るすぎる場所を確認する。</li>
+  </ol>
+  <p>この順番なら、光を増やしたときに「何が変わったのか」を確認しやすくなります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-5　光が重なりすぎたら引いてみる</h2><p>照明では「足す」だけでなく「減らす」ことも重要です。</p></div>
+  <p>光を足していくと、いつの間にか舞台全体が明るくなりすぎることがあります。顔、床、背景、袖など、意図していない場所まで明るくなっていないか確認します。</p>
+  <p>その場合は、フェーダーを下げる、照射範囲を狭くする、カッターで切る、別の灯体の役割を見直すなど、必要なところまで戻します。</p>
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「明るくすればするほど、よく見えるわけじゃないんだね。」</p></div>
+  </div>
+  <div class="hk-nyakakichi-followup"><p>その通りです。見せたいものが見えることと、舞台全体が明るいことは同じではありません。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-6　場面ごとに光の組み合わせを変える</h2><p>同じ舞台でも、場面が変われば必要な光も変わります。</p></div>
+  <p>例えば、会話の場面では人物の表情を見せる光を中心にします。夜の場面では全体を明るくするより、限られた範囲に光を置くことで時間帯を感じさせることもできます。</p>
+  <p>ここで重要なのは、照明を「灯体のセット」としてではなく、<strong>場面ごとの光の組み合わせ</strong>として考えることです。</p>
+  <div class="hk-term-grid">
+    <div><h3>昼の場面</h3><p>人物と空間を比較的広く見せる。</p></div>
+    <div><h3>夜の場面</h3><p>必要な場所を絞り、暗い部分も残す。</p></div>
+    <div><h3>緊張した場面</h3><p>方向や影、色の変化を利用して印象を作る。</p></div>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>9-7　実際に組み合わせてみる</h2><p>一人の人物を使って、光を少しずつ足して見え方を比べます。</p></div>
+  <div class="hk-exercise">
+    <h3>5分照明エチュード「三つの光を重ねる」</h3>
+    <ol>
+      <li>舞台中央に一人立つ。</li>
+      <li>前明かりだけを点灯し、顔と身体の見え方を見る。</li>
+      <li>サイドライトを加え、身体の立体感がどう変わるかを見る。</li>
+      <li>バックライトを加え、輪郭と奥行きがどう変わるかを見る。</li>
+      <li>最後に3種類の光を少しずつ調整し、「一番見せたいもの」が自然に見える状態を探す。</li>
+    </ol>
+    <p>実機を扱う場合は、必ず劇場・学校・団体などの安全ルールに従ってください。</p>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-panel hk-summary">
+    <h3>第9章まとめ</h3>
+    <p>照明は、一灯ずつ正しく合わせた光を、役割を考えながら組み合わせて作ります。</p>
+    <p><strong>主役を決める → 役割を分ける → 明るさを調整する → 重ねる → 不要な光を引く → 場面に合わせる</strong>。</p>
+    <p>「たくさん点ける」のではなく、<strong>それぞれの光に意味を持たせる</strong>ことが、照明を組み立てる基本です。</p>
+    <p>次の章では、ここまで学んだことを使って、実際に一つの照明プランを考えてみます。</p>
+  </div>
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「光を足すんじゃなくて、役割を組み合わせるんだね！」</p></div>
+  </div>
+</section>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">← 第8章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第10章 →</span>
+</nav>
+
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
 <?php
 $gel_data_path = get_template_directory() . '/assets/data/gel-colors.json';
