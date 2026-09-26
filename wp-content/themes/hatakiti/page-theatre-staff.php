@@ -1106,22 +1106,22 @@ get_header();
   <p>前明かりとサイドが重なれば、人物の顔や衣裳の見え方が変わります。バックライトが強すぎれば輪郭だけが強調されることもあります。床に光が重なりすぎれば、意図しない明るい場所ができることもあります。</p>
   <p>だから明かり合わせは「一灯ずつ合わせて終わり」ではありません。最後に全体を点灯して、舞台全体として成立しているかを確認します。</p>
   <figure class="hk-illustration">
-<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-87-focus-final-check.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-86-light-layering.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-87-focus-final-check.png' ) ); ?>" alt="明かり合わせの最終チェック項目" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-86-light-layering.png' ) ); ?>" alt="明かり合わせの最終チェック項目" loading="lazy">
 <?php else : ?>
-  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-87-focus-final-check.png</div><p>この位置に図解を配置します。</p></div>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-86-light-layering.png</div><p>この位置に図解を配置します。</p></div>
 <?php endif; ?>
 <figcaption>見せたい場所、不要な光漏れ、色・影・明るさを舞台全体で確認します。</figcaption>
 </figure>
 
   <div class="hk-panel"><h3>全体を見る3つの質問</h3><ul><li>観客に見せたいものが、ちゃんと見えているか？</li><li>意図していない場所まで明るくなっていないか？</li><li>複数の光が重なったとき、色・影・明るさが狙いどおりか？</li></ul></div>
   <figure class="hk-illustration">
-<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-86-light-layering.png'; ?>
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-87-focus-final-check.png'; ?>
 <?php if ( file_exists( $lighting_image_path ) ) : ?>
-  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-86-light-layering.png' ) ); ?>" alt="複数の光を重ねたときの見え方の変化" loading="lazy">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-87-focus-final-check.png' ) ); ?>" alt="複数の光を重ねたときの見え方の変化" loading="lazy">
 <?php else : ?>
-  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-86-light-layering.png</div><p>この位置に図解を配置します。</p></div>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-87-focus-final-check.png</div><p>この位置に図解を配置します。</p></div>
 <?php endif; ?>
 <figcaption>一灯ずつ合わせたあと、複数の光を重ねることで見え方がどう変わるかを確認します。</figcaption>
 </figure>
