@@ -1185,6 +1185,16 @@ get_header();
   </div>
   <p>前明かりだけなら人物の顔は見えやすくなります。サイドライトを加えれば身体の立体感が出ます。バックライトを加えれば輪郭や奥行きが生まれます。</p>
   <p>つまり、照明では「明るい灯体をたくさん点ける」ことより、<strong>それぞれの光に役割を持たせる</strong>ことが大切です。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-91-light-combination-basics.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-91-light-combination-basics.png' ) ); ?>" alt="一灯から三灯へ、前明かり・サイド・バックを組み合わせていく基本を示す図。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-91-light-combination-basics.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>図9-1　一灯から三灯へ。光を組み合わせると、人物の見え方が変わります。</figcaption>
+</figure>
+
   <div class="hk-nyakakichi">
     <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-interested.png" alt="にゃかきち" loading="lazy"></div>
     <div class="hk-nyakakichi-question"><p>「一灯ずつ合わせた光を、今度は組み合わせていくんだね？」</p></div>
@@ -1202,6 +1212,16 @@ get_header();
     <div><h3>背景・空間</h3><p>人物がどこにいるのか、時間や場所を感じさせる光。</p></div>
   </div>
   <p>「何を見せたいか」を先に決めると、必要な灯体と明るさを選びやすくなります。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-92-light-roles.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-92-light-roles.png' ) ); ?>" alt="主役・補助・背景や空間という、光の役割の違いを示す図。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-92-light-roles.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>図9-2　主役・補助・背景や空間に、それぞれ違う役割の光を持たせる考え方。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
@@ -1213,6 +1233,16 @@ get_header();
     <div><h3>トップライト</h3><p>人物の上から光を加え、空間の高さや影の印象を作る光。</p></div>
   </div>
   <p>これらを同じ強さで点ける必要はありません。場面の目的に合わせて、強くする光と弱くする光を決めます。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-93-light-direction-roles.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-93-light-direction-roles.png' ) ); ?>" alt="前明かり・サイドライト・バックライト・トップライトの役割の違いを比較する図。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-93-light-direction-roles.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>図9-3　同じ人物でも、光の方向が変わると見え方と役割が変わります。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
@@ -1240,12 +1270,32 @@ get_header();
     <li>全部を点灯し、不要な光や明るすぎる場所を確認する。</li>
   </ol>
   <p>この順番なら、光を増やしたときに「何が変わったのか」を確認しやすくなります。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-94-layering-lights.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-94-layering-lights.png' ) ); ?>" alt="主役を見せる光から立体感、輪郭、背景へと光を重ねる順番を示す図。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-94-layering-lights.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>図9-4　主役の光から始め、役割を確認しながら一つずつ光を重ねます。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
   <div class="hk-section-head"><h2>9-5　光が重なりすぎたら引いてみる</h2><p>照明では「足す」だけでなく「減らす」ことも重要です。</p></div>
   <p>光を足していくと、いつの間にか舞台全体が明るくなりすぎることがあります。顔、床、背景、袖など、意図していない場所まで明るくなっていないか確認します。</p>
   <p>その場合は、フェーダーを下げる、照射範囲を狭くする、カッターで切る、別の灯体の役割を見直すなど、必要なところまで戻します。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-95-remove-excess-light.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-95-remove-excess-light.png' ) ); ?>" alt="光を足しすぎた状態から不要な光を引き、必要な部分だけを残す考え方を示す図。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-95-remove-excess-light.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>図9-5　照明は足すだけでなく、不要な光を引いて整理することも大切です。</figcaption>
+</figure>
+
   <div class="hk-nyakakichi">
     <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div>
     <div class="hk-nyakakichi-question"><p>「明るくすればするほど、よく見えるわけじゃないんだね。」</p></div>
@@ -1257,6 +1307,16 @@ get_header();
   <div class="hk-section-head"><h2>9-6　場面ごとに光の組み合わせを変える</h2><p>同じ舞台でも、場面が変われば必要な光も変わります。</p></div>
   <p>例えば、会話の場面では人物の表情を見せる光を中心にします。夜の場面では全体を明るくするより、限られた範囲に光を置くことで時間帯を感じさせることもできます。</p>
   <p>ここで重要なのは、照明を「灯体のセット」としてではなく、<strong>場面ごとの光の組み合わせ</strong>として考えることです。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-96-scene-light-combinations.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-96-scene-light-combinations.png' ) ); ?>" alt="昼・夜・緊張した場面で、同じ舞台でも光の組み合わせを変える例を示す図。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-96-scene-light-combinations.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>図9-6　同じ舞台でも、場面の目的に合わせて光の組み合わせを変えます。</figcaption>
+</figure>
+
   <div class="hk-term-grid">
     <div><h3>昼の場面</h3><p>人物と空間を比較的広く見せる。</p></div>
     <div><h3>夜の場面</h3><p>必要な場所を絞り、暗い部分も残す。</p></div>
