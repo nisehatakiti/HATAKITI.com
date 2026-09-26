@@ -45,6 +45,7 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>"><span>第3章</span><strong>灯体の中で光はどうなっている？</strong><small>光源・反射鏡・レンズ・光軸・絞り・カッター・ゼラホルダー</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>"><span>第4章</span><strong>光をどこから当てる？</strong><small>前明かり・サイド・バック・トップ・ホリゾント・SS</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>"><span>第5章</span><strong>照明図を読む</strong><small>平面図・立面図・灯体・回路・色・方向</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>"><span>第6章</span><strong>電気と操作</strong><small>回路・調光器・フェーダー・チャンネル・DMX</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -695,7 +696,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>">← 第4章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第6章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">第6章 →</a>
 </nav>
 <section class="hk-section">
   <div class="hk-section-head">
@@ -869,6 +870,60 @@ get_header();
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
   <span class="hk-chapter-nav-disabled">第6章 →</span>
 </nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-6' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第6章　電気と操作</h1><p>灯体を舞台に仕込んだだけでは、照明は動きません。ここでは、灯体から回路、調光器、操作卓まで、光を実際に動かすための仕組みを学びます。</p></header>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第7章 →</span>
+</nav>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>導入　光は「電気」だけでは動かない</h2><p>灯体を舞台に仕込んだあと、電源と操作の仕組みをつないで、はじめて「点ける・消す・明るさを変える」ができるようになります。</p></div>
+  <p>ここで覚えたいのは、すべての灯体が同じ仕組みで動くわけではない、ということです。</p>
+  <p>白熱・ハロゲン系の灯体では、電力を調整して明るさを変える<strong>調光</strong>が基本です。一方、LED灯体では、専用の電源や制御信号を使って明るさや色などを操作するものがあります。</p>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「スイッチを入れれば、そのまま明るくなるんじゃないの？」</p></div></div>
+  <div class="hk-nyakakichi-followup"><p>舞台照明では、どの回路につながっているか、どのように制御するか、という仕組みを通って灯体が動きます。</p></div>
+</section>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>6-1　まず「回路」を知る</h2><p>回路は、照明設備と電源をつなぐための基本単位です。</p></div>
+  <p>仕込み図に「回路番号」が書かれているのは、灯体がどの電源系統につながるのかを識別するためです。</p>
+  <div class="hk-lighting-flow"><div><strong>灯体</strong><small>舞台上の器具</small></div><b>→</b><div><strong>回路</strong><small>電源につながる系統</small></div><b>→</b><div><strong>調光・制御</strong><small>明るさや動作を管理</small></div></div>
+  <p>仕込み図の「回路番号」や記号は、劇場によって表記方法が違う場合があります。<strong>番号だけで判断せず、図面の凡例や劇場の設備表を見る</strong>のが基本です。</p>
+</section>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>6-2　調光器（Dimmer）は何をしている？</h2><p>従来型の舞台照明では、調光器が灯体への電力を調整して明るさを変えます。</p></div>
+  <p>第3章で出てきた「絞り」と「調光器」は別物です。</p>
+  <div class="hk-term-grid"><div><h3>絞り</h3><p>灯体の光学系で、光の広がりや出方を調整するもの。</p></div><div><h3>調光器</h3><p>電気側で、対応する灯体への出力を調整するもの。</p></div><div><h3>フェーダー</h3><p>操作卓などで、明るさや制御値を操作するための操作子。</p></div><div><h3>チャンネル</h3><p>操作卓上で、照明を一つの操作単位として扱うための番号・制御単位。</p></div></div>
+  <p><strong>フェーダーを上げる＝灯体の絞りが開く、ではありません。</strong>操作卓から制御情報が送られ、その先の機器が設定に応じて灯体を動かします。</p>
+</section>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>6-3　フェーダーとチャンネルを分けて考える</h2><p>「回路番号」と「チャンネル番号」は、同じものを指しているとは限りません。</p></div>
+  <p>操作卓では、複数の回路を一つのチャンネルにまとめて操作することがあります。逆に、一つの灯体を細かく分けて制御する場合もあります。</p>
+  <div class="hk-lighting-flow"><div><strong>回路 101</strong><small>設備側の番号</small></div><b>＋</b><div><strong>回路 102</strong><small>設備側の番号</small></div><b>→</b><div><strong>Ch 1</strong><small>操作卓上の操作単位</small></div></div>
+  <p>つまり、<strong>「どこにつながっているか」と「どう操作するか」は別の情報</strong>です。パッチ（割り当て）の方法や呼び方は劇場によって異なるので、実際の現場ではその劇場の表を確認します。</p>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、回路番号とフェーダー番号が同じとは限らないんだね？」</p></div></div>
+  <div class="hk-nyakakichi-followup"><p>そうです。この二つを分けて考えられると、照明図と操作卓の関係が分かりやすくなります。</p></div>
+</section>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>6-4　LED灯体では何が変わる？</h2><p>LED灯体では、明るさだけでなく色なども電気的に制御できるものがあります。</p></div>
+  <p>白熱灯では、ゼラを入れて色を作る方法が基本でした。一方、カラーLED灯体では、灯体内部の複数のLEDを組み合わせて色を作れる機種があります。</p>
+  <p>そのため、LEDでは<strong>「電源」と「制御信号」</strong>を分けて考えることが重要です。</p>
+  <div class="hk-panel"><h3>DMXという言葉</h3><p><strong>DMX</strong>は、舞台照明などで機器を制御するために広く使われている通信方式です。</p><p>操作卓からDMX信号を送り、対応する灯体や機器がその情報を受け取って、明るさ・色・動きなどを制御します。</p><p>DMXでは「アドレス」という考え方が出てきます。どの制御値をどの機器が受け取るかを区別するための番号です。</p></div>
+</section>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>6-5　照明卓では何を操作している？</h2><p>照明卓は、舞台上の灯体を直接手で動かしているわけではありません。設定された制御情報を、必要な機器へ送っています。</p></div>
+  <p>初心者のうちは、まず「フェーダーを上げると明るくなる」という体験から始めて構いません。</p>
+  <p>その裏側には、<strong>回路・調光器・チャンネル・パッチ・DMXアドレス</strong>など、複数の仕組みがあります。</p>
+  <div class="hk-steps"><span>① 灯体を仕込む</span><b>→</b><span>② 回路・電源を確認</span><b>→</b><span>③ 制御先を割り当てる</span><b>→</b><span>④ 操作卓から操作</span></div>
+</section>
+<section class="hk-section">
+  <div class="hk-section-head"><h2>6-6　実際に確かめてみる</h2><p>電気と操作は、一つずつ動かしてみると理解しやすくなります。</p></div>
+  <div class="hk-exercise"><h3>5分照明エチュード「一台だけ点けてみる」</h3><ol><li>仕込み図から、舞台中央を照らす灯体を一台選びます。</li><li>その灯体の番号、種類、回路番号を確認します。</li><li>操作卓側で、その灯体に対応するチャンネルを確認します。</li><li>一台だけを点灯し、平面図で見た照射方向と実際の舞台上の光を比べます。</li><li>次に別の灯体を一台だけ点け、二つを組み合わせたときの違いを観察します。</li></ol><p>実際の機材を扱うときは、劇場ごとの安全手順と担当者の指示に従います。</p></div>
+</section>
+<section class="hk-section"><div class="hk-panel hk-summary"><h3>第6章まとめ</h3><p>照明を動かすには、灯体だけでなく、電源・回路・調光・操作の仕組みを理解する必要があります。</p><p><strong>回路は設備側、チャンネルは操作側の単位</strong>として考えると整理しやすくなります。</p><p>LED灯体ではDMXなどの制御信号が登場し、明るさだけでなく色や動きまで操作できる機種があります。</p><p>次の章では、照明の「色」をさらに深く見ていきます。</p></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「灯体を仕込んで、電気をつないで、操作卓から動かす。だんだん仕組みが見えてきた！」</p></div></div></section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション"><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a><span class="hk-chapter-nav-disabled">第7章 →</span></nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
 <?php
