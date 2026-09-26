@@ -729,19 +729,10 @@ get_header();
     <p>平面図は、舞台を上から見た図です。灯体の位置や向きを把握するのに向いています。</p>
   </div>
 
-  <div class="hk-lighting-plot" aria-label="照明平面図の簡易例">
-    <div class="hk-lighting-plot-audience">客席</div>
-    <div class="hk-lighting-plot-stage">
-      <div class="hk-lighting-plot-beam hk-plot-beam-left"></div>
-      <div class="hk-lighting-plot-beam hk-plot-beam-center"></div>
-      <div class="hk-lighting-plot-beam hk-plot-beam-right"></div>
-      <div class="hk-lighting-plot-person">人物</div>
-    </div>
-    <div class="hk-lighting-plot-fixtures">
-      <span>前明かり</span><span>サイド</span><span>バック</span>
-    </div>
-  </div>
-  <p class="hk-diagram-caption">簡易的な平面図のイメージ。実際の図面では、劇場ごとの舞台寸法やバトン位置、灯体記号などを使って情報を記入します。</p>
+  <figure class="hk-illustration">
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-18-floor-plan.png' ) ); ?>" alt="照明仕込み図の平面図。客席、1サス・2サス・3サス、サイド、フロアコンセント、灯体番号、回路番号、灯体種類、照射方向を示した例" loading="lazy">
+    <figcaption>平面図の例。バトンやサイドなどの仕込み位置と、各灯体の番号・回路・種類・照射方向を読み取ります。</figcaption>
+  </figure>
 
   <p>平面図を見るときは、まず<strong>「舞台はどこか」「客席はどこか」</strong>を確認します。</p>
   <p>そのうえで、灯体がどこに取り付けられ、どちらを向いているのかを読みます。</p>
@@ -767,11 +758,10 @@ get_header();
   </div>
   <p>記号そのものは劇場、学校、劇団、照明会社などによって違う場合があります。そのため、<strong>「この形なら必ずこの灯体」と決めつけない</strong>ことが大切です。</p>
 
-  <div class="hk-lighting-symbols">
-    <div><span class="hk-lighting-symbol hk-symbol-circle">○</span><strong>灯体</strong><small>器具を表す記号の例</small></div>
-    <div><span class="hk-lighting-symbol hk-symbol-arrow">↗</span><strong>光の方向</strong><small>光軸・照射方向の例</small></div>
-    <div><span class="hk-lighting-symbol hk-symbol-number">12</span><strong>番号</strong><small>灯体を識別する情報の例</small></div>
-  </div>
+  <figure class="hk-illustration">
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-19-fixture-symbols.png' ) ); ?>" alt="照明仕込み図で使う灯体記号の例。凸レンズ、フレネル、PAR、エリスポット、ホリゾントライト、LED灯体と図面上の表記例を示した図" loading="lazy">
+    <figcaption>灯体記号の例。実際の記号・表記方法・番号体系は劇場や現場によって異なるため、図面の凡例を確認します。</figcaption>
+  </figure>
 
   <p>大切なのは記号を暗記することではありません。</p>
   <p><strong>「この記号は何を表しているのか」を図面の凡例や現場のルールから確認する。</strong>これが基本です。</p>
@@ -784,16 +774,10 @@ get_header();
   </div>
   <p>そこで、横から見た立面図や断面図を使います。</p>
 
-  <div class="hk-lighting-elevation">
-    <div class="hk-elevation-stage">
-      <div class="hk-elevation-floor">舞台</div>
-      <div class="hk-elevation-person">人物</div>
-      <div class="hk-elevation-light hk-elevation-front">前明かり</div>
-      <div class="hk-elevation-light hk-elevation-top">トップ</div>
-      <div class="hk-elevation-light hk-elevation-back">バック</div>
-    </div>
-  </div>
-  <p class="hk-diagram-caption">横から見た簡易イメージ。実際の図面では、バトンや灯体の高さ、舞台面との位置関係などを確認します。</p>
+  <figure class="hk-illustration">
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-20-elevation-section.png' ) ); ?>" alt="照明仕込み図の立面図・断面図。フロントバトン、トップバトン、バックバトンの高さと照射角度、舞台・客席・演者位置の関係を示した例" loading="lazy">
+    <figcaption>立面図・断面図の例。バトンの高さ、舞台面との位置関係、照射角度や照射範囲を確認します。</figcaption>
+  </figure>
 
   <div class="hk-term-grid">
     <div><h3>平面図</h3><p>上から見て、舞台上の位置と方向を確認する図。</p></div>
