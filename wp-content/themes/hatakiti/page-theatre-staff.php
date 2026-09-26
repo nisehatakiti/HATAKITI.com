@@ -47,6 +47,7 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>"><span>第5章</span><strong>照明図を読む</strong><small>平面図・立面図・灯体・回路・色・方向</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>"><span>第6章</span><strong>電気と操作</strong><small>回路・調光器・フェーダー・チャンネル・DMX</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>"><span>第7章</span><strong>色を作る</strong><small>ゼラ・色温度・LED・混色・色の組み合わせ</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>"><span>第8章</span><strong>フォーカスと明かり合わせ</strong><small>狙う・絞る・切る・重ねる・実際に合わせる</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -936,7 +937,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第8章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
 </nav>
 <section class="hk-section">
 <div class="hk-section-head"><h2>導入　「赤い光」だけではない</h2><p>照明の色は、単純に「赤・青・黄色」を選ぶだけではありません。光源、フィルター、混色、周囲の色との関係によって、同じ舞台でも見え方が変わります。</p></div>
@@ -984,6 +985,104 @@ get_header();
 <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
 <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
 <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
+</nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-8' === $path ) : ?>
+<header class="hk-staff-hero">
+  <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p>
+  <h1>第8章　フォーカスと明かり合わせ</h1>
+  <p>仕込んだ灯体を「どこへ向け、どこまで広げ、どこを切るか」。実際の舞台で光を狙うための基本を学びます。</p>
+</header>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>">← 第7章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">第9章 →</a>
+</nav>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>導入　灯体を「置いた」だけでは照明にならない</h2><p>照明図どおりに灯体を仕込んでも、それだけでは舞台に必要な光にはなりません。最後に必要なのが、灯体を狙った位置へ向けて調整する「フォーカス」と、実際の舞台を見ながら光を整える「明かり合わせ」です。</p></div>
+  <p>同じ灯体でも、少し向きを変えるだけで光が当たる場所が変わります。ビームを広げれば周囲まで明るくなり、絞れば狙った場所に光を集められます。</p>
+  <p>第3章で学んだ「絞り」や「カッター」、第4章で学んだ「前明かり・サイド・バック・トップ」と、第5章の照明図が、ここで実際の舞台上の光につながります。</p>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-question.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「仕込んだ場所が合っていても、向きが少し違ったら光もズレるんだね？」</p></div></div>
+  <div class="hk-nyakakichi-followup"><p>そうです。照明は「どこにあるか」だけでなく、「どこを照らしているか」まで合わせて初めて完成に近づきます。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-1　フォーカスって何をする？</h2><p>フォーカスは、灯体の向きや光の広がりを調整して、狙った場所に必要な光を作る作業です。</p></div>
+  <p>まず「この灯体で何を照らすのか」を決めます。人物なのか、舞台美術なのか、床の一部分なのか、背景なのか。目的によって狙う位置が変わります。</p>
+  <div class="hk-term-grid">
+    <div><h3>狙う</h3><p>灯体の向きを変えて、光の中心を目的の場所へ持っていく。</p></div>
+    <div><h3>広げる・絞る</h3><p>光の広がりを調整し、必要な範囲だけを照らす。</p></div>
+    <div><h3>切る</h3><p>カッターなどを使って、不要な場所へ光が回り込まないようにする。</p></div>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-2　まず「中心」を合わせる</h2><p>フォーカスでは、最初から細かい境界を完璧に作ろうとせず、まず光の中心を狙います。</p></div>
+  <p>人物を照らすなら、人物の立ち位置を基準にします。床を照らすなら、床面上の目標位置を決めます。舞台美術なら、見せたい面を基準にします。</p>
+  <p>このとき重要なのは、「灯体の向き」だけを見て判断しないことです。実際に舞台面へ届いた光を見て調整します。</p>
+  <div class="hk-panel"><h3>初心者が覚える順番</h3><ol><li>何を照らすか決める</li><li>光の中心を目的位置へ向ける</li><li>必要な広さにする</li><li>不要な場所へ漏れていないか確認する</li><li>周囲の灯体との重なりを見る</li></ol></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-3　絞りとカッターを使い分ける</h2><p>「光を小さくする」と「光の形を切る」は同じことではありません。</p></div>
+  <p><strong>絞り</strong>は、光の広がりを調整するためのものです。照らす範囲そのものを狭くしたり広くしたりします。</p>
+  <p><strong>カッター</strong>は、光の一部を遮って境界を作ります。舞台袖や幕、客席など、照らしたくない場所への光漏れを抑えるためにも使います。</p>
+  <div class="hk-term-grid">
+    <div><h3>絞り</h3><p>「どこまで広げる？」を調整する。</p></div>
+    <div><h3>カッター</h3><p>「どこから先を照らさない？」を調整する。</p></div>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-4　明かり合わせは一灯ずつ確認する</h2><p>複数の灯体を一度に点けると、どの灯体が何をしているのか分かりにくくなります。</p></div>
+  <p>そのため、基本は一灯ずつ確認します。フェーダーやチャンネルを使って対象の灯体だけを点灯し、狙いを合わせます。</p>
+  <div class="hk-exercise"><h3>基本の確認手順</h3><ol><li>対象の灯体だけを点灯する。</li><li>舞台上のどこへ光が届いているかを見る。</li><li>向きを調整する。</li><li>必要なら絞りやカッターを調整する。</li><li>消して、次の灯体へ進む。</li><li>最後に複数灯を点灯して、重なりを確認する。</li></ol></div>
+  <p>実際の現場では、照明担当者だけでなく、舞台監督や演出、他のスタッフとの確認も必要になります。作業中は周囲の安全確認を優先します。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-5　前明かり・サイド・バックを合わせる</h2><p>第4章で学んだ光の方向ごとに、見るポイントが少し変わります。</p></div>
+  <div class="hk-term-grid">
+    <div><h3>前明かり</h3><p>人物の顔や表情が必要な位置に届いているか。左右の明るさや照射範囲も確認します。</p></div>
+    <div><h3>サイドライト</h3><p>身体の側面に光が届いているか。上下の位置や左右のバランスも見ます。</p></div>
+    <div><h3>バックライト</h3><p>人物の輪郭や奥行きを作れる位置に届いているか。客席側へ不要な光が漏れていないかも確認します。</p></div>
+    <div><h3>トップライト</h3><p>人物の上から必要な範囲を照らしているか。顔や床への影も確認します。</p></div>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-6　重ねたときに初めて見えてくること</h2><p>一灯ずつ正しくても、全部を重ねると別の問題が見つかることがあります。</p></div>
+  <p>前明かりとサイドが重なれば、人物の顔や衣裳の見え方が変わります。バックライトが強すぎれば輪郭だけが強調されることもあります。床に光が重なりすぎれば、意図しない明るい場所ができることもあります。</p>
+  <p>だから明かり合わせは「一灯ずつ合わせて終わり」ではありません。最後に全体を点灯して、舞台全体として成立しているかを確認します。</p>
+  <div class="hk-panel"><h3>全体を見る3つの質問</h3><ul><li>観客に見せたいものが、ちゃんと見えているか？</li><li>意図していない場所まで明るくなっていないか？</li><li>複数の光が重なったとき、色・影・明るさが狙いどおりか？</li></ul></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-7　安全を最優先にする</h2><p>フォーカスは高所作業や機材操作を伴うことがあります。技術より先に安全を確認します。</p></div>
+  <p>バトンを昇降させる場合は、舞台上や周囲に人・物がないことを確認し、劇場の手順に従います。高所での作業は、適切な設備・資格・補助者など、現場の安全ルールに従って行います。</p>
+  <p>灯体やケーブルを扱うときも、熱・落下・感電・転倒などの危険があります。初心者が単独で高所の灯体を動かすのではなく、必ず経験者の指示のもとで作業します。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head"><h2>8-8　実際に合わせてみる</h2><p>ここまでの内容を使って、ひとつの灯体から明かり合わせを体験してみます。</p></div>
+  <div class="hk-exercise"><h3>5分照明エチュード「一灯を狙う」</h3><ol><li>舞台上に一人の立ち位置を決める。</li><li>前明かりを一灯だけ点灯する。</li><li>人物の顔や身体に光の中心が来るように調整する。</li><li>必要な範囲まで光を広げ、不要な場所への光漏れを確認する。</li><li>次にサイドライトを一灯だけ点灯し、同じ人物を狙う。</li><li>最後に二灯を同時に点灯し、重なったときの見え方を観察する。</li></ol><p>実機を扱う場合は、必ず劇場・学校・団体などの安全ルールに従ってください。</p></div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-panel hk-summary"><h3>第8章まとめ</h3>
+    <p>フォーカスは、灯体を狙った場所へ向け、必要な範囲に光を整える作業です。</p>
+    <p><strong>狙う → 広げる・絞る → 切る → 一灯ずつ確認する → 全体で確認する</strong>という順番で考えると整理しやすくなります。</p>
+    <p>そして、フォーカスは単なる機材操作ではありません。最終的には「観客に何を見せるための光なのか」という目的に戻って判断します。</p>
+    <p>次の章では、複数の光を組み合わせて、舞台全体の見え方を設計していきます。</p>
+  </div>
+  <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「一灯ずつ合わせて、最後に全部重ねて見るんだね！」</p></div></div>
+</section>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>">← 第7章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">第9章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
