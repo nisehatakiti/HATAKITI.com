@@ -954,25 +954,25 @@ get_header();
 <section class="hk-section">
 <div class="hk-section-head"><h2>7-2　色温度を知る</h2><p>白い光にも「暖かい白」「冷たい白」があります。これを考えるときに出てくるのが色温度です。</p></div>
 <p>色温度はK（ケルビン）で表します。数字が低いほど暖色側、高いほど寒色側へ傾く、という理解から始めると分かりやすいでしょう。</p><figure class="hk-textbook-figure"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/lighting/lighting-72-color-temperature.png' ) ); ?>" alt="色温度の説明図" loading="lazy"><figcaption>色温度は、低いほど暖色寄り、高いほど寒色寄りの白になります。</figcaption></figure>
-<div class="hk-term-grid"><div><h3>低い色温度</h3><p>暖色寄り。ろうそくや白熱電球のような、赤み・黄みを感じる光。</p></div><div><h3>高い色温度</h3><p>寒色寄り。青みを感じる、比較的クールな白。</p></div></div>
+
 <p>ただし、舞台照明では「色温度が高い＝必ず青い」「低い＝必ず赤い」と単純化しすぎないことも大切です。</p>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>7-3　LEDでは色をどう作る？</h2><p>カラーLED灯体では、複数の色のLEDを組み合わせて一つの色を作る機種があります。</p></div>
 <p>代表的なのがRGBです。赤（Red）、緑（Green）、青（Blue）の光を組み合わせて、さまざまな色を作ります。</p><figure class="hk-textbook-figure"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/lighting/lighting-73-led-color-mixing.png' ) ); ?>" alt="LEDの色混合の説明図" loading="lazy"><figcaption>LEDでは、複数の色の光を組み合わせて一つの色を作ります。</figcaption></figure>
-<div class="hk-lighting-flow"><div><strong>R</strong><small>赤</small></div><b>＋</b><div><strong>G</strong><small>緑</small></div><b>＋</b><div><strong>B</strong><small>青</small></div><b>→</b><div><strong>混色</strong><small>作りたい色へ</small></div></div>
+
 <p>最近のLED灯体では、RGBだけでなく、Amber、Lime、Whiteなど別の色のLEDを加えて、より細かく色を作れる機種もあります。</p>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>7-4　「同じ色」でも光の作り方が違う</h2><p>ゼラとLEDは、同じ色を目指していても仕組みが違います。</p></div>
-<div class="hk-term-grid"><div><h3>ゼラ</h3><p>白色光から特定の成分を選び、通過する光を変える。</p><p><strong>灯体 → ゼラ → 舞台</strong></p></div><div><h3>カラーLED</h3><p>複数のLEDの出力を組み合わせて、灯体から出す光そのものを作る。</p><p><strong>LED素子 → 混色 → 舞台</strong></p></div></div>
+
 <p>そのため、同じ色名でも、灯体や光源の違いによって衣裳や舞台美術の見え方が変わることがあります。</p><figure class="hk-textbook-figure"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/lighting/lighting-74-same-color-different-methods.png' ) ); ?>" alt="同じ色でも光の作り方が違う説明図" loading="lazy"><figcaption>ゼラ、RGB LED、複数色LEDでは、同じ色を目指しても光の作り方が異なります。</figcaption></figure>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>7-5　色は「単色」ではなく組み合わせで考える</h2><p>舞台では、一つの色だけで全部を照らすとは限りません。</p></div>
 <p>たとえば、前明かりを少し暖色、サイドを寒色にすると、人物の立体感を保ちながら舞台全体の空気を作れます。</p>
 <p>バックライトだけ色を変える、背景だけ別の色にする、場面転換で色を少しずつ変える、といった方法もあります。</p>
-<figure class="hk-textbook-figure"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/lighting/lighting-75-color-combination.png' ) ); ?>" alt="照明の色を組み合わせて考える説明図" loading="lazy"><figcaption>舞台では、複数の色を組み合わせて空間や人物の見え方を作ります。</figcaption></figure><div class="hk-panel"><h3>色を組み合わせるときの3つの視点</h3><ol><li><strong>何を見せたいか</strong> — 顔、衣裳、背景、空間など。</li><li><strong>どんな空気にしたいか</strong> — 暖かい、冷たい、静か、緊張感がある、など。</li><li><strong>どの光同士を混ぜるか</strong> — 前・サイド・バック・背景の役割を考える。</li></ol></div>
+<figure class="hk-textbook-figure"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/lighting/lighting-75-color-combination.png' ) ); ?>" alt="照明の色を組み合わせて考える説明図" loading="lazy"><figcaption>舞台では、複数の色を組み合わせて空間や人物の見え方を作ります。</figcaption></figure>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>7-6　実際に色を比べてみる</h2><p>色は実際に当てて比べると、一気に理解しやすくなります。</p></div>
