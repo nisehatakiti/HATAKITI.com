@@ -699,6 +699,17 @@ get_header();
 </nav>
 <section class="hk-section">
   <div class="hk-section-head">
+    <h2>実際の仕込み図を見てみよう</h2>
+    <p>実際の現場では、舞台の平面図や立面図に、バトン、灯体の種類、灯体番号、回路番号、照射方向などを書き込んで仕込み図を作ります。劇場や現場によって記号や番号の付け方は異なりますが、まずは「どこに何を仕込んで、どこを照らすのか」を読み取ることが大切です。</p>
+  </div>
+  <figure class="hk-illustration">
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-17-lighting-plot-overview.png' ) ); ?>" alt="前明かり、サイドライト、バックライト、トップライトの仕込み図。平面図と立面図にバトン、灯体番号、回路番号、灯体種類、照射方向を示した例" loading="lazy">
+    <figcaption>仕込み図の例。平面図では灯体の位置と照射方向、立面図ではバトンの高さと光の角度を確認します。記号や番号のルールは劇場・現場によって異なります。</figcaption>
+  </figure>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
     <h2>導入　照明を「図」にする</h2>
     <p>頭の中で「ここから当てたい」と考えるだけでは、実際の仕込みにはつながりません。照明では、その情報を図面にしてスタッフ同士で共有します。</p>
   </div>
