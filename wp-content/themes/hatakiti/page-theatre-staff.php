@@ -1015,12 +1015,32 @@ get_header();
     <div><h3>広げる・絞る</h3><p>光の広がりを調整し、必要な範囲だけを照らす。</p></div>
     <div><h3>切る</h3><p>カッターなどを使って、不要な場所へ光が回り込まないようにする。</p></div>
   </div>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-81-focus-basic.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-81-focus-basic.png' ) ); ?>" alt="フォーカスの基本。灯体の向きと光の中心、狙う場所の関係を示します。" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-81-focus-basic.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>フォーカスでは、灯体を「置く」だけでなく、狙った場所へ光を届けることが重要です。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
   <div class="hk-section-head"><h2>8-2　まず「中心」を合わせる</h2><p>フォーカスでは、最初から細かい境界を完璧に作ろうとせず、まず光の中心を狙います。</p></div>
   <p>人物を照らすなら、人物の立ち位置を基準にします。床を照らすなら、床面上の目標位置を決めます。舞台美術なら、見せたい面を基準にします。</p>
   <p>このとき重要なのは、「灯体の向き」だけを見て判断しないことです。実際に舞台面へ届いた光を見て調整します。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-82-focus-center.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-82-focus-center.png' ) ); ?>" alt="光の中心を人物へ合わせるフォーカスの基本" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-82-focus-center.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>灯体の向きだけでなく、実際に舞台へ届いた光の中心を見て合わせます。</figcaption>
+</figure>
+
   <div class="hk-panel"><h3>初心者が覚える順番</h3><ol><li>何を照らすか決める</li><li>光の中心を目的位置へ向ける</li><li>必要な広さにする</li><li>不要な場所へ漏れていないか確認する</li><li>周囲の灯体との重なりを見る</li></ol></div>
 </section>
 
@@ -1032,12 +1052,32 @@ get_header();
     <div><h3>絞り</h3><p>「どこまで広げる？」を調整する。</p></div>
     <div><h3>カッター</h3><p>「どこから先を照らさない？」を調整する。</p></div>
   </div>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-83-iris-cutter.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-83-iris-cutter.png' ) ); ?>" alt="絞りとカッターによる光の調整の違い" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-83-iris-cutter.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>絞りは光の広がりを、カッターは光の境界を調整します。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
   <div class="hk-section-head"><h2>8-4　明かり合わせは一灯ずつ確認する</h2><p>複数の灯体を一度に点けると、どの灯体が何をしているのか分かりにくくなります。</p></div>
   <p>そのため、基本は一灯ずつ確認します。フェーダーやチャンネルを使って対象の灯体だけを点灯し、狙いを合わせます。</p>
   <div class="hk-exercise"><h3>基本の確認手順</h3><ol><li>対象の灯体だけを点灯する。</li><li>舞台上のどこへ光が届いているかを見る。</li><li>向きを調整する。</li><li>必要なら絞りやカッターを調整する。</li><li>消して、次の灯体へ進む。</li><li>最後に複数灯を点灯して、重なりを確認する。</li></ol></div>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-84-focus-adjustment-order.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-84-focus-adjustment-order.png' ) ); ?>" alt="一灯ずつフォーカスを合わせる基本手順" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-84-focus-adjustment-order.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>対象灯体だけを点灯し、狙い・広がり・不要な光漏れを順番に確認します。</figcaption>
+</figure>
+
   <p>実際の現場では、照明担当者だけでなく、舞台監督や演出、他のスタッフとの確認も必要になります。作業中は周囲の安全確認を優先します。</p>
 </section>
 
@@ -1049,13 +1089,43 @@ get_header();
     <div><h3>バックライト</h3><p>人物の輪郭や奥行きを作れる位置に届いているか。客席側へ不要な光が漏れていないかも確認します。</p></div>
     <div><h3>トップライト</h3><p>人物の上から必要な範囲を照らしているか。顔や床への影も確認します。</p></div>
   </div>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-85-lighting-directions-focus.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-85-lighting-directions-focus.png' ) ); ?>" alt="前明かり・サイド・バック・トップでフォーカスするときの確認ポイント" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-85-lighting-directions-focus.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>光の方向によって、フォーカスするときに見るポイントが変わります。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
   <div class="hk-section-head"><h2>8-6　重ねたときに初めて見えてくること</h2><p>一灯ずつ正しくても、全部を重ねると別の問題が見つかることがあります。</p></div>
   <p>前明かりとサイドが重なれば、人物の顔や衣裳の見え方が変わります。バックライトが強すぎれば輪郭だけが強調されることもあります。床に光が重なりすぎれば、意図しない明るい場所ができることもあります。</p>
   <p>だから明かり合わせは「一灯ずつ合わせて終わり」ではありません。最後に全体を点灯して、舞台全体として成立しているかを確認します。</p>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-87-focus-final-check.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-87-focus-final-check.png' ) ); ?>" alt="明かり合わせの最終チェック項目" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-87-focus-final-check.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>見せたい場所、不要な光漏れ、色・影・明るさを舞台全体で確認します。</figcaption>
+</figure>
+
   <div class="hk-panel"><h3>全体を見る3つの質問</h3><ul><li>観客に見せたいものが、ちゃんと見えているか？</li><li>意図していない場所まで明るくなっていないか？</li><li>複数の光が重なったとき、色・影・明るさが狙いどおりか？</li></ul></div>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-86-light-layering.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-86-light-layering.png' ) ); ?>" alt="複数の光を重ねたときの見え方の変化" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-86-light-layering.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>一灯ずつ合わせたあと、複数の光を重ねることで見え方がどう変わるかを確認します。</figcaption>
+</figure>
+
 </section>
 
 <section class="hk-section">
@@ -1066,7 +1136,17 @@ get_header();
 
 <section class="hk-section">
   <div class="hk-section-head"><h2>8-8　実際に合わせてみる</h2><p>ここまでの内容を使って、ひとつの灯体から明かり合わせを体験してみます。</p></div>
-  <div class="hk-exercise"><h3>5分照明エチュード「一灯を狙う」</h3><ol><li>舞台上に一人の立ち位置を決める。</li><li>前明かりを一灯だけ点灯する。</li><li>人物の顔や身体に光の中心が来るように調整する。</li><li>必要な範囲まで光を広げ、不要な場所への光漏れを確認する。</li><li>次にサイドライトを一灯だけ点灯し、同じ人物を狙う。</li><li>最後に二灯を同時に点灯し、重なったときの見え方を観察する。</li></ol><p>実機を扱う場合は、必ず劇場・学校・団体などの安全ルールに従ってください。</p></div>
+  <div class="hk-exercise"><h3>5分照明エチュード「一灯を狙う」</h3>
+  <figure class="hk-illustration">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-88-focus-final-adjustment.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-88-focus-final-adjustment.png' ) ); ?>" alt="フォーカスの最終確認と微調整" loading="lazy">
+<?php else : ?>
+  <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-88-focus-final-adjustment.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+<figcaption>客席からの見え方、立ち位置、明るさ・形・影を確認し、最後に設定を記録します。</figcaption>
+</figure>
+<ol><li>舞台上に一人の立ち位置を決める。</li><li>前明かりを一灯だけ点灯する。</li><li>人物の顔や身体に光の中心が来るように調整する。</li><li>必要な範囲まで光を広げ、不要な場所への光漏れを確認する。</li><li>次にサイドライトを一灯だけ点灯し、同じ人物を狙う。</li><li>最後に二灯を同時に点灯し、重なったときの見え方を観察する。</li></ol><p>実機を扱う場合は、必ず劇場・学校・団体などの安全ルールに従ってください。</p></div>
 </section>
 
 <section class="hk-section">
