@@ -46,6 +46,7 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>"><span>第4章</span><strong>光をどこから当てる？</strong><small>前明かり・サイド・バック・トップ・ホリゾント・SS</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>"><span>第5章</span><strong>照明図を読む</strong><small>平面図・立面図・灯体・回路・色・方向</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>"><span>第6章</span><strong>電気と操作</strong><small>回路・調光器・フェーダー・チャンネル・DMX</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>"><span>第7章</span><strong>色を作る</strong><small>ゼラ・色温度・LED・混色・色の組み合わせ</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -928,7 +929,62 @@ get_header();
 </section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第6章まとめ</h3><p>照明を動かすには、灯体だけでなく、電源・回路・調光・操作の仕組みを理解する必要があります。</p><p><strong>回路は設備側、チャンネルは操作側の単位</strong>として考えると整理しやすくなります。</p><p>LED灯体ではDMXなどの制御信号が登場し、明るさだけでなく色や動きまで操作できる機種があります。</p><p>次の章では、照明の「色」をさらに深く見ていきます。</p></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「灯体を仕込んで、電気をつないで、操作卓から動かす。だんだん仕組みが見えてきた！」</p></div></div></section>
-<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション"><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a><span class="hk-chapter-nav-disabled">第7章 →</span></nav>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション"><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>">第7章 →</a></nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-7' === $path ) : ?>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第7章　色を作る</h1><p>ゼラ、色温度、LEDの混色。照明の「色」を、感覚だけでなく仕組みから考えます。</p></header>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
+</nav>
+<section class="hk-section">
+<div class="hk-section-head"><h2>導入　「赤い光」だけではない</h2><p>照明の色は、単純に「赤・青・黄色」を選ぶだけではありません。光源、フィルター、混色、周囲の色との関係によって、同じ舞台でも見え方が変わります。</p></div>
+<p>たとえば、白い衣裳に青い光を当てれば青く見えます。しかし、赤いゼラを通した光と、RGBのLEDで作った赤い光は、同じ「赤」と呼んでも光の作り方が違います。</p>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、色を選ぶだけじゃなくて、どうやってその色を作ったかも考えるの？」</p></div></div>
+<div class="hk-nyakakichi-followup"><p>その通りです。第7章では、色を「材料」と「作り方」の両方から見ていきます。</p></div>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>7-1　ゼラで色を作る</h2><p>従来型の灯体では、光源の前にカラーフィルター（通称：ゼラ）を入れて、通す光の成分を変えます。</p></div>
+<p>ゼラは光の一部を通し、一部を吸収します。そのため、白い光にゼラを重ねると、舞台に届く光の色が変わります。</p>
+<p>第3章で登場したゼラホルダーは、このゼラを灯体の前に取り付けるためのものです。</p>
+<p>実際の番号や色名を調べるときは、<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/filters/' ) ); ?>">ゼラ・カラーフィルター一覧</a>も利用できます。</p>
+<div class="hk-panel"><h3>ゼラを見るときの情報</h3><ul><li>メーカー</li><li>シリーズ</li><li>番号</li><li>色名</li><li>透過率（Transmission）</li><li>どの灯体・場面で使うか</li></ul></div>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>7-2　色温度を知る</h2><p>白い光にも「暖かい白」「冷たい白」があります。これを考えるときに出てくるのが色温度です。</p></div>
+<p>色温度はK（ケルビン）で表します。数字が低いほど暖色側、高いほど寒色側へ傾く、という理解から始めると分かりやすいでしょう。</p>
+<div class="hk-term-grid"><div><h3>低い色温度</h3><p>暖色寄り。ろうそくや白熱電球のような、赤み・黄みを感じる光。</p></div><div><h3>高い色温度</h3><p>寒色寄り。青みを感じる、比較的クールな白。</p></div></div>
+<p>ただし、舞台照明では「色温度が高い＝必ず青い」「低い＝必ず赤い」と単純化しすぎないことも大切です。</p>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>7-3　LEDでは色をどう作る？</h2><p>カラーLED灯体では、複数の色のLEDを組み合わせて一つの色を作る機種があります。</p></div>
+<p>代表的なのがRGBです。赤（Red）、緑（Green）、青（Blue）の光を組み合わせて、さまざまな色を作ります。</p>
+<div class="hk-lighting-flow"><div><strong>R</strong><small>赤</small></div><b>＋</b><div><strong>G</strong><small>緑</small></div><b>＋</b><div><strong>B</strong><small>青</small></div><b>→</b><div><strong>混色</strong><small>作りたい色へ</small></div></div>
+<p>最近のLED灯体では、RGBだけでなく、Amber、Lime、Whiteなど別の色のLEDを加えて、より細かく色を作れる機種もあります。</p>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>7-4　「同じ色」でも光の作り方が違う</h2><p>ゼラとLEDは、同じ色を目指していても仕組みが違います。</p></div>
+<div class="hk-term-grid"><div><h3>ゼラ</h3><p>白色光から特定の成分を選び、通過する光を変える。</p><p><strong>灯体 → ゼラ → 舞台</strong></p></div><div><h3>カラーLED</h3><p>複数のLEDの出力を組み合わせて、灯体から出す光そのものを作る。</p><p><strong>LED素子 → 混色 → 舞台</strong></p></div></div>
+<p>そのため、同じ色名でも、灯体や光源の違いによって衣裳や舞台美術の見え方が変わることがあります。</p>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>7-5　色は「単色」ではなく組み合わせで考える</h2><p>舞台では、一つの色だけで全部を照らすとは限りません。</p></div>
+<p>たとえば、前明かりを少し暖色、サイドを寒色にすると、人物の立体感を保ちながら舞台全体の空気を作れます。</p>
+<p>バックライトだけ色を変える、背景だけ別の色にする、場面転換で色を少しずつ変える、といった方法もあります。</p>
+<div class="hk-panel"><h3>色を組み合わせるときの3つの視点</h3><ol><li><strong>何を見せたいか</strong> — 顔、衣裳、背景、空間など。</li><li><strong>どんな空気にしたいか</strong> — 暖かい、冷たい、静か、緊張感がある、など。</li><li><strong>どの光同士を混ぜるか</strong> — 前・サイド・バック・背景の役割を考える。</li></ol></div>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>7-6　実際に色を比べてみる</h2><p>色は実際に当てて比べると、一気に理解しやすくなります。</p></div>
+<div class="hk-exercise"><h3>5分照明エチュード「同じ場所を3色で見る」</h3><ol><li>同じ灯体、同じ位置、同じ明るさで、色だけを変えます。</li><li>暖色系、寒色系、彩度の高い色など、3種類を順番に当てます。</li><li>顔、衣裳、舞台美術、背景の見え方がどう変わったかを書き出します。</li><li>次に、前明かりとサイドライトで色を変え、人物の立体感の変化を比べます。</li></ol><p>色の見え方は、劇場の設備、灯体、舞台美術、衣裳、客席環境などによって変わります。実際の現場では必ず実機で確認します。</p></div>
+</section>
+<section class="hk-section"><div class="hk-panel hk-summary"><h3>第7章まとめ</h3><p>照明の色は、ゼラやLEDなど「色を作る方法」から考えると理解しやすくなります。</p><p><strong>ゼラは光を通す・吸収することで色を変え、LEDは複数の光を組み合わせて色を作る</strong>、という違いがあります。</p><p>色温度は白色光の暖かさ・冷たさを考えるための基本的な指標です。</p><p>そして舞台では、一つの色を選ぶだけでなく、前・サイド・バック・背景など複数の光を組み合わせて色の設計を行います。</p><p>次の章では、仕込んだ灯体を実際にどこへ向けるか、「フォーカスと明かり合わせ」を学びます。</p></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「色も、選ぶだけじゃなくて、どう作るかと組み合わせ方が大事なんだね！」</p></div></div></section>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
+<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
+</nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
 <?php
