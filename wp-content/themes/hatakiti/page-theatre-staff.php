@@ -888,14 +888,8 @@ get_header();
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-1　まず「回路」を知る</h2><p>回路は、照明設備と電源をつなぐための基本単位です。</p></div>
   <p>仕込み図に「回路番号」が書かれているのは、灯体がどの電源系統につながるのかを識別するためです。</p>
-  <div class="hk-lighting-flow"><div><strong>灯体</strong><small>舞台上の器具</small></div><b>→</b><div><strong>回路</strong><small>電源につながる系統</small></div><b>→</b><div><strong>調光・制御</strong><small>明るさや動作を管理</small></div></div>
   <p>仕込み図の「回路番号」や記号は、劇場によって表記方法が違う場合があります。<strong>番号だけで判断せず、図面の凡例や劇場の設備表を見る</strong>のが基本です。</p>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-21-lighting-system-overview.png" alt="照明システム全体のつながりを示す図。電源、分電盤・回路、調光器、灯体と、照明卓、チャンネル、制御の関係を示す" loading="lazy"><figcaption>照明システム全体のつながり。電源側の流れと、操作側の流れを分けて見ると理解しやすくなります。</figcaption></figure>
-  <figure class="hk-control-diagram" aria-label="灯体から電源と操作までの基本的な流れ">
-    <div class="hk-control-card"><strong>電源側</strong><div class="hk-signal-box"><span>電源</span><b>→</b><span>分電盤・回路</span><b>→</b><span>調光器</span></div><p>灯体へ必要な電力を送る側の仕組みです。</p></div>
-    <div class="hk-control-card"><strong>操作側</strong><div class="hk-signal-box"><span>照明卓</span><b>→</b><span>チャンネル</span><b>→</b><span>回路・灯体</span></div><p>「どの灯体を、どれくらい動かすか」を指示する側です。</p></div>
-  </figure>
-  <figcaption class="hk-figure-caption">照明は「電源の流れ」と「操作の流れ」を分けて考えると整理しやすくなります。</figcaption>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-2　調光器（Dimmer）は何をしている？</h2><p>従来型の舞台照明では、調光器が灯体への電力を調整して明るさを変えます。</p></div>
@@ -903,17 +897,10 @@ get_header();
   <div class="hk-term-grid"><div><h3>絞り</h3><p>灯体の光学系で、光の広がりや出方を調整するもの。</p></div><div><h3>調光器</h3><p>電気側で、対応する灯体への出力を調整するもの。</p></div><div><h3>フェーダー</h3><p>操作卓などで、明るさや制御値を操作するための操作子。</p></div><div><h3>チャンネル</h3><p>操作卓上で、照明を一つの操作単位として扱うための番号・制御単位。</p></div></div>
   <p><strong>フェーダーを上げる＝灯体の絞りが開く、ではありません。</strong>操作卓から制御情報が送られ、その先の機器が設定に応じて灯体を動かします。</p>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-22-dimmer.png" alt="調光器の役割を示す図。電源から調光器、回路、灯体へ電力が流れ、照明卓から制御する関係を示す" loading="lazy"><figcaption>調光器は電気側で灯体への出力を調整します。絞りとは役割が違います。</figcaption></figure>
-  <div class="hk-dimmer-diagram">
-    <div><span>入力</span><strong>電力</strong></div><b>→</b>
-    <div><span>調光器</span><strong>出力を調整</strong></div><b>→</b>
-    <div><span>回路</span><strong>灯体へ</strong></div>
-  </div>
-  <p class="hk-figure-caption">調光器は、対応する灯体への電力を調整する「電気側」の機器です。</p>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-3　フェーダーとチャンネルを分けて考える</h2><p>「回路番号」と「チャンネル番号」は、同じものを指しているとは限りません。</p></div>
   <p>操作卓では、複数の回路を一つのチャンネルにまとめて操作することがあります。逆に、一つの灯体を細かく分けて制御する場合もあります。</p>
-  <div class="hk-lighting-flow"><div><strong>回路 101</strong><small>設備側の番号</small></div><b>＋</b><div><strong>回路 102</strong><small>設備側の番号</small></div><b>→</b><div><strong>Ch 1</strong><small>操作卓上の操作単位</small></div></div>
   <p>つまり、<strong>「どこにつながっているか」と「どう操作するか」は別の情報</strong>です。パッチ（割り当て）の方法や呼び方は劇場によって異なるので、実際の現場ではその劇場の表を確認します。</p>
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-thinking.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「じゃあ、回路番号とフェーダー番号が同じとは限らないんだね？」</p></div></div>
   <div class="hk-nyakakichi-followup"><p>そうです。この二つを分けて考えられると、照明図と操作卓の関係が分かりやすくなります。</p></div>
@@ -927,25 +914,12 @@ get_header();
   <p>そのため、LEDでは<strong>「電源」と「制御信号」</strong>を分けて考えることが重要です。</p>
   <div class="hk-panel"><h3>DMXという言葉</h3><p><strong>DMX</strong>は、舞台照明などで機器を制御するために広く使われている通信方式です。</p><p>操作卓からDMX信号を送り、対応する灯体や機器がその情報を受け取って、明るさ・色・動きなどを制御します。</p><p>DMXでは「アドレス」という考え方が出てきます。どの制御値をどの機器が受け取るかを区別するための番号です。</p></div>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-24-dmx-led.png" alt="LED灯体とDMX制御の関係を示す図。照明卓からDMX信号を送り、LED灯体の明るさや色などを制御する" loading="lazy"><figcaption>LED灯体では、DMXなどの制御信号によって明るさや色などを操作する機種があります。</figcaption></figure>
-  <div class="hk-dmx-diagram">
-    <div><strong>照明卓</strong><small>制御データを作る</small></div><b>DMX →</b>
-    <div><strong>DMX機器</strong><small>信号を受け取る</small></div><b>→</b>
-    <div><strong>LED灯体</strong><small>明るさ・色などを変える</small></div>
-  </div>
-  <p class="hk-figure-caption">DMXは「電源そのもの」ではなく、照明機器を制御するための信号です。</p>
 </section>
 <section class="hk-section">
   <div class="hk-section-head"><h2>6-5　照明卓では何を操作している？</h2><p>照明卓は、舞台上の灯体を直接手で動かしているわけではありません。設定された制御情報を、必要な機器へ送っています。</p></div>
   <p>初心者のうちは、まず「フェーダーを上げると明るくなる」という体験から始めて構いません。</p>
   <p>その裏側には、<strong>回路・調光器・チャンネル・パッチ・DMXアドレス</strong>など、複数の仕組みがあります。</p>
   <figure class="hk-illustration hk-lighting-chapter-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/' ) ); ?>lighting-25-console-operation.png" alt="照明卓の基本操作の流れを示す図。チャンネル選択、フェーダー操作、色や動きの調整、シーンの記憶と再生を説明する" loading="lazy"><figcaption>照明卓では、チャンネルを選び、必要な値を調整し、その状態をシーンとして記憶・再生できます。</figcaption></figure>
-  <div class="hk-console-diagram">
-    <div><span>① 選ぶ</span><strong>チャンネル</strong></div>
-    <b>→</b><div><span>② 動かす</span><strong>フェーダー</strong></div>
-    <b>→</b><div><span>③ 反映</span><strong>灯体の明るさ</strong></div>
-    <b>→</b><div><span>④ 記憶</span><strong>シーン</strong></div>
-  </div>
-  <p class="hk-figure-caption">操作卓では、個々の灯体を直接操作するのではなく、設定された操作単位を組み合わせて照明を作ります。</p>
   <div class="hk-steps"><span>① 灯体を仕込む</span><b>→</b><span>② 回路・電源を確認</span><b>→</b><span>③ 制御先を割り当てる</span><b>→</b><span>④ 操作卓から操作</span></div>
 </section>
 <section class="hk-section">
