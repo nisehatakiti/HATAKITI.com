@@ -936,7 +936,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
+  <span class="hk-chapter-nav-disabled">第8章 →</span>
 </nav>
 <section class="hk-section">
 <div class="hk-section-head"><h2>導入　「赤い光」だけではない</h2><p>照明の色は、単純に「赤・青・黄色」を選ぶだけではありません。光源、フィルター、混色、周囲の色との関係によって、同じ舞台でも見え方が変わります。</p></div>
