@@ -1175,7 +1175,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">← 第8章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第10章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>">第10章 →</a>
 </nav>
 
 <section class="hk-section">
@@ -1357,6 +1357,199 @@ get_header();
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">← 第8章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
   <span class="hk-chapter-nav-disabled">第10章 →</span>
+</nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-10' === $path ) : ?>
+<header class="hk-staff-hero">
+  <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p>
+  <h1>第10章　実際の照明を作ってみる</h1>
+  <p>ここまで学んだ照明の考え方を使って、ひとつの場面を最初から組み立ててみます。</p>
+</header>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">← 第9章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第11章 →</span>
+</nav>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>導入　ここまでの知識を使って、ひとつの場面を作る</h2>
+    <p>ここまで、照明の基本的な考え方を学んできました。ここからは、それらを実際に使ってみます。</p>
+  </div>
+  <p>例として、舞台中央に一人の人物が立っている場面を使い、照明を最初から作っていきます。</p>
+  <p>大切なのは、いきなり灯体を点けることではありません。まず「観客に何を見せたいのか」を考え、そこから必要な光を組み立てていきます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-1　まず「何を見せたいか」を決める</h2>
+    <p>照明を考えるとき、最初に決めるのは「どこを明るくするか」ではありません。</p>
+  </div>
+  <p>最初に考えるのは、<strong>観客に何を見せたいのか</strong>です。</p>
+  <p>例えば、舞台中央に人物が立っている場面なら、人物の顔を見せたいのか、身体の動きを見せたいのか、それとも人物が立っている舞台空間まで見せたいのかによって、必要な光が変わります。</p>
+  <div class="hk-term-grid">
+    <div><h3>顔・表情</h3><p>観客が人物の表情を読み取るための光。</p></div>
+    <div><h3>身体・動き</h3><p>身体の向きや動きを見せるための光。</p></div>
+    <div><h3>舞台空間</h3><p>人物がどこにいるのかを感じさせる光。</p></div>
+    <div><h3>背景</h3><p>時間や場所、場面の雰囲気を支える光。</p></div>
+  </div>
+  <p>「どこを明るくするか」ではなく、<strong>「何を見せるために光を置くのか」</strong>と考えると、照明プランを作りやすくなります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-2　舞台を区切って考える</h2>
+    <p>舞台全体を一度に考えるのではなく、まず空間をいくつかに分けて考えます。</p>
+  </div>
+  <ul>
+    <li><strong>上手</strong></li>
+    <li><strong>中央</strong></li>
+    <li><strong>下手</strong></li>
+    <li><strong>舞台奥</strong></li>
+    <li><strong>舞台手前</strong></li>
+    <li><strong>背景</strong></li>
+  </ul>
+  <p>最初は舞台中央にいる人物から考えてみましょう。そこから必要に応じて、上手・下手や舞台奥、背景へと光を広げていきます。</p>
+  <p>最初から全部を明るくするのではなく、<strong>必要なところから作っていく</strong>ことがポイントです。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-3　必要な灯体を選ぶ</h2>
+    <p>見せたいものが決まったら、そのために必要な光を考え、そこから灯体を選びます。</p>
+  </div>
+  <p>例えば、人物の顔を見せたいなら前明かり、身体の立体感を見せたいならサイドライト、輪郭や奥行きを作りたいならバックライトを使うことが考えられます。</p>
+  <p>つまり、<strong>「使いたい灯体」から考えるのではなく、「必要な光」から「使う灯体」を決める</strong>という順番です。</p>
+  <p>同じ灯体でも、位置や方向、絞り方によって役割は変わります。灯体の種類だけで結果が決まるわけではありません。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-4　光の方向と役割を決める</h2>
+    <p>灯体を選んだら、どこから当てるかを決めます。</p>
+  </div>
+  <div class="hk-term-grid">
+    <div><h3>前明かり</h3><p>顔や表情を見せる基本の光。</p></div>
+    <div><h3>サイドライト</h3><p>身体の立体感や動きを見せる光。</p></div>
+    <div><h3>バックライト</h3><p>輪郭や奥行きを作る光。</p></div>
+    <div><h3>トップライト</h3><p>上からの光によって空間や影の印象を作る光。</p></div>
+  </div>
+  <p>ここでも、すべてを同じ強さにする必要はありません。主役となる光を決め、そのほかの光を補助として組み合わせます。</p>
+  <p>「どこから当てるか」と「何のために当てるか」をセットで考えると、光の役割が分かりやすくなります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-5　色を決める</h2>
+    <p>次に、その場面に合った光の色を考えます。</p>
+  </div>
+  <p>基本の白い光を使うこともできますし、少し暖かい色、少し冷たい色を加えることもできます。</p>
+  <p>例えば「夜だから青」と決めつける必要はありません。夜らしさを、暗さや方向、背景との明るさの差で作ることもできます。</p>
+  <p>また、同じように見える色でも、白熱光源にゼラを入れて作る場合と、カラーLEDで作る場合では、光の作り方や見え方が異なることがあります。</p>
+  <p>色は「きれいだから選ぶ」のではなく、<strong>その場面で何を感じさせたいのか</strong>を考えて選びます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-6　明るさのバランスを作る</h2>
+    <p>光の方向と色が決まったら、それぞれの明るさを調整します。</p>
+  </div>
+  <p>例えば、主役の前明かりを70、サイドを40、バックを30から試してみる、といったように、まず大まかな差を作ってから調整する方法があります。</p>
+  <p>ただし、この数字が正解というわけではありません。劇場の条件、演出、作品、使用する灯体によって適切な明るさは変わります。</p>
+  <p>大切なのは、<strong>一番見せたいものが自然に見えるように、全体のバランスを作る</strong>ことです。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-7　一つの場面を完成させる</h2>
+    <p>ここまで決めた光を、一灯ずつ重ねていきます。</p>
+  </div>
+  <p>舞台中央に、にゃかきちが立っているとします。</p>
+  <ol>
+    <li>まず前明かりだけを点け、顔と身体が見える状態を作ります。</li>
+    <li>次にサイドライトを加え、身体の立体感を確認します。</li>
+    <li>バックライトを加え、輪郭と舞台の奥行きを確認します。</li>
+    <li>必要なら背景の光を加え、人物と空間の関係を整えます。</li>
+  </ol>
+  <p>光を一つずつ加えると、どの光が何を変えたのかを確認しやすくなります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-8　実際に点灯して確認する</h2>
+    <p>照明は、図面の上だけでは完成しません。実際に点灯して、客席から見ます。</p>
+  </div>
+  <p>確認するときは、<strong>点灯 → 見る → 直す → 再確認</strong>を繰り返します。</p>
+  <div class="hk-panel">
+    <h3>客席から見るポイント</h3>
+    <ul>
+      <li>人物の顔や表情が見えているか。</li>
+      <li>身体の立体感が失われていないか。</li>
+      <li>背景が明るすぎたり、暗すぎたりしないか。</li>
+      <li>意図していない場所まで光が回っていないか。</li>
+      <li>場面の雰囲気と光の印象が合っているか。</li>
+    </ul>
+  </div>
+  <p>舞台上で見るだけでなく、<strong>観客が座る位置からどう見えるか</strong>を確認することが重要です。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-9　照明プランを記録する</h2>
+    <p>作った照明は、あとで同じ状態に戻せるように記録しておきます。</p>
+  </div>
+  <p>照明図や仕込み表、キュー表などに、次のような情報を残します。</p>
+  <ul>
+    <li>灯体番号・灯体の種類</li>
+    <li>取り付け位置</li>
+    <li>照射方向</li>
+    <li>回路・チャンネル</li>
+    <li>使用する色</li>
+    <li>明るさ</li>
+    <li>必要なメモ</li>
+  </ul>
+  <p>例えば「中央人物・前明かり・暖色・50％」のように、あとから見ても目的が分かる記録にすると便利です。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>10-10　実践課題</h2>
+    <p>最後に、ひとつの場面を自分で作ってみましょう。</p>
+  </div>
+  <div class="hk-exercise">
+    <h3>課題「夜の静かな場面」を作る</h3>
+    <p>舞台中央に、にゃかきちが一人で立っています。静かな夜の場面だとします。</p>
+    <ol>
+      <li>観客に何を見せたいかを決める。</li>
+      <li>どこから光を当てるかを決める。</li>
+      <li>どんな色を使うかを決める。</li>
+      <li>主役となる光を決める。</li>
+      <li>明るすぎてほしくない場所を考える。</li>
+      <li>客席から見たときにどう見えるかを確認する。</li>
+    </ol>
+    <p>実際に灯体を使える環境なら、<strong>灯体を選ぶ → 点灯する → 見る → 調整する → 記録する</strong>ところまでやってみましょう。</p>
+    <p>実機を扱う場合は、必ず劇場・学校・団体などの安全ルールに従ってください。</p>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-panel hk-summary">
+    <h3>第10章まとめ</h3>
+    <p>実際の照明プランは、次の順番で考えると整理しやすくなります。</p>
+    <p><strong>何を見せたいか決める → 舞台を区切る → 灯体を選ぶ → 光の方向と役割を決める → 色を決める → 明るさを調整する → 光を重ねる → 客席から確認する → 記録する</strong></p>
+    <p>照明は、舞台をただ明るくする作業ではありません。演出で見せたいものが、観客にどう見えるのかを組み立てていく作業です。</p>
+  </div>
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-happy.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「これなら、自分でも一つの場面を作れそう！」</p></div>
+  </div>
+</section>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">← 第9章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第11章 →</span>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
