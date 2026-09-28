@@ -138,6 +138,7 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/staff/lighting/chapter-8',
         'theatre-textbook/staff/lighting/chapter-9',
         'theatre-textbook/staff/lighting/chapter-10',
+        'theatre-textbook/staff/lighting/chapter-11',
         'theatre-textbook/staff/lighting/filters',
         'theatre-textbook/staff/sound',
         'theatre-textbook/staff/stage-management',
