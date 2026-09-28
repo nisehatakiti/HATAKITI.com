@@ -27,6 +27,12 @@ get_header();
 <section class="hk-section"><div class="hk-section-head"><h2>1-5　声につなげる</h2></div>
 <p>息を吐く流れに短い声を乗せます。「あ」「う」「ん」など、無理のない音から始めます。</p>
 <div class="hk-exercise"><h3>息から声へ</h3><ol><li>自然に息を吐く。</li><li>吐く息の途中に小さな「あ」を乗せる。</li><li>声を大きくするのではなく、息と声がつながっている感覚を探す。</li><li>最後に短い言葉を一つ発する。</li></ol></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード①　寝たまま呼吸を観察する</h2><p>まずは身体への負担が少ない姿勢で、自分の呼吸を感じます。</p></div>
+<div class="hk-exercise"><h3>5分「呼吸の波」</h3><ol><li>床やベッドに仰向けになり、膝を軽く曲げる。</li><li>両手をお腹に置き、普段どおりに呼吸する。</li><li>吸うとき・吐くときに、お腹や胸がどう動くか観察する。</li><li>呼吸を深くしようとせず、息が身体を出入りする感覚を追う。</li><li>5分ほど続けたら、ゆっくり起き上がる。</li></ol><p><strong>ポイント：</strong>うまく呼吸しようとしなくて大丈夫です。まず自分の呼吸の癖を知ることから始めます。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード②　吐く息で身体をゆるめる</h2><p>息を吐くことと、身体の余分な力を手放す感覚を結びつけます。</p></div>
+<div class="hk-exercise"><h3>3分「吐いてゆるめる」</h3><ol><li>立って、足を肩幅くらいに開く。</li><li>自然に息を吸い、ゆっくり吐く。</li><li>吐く息に合わせて、肩、手、顎の力を少しずつ抜く。</li><li>息を吐き終えたら、無理に吸わず、自然に次の息を迎える。</li><li>数回繰り返したあと、力が入りやすい場所が変わったか確認する。</li></ol><p><strong>ポイント：</strong>身体を無理に脱力させるのではなく、吐く息に合わせて余分な力を一つずつ手放します。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード③　呼吸しながら歩く</h2><p>呼吸と動きを切り離さず、身体が動いている間も呼吸を続ける練習です。</p></div>
+<div class="hk-exercise"><h3>5分「呼吸する歩行」</h3><ol><li>安全に歩ける場所を確保し、ゆっくり歩き始める。</li><li>歩きながら、足の裏と呼吸の両方に意識を向ける。</li><li>歩く速さを少し速くしたり遅くしたりする。その間も息を止めない。</li><li>途中で立ち止まり、自然に呼吸を続ける。</li><li>もう一度歩き出し、動きが変わると呼吸がどう変わるか観察する。</li></ol><p><strong>ポイント：</strong>呼吸を歩数に無理やり合わせる必要はありません。呼吸を止めず、動きの変化を感じることを優先します。</p></div></section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第1章まとめ</h3><p><strong>呼吸をコントロールする前に、呼吸を観察する。</strong></p><p>吐く、動く、声にする。呼吸が身体と声をつなぐ感覚を身につけることが、次の「発声」につながります。</p></div></section>
 <nav class="hk-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">← 演技をする</a>
