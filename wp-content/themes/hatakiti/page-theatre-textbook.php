@@ -36,10 +36,10 @@ get_header();
                 <h3>演技編</h3>
                 <p>感情の解放から始めて、身体・呼吸・声・視線・相手との関係を実践的に学ぶ。</p>
             </a>
-            <a class="hk-textbook-card" href="#methods">
+            <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting-theory/' ) ); ?>">
                 <span class="hk-textbook-number">03</span>
                 <h3>演技論・演技システム</h3>
-                <p>スタニスラフスキー、メソッド、マイズナー、ルコックなど。</p>
+                <p>演技とは何かを考え、スタニスラフスキー、メソッド、マイズナー、ルコックなどの方法を比較しながら学ぶ。</p>
             </a>
             <a class="hk-textbook-card" href="#etudes">
                 <span class="hk-textbook-number">04</span>
