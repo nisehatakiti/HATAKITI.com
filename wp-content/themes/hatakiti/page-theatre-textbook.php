@@ -31,6 +31,11 @@ get_header();
                 <h3>演劇の歴史</h3>
                 <p>古代から現代まで。演劇が何を求め、どう変わってきたのか。</p>
             </a>
+            <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">
+                <span class="hk-textbook-number">07</span>
+                <h3>演技編</h3>
+                <p>感情の解放から始めて、身体・呼吸・声・視線・相手との関係を実践的に学ぶ。</p>
+            </a>
             <a class="hk-textbook-card" href="#methods">
                 <span class="hk-textbook-number">02</span>
                 <h3>演技論・演技システム</h3>
