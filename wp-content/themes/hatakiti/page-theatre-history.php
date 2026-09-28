@@ -29,14 +29,14 @@ get_header();
     </header>
 
     <nav class="hk-chapter-nav" aria-label="演劇史ナビゲーション">
-        <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">← 演劇の教科書</a>
+        <span class="hk-chapter-nav-disabled">← 前の章</span>
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">目次</a>
         <span class="hk-chapter-nav-disabled">第2章 →</span>
     </nav>
 
     <section class="hk-section">
         <div class="hk-section-head">
-            <h2>はじめに　演劇は劇場から始まったの？</h2>
+            <h2>はじめに</h2>
             <p>「演劇の歴史」と聞くと、立派な劇場や舞台を思い浮かべるかもしれません。でも、最初から劇場があったわけではありません。</p>
         </div>
         <p>照明もありません。客席もありません。台本もありません。もちろん、「俳優」という職業もありません。</p>
@@ -44,7 +44,7 @@ get_header();
         <p>では、人間はなぜ「演じる」ようになったのでしょうか。この章では、演劇が生まれるまでを考えながら、<strong>演劇とはそもそも何なのか</strong>を考えてみましょう。</p>
     </section>
 
-    <section class="hk-section">
+    <section class="hk-section hk-nyakakichi-break">
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="考えながら演劇の歴史を読むにゃかきち" loading="lazy"></div>
             <div class="hk-nyakakichi-question"><p>「劇場も台本もないのに、どうやって演劇が始まったんだろう？」</p></div>
@@ -184,16 +184,6 @@ get_header();
         <p>演劇には、<strong>他人を想像する</strong>という役割もあるのです。</p>
     </section>
 
-    <section class="hk-section">
-        <div class="hk-section-head"><h2>にゃかきちの疑問</h2></div>
-        <div class="hk-nyakakichi">
-            <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="疑問を持つにゃかきち" loading="lazy"></div>
-            <div class="hk-nyakakichi-question"><p>「じゃあ、演劇って最初から『劇を作ろう！』って始まったわけじゃないの？」</p></div>
-        </div>
-        <div class="hk-nyakakichi-followup"><p>そう考えたほうが分かりやすいでしょう。人間が、まねる → 語る → 踊る → 歌う → 誰かになる → 人に見せる、というさまざまな行為を重ねる中で、演劇につながる表現が生まれていったと考えられます。</p></div>
-        <p>だから演劇の歴史は、「最初の劇は何だったのか？」だけを探す歴史ではありません。</p>
-        <p><strong>「人間は、なぜ誰かになり、物語を演じ、人に見せるようになったのか？」</strong>を考える歴史でもあります。</p>
-    </section>
 
     <section class="hk-section hk-reading-note">
         <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では言葉の説明を増やしすぎず、まず演劇そのものの流れを読んでみましょう。</p>
@@ -245,7 +235,7 @@ get_header();
     </section>
 
     <nav class="hk-chapter-nav" aria-label="演劇史ナビゲーション">
-        <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">← 演劇の教科書</a>
+        <span class="hk-chapter-nav-disabled">← 前の章</span>
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">目次</a>
         <span class="hk-chapter-nav-disabled">第2章 →</span>
     </nav>
@@ -255,6 +245,7 @@ get_header();
 .hk-history-textbook .hk-section{max-width:900px}
 .hk-history-textbook .hk-section-head h2{font-size:24px}
 .hk-history-textbook .hk-nyakakichi-image img{width:150px;max-width:150px;height:auto}
+.hk-history-textbook .hk-nyakakichi-break{margin-top:8px}
 .hk-history-textbook .hk-reading-note{margin-top:8px}
 .hk-history-textbook .hk-reading-note p{margin:0;padding:18px 20px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);color:var(--hk-fg-dim)}
 .hk-history-textbook p,.hk-history-textbook li{line-height:2}
