@@ -30,11 +30,11 @@ array('10　5分エチュード','AはBに帰ってほしくない。Aの目的�
 );
 foreach($sections as $i=>$s): ?>
 <section class="hk-section hk-stan-section"><div class="hk-section-head"><h2><?php echo esc_html($s[0]); ?></h2></div><p><?php echo esc_html($s[1]); ?></p>
-<?php if($i===2): ?><div class="hk-stan-example"><strong>目的の例</strong><span>悲しむ ×　→　相手に残ってほしい ○</span><span>怒る ×　→　相手に謝らせたい ○</span></div><?php endif; ?>
+<?php if($i===2): ?><div class="hk-stan-example"><strong>目的の例</strong><span>悲しむ ×　→　相手に残ってほしい ○</span><span>怒る ×　→　相手に謝らせたい ○</span></div><?php endif; ?><figure class="hk-stan-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-stanislavski-purpose-action.png' ) ); ?>" alt="スタニスラフスキー・システムにおける目的と行動の関係。相手に残ってほしいという目的から、説得する、頼む、探る、ごまかすなど複数の行動が生まれることを示した図説。" loading="lazy"><figcaption>同じ目的でも、相手や状況によって行動の選び方は変わります。</figcaption></figure>
 <?php if($i===3): ?><div class="hk-stan-example"><strong>行動の例</strong><span>説得する・探る・避ける・ごまかす・責める・慰める</span></div><?php endif; ?>
 <?php if($i===8): ?><div class="hk-exercise"><h3>台本分析シート</h3><ol><li>この場面は、いつ・どこ？</li><li>直前に何が起きた？</li><li>自分は何が欲しい？</li><li>何が邪魔している？</li><li>相手に何をしている？</li></ol></div><?php endif; ?>
 <?php if($i===9): ?><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url(content_url('plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-practice.png')); ?>" alt="にゃかきち"></div><div class="hk-nyakakichi-question"><p>感情を先に作るんじゃなくて、相手に何をしたいかを試すんだニャ！</p></div></div><?php endif; ?>
-<figure class="hk-stan-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-stanislavski-purpose-action.png' ) ); ?>" alt="スタニスラフスキー・システムにおける目的と行動の関係。相手に残ってほしいという目的から、説得する、頼む、探る、ごまかすなど複数の行動が生まれることを示した図説。" loading="lazy"><figcaption>同じ目的でも、相手や状況によって行動の選び方は変わります。</figcaption></figure>
+
 </section>
 <?php endforeach; ?>
 
