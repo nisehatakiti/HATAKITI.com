@@ -32,32 +32,32 @@ get_header();
                 <p>古代から現代まで。演劇が何を求め、どう変わってきたのか。</p>
             </a>
             <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">
-                <span class="hk-textbook-number">07</span>
+                <span class="hk-textbook-number">02</span>
                 <h3>演技編</h3>
                 <p>感情の解放から始めて、身体・呼吸・声・視線・相手との関係を実践的に学ぶ。</p>
             </a>
             <a class="hk-textbook-card" href="#methods">
-                <span class="hk-textbook-number">02</span>
+                <span class="hk-textbook-number">03</span>
                 <h3>演技論・演技システム</h3>
                 <p>スタニスラフスキー、メソッド、マイズナー、ルコックなど。</p>
             </a>
             <a class="hk-textbook-card" href="#etudes">
-                <span class="hk-textbook-number">03</span>
+                <span class="hk-textbook-number">04</span>
                 <h3>エチュード</h3>
                 <p>一人、二人、グループ。実際に身体を動かして試す練習。</p>
             </a>
             <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/theatre-world/' ) ); ?>">
-                <span class="hk-textbook-number">05</span>
+                <span class="hk-textbook-number">06</span>
                 <h3>演劇の現場を知る</h3>
                 <p>高校演劇、学生演劇、小劇場、商業演劇。そして公演を支えるスタッフの仕事。</p>
             </a>
             <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/staff/' ) ); ?>">
-                <span class="hk-textbook-number">06</span>
+                <span class="hk-textbook-number">07</span>
                 <h3>舞台を作る</h3>
                 <p>照明、音響、舞台監督、美術、制作。役者以外の仕事も実践的に学ぶ。</p>
             </a>
             <a class="hk-textbook-card" href="#scripts">
-                <span class="hk-textbook-number">04</span>
+                <span class="hk-textbook-number">05</span>
                 <h3>練習台本</h3>
                 <p>短時間で演じられるオリジナルの短編台本と演習課題。</p>
             </a>
