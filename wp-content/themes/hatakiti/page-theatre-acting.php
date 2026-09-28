@@ -20,8 +20,8 @@ if ( 'theatre-textbook/acting' === $path ) {
     <main class="hk-container hk-acting">
         <header class="hk-staff-hero">
             <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技</p>
-            <h1>演技編</h1>
-            <p>「感情をどう出すか」から始めて、身体、呼吸、声、視線、相手との関係、行動へと、実際に演じるための考え方を学びます。</p>
+            <h1>演技をする</h1>
+            <p>呼吸、感情、発声、身体、視線、相手との関係、行動へと、実際に身体を動かしながら演技を学びます。</p>
         </header>
 
         <nav class="hk-chapter-nav" aria-label="演技編ナビゲーション">
@@ -32,12 +32,13 @@ if ( 'theatre-textbook/acting' === $path ) {
 
         <section class="hk-section">
             <div class="hk-section-head">
-                <h2>演技編で最初に考えること</h2>
-                <p>演技は、感情を「作って見せる」ことだけではありません。自分の中にある反応や衝動を邪魔しているものに気づき、身体と声を自由に使える状態を作ることも、演技の大切な土台です。</p>
+                <h2>演技をするための最初の3章</h2>
+                <p>いきなり感情表現や台詞から始めるのではなく、まず身体と声の土台を整えます。</p>
             </div>
-            <div class="hk-panel">
-                <p><strong>第1章では「感情の解放」から始めます。</strong></p>
-                <p>ただし、これは無理に泣いたり、過去のつらい経験を思い出したりすることではありません。安全な範囲で、呼吸・身体・声・想像力を使い、自分の反応を抑え込まずに出してみる練習です。</p>
+            <div class="hk-term-grid">
+                <div><h3>第1章　呼吸法</h3><p>呼吸を観察し、息を止めずに身体と声を使う。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-1/' ) ); ?>">第1章へ →</a></div>
+                <div><h3>第2章　感情の解放</h3><p>感情を作るのではなく、身体に起きている反応に気づく。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-2/' ) ); ?>">第2章へ →</a></div>
+                <div><h3>第3章　発声</h3><p>呼吸と身体を使い、相手に届く声をつくる。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">第3章へ →</a></div>
             </div>
         </section>
 
