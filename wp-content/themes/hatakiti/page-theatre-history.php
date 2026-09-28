@@ -251,6 +251,10 @@ get_header();
 <style>
 .hk-history-textbook .hk-section{max-width:900px}
 .hk-history-textbook .hk-section-head h2{font-size:24px}
+.hk-history-textbook .hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:28px 0;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}
+.hk-history-textbook .hk-chapter-nav a,.hk-history-textbook .hk-chapter-nav span{flex:1}
+.hk-history-textbook .hk-chapter-nav a:nth-child(2),.hk-history-textbook .hk-chapter-nav span:nth-child(2){text-align:center}
+.hk-history-textbook .hk-chapter-nav a:last-child,.hk-history-textbook .hk-chapter-nav span:last-child{text-align:right}
 .hk-history-textbook .hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}
 .hk-history-textbook .hk-nyakakichi-image{flex:0 0 110px;text-align:center}
 .hk-history-textbook .hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}
