@@ -1623,7 +1623,6 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>">← 第10章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第12章 →</span>
 </nav>
 
 <section class="hk-section">
@@ -1839,7 +1838,6 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>">← 第10章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第12章 →</span>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
