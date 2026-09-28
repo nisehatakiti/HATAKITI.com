@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+<title id="title">目的と行動の関係</title>
+<desc id="desc">スタニスラフスキー・システムで、人物の目的から複数の行動を考える図説</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101317"/><stop offset="1" stop-color="#191b20"/></linearGradient>
+  <linearGradient id="goal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4c77a"/><stop offset="1" stop-color="#e7a958"/></linearGradient>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#e7a958"/></marker>
+  <style>
+    .title{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;font-weight:700;fill:#f4f1ea}
+    .body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;fill:#ddd9d0}
+    .accent{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;font-weight:700;fill:#f0b665}
+    .card{fill:#17191d;stroke:#45474c;stroke-width:2}
+  </style>
+</defs>
+<rect width="1400" height="820" rx="28" fill="url(#bg)"/>
+<text x="60" y="75" class="title" font-size="42">目的と行動の関係</text>
+<text x="60" y="116" class="accent" font-size="22">スタニスラフスキー・システム</text>
+<text x="60" y="165" class="body" font-size="21">目的は「悲しい」「怒っている」といった感情ではなく、相手に対して何をしたいのか。</text>
+
+<rect x="350" y="205" width="700" height="125" rx="22" fill="url(#goal)" stroke="#f6d59e" stroke-width="2"/>
+<text x="700" y="245" text-anchor="middle" class="title" font-size="22" fill="#17191d">目的（やりたいこと）</text>
+<text x="700" y="292" text-anchor="middle" class="title" font-size="36" fill="#17191d">相手に残ってほしい</text>
+
+<text x="1120" y="220" class="body" font-size="20">同じ目的でも、</text>
+<text x="1120" y="252" class="body" font-size="20">状況や相手によって</text>
+<text x="1120" y="284" class="body" font-size="20">行動は変わります。</text>
+<text x="1120" y="316" class="accent" font-size="20">そこが演技の面白さ。</text>
+<image href="https://hatakiti.com/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png" x="1160" y="345" width="170" height="170" preserveAspectRatio="xMidYMid meet"/>
+
+<line x1="500" y1="330" x2="180" y2="405" stroke="#e7a958" stroke-width="4" marker-end="url(#arrow)"/>
+<line x1="620" y1="330" x2="470" y2="405" stroke="#e7a958" stroke-width="4" marker-end="url(#arrow)"/>
+<line x1="780" y1="330" x2="810" y2="405" stroke="#e7a958" stroke-width="4" marker-end="url(#arrow)"/>
+<line x1="900" y1="330" x2="1140" y2="405" stroke="#e7a958" stroke-width="4" marker-end="url(#arrow)"/>
+
+<g>
+<rect x="55" y="420" width="290" height="250" rx="18" class="card"/>
+<rect x="55" y="420" width="290" height="58" rx="18" fill="#24272d"/>
+<text x="200" y="458" text-anchor="middle" class="title" font-size="25">行動①　説得する</text>
+<text x="200" y="525" text-anchor="middle" class="body" font-size="18">理由を伝える</text>
+<text x="200" y="558" text-anchor="middle" class="body" font-size="18">相手のメリットを示す</text>
+<text x="200" y="604" text-anchor="middle" class="body" font-size="18">論理的に働きかける</text>
+</g>
+<g>
+<rect x="375" y="420" width="290" height="250" rx="18" class="card"/>
+<rect x="375" y="420" width="290" height="58" rx="18" fill="#24272d"/>
+<text x="520" y="458" text-anchor="middle" class="title" font-size="25">行動②　頼む</text>
+<text x="520" y="525" text-anchor="middle" class="body" font-size="18">素直にお願いする</text>
+<text x="520" y="558" text-anchor="middle" class="body" font-size="18">相手の気持ちに訴える</text>
+<text x="520" y="604" text-anchor="middle" class="body" font-size="18">残ってほしいと伝える</text>
+</g>
+<g>
+<rect x="695" y="420" width="290" height="250" rx="18" class="card"/>
+<rect x="695" y="420" width="290" height="58" rx="18" fill="#24272d"/>
+<text x="840" y="458" text-anchor="middle" class="title" font-size="25">行動③　探る</text>
+<text x="840" y="525" text-anchor="middle" class="body" font-size="18">相手の気持ちを探る</text>
+<text x="840" y="558" text-anchor="middle" class="body" font-size="18">質問する</text>
+<text x="840" y="604" text-anchor="middle" class="body" font-size="18">様子をうかがう</text>
+</g>
+<g>
+<rect x="1015" y="420" width="330" height="250" rx="18" class="card"/>
+<rect x="1015" y="420" width="330" height="58" rx="18" fill="#24272d"/>
+<text x="1180" y="458" text-anchor="middle" class="title" font-size="25">行動④　ごまかす</text>
+<text x="1180" y="525" text-anchor="middle" class="body" font-size="18">本音を隠す</text>
+<text x="1180" y="558" text-anchor="middle" class="body" font-size="18">別の話題を出す</text>
+<text x="1180" y="604" text-anchor="middle" class="body" font-size="18">その場に残ってもらう</text>
+</g>
+
+<rect x="55" y="710" width="1290" height="72" rx="16" fill="#22252a" stroke="#45474c" stroke-width="2"/>
+<circle cx="88" cy="746" r="8" fill="#e7a958"/>
+<text x="110" y="753" class="title" font-size="20">ポイント</text>
+<text x="225" y="753" class="body" font-size="19">同じ目的でも行動は一つではない。行動を変えると、人物の関係や場面の見え方も変わる。</text>
+</svg>
