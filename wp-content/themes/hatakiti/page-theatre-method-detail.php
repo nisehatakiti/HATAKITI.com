@@ -13,11 +13,7 @@ get_header();
 <p>「メソッド演技」という言葉は、一つの固定された技法を指すだけではありません。スタニスラフスキーの仕事を背景に、アメリカでさまざまな教師・俳優によって発展した演技訓練の流れを見ていきます。</p>
 </header>
 
-<nav class="hk-chapter-nav" aria-label="メソッド演技ナビゲーション">
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/stanislavski/' ) ); ?>">← スタニスラフスキー</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting-theory/' ) ); ?>">総論</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/meisner/' ) ); ?>">次：マイズナー →</a>
-</nav>
+
 
 <section class="hk-section"><div class="hk-section-head"><h2>1　まず「メソッド＝一つの方法」ではない</h2></div>
 <p>日本では「メソッド演技」という言葉が広く使われていますが、実際には複数の教師や流派の実践をまとめて語ることがあります。したがって、すべてのメソッド俳優が同じ練習をするわけではありません。</p>
