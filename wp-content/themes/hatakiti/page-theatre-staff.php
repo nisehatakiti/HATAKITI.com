@@ -50,6 +50,7 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>"><span>第8章</span><strong>フォーカスと明かり合わせ</strong><small>狙う・絞る・切る・重ねる・実際に合わせる</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>"><span>第9章</span><strong>光を組み合わせる</strong><small>主役の光・役割・明るさ・重ね方・場面ごとの組み合わせ</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>"><span>第10章</span><strong>実際の照明を作ってみる</strong><small>見せたいものを決め、灯体・方向・色・明るさを組み立てる</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-11/' ) ); ?>"><span>第11章</span><strong>照明プランを考える</strong><small>台本・演出意図から照明を設計し、図面・仕込み・キューまで考える</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -1375,7 +1376,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">← 第9章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第11章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-11/' ) ); ?>">第11章 →</a>
 </nav>
 
 <section class="hk-section">
@@ -1609,7 +1610,212 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>">← 第9章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第11章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-11/' ) ); ?>">第11章 →</a>
+</nav>
+
+<?php elseif ( 'theatre-textbook/staff/lighting/chapter-11' === $path ) : ?>
+<header class="hk-staff-hero">
+  <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p>
+  <h1>第11章　照明プランを考える</h1>
+  <p>台本と演出意図を読み取り、観客に何を見せるのかを考えながら、自分で照明プランを組み立ててみます。</p>
+</header>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>">← 第10章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第12章 →</span>
+</nav>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>導入　照明を「自分で設計する」</h2>
+    <p>第10章では、一つの場面を題材にして、必要な光を一灯ずつ組み立てました。第11章では、そこから一歩進んで、台本を読んで自分で照明プランを考えてみます。</p>
+  </div>
+  <p>照明プランを考えるときに大切なのは、「どんな色にしたいか」から始めないことです。</p>
+  <p><strong>台本を読む → 演出意図を理解する → 見せたいものを決める → 必要な光を考える</strong>という順番で考えていきます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-1　まず台本を読む</h2>
+    <p>照明プランの出発点は、照明図ではなく台本です。</p>
+  </div>
+  <p>まず、その場面が<strong>いつ・どこで・誰がいる場面なのか</strong>を読み取ります。</p>
+  <ul>
+    <li>昼なのか、夜なのか。</li>
+    <li>屋内なのか、屋外なのか。</li>
+    <li>誰が舞台上にいるのか。</li>
+    <li>人物はどこにいるのか。</li>
+    <li>場面の途中で何が変わるのか。</li>
+    <li>台本に書かれている時間や場所の手がかりは何か。</li>
+  </ul>
+  <p>さらに、台本に直接「明るくする」「暗くする」と書いてなくても、照明で表現できることがあります。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-2　演出から「何を見せたいか」を聞く</h2>
+    <p>台本を読んだだけでは、照明の答えがすべて決まるわけではありません。</p>
+  </div>
+  <p>演出がその場面で<strong>観客に何を感じてほしいのか</strong>を確認します。</p>
+  <div class="hk-term-grid">
+    <div><h3>人物を見せたい</h3><p>表情や身体、人物同士の関係を見せる。</p></div>
+    <div><h3>空間を見せたい</h3><p>舞台の広さや場所、奥行きを感じさせる。</p></div>
+    <div><h3>感情を支えたい</h3><p>緊張、孤独、安心などの印象を光で支える。</p></div>
+    <div><h3>変化を見せたい</h3><p>時間や場面、人物の状態の変化を光で強調する。</p></div>
+  </div>
+  <p>例えば「怖く見せたい」「人物の孤独を見せたい」「二人の距離を強調したい」といった演出意図を、照明でどう表現するかを考えます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-3　場面を分解する</h2>
+    <p>一つの場面を、見せたい対象と場所に分けて考えます。</p>
+  </div>
+  <p>第10章で学んだように、舞台をいきなり全部照らすのではなく、必要なところから考えます。</p>
+  <ul>
+    <li>上手・中央・下手</li>
+    <li>舞台奥・舞台手前</li>
+    <li>人物</li>
+    <li>背景</li>
+    <li>特に見せたい場所や物</li>
+  </ul>
+  <p>例えば二人の人物が舞台中央と下手に離れて立っているなら、「二人をそれぞれ見せる光」と「二人がいる空間を見せる光」を分けて考えられます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-4　必要な光を書き出す</h2>
+    <p>「何を見せたいか」が決まったら、それを実現するために必要な光を考えます。</p>
+  </div>
+  <div class="hk-term-grid">
+    <div><h3>顔・表情</h3><p>前明かりなど、顔が見える方向の光。</p></div>
+    <div><h3>身体・動き</h3><p>サイドなど、立体感や動きを支える光。</p></div>
+    <div><h3>輪郭・奥行き</h3><p>バックライトなど、背景から人物を分ける光。</p></div>
+    <div><h3>空間・背景</h3><p>トップやホリゾントなど、空間を支える光。</p></div>
+  </div>
+  <p>ここではまだ「この灯体を使う」と決めなくてもかまいません。まず<strong>必要な光の役割</strong>を整理します。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-5　照明図に落とし込む</h2>
+    <p>必要な光が決まったら、実際にどこから光を出すのかを決めます。</p>
+  </div>
+  <p>ここで第5章で学んだ照明図が役立ちます。</p>
+  <ul>
+    <li>使う灯体を選ぶ。</li>
+    <li>取り付ける位置を決める。</li>
+    <li>照射方向を決める。</li>
+    <li>回路・チャンネルを決める。</li>
+    <li>使用する色を決める。</li>
+    <li>必要な明るさを決める。</li>
+  </ul>
+  <p>照明図は、単なる「灯体の配置図」ではありません。<strong>どんな光を、どこから、何のために出すのか</strong>を共有するための図面です。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-6　場面転換を考える</h2>
+    <p>舞台では、一つの場面だけで公演が終わるわけではありません。</p>
+  </div>
+  <p>例えば、<strong>昼 → 夕方 → 夜</strong>のように時間が変わったり、<strong>普通の場面 → 緊張 → クライマックス</strong>のように場面の状態が変化したりします。</p>
+  <p>その変化を、照明の明るさ、色、方向、広がり、消す光や足す光によって表現します。</p>
+  <p>ここで登場するのが<strong>キュー</strong>です。どの瞬間に、どの照明状態へ変化させるのかを整理しておきます。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-7　「全部点ける」から卒業する</h2>
+    <p>照明は、光を足していけばよいわけではありません。</p>
+  </div>
+  <p>「暗いから明るくする」だけで考えると、舞台全体が均一に明るくなってしまいます。</p>
+  <p>そこで、<strong>この光は本当に必要か？</strong>と考えてみます。</p>
+  <ul>
+    <li>この場所まで明るくする必要があるか。</li>
+    <li>この人物の顔は、もっと暗くても成立しないか。</li>
+    <li>背景が明るすぎて人物が埋もれていないか。</li>
+    <li>余計な光が舞台上に回っていないか。</li>
+  </ul>
+  <p>必要な光を残し、不要な光を引くことも照明プランの大切な仕事です。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-8　実際のプランを作ってみる</h2>
+    <p>ここまでの考え方を使って、一つの短い場面を最後まで設計してみましょう。</p>
+  </div>
+  <div class="hk-exercise">
+    <h3>課題「二人の距離」を照明で見せる</h3>
+    <p>舞台中央に一人、下手側にもう一人の人物が立っています。二人は同じ舞台にいるものの、心理的な距離がある場面です。</p>
+    <ol>
+      <li>台本から時間・場所・人物の位置を読み取る。</li>
+      <li>演出として何を見せたいのかを決める。</li>
+      <li>二人の顔や身体に必要な光を考える。</li>
+      <li>二人の間の空間をどこまで見せるか決める。</li>
+      <li>色や明るさの差を考える。</li>
+      <li>灯体・位置・方向を照明図にする。</li>
+      <li>場面の変化があるならキューを考える。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-9　プランを実際に仕込んでみる</h2>
+    <p>図面どおりに仕込んでも、実際に点灯すると想像と違うことがあります。</p>
+  </div>
+  <p>灯体の位置、角度、舞台の大きさ、反射する素材、客席からの見え方など、現場には図面だけでは分からない条件があります。</p>
+  <div class="hk-panel">
+    <h3>実際に点灯したら確認すること</h3>
+    <ul>
+      <li>思った場所に光が当たっているか。</li>
+      <li>光が広がりすぎていないか。</li>
+      <li>必要な場所が暗くなっていないか。</li>
+      <li>色が想像と違って見えないか。</li>
+      <li>客席から見たときに意図した関係が見えるか。</li>
+    </ul>
+  </div>
+  <p>問題があれば、灯体の位置、方向、絞り、色、明るさなどを調整します。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-section-head">
+    <h2>11-10　照明プランを完成させる</h2>
+    <p>最後に、ここまでの流れを一つにつなげます。</p>
+  </div>
+  <ol>
+    <li><strong>台本を読む</strong></li>
+    <li><strong>演出意図を理解する</strong></li>
+    <li><strong>見せたいものを決める</strong></li>
+    <li><strong>必要な光を考える</strong></li>
+    <li><strong>灯体・位置・方向・色・明るさを決める</strong></li>
+    <li><strong>照明図を作る</strong></li>
+    <li><strong>仕込む</strong></li>
+    <li><strong>明かり合わせをする</strong></li>
+    <li><strong>客席から確認する</strong></li>
+    <li><strong>修正して完成させる</strong></li>
+  </ol>
+  <p>これが、照明を「設計する」ということです。</p>
+</section>
+
+<section class="hk-section">
+  <div class="hk-panel hk-summary">
+    <h3>第11章まとめ</h3>
+    <p>照明は、灯体を知っているだけでは設計できません。台本を読み、演出意図を理解し、観客に何を見せたいのかを考え、そのために必要な光を組み立てます。</p>
+    <p><strong>台本 → 演出意図 → 見せたいもの → 必要な光 → 灯体・位置・方向・色・明るさ → 照明図 → 仕込み → 明かり合わせ → 客席から確認 → 修正</strong></p>
+    <p>第1章からここまで学んできたことは、すべてこの流れにつながっています。</p>
+  </div>
+  <div class="hk-nyakakichi">
+    <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-happy.png" alt="にゃかきち" loading="lazy"></div>
+    <div class="hk-nyakakichi-question"><p>「台本を読んで、照明を考えるところまで来たにゃ！」</p></div>
+  </div>
+</section>
+
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>">← 第10章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <span class="hk-chapter-nav-disabled">第12章 →</span>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/filters' === $path ) : ?>
