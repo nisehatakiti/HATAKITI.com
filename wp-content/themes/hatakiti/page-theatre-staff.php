@@ -1395,6 +1395,15 @@ get_header();
     <div><h3>背景</h3><p>時間や場所、場面の雰囲気を支える光。</p></div>
   </div>
   <p>「どこを明るくするか」ではなく、<strong>「何を見せるために光を置くのか」</strong>と考えると、照明プランを作りやすくなります。</p>
+  <figure class="hk-lighting-chapter-image">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-101-decide-what-to-show.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-101-decide-what-to-show.png' ) ); ?>" alt="顔・表情、身体・動き、舞台空間、背景など、何を見せたいかを整理する図。" loading="lazy">
+<?php else : ?>
+    <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-101-decide-what-to-show.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+    <figcaption>図10-1　照明を考えるときは、まず「何を見せたいか」を決めます。</figcaption>
+  </figure>
 </section>
 
 <section class="hk-section">
@@ -1412,6 +1421,15 @@ get_header();
   </ul>
   <p>最初は舞台中央にいる人物から考えてみましょう。そこから必要に応じて、上手・下手や舞台奥、背景へと光を広げていきます。</p>
   <p>最初から全部を明るくするのではなく、<strong>必要なところから作っていく</strong>ことがポイントです。</p>
+  <figure class="hk-lighting-chapter-image">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-102-divide-stage.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-102-divide-stage.png' ) ); ?>" alt="舞台を上手・中央・下手・舞台奥・舞台手前・背景などに分けて考える図。" loading="lazy">
+<?php else : ?>
+    <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-102-divide-stage.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+    <figcaption>図10-2　舞台全体を一度に考えず、必要な場所に分けて考えます。</figcaption>
+  </figure>
 </section>
 
 <section class="hk-section">
@@ -1422,6 +1440,15 @@ get_header();
   <p>例えば、人物の顔を見せたいなら前明かり、身体の立体感を見せたいならサイドライト、輪郭や奥行きを作りたいならバックライトを使うことが考えられます。</p>
   <p>つまり、<strong>「使いたい灯体」から考えるのではなく、「必要な光」から「使う灯体」を決める</strong>という順番です。</p>
   <p>同じ灯体でも、位置や方向、絞り方によって役割は変わります。灯体の種類だけで結果が決まるわけではありません。</p>
+  <figure class="hk-lighting-chapter-image">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-103-choose-fixtures.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-103-choose-fixtures.png' ) ); ?>" alt="見せたいものから必要な光を考え、そこから灯体を選ぶ流れを示す図。" loading="lazy">
+<?php else : ?>
+    <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-103-choose-fixtures.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+    <figcaption>図10-3　「見せたいもの」→「必要な光」→「灯体」という順番で考えます。</figcaption>
+  </figure>
 </section>
 
 <section class="hk-section">
@@ -1437,6 +1464,15 @@ get_header();
   </div>
   <p>ここでも、すべてを同じ強さにする必要はありません。主役となる光を決め、そのほかの光を補助として組み合わせます。</p>
   <p>「どこから当てるか」と「何のために当てるか」をセットで考えると、光の役割が分かりやすくなります。</p>
+  <figure class="hk-lighting-chapter-image">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-104-light-direction-roles.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-104-light-direction-roles.png' ) ); ?>" alt="前明かり・サイドライト・バックライト・トップライトの方向と役割を示す図。" loading="lazy">
+<?php else : ?>
+    <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-104-light-direction-roles.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+    <figcaption>図10-4　光を当てる方向と、その光に持たせる役割をセットで考えます。</figcaption>
+  </figure>
 </section>
 
 <section class="hk-section">
@@ -1473,6 +1509,15 @@ get_header();
     <li>必要なら背景の光を加え、人物と空間の関係を整えます。</li>
   </ol>
   <p>光を一つずつ加えると、どの光が何を変えたのかを確認しやすくなります。</p>
+  <figure class="hk-lighting-chapter-image">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-105-build-scene-with-layers.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-105-build-scene-with-layers.png' ) ); ?>" alt="前明かり、サイドライト、バックライト、背景の光を一灯ずつ重ねて場面を作る図。" loading="lazy">
+<?php else : ?>
+    <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-105-build-scene-with-layers.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+    <figcaption>図10-5　一灯ずつ光を重ね、見え方の変化を確認しながら場面を作ります。</figcaption>
+  </figure>
 </section>
 
 <section class="hk-section">
@@ -1492,6 +1537,15 @@ get_header();
     </ul>
   </div>
   <p>舞台上で見るだけでなく、<strong>観客が座る位置からどう見えるか</strong>を確認することが重要です。</p>
+  <figure class="hk-lighting-chapter-image">
+<?php $lighting_image_path = WP_PLUGIN_DIR . '/hatakiti-core/assets/images/lighting/lighting-106-check-from-audience.png'; ?>
+<?php if ( file_exists( $lighting_image_path ) ) : ?>
+    <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-106-check-from-audience.png' ) ); ?>" alt="完成した照明を客席から見て、顔・身体・輪郭・舞台空間を確認する図。" loading="lazy">
+<?php else : ?>
+    <div class="hk-illustration-placeholder" aria-label="図解準備中"><div class="hk-illustration-placeholder-label">ILLUSTRATION</div><div class="hk-illustration-placeholder-file">lighting-106-check-from-audience.png</div><p>この位置に図解を配置します。</p></div>
+<?php endif; ?>
+    <figcaption>図10-6　完成した照明は、必ず客席から見て確認します。</figcaption>
+  </figure>
 </section>
 
 <section class="hk-section">
