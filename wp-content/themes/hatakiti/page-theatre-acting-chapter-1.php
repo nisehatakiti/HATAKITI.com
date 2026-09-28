@@ -17,7 +17,12 @@ get_header();
 <p>緊張すると息が浅くなったり、言葉を出そうとして息を止めたりします。逆に、呼吸が自由になると身体の動きや声にも変化が生まれます。</p>
 <div class="hk-panel"><p><strong>深く吸うことだけが正解ではありません。</strong></p><p>大切なのは、必要なときに吸えて、必要なときに吐けること。そして、演技中に呼吸を自分で観察できることです。</p></div>
 <div class="hk-diagram hk-breath-compare"><div class="hk-breath-card"><strong>浅い呼吸</strong><div class="hk-person shallow"><i></i></div><ul><li>肩・胸が動きやすい</li><li>身体が固まりやすい</li><li>声が細くなりやすい</li></ul></div><div class="hk-diagram-arrow">→</div><div class="hk-breath-card"><strong>安定した呼吸</strong><div class="hk-person deep"><i></i></div><ul><li>お腹まわりが自然に動く</li><li>肩の力が抜ける</li><li>身体と声につながる</li></ul></div></div>
-<div class="hk-diagram hk-breath-flow"><strong>呼吸の基本</strong><span>吐く</span><b>→</b><span>自然に吸う</span><b>→</b><span>また吐く</span><b>→</b><span>観察する</span></div></section>
+<div class="hk-diagram hk-breath-flow"><strong>呼吸の基本</strong><span>吐く</span><b>→</b><span>自然に吸う</span><b>→</b><span>また吐く</span><b>→</b><span>観察する</span></div>
+<div class="hk-nyakakichi">
+<div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div>
+<div class="hk-nyakakichi-question"><p>深く吸えば吸うほど、いい呼吸になるのかニャ？</p></div>
+</div>
+<div class="hk-nyakakichi-followup"><p>大切なのは、深く吸うことだけではありません。必要なときに自然に吸えて、無理なく吐けることを身につけていきます。</p></div></section>
 <section class="hk-section"><div class="hk-section-head"><h2>1-2　まず「吐く」</h2><p>呼吸を整えようとして、大きく吸おうとしすぎる必要はありません。</p></div>
 <p>まず自然に息を吐きます。吐いたあとに身体が必要とする分だけ自然に吸う。これを繰り返して、呼吸を止めない感覚を覚えます。</p>
 <div class="hk-exercise"><h3>1分呼吸観察</h3><ol><li>立って普段どおりに呼吸する。</li><li>息を吐くときだけ意識する。</li><li>肩、顎、胸、腹のどこが動いているか観察する。</li><li>息を吐いたあと、次の吸気を待つ。</li><li>呼吸を大きくしようとせず、自然に戻す。</li></ol></div></section>
@@ -56,5 +61,7 @@ get_header();
 .hk-breath-flow{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}.hk-breath-flow span{padding:9px 14px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-breath-flow b{color:var(--hk-accent-warm)}
 .hk-breath-body{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}.hk-breath-body>div:not(.hk-diagram-arrow){padding:22px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-breath-body strong,.hk-breath-body span,.hk-breath-body em{display:block}.hk-breath-body strong{font-family:var(--hk-font-serif);font-size:20px}.hk-breath-body span{margin:8px 0;color:var(--hk-fg-dim)}.hk-breath-body em{color:var(--hk-accent-warm);font-style:normal;font-weight:700}
 @media(max-width:700px){.hk-acting .hk-chapter-nav.hk-acting-chapter-nav{grid-template-columns:1fr;text-align:center}.hk-acting-chapter-nav .hk-nav-prev,.hk-acting-chapter-nav .hk-nav-center,.hk-acting-chapter-nav .hk-nav-next{justify-self:center}.hk-breath-compare,.hk-breath-body{grid-template-columns:1fr}.hk-breath-compare .hk-diagram-arrow,.hk-breath-body .hk-diagram-arrow{transform:rotate(90deg)}}
+<style>
+.hk-acting .hk-nyakakichi{display:flex;align-items:center;gap:16px;max-width:760px;margin:26px auto 0}.hk-acting .hk-nyakakichi-image{flex:0 0 100px;text-align:center}.hk-acting .hk-nyakakichi-image img{width:100px;height:auto;display:block;margin:0 auto}.hk-acting .hk-nyakakichi-question{position:relative;flex:1;background:#242424;border:1px solid var(--hk-border);border-radius:14px;padding:16px 20px;color:var(--hk-fg)}.hk-acting .hk-nyakakichi-question:before{content:"";position:absolute;left:-11px;top:50%;transform:translateY(-50%);border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:11px solid var(--hk-border)}.hk-acting .hk-nyakakichi-question:after{content:"";position:absolute;left:-9px;top:50%;transform:translateY(-50%);border-top:9px solid transparent;border-bottom:9px solid transparent;border-right:10px solid #242424}.hk-acting .hk-nyakakichi-question p{margin:0;line-height:1.8}.hk-acting .hk-nyakakichi-followup{max-width:640px;margin:8px auto 0;padding-left:116px;color:var(--hk-fg-dim);line-height:1.8}.hk-acting .hk-nyakakichi-followup p{margin:0}@media(max-width:650px){.hk-acting .hk-nyakakichi{align-items:flex-end}.hk-acting .hk-nyakakichi-image{flex-basis:82px}.hk-acting .hk-nyakakichi-image img{width:82px}.hk-acting .hk-nyakakichi-followup{padding-left:0;margin-left:98px}}
 </style>
 <?php get_footer(); ?>
