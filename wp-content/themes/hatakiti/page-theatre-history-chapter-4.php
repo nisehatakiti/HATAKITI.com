@@ -48,6 +48,8 @@ get_header();
         <p>ルネサンス期の芸術では、遠近法を使って奥行きのある空間を表現する方法が発達しました。この考え方は舞台美術にも影響を与えます。</p>
         <p>舞台の奥に向かって線が集まるように背景を配置すると、実際の舞台よりも深い街並みや建物があるように見せることができます。</p>
         <p>舞台は、ただ「人が演じる場所」だけではなく、観客の視線を導きながら一つの世界を見せる場所にもなっていったのです。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter4-01-renaissance-stage.png' ) ); ?>" alt="ルネサンス期の舞台空間と遠近法を説明する図" loading="lazy"></figure>
+
         <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="舞台の遠近法について考えるにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>舞台の上に、本物みたいな奥行きを作れるようになったんだニャ！</p></div></div>
     </section>
 
@@ -65,6 +67,8 @@ get_header();
         <p>定型的な役柄には特徴的な衣装、話し方、身振り、道具などがありました。仮面を使う役では顔の表情が見えにくいため、声や身体の動きが特に重要になります。</p>
         <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="コメディア・デラルテに興味を持つにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>全部の台詞を台本どおりに言うんじゃなくて、その場で作る劇もあったんだニャ！</p></div></div>
         <div class="hk-nyakakichi-followup"><p>観客の反応に合わせて演技を変えられることも、こうした演劇の面白さでした。俳優の技術そのものが、作品の大きな部分になったのです。</p></div>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter4-02-commedia-dellarte.png' ) ); ?>" alt="コメディア・デラルテの仮面・定型的な役柄・即興的な演技を説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
@@ -87,6 +91,8 @@ get_header();
         <p>シェイクスピアの劇団は1599年にグローブ座で上演を始めました。グローブ座は、現在の劇場とはかなり違う屋外劇場です。</p>
         <p>多角形に近い建物の中央には屋根のない「ヤード」があり、その周囲を複数階の屋根付き客席が囲んでいました。舞台はヤード側へ張り出しており、観客との距離が近い構造でした。</p>
         <p>ヤードには立って観劇する観客が集まり、周囲の客席には料金を払って座る観客がいました。一つの劇場の中にも、観客が見る場所や料金の違いがあったのです。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter4-03-globe-theatre.png' ) ); ?>" alt="グローブ座の構造を平面図と断面図で説明する図" loading="lazy"></figure>
+
         <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="グローブ座の構造に驚くにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>舞台を客席が囲んでいて、今の劇場とはずいぶん違うんだニャ！</p></div></div>
     </section>
 
@@ -96,6 +102,8 @@ get_header();
         <p>ここで注目したいのは、作品を読むだけでなく、<strong>舞台でどう成立するように書かれているか</strong>ということです。</p>
         <p>台詞には、登場人物の行動を直接示すものもあれば、言葉そのものから身体の動きや状況を想像できるものもあります。そのため、同じ作品でも俳優や演出によって違う舞台を作ることができます。</p>
         <p>観客も、俳優の言葉、身体、衣装、限られた舞台装置などを手がかりに、舞台上の世界を想像します。シェイクスピアの演劇は、言葉と観客の想像力が強く結びついた表現でもあったのです。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter4-04-shakespeare-performance.png' ) ); ?>" alt="シェイクスピア演劇における台詞・身体表現・観客の想像力を説明する図" loading="lazy"></figure>
+
         <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="シェイクスピアの舞台表現に興味を持つにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>言葉を聞いて、観客の頭の中に舞台を作ってもらうこともできるんだニャ！</p></div></div>
     </section>
 
@@ -120,6 +128,8 @@ get_header();
         <p>同じころ、日本でも新しい大衆演劇が発展していきました。17世紀初頭には出雲阿国らによる「かぶき踊り」が知られるようになり、そこから歌舞伎はさまざまな変化を経ていきます。</p>
         <p>女性による女歌舞伎、若衆による若衆歌舞伎を経て、江戸時代には成人男性による歌舞伎へと変化しました。都市の発展とともに、歌舞伎は多くの観客を集める興行として発展していきます。</p>
         <p>歌舞伎は、演技だけでなく、踊り、音楽、衣装、化粧、舞台機構などを組み合わせた総合的な舞台表現です。ここにも、演劇が社会の中でさまざまな技術や仕事と結びついていく流れを見ることができます。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter4-05-kabuki-and-theatre-industry.png' ) ); ?>" alt="歌舞伎から劇場産業へ広がる演劇の仕事と仕組みを説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
@@ -160,6 +170,8 @@ get_header();
 .hk-history-textbook .hk-nyakakichi-question p{margin:0;color:#fff}
 .hk-history-textbook .hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}
 .hk-history-textbook .hk-nyakakichi-followup p{margin:0 0 8px}
+.hk-history-textbook .hk-history-diagram{margin:28px auto 30px;text-align:center}
+.hk-history-textbook .hk-history-diagram img{display:block;width:100%;height:auto;max-width:1100px;margin:0 auto;border-radius:12px}
 .hk-history-textbook .hk-reading-note{margin-top:8px}
 .hk-history-textbook .hk-reading-note p{margin:0;padding:18px 20px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);color:var(--hk-fg-dim)}
 .hk-history-textbook p,.hk-history-textbook li{line-height:2}
