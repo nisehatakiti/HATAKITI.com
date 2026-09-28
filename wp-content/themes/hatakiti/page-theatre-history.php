@@ -34,14 +34,16 @@ get_header();
         <span class="hk-chapter-nav-disabled">第2章 →</span>
     </nav>
 
-    <section class="hk-section">
-        <div class="hk-section-head">
-            <h2>はじめに</h2>
-            <p>「演劇の歴史」と聞くと、立派な劇場や舞台を思い浮かべるかもしれません。でも、最初から劇場があったわけではありません。</p>
-        </div>
+    <section class="hk-section hk-history-intro">
+        <h2>はじめに</h2>
+        <p>「演劇の歴史」と聞くと、立派な劇場や舞台を思い浮かべるかもしれません。でも、最初から劇場があったわけではありません。</p>
         <p>照明もありません。客席もありません。台本もありません。もちろん、「俳優」という職業もありません。</p>
         <p>それでも人間は、ずっと昔から、誰かのまねをする、何かを演じる、物語を語る、歌う、踊る、人に見せる、といったことをしてきました。</p>
-        <p>では、人間はなぜ「演じる」ようになったのでしょうか。この章では、演劇が生まれるまでを考えながら、<strong>演劇とはそもそも何なのか</strong>を考えてみましょう。</p>
+        <div class="hk-nyakakichi">
+            <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="演劇について疑問を持つにゃかきち" loading="lazy"></div>
+            <div class="hk-nyakakichi-question"><p>「人間は、どうして『演じる』ようになったんだろう？」</p></div>
+        </div>
+        <div class="hk-nyakakichi-followup"><p>この章では、演劇が生まれるまでを考えながら、<strong>演劇とはそもそも何なのか</strong>を見ていきます。</p></div>
     </section>
 
     <section class="hk-section hk-nyakakichi-break">
@@ -54,13 +56,18 @@ get_header();
 
     <section class="hk-section">
         <div class="hk-section-head">
-            <h2>1-1　「演じる」って何？</h2>
+            <h2>1-1　「演じる」ということ</h2>
             <p>まずは「ごっこ遊び」から考えてみます。</p>
         </div>
         <p>子どもが「お店屋さんごっこ」をしているところを想像してください。</p>
         <p>一人が店員になります。「いらっしゃいませ」。もう一人がお客さんになります。「これください」。</p>
         <p>実際にはお店ではありません。それでも二人は一時的に、<strong>「店員」と「お客さん」</strong>という別の役割を演じています。</p>
-        <p>つまり「演じる」ということは、<strong>自分ではない人物や、自分とは違う立場になって表現すること</strong>の一つだと考えられます。</p>
+        <p>つまり「演じる」とは、<strong>自分ではない人物や、自分とは違う立場になって表現すること</strong>の一つだと考えられます。</p>
+        <div class="hk-nyakakichi">
+            <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="演じることを考えるにゃかきち" loading="lazy"></div>
+            <div class="hk-nyakakichi-question"><p>「じゃあ、『演じる』って、ただまねをすることなのかニャ？」</p></div>
+        </div>
+        <div class="hk-nyakakichi-followup"><p>ここから先では、まねることと演じることの関係を少しずつ見ていきます。</p></div>
     </section>
 
     <section class="hk-section">
@@ -244,7 +251,14 @@ get_header();
 <style>
 .hk-history-textbook .hk-section{max-width:900px}
 .hk-history-textbook .hk-section-head h2{font-size:24px}
-.hk-history-textbook .hk-nyakakichi-image img{width:150px;max-width:150px;height:auto}
+.hk-history-textbook .hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}
+.hk-history-textbook .hk-nyakakichi-image{flex:0 0 110px;text-align:center}
+.hk-history-textbook .hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}
+.hk-history-textbook .hk-nyakakichi-question{flex:1;position:relative;background:#454545;border-radius:16px;padding:16px 20px;color:#fff;line-height:1.8}
+.hk-history-textbook .hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}
+.hk-history-textbook .hk-nyakakichi-question p{margin:0;color:#fff}
+.hk-history-textbook .hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}
+.hk-history-textbook .hk-nyakakichi-followup p{margin:0 0 8px}
 .hk-history-textbook .hk-nyakakichi-break{margin-top:8px}
 .hk-history-textbook .hk-reading-note{margin-top:8px}
 .hk-history-textbook .hk-reading-note p{margin:0;padding:18px 20px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);color:var(--hk-fg-dim)}
@@ -265,7 +279,7 @@ get_header();
 .hk-history-next-card span{font-size:11px;color:var(--hk-accent-warm);letter-spacing:.12em}
 .hk-history-next-card strong{font-family:var(--hk-font-serif);font-size:22px}
 .hk-history-next-card small{color:var(--hk-fg-dim);font-size:13px}
-@media(max-width:650px){.hk-compare{grid-template-columns:1fr}.hk-history-textbook .hk-nyakakichi-image img{width:110px;max-width:110px}}
+@media(max-width:650px){.hk-compare{grid-template-columns:1fr}.hk-history-textbook .hk-nyakakichi{align-items:center;gap:12px;margin-top:24px}.hk-history-textbook .hk-nyakakichi-image{flex-basis:90px}.hk-history-textbook .hk-nyakakichi-image img{width:90px;max-height:145px}.hk-history-textbook .hk-nyakakichi-question{padding:13px 15px}.hk-history-textbook .hk-nyakakichi-question:before{left:-10px;top:20px;border-top-width:8px;border-bottom-width:8px;border-right-width:11px}.hk-history-textbook .hk-nyakakichi-followup{margin-left:102px;margin-bottom:20px}}
 </style>
 
 <?php get_footer(); ?>
