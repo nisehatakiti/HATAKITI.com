@@ -29,6 +29,19 @@ get_header();
 <p>だから「スタニスラフスキー」と「メソッド」を完全に別世界のものとして考えるより、<strong>影響を受けながら変化した演技訓練の歴史</strong>として見るほうが分かりやすくなります。</p>
 </section>
 
+<?php
+$method_diagram = get_stylesheet_directory() . '/../../plugins/hatakiti-core/assets/images/acting/acting-method-basic-flow.png';
+if ( file_exists( $method_diagram ) ) :
+?>
+<section class="hk-section hk-method-visual">
+<div class="hk-section-head"><h2>メソッド演技の基本的な流れ</h2></div>
+<figure class="hk-method-figure">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-method-basic-flow.png' ) ); ?>" alt="メソッド演技の基本的な流れを示す図説" loading="lazy">
+<figcaption>感覚や想像を手がかりに、人物の状況へつなげ、最終的には具体的な行動として表現します。</figcaption>
+</figure>
+</section>
+<?php endif; ?>
+
 <section class="hk-section"><div class="hk-section-head"><h2>3　感覚を具体的にする</h2></div>
 <p>役の世界を想像するとき、視覚だけでなく、触った感じ、温度、重さ、音、匂いなどの感覚を使うことがあります。</p>
 <div class="hk-method-deep-grid"><article><h3>冷たい</h3><p>金属の手すりに触れたときの冷たさを想像する。</p></article><article><h3>重い</h3><p>箱を持ったとき、腕だけでなく足や呼吸まで変化させる。</p></article><article><h3>狭い</h3><p>身体の周囲に壁があるような空間を想像する。</p></article></div>
@@ -79,6 +92,12 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="メソッド演技ナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/stanislavski/')); ?>">← スタニスラフスキー</a><a href="<?php echo esc_url(home_url('/theatre-textbook/acting-theory/')); ?>">総論</a><a href="<?php echo esc_url(home_url('/theatre-textbook/meisner/')); ?>">次：マイズナー →</a></nav>
 </main>
 <style>
+
+.hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:850px;margin:28px auto;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}
+.hk-chapter-nav a,.hk-chapter-nav span{flex:1}.hk-chapter-nav a:last-child{text-align:right}.hk-chapter-nav span{text-align:center;color:var(--hk-fg-dim);font-size:13px}
+.hk-method-deep .hk-nyakakichi{max-width:850px;margin:30px auto 46px;display:flex;align-items:center;gap:18px}.hk-method-deep .hk-nyakakichi-image{width:110px;height:110px;flex:none}.hk-method-deep .hk-nyakakichi-image img{width:100%;height:100%;object-fit:contain}.hk-method-deep .hk-nyakakichi-question{position:relative;flex:1;padding:18px 22px;background:var(--hk-bg-card);border:1px solid var(--hk-border);border-radius:16px;line-height:1.8}.hk-method-deep .hk-nyakakichi-question:before{content:"";position:absolute;left:-9px;top:50%;width:16px;height:16px;margin-top:-8px;background:var(--hk-bg-card);border-left:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border);transform:rotate(45deg)}
+.hk-method-visual{max-width:850px;margin-left:auto;margin-right:auto}.hk-method-figure{margin:0}.hk-method-figure img{display:block;width:100%;height:auto;border:1px solid var(--hk-border);border-radius:14px}.hk-method-figure figcaption{margin-top:10px;color:var(--hk-fg-dim);font-size:12px;line-height:1.7}
+@media(max-width:600px){.hk-chapter-nav{margin-left:16px;margin-right:16px}.hk-chapter-nav a,.hk-chapter-nav span{font-size:11px}.hk-method-deep .hk-nyakakichi{margin-left:16px;margin-right:16px;align-items:flex-start}.hk-method-deep .hk-nyakakichi-image{width:90px;height:90px}.hk-method-figure{margin-left:0;margin-right:0}}
 .hk-method-deep-hero{max-width:850px;margin:48px auto 42px;padding:0 20px}.hk-method-deep-hero h1{font-family:var(--hk-font-serif);font-size:40px}.hk-method-deep-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}.hk-method-deep .hk-section{max-width:850px;margin-left:auto;margin-right:auto}.hk-method-deep-note,.hk-method-deep-compare{padding:22px;background:var(--hk-bg-card);border:1px solid var(--hk-border);line-height:1.9}.hk-method-deep-note p{margin:8px 0 0}.hk-method-deep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.hk-method-deep-grid article{padding:20px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border)}.hk-method-deep-grid h3{font-family:var(--hk-font-serif);margin-top:0}.hk-method-deep-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}.hk-method-deep-compare div{padding:16px;background:var(--hk-bg-elevated);display:flex;flex-direction:column;gap:6px}.hk-method-deep-compare span{color:var(--hk-fg-dim)}.hk-method-deep .hk-summary{padding:28px}@media(max-width:700px){.hk-method-deep-grid,.hk-method-deep-compare{grid-template-columns:1fr}.hk-method-deep-hero h1{font-size:30px}.hk-method-deep-hero{padding:0 16px}}
 </style>
 <?php get_footer(); ?>
