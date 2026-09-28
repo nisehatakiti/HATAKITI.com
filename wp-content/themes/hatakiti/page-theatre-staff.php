@@ -1650,6 +1650,10 @@ get_header();
     <li>台本に書かれている時間や場所の手がかりは何か。</li>
   </ul>
   <p>さらに、台本に直接「明るくする」「暗くする」と書いてなくても、照明で表現できることがあります。</p>
+<figure class="hk-lighting-chapter-image">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-111-read-script.png' ) ); ?>" alt="台本から時間・場所・人物・行動を読み取り、照明のイメージにつなげる図" loading="lazy">
+  <figcaption>台本に書かれた情報から、照明で何を表現できるかを考えます。</figcaption>
+</figure>
 </section>
 
 <section class="hk-section">
@@ -1665,6 +1669,10 @@ get_header();
     <div><h3>変化を見せたい</h3><p>時間や場面、人物の状態の変化を光で強調する。</p></div>
   </div>
   <p>例えば「怖く見せたい」「人物の孤独を見せたい」「二人の距離を強調したい」といった演出意図を、照明でどう表現するかを考えます。</p>
+<figure class="hk-lighting-chapter-image">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-112-director-intent-to-light.png' ) ); ?>" alt="演出意図を照明の考え方に変換する流れを示す図" loading="lazy">
+  <figcaption>演出の言葉を、そのまま色に置き換えるのではなく、「どこを明るくするか」「どこを暗くするか」など照明の要素に変換します。</figcaption>
+</figure>
 </section>
 
 <section class="hk-section">
@@ -1681,6 +1689,10 @@ get_header();
     <li>特に見せたい場所や物</li>
   </ul>
   <p>例えば二人の人物が舞台中央と下手に離れて立っているなら、「二人をそれぞれ見せる光」と「二人がいる空間を見せる光」を分けて考えられます。</p>
+<figure class="hk-lighting-chapter-image">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-113-break-down-scene.png' ) ); ?>" alt="舞台上の人物・背景・小道具を場所ごとに分解して考える図" loading="lazy">
+  <figcaption>場面を「どこで・誰が・何をしているか」に分解すると、必要な照明を考えやすくなります。</figcaption>
+</figure>
 </section>
 
 <section class="hk-section">
@@ -1695,6 +1707,10 @@ get_header();
     <div><h3>空間・背景</h3><p>トップやホリゾントなど、空間を支える光。</p></div>
   </div>
   <p>ここではまだ「この灯体を使う」と決めなくてもかまいません。まず<strong>必要な光の役割</strong>を整理します。</p>
+<figure class="hk-lighting-chapter-image">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-114-showing-to-lighting-needs.png' ) ); ?>" alt="見せたいものから必要な光の役割を考える図" loading="lazy">
+  <figcaption>顔・身体・輪郭・背景など、何を見せたいかによって必要な光の種類と役割を考えます。</figcaption>
+</figure>
 </section>
 
 <section class="hk-section">
@@ -1712,6 +1728,10 @@ get_header();
     <li>必要な明るさを決める。</li>
   </ul>
   <p>照明図は、単なる「灯体の配置図」ではありません。<strong>どんな光を、どこから、何のために出すのか</strong>を共有するための図面です。</p>
+<figure class="hk-lighting-chapter-image">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-115-build-lighting-plan.png' ) ); ?>" alt="見せたいものから照明図までを組み立てる流れを示す図" loading="lazy">
+  <figcaption>見せたいものを決め、必要な光を考え、灯体・位置・方向・色・明るさを決めて照明図に落とし込みます。</figcaption>
+</figure>
 </section>
 
 <section class="hk-section">
@@ -1722,6 +1742,10 @@ get_header();
   <p>例えば、<strong>昼 → 夕方 → 夜</strong>のように時間が変わったり、<strong>普通の場面 → 緊張 → クライマックス</strong>のように場面の状態が変化したりします。</p>
   <p>その変化を、照明の明るさ、色、方向、広がり、消す光や足す光によって表現します。</p>
   <p>ここで登場するのが<strong>キュー</strong>です。どの瞬間に、どの照明状態へ変化させるのかを整理しておきます。</p>
+<figure class="hk-lighting-chapter-image">
+  <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/lighting/lighting-116-scene-cues.png' ) ); ?>" alt="昼・夕方・夜などの場面転換をキューとして整理する図" loading="lazy">
+  <figcaption>場面の変化に合わせて、いつ、どの照明状態へ変えるのかをキューとして整理します。</figcaption>
+</figure>
 </section>
 
 <section class="hk-section">
