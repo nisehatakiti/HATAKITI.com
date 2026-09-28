@@ -4,8 +4,7 @@
  */
 get_header();
 ?>
-<main class="hk-history-textbook">
-    <div class="hk-textbook-inner">
+<main class="hk-container hk-history-textbook">
         <div class="hk-breadcrumb">HATAKITI 演劇の教科書｜演劇の歴史</div>
 
         <header class="hk-chapter-header">
@@ -144,7 +143,6 @@ get_header();
             <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">目次</a>
             <span class="hk-chapter-nav-disabled">第3章 →</span>
         </nav>
-    </div>
 </main>
 
 <style>
