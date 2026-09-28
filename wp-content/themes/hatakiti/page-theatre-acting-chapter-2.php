@@ -78,20 +78,13 @@ get_header();
 
 <section class="hk-section">
 <div class="hk-section-head"><h2>実践エチュード　ひとりでできる発声練習</h2><p>毎日少しずつ、無理のない声で繰り返します。</p></div>
-<div class="hk-exercise"><h3>① 母音ロングトーン　5分</h3><ol><li>自然に息を吸う。</li><li>「あー」を小さめの声で一定に伸ばす。</li><li>同じように「え・い・う・お」へ進む。</li><li>喉に力を入れず、響きが安定しているか確認する。</li></ol></div>
+<div class="hk-exercise"><h3>① 母音ロングトーン　5分</h3><ol><li>自然に息を吸う。</li><li>「あー」を小さめの声で一定に伸ばす。</li><li>同じように「え・い・お・う」へ進む。</li><li>喉に力を入れず、響きが安定しているか確認する。</li></ol></div>
 <div class="hk-exercise"><h3>② 各行の発声　5分</h3><ol><li>あ行を「あ・え・い・う・え・お・あ・お」と発声する。</li><li>か行、さ行、た行……と同じ型で進む。</li><li>慣れたら通常の50音を一音ずつ発声する。</li></ol></div>
 <div class="hk-exercise"><h3>③ 文章で発声　5分</h3><ol><li>好きな本や文章を選ぶ。</li><li>最初はゆっくり、母音と子音を明確に読む。</li><li>息を止めず、相手に話しかけるつもりで読む。</li><li>慣れてきたら少しずつ自然な速度へ戻す。</li></ol></div>
 </section>
 
 <section class="hk-section">
 <div class="hk-section-head"><h2>付録　北原白秋「五十音」――あめんぼの歌</h2></div>
-<div class="hk-panel"><p><strong>速く読むことが目的ではありません。</strong></p><p>この練習では、口・舌・息・声を一緒に使いながら、どの速度でも音を崩さずに発声できることを目指します。速くするのは、ゆっくり読んでも明瞭に発声できるようになってからです。</p></div>
-<div class="hk-ame-stage-grid">
-<div class="hk-ame-stage"><span>STEP 1</span><h3>ゆっくり読む</h3><p>まずは一語ずつ、意味を確認するくらいの速度で読みます。</p><p class="hk-ame-example">あめんぼ　あかいな<br>あいうえお</p><ul><li>口をしっかり動かす</li><li>一音ずつ明瞭にする</li><li>息を止めない</li></ul></div>
-<div class="hk-ame-stage"><span>STEP 2</span><h3>一定の速度で読む</h3><p>文章全体を同じテンポで読みます。途中だけ急がないことがポイントです。</p><ul><li>音の大きさをそろえる</li><li>言葉の終わりまで発声する</li><li>呼吸する場所を決める</li></ul></div>
-<div class="hk-ame-stage"><span>STEP 3</span><h3>少しずつ速度を上げる</h3><p>明瞭さを保ったまま、少しだけテンポを上げます。</p><ul><li>口が追いつく範囲で上げる</li><li>息が苦しくなったら戻す</li><li>音が崩れたら一段階遅くする</li></ul></div>
-<div class="hk-ame-stage"><span>STEP 4</span><h3>速さに挑戦する</h3><p>最後に、自分が無理なく保てる速度まで上げます。</p><ul><li>速さより明瞭さを優先</li><li>声を押し出さない</li><li>最後まで息と声をつなげる</li></ul></div>
-</div>
 <div class="hk-voice-poem">
 <h3>五十音　北原白秋</h3>
 <p>水馬（あめんぼ）赤いな。ア、イ、ウ、エ、オ。<br>浮藻（うきも）に小蝦（こえび）もおよいでる。</p>
@@ -105,6 +98,14 @@ get_header();
 <p>雷鳥（らいてう）は寒かろ、ラ、リ、ル、レ、ロ。<br>蓮花（れんげ）が咲いたら、瑠璃（るり）の鳥。</p>
 <p>わい、わい、わっしょい。ワ、ヰ、ウ、ヱ、ヲ。<br>植木屋（うゑきや）、井戸換（ゐどが）へ、お祭だ。</p>
 </div>
+<div class="hk-panel"><p><strong>速く読むことが目的ではありません。</strong></p><p>この練習では、口・舌・息・声を一緒に使いながら、どの速度でも音を崩さずに発声できることを目指します。速くするのは、ゆっくり読んでも明瞭に発声できるようになってからです。</p></div>
+<div class="hk-ame-stage-grid">
+<div class="hk-ame-stage"><span>STEP 1</span><h3>ゆっくり読む</h3><p>まずは一語ずつ、意味を確認するくらいの速度で読みます。</p><p class="hk-ame-example">あめんぼ　あかいな<br>あいうえお</p><ul><li>口をしっかり動かす</li><li>一音ずつ明瞭にする</li><li>息を止めない</li></ul></div>
+<div class="hk-ame-stage"><span>STEP 2</span><h3>一定の速度で読む</h3><p>文章全体を同じテンポで読みます。途中だけ急がないことがポイントです。</p><ul><li>音の大きさをそろえる</li><li>言葉の終わりまで発声する</li><li>呼吸する場所を決める</li></ul></div>
+<div class="hk-ame-stage"><span>STEP 3</span><h3>少しずつ速度を上げる</h3><p>明瞭さを保ったまま、少しだけテンポを上げます。</p><ul><li>口が追いつく範囲で上げる</li><li>息が苦しくなったら戻す</li><li>音が崩れたら一段階遅くする</li></ul></div>
+<div class="hk-ame-stage"><span>STEP 4</span><h3>速さに挑戦する</h3><p>最後に、自分が無理なく保てる速度まで上げます。</p><ul><li>速さより明瞭さを優先</li><li>声を押し出さない</li><li>最後まで息と声をつなげる</li></ul></div>
+</div>
+
 <div class="hk-exercise"><h3>練習の進め方</h3><ol><li>STEP 1を数回繰り返し、音が崩れないことを確認する。</li><li>STEP 2で一定のテンポを作る。</li><li>STEP 3では少しずつ速度を上げる。</li><li>言い間違えたり音が崩れたりしたら、一つ前の速度に戻る。</li><li>最後にSTEP 4で、今の自分が保てる最高速度に挑戦する。</li></ol><p><strong>目標：</strong>「速く言えること」ではなく、<strong>速くなっても明瞭に、自然に、息を止めずに言えること</strong>です。</p></div>
 </section>
 
