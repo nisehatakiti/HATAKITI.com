@@ -83,7 +83,52 @@ get_header();
 </section>
 
 <section class="hk-section">
-<div class="hk-section-head"><h2>8　5分エチュード「重い箱」</h2></div>
+<div class="hk-section-head"><h2>8　実践エチュード①「身体の質感を変える」</h2></div>
+<div class="hk-lecoq-exercise">
+<p><strong>テーマ：身体</strong></p>
+<ol>
+<li>立って、まず何も演じないニュートラルな状態をつくる。</li>
+<li>身体が「重い」と想像して、歩いてみる。</li>
+<li>次に「軽い」「硬い」「柔らかい」「弾む」と条件を変える。</li>
+<li>顔の表情で違いを説明せず、重心、歩幅、速度、呼吸、関節の使い方だけで変化をつくる。</li>
+<li>最後に、どの身体の変化から人物の印象が生まれたかを振り返る。</li>
+</ol>
+<p class="hk-textbook-note">人物を先に決めるのではなく、身体の変化から人物らしさが生まれる感覚を体験します。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>9　実践エチュード②「空間の大きさを変える」</h2></div>
+<div class="hk-lecoq-exercise">
+<p><strong>テーマ：空間</strong></p>
+<ol>
+<li>何もない場所を、まず広い空間だと想像して歩く。</li>
+<li>次に、身体一つ分しか動けない狭い空間だと想像する。</li>
+<li>さらに、床・天井・壁の位置を自分で決めて、見えない空間の中を移動する。</li>
+<li>二人で行う場合は、相手との距離を「遠い」「近い」「急に近づく」「離れ続ける」と変える。</li>
+<li>空間が変わると、身体や相手との関係がどう変わったかを確認する。</li>
+</ol>
+<p class="hk-textbook-note">実際のセットがなくても、身体と空間の関係を変えるだけで、舞台上の状況を変えられることを体験します。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>10　実践エチュード③「条件が動きを変える」</h2></div>
+<div class="hk-lecoq-exercise">
+<p><strong>テーマ：動き・即興</strong></p>
+<ol>
+<li>一人が「雨が降っている」という条件を出す。</li>
+<li>もう一人は、その条件を身体で受け取り、歩き始める。</li>
+<li>途中で「風が強くなる」「地面が滑る」「急に晴れる」など、新しい条件を加える。</li>
+<li>説明したり演技を決め込んだりせず、条件が身体に与える影響から動きを変える。</li>
+<li>最後に、偶然生まれた面白い動きや関係を一つ選び、もう一度再現する。</li>
+</ol>
+<p class="hk-textbook-note">即興は「何をやってもいい」ことではありません。条件を受け取り、その場で身体を変化させることで、予想していなかった表現を発見します。</p>
+</div>
+</section>
+
+<section class="hk-section">
+<div class="hk-section-head"><h2>11　5分エチュード「重い箱」</h2></div>
 <div class="hk-lecoq-exercise">
 <ol>
 <li>何もない場所に箱があると想像する。</li>
@@ -97,7 +142,7 @@ get_header();
 </section>
 
 <section class="hk-section">
-<div class="hk-section-head"><h2>9　同じ場面をルコックで考える</h2></div>
+<div class="hk-section-head"><h2>12　同じ場面をルコックで考える</h2></div>
 <div class="hk-lecoq-scene">
 <p class="scene-line">AはBに帰ってほしくない。</p>
 <p>台詞だけで気持ちを説明するのではなく、二人の距離、身体の向き、近づく・離れる動き、速度、空間の広さを使って場面をつくります。</p>
