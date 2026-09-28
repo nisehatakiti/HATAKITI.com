@@ -15,7 +15,7 @@ get_header();
     <nav class="hk-chapter-nav" aria-label="演劇史ナビゲーション">
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-5/' ) ); ?>">← 第5章</a>
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">目次</a>
-        <span class="hk-chapter-nav-disabled">第7章 →</span>
+        <span class="hk-chapter-nav-disabled">次へ →</span>
     </nav>
 
     <section class="hk-section hk-history-intro">
