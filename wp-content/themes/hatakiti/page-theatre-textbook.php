@@ -24,12 +24,12 @@ get_header();
     </header>
 
     <section class="hk-section">
-        <div class="hk-section-head"><h2>4つの入口</h2></div>
+        <div class="hk-section-head"><h2>7つの入口</h2></div>
         <div class="hk-textbook-grid">
-            <a class="hk-textbook-card" href="#history">
+            <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-1/' ) ); ?>">
                 <span class="hk-textbook-number">01</span>
                 <h3>演劇の歴史</h3>
-                <p>古代から現代まで。演劇が何を求め、どう変わってきたのか。</p>
+                <p>演劇はなぜ生まれたのか。古代から現代まで、演劇が変化してきた流れを学ぶ。</p>
             </a>
             <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">
                 <span class="hk-textbook-number">02</span>
@@ -68,14 +68,14 @@ get_header();
         <div class="hk-section-head"><h2>01　演劇の歴史</h2></div>
         <div class="hk-textbook-panel">
             <div class="hk-history-flow">
-                <span>古代ギリシャ</span><b>→</b>
-                <span>中世・ルネサンス</span><b>→</b>
+                <span>第1章</span><b>→</b>
+                <span>古代の演劇</span><b>→</b>
+                <span>中世の演劇</span><b>→</b>
                 <span>近代演劇</span><b>→</b>
-                <span>20世紀</span><b>→</b>
-                <span>現代演劇</span>
+                <span>20世紀・現代</span>
             </div>
-            <p>まずは「いつ、誰が、何を変えたのか」を追いながら、演劇の考え方の流れを整理していきます。日本の演劇史も、能・狂言、歌舞伎、人形浄瑠璃、新劇、小劇場など別の流れで扱います。</p>
-            <span class="hk-badge-soon">順次追加</span>
+            <p>演劇はなぜ生まれ、社会とともにどう変化してきたのでしょうか。まずは第1章「演劇はなぜ生まれたのか」から、演劇の歴史を少しずつたどっていきます。</p>
+            <a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-1/' ) ); ?>">第1章を読む →</a>
         </div>
     </section>
 
