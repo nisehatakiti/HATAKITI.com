@@ -18,7 +18,7 @@ get_header();
     <section class="hk-section">
         <div class="hk-section-head">
             <h2>第一部　体 ― 演技のできる身体を作る</h2>
-            <p>いきなり感情表現や台詞から始めるのではなく、まず身体の土台を整えます。呼吸から始めて、発声、身体、姿勢、歩き方、重心へ進み、最後に感情の解放へつなげます。</p>
+            <p>いきなり感情表現や台詞から始めるのではなく、まず身体の土台を整えます。呼吸から始めて、発声、滑舌、身体、姿勢、歩き方、重心へ進み、最後に感情の解放へつなげます。</p>
         </div>
 
         <div class="hk-acting-chapter-grid">
@@ -42,6 +42,9 @@ get_header();
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-7/' ) ); ?>">
                 <span>第7章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><strong>読む →</strong>
+            </a>
+        <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">
+                <span>第8章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><strong>読む →</strong>
             </a>
         </div>
     </section>
