@@ -129,6 +129,7 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/history/chapter-6',
         'theatre-textbook/acting',
         'theatre-textbook/acting/chapter-1',
+        'theatre-textbook/acting-theory',
         'theatre-textbook/theatre-world',
         'theatre-textbook/theatre-world/high-school',
         'theatre-textbook/theatre-world/commercial',
@@ -167,6 +168,14 @@ function hatakiti_theatre_textbook_route( $template ) {
 
     if ( 'theatre-textbook/acting' === $path || 'theatre-textbook/acting/chapter-1' === $path ) {
         return get_template_directory() . '/page-theatre-acting.php';
+    }
+
+    if ( 'theatre-textbook/acting-theory' === $path ) {
+        return get_template_directory() . '/page-theatre-acting-theory.php';
+    }
+
+    if ( 'theatre-textbook/stanislavski' === $path ) {
+        return get_template_directory() . '/page-theatre-stanislavski.php';
     }
 
     if ( 'theatre-textbook/history' === $path || 'theatre-textbook/history/chapter-1' === $path ) {
@@ -219,6 +228,8 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = '第5章 近代演劇が生まれる｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/history/chapter-6' === $path ) {
         $parts['title'] = '第6章 現代演劇への広がり｜演劇の歴史｜演劇の教科書';
+    } elseif ( 'theatre-textbook/acting-theory' === $path ) {
+        $parts['title'] = '演技とは何か｜演技論・演技システム｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
         $parts['title'] = '第1章 感情の解放｜演技編｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/stanislavski' ) ) {
