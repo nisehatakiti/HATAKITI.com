@@ -41,7 +41,7 @@ get_header();
         <p>それでも人間は、ずっと昔から、誰かのまねをする、何かを演じる、物語を語る、歌う、踊る、人に見せる、といったことをしてきました。</p>
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="演劇について疑問を持つにゃかきち" loading="lazy"></div>
-            <div class="hk-nyakakichi-question"><p>「人間は、どうして『演じる』ようになったんだろう？」</p></div>
+            <div class="hk-nyakakichi-question"><p>人間は、どうして「演じる」ようになったんだろう？</p></div>
         </div>
         <div class="hk-nyakakichi-followup"><p>この章では、演劇が生まれるまでを考えながら、<strong>演劇とはそもそも何なのか</strong>を見ていきます。</p></div>
     </section>
@@ -49,7 +49,7 @@ get_header();
     <section class="hk-section hk-nyakakichi-break">
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="考えながら演劇の歴史を読むにゃかきち" loading="lazy"></div>
-            <div class="hk-nyakakichi-question"><p>「劇場も台本もないのに、どうやって演劇が始まったんだろう？」</p></div>
+            <div class="hk-nyakakichi-question"><p>劇場も台本もないのに、どうやって演劇が始まったんだろう？</p></div>
         </div>
         <div class="hk-nyakakichi-followup"><p>ここからは、演劇ができる前の「人間の行動」に目を向けてみましょう。</p></div>
     </section>
@@ -65,7 +65,7 @@ get_header();
         <p>つまり「演じる」とは、<strong>自分ではない人物や、自分とは違う立場になって表現すること</strong>の一つだと考えられます。</p>
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="演じることを考えるにゃかきち" loading="lazy"></div>
-            <div class="hk-nyakakichi-question"><p>「じゃあ、『演じる』って、ただまねをすることなのかニャ？」</p></div>
+            <div class="hk-nyakakichi-question"><p>じゃあ、「演じる」って、ただまねをすることなのかニャ？</p></div>
         </div>
         <div class="hk-nyakakichi-followup"><p>ここから先では、まねることと演じることの関係を少しずつ見ていきます。</p></div>
     </section>
