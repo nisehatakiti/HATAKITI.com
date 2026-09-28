@@ -60,10 +60,6 @@ get_header();
         <p>子どもが「お店屋さんごっこ」をしているところを想像してください。</p>
         <p>一人が店員になります。「いらっしゃいませ」。もう一人がお客さんになります。「これください」。</p>
         <p>実際にはお店ではありません。それでも二人は一時的に、<strong>「店員」と「お客さん」</strong>という別の役割を演じています。</p>
-        <div class="hk-term-note">
-            <h3>用語：役</h3>
-            <p><strong>役（やく）</strong>とは、演劇の中で一人の人物や立場を表すものです。「王様の役」「母親の役」「学生の役」などと言います。</p>
-        </div>
         <p>つまり「演じる」ということは、<strong>自分ではない人物や、自分とは違う立場になって表現すること</strong>の一つだと考えられます。</p>
     </section>
 
@@ -76,10 +72,6 @@ get_header();
         <p>まねをすることで、人間は知らないことを学ぶこともできます。でも、「まね」にはもう一つの使い方があります。</p>
         <p><strong>その場にないものを、目の前で再現することです。</strong></p>
         <p>例えば、狩りから帰ってきた人が「今日、こんな動物を見た」と言いながら、その動物の走り方を身体で表現したとします。見ている人は、その動きを見て「動物が走っているところ」を想像できます。</p>
-        <div class="hk-term-note">
-            <h3>用語：模倣</h3>
-            <p><strong>模倣（もほう）</strong>とは、何かの動きや行動をまねして表現することです。模倣は、演技を考えるうえで重要な考え方の一つです。</p>
-        </div>
     </section>
 
     <section class="hk-section">
@@ -88,10 +80,6 @@ get_header();
             <p>「こんなことがあった」と人に伝えるところから、表現は広がります。</p>
         </div>
         <p>人間は、経験した出来事を他の人に伝えます。「今日、こんなことがあった」「昔、こんな人がいた」「この山には、こんな話がある」。</p>
-        <div class="hk-term-note">
-            <h3>用語：物語</h3>
-            <p><strong>物語</strong>とは、人物や出来事などを、ある流れを持った話として伝えるものです。</p>
-        </div>
         <p>物語を語るとき、人間は声だけを使うわけではありません。表情を変えたり、身振りを加えたりします。</p>
         <p>怖い話なら声を小さくする。大きな出来事なら身体を大きく動かす。登場人物の言葉を、その人物になったつもりで言ってみる。</p>
         <p>ここで、<strong>「出来事を説明する」</strong>ことから、<strong>「出来事を実際に見せる」</strong>ことへ近づいていきます。</p>
@@ -117,10 +105,6 @@ get_header();
             <p>演劇を考えるとき、もう一つ重要なのが「見る人」の存在です。</p>
         </div>
         <p>一人で踊っているだけなら、それは踊りです。そこに別の人がいて、その踊りを見ている。すると、<strong>「見せる人」と「見る人」</strong>という関係が生まれます。</p>
-        <div class="hk-term-note">
-            <h3>用語：観客</h3>
-            <p><strong>観客（かんきゃく）</strong>とは、演劇や舞台などを見ている人のことです。</p>
-        </div>
         <p>演劇では、俳優だけでなく観客も重要です。俳優が表現し、観客がそれを受け取る。その両方が同じ時間と空間を共有することで、舞台上の出来事が成立します。</p>
     </section>
 
@@ -130,10 +114,6 @@ get_header();
             <p>昔の人々は、生活に関わる大切な出来事に合わせて、さまざまな表現をしていました。</p>
         </div>
         <p>季節の変化や収穫、誕生、死などに合わせて、歌う、踊る、仮面をつける、特別な衣装を着る、行列をする、物語を語る、といった行為が行われていました。</p>
-        <div class="hk-term-grid">
-            <div><h3>用語：儀式</h3><p><strong>儀式（ぎしき）</strong>とは、宗教や社会の中で決められた意味や手順に沿って行う特別な行為です。</p></div>
-            <div><h3>用語：祭り</h3><p><strong>祭り</strong>は、神や祖先をまつったり、季節や地域の出来事を祝ったりするために行われる行事です。</p></div>
-        </div>
         <p>祭りや儀式には、後の演劇につながる要素がたくさんあります。ただし、<strong>「昔の儀式＝演劇」</strong>というわけではありません。</p>
         <p>儀式には宗教的・社会的な目的があります。演劇には、物語を表現することや、人を楽しませることなど、さまざまな目的があります。両者には重なる部分がありますが、同じものではありません。</p>
     </section>
@@ -144,10 +124,6 @@ get_header();
             <p>舞台の上の人は、本当にその人物なのでしょうか？</p>
         </div>
         <p>舞台の上に王様が登場したとします。でも、演じている人は本当の王様ではありません。俳優です。</p>
-        <div class="hk-term-note">
-            <h3>用語：俳優</h3>
-            <p><strong>俳優（はいゆう）</strong>とは、演劇や映画などで人物を演じる人のことです。</p>
-        </div>
         <p>それでも観客は、「この人は王様なんだ」と考えて舞台を見ることができます。</p>
         <p>俳優は本当に王様になる必要はありません。観客も、本物の王様がいると思っているわけではありません。</p>
         <p>それでも両者が、<strong>「この時間、この場所では、この人を王様として見る」</strong>という約束を共有することができます。</p>
@@ -160,10 +136,6 @@ get_header();
         </div>
         <p>舞台の上に何もないとします。俳優が「ここに大きな箱があります」と言って、箱を持ち上げる動きをします。</p>
         <p>実際には箱はありません。でも、身体の使い方を変えれば「重い箱」を表現できます。観客も、その表現を受け取って想像します。</p>
-        <div class="hk-term-note">
-            <h3>用語：想像力</h3>
-            <p><strong>想像力</strong>とは、実際には目の前にないものを頭の中に思い描く力です。演劇では、この想像力がとても重要です。</p>
-        </div>
         <p>舞台に本物の家を作らなくても、「ここは家です」という表現と観客の想像によって、そこを家として扱うことができます。</p>
     </section>
 
@@ -174,10 +146,6 @@ get_header();
         </div>
         <p><strong>演劇に、必ず劇場が必要なわけではありません。</strong></p>
         <p>教室でもできます。体育館でもできます。公園でもできます。路上でもできます。何もない空間でもできます。</p>
-        <div class="hk-term-note">
-            <h3>用語：劇場</h3>
-            <p><strong>劇場（げきじょう）</strong>とは、演劇や舞台芸術を上演するために作られた施設です。舞台や客席、照明、音響など、演劇を行いやすくするための設備があります。</p>
-        </div>
         <p>人間が演じる行為そのものは、劇場ができるより前から存在していました。</p>
         <p>だから演劇史を見るときには、<strong>「どんな劇場が作られたか」</strong>だけでなく、<strong>「人々はどこで、誰に向けて、何を演じていたのか」</strong>を見ることも大切です。</p>
     </section>
@@ -197,10 +165,6 @@ get_header();
             <li>身分によって観劇できる場所が違うのか</li>
             <li>宗教や政治と演劇はどう関係するのか</li>
         </ul>
-        <div class="hk-term-note">
-            <h3>用語：社会</h3>
-            <p>ここでいう<strong>社会</strong>とは、人々が一緒に暮らし、生活や文化、制度などを作っている集団や仕組みのことです。</p>
-        </div>
         <p>つまり、<strong>演劇の歴史は、人間がどんな社会で暮らしてきたのかを見る歴史でもある</strong>のです。</p>
     </section>
 
@@ -229,6 +193,10 @@ get_header();
         <div class="hk-nyakakichi-followup"><p>そう考えたほうが分かりやすいでしょう。人間が、まねる → 語る → 踊る → 歌う → 誰かになる → 人に見せる、というさまざまな行為を重ねる中で、演劇につながる表現が生まれていったと考えられます。</p></div>
         <p>だから演劇の歴史は、「最初の劇は何だったのか？」だけを探す歴史ではありません。</p>
         <p><strong>「人間は、なぜ誰かになり、物語を演じ、人に見せるようになったのか？」</strong>を考える歴史でもあります。</p>
+    </section>
+
+    <section class="hk-section hk-reading-note">
+        <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では言葉の説明を増やしすぎず、まず演劇そのものの流れを読んでみましょう。</p>
     </section>
 
     <section class="hk-section">
@@ -286,6 +254,9 @@ get_header();
 <style>
 .hk-history-textbook .hk-section{max-width:900px}
 .hk-history-textbook .hk-section-head h2{font-size:24px}
+.hk-history-textbook .hk-nyakakichi-image img{width:150px;max-width:150px;height:auto}
+.hk-history-textbook .hk-reading-note{margin-top:8px}
+.hk-history-textbook .hk-reading-note p{margin:0;padding:18px 20px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);color:var(--hk-fg-dim)}
 .hk-history-textbook p,.hk-history-textbook li{line-height:2}
 .hk-term-note{margin:28px 0;padding:22px 24px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card)}
 .hk-term-note h3{margin:0 0 8px;font-size:15px;color:var(--hk-accent-warm)}
@@ -303,7 +274,7 @@ get_header();
 .hk-history-next-card span{font-size:11px;color:var(--hk-accent-warm);letter-spacing:.12em}
 .hk-history-next-card strong{font-family:var(--hk-font-serif);font-size:22px}
 .hk-history-next-card small{color:var(--hk-fg-dim);font-size:13px}
-@media(max-width:650px){.hk-compare{grid-template-columns:1fr}}
+@media(max-width:650px){.hk-compare{grid-template-columns:1fr}.hk-history-textbook .hk-nyakakichi-image img{width:110px;max-width:110px}}
 </style>
 
 <?php get_footer(); ?>
