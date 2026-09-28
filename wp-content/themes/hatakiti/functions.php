@@ -126,6 +126,7 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/history/chapter-3',
         'theatre-textbook/history/chapter-4',
         'theatre-textbook/history/chapter-5',
+        'theatre-textbook/history/chapter-6',
         'theatre-textbook/acting',
         'theatre-textbook/acting/chapter-1',
         'theatre-textbook/theatre-world',
@@ -178,6 +179,8 @@ function hatakiti_theatre_textbook_route( $template ) {
         return get_template_directory() . '/page-theatre-history-chapter-4.php';
     } elseif ( 'theatre-textbook/history/chapter-5' === $path ) {
         return get_template_directory() . '/page-theatre-history-chapter-5.php';
+    } elseif ( 'theatre-textbook/history/chapter-6' === $path ) {
+        return get_template_directory() . '/page-theatre-history-chapter-6.php';
     }
 
     if ( 'theatre-textbook/staff/lighting/filters' === $path || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' ) ) {
@@ -214,6 +217,8 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = '第4章 ルネサンスと近代劇場｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/history/chapter-5' === $path ) {
         $parts['title'] = '第5章 近代演劇が生まれる｜演劇の歴史｜演劇の教科書';
+    } elseif ( 'theatre-textbook/history/chapter-6' === $path ) {
+        $parts['title'] = '第6章 現代演劇への広がり｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
         $parts['title'] = '第1章 感情の解放｜演技編｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/stanislavski' ) ) {
