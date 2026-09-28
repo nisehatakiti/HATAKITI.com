@@ -34,6 +34,8 @@ get_header();
         <p>19世紀のヨーロッパでは、産業化や都市化が進み、人々の暮らしが大きく変わりました。劇場も宮廷や一部の人々だけのものではなく、都市の多くの人が訪れる場所になっていきます。</p>
         <p>観客が増えると、劇場には安定して作品を上演する仕組みが必要になります。劇団、劇場経営、俳優、劇作家、舞台を支える技術者など、多くの仕事が演劇を支えるようになりました。</p>
         <p>演劇は、社会の変化を受けながら、より大きな都市文化の一部になっていったのです。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter5-01-city-and-audience.png' ) ); ?>" alt="19世紀の都市化と観客の増加、劇場を支える仕事を説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
@@ -41,6 +43,8 @@ get_header();
         <p>以前の演劇では、神話や歴史上の人物、王侯貴族などを扱う作品も多くありました。しかし近代になると、現代の社会で生きる普通の人々を描く作品が増えていきます。</p>
         <p>家族、結婚、仕事、お金、階級、男女の関係など、観客自身の生活とつながる題材が舞台に登場します。</p>
         <p>舞台は遠い昔の世界を見せるだけではなく、<strong>「今、自分たちが生きている社会はどうなっているのか」</strong>を考える場所にもなりました。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter5-02-society-on-stage.png' ) ); ?>" alt="近代演劇で日常生活や社会問題が舞台に登場する変化を説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
@@ -59,6 +63,8 @@ get_header();
         <p>19世紀には、現代の社会や人間を観察し、それを芸術に表そうとするリアリズムの考え方が広がりました。演劇でも、日常生活や社会の現実を舞台に取り込もうとする動きが生まれます。</p>
         <p>さらに自然主義では、人間を社会や環境、生活条件との関係から捉えようとする作品も現れました。</p>
         <p>ここで大切なのは、リアリズムが単に「本物そっくりにする」という意味ではないことです。<strong>何を現実として描くのか、どのように観客へ見せるのか</strong>という芸術上の考え方でもあります。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter5-03-realism-and-naturalism.png' ) ); ?>" alt="リアリズムと自然主義の考え方の違いを説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
@@ -75,6 +81,8 @@ get_header();
         <p>俳優がどう動くのか。どこに立つのか。舞台装置をどう置くのか。衣装や照明をどうするのか。音楽をどう使うのか。</p>
         <p>これらを別々に決めるのではなく、<strong>一つの作品としてまとめる視点</strong>が必要になります。</p>
         <p>演出家は、劇作家が書いた台本をそのまま再現するだけではなく、作品をどう解釈し、観客に何を見せるのかを考える存在になっていきました。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter5-04-director-and-rehearsal.png' ) ); ?>" alt="演出家が俳優や舞台美術、衣装、照明などをまとめる役割を説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
@@ -101,6 +109,8 @@ get_header();
         <p>大きな身振りだけで感情を伝えるのではなく、視線、呼吸、姿勢、間、相手との距離など、細かな身体の変化も意味を持つようになります。</p>
         <p>ただし、演技には一つの正解があるわけではありません。写実的な演技もあれば、身体を大きく使う演技、様式化された演技もあります。</p>
         <p>近代演劇の大きな変化は、<strong>「どう演じれば人物が生きて見えるのか」</strong>を、俳優自身が研究するようになったことにもあります。</p>
+        <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter5-05-modern-acting-and-japan.png' ) ); ?>" alt="スタニスラフスキーの演技論から近代演劇、日本の新劇への広がりを説明する図" loading="lazy"></figure>
+
     </section>
 
     <section class="hk-section">
