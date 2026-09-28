@@ -25,6 +25,8 @@ get_header();
 <div class="hk-lecoq-principle"><strong>考える → 動く</strong><span>だけではなく、<strong>動く → 感じる → 発見する</strong>という順番も大切にする。</span></div>
 </section>
 
+<figure class="hk-lecoq-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/lecoq-01-body-space-movement-improvisation-discovery.png' ) ); ?>" alt="ルコック・システムの基本の流れ。身体、空間、動き、即興、発見の5段階を示した図説。" loading="lazy"><figcaption>身体を出発点に、空間の中で動き、即興を通して、まだ気づいていなかった表現を発見していきます。</figcaption></figure>
+
 <section class="hk-section">
 <div class="hk-section-head"><h2>2　身体は「感情の形」になる</h2></div>
 <p>同じ人物でも、重心が前にあるのか後ろにあるのか、身体が開いているのか閉じているのかによって、舞台上で受ける印象は変わります。</p>
@@ -117,6 +119,8 @@ get_header();
 </nav>
 </main>
 <style>
+
+.hk-lecoq-figure{max-width:850px;margin:30px auto 42px}.hk-lecoq-figure img{display:block;width:100%;height:auto;border:1px solid var(--hk-border);border-radius:14px}.hk-lecoq-figure figcaption{margin-top:10px;color:var(--hk-fg-dim);font-size:12px;line-height:1.7}
 .hk-lecoq-deep-hero{max-width:850px;margin:48px auto 42px;padding:0 20px}.hk-lecoq-deep-hero h1{font-family:var(--hk-font-serif);font-size:40px}.hk-lecoq-deep-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}.hk-lecoq-deep .hk-section{max-width:850px;margin-left:auto;margin-right:auto}.hk-lecoq-principle{padding:26px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border);text-align:center;line-height:1.9}.hk-lecoq-principle strong{font-family:var(--hk-font-serif);font-size:27px;color:var(--hk-accent-warm)}.hk-lecoq-body-grid,.hk-lecoq-space,.hk-lecoq-mime,.hk-lecoq-improv{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}.hk-lecoq-body-grid div,.hk-lecoq-space .space-item,.hk-lecoq-mime div,.hk-lecoq-improv div{padding:18px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border);display:flex;flex-direction:column;gap:7px}.hk-lecoq-body-grid span,.hk-lecoq-space span,.hk-lecoq-mime span,.hk-lecoq-improv span{font-size:12px;color:var(--hk-fg-dim);line-height:1.7}.hk-lecoq-mask{padding:22px;background:var(--hk-bg-card);border:1px solid var(--hk-border);display:flex;flex-direction:column;gap:8px}.hk-lecoq-mask span{color:var(--hk-fg-dim);font-size:13px}.hk-lecoq-exercise{padding:28px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border);line-height:1.9}.hk-lecoq-exercise ol{margin-top:0}.hk-lecoq-scene{padding:28px;background:var(--hk-bg-card);border:1px solid var(--hk-border);line-height:1.9}.hk-lecoq-scene .scene-line{font-family:var(--hk-font-serif);font-size:23px}.hk-textbook-note{margin-top:18px;padding:14px 16px;border-left:3px solid var(--hk-accent-warm);color:var(--hk-fg-dim);font-size:13px}.hk-lecoq-deep .hk-chapter-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:850px;margin:28px auto;padding:14px 0;border-top:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border)}.hk-lecoq-deep .hk-chapter-nav a{flex:1}.hk-lecoq-deep .hk-chapter-nav a:nth-child(2){text-align:center}.hk-lecoq-deep .hk-chapter-nav a:last-child{text-align:right}@media(max-width:700px){.hk-lecoq-deep-hero h1{font-size:30px}.hk-lecoq-body-grid,.hk-lecoq-space,.hk-lecoq-mime,.hk-lecoq-improv{grid-template-columns:1fr}.hk-lecoq-deep .hk-chapter-nav{margin-left:16px;margin-right:16px}.hk-lecoq-deep .hk-chapter-nav a{font-size:11px}}
 </style>
 <?php get_footer(); ?>
