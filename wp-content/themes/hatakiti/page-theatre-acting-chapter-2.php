@@ -106,6 +106,24 @@ get_header();
 <div class="hk-exercise"><h3>練習の進め方</h3><ol><li>STEP 1を数回繰り返し、音が崩れないことを確認する。</li><li>STEP 2で一定のテンポを作る。</li><li>STEP 3では少しずつ速度を上げる。</li><li>言い間違えたり音が崩れたりしたら、一つ前の速度に戻る。</li><li>最後にSTEP 4で、今の自分が保てる最高速度に挑戦する。</li></ol><p><strong>目標：</strong>「速く言えること」ではなく、<strong>速くなっても明瞭に、自然に、息を止めずに言えること</strong>です。</p></div>
 </section>
 
+<section class="hk-section hk-voice-subtext">
+<div class="hk-section-head"><h2>サブテキスト　北原白秋「五十音」</h2><p>50音の発声を、実際の言葉の流れの中で練習するためのサブテキストです。</p></div>
+<div class="hk-panel"><p><strong>使い方</strong></p><p>まずは一行ずつ、ゆっくり明瞭に読みます。次に一定のテンポで読み、慣れてきたら少しずつ速度を上げます。速さよりも、母音・子音・言葉の終わりまで明確に発声することを優先しましょう。</p></div>
+<div class="hk-voice-poem">
+<h3>五十音　北原白秋</h3>
+<p>水馬（あめんぼ）赤いな。ア、イ、ウ、エ、オ。<br>浮藻（うきも）に小蝦（こえび）もおよいでる。</p>
+<p>柿の木、栗の木。カ、キ、ク、ケ、コ。<br>啄木鳥（きつつき）こつこつ、枯れけやき。</p>
+<p>大角豆（ささげ）に醋（す）をかけ、サ、シ、ス、セ、ソ。<br>その魚（うを）浅瀬で刺しました。</p>
+<p>立ちましょ、喇叭（らっぱ）で、タ、チ、ツ、テ、ト。<br>トテトテタッタと飛び立った。</p>
+<p>蛞蝓（なめくじ）のろのろ、ナ、ニ、ヌ、ネ、ノ。<br>納戸（なんど）にぬめって、なにねばる。</p>
+<p>鳩ぽっぽ、ほろほろ。ハ、ヒ、フ、ヘ、ホ。<br>日向（ひなた）のお部屋にゃ笛を吹く。</p>
+<p>蝸牛（まゐまゐ）、螺旋巻（ねぢまき）、マ、ミ、ム、メ、モ。<br>梅の実落ちても見もしまい。</p>
+<p>焼栗、ゆで栗。ヤ、イ、ユ、エ、ヨ。<br>山田に灯のつく宵の家。</p>
+<p>雷鳥（らいてう）は寒かろ、ラ、リ、ル、レ、ロ。<br>蓮花（れんげ）が咲いたら、瑠璃（るり）の鳥。</p>
+<p>わい、わい、わっしょい。ワ、ヰ、ウ、ヱ、ヲ。<br>植木屋（うゑきや）、井戸換（ゐどが）へ、お祭だ。</p>
+</div>
+<div class="hk-exercise"><h3>練習の段階</h3><ol><li><strong>ゆっくり：</strong>一音一音を確認しながら読む。</li><li><strong>一定のテンポ：</strong>行ごとのリズムをそろえる。</li><li><strong>速度を上げる：</strong>明瞭さを保てる範囲で少しずつ速くする。</li><li><strong>実践：</strong>速くなっても息を止めず、言葉の終わりまで発声する。</li></ol></div>
+</section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第2章まとめ</h3><p><strong>呼吸 → 身体 → 声 → 響き → 言葉 → 相手。</strong></p><p>発声は大きな声を出すことではありません。呼吸を使い、身体をゆるめ、声を響かせ、音を明確にして、相手へ届ける技術です。</p></div></section>
 
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
@@ -154,5 +172,10 @@ get_header();
 .hk-ame-stage ul{margin-bottom:0}
 .hk-ame-example{padding:12px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-elevated);font-weight:700;line-height:2}
 @media(max-width:700px){.hk-ame-stage-grid{grid-template-columns:1fr}}
+<style>
+.hk-voice-subtext .hk-voice-poem{margin:24px 0;padding:28px 30px;border:1px solid var(--hk-border);background:var(--hk-bg-card);line-height:2.05}
+.hk-voice-subtext .hk-voice-poem h3{margin:0 0 20px;text-align:center;font-family:var(--hk-font-serif);color:var(--hk-accent-warm)}
+.hk-voice-subtext .hk-voice-poem p{margin:0 0 18px}
+.hk-voice-subtext .hk-voice-poem p:last-child{margin-bottom:0}
 </style>
 <?php get_footer(); ?>
