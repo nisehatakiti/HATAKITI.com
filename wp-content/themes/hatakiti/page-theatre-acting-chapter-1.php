@@ -27,7 +27,7 @@ get_header();
 <section class="hk-section"><div class="hk-section-head"><h2>1-5　声につなげる</h2></div>
 <p>息を吐く流れに短い声を乗せます。「あ」「う」「ん」など、無理のない音から始めます。</p>
 <div class="hk-exercise"><h3>息から声へ</h3><ol><li>自然に息を吐く。</li><li>吐く息の途中に小さな「あ」を乗せる。</li><li>声を大きくするのではなく、息と声がつながっている感覚を探す。</li><li>最後に短い言葉を一つ発する。</li></ol></div></section>
-<section class="hk-section"><div class="hk-panel hk-summary"><h3>第1章まとめ</h3><p><strong>呼吸をコントロールする前に、呼吸を観察する。</strong></p><p>吐く、動く、声にする。呼吸が身体と声をつなぐ感覚を身につけることが、次の「感情の解放」につながります。</p></div></section>
+<section class="hk-section"><div class="hk-panel hk-summary"><h3>第1章まとめ</h3><p><strong>呼吸をコントロールする前に、呼吸を観察する。</strong></p><p>吐く、動く、声にする。呼吸が身体と声をつなぐ感覚を身につけることが、次の「発声」につながります。</p></div></section>
 <nav class="hk-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">← 演技をする</a>
 <a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
