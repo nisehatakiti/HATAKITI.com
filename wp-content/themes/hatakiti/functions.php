@@ -212,6 +212,8 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = '第3章 中世の演劇｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/history/chapter-4' === $path ) {
         $parts['title'] = '第4章 ルネサンスと近代劇場｜演劇の歴史｜演劇の教科書';
+    } elseif ( 'theatre-textbook/history/chapter-5' === $path ) {
+        $parts['title'] = '第5章 近代演劇が生まれる｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
         $parts['title'] = '第1章 感情の解放｜演技編｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/stanislavski' ) ) {
