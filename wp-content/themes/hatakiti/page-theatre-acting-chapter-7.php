@@ -4,7 +4,7 @@ get_header();
 ?>
 <main class="hk-container hk-acting">
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第一部 体</p><h1>第7章　感情の解放</h1><p>身体が整ったところから、感情の反応を扱える身体へ進みます。</p></header>
-<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">← 第6章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">第8章 →</a></nav>
+<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">← 第6章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><span class="hk-chapter-nav-disabled">次の部へ →</span></nav>
 <section class="hk-section"><div class="hk-section-head"><h2>7-1　感情は身体にも現れる</h2></div><p>呼吸、筋肉、姿勢、重心、視線、声などに感情の変化が現れます。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>7-2　感情を作るのではなく気づく</h2></div><p>悲しい顔や怒った声を先に作るのではなく、今の身体と呼吸に何が起きているかを観察します。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>7-3　身体のブレーキに気づく</h2></div><p>笑いそうになった瞬間に口を閉じる、泣きそうなときに息を止めるなど、自分が反応を止める場所を探します。</p></section>
