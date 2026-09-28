@@ -31,15 +31,15 @@ get_header();
                 <h3>演劇の歴史</h3>
                 <p>演劇はなぜ生まれたのか。古代から現代まで、演劇が変化してきた流れを学ぶ。</p>
             </a>
-            <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">
-                <span class="hk-textbook-number">02</span>
-                <h3>演技編</h3>
-                <p>感情の解放から始めて、身体・呼吸・声・視線・相手との関係を実践的に学ぶ。</p>
-            </a>
             <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting-theory/' ) ); ?>">
-                <span class="hk-textbook-number">03</span>
+                <span class="hk-textbook-number">02</span>
                 <h3>演技論・演技システム</h3>
                 <p>演技とは何かを考え、スタニスラフスキー、メソッド、マイズナー、ルコックなどの方法を比較しながら学ぶ。</p>
+            </a>
+            <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">
+                <span class="hk-textbook-number">03</span>
+                <h3>演技をする</h3>
+                <p>感情、身体、呼吸、声、視線、相手との関係を実際に使いながら、演技を体験する。</p>
             </a>
             <a class="hk-textbook-card" href="#etudes">
                 <span class="hk-textbook-number">04</span>
