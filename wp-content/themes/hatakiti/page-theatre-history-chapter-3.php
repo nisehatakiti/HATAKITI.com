@@ -46,7 +46,7 @@ get_header();
     <section class="hk-section">
         <div class="hk-section-head"><h2>3-2　教会の中で物語を表現する</h2></div>
         <p>中世ヨーロッパでは、教会の祭礼や典礼の中に、歌や対話、動作を使って物語を表現する要素が見られました。</p>
-        <p>12世紀のフランスに伝わる<strong>『アダム劇』</strong>のように、聖書の物語を舞台上で表現する作品も残っています。『アダム劇』には、登場人物の動きや話し方、舞台上での位置などを示す細かな指示も記されています。citeturn0search1</p>
+        <p>12世紀のフランスに伝わる<strong>『アダム劇』</strong>のように、聖書の物語を舞台上で表現する作品も残っています。『アダム劇』には、登場人物の動きや話し方、舞台上での位置などを示す細かな指示も記されています。</p>\n        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter3-01-church-play.png" alt="中世の教会の中で行われた演劇の様子を示す図解" loading="lazy"></figure>\n
 
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image">
@@ -64,7 +64,7 @@ get_header();
     <section class="hk-section">
         <div class="hk-section-head"><h2>3-3　教会の外へ出ていく演劇</h2></div>
         <p>演劇の場所は、教会の内部だけに限られていたわけではありません。教会の入口や前の空間、町の広場など、人々が集まる場所も上演の場になっていきました。</p>
-        <p>『アダム劇』の舞台指示からは、教会の入口を背景に、町の人々が行き交う空間で上演することが想定されていたことが分かります。citeturn0search1</p>
+        <p>『アダム劇』の舞台指示からは、教会の入口を背景に、町の人々が行き交う空間で上演することが想定されていたことが分かります。</p>\n        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter3-02-church-to-town.png" alt="教会の中から教会の外、町や広場へ演劇が広がる流れを示す図解" loading="lazy"></figure>\n
 
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image">
@@ -80,7 +80,7 @@ get_header();
         <div class="hk-section-head"><h2>3-4　広場が舞台になる</h2></div>
         <p>町の広場のような場所では、古代ギリシャのような大きな常設劇場がなくても、演じる場所と見る場所を作ることができます。</p>
         <p>簡単な舞台や建物の前などを使い、観客が周囲から見る。こうした環境では、舞台と客席の距離も近くなります。</p>
-        <p>ここで、第1章で考えた<strong>「劇場がなくても、舞台は生まれる」</strong>という考え方が、歴史の中でもう一度見えてきます。</p>
+        <p>ここで、第1章で考えた<strong>「劇場がなくても、舞台は生まれる」</strong>という考え方が、歴史の中でもう一度見えてきます。</p>\n        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter3-03-market-square-stage.png" alt="中世の町の広場に作られた仮設舞台を示す図解" loading="lazy"></figure>\n
     </section>
 
     <section class="hk-section">
@@ -115,7 +115,7 @@ get_header();
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>3-7　中世の演劇には、笑いもあった</h2></div>
-        <p>中世の演劇を、宗教的で真面目なものだけだと考える必要はありません。後期中世には、道徳劇だけでなく、ファルス（滑稽劇）のように、日常の人間関係や失敗、欲望などを笑いにする作品もありました。メトロポリタン美術館も、道徳劇『エブリマン』やフランスのファルスなどを中世演劇の例として紹介しています。citeturn0search0</p>
+        <p>中世の演劇を、宗教的で真面目なものだけだと考える必要はありません。後期中世には、道徳劇だけでなく、ファルス（滑稽劇）のように、日常の人間関係や失敗、欲望などを笑いにする作品もありました。メトロポリタン美術館も、道徳劇『エブリマン』やフランスのファルスなどを中世演劇の例として紹介しています。</p>
 
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image">
@@ -130,14 +130,14 @@ get_header();
     <section class="hk-section">
         <div class="hk-section-head"><h2>3-8　誰が演じていたの？</h2></div>
         <p>中世の演劇を支えた人々は一様ではありません。教会に関わる人々、市民、都市の職人や団体など、地域や作品によってさまざまな担い手がいました。</p>
-        <p>つまり、演劇は「専門の劇場にいる俳優だけがするもの」ではありません。社会の中にいるさまざまな人が、演じる側として関わることもあったのです。</p>
+        <p>つまり、演劇は「専門の劇場にいる俳優だけがするもの」ではありません。社会の中にいるさまざまな人が、演じる側として関わることもあったのです。</p>\n        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter3-04-actor-audience.png" alt="中世演劇における演じる人と見る人の関係を示す図解" loading="lazy"></figure>\n
     </section>
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>3-9　日本の中世では、能と狂言が育っていく</h2></div>
         <p>ここまで主にヨーロッパの中世を見てきましたが、同じ時代の日本でも、独自の舞台表現が発展していきました。</p>
-        <p>能は複数の芸能の流れから発展し、14世紀以降の日本で上演されてきました。室町時代には足利義満の庇護を受けた観阿弥・世阿弥らによって発展し、世阿弥は演技や能についての理論も残しています。citeturn0search3</p>
-        <p>狂言は能とともに発展した喜劇的な演劇で、能の合間などに演じられました。citeturn0search4turn0search7</p>
+        <p>能は複数の芸能の流れから発展し、14世紀以降の日本で上演されてきました。室町時代には足利義満の庇護を受けた観阿弥・世阿弥らによって発展し、世阿弥は演技や能についての理論も残しています。</p>
+        <p>狂言は能とともに発展した喜劇的な演劇で、能の合間などに演じられました。</p>
 
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image">
@@ -153,7 +153,7 @@ get_header();
         <div class="hk-section-head"><h2>3-10　中世の演劇から何が見えてくる？</h2></div>
         <p>第2章では、演劇が祭りや都市の中で形を整え、劇場という専用の空間も発展していきました。</p>
         <p>第3章では、その形が一つに固定されなかったことが分かります。</p>
-        <p><strong>教会 → 教会の外 → 町や広場 → さまざまな上演の場</strong></p>
+        <p><strong>教会 → 教会の外 → 町や広場 → さまざまな上演の場</strong></p>\n        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter3-05-medieval-performance-places.png" alt="中世演劇が行われたさまざまな上演場所を示す図解" loading="lazy"></figure>\n
         <p>演劇は、社会の中で人々が集まる場所と結びつきながら、宗教的な物語、道徳、笑いなど、さまざまな内容を表現するようになりました。</p>
 
         <div class="hk-nyakakichi">
@@ -194,7 +194,7 @@ get_header();
 .hk-history-textbook .hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:24px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:14px solid #454545}
 .hk-history-textbook .hk-nyakakichi-question p{margin:0;color:#fff}
 .hk-history-textbook .hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}
-.hk-history-textbook .hk-nyakakichi-followup p{margin:0 0 8px}
+.hk-history-textbook .hk-nyakakichi-followup p{margin:0 0 8px}\n.hk-history-textbook .hk-history-figure{max-width:900px;margin:30px auto 36px;padding:0}\n.hk-history-textbook .hk-history-figure img{display:block;width:100%;height:auto;border:1px solid var(--hk-border);border-radius:12px;background:var(--hk-bg-elevated)}
 .hk-history-textbook .hk-reading-note{margin-top:8px}
 .hk-history-textbook .hk-reading-note p{margin:0;padding:18px 20px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);color:var(--hk-fg-dim)}
 .hk-history-textbook p,.hk-history-textbook li{line-height:2}
