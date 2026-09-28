@@ -180,6 +180,18 @@ function hatakiti_theatre_textbook_route( $template ) {
     if ( 'theatre-textbook/acting/chapter-3' === $path ) {
         return get_template_directory() . '/page-theatre-acting-chapter-3.php';
     }
+    if ( 'theatre-textbook/acting/chapter-4' === $path ) {
+        return get_template_directory() . '/page-theatre-acting-chapter-4.php';
+    }
+    if ( 'theatre-textbook/acting/chapter-5' === $path ) {
+        return get_template_directory() . '/page-theatre-acting-chapter-5.php';
+    }
+    if ( 'theatre-textbook/acting/chapter-6' === $path ) {
+        return get_template_directory() . '/page-theatre-acting-chapter-6.php';
+    }
+    if ( 'theatre-textbook/acting/chapter-7' === $path ) {
+        return get_template_directory() . '/page-theatre-acting-chapter-7.php';
+    }
 
     if ( 'theatre-textbook/acting-theory' === $path ) {
         return get_template_directory() . '/page-theatre-acting-theory.php';
