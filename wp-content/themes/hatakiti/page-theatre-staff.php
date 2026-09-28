@@ -48,6 +48,8 @@ get_header();
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>"><span>第6章</span><strong>電気と操作</strong><small>回路・調光器・フェーダー・チャンネル・DMX</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>"><span>第7章</span><strong>色を作る</strong><small>ゼラ・色温度・LED・混色・色の組み合わせ</small></a>
     <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>"><span>第8章</span><strong>フォーカスと明かり合わせ</strong><small>狙う・絞る・切る・重ねる・実際に合わせる</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-9/' ) ); ?>"><span>第9章</span><strong>光を組み合わせる</strong><small>主役の光・役割・明るさ・重ね方・場面ごとの組み合わせ</small></a>
+    <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>"><span>第10章</span><strong>実際の照明を作ってみる</strong><small>見せたいものを決め、灯体・方向・色・明るさを組み立てる</small></a>
   </div>
 </section>
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-1' === $path ) : ?>
@@ -55,7 +57,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <span class="hk-chapter-nav-disabled">← 前の章</span>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">次へ →</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">第2章 →</a>
 </nav>
 <section class="hk-section">
   <div class="hk-section-head">
@@ -218,15 +220,15 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <span class="hk-chapter-nav-disabled">← 前の章</span>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">次へ →</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">第2章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-2' === $path ) : ?>
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第2章　灯体を知る</h1><p>舞台照明で使われる代表的な灯体と、それぞれが得意とする光を学びます。</p></header>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>">← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>">← 第1章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">次へ →</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">第3章 →</a>
 </nav>
 <section class="hk-section">
   <div class="hk-section-head">
@@ -367,17 +369,17 @@ get_header();
   <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-happy.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「灯体って、ただ光る箱じゃないんだね。」</p></div></div><div class="hk-nyakakichi-followup"><p>そうです。灯体の中では、光源から出た光を反射させたり、レンズで整えたり、広がりを調整したりして、舞台に必要な光へ変えています。</p><p>次は、その「灯体の中」を実際に見てみましょう。</p></div>
 </section>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>">← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-1/' ) ); ?>">← 第1章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">次へ →</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">第3章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-3' === $path ) : ?>
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第3章　灯体の中で光はどうなっている？</h1><p>光源から出た光が、灯体の中でどのように反射・集光・整形され、舞台へ届くのかを学びます。</p></header>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 第2章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>">第4章 →</a>
 </nav>
 <section class="hk-section">
   <div class="hk-section-head">
@@ -538,9 +540,9 @@ get_header();
   </div>
 </section>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 前へ</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-2/' ) ); ?>">← 第2章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>">第4章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-4' === $path ) : ?>
@@ -690,7 +692,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-3/' ) ); ?>">← 第3章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">次の章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">第5章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-5' === $path ) : ?>
@@ -870,7 +872,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-4/' ) ); ?>">← 第4章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第6章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">第6章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-6' === $path ) : ?>
@@ -878,7 +880,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第7章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>">第7章 →</a>
 </nav>
 <section class="hk-section">
   <div class="hk-section-head"><h2>導入　光は「電気」だけでは動かない</h2><p>灯体を舞台に仕込んだあと、電源と操作の仕組みをつないで、はじめて「点ける・消す・明るさを変える」ができるようになります。</p></div>
@@ -930,7 +932,11 @@ get_header();
 </section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第6章まとめ</h3><p>照明を動かすには、灯体だけでなく、電源・回路・調光・操作の仕組みを理解する必要があります。</p><p><strong>回路は設備側、チャンネルは操作側の単位</strong>として考えると整理しやすくなります。</p><p>LED灯体ではDMXなどの制御信号が登場し、明るさだけでなく色や動きまで操作できる機種があります。</p><p>次の章では、照明の「色」をさらに深く見ていきます。</p></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「灯体を仕込んで、電気をつないで、操作卓から動かす。だんだん仕組みが見えてきた！」</p></div></div></section>
-<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション"><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>">第7章 →</a></nav>
+<nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-5/' ) ); ?>">← 第5章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-7/' ) ); ?>">第7章 →</a>
+</nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-7' === $path ) : ?>
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜照明</p><h1>第7章　色を作る</h1><p>ゼラ、色温度、LEDの混色。照明の「色」を、感覚だけでなく仕組みから考えます。</p></header>
@@ -982,9 +988,9 @@ get_header();
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第7章まとめ</h3><p>照明の色は、ゼラやLEDなど「色を作る方法」から考えると理解しやすくなります。</p><p><strong>ゼラは光を通す・吸収することで色を変え、LEDは複数の光を組み合わせて色を作る</strong>、という違いがあります。</p><p>色温度は白色光の暖かさ・冷たさを考えるための基本的な指標です。</p><p>そして舞台では、一つの色を選ぶだけでなく、前・サイド・バック・背景など複数の光を組み合わせて色の設計を行います。</p><p>次の章では、仕込んだ灯体を実際にどこへ向けるか、「フォーカスと明かり合わせ」を学びます。</p></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( home_url( '/wp-content/plugins/hatakiti-core/assets/images/nyakakichi/' ) ); ?>nyakakichi-understood.png" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「色も、選ぶだけじゃなくて、どう作るかと組み合わせ方が大事なんだね！」</p></div></div></section>
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-6/' ) ); ?>">← 第6章</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">第8章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-8' === $path ) : ?>
@@ -1356,7 +1362,7 @@ get_header();
 <nav class="hk-chapter-nav" aria-label="照明の章ナビゲーション">
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-8/' ) ); ?>">← 第8章</a>
   <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/' ) ); ?>">目次</a>
-  <span class="hk-chapter-nav-disabled">第10章 →</span>
+  <a href="<?php echo esc_url( home_url( '/theatre-textbook/staff/lighting/chapter-10/' ) ); ?>">第10章 →</a>
 </nav>
 
 <?php elseif ( 'theatre-textbook/staff/lighting/chapter-10' === $path ) : ?>
