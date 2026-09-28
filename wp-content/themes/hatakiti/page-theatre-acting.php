@@ -21,7 +21,7 @@ if ( 'theatre-textbook/acting' === $path ) {
         <header class="hk-staff-hero">
             <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技</p>
             <h1>演技をする</h1>
-            <p>呼吸、感情、発声、身体、視線、相手との関係、行動へと、実際に身体を動かしながら演技を学びます。</p>
+            <p>まず「体」を作り、そこから「心」「技」へ進みます。実際に身体を動かしながら、演技を学びます。</p>
         </header>
 
         <nav class="hk-chapter-nav" aria-label="演技編ナビゲーション">
@@ -39,6 +39,22 @@ if ( 'theatre-textbook/acting' === $path ) {
                 <div><h3>第1章　呼吸法</h3><p>呼吸を観察し、息を止めずに身体と声を使う。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-1/' ) ); ?>">第1章へ →</a></div>
                 <div><h3>第2章　感情の解放</h3><p>感情を作るのではなく、身体に起きている反応に気づく。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-2/' ) ); ?>">第2章へ →</a></div>
                 <div><h3>第3章　発声</h3><p>呼吸と身体を使い、相手に届く声をつくる。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">第3章へ →</a></div>
+            </div>
+        </section>
+
+        <section class="hk-section">
+            <div class="hk-section-head">
+                <h2>第一部　体 ― 演技のできる身体を作る</h2>
+                <p>まずは、役者が演技をするための身体を作ります。呼吸から始めて、声、身体、姿勢、歩き方、重心へ進み、最後に感情の解放へつなげます。</p>
+            </div>
+            <div class="hk-term-grid">
+                <div><h3>第1章　呼吸法</h3><p>呼吸を観察し、息を止めずに身体と声を使う。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-1/' ) ); ?>">第1章へ →</a></div>
+                <div><h3>第2章　発声</h3><p>呼吸と身体を使い、相手に届く声をつくる。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-2/' ) ); ?>">第2章へ →</a></div>
+                <div><h3>第3章　身体</h3><p>身体の感覚を知り、必要な力を使える身体をつくる。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">第3章へ →</a></div>
+                <div><h3>第4章　姿勢</h3><p>立ち方、軸、身体のバランスから人物の土台をつくる。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-4/' ) ); ?>">第4章へ →</a></div>
+                <div><h3>第5章　歩き方</h3><p>歩幅、速度、方向、身体の質から人物をつくる。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">第5章へ →</a></div>
+                <div><h3>第6章　重心</h3><p>前後・左右・上下の重心移動を演技に使う。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">第6章へ →</a></div>
+                <div><h3>第7章　感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><a class="hk-inline-link" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-7/' ) ); ?>">第7章へ →</a></div>
             </div>
         </section>
 
