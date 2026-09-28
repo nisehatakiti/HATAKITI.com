@@ -182,7 +182,7 @@ function hatakiti_theatre_textbook_title( $parts ) {
     $path = trim( parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
     if ( 'theatre-textbook' === $path ) {
         $parts['title'] = '演劇の教科書';
-    }    } elseif ( 'theatre-textbook/acting' === $path ) {
+    } elseif ( 'theatre-textbook/acting' === $path ) {
         $parts['title'] = '演技編｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
         $parts['title'] = '第1章 感情の解放｜演技編｜演劇の教科書';
