@@ -120,6 +120,8 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/method',
         'theatre-textbook/meisner',
         'theatre-textbook/lecoq',
+        'theatre-textbook/acting',
+        'theatre-textbook/acting/chapter-1',
         'theatre-textbook/theatre-world',
         'theatre-textbook/theatre-world/high-school',
         'theatre-textbook/theatre-world/commercial',
@@ -156,6 +158,10 @@ function hatakiti_theatre_textbook_route( $template ) {
         return get_template_directory() . '/page-theatre-textbook.php';
     }
 
+    if ( 'theatre-textbook/acting' === $path || 'theatre-textbook/acting/chapter-1' === $path ) {
+        return get_template_directory() . '/page-theatre-acting.php';
+    }
+
     if ( 'theatre-textbook/staff/lighting/filters' === $path || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' ) ) {
         return get_template_directory() . '/page-theatre-lighting-filters.php';
     }
@@ -176,6 +182,10 @@ function hatakiti_theatre_textbook_title( $parts ) {
     $path = trim( parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
     if ( 'theatre-textbook' === $path ) {
         $parts['title'] = '演劇の教科書';
+    }    } elseif ( 'theatre-textbook/acting' === $path ) {
+        $parts['title'] = '演技編｜演劇の教科書';
+    } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
+        $parts['title'] = '第1章 感情の解放｜演技編｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/stanislavski' ) ) {
         $parts['title'] = 'スタニスラフスキー・システム｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/method' ) ) {
