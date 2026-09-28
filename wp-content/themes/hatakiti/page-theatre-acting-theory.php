@@ -91,6 +91,11 @@ get_header();
 <p>次は、その中からスタニスラフスキー・システムを詳しく見ていきます。</p>
 </div>
 </section>
+
+<nav class="hk-chapter-nav" aria-label="演技論ナビゲーション">
+<a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">← 演劇の教科書</a>
+<a href="<?php echo esc_url( home_url( '/theatre-textbook/stanislavski/' ) ); ?>">スタニスラフスキー編 →</a>
+</nav>
 </main>
 <style>
 .hk-theory-hero{max-width:820px;margin:54px auto 42px;padding:0 20px;text-align:center}.hk-theory-hero h1{font-family:var(--hk-font-serif);font-size:40px}.hk-theory-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}.hk-theory-note,.hk-theory-scene{padding:22px;background:var(--hk-bg-card);border:1px solid var(--hk-border);line-height:1.9}.hk-theory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.hk-theory-grid article{padding:22px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border)}.hk-theory-grid h3{font-family:var(--hk-font-serif);margin-top:0}.hk-theory-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.hk-theory-methods a{padding:16px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg);display:flex;flex-direction:column;gap:6px}.hk-theory-methods a:hover{border-color:var(--hk-accent-warm);text-decoration:none}.hk-theory-methods span{font-size:11px;color:var(--hk-fg-dim)}.scene-line{font-family:var(--hk-font-serif);font-size:22px}.hk-theory-scene li{margin:10px 0}.hk-acting-theory .hk-section{max-width:900px;margin-left:auto;margin-right:auto}
