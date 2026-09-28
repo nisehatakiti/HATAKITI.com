@@ -95,9 +95,15 @@ get_header();
 </section>
 
 <section class="hk-section">
-<div class="hk-section-head"><h2>付録　発声練習「あめんぼの歌」</h2><p>母音・子音・リズムをまとめて練習するための文章として使います。</p></div>
-<div class="hk-panel"><p><strong>まずはゆっくり、明瞭に。</strong></p><p>一音一音を雑にせず、口をしっかり動かして読みます。慣れてきたら少しずつ速度を上げますが、速さよりも、最後まで息と声が途切れないことを優先します。</p></div>
-<div class="hk-exercise"><h3>練習のポイント</h3><ul><li>口の形を意識する。</li><li>一つひとつの音を明確にする。</li><li>息を止めない。</li><li>最初はゆっくり、慣れてきたら速度を上げる。</li></ul></div>
+<div class="hk-section-head"><h2>付録　発声練習「あめんぼの歌」</h2><p>ゆっくり、正確に読むところから始めて、少しずつ速度を上げていきます。</p></div>
+<div class="hk-panel"><p><strong>速く読むことが目的ではありません。</strong></p><p>この練習では、口・舌・息・声を一緒に使いながら、どの速度でも音を崩さずに発声できることを目指します。速くするのは、ゆっくり読んでも明瞭に発声できるようになってからです。</p></div>
+<div class="hk-ame-stage-grid">
+<div class="hk-ame-stage"><span>STEP 1</span><h3>ゆっくり読む</h3><p>まずは一語ずつ、意味を確認するくらいの速度で読みます。</p><p class="hk-ame-example">あめんぼ　あかいな<br>あいうえお</p><ul><li>口をしっかり動かす</li><li>一音ずつ明瞭にする</li><li>息を止めない</li></ul></div>
+<div class="hk-ame-stage"><span>STEP 2</span><h3>一定の速度で読む</h3><p>文章全体を同じテンポで読みます。途中だけ急がないことがポイントです。</p><ul><li>音の大きさをそろえる</li><li>言葉の終わりまで発声する</li><li>呼吸する場所を決める</li></ul></div>
+<div class="hk-ame-stage"><span>STEP 3</span><h3>少しずつ速度を上げる</h3><p>明瞭さを保ったまま、少しだけテンポを上げます。</p><ul><li>口が追いつく範囲で上げる</li><li>息が苦しくなったら戻す</li><li>音が崩れたら一段階遅くする</li></ul></div>
+<div class="hk-ame-stage"><span>STEP 4</span><h3>速さに挑戦する</h3><p>最後に、自分が無理なく保てる速度まで上げます。</p><ul><li>速さより明瞭さを優先</li><li>声を押し出さない</li><li>最後まで息と声をつなげる</li></ul></div>
+</div>
+<div class="hk-exercise"><h3>練習の進め方</h3><ol><li>STEP 1を数回繰り返し、音が崩れないことを確認する。</li><li>STEP 2で一定のテンポを作る。</li><li>STEP 3では少しずつ速度を上げる。</li><li>言い間違えたり音が崩れたりしたら、一つ前の速度に戻る。</li><li>最後にSTEP 4で、今の自分が保てる最高速度に挑戦する。</li></ol><p><strong>目標：</strong>「速く言えること」ではなく、<strong>速くなっても明瞭に、自然に、息を止めずに言えること</strong>です。</p></div>
 </section>
 
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第2章まとめ</h3><p><strong>呼吸 → 身体 → 声 → 響き → 言葉 → 相手。</strong></p><p>発声は大きな声を出すことではありません。呼吸を使い、身体をゆるめ、声を響かせ、音を明確にして、相手へ届ける技術です。</p></div></section>
@@ -139,5 +145,14 @@ get_header();
 .hk-acting .hk-nyakakichi-question p{margin:0}
 .hk-acting .hk-nyakakichi-followup{max-width:760px;margin:8px auto 0;padding-left:116px;color:var(--hk-fg-dim)}
 @media(max-width:700px){.hk-acting .hk-chapter-nav.hk-acting-chapter-nav{grid-template-columns:1fr;text-align:center}.hk-acting-chapter-nav .hk-nav-prev,.hk-acting-chapter-nav .hk-nav-center,.hk-acting-chapter-nav .hk-nav-next{justify-self:center}.hk-gonjuon,.hk-problem-grid{grid-template-columns:1fr}.hk-acting .hk-nyakakichi{grid-template-columns:82px minmax(0,1fr);gap:12px}.hk-acting .hk-nyakakichi-image,.hk-acting .hk-nyakakichi-image img{width:82px}.hk-acting .hk-nyakakichi-followup{padding-left:94px}}
+<style>
+.hk-ame-stage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.hk-ame-stage{padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
+.hk-ame-stage>span{display:inline-block;font-size:12px;color:var(--hk-accent-warm);font-weight:700;letter-spacing:.08em}
+.hk-ame-stage h3{margin:7px 0 10px;font-family:var(--hk-font-serif)}
+.hk-ame-stage p{color:var(--hk-fg-dim)}
+.hk-ame-stage ul{margin-bottom:0}
+.hk-ame-example{padding:12px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-elevated);font-weight:700;line-height:2}
+@media(max-width:700px){.hk-ame-stage-grid{grid-template-columns:1fr}}
 </style>
 <?php get_footer(); ?>
