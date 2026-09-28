@@ -186,6 +186,8 @@ get_header();
 .hk-history-textbook .hk-chapter-nav a,.hk-history-textbook .hk-chapter-nav span{flex:1}
 .hk-history-textbook .hk-chapter-nav a:nth-child(2),.hk-history-textbook .hk-chapter-nav span:nth-child(2){text-align:center}
 .hk-history-textbook .hk-chapter-nav a:last-child,.hk-history-textbook .hk-chapter-nav span:last-child{text-align:right}
+.hk-history-textbook .hk-history-diagram{margin:28px auto 30px;text-align:center}
+.hk-history-textbook .hk-history-diagram img{display:block;width:100%;height:auto;max-width:1100px;margin:0 auto;border-radius:12px}
 .hk-history-textbook .hk-nyakakichi{display:flex;align-items:center;gap:18px;margin:28px 0 10px;padding:0;background:transparent;border:0;color:var(--hk-fg);position:relative;overflow:visible}
 .hk-history-textbook .hk-nyakakichi-image{flex:0 0 110px;text-align:center}
 .hk-history-textbook .hk-nyakakichi-image img{display:block;width:110px;height:auto;max-height:170px;object-fit:contain;margin:0 auto}
