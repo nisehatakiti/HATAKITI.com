@@ -190,7 +190,7 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = '演劇の教科書';
     } elseif ( 'theatre-textbook/acting' === $path ) {
         $parts['title'] = '演技編｜演劇の教科書';
-    }    } elseif ( 'theatre-textbook/history' === $path ) {
+    } elseif ( 'theatre-textbook/history' === $path ) {
         $parts['title'] = '演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/history/chapter-1' === $path ) {
         $parts['title'] = '第1章 演劇はなぜ生まれたのか｜演劇の歴史｜演劇の教科書';
