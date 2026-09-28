@@ -79,6 +79,7 @@ get_header();
         <p>まねをすることで、人間は知らないことを学ぶこともできます。でも、「まね」にはもう一つの使い方があります。</p>
         <p><strong>その場にないものを、目の前で再現することです。</strong></p>
         <p>例えば、狩りから帰ってきた人が「今日、こんな動物を見た」と言いながら、その動物の走り方を身体で表現したとします。見ている人は、その動きを見て「動物が走っているところ」を想像できます。</p>
+        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter1-01-mimicry-to-expression.png" alt="人間は「まね」から何を生み出したのかを示す図解" loading="lazy"></figure>
     </section>
 
     <section class="hk-section">
@@ -104,6 +105,7 @@ get_header();
         <p>前者は出来事を<strong>語っている</strong>状態です。後者は、その人物の声や身体を使って<strong>演じている</strong>状態に近づきます。</p>
         <p>もちろん、語りと演技を完全に分けることはできません。昔から、語ることと演じることが混ざった表現もたくさんありました。</p>
         <p>それでも、「誰かについて話す」ことと「自分がその人物になって見せる」ことには違いがあります。この違いは、演劇を考えるうえで大切です。</p>
+        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter1-02-tell-and-act.png" alt="「語る」から「演じる」へを比較する図解" loading="lazy"></figure>
     </section>
 
     <section class="hk-section">
@@ -113,6 +115,7 @@ get_header();
         </div>
         <p>一人で踊っているだけなら、それは踊りです。そこに別の人がいて、その踊りを見ている。すると、<strong>「見せる人」と「見る人」</strong>という関係が生まれます。</p>
         <p>演劇では、俳優だけでなく観客も重要です。俳優が表現し、観客がそれを受け取る。その両方が同じ時間と空間を共有することで、舞台上の出来事が成立します。</p>
+        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter1-03-performer-and-audience.png" alt="演じる人と見る人の関係を示す図解" loading="lazy"></figure>
     </section>
 
     <section class="hk-section">
@@ -144,6 +147,7 @@ get_header();
         <p>舞台の上に何もないとします。俳優が「ここに大きな箱があります」と言って、箱を持ち上げる動きをします。</p>
         <p>実際には箱はありません。でも、身体の使い方を変えれば「重い箱」を表現できます。観客も、その表現を受け取って想像します。</p>
         <p>舞台に本物の家を作らなくても、「ここは家です」という表現と観客の想像によって、そこを家として扱うことができます。</p>
+        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter1-04-empty-space-becomes-stage.png" alt="劇場がなくても舞台が生まれることを示す図解" loading="lazy"></figure>
     </section>
 
     <section class="hk-section">
@@ -224,6 +228,7 @@ get_header();
             <p>人間が、<strong>まねる・語る・踊る・歌う・誰かになる・人に見せる</strong>というさまざまな行為を重ねる中で、演劇につながる表現が生まれていきました。</p>
             <p>演劇には、<strong>演じる人</strong>と<strong>見る人</strong>がいます。演じる人は身体や声を使って人物や出来事を表現し、見る人はそれを受け取って想像します。</p>
             <p>そして両者が同じ時間と空間を共有することで、一つの舞台上の出来事が生まれます。</p>
+        <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter1-05-birth-of-theatre.png" alt="演劇が生まれるまでのさまざまな行為をまとめた図解" loading="lazy"></figure>
             <p>演劇にはたくさんの形があります。だから、「これだけが演劇だ」と簡単に決めることはできません。</p>
             <p>演劇は、人間がその時代、その社会の中で、<strong>「誰かに何かを見せたい」「何かを伝えたい」「別の人間や世界を表現したい」</strong>と考えた結果として、さまざまな形に変化してきたものだと考えることができます。</p>
         </div>
@@ -234,7 +239,7 @@ get_header();
             <h2>次は、実際の歴史へ</h2>
             <p>ここまでで「演劇が生まれる土台」を見ました。次は、古代の社会の中で、どんな演劇が実際に作られていったのかを見ていきます。</p>
         </div>
-        <a class="hk-history-next-card" href="#">
+        <a class="hk-history-next-card" href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-2/' ) ); ?>">
             <span>第2章</span>
             <strong>古代の演劇</strong>
             <small>古代ギリシャ、古代ローマ、そして世界各地の古い演劇へ</small>
