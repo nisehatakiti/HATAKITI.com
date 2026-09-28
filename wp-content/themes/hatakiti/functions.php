@@ -266,7 +266,7 @@ function hatakiti_theatre_textbook_title( $parts ) {
     } elseif ( 'theatre-textbook/acting-theory' === $path ) {
         $parts['title'] = '演技とは何か｜演技論・演技システム｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
-        $parts['title'] = '第1章 感情の解放｜演技編｜演劇の教科書';
+        $parts['title'] = '第1章 呼吸法｜演技をする｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/stanislavski' ) ) {
         $parts['title'] = 'スタニスラフスキー・システム｜演劇の教科書';
     } elseif ( false !== strpos( $path, 'theatre-textbook/method' ) ) {
