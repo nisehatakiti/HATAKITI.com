@@ -50,6 +50,8 @@ get_header();
                 </div>
             </div>
             <div class="hk-nyakakichi-followup"><p>当時の演劇は、祭りや社会の中に置かれた大きな出来事でもありました。</p></div>
+            <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter2-01-festival-to-theatre.png" alt="祭りの中で演劇が生まれていく流れを示す図解" loading="lazy"></figure>
+
         </section>
 
         <section class="hk-section">
@@ -75,6 +77,8 @@ get_header();
             </div>
             <p>悲劇と喜劇は、ただ「泣く劇」と「笑う劇」という違いではありません。どちらも、その時代の人々が<strong>人間や社会について考える場</strong>になっていました。</p>
 
+            <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter2-03-tragedy-and-comedy.png" alt="古代ギリシャの悲劇と喜劇を比較する図解" loading="lazy"></figure>
+
             <div class="hk-nyakakichi">
                 <div class="hk-nyakakichi-image">
                     <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-confused.png' ) ); ?>" alt="悲劇と喜劇について考えるにゃかきち" loading="lazy">
@@ -98,12 +102,17 @@ get_header();
                     <p>演劇が変わると、演劇をする「場所」も変わっていったんだニャ！</p>
                 </div>
             </div>
+            <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter2-02-ancient-greek-theatre.png" alt="古代ギリシャの劇場の構造を示す図解" loading="lazy"></figure>
+
         </section>
 
         <section class="hk-section">
             <div class="hk-section-head"><h2>2-5　俳優と合唱隊</h2></div>
             <p>古代ギリシャの演劇では、一人の俳優だけで物語を進めるのではなく、俳優と合唱隊が言葉や動きで関わり合う形が発達しました。</p>
             <p>作品の中では、登場人物の会話と合唱隊の歌や動きが組み合わされます。こうした構造は、後の演劇における「役を演じる人」と「舞台上の集団」の関係を考えるうえでも重要です。</p>
+
+            <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter2-04-actors-and-chorus.png" alt="古代ギリシャ演劇における俳優と合唱隊の関係を示す図解" loading="lazy"></figure>
+
         </section>
 
         <section class="hk-section">
@@ -126,6 +135,9 @@ get_header();
                     <p>「劇場が先」じゃなくて、人が集まって演じることから場所も形も変わっていったんだニャ。</p>
                 </div>
             </div>
+
+            <figure class="hk-history-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/' ) ); ?>history-chapter2-05-greece-to-rome.png" alt="古代ギリシャからローマへ演劇が広がる流れをまとめた図解" loading="lazy"></figure>
+
         </section>
 
         <section class="hk-section hk-reading-note">
@@ -157,6 +169,8 @@ get_header();
 .hk-history-textbook .hk-nyakakichi-question p{margin:0;color:#fff}
 .hk-history-textbook .hk-nyakakichi-followup{margin:0 0 24px 128px;line-height:1.9;color:var(--hk-fg)}
 .hk-history-textbook .hk-nyakakichi-followup p{margin:0 0 8px}
+.hk-history-textbook .hk-history-figure{max-width:900px;margin:30px auto 36px;padding:0}
+.hk-history-textbook .hk-history-figure img{display:block;width:100%;height:auto;border:1px solid var(--hk-border);border-radius:12px;background:var(--hk-bg-elevated)}
 .hk-history-textbook .hk-reading-note{margin-top:8px}
 .hk-history-textbook .hk-reading-note p{margin:0;padding:18px 20px;border-left:3px solid var(--hk-accent-warm);background:var(--hk-bg-card);color:var(--hk-fg-dim)}
 .hk-history-textbook p,.hk-history-textbook li{line-height:2}
