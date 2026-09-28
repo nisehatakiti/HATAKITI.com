@@ -3,14 +3,14 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header();
 ?>
 <main class="hk-container hk-acting">
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする</p><h1>第3章　発声</h1><p>声を大きくするだけではなく、息・身体・響き・言葉をつなげて、舞台上で届く声をつくります。</p></header>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする</p><h1>第3章　身体</h1><p>身体を知り、必要な力を使い、余分な力を手放す。演技のために身体を自由に使える状態をつくります。</p></header>
 <nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-2/' ) ); ?>">← 第2章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><span class="hk-chapter-nav-disabled">次の章 →</span></nav>
-<section class="hk-section"><div class="hk-section-head"><h2>3-1　発声は「大声」ではない</h2></div><p>舞台で声を届けるために必要なのは、単純な音量だけではありません。呼吸が支え、身体が響きをつくり、言葉の方向が相手へ向かうことが大切です。</p><div class="hk-panel"><p><strong>声を大きくする前に、声が出る身体をつくる。</strong></p></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>3-2　息と声をつなぐ</h2></div><div class="hk-exercise"><h3>ハミングから母音へ</h3><ol><li>口を閉じて小さく「ん」と響かせる。</li><li>その響きを残したまま「あ」に開く。</li><li>「あ・い・う・え・お」と続ける。</li><li>喉で押し出さず、息の流れを感じる。</li></ol></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>3-3　身体全体で声を支える</h2></div><p>足裏、膝、骨盤、背中、胸、首、顎。声を出すとき、これらがどう連動しているかを観察します。</p><div class="hk-exercise"><h3>歩きながら発声</h3><ol><li>ゆっくり歩く。</li><li>歩きながら「あ」を一音出す。</li><li>歩く方向を変えても声の流れを止めない。</li><li>最後に短い文章を話す。</li></ol></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>3-4　相手に声を届ける</h2></div><p>声は空間に放つものではなく、基本的には誰かに向かって発するものです。相手を見て、相手との距離を感じ、必要な方向へ声を届けます。</p><div class="hk-exercise"><h3>距離を変える</h3><ol><li>相手を1m先に置いて一文話す。</li><li>3m、5mと距離を変える。</li><li>音量だけを上げるのではなく、息の流れと声の方向を変える。</li></ol></div></section>
-<section class="hk-section"><div class="hk-section-head"><h2>3-5　言葉を届ける</h2></div><p>発声の最後は台詞です。母音を明瞭にし、子音を雑にしない。けれど、発音だけを気にすると言葉の目的を失います。</p><p><strong>誰に、何を伝えたいのか。</strong>その意識が声の方向と強さを決めます。</p></section>
-<section class="hk-section"><div class="hk-panel hk-summary"><h3>第3章まとめ</h3><p><strong>呼吸 → 身体 → 声 → 相手 → 言葉。</strong></p><p>発声は独立した「声の技術」ではなく、身体と相手との関係の中で育てていきます。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>3-1　身体を知る</h2></div><p>演技で使う身体は、鍛えるだけでは足りません。どこが動き、どこに力が入り、どこが動きにくいのかを知ることから始めます。</p><div class="hk-exercise"><h3>身体スキャン</h3><ol><li>立って、足裏から頭まで順番に意識する。</li><li>力が入っている場所を探す。</li><li>左右で感覚が違うところを見つける。</li><li>一度力を抜き、自然な立ち方に戻る。</li></ol></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>3-2　力を入れる・抜く</h2></div><p>身体を自由にするとは、いつでも力を抜いていることではありません。必要な瞬間に力を入れ、不要になったら手放せることです。</p><div class="hk-exercise"><h3>部分的に力を変える</h3><ol><li>手だけを強く握る。</li><li>次に肩だけを固める。</li><li>最後に全身を固める。</li><li>一つずつ力を解放し、動きの違いを感じる。</li></ol></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>3-3　身体を分けて動かす</h2></div><p>頭、胸、骨盤、腕、脚などを意識して別々に動かすと、身体表現の選択肢が増えます。</p><div class="hk-exercise"><h3>身体のリード</h3><p>頭が先に進む、胸が先に進む、骨盤が先に進む、膝が先に進む。それぞれで歩いてみます。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>3-4　身体から人物をつくる</h2></div><p>人物像を頭で決めてから身体を合わせるだけでなく、身体の変化から人物を発見することもできます。</p><div class="hk-panel"><p><strong>重い・軽い、硬い・柔らかい、速い・遅い、開く・閉じる。</strong></p><p>身体の条件を変えると、人物の印象も変わります。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>3-5　動きながら声を使う</h2></div><p>身体と声を別々に考えず、動きながら呼吸し、呼吸しながら声を出します。</p><div class="hk-exercise"><h3>歩く・止まる・声</h3><ol><li>歩く。</li><li>止まる。</li><li>止まった瞬間に一音出す。</li><li>再び歩き、短い言葉を発する。</li></ol></div></section>
+<section class="hk-section"><div class="hk-panel hk-summary"><h3>第3章まとめ</h3><p><strong>知る → 力を調整する → 分けて動かす → 人物につなげる。</strong></p><p>身体を自由に使えるようになることが、「姿勢」「歩き方」「重心」へ進む土台になります。</p></div></section>
 <nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-2/' ) ); ?>">← 第2章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><span class="hk-chapter-nav-disabled">次の章 →</span></nav>
 </main>
 <?php get_footer(); ?>
