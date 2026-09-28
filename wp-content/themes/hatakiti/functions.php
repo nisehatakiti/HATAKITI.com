@@ -174,6 +174,10 @@ function hatakiti_theatre_textbook_route( $template ) {
         return get_template_directory() . '/page-theatre-acting-theory.php';
     }
 
+    if ( 'theatre-textbook/meisner' === $path ) {
+        return get_template_directory() . '/page-theatre-meisner-detail.php';
+    }
+
     if ( 'theatre-textbook/method' === $path ) {
         return get_template_directory() . '/page-theatre-method-detail.php';
     }
