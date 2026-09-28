@@ -31,7 +31,7 @@ get_header();
     <nav class="hk-chapter-nav" aria-label="演劇史ナビゲーション">
         <span class="hk-chapter-nav-disabled">← 前の章</span>
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">目次</a>
-        <span class="hk-chapter-nav-disabled">第2章 →</span>
+        <a href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-2/' ) ); ?>">第2章 →</a>
     </nav>
 
     <section class="hk-section hk-history-intro">
@@ -244,7 +244,7 @@ get_header();
     <nav class="hk-chapter-nav" aria-label="演劇史ナビゲーション">
         <span class="hk-chapter-nav-disabled">← 前の章</span>
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">目次</a>
-        <span class="hk-chapter-nav-disabled">第2章 →</span>
+        <a href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-2/' ) ); ?>">第2章 →</a>
     </nav>
 </main>
 
