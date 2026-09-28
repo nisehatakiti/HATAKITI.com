@@ -38,127 +38,107 @@ get_header();
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>4-1　古代の演劇をもう一度学ぶ</h2></div>
-        <p>ルネサンスは、古代ギリシャやローマの文化をもう一度学び直そうとする動きが広がった時代です。演劇についても、古代の作品や劇場、建築、文学などへの関心が高まりました。</p>
+        <p>ルネサンスは、古代ギリシャやローマの文化をもう一度学び直そうとする動きが広がった時代です。演劇についても、古代の作品や劇場、建築などへの関心が高まりました。</p>
         <p>ただし、古代をそのまま再現したわけではありません。古代の考え方を学びながら、自分たちの時代の芸術や建築と組み合わせ、新しい舞台表現が生まれていきました。</p>
+        <p>昔の表現を学ぶことが、そのまま昔に戻ることではありません。過去を知ることで、新しい表現を生み出すこともできるのです。</p>
     </section>
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>4-2　舞台を「絵」のように見せる</h2></div>
         <p>ルネサンス期の芸術では、遠近法を使って奥行きのある空間を表現する方法が発達しました。この考え方は舞台美術にも影響を与えます。</p>
-        <p>舞台の奥に向かって線が集まるように背景を描けば、実際よりも深い街並みや建物があるように見せることができます。</p>
-
-        <div class="hk-nyakakichi">
-            <div class="hk-nyakakichi-image">
-                <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="舞台の遠近法について考えるにゃかきち" loading="lazy">
-            </div>
-            <div class="hk-nyakakichi-question">
-                <p>舞台の上に、本物みたいな奥行きを作れるようになったんだニャ！</p>
-            </div>
-        </div>
+        <p>舞台の奥に向かって線が集まるように背景を配置すると、実際の舞台よりも深い街並みや建物があるように見せることができます。</p>
+        <p>舞台は、ただ「人が演じる場所」だけではなく、観客の視線を導きながら一つの世界を見せる場所にもなっていったのです。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="舞台の遠近法について考えるにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>舞台の上に、本物みたいな奥行きを作れるようになったんだニャ！</p></div></div>
     </section>
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>4-3　劇場の中に「舞台」と「客席」を作る</h2></div>
         <p>演劇が専門的な芸術として発展すると、上演する場所も工夫されるようになりました。</p>
-        <p>舞台と観客の場所を分け、背景や照明、衣装などを組み合わせて、一つの世界を作る。こうした考え方は、現在の劇場にもつながっています。</p>
-        <p>もちろん、当時の劇場は一種類ではありません。宮廷の祝祭、都市の劇場、屋外の劇場など、さまざまな場所で異なる上演が行われました。</p>
+        <p>舞台と観客の場所を分け、背景、衣装、照明などを組み合わせて、一つの世界を作る。こうした考え方は、現在の劇場にもつながっています。</p>
+        <p>宮廷の祝祭、都市の劇場、屋外の劇場など、目的や場所に応じてさまざまな上演空間が使われました。</p>
     </section>
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>4-4　コメディア・デラルテが生まれる</h2></div>
-        <p>16世紀のイタリアでは、<strong>コメディア・デラルテ</strong>と呼ばれる演劇が広がりました。</p>
-        <p>この演劇では、あらかじめ決められた筋書きの大枠をもとに、俳優がその場で台詞を組み立てる方法が使われました。決まった性格や衣装、身振りを持つ役柄も登場し、仮面や誇張した動作なども大きな特徴でした。</p>
-
-        <div class="hk-nyakakichi">
-            <div class="hk-nyakakichi-image">
-                <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="コメディア・デラルテに興味を持つにゃかきち" loading="lazy">
-            </div>
-            <div class="hk-nyakakichi-question">
-                <p>全部の台詞を台本どおりに言うんじゃなくて、その場で作る劇もあったんだニャ！</p>
-            </div>
-        </div>
-        <div class="hk-nyakakichi-followup">
-            <p>こうした方法では、観客の反応に合わせて演技を変えることもできました。俳優の技術そのものが、作品の大きな部分になったのです。</p>
-        </div>
+        <p>16世紀のイタリアでは、<strong>コメディア・デラルテ</strong>と呼ばれる演劇が広がりました。北イタリアで発展し、やがてヨーロッパ各地にも広がっていきます。</p>
+        <p>特徴の一つは、すべての台詞を固定した台本どおりに話すのではなく、基本的な筋書きや場面の流れをもとに、俳優が台詞や動きを組み立てていくことでした。</p>
+        <p>定型的な役柄には特徴的な衣装、話し方、身振り、道具などがありました。仮面を使う役では顔の表情が見えにくいため、声や身体の動きが特に重要になります。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="コメディア・デラルテに興味を持つにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>全部の台詞を台本どおりに言うんじゃなくて、その場で作る劇もあったんだニャ！</p></div></div>
+        <div class="hk-nyakakichi-followup"><p>観客の反応に合わせて演技を変えられることも、こうした演劇の面白さでした。俳優の技術そのものが、作品の大きな部分になったのです。</p></div>
     </section>
 
     <section class="hk-section">
         <div class="hk-section-head"><h2>4-5　俳優が「職業」になっていく</h2></div>
         <p>演劇が継続的に上演されるようになると、演じることを仕事にする人々も増えていきました。</p>
         <p>劇団を組み、各地を移動しながら公演する俳優たちも現れます。俳優には、台詞を覚える力だけでなく、声、身体、身振り、観客との距離を使って場を成立させる力が求められました。</p>
-        <p>ここで、演劇は「誰かが物語を演じる行為」から、<strong>多くの専門家が関わる仕事</strong>へと、さらに一歩進んでいきます。</p>
+        <p>演劇は、「誰かが物語を演じる行為」から、俳優や劇作家、劇場などの専門家が関わる仕事へと、さらに一歩進んでいきます。</p>
     </section>
 
     <section class="hk-section">
-        <div class="hk-section-head"><h2>4-6　イギリスに常設劇場が増える</h2></div>
-        <p>16世紀後半のロンドンでは、演劇を見るための常設劇場が作られるようになりました。1576年にはジェームズ・バーベッジが「シアター」を建設し、その後、ローズ、スワン、グローブなどの劇場が登場します。</p>
-        <p>屋外劇場では、中央の立ち見空間を囲むように客席があり、舞台が観客の側へ張り出す形も見られました。観客は同じ空間に密集し、演じる側との距離が近い環境で劇を見ていました。</p>
-
-        <div class="hk-nyakakichi">
-            <div class="hk-nyakakichi-image">
-                <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="常設劇場の登場に驚くにゃかきち" loading="lazy">
-            </div>
-            <div class="hk-nyakakichi-question">
-                <p>もう「たまたま空いている場所」で演じるだけじゃなくなってきたんだニャ！</p>
-            </div>
-        </div>
+        <div class="hk-section-head"><h2>4-6　シェイクスピアはどんな時代に生きた？</h2></div>
+        <p>16世紀後半のイギリスでは、ロンドンを中心に演劇を見るための常設劇場が作られるようになりました。1576年にはジェームズ・バーベッジが「シアター」を建設し、イギリスの劇場文化が新しい形で発展していきます。</p>
+        <p>劇場ができると、演劇を継続的に上演する劇団が必要になります。俳優、劇作家、劇場の経営者など、多くの人が関わる仕組みが整い、演劇は都市の商業文化の一部になっていきました。</p>
+        <p>ウィリアム・シェイクスピアは、まさにこの時代のロンドン演劇の中で活動した劇作家・俳優です。シェイクスピアを理解するには、作品だけでなく、<strong>作品が上演されていた劇場と観客</strong>にも目を向ける必要があります。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="シェイクスピアの時代について考えるにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>シェイクスピアって、作品だけじゃなくて劇場の時代も一緒に見ると分かりやすいんだニャ。</p></div></div>
     </section>
 
     <section class="hk-section">
-        <div class="hk-section-head"><h2>4-7　シェイクスピアとグローブ座</h2></div>
-        <p>16世紀末から17世紀初頭のイギリス演劇を考えるとき、ウィリアム・シェイクスピアの作品は重要な存在です。</p>
-        <p>シェイクスピアの劇団は1599年にグローブ座で上演を始めました。グローブ座は多角形の外観を持つ屋外劇場で、中央のヤードには立って見る観客が集まり、その周囲を複数階の客席が囲んでいました。</p>
-        <p>当時の舞台は現在のように大規模な背景美術で場面を作るのではなく、言葉、衣装、俳優の演技、限られた舞台装置などを組み合わせて世界を想像させるものでした。</p>
+        <div class="hk-section-head"><h2>4-7　グローブ座はどんな劇場だった？</h2></div>
+        <p>シェイクスピアの劇団は1599年にグローブ座で上演を始めました。グローブ座は、現在の劇場とはかなり違う屋外劇場です。</p>
+        <p>多角形に近い建物の中央には屋根のない「ヤード」があり、その周囲を複数階の屋根付き客席が囲んでいました。舞台はヤード側へ張り出しており、観客との距離が近い構造でした。</p>
+        <p>ヤードには立って観劇する観客が集まり、周囲の客席には料金を払って座る観客がいました。一つの劇場の中にも、観客が見る場所や料金の違いがあったのです。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="グローブ座の構造に驚くにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>舞台を客席が囲んでいて、今の劇場とはずいぶん違うんだニャ！</p></div></div>
     </section>
 
     <section class="hk-section">
-        <div class="hk-section-head"><h2>4-8　劇場によって、演技も変わる</h2></div>
-        <p>同じ作品でも、屋外の大きな劇場と、小さな屋内劇場では、俳優に求められることが違います。</p>
-        <p>大きな空間では、遠くの観客にも届く声や大きな身体表現が重要になります。一方、観客との距離が近い空間では、細かな表情や小さな動きも使いやすくなります。</p>
-        <p>つまり、<strong>演技は作品だけで決まるのではなく、劇場の空間との関係でも変わる</strong>のです。</p>
-
-        <div class="hk-nyakakichi">
-            <div class="hk-nyakakichi-image">
-                <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/pointing.png' ) ); ?>" alt="劇場と演技の関係を指し示すにゃかきち" loading="lazy">
-            </div>
-            <div class="hk-nyakakichi-question">
-                <p>劇場が変われば、同じ役でも見せ方が変わるんだニャ！</p>
-            </div>
-        </div>
+        <div class="hk-section-head"><h2>4-8　シェイクスピアの劇は何が面白い？</h2></div>
+        <p>シェイクスピアの作品には、悲劇、喜劇、歴史劇など、さまざまな種類があります。『ハムレット』『マクベス』『ロミオとジュリエット』のような悲劇だけでなく、『夏の夜の夢』のような喜劇も書かれました。</p>
+        <p>ここで注目したいのは、作品を読むだけでなく、<strong>舞台でどう成立するように書かれているか</strong>ということです。</p>
+        <p>台詞には、登場人物の行動を直接示すものもあれば、言葉そのものから身体の動きや状況を想像できるものもあります。そのため、同じ作品でも俳優や演出によって違う舞台を作ることができます。</p>
+        <p>観客も、俳優の言葉、身体、衣装、限られた舞台装置などを手がかりに、舞台上の世界を想像します。シェイクスピアの演劇は、言葉と観客の想像力が強く結びついた表現でもあったのです。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="シェイクスピアの舞台表現に興味を持つにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>言葉を聞いて、観客の頭の中に舞台を作ってもらうこともできるんだニャ！</p></div></div>
     </section>
 
     <section class="hk-section">
-        <div class="hk-section-head"><h2>4-9　日本では歌舞伎が生まれる</h2></div>
-        <p>同じころ、日本でも新しい大衆演劇が発展していきました。</p>
-        <p>17世紀初頭には出雲阿国らによる「かぶき踊り」が知られるようになり、そこから歌舞伎はさまざまな変化を経ていきます。女性による歌舞伎、若衆歌舞伎を経て、やがて成人男性による歌舞伎へと変化し、江戸時代の都市文化の中で発展していきました。</p>
-        <p>歌舞伎は、踊り、音楽、演技、衣装、化粧などを組み合わせた総合的な舞台表現として、多くの観客を楽しませるようになります。</p>
+        <div class="hk-section-head"><h2>4-9　シェイクスピアから現代の演劇へ</h2></div>
+        <p>シェイクスピアの作品は、400年以上にわたってさまざまな国や時代で上演されてきました。同じ作品でも、演出、俳優、舞台空間、観客が変われば、見え方も変わります。</p>
+        <p>これは、演劇が完成した作品をただ再現するものではなく、<strong>その場にいる俳優と観客によって、上演のたびに新しく成立する表現</strong>だからです。</p>
+        <p>シェイクスピアの時代から学べるのは、作品と劇場と俳優と観客を別々に考えないことです。これらは互いに影響し合っています。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-understood.png' ) ); ?>" alt="シェイクスピアから現代演劇へのつながりを理解したにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>劇場、俳優、観客、作品は、別々じゃなくて一緒に考えるんだニャ。</p></div></div>
     </section>
 
     <section class="hk-section">
-        <div class="hk-section-head"><h2>4-10　演劇は「劇場産業」へ</h2></div>
-        <p>この時代になると、演劇は単に祭りや宗教行事の一部というだけではなく、観客がお金を払って見に行く興行としても発展していきます。</p>
-        <p>劇団、俳優、劇場、劇作家、衣装や舞台装置など、多くの人が関わる仕組みが生まれました。観客の人気も、劇団や俳優の活動を左右するようになります。</p>
-        <p>ここから演劇は、芸術であると同時に、<strong>人・場所・お金・技術が結びついた社会的な仕事</strong>としても発展していくことになります。</p>
-
-        <div class="hk-nyakakichi">
-            <div class="hk-nyakakichi-image">
-                <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-understood.png' ) ); ?>" alt="近代劇場への変化を理解したにゃかきち" loading="lazy">
-            </div>
-            <div class="hk-nyakakichi-question">
-                <p>演劇をする人だけじゃなくて、劇場やお客さんまで含めた仕組みになってきたんだニャ。</p>
-            </div>
-        </div>
+        <div class="hk-section-head"><h2>4-10　劇場によって、演技も変わる</h2></div>
+        <p>ここで、シェイクスピアの時代だけに限らず、劇場と演技の関係を考えてみましょう。</p>
+        <p>大きな空間では、遠くの観客にも届く声や、輪郭のはっきりした身体表現が重要になります。一方、観客との距離が近い空間では、細かな表情や小さな動きも伝えやすくなります。</p>
+        <p>舞台の形、客席の位置、天井の高さ、音の響きなどによって、俳優が選ぶ表現は変わります。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-pointing.png' ) ); ?>" alt="劇場と演技の関係を指し示すにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>同じ役でも、劇場が変われば見せ方も変わるんだニャ！</p></div></div>
     </section>
 
-    <section class="hk-section hk-reading-note">
+        <section class="hk-section">
+        <div class="hk-section-head"><h2>4-11　日本では歌舞伎が生まれる</h2></div>
+        <p>同じころ、日本でも新しい大衆演劇が発展していきました。17世紀初頭には出雲阿国らによる「かぶき踊り」が知られるようになり、そこから歌舞伎はさまざまな変化を経ていきます。</p>
+        <p>女性による女歌舞伎、若衆による若衆歌舞伎を経て、江戸時代には成人男性による歌舞伎へと変化しました。都市の発展とともに、歌舞伎は多くの観客を集める興行として発展していきます。</p>
+        <p>歌舞伎は、演技だけでなく、踊り、音楽、衣装、化粧、舞台機構などを組み合わせた総合的な舞台表現です。ここにも、演劇が社会の中でさまざまな技術や仕事と結びついていく流れを見ることができます。</p>
+    </section>
+
+    <section class="hk-section">
+        <div class="hk-section-head"><h2>4-12　演劇は「劇場産業」へ</h2></div>
+        <p>この時代になると、演劇は祭りや宗教行事の一部というだけではなく、観客がお金を払って見に行く興行としても発展していきます。</p>
+        <p>劇団、俳優、劇作家、劇場の運営者、舞台装置や衣装などを担う人々が関わり、作品を観客に届ける仕組みが作られていきました。</p>
+        <p>演劇を考えるとき、「舞台に立つ俳優」だけを見ていては全体が見えません。作品を作る人、場所を用意する人、技術を支える人、そして料金を払って見る観客まで、多くの人が演劇を成立させています。</p>
+        <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-understood.png' ) ); ?>" alt="演劇産業の仕組みを理解したにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>演劇って、舞台に立つ人だけで作っているんじゃないんだニャ。</p></div></div>
+    </section>
+
+<section class="hk-section hk-reading-note">
         <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では用語を覚えることより、劇場・俳優・観客の関係がどう変わったのかを追ってみましょう。</p>
     </section>
 
     <section class="hk-section hk-summary">
         <div class="hk-section-head"><h2>第4章まとめ</h2></div>
         <p>ルネサンスから近世にかけて、演劇は古代文化の再発見や都市の発展と結びつきながら、大きく姿を変えていきました。</p>
-        <p>舞台美術や劇場空間が発達し、コメディア・デラルテのように俳優の技術を生かす演劇も広がりました。イギリスでは常設劇場が増え、シェイクスピアの時代にはグローブ座のような劇場で多くの観客が演劇を楽しみました。</p>
-        <p>日本でも歌舞伎が発展し、演劇はさまざまな地域で、それぞれの社会や文化に合わせた形を作っていきます。</p>
+        <p>舞台美術や劇場空間が発達し、コメディア・デラルテのように俳優の技術を生かす演劇も広がりました。そしてイギリスでは常設劇場が増え、シェイクスピアの時代には、劇場の構造と観客との距離を生かした演劇が発展しました。</p>
+        <p>日本でも歌舞伎が発展し、演劇はさまざまな地域で、それぞれの社会や文化に合わせた形を作っていきます。演劇は作品だけでなく、俳優、劇場、舞台を支える人、そして観客が一緒になって成立する表現へと広がっていきました。</p>
     </section>
 
     <nav class="hk-chapter-nav" aria-label="演劇史ナビゲーション">
