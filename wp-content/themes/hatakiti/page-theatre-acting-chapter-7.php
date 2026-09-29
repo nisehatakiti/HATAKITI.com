@@ -4,7 +4,7 @@ get_header();
 ?>
 <main class="hk-container hk-acting">
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第一部 体</p><h1>第7章　重心</h1><p>重心の位置と移動を知り、身体の安定と不安定を演技に使います。</p></header>
-<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">← 第6章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">第8章 →</a></nav>
+<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">← 第6章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">第8章 →</a></nav>
 <section class="hk-section"><div class="hk-section-head"><h2>7-1　重心を感じる</h2></div><p>立ったまま、身体の重さが足裏のどこに乗っているかを感じます。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>7-2　前後に移動する</h2></div><p>重心を少し前へ移すと身体は進みたくなり、後ろへ移すと引き戻される感覚が生まれます。安全な範囲で試します。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>7-3　左右に移動する</h2></div><p>左右どちらかに重心を移し、身体の傾きと足の支えがどう変わるかを観察します。</p></section>
