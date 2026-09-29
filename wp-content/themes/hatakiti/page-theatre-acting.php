@@ -44,6 +44,9 @@ get_header();
                 <span>第7章</span><h3>重心</h3><p>重心の位置と移動を知り、身体の安定と不安定を演技に使う。</p><strong>読む →</strong>
             </a>
         
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">
+                <span>第8章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><strong>読む →</strong>
+            </a>
         </div>
     </section>
 
