@@ -9,10 +9,10 @@ get_header();
 <p>役者にとって身体は、演技をするための道具です。まず自分の身体を知り、感じ、意識して動かせるようにします。</p>
 </header>
 
-<nav class="hk-chapter-nav">
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">← 第3章　滑舌</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">第5章　姿勢 →</a>
+<nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
+<a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">← 第3章　滑舌</a>
+<a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">第5章　姿勢 →</a>
 </nav>
 
 <section class="hk-section">
@@ -156,10 +156,10 @@ get_header();
 </div>
 </section>
 
-<nav class="hk-chapter-nav">
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">← 第3章　滑舌</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">第5章　姿勢 →</a>
+<nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
+<a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">← 第3章　滑舌</a>
+<a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">第5章　姿勢 →</a>
 </nav>
 </main>
 <style>
@@ -172,5 +172,9 @@ get_header();
 .hk-acting .hk-exercise{border-left:3px solid var(--hk-accent-warm)}
 .hk-acting .hk-exercise h3{margin-top:0}
 .hk-acting .hk-exercise li{margin-bottom:8px}
+
+.hk-acting .hk-chapter-nav.hk-acting-chapter-nav{width:100%;max-width:900px;margin:28px auto;padding:14px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.hk-acting-chapter-nav .hk-nav-prev{justify-self:start}.hk-acting-chapter-nav .hk-nav-center{justify-self:center}.hk-acting-chapter-nav .hk-nav-next{justify-self:end}
+@media(max-width:700px){.hk-acting .hk-chapter-nav.hk-acting-chapter-nav{grid-template-columns:1fr;text-align:center}.hk-acting-chapter-nav .hk-nav-prev,.hk-acting-chapter-nav .hk-nav-center,.hk-acting-chapter-nav .hk-nav-next{justify-self:center}}
 </style>
 <?php get_footer(); ?>
