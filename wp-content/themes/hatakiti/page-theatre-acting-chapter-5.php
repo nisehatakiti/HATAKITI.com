@@ -4,7 +4,7 @@ get_header();
 ?>
 <main class="hk-container hk-acting">
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第一部 体</p><h1>第5章　姿勢</h1><p>立ち方、軸、身体のバランスから人物の土台をつくります。</p></header>
-<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-4/' ) ); ?>">← 第4章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-4/' ) ); ?>">第6章 →</a></nav>
+<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-4/' ) ); ?>">← 第4章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">第6章 →</a></nav>
 <section class="hk-section"><div class="hk-section-head"><h2>5-1　立つとはどういうことか</h2></div><p>立つことは、ただ足で床に立つことではありません。足裏で床を感じ、骨格で身体を支え、余分な力を使わずに立てることが大切です。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>5-2　身体の軸</h2></div><p>頭、胸、骨盤、足の位置を感じながら、身体がどちらかに偏っていないか観察します。軸は一本の棒を固めることではなく、動けるバランスです。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>5-3　姿勢を変える</h2></div><p>胸を張る、背中を丸める、顎を前に出す、重心を後ろにするなど、姿勢を変えると人物の印象も変わります。</p></section>
