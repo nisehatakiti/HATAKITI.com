@@ -70,6 +70,53 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/booklog.php';
 
 /**
+ * Add 演劇の教科書 to the center of the primary global navigation.
+ *
+ * The page is a virtual route, so it is not available as a normal
+ * wp-admin menu item. Keep the item in the global navigation until a
+ * real menu item is added later.
+ */
+function hatakiti_insert_theatre_textbook_menu_item( $items, $args ) {
+    if ( empty( $args->theme_location ) || 'primary' !== $args->theme_location ) {
+        return $items;
+    }
+
+    foreach ( $items as $item ) {
+        if ( '演劇の教科書' === $item->title || home_url( '/theatre-textbook/' ) === $item->url ) {
+            return $items;
+        }
+    }
+
+    $item = (object) array(
+        'ID'                    => -10001,
+        'db_id'                 => 0,
+        'menu_item_parent'      => 0,
+        'object_id'             => 0,
+        'object'                => 'custom',
+        'type'                  => 'custom',
+        'type_label'            => 'Custom Link',
+        'title'                 => '演劇の教科書',
+        'url'                   => home_url( '/theatre-textbook/' ),
+        'target'                => '',
+        'attr_title'            => '',
+        'description'           => '',
+        'classes'               => array(),
+        'xfn'                   => '',
+        'current'               => false,
+        'current_item_parent'   => false,
+        'current_item_ancestor' => false,
+    );
+
+    // Insert after the fourth existing item, making this the middle item
+    // when the current global menu contains eight items.
+    $position = min( 4, count( $items ) );
+    array_splice( $items, $position, 0, array( $item ) );
+
+    return $items;
+}
+add_filter( 'wp_nav_menu_objects', 'hatakiti_insert_theatre_textbook_menu_item', 20, 2 );
+
+/**
  * Fallback menu markup when no "primary" menu has been registered yet
  * in wp-admin. Mirrors the blueprint's fixed main navigation.
  */
