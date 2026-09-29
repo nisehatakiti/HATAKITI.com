@@ -56,17 +56,6 @@ get_header();
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-02-mouth-tongue-face-preparation.png' ) ); ?>" alt="顔・顎・唇・舌・頬と口角を使った発音準備" loading="lazy">
 <figcaption>顔をゆるめ、顎・唇・舌・頬・口角を順番に動かして発音の準備をします。</figcaption>
 </figure>
-<div class="hk-articulation-prep">
-<h3>発音のための準備</h3>
-<div class="hk-articulation-steps">
-<div><span>1</span><strong>顔をゆるめる</strong><small>眉間・頬・顎の余分な力を抜く</small></div>
-<div><span>2</span><strong>顎を動かす</strong><small>軽く開閉し、固めない</small></div>
-<div><span>3</span><strong>唇を動かす</strong><small>前後・左右へ自由に動かす</small></div>
-<div><span>4</span><strong>舌を動かす</strong><small>前後・上下に無理なく動かす</small></div>
-<div><span>5</span><strong>頬・口角を動かす</strong><small>顔全体を固めず音をつくる</small></div>
-</div>
-</div>
-
 <div class="hk-exercise">
 <h3>発音前の2分準備</h3>
 <ol>
@@ -96,13 +85,6 @@ get_header();
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-03-vowels.png' ) ); ?>" alt="母音の発声と口の形を示す図説" loading="lazy">
 <figcaption>母音ごとの口の形を意識し、一音ずつ明確に発音します。</figcaption>
 </figure>
-<div class="hk-vowel-practice">
-<div><strong>あ</strong><span>口を縦に開く</span></div>
-<div><strong>い</strong><span>口角を横へ</span></div>
-<div><strong>う</strong><span>唇を前へ</span></div>
-<div><strong>え</strong><span>口を横に開き、頬・口角を使う</span></div>
-<div><strong>お</strong><span>唇を丸くする</span></div>
-</div>
 <div class="hk-nyakakichi">
 <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div>
 <div class="hk-nyakakichi-question"><p>母音って、口の形を変えることも練習なのかニャ？</p></div>
@@ -120,16 +102,6 @@ get_header();
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-04-consonants.png' ) ); ?>" alt="日本語の各行でどこを使って子音をつくるかを示す図説" loading="lazy">
 <figcaption>子音は、音によって舌・唇・息など使う場所が変わります。</figcaption>
 </figure>
-<div class="hk-consonant-grid">
-<div><strong>か行</strong><span>舌の奥を使う</span></div>
-<div><strong>さ行</strong><span>舌先と息を使う</span></div>
-<div><strong>た行</strong><span>舌先を使う</span></div>
-<div><strong>な行</strong><span>舌先と鼻への響き</span></div>
-<div><strong>は行</strong><span>息の流れを使う</span></div>
-<div><strong>ま行</strong><span>唇を使う</span></div>
-<div><strong>ら行</strong><span>舌先を使う</span></div>
-<div><strong>や・わ行</strong><span>口の形と息を使う</span></div>
-</div>
 <div class="hk-panel"><p><strong>全部を強く発音する必要はありません。</strong></p><p>音の特徴が分かる程度に明確にします。力任せにすると顎や喉まで固くなるので、必要な部分だけを動かします。</p></div>
 </section>
 
@@ -143,9 +115,7 @@ get_header();
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-05-connect-sounds-to-words.png' ) ); ?>" alt="一音から音の連続、単語、文章、台詞へ音をつなげる練習" loading="lazy">
 <figcaption>明瞭さを保ったまま、一音から実際の言葉へつなげていきます。</figcaption>
 </figure>
-<div class="hk-articulation-flow">
-<span>一音</span><b>→</b><span>音の連続</span><b>→</b><span>単語</span><b>→</b><span>文章</span><b>→</b><span>台詞</span>
-</div>
+<div class="hk-panel"><p><strong>明瞭さを保ったまま、少しずつ自然な話し方へ戻します。</strong></p></div>
 </section>
 
 <section class="hk-section">
@@ -158,11 +128,6 @@ get_header();
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-06-word-beginning-middle-ending.png' ) ); ?>" alt="言葉の頭・途中・語尾を明確にする練習" loading="lazy">
 <figcaption>言葉の入り口から最後の音まで、明瞭さを保ちます。</figcaption>
 </figure>
-<div class="hk-word-parts">
-<div><strong>頭</strong><span>言葉の入り口を明確に</span></div>
-<div><strong>途中</strong><span>音を落とさずにつなぐ</span></div>
-<div><strong>語尾</strong><span>最後まで息と声を保つ</span></div>
-</div>
 <div class="hk-panel"><p><strong>語尾を「強くする」のではなく、語尾まで「存在させる」。</strong></p><p>舞台では、客席まで言葉が届くように、最後の音まで意識します。</p></div>
 </section>
 
@@ -176,16 +141,7 @@ get_header();
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-07-speaking-fast-clearly.png' ) ); ?>" alt="明瞭さを保ったまま話す速度を段階的に上げる練習" loading="lazy">
 <figcaption>ゆっくり・普通・少し速く、と段階的に速度を上げ、崩れたら一段階戻します。</figcaption>
 </figure>
-<div class="hk-exercise">
-<h3>速度を変える練習</h3>
-<ol>
-<li>文章をゆっくり明瞭に読む。</li>
-<li>一定のテンポで読む。</li>
-<li>少しだけ速度を上げる。</li>
-<li>音が崩れたら前の速度へ戻る。</li>
-<li>もう一度、明瞭さを保てる速度から始める。</li>
-</ol>
-</div>
+<div class="hk-panel"><p><strong>音が崩れたら、一段階前の速度へ戻ります。</strong></p><p>速さを上げることより、明瞭さを保てる速度を見つけることを優先します。</p></div>
 </section>
 
 <section class="hk-section">
@@ -274,46 +230,24 @@ get_header();
 .hk-acting .hk-nyakakichi-followup{max-width:760px;margin:8px auto 0;padding-left:116px;color:var(--hk-fg-dim);line-height:1.8}
 .hk-acting .hk-nyakakichi-followup p{margin:0}
 
-.hk-articulation-prep{margin:28px 0;padding:24px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
-.hk-articulation-prep h3{margin-top:0;font-family:var(--hk-font-serif);color:var(--hk-accent-warm)}
-.hk-articulation-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.hk-articulation-steps>div{padding:16px 10px;text-align:center;background:var(--hk-bg-elevated);border:1px solid var(--hk-border)}
-.hk-articulation-steps span{display:flex;width:30px;height:30px;margin:0 auto 10px;align-items:center;justify-content:center;border-radius:50%;background:var(--hk-accent-warm);color:#fff;font-weight:700}
-.hk-articulation-steps strong,.hk-articulation-steps small{display:block}
 .hk-articulation-steps small{margin-top:7px;color:var(--hk-fg-dim);line-height:1.55}
 
-.hk-vowel-practice{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:22px 0}
-.hk-vowel-practice>div{padding:18px 10px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
-.hk-vowel-practice strong{display:block;font-size:28px;font-family:var(--hk-font-serif);color:var(--hk-accent-warm)}
-.hk-vowel-practice span{display:block;margin-top:8px;color:var(--hk-fg-dim);font-size:13px;line-height:1.6}
 
-.hk-consonant-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:24px 0}
-.hk-consonant-grid>div{padding:16px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
-.hk-consonant-grid strong,.hk-consonant-grid span{display:block}
 .hk-consonant-grid strong{font-family:var(--hk-font-serif);color:var(--hk-accent-warm)}
 .hk-consonant-grid span{margin-top:6px;color:var(--hk-fg-dim);font-size:13px}
 
-.hk-articulation-flow,.hk-dialogue-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:24px 0;padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
-.hk-articulation-flow span,.hk-dialogue-flow>div{padding:12px 16px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border);text-align:center}
-.hk-articulation-flow b{color:var(--hk-accent-warm)}
-.hk-dialogue-flow>div{min-width:150px}
+.hk-dialogue-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:24px 0;padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
+.hk-dialogue-flow>div{padding:12px 16px;background:var(--hk-bg-elevated);border:1px solid var(--hk-border);text-align:center;min-width:150px}
 .hk-dialogue-flow span,.hk-dialogue-flow strong{display:block}
 .hk-dialogue-flow span{font-size:12px;color:var(--hk-accent-warm);font-weight:700}
 .hk-dialogue-flow strong{margin-top:5px}
 
-.hk-word-parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0}
-.hk-word-parts>div{padding:20px;text-align:center;border:1px solid var(--hk-border);background:var(--hk-bg-card)}
-.hk-word-parts strong,.hk-word-parts span{display:block}
 .hk-word-parts strong{font-family:var(--hk-font-serif);font-size:20px;color:var(--hk-accent-warm)}
 .hk-word-parts span{margin-top:8px;color:var(--hk-fg-dim)}
 
 @media(max-width:700px){
 .hk-acting .hk-chapter-nav.hk-acting-chapter-nav{grid-template-columns:1fr;text-align:center}
 .hk-acting-chapter-nav .hk-nav-prev,.hk-acting-chapter-nav .hk-nav-center,.hk-acting-chapter-nav .hk-nav-next{justify-self:center}
-.hk-articulation-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-.hk-vowel-practice{grid-template-columns:repeat(2,minmax(0,1fr))}
-.hk-consonant-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.hk-word-parts{grid-template-columns:1fr}
 .hk-acting .hk-nyakakichi{grid-template-columns:82px minmax(0,1fr);gap:12px}
 .hk-acting .hk-nyakakichi-image,.hk-acting .hk-nyakakichi-image img{width:82px}
 .hk-acting .hk-nyakakichi-followup{padding-left:94px}
