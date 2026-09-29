@@ -4,7 +4,7 @@ get_header();
 ?>
 <main class="hk-container hk-acting">
 <header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第一部 体</p><h1>第6章　歩き方</h1><p>歩幅、速度、方向、身体の質を変えながら、歩くことを演技の材料にします。</p></header>
-<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">← 第5章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">第7章 →</a></nav>
+<nav class="hk-chapter-nav"><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">← 第5章</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a><a href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-7/' ) ); ?>">第7章 →</a></nav>
 <section class="hk-section"><div class="hk-section-head"><h2>6-1　まず普通に歩く</h2></div><p>自分の普段の歩き方を観察します。速度、歩幅、腕の振り、視線、足の着き方を知ります。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>6-2　速度を変える</h2></div><p>ゆっくり、普通、速いの3段階で歩きます。速さだけでなく、呼吸や身体の使い方も変化することを感じます。</p></section>
 <section class="hk-section"><div class="hk-section-head"><h2>6-3　歩幅を変える</h2></div><p>小さな歩幅、大きな歩幅、一定ではない歩幅で歩き、人物の印象の違いを探ります。</p></section>
