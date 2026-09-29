@@ -35,8 +35,8 @@ get_header();
 </div>
 <p>呼吸で生まれた息が声になり、その声を口の中で形づくることで、私たちは言葉を話します。滑舌では、<strong>息・声・口の形・舌・顎</strong>がつながっていることを意識します。</p>
 <figure class="hk-acting-figure">
-<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-voice-01-how-voice-is-produced.png' ) ); ?>" alt="息から声、口の動き、言葉へつながる発声のしくみ" loading="lazy">
-<figcaption>発声で生まれた音を、口・舌・顎の動きで言葉として形づくります。</figcaption>
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-01-how-words-are-formed.png' ) ); ?>" alt="声を口・舌・顎で明確な言葉にしていく滑舌のしくみ" loading="lazy">
+<figcaption>できた声を、口・舌・顎の動きで明確な音と言葉へ形づくります。</figcaption>
 </figure>
 <div class="hk-panel">
 <p><strong>滑舌の基本は「速さ」より「明瞭さ」です。</strong></p>
@@ -52,6 +52,10 @@ get_header();
 <p>顎を固める、唇があまり動かない、舌が動きにくい、頬や口角が固まっている。こうした状態では、音の形を細かく変えにくくなります。</p>
 <p>ここでいう表情筋の使い方は、表情を大きくするための訓練ではありません。<strong>顔全体をゆるめ、発音に必要な部分を自由に動かせるようにする</strong>ことが目的です。</p>
 
+<figure class="hk-acting-figure">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-02-mouth-tongue-face-preparation.png' ) ); ?>" alt="顔・顎・唇・舌・頬と口角を使った発音準備" loading="lazy">
+<figcaption>顔をゆるめ、顎・唇・舌・頬・口角を順番に動かして発音の準備をします。</figcaption>
+</figure>
 <div class="hk-articulation-prep">
 <h3>発音のための準備</h3>
 <div class="hk-articulation-steps">
@@ -89,7 +93,7 @@ get_header();
 </div>
 <p>「あ・い・う・え・お」を一音ずつ発音し、口の形を丁寧に変えます。母音が曖昧になると、子音が聞こえていても言葉全体がぼやけてしまいます。</p>
 <figure class="hk-acting-figure">
-<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-voice-02-vowel-vocalization.png' ) ); ?>" alt="母音の発声と口の形を示す図説" loading="lazy">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-03-vowels.png' ) ); ?>" alt="母音の発声と口の形を示す図説" loading="lazy">
 <figcaption>母音ごとの口の形を意識し、一音ずつ明確に発音します。</figcaption>
 </figure>
 <div class="hk-vowel-practice">
@@ -112,6 +116,10 @@ get_header();
 <p>子音は、言葉の輪郭をつくります。</p>
 </div>
 <p>「か・さ・た・は・ま・ら」などの各行を、一音ずつ明確に発音します。子音は、舌・唇・歯・口の形など、音によって使う場所が変わります。</p>
+<figure class="hk-acting-figure">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-04-consonants.png' ) ); ?>" alt="日本語の各行でどこを使って子音をつくるかを示す図説" loading="lazy">
+<figcaption>子音は、音によって舌・唇・息など使う場所が変わります。</figcaption>
+</figure>
 <div class="hk-consonant-grid">
 <div><strong>か行</strong><span>舌の奥を使う</span></div>
 <div><strong>さ行</strong><span>舌先と息を使う</span></div>
@@ -131,6 +139,10 @@ get_header();
 <p>一音ずつ練習したら、音をつなげて自然な言葉にします。</p>
 </div>
 <p>滑舌練習では、一音ずつ明確にすることと、実際の言葉としてつなげることの両方が必要です。音を強調しすぎて不自然にならないよう、少しずつ通常の話し方へ戻します。</p>
+<figure class="hk-acting-figure">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-05-connect-sounds-to-words.png' ) ); ?>" alt="一音から音の連続、単語、文章、台詞へ音をつなげる練習" loading="lazy">
+<figcaption>明瞭さを保ったまま、一音から実際の言葉へつなげていきます。</figcaption>
+</figure>
 <div class="hk-articulation-flow">
 <span>一音</span><b>→</b><span>音の連続</span><b>→</b><span>単語</span><b>→</b><span>文章</span><b>→</b><span>台詞</span>
 </div>
@@ -142,6 +154,10 @@ get_header();
 <p>言葉は、最初から最後まで保ちます。</p>
 </div>
 <p>言葉の頭が弱いと聞き手は言葉の入り口をつかみにくくなります。途中の音が抜けると意味が変わり、語尾が消えると文の終わりが曖昧になります。</p>
+<figure class="hk-acting-figure">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-06-word-beginning-middle-ending.png' ) ); ?>" alt="言葉の頭・途中・語尾を明確にする練習" loading="lazy">
+<figcaption>言葉の入り口から最後の音まで、明瞭さを保ちます。</figcaption>
+</figure>
 <div class="hk-word-parts">
 <div><strong>頭</strong><span>言葉の入り口を明確に</span></div>
 <div><strong>途中</strong><span>音を落とさずにつなぐ</span></div>
@@ -156,6 +172,10 @@ get_header();
 <p>速度を上げるのは、明瞭に話せるようになってからです。</p>
 </div>
 <p>文章や早口言葉を使って、ゆっくり → 一定の速度 → 少し速く、と段階を踏みます。音が崩れたら、一つ前の速度へ戻します。</p>
+<figure class="hk-acting-figure">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-07-speaking-fast-clearly.png' ) ); ?>" alt="明瞭さを保ったまま話す速度を段階的に上げる練習" loading="lazy">
+<figcaption>ゆっくり・普通・少し速く、と段階的に速度を上げ、崩れたら一段階戻します。</figcaption>
+</figure>
 <div class="hk-exercise">
 <h3>速度を変える練習</h3>
 <ol>
