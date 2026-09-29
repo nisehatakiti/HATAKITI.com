@@ -29,23 +29,21 @@ get_header();
                 <span>第2章</span><h3>発声</h3><p>呼吸と身体を使い、相手に届く声をつくる。</p><strong>読む →</strong>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">
-                <span>第3章</span><h3>身体</h3><p>身体の感覚を知り、必要な力を使える身体をつくる。</p><strong>読む →</strong>
+                <span>第3章</span><h3>滑舌</h3><p>母音と子音を明確にし、言葉を相手と劇場へ届ける。</p><strong>読む →</strong>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-4/' ) ); ?>">
-                <span>第4章</span><h3>姿勢</h3><p>立ち方、軸、身体のバランスから人物の土台をつくる。</p><strong>読む →</strong>
+                <span>第4章</span><h3>身体</h3><p>身体を知り、必要な力を使い、余分な力を手放す。</p><strong>読む →</strong>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">
-                <span>第5章</span><h3>歩き方</h3><p>歩幅、速度、方向、身体の質から人物をつくる。</p><strong>読む →</strong>
+                <span>第5章</span><h3>姿勢</h3><p>立ち方、軸、身体のバランスから人物の土台をつくる。</p><strong>読む →</strong>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">
-                <span>第6章</span><h3>重心</h3><p>前後・左右・上下の重心移動を演技に使う。</p><strong>読む →</strong>
+                <span>第6章</span><h3>歩き方</h3><p>歩幅、速度、方向、身体の質から人物をつくる。</p><strong>読む →</strong>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-7/' ) ); ?>">
-                <span>第7章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><strong>読む →</strong>
+                <span>第7章</span><h3>重心</h3><p>重心の位置と移動を知り、身体の安定と不安定を演技に使う。</p><strong>読む →</strong>
             </a>
-        <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">
-                <span>第8章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><strong>読む →</strong>
-            </a>
+        
         </div>
     </section>
 
