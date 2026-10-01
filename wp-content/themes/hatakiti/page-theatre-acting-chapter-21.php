@@ -4,7 +4,7 @@
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>">← 第21章　行動</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-23/' ) ); ?>">第23章　空間 →</a></nav>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>">第22章　空間 →</a></nav>
 <section class="hk-section">
 <div class="hk-section-head"><h2>22-1　身体で何を見せるのか</h2><p>身体の大きさ、重さ、速さ、質などを使い、見える演技として人物を表現します。</p></div>
 <p>この節では「身体で何を見せるのか」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
@@ -48,7 +48,7 @@
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>">← 第21章　行動</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-23/' ) ); ?>">第23章　空間 →</a></nav></main><style>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>">第22章　空間 →</a></nav></main><style>
 .hk-acting .hk-staff-hero{max-width:760px;margin:56px auto 48px}
 .hk-acting .hk-section{max-width:760px;margin:0 auto 54px}
 .hk-acting .hk-section-head{margin-bottom:24px}
