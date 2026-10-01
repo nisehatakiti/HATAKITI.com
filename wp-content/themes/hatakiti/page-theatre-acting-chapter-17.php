@@ -1,54 +1,57 @@
 <?php if ( ! defined( 'ABSPATH' ) ) { exit; } get_header(); ?>
 <main class="hk-container hk-acting">
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第三部 技</p><h1>第17章　台詞</h1><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></header>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第三部 技</p><h1>第17章　読解力</h1><p>台本に書かれていることを読み取り、人物と場面を具体的に想像します。</p></header>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-16/' ) ); ?>">← 第16章　相手と関係</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>">第18章　視線 →</a></nav>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>">第18章　視線 →</a>
+</nav>
 <section class="hk-section">
-<div class="hk-section-head"><h2>17-1　台詞は意味だけではない</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<p>この節では「台詞は意味だけではない」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「台詞は意味だけではない」って、実際の演技ではどう使うんだろう？</p></div></div>
+<div class="hk-section-head"><h2>17-1　台本を読む前に</h2><p>台本を読むときは、いきなり役の感情を決めるのではなく、まず書かれている情報を正確に拾います。</p></div>
+<p>台本のタイトル、登場人物、場面、場所、時間などを確認します。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>短い台本を一場面選ぶ。</li><li>書かれている情報だけを拾う。</li><li>人物、場所、時間、出来事を整理する。</li><li>台詞とト書きを分けて確認する。</li><li>最後に、その場面を立って読んでみる。</li></ol></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>台詞だけじゃなくて、台本に書いてあること全部を読むんだね。</p></div></div>
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>17-2　言葉を相手に届ける</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<p>この節では「言葉を相手に届ける」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
+<div class="hk-section-head"><h2>17-2　誰が何をしているのか</h2><p>台詞だけでなく、誰が、誰に向かって、何をしているのかを読み取ります。</p></div>
+<p>人物の名前、行動、相手、場面の変化を整理すると、台本の出来事が見えてきます。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>短い台本を一場面選ぶ。</li><li>書かれている情報だけを拾う。</li><li>人物、場所、時間、出来事を整理する。</li><li>台詞とト書きを分けて確認する。</li><li>最後に、その場面を立って読んでみる。</li></ol></div>
 
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>17-3　台詞の目的を持つ</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<p>この節では「台詞の目的を持つ」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「台詞の目的を持つ」って、実際の演技ではどう使うんだろう？</p></div></div>
+<div class="hk-section-head"><h2>17-3　台詞とト書きを読む</h2><p>台詞とト書きには、それぞれ違う情報が書かれています。</p></div>
+<p>台詞だけを読むのではなく、ト書きに書かれた動きや状況も合わせて読みます。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>短い台本を一場面選ぶ。</li><li>書かれている情報だけを拾う。</li><li>人物、場所、時間、出来事を整理する。</li><li>台詞とト書きを分けて確認する。</li><li>最後に、その場面を立って読んでみる。</li></ol></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>台詞だけじゃなくて、台本に書いてあること全部を読むんだね。</p></div></div>
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>17-4　言葉の裏側を考える</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<p>この節では「言葉の裏側を考える」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
+<div class="hk-section-head"><h2>17-4　言葉の意味と文脈を読む</h2><p>一つの言葉だけで意味を決めず、その前後に何が起きているのかを読みます。</p></div>
+<p>同じ言葉でも状況や相手によって意味が変わります。前後の台詞や出来事をつなげて考えます。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>短い台本を一場面選ぶ。</li><li>書かれている情報だけを拾う。</li><li>人物、場所、時間、出来事を整理する。</li><li>台詞とト書きを分けて確認する。</li><li>最後に、その場面を立って読んでみる。</li></ol></div>
 
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>17-5　台詞と身体をつなげる</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<p>この節では「台詞と身体をつなげる」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「台詞と身体をつなげる」って、実際の演技ではどう使うんだろう？</p></div></div>
+<div class="hk-section-head"><h2>17-5　台詞の区切り・間・リズムを読む</h2><p>台本には、言葉の流れや変化を読み取る手がかりがあります。</p></div>
+<p>句読点、改行、言葉の繰り返し、言い直しなどを手がかりに、どこで考え、どこで相手を受けるのかを探します。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>短い台本を一場面選ぶ。</li><li>書かれている情報だけを拾う。</li><li>人物、場所、時間、出来事を整理する。</li><li>台詞とト書きを分けて確認する。</li><li>最後に、その場面を立って読んでみる。</li></ol></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>台詞だけじゃなくて、台本に書いてあること全部を読むんだね。</p></div></div>
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>17-6　自分の言葉として話す</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<p>この節では「自分の言葉として話す」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
+<div class="hk-section-head"><h2>17-6　読んだものを演技につなげる</h2><p>台本の情報を、自分の想像と身体、行動へつなげます。</p></div>
+<p>読み取った状況、人物の目的、相手との関係を一つずつ具体化し、実際に立って試してみます。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>短い台本を一場面選ぶ。</li><li>書かれている情報だけを拾う。</li><li>人物、場所、時間、出来事を整理する。</li><li>台詞とト書きを分けて確認する。</li><li>最後に、その場面を立って読んでみる。</li></ol></div>
 
 </section>
-<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div>
-<div class="hk-exercise"><h3>台詞を使って場面をつくる　10分</h3><ol><li>二人で短い場面を設定する。</li><li>人物の目的を一つ決める。</li><li>この章の技術を一つ使って演じる。</li><li>相手の反応を受けて自分の演技を変える。</li><li>もう一度、技術を意識せず演じる。</li><li>最初の演技との違いを確認する。</li></ol><p><strong>ポイント：</strong>技術を見せることが目的ではありません。人物の目的や相手との関係が、技術によってどう伝わるかを感じてみましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>技術を使うと、同じ場面でも見え方が変わるんだね。</p></div></div></section>
-<section class="hk-section"><div class="hk-panel hk-summary"><h3>第17章まとめ</h3><p><strong>台詞は意味だけではない → 言葉を相手に届ける → 台詞の目的を持つ → 言葉の裏側を考える → 台詞と身体をつなげる → 自分の言葉として話す</strong></p><p>台詞の意味だけでなく、誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>短い台本を、まず「演技をしようとせず」に読み取ってみます。</p></div>
+<div class="hk-exercise"><h3>台本を読む　10分</h3><ol><li>短い場面を選ぶ。</li><li>登場人物、場所、時間を確認する。</li><li>誰が誰に何をしているのか整理する。</li><li>台詞とト書きを読む。</li><li>前後の出来事を想像する。</li><li>人物の目的を一つ考える。</li><li>実際に立って台詞を読んでみる。</li><li>最初に読んだときとの違いを振り返る。</li></ol><p><strong>ポイント：</strong>最初から正解の演技を決める必要はありません。まず台本に書かれている情報を読み取り、自分の中に具体的な場面をつくることから始めます。</p></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>台本がちゃんと読めると、演じる前に場面が見えてくるんだね。</p></div></div></section>
+<section class="hk-section"><div class="hk-panel hk-summary"><h3>第17章まとめ</h3><p><strong>情報を拾う → 人物を読む → 台詞とト書きを読む → 文脈を読む → 流れを読む → 演技につなげる</strong></p><p>台本を読むことは、台詞を覚えることだけではありません。書かれている情報を読み取り、人物と場面を具体的に想像することが、演技の出発点になります。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-16/' ) ); ?>">← 第16章　相手と関係</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>">第18章　視線 →</a></nav></main><style>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>">第18章　視線 →</a>
+</nav></main>
+<style>
 .hk-acting .hk-staff-hero{max-width:760px;margin:56px auto 48px}
 .hk-acting .hk-section{max-width:760px;margin:0 auto 54px}
 .hk-acting .hk-section-head{margin-bottom:24px}
