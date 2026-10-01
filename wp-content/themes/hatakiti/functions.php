@@ -183,6 +183,14 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/acting/chapter-6',
         'theatre-textbook/acting/chapter-7',
         'theatre-textbook/acting/chapter-8',
+        'theatre-textbook/acting/chapter-9',
+        'theatre-textbook/acting/chapter-10',
+        'theatre-textbook/acting/chapter-11',
+        'theatre-textbook/acting/chapter-12',
+        'theatre-textbook/acting/chapter-13',
+        'theatre-textbook/acting/chapter-14',
+        'theatre-textbook/acting/chapter-15',
+        'theatre-textbook/acting/chapter-16',
         'theatre-textbook/acting-theory',
         'theatre-textbook/theatre-world',
         'theatre-textbook/theatre-world/high-school',
@@ -246,6 +254,9 @@ function hatakiti_theatre_textbook_route( $template ) {
     }
     if ( 'theatre-textbook/acting/chapter-8' === $path ) {
         return get_template_directory() . '/page-theatre-acting-chapter-8.php';
+    }
+    if ( preg_match( '#^theatre-textbook/acting/chapter-(9|10|11|12|13|14|15|16)$#', $path, $matches ) ) {
+        return get_template_directory() . '/page-theatre-acting-chapter-' . $matches[1] . '.php';
     }
 
     if ( 'theatre-textbook/acting-theory' === $path ) {
