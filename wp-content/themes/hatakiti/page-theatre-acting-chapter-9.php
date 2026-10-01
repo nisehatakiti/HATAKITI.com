@@ -6,10 +6,38 @@
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
 <a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-10/' ) ); ?>">第10章　感覚 →</a></nav>
 <section class="hk-section">
-<div class="hk-section-head"><h2>9-1　想像力とは何か</h2><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div>
-<p>この節では「想像力とは何か」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「想像力とは何か」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-section-head">
+<h2>9-1　想像力とは何か</h2>
+<p>想像力は、まだ目の前にないものを思い浮かべ、それを自分の中で具体的にする力です。</p>
+</div>
+
+<p>演技では、舞台の上にすべてのものが実際に用意されているとは限りません。台本に「海辺」と書かれていても、舞台に本物の海があるわけではありません。そこにいる人物や、起きている出来事も、実際の生活とは違います。</p>
+
+<p>それでも役者は、その場所にいるように、相手がそこにいるように、出来事が本当に起きているように行動します。そのためには、台本に書かれた情報から、目の前にはないものを想像する必要があります。</p>
+
+<p>ただし、頭の中で映像を思い浮かべるだけでは十分ではありません。想像したものを、見える、聞こえる、触れる、感じるといった具体的な感覚へつなげていくことが大切です。</p>
+
+<p>想像力とは、現実を忘れて別の世界へ行くことではありません。<strong>想像したものを、自分の身体や行動につなげること</strong>が、演技で使う想像力です。</p>
+
+<div class="hk-exercise">
+<h3>やってみよう　想像したものを身体に置く</h3>
+<ol>
+<li>目の前に「海」があると想像する。</li>
+<li>海の広さ、波の音、風、温度を思い浮かべる。</li>
+<li>その場所に立っている自分の身体を感じる。</li>
+<li>その場所にいるつもりで、ゆっくり歩いてみる。</li>
+<li>最初に歩いたときと、何が変わったかを確認する。</li>
+</ol>
+</div>
+
+<div class="hk-nyakakichi">
+<div class="hk-nyakakichi-image">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy">
+</div>
+<div class="hk-nyakakichi-question">
+<p>頭の中で想像するだけじゃなくて、身体まで変わってくるんだね。</p>
+</div>
+</div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>9-2　五感で想像する</h2><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div>
