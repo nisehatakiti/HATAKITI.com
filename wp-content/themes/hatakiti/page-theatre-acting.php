@@ -18,7 +18,7 @@ get_header();
     <section class="hk-section">
         <div class="hk-section-head">
             <h2>第一部　体 ― 演技のできる身体を作る</h2>
-            <p>いきなり感情表現や台詞から始めるのではなく、まず身体の土台を整えます。呼吸から始めて、発声、滑舌、身体、姿勢、歩き方、重心へ進み、最後に感情の解放へつなげます。</p>
+            <p>呼吸から始めて、発声、滑舌、身体、姿勢、歩き方、重心へ進み、最後に感情の解放へつなげます。</p>
         </div>
 
         <div class="hk-acting-chapter-grid">
@@ -86,5 +86,14 @@ get_header();
 .hk-acting .hk-acting-next-grid>div{border:1px solid var(--hk-border);background:var(--hk-bg-card);padding:24px}
 .hk-acting .hk-chapter-nav{max-width:900px;margin-left:auto;margin-right:auto}
 @media(max-width:700px){.hk-acting .hk-staff-hero h1{font-size:30px}.hk-acting .hk-acting-chapter-grid,.hk-acting .hk-acting-next-grid{grid-template-columns:1fr}}
+
+.hk-acting .hk-section-head{display:block}
+.hk-acting .hk-section-head h2{display:block;width:100%;margin:0 0 14px}
+.hk-acting .hk-section-head p{display:block;width:100%;max-width:820px;margin:0;line-height:1.9}
+.hk-acting .hk-chapter-nav{width:100%;max-width:900px;margin-left:auto;margin-right:auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.hk-acting .hk-chapter-nav a:first-child{justify-self:start}
+.hk-acting .hk-chapter-nav span{justify-self:center}
+.hk-acting .hk-chapter-nav a:last-child{justify-self:end}
+@media(max-width:700px){.hk-acting .hk-chapter-nav{grid-template-columns:1fr;text-align:center}.hk-acting .hk-chapter-nav a:first-child,.hk-acting .hk-chapter-nav span,.hk-acting .hk-chapter-nav a:last-child{justify-self:center}}
 </style>
 <?php get_footer(); ?>
