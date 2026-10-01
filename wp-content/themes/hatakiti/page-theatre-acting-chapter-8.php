@@ -12,7 +12,7 @@ get_header();
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-7/' ) ); ?>">← 第7章　重心</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<span class="hk-nav-next hk-chapter-nav-disabled">次の部へ →</span>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-9/' ) ); ?>">第9章　想像力 →</a>
 </nav>
 
 <section class="hk-section">
