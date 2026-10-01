@@ -1,54 +1,54 @@
 <?php if ( ! defined( 'ABSPATH' ) ) { exit; } get_header(); ?>
 <main class="hk-container hk-acting">
-<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第三部 技</p><h1>第20章　リズム</h1><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></header>
+<header class="hk-staff-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演技をする｜第三部 技</p><h1>第20章　行動</h1><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></header>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
-<a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-19/' ) ); ?>">← 第19章　間</a>
+<a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>">← 第20章　リズム</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>">第21章　行動 →</a></nav>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>">第22章　身体表現 →</a></nav>
 <section class="hk-section">
-<div class="hk-section-head"><h2>20-1　演技のリズムとは何か</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<p>この節では「演技のリズムとは何か」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
+<div class="hk-section-head"><h2>21-1　演技は行動である</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<p>この節では「演技は行動である」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「演技のリズムとは何か」って、実際の演技ではどう使うんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「演技は行動である」って、実際の演技ではどう使うんだろう？</p></div></div>
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>20-2　速さを変える</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<p>この節では「速さを変える」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-
-</section>
-<section class="hk-section">
-<div class="hk-section-head"><h2>20-3　強さを変える</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<p>この節では「強さを変える」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「強さを変える」って、実際の演技ではどう使うんだろう？</p></div></div>
-</section>
-<section class="hk-section">
-<div class="hk-section-head"><h2>20-4　繰り返しと変化</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<p>この節では「繰り返しと変化」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
+<div class="hk-section-head"><h2>21-2　何をしようとしているのか</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<p>この節では「何をしようとしているのか」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
 
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>20-5　相手とのリズム</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<p>この節では「相手とのリズム」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
+<div class="hk-section-head"><h2>21-3　行動を具体的にする</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<p>この節では「行動を具体的にする」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「相手とのリズム」って、実際の演技ではどう使うんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「行動を具体的にする」って、実際の演技ではどう使うんだろう？</p></div></div>
 </section>
 <section class="hk-section">
-<div class="hk-section-head"><h2>20-6　場面全体のリズム</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<p>この節では「場面全体のリズム」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
+<div class="hk-section-head"><h2>21-4　行動を変える</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<p>この節では「行動を変える」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
 
 </section>
-<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div>
-<div class="hk-exercise"><h3>リズムを使って場面をつくる　10分</h3><ol><li>二人で短い場面を設定する。</li><li>人物の目的を一つ決める。</li><li>この章の技術を一つ使って演じる。</li><li>相手の反応を受けて自分の演技を変える。</li><li>もう一度、技術を意識せず演じる。</li><li>最初の演技との違いを確認する。</li></ol><p><strong>ポイント：</strong>技術を見せることが目的ではありません。人物の目的や相手との関係が、技術によってどう伝わるかを感じてみましょう。</p></div>
+<section class="hk-section">
+<div class="hk-section-head"><h2>21-5　台詞と行動をずらす</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<p>この節では「台詞と行動をずらす」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「台詞と行動をずらす」って、実際の演技ではどう使うんだろう？</p></div></div>
+</section>
+<section class="hk-section">
+<div class="hk-section-head"><h2>21-6　行動で場面を動かす</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<p>この節では「行動で場面を動かす」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
+<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体・声・視線・行動の変化を試す。</li><li>短い場面で相手とやってみる。</li><li>見る側からどう見えたか確認する。</li></ol></div>
+
+</section>
+<section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
+<div class="hk-exercise"><h3>行動を使って場面をつくる　10分</h3><ol><li>二人で短い場面を設定する。</li><li>人物の目的を一つ決める。</li><li>この章の技術を一つ使って演じる。</li><li>相手の反応を受けて自分の演技を変える。</li><li>もう一度、技術を意識せず演じる。</li><li>最初の演技との違いを確認する。</li></ol><p><strong>ポイント：</strong>技術を見せることが目的ではありません。人物の目的や相手との関係が、技術によってどう伝わるかを感じてみましょう。</p></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>技術を使うと、同じ場面でも見え方が変わるんだね。</p></div></div></section>
-<section class="hk-section"><div class="hk-panel hk-summary"><h3>第20章まとめ</h3><p><strong>演技のリズムとは何か → 速さを変える → 強さを変える → 繰り返しと変化 → 相手とのリズム → 場面全体のリズム</strong></p><p>言葉や動きの速さ、強さ、繰り返しと変化を使い、場面の流れをつくります。</p></div></section>
+<section class="hk-section"><div class="hk-panel hk-summary"><h3>第20章まとめ</h3><p><strong>演技は行動である → 何をしようとしているのか → 行動を具体的にする → 行動を変える → 台詞と行動をずらす → 行動で場面を動かす</strong></p><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
-<a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-19/' ) ); ?>">← 第19章　間</a>
+<a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>">← 第20章　リズム</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>">第21章　行動 →</a></nav></main><style>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>">第22章　身体表現 →</a></nav></main><style>
 .hk-acting .hk-staff-hero{max-width:760px;margin:56px auto 48px}
 .hk-acting .hk-section{max-width:760px;margin:0 auto 54px}
 .hk-acting .hk-section-head{margin-bottom:24px}
