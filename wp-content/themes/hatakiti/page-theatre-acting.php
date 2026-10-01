@@ -55,6 +55,46 @@ get_header();
             <h2>この先の構成</h2>
             <p>体ができたら、次に「心」、そして「技」へ進みます。</p>
         </div>
+    <section class="hk-section">
+        <div class="hk-section-head">
+            <h2>第二部　心 ― 役を生きる</h2>
+            <p>想像力、感覚、感情、人物、状況、目的、欲求、相手との関係を通して、役を生きるための心をつくります。</p>
+        </div>
+        <div class="hk-acting-chapter-grid hk-acting-second-grid">
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-9/' ) ); ?>">
+                <span>第9章</span><h3>想像力</h3><p>想像したものを身体に置き、舞台上で生きてみます。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-10/' ) ); ?>">
+                <span>第10章</span><h3>感覚</h3><p>自分と相手、舞台で起きていることを感じながら反応します。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-11/' ) ); ?>">
+                <span>第11章</span><h3>感情</h3><p>役の状況の中で感情を動かし、行動へつなげます。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-12/' ) ); ?>">
+                <span>第12章</span><h3>人物</h3><p>人物の生活や価値観まで考え、一人の人間としてつくります。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-13/' ) ); ?>">
+                <span>第13章</span><h3>状況</h3><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-14/' ) ); ?>">
+                <span>第14章</span><h3>目的</h3><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-15/' ) ); ?>">
+                <span>第15章</span><h3>欲求</h3><p>人物の内側にある「なぜ、それを求めるのか」を掘り下げます。</p><strong>読む →</strong>
+            </a>
+            <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-16/' ) ); ?>">
+                <span>第16章</span><h3>相手と関係</h3><p>相手とのやり取りの中で、自分も変化しながら場面をつくります。</p><strong>読む →</strong>
+            </a>
+        </div>
+    </section>
+
+
+
+    <section class="hk-section">
+        <div class="hk-section-head">
+            <h2>この先の構成</h2>
+            <p>体ができたら、次に「心」、そして「技」へ進みます。</p>
+        </div>
         <div class="hk-acting-next-grid">
             <div><span>第二部</span><h3>心 ― 役を生きる</h3><p>想像力、感覚、感情、人物、状況、目的、欲求、相手、関係を扱います。</p></div>
             <div><span>第三部</span><h3>技 ― 演技として成立させる</h3><p>台詞、視線、間、リズム、行動、身体表現、空間、相手への働きかけを扱います。</p></div>
