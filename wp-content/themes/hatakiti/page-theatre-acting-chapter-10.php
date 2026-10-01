@@ -6,10 +6,39 @@
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
 <a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-11/' ) ); ?>">第11章　感情 →</a></nav>
 <section class="hk-section">
-<div class="hk-section-head"><h2>10-1　自分の感覚を知る</h2><p>自分と相手、そして舞台で起きていることを感じながら反応します。</p></div>
-<p>この節では「自分の感覚を知る」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「自分の感覚を知る」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-section-head">
+<h2>10-1　まず、自分の感覚に気づく</h2>
+<p>演技の出発点として、まず自分の身体や呼吸に起きていることを感じ取ります。</p>
+</div>
+
+<p>普段の生活では、呼吸していることや、足が床に触れていること、肩に力が入っていることなどを、ほとんど意識せずに過ごしています。けれども演技では、自分の身体に今何が起きているのかを知ることが大切です。</p>
+
+<p>例えば、緊張すると呼吸が浅くなったり、肩に力が入ったりすることがあります。逆に、安心しているときには身体の力が抜けていることもあります。大切なのは「こう感じるべき」と決めることではありません。<strong>今、自分に何が起きているのかに気づくこと</strong>です。</p>
+
+<p>感覚に気づくと、自分の身体を演技の材料として使えるようになります。呼吸、温度、重さ、触れている感覚、音など、まずは小さな変化を感じ取ってみましょう。</p>
+
+<p>第9章の「想像する」と違い、ここでは何かを作り出そうとしません。今、実際に自分の身体に起きていることを、そのまま受け取ります。</p>
+
+<div class="hk-exercise">
+<h3>やってみよう　自分の感覚を探す</h3>
+<ol>
+<li>自然に立って、目を閉じる。</li>
+<li>足の裏が床に触れている感覚を感じる。</li>
+<li>呼吸がどこで動いているかを感じる。</li>
+<li>肩、手、顔などに力が入っていないか確認する。</li>
+<li>身体の中で「今、気になるところ」を一つ見つける。</li>
+<li>最後に目を開けて、最初の状態との違いを感じる。</li>
+</ol>
+</div>
+
+<div class="hk-nyakakichi">
+<div class="hk-nyakakichi-image">
+<img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy">
+</div>
+<div class="hk-nyakakichi-question">
+<p>何か特別なことをしなくても、自分の身体を感じるだけでいいんだね。</p>
+</div>
+</div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>10-2　見る</h2><p>自分と相手、そして舞台で起きていることを感じながら反応します。</p></div>
