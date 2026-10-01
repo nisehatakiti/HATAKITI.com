@@ -90,17 +90,6 @@ get_header();
 
 
 
-    <section class="hk-section">
-        <div class="hk-section-head">
-            <h2>この先の構成</h2>
-            <p>体ができたら、次に「心」、そして「技」へ進みます。</p>
-        </div>
-        <div class="hk-acting-next-grid">
-            <div><span>第二部</span><h3>心 ― 役を生きる</h3><p>想像力、感覚、感情、人物、状況、目的、欲求、相手、関係を扱います。</p></div>
-            <div><span>第三部</span><h3>技 ― 演技として成立させる</h3><p>台詞、視線、間、リズム、行動、身体表現、空間、相手への働きかけを扱います。</p></div>
-        </div>
-    </section>
-
     <nav class="hk-chapter-nav" aria-label="演技をするナビゲーション">
         <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">← 演劇の教科書</a>
         <span>演技をする</span>
