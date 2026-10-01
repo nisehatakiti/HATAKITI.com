@@ -33,7 +33,7 @@ get_header();
 <li>最初の歩き方との違いを感じる。</li>
 </ol>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-1-walking-observation.png' ) ); ?>" alt="図説①　まず、自分の歩き方を知る" loading="lazy"><figcaption>図説①　まず、自分の歩き方を知る</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-1-walking-observation.png' ) ); ?>" alt="図説①　まず、自分の歩き方を知る" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>普通に歩いてるつもりでも、いろんな癖があるんだね。</p></div></div>
 </section>
 
@@ -55,7 +55,7 @@ get_header();
 <li>速度を変えたとき、身体のどこが変わったか確認する。</li>
 </ol>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-2-walking-speed.png' ) ); ?>" alt="図説②　速度を変える" loading="lazy"><figcaption>図説②　速度を変える</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-2-walking-speed.png' ) ); ?>" alt="図説②　速度を変える" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>速く歩くと、足だけじゃなくて身体全体が変わるんだね。</p></div></div>
 </section>
 
@@ -78,7 +78,7 @@ get_header();
 <li>見ている人からどう見えたか確認する。</li>
 </ol>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-3-stride.png' ) ); ?>" alt="図説③　歩幅を変える" loading="lazy"><figcaption>図説③　歩幅を変える</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-3-stride.png' ) ); ?>" alt="図説③　歩幅を変える" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>同じ速さでも、歩幅が違うと歩き方そのものが違って見えるね。</p></div></div>
 </section>
 
@@ -100,7 +100,7 @@ get_header();
 <li>誰かから離れるように歩く。</li>
 </ol>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-4-direction.png' ) ); ?>" alt="図説④　方向と向きを変える" loading="lazy"><figcaption>図説④　方向と向きを変える</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-4-direction.png' ) ); ?>" alt="図説④　方向と向きを変える" loading="lazy"></figure>
 </section>
 
 <section class="hk-section">
@@ -122,7 +122,7 @@ get_header();
 <li>自分で一つ状態を決めて歩く。</li>
 </ol>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-5-body-quality.png' ) ); ?>" alt="図説⑤　身体の質を変える" loading="lazy"><figcaption>図説⑤　身体の質を変える</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-5-body-quality.png' ) ); ?>" alt="図説⑤　身体の質を変える" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>足の動かし方を変えなくても、身体の感じ方で歩き方が変わるんだね。</p></div></div>
 </section>
 
@@ -148,7 +148,7 @@ get_header();
 <li>演じた側は、自分の意図と見え方を比べる。</li>
 </ol>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-6-character-through-walking.png' ) ); ?>" alt="図説⑥　歩き方で人物をつくる" loading="lazy"><figcaption>図説⑥　歩き方で人物をつくる</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-6-character-through-walking.png' ) ); ?>" alt="図説⑥　歩き方で人物をつくる" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>歩き方だけでも、その人がどんな状態なのか伝わるんだね。</p></div></div>
 </section>
 
