@@ -24,7 +24,7 @@ get_header();
 <p>役者は、その無意識に行っている身体を、必要なときに意識して扱えることが大切です。</p>
 <p>まずは頭、首、肩、腕、手、胸、背中、腹、骨盤、脚、足というように、自分の身体を部分として認識してみましょう。</p>
 
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-01-body-awareness.png' ) ); ?>" alt="図説①　まず、自分の身体を知る" loading="lazy"><figcaption>図説①　まず、自分の身体を知る</figcaption></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>普段って、身体のことを全部意識してないよね？</p></div></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-01-body-awareness.png' ) ); ?>" alt="図説①　まず、自分の身体を知る" loading="lazy"></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>普段って、身体のことを全部意識してないよね？</p></div></div>
 </section>
 
 <section class="hk-section">
@@ -45,7 +45,7 @@ get_header();
 <li>最後に全身の感覚をまとめて感じる。</li>
 </ol>
 
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-02-body-sensation.png' ) ); ?>" alt="図説②　身体を頭から足先まで感じてみる" loading="lazy"><figcaption>図説②　身体を頭から足先まで感じてみる</figcaption></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>身体って、見るだけじゃなくて感じるものなんだね。</p></div></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-02-body-sensation.png' ) ); ?>" alt="図説②　身体を頭から足先まで感じてみる" loading="lazy"></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>身体って、見るだけじゃなくて感じるものなんだね。</p></div></div>
 </div>
 </section>
 
@@ -64,7 +64,7 @@ get_header();
 <li>顔を少し緊張させて、顎や首の変化を感じる。</li>
 <li>一度力を抜き、変化を比べる。</li>
 </ol>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-03-body-tension.png' ) ); ?>" alt="図説③　自分では気づかない力を探す" loading="lazy"><figcaption>図説③　自分では気づかない力を探す</figcaption></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>手を握っただけなのに、肩まで固くなるの？</p></div></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-03-body-tension.png' ) ); ?>" alt="図説③　自分では気づかない力を探す" loading="lazy"></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>手を握っただけなのに、肩まで固くなるの？</p></div></div>
 </div>
 </section>
 
@@ -84,7 +84,7 @@ get_header();
 <li>頭、胸、骨盤をそれぞれ動かす。</li>
 <li>最後に、複数の部分を組み合わせて動かす。</li>
 </ol>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-04-body-isolation.png' ) ); ?>" alt="図説④　今、どこを動かしている？" loading="lazy"><figcaption>図説④　今、どこを動かしている？</figcaption></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>身体って、一緒に動かすものじゃないの？</p></div></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-04-body-isolation.png' ) ); ?>" alt="図説④　今、どこを動かしている？" loading="lazy"></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>身体って、一緒に動かすものじゃないの？</p></div></div>
 </div>
 </section>
 
@@ -104,7 +104,7 @@ get_header();
 <li>骨盤、背中、腕がどう変化するか感じる。</li>
 <li>動き全体を一つの身体として感じる。</li>
 </ol>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-05-body-connection.png' ) ); ?>" alt="図説⑤　身体は全部つながっている" loading="lazy"><figcaption>図説⑤　身体は全部つながっている</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-05-body-connection.png' ) ); ?>" alt="図説⑤　身体は全部つながっている" loading="lazy"></figure>
 </div>
 </section>
 
@@ -117,7 +117,7 @@ get_header();
 <p>自分の身体の動く範囲を知っておくことは、演技をするときにも大切です。動かせる範囲を知れば、無理な動きを避けながら、必要な動きを選べます。</p>
 <p><strong>無理に広げることが目的ではありません。</strong> 痛みが出るところまで動かさず、自分の現在の範囲を知ることから始めます。</p>
 
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-06-range-of-motion.png' ) ); ?>" alt="図説⑥　自分の身体は、どこまで動く？" loading="lazy"><figcaption>図説⑥　自分の身体は、どこまで動く？</figcaption></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>いっぱい動かせるほうが、いい身体なの？</p></div></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-06-range-of-motion.png' ) ); ?>" alt="図説⑥　自分の身体は、どこまで動く？" loading="lazy"></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>いっぱい動かせるほうが、いい身体なの？</p></div></div>
 </section>
 
 <section class="hk-section">
@@ -137,7 +137,7 @@ get_header();
 <li>最後にもう一度、全身の状態を確認する。</li>
 </ol>
 
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-07-body-adjustment.png' ) ); ?>" alt="図説⑦　今日の身体を確認する" loading="lazy"><figcaption>図説⑦　今日の身体を確認する</figcaption></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>昨日できたことが、今日はやりにくいこともあるんだね。</p></div></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-body-07-body-adjustment.png' ) ); ?>" alt="図説⑦　今日の身体を確認する" loading="lazy"></figure><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>昨日できたことが、今日はやりにくいこともあるんだね。</p></div></div>
 </div>
 </section>
 
