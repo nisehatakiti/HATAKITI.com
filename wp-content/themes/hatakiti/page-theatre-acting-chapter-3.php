@@ -36,7 +36,6 @@ get_header();
 <p>呼吸で生まれた息が声になり、その声を口の中で形づくることで、私たちは言葉を話します。滑舌では、<strong>息・声・口の形・舌・顎</strong>がつながっていることを意識します。</p>
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-01-how-words-are-formed.png' ) ); ?>" alt="声を口・舌・顎で明確な言葉にしていく滑舌のしくみ" loading="lazy">
-<figcaption>できた声を、口・舌・顎の動きで明確な音と言葉へ形づくります。</figcaption>
 </figure>
 <div class="hk-panel">
 <p><strong>滑舌の基本は「速さ」より「明瞭さ」です。</strong></p>
@@ -54,7 +53,6 @@ get_header();
 
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-02-mouth-tongue-face-preparation.png' ) ); ?>" alt="顔・顎・唇・舌・頬と口角を使った発音準備" loading="lazy">
-<figcaption>顔をゆるめ、顎・唇・舌・頬・口角を順番に動かして発音の準備をします。</figcaption>
 </figure>
 <div class="hk-exercise">
 <h3>発音前の2分準備</h3>
@@ -83,7 +81,6 @@ get_header();
 <p>「あ・い・う・え・お」を一音ずつ発音し、口の形を丁寧に変えます。母音が曖昧になると、子音が聞こえていても言葉全体がぼやけてしまいます。</p>
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-03-vowels.png' ) ); ?>" alt="母音の発声と口の形を示す図説" loading="lazy">
-<figcaption>母音ごとの口の形を意識し、一音ずつ明確に発音します。</figcaption>
 </figure>
 <div class="hk-nyakakichi">
 <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div>
@@ -100,7 +97,6 @@ get_header();
 <p>「か・さ・た・は・ま・ら」などの各行を、一音ずつ明確に発音します。子音は、舌・唇・歯・口の形など、音によって使う場所が変わります。</p>
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-04-consonants.png' ) ); ?>" alt="日本語の各行でどこを使って子音をつくるかを示す図説" loading="lazy">
-<figcaption>子音は、音によって舌・唇・息など使う場所が変わります。</figcaption>
 </figure>
 <div class="hk-panel"><p><strong>全部を強く発音する必要はありません。</strong></p><p>音の特徴が分かる程度に明確にします。力任せにすると顎や喉まで固くなるので、必要な部分だけを動かします。</p></div>
 </section>
@@ -113,7 +109,6 @@ get_header();
 <p>滑舌練習では、一音ずつ明確にすることと、実際の言葉としてつなげることの両方が必要です。音を強調しすぎて不自然にならないよう、少しずつ通常の話し方へ戻します。</p>
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-05-connect-sounds-to-words.png' ) ); ?>" alt="一音から音の連続、単語、文章、台詞へ音をつなげる練習" loading="lazy">
-<figcaption>明瞭さを保ったまま、一音から実際の言葉へつなげていきます。</figcaption>
 </figure>
 <div class="hk-panel"><p><strong>明瞭さを保ったまま、少しずつ自然な話し方へ戻します。</strong></p></div>
 </section>
@@ -126,7 +121,6 @@ get_header();
 <p>言葉の頭が弱いと聞き手は言葉の入り口をつかみにくくなります。途中の音が抜けると意味が変わり、語尾が消えると文の終わりが曖昧になります。</p>
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-06-word-beginning-middle-ending.png' ) ); ?>" alt="言葉の頭・途中・語尾を明確にする練習" loading="lazy">
-<figcaption>言葉の入り口から最後の音まで、明瞭さを保ちます。</figcaption>
 </figure>
 <div class="hk-panel"><p><strong>語尾を「強くする」のではなく、語尾まで「存在させる」。</strong></p><p>舞台では、客席まで言葉が届くように、最後の音まで意識します。</p></div>
 </section>
@@ -139,7 +133,6 @@ get_header();
 <p>文章や早口言葉を使って、ゆっくり → 一定の速度 → 少し速く、と段階を踏みます。音が崩れたら、一つ前の速度へ戻します。</p>
 <figure class="hk-acting-figure">
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-articulation-07-speaking-fast-clearly.png' ) ); ?>" alt="明瞭さを保ったまま話す速度を段階的に上げる練習" loading="lazy">
-<figcaption>ゆっくり・普通・少し速く、と段階的に速度を上げ、崩れたら一段階戻します。</figcaption>
 </figure>
 <div class="hk-panel"><p><strong>音が崩れたら、一段階前の速度へ戻ります。</strong></p><p>速さを上げることより、明瞭さを保てる速度を見つけることを優先します。</p></div>
 </section>
