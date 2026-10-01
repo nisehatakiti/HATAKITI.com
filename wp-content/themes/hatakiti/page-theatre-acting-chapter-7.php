@@ -20,7 +20,7 @@ get_header();
 <h2>7-1　まず、自分の重心を感じる</h2>
 <p>重心を「正しい位置」として覚えるのではなく、まず自分の身体が今どこに重さを感じているのかを知ります。</p>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-1-center-of-gravity.png' ) ); ?>" alt="図説①　まず、自分の重心を感じる" loading="lazy"><figcaption>図説①　まず、自分の重心を感じる</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-1-center-of-gravity.png' ) ); ?>" alt="図説①　まず、自分の重心を感じる" loading="lazy"></figure>
 <p>立っているとき、身体の重さは足裏を通して床に伝わっています。けれども、普段はそのことをほとんど意識していません。</p>
 <p>そこで、自然に立った状態で、足裏のどこに重さを感じるのかを観察してみます。前のほうに感じるのか、後ろのほうに感じるのか、左右で違うのか。人によって感覚は違います。</p>
 <p>ここで大切なのは、最初から「ここが正しい重心だ」と決めることではありません。<strong>自分の身体の状態を感じ取れるようになること</strong>が、この章の出発点です。</p>
@@ -45,7 +45,7 @@ get_header();
 <h2>7-2　重心を前後に動かす</h2>
 <p>重心を少し前後へ移すと、身体が動き出す前の感覚が変わります。</p>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-2-center-forward-back.png' ) ); ?>" alt="図説②　重心を前後に動かす" loading="lazy"><figcaption>図説②　重心を前後に動かす</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-2-center-forward-back.png' ) ); ?>" alt="図説②　重心を前後に動かす" loading="lazy"></figure>
 <p>自然に立った状態から、身体の重さを少しだけ前へ移してみます。すると、身体が前へ進みたくなるような感覚が生まれることがあります。</p>
 <p>反対に、少し後ろへ移すと、後ろへ引かれるような感覚や、前へ進みにくくなる感覚が生まれます。</p>
 <p>大きく身体を傾ける必要はありません。ここでは、<strong>重心をほんの少し変えたときに身体の感覚がどう変わるか</strong>を知ることが目的です。</p>
@@ -71,7 +71,7 @@ get_header();
 <h2>7-3　重心を左右に動かす</h2>
 <p>左右へ重心を移すことで、自分の身体の支え方や左右差を知ります。</p>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-3-center-left-right.png' ) ); ?>" alt="図説③　重心を左右に動かす" loading="lazy"><figcaption>図説③　重心を左右に動かす</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-3-center-left-right.png' ) ); ?>" alt="図説③　重心を左右に動かす" loading="lazy"></figure>
 <p>次は、身体の重さを右と左へ少しずつ移してみます。右へ移したときと左へ移したときで、同じように感じるとは限りません。</p>
 <p>片側へ重さが寄ると、足裏の感覚や身体の傾きも変わります。無理に身体を倒すのではなく、<strong>どこまでなら自然に移せるのか</strong>を感じてみましょう。</p>
 <p>左右差があることは、それだけで悪いことではありません。自分の身体にはどんな違いがあるのかを知ることが大切です。</p>
@@ -97,7 +97,7 @@ get_header();
 <h2>7-4　重心を高く・低くする</h2>
 <p>重心の高さを変えると、身体の安定感や動きやすさも変わります。</p>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-4-center-high-low.png' ) ); ?>" alt="図説④　重心を高く・低くする" loading="lazy"><figcaption>図説④　重心を高く・低くする</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-4-center-high-low.png' ) ); ?>" alt="図説④　重心を高く・低くする" loading="lazy"></figure>
 <p>重心は前後左右だけでなく、高さによっても身体の状態が変わります。身体を少し低くした状態と、身体を高く伸ばした状態を比べてみましょう。</p>
 <p>低くしたから必ず重い、高くしたから必ず軽い、という意味ではありません。ここで見るのは、<strong>重心の高さが変わることで、自分の身体の安定感や動きやすさがどう変わるか</strong>です。</p>
 <p>無理にしゃがみ込んだり、身体を伸ばし切ったりする必要はありません。自分が安全に動ける範囲で試します。</p>
@@ -123,7 +123,7 @@ get_header();
 <h2>7-5　安定と不安定を使う</h2>
 <p>安定している身体と、少し不安定な身体。その違いを演技の材料にします。</p>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-5-stability-instability.png' ) ); ?>" alt="図説⑤　安定と不安定を使う" loading="lazy"><figcaption>図説⑤　安定と不安定を使う</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-5-stability-instability.png' ) ); ?>" alt="図説⑤　安定と不安定を使う" loading="lazy"></figure>
 <p>演技では、身体がいつも安定していればよいわけではありません。しっかり立っている状態も、今にも動き出しそうな状態も、どちらも表現に使うことができます。</p>
 <p>両足で自然に立っている状態から、少し片側へ重さを寄せてみます。さらに、前後左右へほんの少しだけバランスを崩してみます。</p>
 <p>大切なのは、倒れることではありません。<strong>安定した状態から、少しだけ不安定になる。その変化を自分で感じ取れること</strong>です。</p>
@@ -145,7 +145,7 @@ get_header();
 <h2>7-6　重心から人物をつくる</h2>
 <p>重心の状態を人物の目的や状態につなげ、身体から人物を作ります。</p>
 </div>
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-6-character-through-center.png' ) ); ?>" alt="図説⑥　重心から人物をつくる" loading="lazy"><figcaption>図説⑥　重心から人物をつくる</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-07-6-character-through-center.png' ) ); ?>" alt="図説⑥　重心から人物をつくる" loading="lazy"></figure>
 <p>ここまで、重心を前後左右へ動かしたり、高さを変えたり、安定と不安定を比べたりしてきました。</p>
 <p>最後は、それらを人物につなげます。例えば、誰かに会いたくて前へ向かっている人物、何かから離れようとしている人物、落ち着いてその場にいる人物、周囲を警戒している人物。同じ場所に立っていても、重心の状態が変われば身体の見え方は変わります。</p>
 <p>ただし、「この人物は前重心」「この人物は後ろ重心」と決めて覚える必要はありません。<strong>人物の目的や状態を考えた結果として、身体の重心がどう変わるか</strong>を試してみます。</p>
