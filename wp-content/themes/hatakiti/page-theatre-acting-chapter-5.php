@@ -32,7 +32,7 @@ get_header();
 </ol>
 </div>
 <!-- 図説①：acting-05-1-standing.png -->
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-1-standing.png' ) ); ?>" alt="図説①　立つとはどういうことか" loading="lazy"><figcaption>図説①　立つとはどういうことか</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-1-standing.png' ) ); ?>" alt="図説①　立つとはどういうことか" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>立ってるだけでも、身体っていろいろ感じてるんだね。</p></div></div>
 </section>
 
@@ -53,7 +53,7 @@ get_header();
 </ol>
 </div>
 <!-- 図説②：acting-05-2-posture-observation.png -->
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-2-posture-observation.png' ) ); ?>" alt="図説②　自分の姿勢を観察する" loading="lazy"><figcaption>図説②　自分の姿勢を観察する</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-2-posture-observation.png' ) ); ?>" alt="図説②　自分の姿勢を観察する" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>自分では普通だと思ってる姿勢にも、癖があるんだね。</p></div></div>
 </section>
 
@@ -75,7 +75,7 @@ get_header();
 </ol>
 </div>
 <!-- 図説③：acting-05-3-body-axis.png -->
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-3-body-axis.png' ) ); ?>" alt="図説③　身体の軸を感じる" loading="lazy"><figcaption>図説③　身体の軸を感じる</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-3-body-axis.png' ) ); ?>" alt="図説③　身体の軸を感じる" loading="lazy"></figure>
 </section>
 
 <section class="hk-section">
@@ -95,7 +95,7 @@ get_header();
 </ol>
 </div>
 <!-- 図説④：acting-05-4-posture-impression.png -->
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-4-posture-impression.png' ) ); ?>" alt="図説④　姿勢を変えると何が変わるか" loading="lazy"><figcaption>図説④　姿勢を変えると何が変わるか</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-4-posture-impression.png' ) ); ?>" alt="図説④　姿勢を変えると何が変わるか" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>姿勢を変えるだけで、同じ人なのに違って見えるんだね。</p></div></div>
 </section>
 
@@ -118,7 +118,7 @@ get_header();
 </ol>
 </div>
 <!-- 図説⑤：acting-05-5-character-through-posture.png -->
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-5-character-through-posture.png' ) ); ?>" alt="図説⑤　姿勢で人物を表現する" loading="lazy"><figcaption>図説⑤　姿勢で人物を表現する</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-5-character-through-posture.png' ) ); ?>" alt="図説⑤　姿勢で人物を表現する" loading="lazy"></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>台詞が同じでも、身体の構えで相手への気持ちまで見えてくるんだね。</p></div></div>
 </section>
 
@@ -140,7 +140,7 @@ get_header();
 </ol>
 </div>
 <!-- 図説⑥：acting-05-6-maintain-and-change.png -->
-<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-6-maintain-and-change.png' ) ); ?>" alt="図説⑥　姿勢を保つ・崩す" loading="lazy"><figcaption>図説⑥　姿勢を保つ・崩す</figcaption></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-05-6-maintain-and-change.png' ) ); ?>" alt="図説⑥　姿勢を保つ・崩す" loading="lazy"></figure>
 </section>
 
 <section class="hk-section">
