@@ -15,13 +15,14 @@ get_header();
             <p>第二部でつくった人物を、台詞、視線、間、リズム、行動、身体表現、空間、相手への働きかけによって、舞台上の演技として成立させます。</p>
         </div>
         <div class="hk-acting-chapter-grid hk-acting-third-grid">
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-17/' ) ); ?>"><span>第17章</span><h3>読解力</h3><p>台本に書かれていることを読み取り、人物と場面を具体的に想像します。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>"><span>第18章</span><h3>視線</h3><p>視線は人物の関心や関係を見せる大切な手段です。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-19/' ) ); ?>"><span>第19章</span><h3>間とリズム</h3><p>間、速さ、強さ、変化を使って、場面の流れをつくります。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>"><span>第20章</span><h3>行動</h3><p>人物の目的を具体的な行動に変え、場面を動かします。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>"><span>第21章</span><h3>身体表現</h3><p>身体の大きさ、重さ、速さ、質などを使って人物を表現します。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>"><span>第22章</span><h3>空間</h3><p>場所、距離、方向を使い、舞台全体で演技します。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-23/' ) ); ?>"><span>第23章</span><h3>相手への働きかけ</h3><p>相手に働きかけ、反応を受け、自分も変わりながら場面をつくります。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-17/' ) ); ?>"><span>第17章</span><h3>読解力</h3><p>台本に書かれている情報を読み取り、人物と場面を具体的に想像します。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>"><span>第18章</span><h3>台詞</h3><p>誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-19/' ) ); ?>"><span>第19章</span><h3>視線</h3><p>視線を使って人物の関心や相手との関係を見せます。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>"><span>第20章</span><h3>間とリズム</h3><p>間、速さ、強さ、変化を使って場面の時間の流れをつくります。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>"><span>第21章</span><h3>行動</h3><p>人物の目的を具体的な行動に変え、場面を動かします。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>"><span>第22章</span><h3>身体表現</h3><p>身体の大きさ、重さ、速さ、質などを使って人物を表現します。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-23/' ) ); ?>"><span>第23章</span><h3>空間</h3><p>場所、距離、方向を使い、舞台全体で演技します。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-24/' ) ); ?>"><span>第24章</span><h3>相手への働きかけ</h3><p>相手に働きかけ、反応を受けながら場面をつくります。</p><strong>読む →</strong></a>
 </div>
     </section>
 
