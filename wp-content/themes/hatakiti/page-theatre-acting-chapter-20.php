@@ -4,7 +4,7 @@
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>">← 第20章　リズム</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>">第22章　身体表現 →</a></nav>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>">第21章　身体表現 →</a></nav>
 <section class="hk-section">
 <div class="hk-section-head"><h2>21-1　演技は行動である</h2><p>人物の目的を具体的な行動に変え、台詞だけに頼らず場面を動かします。</p></div>
 <p>この節では「演技は行動である」を演技の技術として扱います。第二部でつくった人物や目的を、舞台上で見える行動として成立させていきます。</p>
@@ -48,7 +48,7 @@
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>">← 第20章　リズム</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
-<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>">第22章　身体表現 →</a></nav></main><style>
+<a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>">第21章　身体表現 →</a></nav></main><style>
 .hk-acting .hk-staff-hero{max-width:760px;margin:56px auto 48px}
 .hk-acting .hk-section{max-width:760px;margin:0 auto 54px}
 .hk-acting .hk-section-head{margin-bottom:24px}
