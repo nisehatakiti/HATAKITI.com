@@ -33,6 +33,7 @@ get_header();
 <li>最初の歩き方との違いを感じる。</li>
 </ol>
 </div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-1-walking-observation.png' ) ); ?>" alt="図説①　まず、自分の歩き方を知る" loading="lazy"><figcaption>図説①　まず、自分の歩き方を知る</figcaption></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>普通に歩いてるつもりでも、いろんな癖があるんだね。</p></div></div>
 </section>
 
@@ -54,6 +55,7 @@ get_header();
 <li>速度を変えたとき、身体のどこが変わったか確認する。</li>
 </ol>
 </div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-2-walking-speed.png' ) ); ?>" alt="図説②　速度を変える" loading="lazy"><figcaption>図説②　速度を変える</figcaption></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>速く歩くと、足だけじゃなくて身体全体が変わるんだね。</p></div></div>
 </section>
 
@@ -76,6 +78,7 @@ get_header();
 <li>見ている人からどう見えたか確認する。</li>
 </ol>
 </div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-3-stride.png' ) ); ?>" alt="図説③　歩幅を変える" loading="lazy"><figcaption>図説③　歩幅を変える</figcaption></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>同じ速さでも、歩幅が違うと歩き方そのものが違って見えるね。</p></div></div>
 </section>
 
@@ -97,6 +100,7 @@ get_header();
 <li>誰かから離れるように歩く。</li>
 </ol>
 </div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-4-direction.png' ) ); ?>" alt="図説④　方向と向きを変える" loading="lazy"><figcaption>図説④　方向と向きを変える</figcaption></figure>
 </section>
 
 <section class="hk-section">
@@ -118,6 +122,7 @@ get_header();
 <li>自分で一つ状態を決めて歩く。</li>
 </ol>
 </div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-5-body-quality.png' ) ); ?>" alt="図説⑤　身体の質を変える" loading="lazy"><figcaption>図説⑤　身体の質を変える</figcaption></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>足の動かし方を変えなくても、身体の感じ方で歩き方が変わるんだね。</p></div></div>
 </section>
 
@@ -143,6 +148,7 @@ get_header();
 <li>演じた側は、自分の意図と見え方を比べる。</li>
 </ol>
 </div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-06-6-character-through-walking.png' ) ); ?>" alt="図説⑥　歩き方で人物をつくる" loading="lazy"><figcaption>図説⑥　歩き方で人物をつくる</figcaption></figure>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>歩き方だけでも、その人がどんな状態なのか伝わるんだね。</p></div></div>
 </section>
 
@@ -198,5 +204,7 @@ get_header();
 @media(max-width:700px){.hk-acting .hk-chapter-nav.hk-acting-chapter-nav{grid-template-columns:1fr;text-align:center}.hk-acting-chapter-nav .hk-nav-prev,.hk-acting-chapter-nav .hk-nav-center,.hk-acting-chapter-nav .hk-nav-next{justify-self:center}}
 .hk-acting .hk-nyakakichi{display:grid;grid-template-columns:100px minmax(0,1fr);align-items:center;gap:16px;max-width:760px;margin:24px auto 0}.hk-acting .hk-nyakakichi-image img{display:block;width:100px;height:auto}.hk-acting .hk-nyakakichi-question{position:relative;background:#242424;border:1px solid var(--hk-border);border-radius:14px;padding:16px 20px;color:var(--hk-fg)}.hk-acting .hk-nyakakichi-question:before{content:"";position:absolute;left:-12px;top:50%;transform:translateY(-50%);border-top:11px solid transparent;border-bottom:11px solid transparent;border-right:12px solid var(--hk-border)}.hk-acting .hk-nyakakichi-question:after{content:"";position:absolute;left:-10px;top:50%;transform:translateY(-50%);border-top:10px solid transparent;border-bottom:10px solid transparent;border-right:11px solid #242424}.hk-acting .hk-nyakakichi-question p{margin:0;line-height:1.8}
 @media(max-width:700px){.hk-acting .hk-nyakakichi{grid-template-columns:82px minmax(0,1fr)}.hk-acting .hk-nyakakichi-image img{width:82px}}
+
+.hk-acting .hk-acting-figure{max-width:760px;margin:30px auto 26px;text-align:center}.hk-acting .hk-acting-figure img{display:block;width:100%;height:auto;border-radius:4px}.hk-acting .hk-acting-figure figcaption{margin-top:10px;font-size:13px;color:var(--hk-fg-dim)}
 </style>
 <?php get_footer(); ?>
