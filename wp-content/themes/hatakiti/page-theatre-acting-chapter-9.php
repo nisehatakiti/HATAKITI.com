@@ -83,7 +83,7 @@
 </section>
 <section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div>
 <div class="hk-exercise"><h3>想像力から人物をつくる　10分</h3><ol><li>テーマを一つ決める。</li><li>人物が置かれている状況を設定する。</li><li>想像力とは何かを意識する。</li><li>次に場所を想像するを加える。</li><li>想像したものを身体にするまでつなげて短い場面を演じる。</li><li>見る側は「どう見えたか」を伝える。</li><li>演じた側は「何を意図したか」を振り返る。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化が人物の行動にどうつながるかを感じてみましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第9章まとめ</h3><p><strong>考える → 感じる → 想像する → 身体にする</strong></p><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">← 第8章　感情の解放</a>
