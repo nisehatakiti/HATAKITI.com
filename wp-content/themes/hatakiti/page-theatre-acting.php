@@ -16,29 +16,29 @@ get_header();
 
         <div class="hk-acting-chapter-grid">
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-1/' ) ); ?>">
-                <span>第1章</span><h3>呼吸法</h3><p>呼吸を観察し、息を止めずに身体と声を使う。</p><strong>読む →</strong>
+                <span>第1章</span><h3>呼吸法</h3><p>呼吸を観察し、息を止めずに身体と声を使う。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-2/' ) ); ?>">
-                <span>第2章</span><h3>発声</h3><p>呼吸と身体を使い、相手に届く声をつくる。</p><strong>読む →</strong>
+                <span>第2章</span><h3>発声</h3><p>呼吸と身体を使い、相手に届く声をつくる。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-3/' ) ); ?>">
-                <span>第3章</span><h3>滑舌</h3><p>母音と子音を明確にし、言葉を相手と劇場へ届ける。</p><strong>読む →</strong>
+                <span>第3章</span><h3>滑舌</h3><p>母音と子音を明確にし、言葉を相手と劇場へ届ける。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-4/' ) ); ?>">
-                <span>第4章</span><h3>身体</h3><p>身体を知り、必要な力を使い、余分な力を手放す。</p><strong>読む →</strong>
+                <span>第4章</span><h3>身体</h3><p>身体を知り、必要な力を使い、余分な力を手放す。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-5/' ) ); ?>">
-                <span>第5章</span><h3>姿勢</h3><p>立ち方、軸、身体のバランスから人物の土台をつくる。</p><strong>読む →</strong>
+                <span>第5章</span><h3>姿勢</h3><p>立ち方、軸、身体のバランスから人物の土台をつくる。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-6/' ) ); ?>">
-                <span>第6章</span><h3>歩き方</h3><p>歩幅、速度、方向、身体の質から人物をつくる。</p><strong>読む →</strong>
+                <span>第6章</span><h3>歩き方</h3><p>歩幅、速度、方向、身体の質から人物をつくる。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-7/' ) ); ?>">
-                <span>第7章</span><h3>重心</h3><p>重心の位置と移動を知り、身体の安定と不安定を演技に使う。</p><strong>読む →</strong>
+                <span>第7章</span><h3>重心</h3><p>重心の位置と移動を知り、身体の安定と不安定を演技に使う。</p>
             </a>
         
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">
-                <span>第8章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p><strong>読む →</strong>
+                <span>第8章</span><h3>感情の解放</h3><p>身体が整ったところから、感情の反応を扱えるようにする。</p>
             </a>
         </div>
     </section>
@@ -49,28 +49,28 @@ get_header();
         </div>
         <div class="hk-acting-chapter-grid hk-acting-second-grid">
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-9/' ) ); ?>">
-                <span>第9章</span><h3>想像力</h3><p>想像したものを身体に置き、舞台上で生きてみます。</p><strong>読む →</strong>
+                <span>第9章</span><h3>想像力</h3><p>想像したものを身体に置き、舞台上で生きてみます。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-10/' ) ); ?>">
-                <span>第10章</span><h3>感覚</h3><p>自分と相手、舞台で起きていることを感じながら反応します。</p><strong>読む →</strong>
+                <span>第10章</span><h3>感覚</h3><p>自分と相手、舞台で起きていることを感じながら反応します。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-11/' ) ); ?>">
-                <span>第11章</span><h3>感情</h3><p>役の状況の中で感情を動かし、行動へつなげます。</p><strong>読む →</strong>
+                <span>第11章</span><h3>感情</h3><p>役の状況の中で感情を動かし、行動へつなげます。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-12/' ) ); ?>">
-                <span>第12章</span><h3>人物</h3><p>人物の生活や価値観まで考え、一人の人間としてつくります。</p><strong>読む →</strong>
+                <span>第12章</span><h3>人物</h3><p>人物の生活や価値観まで考え、一人の人間としてつくります。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-13/' ) ); ?>">
-                <span>第13章</span><h3>状況</h3><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p><strong>読む →</strong>
+                <span>第13章</span><h3>状況</h3><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-14/' ) ); ?>">
-                <span>第14章</span><h3>目的</h3><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p><strong>読む →</strong>
+                <span>第14章</span><h3>目的</h3><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-15/' ) ); ?>">
-                <span>第15章</span><h3>欲求</h3><p>人物の内側にある「なぜ、それを求めるのか」を掘り下げます。</p><strong>読む →</strong>
+                <span>第15章</span><h3>欲求</h3><p>人物の内側にある「なぜ、それを求めるのか」を掘り下げます。</p>
             </a>
             <a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-16/' ) ); ?>">
-                <span>第16章</span><h3>相手と関係</h3><p>相手とのやり取りの中で、自分も変化しながら場面をつくります。</p><strong>読む →</strong>
+                <span>第16章</span><h3>相手と関係</h3><p>相手とのやり取りの中で、自分も変化しながら場面をつくります。</p>
             </a>
         </div>
     </section>
@@ -80,14 +80,14 @@ get_header();
             <p>第二部でつくった人物を、台詞、視線、間、リズム、行動、身体表現、空間、相手への働きかけによって、舞台上の演技として成立させます。</p>
         </div>
         <div class="hk-acting-chapter-grid hk-acting-third-grid">
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-17/' ) ); ?>"><span>第17章</span><h3>読解力</h3><p>台本に書かれている情報を読み取り、人物と場面を具体的に想像します。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>"><span>第18章</span><h3>台詞</h3><p>誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-19/' ) ); ?>"><span>第19章</span><h3>視線</h3><p>視線を使って人物の関心や相手との関係を見せます。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>"><span>第20章</span><h3>間とリズム</h3><p>間、速さ、強さ、変化を使って場面の時間の流れをつくります。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>"><span>第21章</span><h3>行動</h3><p>人物の目的を具体的な行動に変え、場面を動かします。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>"><span>第22章</span><h3>身体表現</h3><p>身体の大きさ、重さ、速さ、質などを使って人物を表現します。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-23/' ) ); ?>"><span>第23章</span><h3>空間</h3><p>場所、距離、方向を使い、舞台全体で演技します。</p><strong>読む →</strong></a>
-<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-24/' ) ); ?>"><span>第24章</span><h3>相手への働きかけ</h3><p>相手に働きかけ、反応を受けながら場面をつくります。</p><strong>読む →</strong></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-17/' ) ); ?>"><span>第17章</span><h3>読解力</h3><p>台本に書かれている情報を読み取り、人物と場面を具体的に想像します。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-18/' ) ); ?>"><span>第18章</span><h3>台詞</h3><p>誰に何を伝えたいのかを考え、身体と一緒に言葉を届けます。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-19/' ) ); ?>"><span>第19章</span><h3>視線</h3><p>視線を使って人物の関心や相手との関係を見せます。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-20/' ) ); ?>"><span>第20章</span><h3>間とリズム</h3><p>間、速さ、強さ、変化を使って場面の時間の流れをつくります。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-21/' ) ); ?>"><span>第21章</span><h3>行動</h3><p>人物の目的を具体的な行動に変え、場面を動かします。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-22/' ) ); ?>"><span>第22章</span><h3>身体表現</h3><p>身体の大きさ、重さ、速さ、質などを使って人物を表現します。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-23/' ) ); ?>"><span>第23章</span><h3>空間</h3><p>場所、距離、方向を使い、舞台全体で演技します。</p></a>
+<a class="hk-acting-chapter-card" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-24/' ) ); ?>"><span>第24章</span><h3>相手への働きかけ</h3><p>相手に働きかけ、反応を受けながら場面をつくります。</p></a>
 </div>
     </section>
     <nav class="hk-chapter-nav" aria-label="演技をするナビゲーション">
@@ -108,7 +108,6 @@ get_header();
 .hk-acting .hk-acting-chapter-card:hover{border-color:var(--hk-accent-warm);transform:translateY(-2px)}
 .hk-acting .hk-acting-chapter-card span,.hk-acting .hk-acting-next-grid span{font-size:12px;color:var(--hk-accent-warm)}
 .hk-acting .hk-acting-chapter-card h3,.hk-acting .hk-acting-next-grid h3{font-family:var(--hk-font-serif);margin:7px 0 10px}
-.hk-acting .hk-acting-chapter-card strong{color:var(--hk-accent-warm);font-size:13px}
 .hk-acting .hk-acting-next-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .hk-acting .hk-acting-next-grid>div{border:1px solid var(--hk-border);background:var(--hk-bg-card);padding:24px}
 .hk-acting .hk-chapter-nav{max-width:900px;margin-left:auto;margin-right:auto}
