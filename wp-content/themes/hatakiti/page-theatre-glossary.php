@@ -966,9 +966,9 @@ if ( class_exists( 'Collator' ) ) {
                 <section class="hk-wiki-category">
                     <h3><?php echo esc_html( $category_labels[ $category ] ?? $category ); ?></h3>
                     <div class="hk-wiki-terms">
-                        <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
-                            <?php if ( empty( $term['slug'] ) ) { continue; } ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a><span class="hk-wiki-separator" aria-hidden="true"> ・ </span>
+                        <?php $category_terms = array_values( array_filter( $groups[ $category ], function( $item ) { return ! empty( $item['slug'] ); } ) ); ?>
+                        <?php foreach ( $category_terms as $index => $term ) : ?>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $term['name'] ?? '' ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $term['name'] ?? '' ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 </section>
@@ -981,9 +981,9 @@ if ( class_exists( 'Collator' ) ) {
                 <section class="hk-wiki-category">
                     <h3><?php echo esc_html( $category ); ?></h3>
                     <div class="hk-wiki-terms">
-                        <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
-                            <?php if ( empty( $term['slug'] ) ) { continue; } ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a><span class="hk-wiki-separator" aria-hidden="true"> ・ </span>
+                        <?php $category_terms = array_values( array_filter( $groups[ $category ], function( $item ) { return ! empty( $item['slug'] ); } ) ); ?>
+                        <?php foreach ( $category_terms as $index => $term ) : ?>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $term['name'] ?? '' ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $term['name'] ?? '' ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 </section>
