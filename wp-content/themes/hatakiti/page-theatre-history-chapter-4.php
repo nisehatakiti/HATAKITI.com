@@ -140,11 +140,7 @@ get_header();
         <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-understood.png' ) ); ?>" alt="演劇産業の仕組みを理解したにゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>演劇って、舞台に立つ人だけで作っているんじゃないんだニャ。</p></div></div>
     </section>
 
-<section class="hk-section hk-reading-note">
-        <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では用語を覚えることより、劇場・俳優・観客の関係がどう変わったのかを追ってみましょう。</p>
-    </section>
-
-    <section class="hk-section hk-summary">
+<section class="hk-section hk-summary">
         <div class="hk-section-head"><h2>第4章まとめ</h2></div>
         <p>ルネサンスから近世にかけて、演劇は古代文化の再発見や都市の発展と結びつきながら、大きく姿を変えていきました。</p>
         <p>舞台美術や劇場空間が発達し、コメディア・デラルテのように俳優の技術を生かす演劇も広がりました。そしてイギリスでは常設劇場が増え、シェイクスピアの時代には、劇場の構造と観客との距離を生かした演劇が発展しました。</p>
