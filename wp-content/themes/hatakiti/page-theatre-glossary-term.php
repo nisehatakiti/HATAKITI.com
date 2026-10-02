@@ -884,9 +884,9 @@ $terms = array(
 'detail-745'=>array('name'=>'集団の関係','category'=>'演技・関係','definition'=>'「集団の関係」を演劇の理解や実践と関連づけて考えるための用語・概念。','points'=>array('「集団の関係」は、演劇の中で人物・舞台・観客・表現などを考えるときに関連する概念です。','作品や演技の具体的な場面と結びつけて考えると理解しやすくなります。','他の関連する用語と一緒に見ることで、演劇の仕組みや表現の違いが見えてきます。')),
 'detail-746'=>array('name'=>'観客との関係','category'=>'演技・関係','definition'=>'「観客との関係」を演劇の理解や実践と関連づけて考えるための用語・概念。','points'=>array('「観客との関係」は、演劇の中で人物・舞台・観客・表現などを考えるときに関連する概念です。','作品や演技の具体的な場面と結びつけて考えると理解しやすくなります。','他の関連する用語と一緒に見ることで、演劇の仕組みや表現の違いが見えてきます。')),
 );
-function hk_glossary_linked_text( $text, $current_slug, $terms ) {
+function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
     $names = array();
-    foreach ( $terms as $name => $item ) {
+    foreach ( $link_terms as $name => $item ) {
         if ( $item['slug'] === $current_slug ) {
             continue;
         }
@@ -955,11 +955,11 @@ get_header();
 </header>
 <nav class="hk-wiki-nav" aria-label="演劇用語集ナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/')); ?>">← 演劇用語集</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
 <section class="hk-wiki-definition">
-<p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $terms ); ?></p>
+<p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $related_terms ); ?></p>
 </section>
 <section class="hk-wiki-section">
 <h2>概要</h2>
-<ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $terms ); ?></li><?php endforeach; ?></ul>
+<ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $related_terms ); ?></li><?php endforeach; ?></ul>
 </section>
 <?php if ( ! empty( $related_terms ) ) : ?>
 <section class="hk-wiki-section">
