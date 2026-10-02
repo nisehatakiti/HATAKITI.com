@@ -9,6 +9,7 @@
 <div class="hk-section-head"><h2>12-1　人物を決めつけない</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-1-dont-define-character.png' ) ); ?>" alt="12-1　人物を決めつけない図説" loading="lazy"></figure></div>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-1-dont-define-character.png' ) ); ?>" alt="12-1　人物を決めつけない図説" loading="lazy"></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-1-dont-define-character.png' ) ); ?>" alt="12-1　人物を決めつけない図説" loading="lazy"></figure>
 <p>この節では「人物を決めつけない」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物を決めつけない」って、演技ではどう使えばいいんだろう？</p></div></div>
@@ -16,6 +17,7 @@
 <section class="hk-section">
 <div class="hk-section-head"><h2>12-2　人物の過去を考える</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-2-character-past.png' ) ); ?>" alt="12-2　人物の過去を考える図説" loading="lazy"></figure></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-2-character-past.png' ) ); ?>" alt="12-2　人物の過去を考える図説" loading="lazy"></figure>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-2-character-past.png' ) ); ?>" alt="12-2　人物の過去を考える図説" loading="lazy"></figure>
 <p>この節では「人物の過去を考える」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
@@ -25,6 +27,7 @@
 <div class="hk-section-head"><h2>12-3　人物の生活を考える</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-3-character-life.png' ) ); ?>" alt="12-3　人物の生活を考える図説" loading="lazy"></figure></div>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-3-character-life.png' ) ); ?>" alt="12-3　人物の生活を考える図説" loading="lazy"></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-3-character-life.png' ) ); ?>" alt="12-3　人物の生活を考える図説" loading="lazy"></figure>
 <p>この節では「人物の生活を考える」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 
@@ -32,6 +35,7 @@
 <section class="hk-section">
 <div class="hk-section-head"><h2>12-4　人物の価値観を考える</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-4-character-values.png' ) ); ?>" alt="12-4　人物の価値観を考える図説" loading="lazy"></figure></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-4-character-values.png' ) ); ?>" alt="12-4　人物の価値観を考える図説" loading="lazy"></figure>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-4-character-values.png' ) ); ?>" alt="12-4　人物の価値観を考える図説" loading="lazy"></figure>
 <p>この節では「人物の価値観を考える」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
@@ -41,6 +45,7 @@
 <div class="hk-section-head"><h2>12-5　人物の弱さと強さ</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-5-character-strengths-weaknesses.png' ) ); ?>" alt="12-5　人物の弱さと強さ図説" loading="lazy"></figure></div>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-5-character-strengths-weaknesses.png' ) ); ?>" alt="12-5　人物の弱さと強さ図説" loading="lazy"></figure>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-5-character-strengths-weaknesses.png' ) ); ?>" alt="12-5　人物の弱さと強さ図説" loading="lazy"></figure>
 <p>この節では「人物の弱さと強さ」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 
@@ -48,6 +53,7 @@
 <section class="hk-section">
 <div class="hk-section-head"><h2>12-6　人物を身体にする</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-6-character-into-body.png' ) ); ?>" alt="12-6　人物を身体にする図説" loading="lazy"></figure></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-6-character-into-body.png' ) ); ?>" alt="12-6　人物を身体にする図説" loading="lazy"></figure>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-12-6-character-into-body.png' ) ); ?>" alt="12-6　人物を身体にする図説" loading="lazy"></figure>
 <p>この節では「人物を身体にする」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
