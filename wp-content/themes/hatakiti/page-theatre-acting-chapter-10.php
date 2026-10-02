@@ -14,7 +14,7 @@
 <p>第9章の「想像する」と違い、ここでは何かを作り出そうとしません。今、実際に自分の身体に起きていることを、そのまま受け取ります。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-10-1-notice-own-senses.png' ) ); ?>" alt="10-1 まず、自分の感覚に気づく図説" loading="lazy"></figure>
 <div class="hk-exercise"><h3>やってみよう　自分の感覚を探す</h3><ol><li>自然に立って、目を閉じる。</li><li>足の裏が床に触れている感覚を感じる。</li><li>呼吸がどこで動いているかを感じる。</li><li>肩、手、顔などに力が入っていないか確認する。</li><li>身体の中で「今、気になるところ」を一つ見つける。</li><li>最後に目を開けて、最初の状態との違いを感じる。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>何か特別なことをしなくても、自分の身体を感じるだけでいいんだね。</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>まずは、自分の身体で起きていることに気づけばいいんだニャ。</p></div></div>
 </section>
 
 <section class="hk-section">
@@ -23,7 +23,7 @@
 <p>ここで大切なのは、相手を観察して正解を当てることではありません。相手から受け取ったものによって、自分の身体や声、視線がどう変わるかを感じることです。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-10-2-sense-the-other.png' ) ); ?>" alt="10-2 相手を感じる図説" loading="lazy"></figure>
 <div class="hk-exercise"><h3>やってみよう　相手を感じる</h3><ol><li>相手と向かい合って立つ。</li><li>まず相手の視線と姿勢を感じる。</li><li>相手が少し動いたら、自分に何が起きるか感じる。</li><li>距離や声の変化も受け取ってみる。</li><li>受け取った変化に、呼吸・視線・身体で小さく反応する。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>相手を見ているだけじゃなくて、相手から何かを受け取るんだね。</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>相手の視線や声も、ちゃんと感じ取るんだニャ。</p></div></div>
 </section>
 
 <section class="hk-section">
@@ -48,7 +48,7 @@
 <p>そして自分が反応すれば、今度は相手にも変化が起きます。そこからまた何かを受け取ります。演技は、この小さなやり取りが続いていくことで生きたものになります。</p>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-10-5-respond-to-sensation.png' ) ); ?>" alt="10-5 感じたことに反応する図説" loading="lazy"></figure>
 <div class="hk-exercise"><h3>やってみよう　感じて反応する</h3><ol><li>相手の声や動きを感じる。</li><li>何が変わったかを受け取る。</li><li>呼吸、視線、身体、声のどれかで反応する。</li><li>自分の反応に対する相手の変化をまた感じる。</li><li>決めた演技を繰り返すのではなく、その場で起きたことを受け続ける。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じたことに反応すると、また相手から何かが返ってくるんだね。</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-understood.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じたことに反応すると、相手とのやり取りが生まれるんだニャ。</p></div></div>
 </section>
 
 <section class="hk-section">
@@ -62,7 +62,7 @@
 <section class="hk-section">
 <div class="hk-section-head"><h2>実践エチュード　相手を感じて反応する</h2><p>10分で「感じる → 受け取る → 反応する」の流れを体験します。</p></div>
 <div class="hk-exercise"><ol><li>二人で向かい合い、何もせず立つ。</li><li>相手の視線、呼吸、姿勢、距離を感じる。</li><li>一人がゆっくり動き、もう一人はその変化を受け取る。</li><li>受け取った変化に、呼吸・視線・身体のどれかで反応する。</li><li>役割を交代する。</li><li>最後に短い台詞を加え、感じながらやり取りする。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化を感じ、それが次の反応につながることを意識しましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じることから始めると、相手とのやり取りが変わってきそうだね。</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じながら演じると、毎回少しずつ違う場面になりそうだニャ！</p></div></div>
 </section>
 
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第10章まとめ</h3><p><strong>自分を感じる → 相手を感じる → 舞台を感じる → 変化を感じる → 反応する → 感じ続ける</strong></p><p>感覚は、演技をその場で生きるための土台です。次の第11章では、感じたものから生まれる「感情」について考えます。</p></div></section>
