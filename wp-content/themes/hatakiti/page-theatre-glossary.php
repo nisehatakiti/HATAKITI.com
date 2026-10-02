@@ -891,17 +891,19 @@ $terms = array(
     '観客との関係' => array('slug'=>'detail-746','category'=>'演技・関係','summary'=>'「観客との関係」を演劇の理解や実践と関連づけて考えるための用語・概念。'),
 );
 
-$groups = array();
-foreach ( $terms as $name => $term ) {
-    $groups[ $term['category'] ][ $name ] = $term;
+$items = $terms;
+if ( class_exists( 'Collator' ) ) {
+    $collator = new Collator( 'ja_JP' );
+    $collator->asort( $items );
+} else {
+    ksort( $items, SORT_NATURAL | SORT_FLAG_CASE );
 }
-ksort( $groups );
 ?>
 <main class="hk-container hk-glossary">
     <header class="hk-textbook-hero">
         <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜Wiki</p>
         <h1>演劇用語集</h1>
-        <p>演劇の歴史、演技、舞台スタッフなどで出てくる言葉を、必要なときに調べられるように整理していきます。</p>
+        <p>演劇の歴史、演技、舞台スタッフなどで出てくる言葉を、必要なときに調べられるように整理しています。</p>
     </header>
 
     <nav class="hk-chapter-nav" aria-label="演劇用語集ナビゲーション">
@@ -912,8 +914,8 @@ ksort( $groups );
 
     <section class="hk-section">
         <div class="hk-section-head">
-            <h2>演劇用語を探す</h2>
-            <p>用語をクリックすると、その言葉の詳しいページへ移動します。今後、演劇の歴史だけでなく演技・演出・舞台技術の用語も追加していきます。</p>
+            <h2>用語を探す</h2>
+            <p>カテゴリや概要を表示せず、用語名だけを一覧にしています。用語をクリックすると詳しいWikiページを開けます。</p>
         </div>
         <label class="hk-glossary-search">
             <span>用語を検索</span>
@@ -922,20 +924,13 @@ ksort( $groups );
     </section>
 
     <section class="hk-section" id="glossary-list">
-        <?php foreach ( $groups as $category => $items ) : ?>
-            <div class="hk-glossary-group">
-                <h2><?php echo esc_html( $category ); ?></h2>
-                <div class="hk-glossary-grid">
-                    <?php foreach ( $items as $name => $term ) : ?>
-                        <a class="hk-glossary-card" data-term="<?php echo esc_attr( $name . ' ' . $term['summary'] . ' ' . $category ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/glossary/' . $term['slug'] . '/' ) ); ?>">
-                            <span><?php echo esc_html( $category ); ?></span>
-                            <h3><?php echo esc_html( $name ); ?></h3>
-                            <p><?php echo esc_html( $term['summary'] ); ?></p>
-                        </a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        <?php endforeach; ?>
+        <div class="hk-glossary-list">
+            <?php foreach ( $items as $name => $term ) : ?>
+                <a class="hk-glossary-item" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/glossary/' . $term['slug'] . '/' ) ); ?>">
+                    <?php echo esc_html( $name ); ?>
+                </a>
+            <?php endforeach; ?>
+        </div>
         <p id="hk-glossary-empty" hidden>該当する用語はありません。</p>
     </section>
 </main>
@@ -947,29 +942,24 @@ ksort( $groups );
 .hk-glossary-search{display:block;max-width:700px;margin:0 auto}
 .hk-glossary-search span{display:block;font-size:13px;color:var(--hk-fg-dim);margin-bottom:8px}
 .hk-glossary-search input{width:100%;box-sizing:border-box;padding:14px 16px;border:1px solid var(--hk-border);border-radius:8px;background:var(--hk-bg-elevated);color:var(--hk-fg);font:inherit}
-.hk-glossary-group{margin:0 0 48px}
-.hk-glossary-group>h2{font-size:22px;border-bottom:1px solid var(--hk-border);padding-bottom:12px;margin-bottom:18px}
-.hk-glossary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.hk-glossary-card{display:block;padding:22px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);color:var(--hk-fg);transition:border-color .2s}
-.hk-glossary-card:hover{border-color:var(--hk-accent-warm);text-decoration:none}
-.hk-glossary-card>span{font-size:11px;color:var(--hk-accent-warm);letter-spacing:.08em}
-.hk-glossary-card h3{font-family:var(--hk-font-serif);font-size:22px;margin:8px 0 10px}
-.hk-glossary-card p{margin:0;color:var(--hk-fg-dim);font-size:14px;line-height:1.8}
-@media(max-width:900px){.hk-glossary-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.hk-glossary-grid{grid-template-columns:1fr}.hk-glossary .hk-textbook-hero h1{font-size:29px}}
+.hk-glossary-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--hk-border);border-left:1px solid var(--hk-border)}
+.hk-glossary-item{display:block;padding:14px 18px;border-right:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border);color:var(--hk-fg);font-family:var(--hk-font-serif);font-size:17px;background:var(--hk-bg-elevated);transition:background .2s,color .2s}
+.hk-glossary-item:hover{background:var(--hk-bg);color:var(--hk-accent-warm);text-decoration:none}
+@media(max-width:900px){.hk-glossary-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.hk-glossary-list{grid-template-columns:repeat(2,minmax(0,1fr))}.hk-glossary .hk-textbook-hero h1{font-size:29px}}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('hk-glossary-search');
-    const cards = Array.from(document.querySelectorAll('.hk-glossary-card'));
+    const items = Array.from(document.querySelectorAll('.hk-glossary-item'));
     const empty = document.getElementById('hk-glossary-empty');
     if (!input) return;
     input.addEventListener('input', function () {
         const q = input.value.trim().toLowerCase();
         let visible = 0;
-        cards.forEach(function (card) {
-            const match = !q || card.dataset.term.toLowerCase().includes(q);
-            card.hidden = !match;
+        items.forEach(function (item) {
+            const match = !q || item.dataset.term.toLowerCase().includes(q);
+            item.hidden = !match;
             if (match) visible++;
         });
         empty.hidden = visible !== 0;
