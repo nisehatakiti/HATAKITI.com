@@ -174,6 +174,7 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/history/chapter-4',
         'theatre-textbook/history/chapter-5',
         'theatre-textbook/history/chapter-6',
+        'theatre-textbook/glossary',
         'theatre-textbook/acting',
         'theatre-textbook/acting/chapter-1',
         'theatre-textbook/acting/chapter-2',
@@ -223,10 +224,11 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/staff/sound',
         'theatre-textbook/staff/stage-management',
     );
+    $is_glossary_route = 'theatre-textbook/glossary' === $path || 0 === strpos( $path, 'theatre-textbook/glossary/' );
     $is_gel_filter_route = 'theatre-textbook/staff/lighting/filters' === $path
         || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' );
 
-    if ( ! in_array( $path, $theatre_textbook_routes, true ) && ! $is_gel_filter_route ) {
+    if ( ! in_array( $path, $theatre_textbook_routes, true ) && ! $is_glossary_route && ! $is_gel_filter_route ) {
         return $template;
     }
 
@@ -301,6 +303,13 @@ function hatakiti_theatre_textbook_route( $template ) {
         return get_template_directory() . '/page-theatre-history-chapter-6.php';
     }
 
+    if ( 'theatre-textbook/glossary' === $path ) {
+        return get_template_directory() . '/page-theatre-glossary.php';
+    }
+    if ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) ) {
+        return get_template_directory() . '/page-theatre-glossary-term.php';
+    }
+
     if ( 'theatre-textbook/staff/lighting/filters' === $path || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' ) ) {
         return get_template_directory() . '/page-theatre-lighting-filters.php';
     }
@@ -337,6 +346,10 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = '第5章 近代演劇が生まれる｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/history/chapter-6' === $path ) {
         $parts['title'] = '第6章 現代演劇への広がり｜演劇の歴史｜演劇の教科書';
+    } elseif ( 'theatre-textbook/glossary' === $path ) {
+        $parts['title'] = '演劇用語集｜演劇の教科書';
+    } elseif ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) ) {
+        $parts['title'] = '演劇用語集｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting-theory' === $path ) {
         $parts['title'] = '演技とは何か｜演技論・演技システム｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting/chapter-1' === $path ) {
