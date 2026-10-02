@@ -13,7 +13,7 @@
 
 <p>この節では「人物を決めつけない」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物を決めつけない」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>人物を最初から決めつけないことが大事なんだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>12-2　人物の過去を考える</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
@@ -23,7 +23,7 @@
 
 <p>この節では「人物の過去を考える」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物の過去を考える」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>過去を考えると、今の行動にも理由が見えてくるんだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>12-3　人物の生活を考える</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
@@ -43,7 +43,7 @@
 
 <p>この節では「人物の価値観を考える」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物の価値観を考える」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-interested.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>生活や価値観まで考えると、その人物らしさが増してくるんだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>12-5　人物の弱さと強さ</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p>
@@ -63,11 +63,11 @@
 
 <p>この節では「人物を身体にする」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物を身体にする」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-practice.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>考えた人物像を、最後は身体や行動にしてみるんだニャ。</p></div></div>
 </section>
 <section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p></div>
 <div class="hk-exercise"><h3>人物から人物をつくる　10分</h3><ol><li>テーマを一つ決める。</li><li>人物が置かれている状況を設定する。</li><li>人物を決めつけないを意識する。</li><li>次に人物の生活を考えるを加える。</li><li>人物を身体にするまでつなげて短い場面を演じる。</li><li>見る側は「どう見えたか」を伝える。</li><li>演じた側は「何を意図したか」を振り返る。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化が人物の行動にどうつながるかを感じてみましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>いろいろな情報がつながると、一人の人物になっていくんだニャ！</p></div></div></section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第12章まとめ</h3><p><strong>想像する → 知る → 感じる → 人物にする</strong></p><p>一つの性格だけで人物を決めず、その人の生活や価値観まで考えます。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-11/' ) ); ?>">← 第11章　感情</a>
