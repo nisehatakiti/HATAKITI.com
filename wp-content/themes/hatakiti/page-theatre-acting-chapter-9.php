@@ -37,7 +37,7 @@
 <img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy">
 </div>
 <div class="hk-nyakakichi-question">
-<p>頭の中で想像するだけじゃなくて、身体まで変わってくるんだね。</p>
+<p>想像するだけじゃなくて、身体まで変わってくるんだニャ。</p>
 </div>
 </div>
 </section>
@@ -63,7 +63,7 @@
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-09-4-imagine-object.png' ) ); ?>" alt="図説④　物を想像する" loading="lazy"></figure>
 
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「物を想像する」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>見えないものも、五感を使うともっとはっきりしてきそうだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>9-5　相手を想像する</h2><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div>
@@ -79,11 +79,11 @@
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-09-6-imagination-to-body.png' ) ); ?>" alt="図説⑥　想像したものを身体にする" loading="lazy"></figure>
 
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「想像したものを身体にする」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-idea.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>想像したものを身体に置くと、演技に使えるんだニャ。</p></div></div>
 </section>
 <section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div>
 <div class="hk-exercise"><h3>想像力から人物をつくる　10分</h3><ol><li>テーマを一つ決める。</li><li>人物が置かれている状況を設定する。</li><li>想像力とは何かを意識する。</li><li>次に場所を想像するを加える。</li><li>想像したものを身体にするまでつなげて短い場面を演じる。</li><li>見る側は「どう見えたか」を伝える。</li><li>演じた側は「何を意図したか」を振り返る。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化が人物の行動にどうつながるかを感じてみましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>想像が身体につながると、人物が本当にそこにいるみたいだニャ！</p></div></div></section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第9章まとめ</h3><p><strong>考える → 感じる → 想像する → 身体にする</strong></p><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-8/' ) ); ?>">← 第8章　感情の解放</a>
