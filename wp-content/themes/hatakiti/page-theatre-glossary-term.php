@@ -1,6 +1,6 @@
 <?php
 /**
- * Virtual page: 演劇用語集 term.
+ * Virtual page: HATAKITIpedia term.
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $terms = array(
@@ -908,7 +908,7 @@ function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
     $html = '';
     foreach ( $parts as $part ) {
         if ( isset( $names[ $part ] ) ) {
-            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/glossary/' . $names[ $part ] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
+            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/hakatipedia/' . $names[ $part ] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
         } else {
             $html .= esc_html( $part );
         }
@@ -941,7 +941,8 @@ function hk_glossary_related_terms( $term, $current_slug, $terms ) {
 $path=trim(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),'/');
 $base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
 if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
-$slug=trim(substr($path,strlen('theatre-textbook/glossary/')),'/');
+$prefix = 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ? 'theatre-textbook/hakatipedia/' : 'theatre-textbook/glossary/';
+$slug=trim(substr($path,strlen($prefix)),'/');
 if(!isset($terms[$slug])){$slug='theatre';}
 $term=$terms[$slug];
 get_header();
@@ -950,10 +951,10 @@ get_header();
 <main class="hk-container hk-glossary-term">
 <article class="hk-wiki-term-page">
 <header class="hk-wiki-header">
-<p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜演劇用語集</p>
+<p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜HATAKITIpedia</p>
 <h1><?php echo esc_html($term['name']); ?></h1>
 </header>
-<nav class="hk-wiki-nav" aria-label="演劇用語集ナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/')); ?>">← 演劇用語集</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
+<nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/')); ?>">← HATAKITIpedia</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
 <section class="hk-wiki-definition">
 <p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $related_terms ); ?></p>
 </section>
@@ -966,7 +967,7 @@ get_header();
 <h2>関連項目</h2>
 <ul class="hk-wiki-related">
 <?php foreach ( $related_terms as $related_name => $related_term ) : ?>
-<li><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li>
+<li><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li>
 <?php endforeach; ?>
 </ul>
 </section>
