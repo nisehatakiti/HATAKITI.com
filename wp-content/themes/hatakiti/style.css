@@ -680,3 +680,9 @@ ul, ol { padding-left: 1.4em; }
 .hk-audience{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);color:var(--hk-fg-faint);font-size:12px}
 @media(max-width:600px){.hk-light-position-diagram{padding:10px}.hk-stage-diagram{min-height:150px}.hk-stage-label{padding:9px 22px;font-size:15px}.hk-light-ray{font-size:36px}.hk-position-label{font-size:11px}}
 
+
+/* 演技編：章見出しはタイトルとリード文を縦に並べる */
+.hk-acting .hk-section-head{display:block}
+.hk-acting .hk-section-head h2{display:block;width:100%;margin:0 0 14px}
+.hk-acting .hk-section-head p{display:block;width:100%;max-width:820px;margin:0;line-height:1.9}
+@media(min-width:701px){.hk-acting .hk-section-head h2{white-space:nowrap}}
