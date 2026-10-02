@@ -216,7 +216,7 @@ get_header();
         </div>
         <div class="hk-nyakakichi">
             <div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-practice.png' ) ); ?>" alt="重い箱と軽い箱の練習をするにゃかきち" loading="lazy"></div>
-            <div class="hk-nyakakichi-question"><p>「本物の箱がなくても、身体が変われば『重い』って伝えられるんだニャ！」</p></div>
+            <div class="hk-nyakakichi-question"><p>本物の箱がなくても、身体が変われば『重い』って伝えられるんだニャ！</p></div>
         </div>
         <div class="hk-nyakakichi-followup"><p>そうです。これが、演技で身体を使うときの基本の一つです。</p></div>
     </section>
