@@ -900,66 +900,72 @@ if ( class_exists( 'Collator' ) ) {
 }
 ?>
 <main class="hk-container hk-glossary">
-    <header class="hk-textbook-hero">
-        <p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜Wiki</p>
-        <h1>演劇用語集</h1>
-        <p>演劇の歴史、演技、舞台スタッフなどで出てくる言葉を、必要なときに調べられるように整理しています。</p>
-    </header>
+    <article class="hk-wiki-page">
+        <header class="hk-wiki-header">
+            <p class="hk-wiki-kicker">HATAKITI 演劇の教科書</p>
+            <h1>演劇用語集</h1>
+            <p class="hk-wiki-lead">演劇に関する用語を調べるためのWikiです。</p>
+        </header>
 
-    <nav class="hk-chapter-nav" aria-label="演劇用語集ナビゲーション">
-        <a href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-1/' ) ); ?>">← 演劇の歴史</a>
-        <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">演劇の教科書</a>
-        <span></span>
-    </nav>
+        <nav class="hk-wiki-nav" aria-label="演劇用語集ナビゲーション">
+            <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">演劇の教科書</a>
+            <a href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-1/' ) ); ?>">演劇の歴史</a>
+        </nav>
 
-    <section class="hk-section">
-        <div class="hk-section-head">
-            <h2>用語を探す</h2>
-            <p>カテゴリや概要を表示せず、用語名だけを一覧にしています。用語をクリックすると詳しいWikiページを開けます。</p>
+        <div class="hk-wiki-search">
+            <label for="hk-glossary-search">演劇用語集を検索</label>
+            <input type="search" id="hk-glossary-search" placeholder="用語を入力">
         </div>
-        <label class="hk-glossary-search">
-            <span>用語を検索</span>
-            <input type="search" id="hk-glossary-search" placeholder="例：劇場、悲劇、リアリズム">
-        </label>
-    </section>
 
-    <section class="hk-section" id="glossary-list">
-        <div class="hk-glossary-list">
-            <?php foreach ( $items as $name => $term ) : ?>
-                <a class="hk-glossary-item" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/glossary/' . $term['slug'] . '/' ) ); ?>">
-                    <?php echo esc_html( $name ); ?>
-                </a>
-            <?php endforeach; ?>
-        </div>
-        <p id="hk-glossary-empty" hidden>該当する用語はありません。</p>
-    </section>
+        <section class="hk-wiki-section" id="glossary-list">
+            <h2>用語一覧</h2>
+            <p class="hk-wiki-note">用語名をクリックすると、その用語の詳しいページを開きます。</p>
+            <div class="hk-wiki-terms">
+                <?php foreach ( $items as $name => $term ) : ?>
+                    <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/glossary/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
+                <?php endforeach; ?>
+            </div>
+            <p id="hk-glossary-empty" hidden>該当する用語はありません。</p>
+        </section>
+
+        <section class="hk-wiki-section">
+            <h2>演劇の教科書から調べる</h2>
+            <p>演劇の歴史、演技、舞台スタッフなどの本文からも用語を調べることができます。</p>
+        </section>
+    </article>
 </main>
 <style>
-.hk-glossary .hk-textbook-hero{max-width:760px;margin:56px auto 48px;text-align:center}
-.hk-glossary .hk-textbook-hero h1{font-family:var(--hk-font-serif);font-size:36px}
-.hk-glossary .hk-textbook-hero>p:last-child{color:var(--hk-fg-dim);line-height:2}
-.hk-glossary .hk-chapter-nav{max-width:900px;margin:0 auto 48px}
-.hk-glossary-search{display:block;max-width:700px;margin:0 auto}
-.hk-glossary-search span{display:block;font-size:13px;color:var(--hk-fg-dim);margin-bottom:8px}
-.hk-glossary-search input{width:100%;box-sizing:border-box;padding:14px 16px;border:1px solid var(--hk-border);border-radius:8px;background:var(--hk-bg-elevated);color:var(--hk-fg);font:inherit}
-.hk-glossary-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--hk-border);border-left:1px solid var(--hk-border)}
-.hk-glossary-item{display:block;padding:14px 18px;border-right:1px solid var(--hk-border);border-bottom:1px solid var(--hk-border);color:var(--hk-fg);font-family:var(--hk-font-serif);font-size:17px;background:var(--hk-bg-elevated);transition:background .2s,color .2s}
-.hk-glossary-item:hover{background:var(--hk-bg);color:var(--hk-accent-warm);text-decoration:none}
-@media(max-width:900px){.hk-glossary-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:650px){.hk-glossary-list{grid-template-columns:repeat(2,minmax(0,1fr))}.hk-glossary .hk-textbook-hero h1{font-size:29px}}
+.hk-wiki-page{max-width:960px;margin:42px auto 80px;padding:0 24px;color:var(--hk-fg)}
+.hk-wiki-header{border-bottom:1px solid var(--hk-border);padding-bottom:22px}
+.hk-wiki-kicker{font-size:13px;color:var(--hk-fg-dim);margin:0 0 8px}
+.hk-wiki-header h1{font-family:var(--hk-font-serif);font-size:34px;font-weight:600;margin:0 0 8px}
+.hk-wiki-lead{margin:0;color:var(--hk-fg-dim)}
+.hk-wiki-nav{display:flex;gap:18px;padding:12px 0;border-bottom:1px solid var(--hk-border);font-size:14px}
+.hk-wiki-nav a,.hk-wiki-term{color:var(--hk-link,#2457a6);text-decoration:none}
+.hk-wiki-nav a:hover,.hk-wiki-term:hover{text-decoration:underline}
+.hk-wiki-search{margin:24px 0}
+.hk-wiki-search label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}
+.hk-wiki-search input{width:100%;max-width:560px;box-sizing:border-box;padding:9px 11px;border:1px solid #a2a9b1;background:var(--hk-bg-elevated);color:var(--hk-fg);font:inherit}
+.hk-wiki-section{margin:28px 0}
+.hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 12px}
+.hk-wiki-note,.hk-wiki-section>p{color:var(--hk-fg-dim);font-size:14px;line-height:1.8}
+.hk-wiki-terms{line-height:2.05;font-size:16px}
+.hk-wiki-term{display:inline}
+.hk-wiki-term:not(:last-child)::after{content:' ・ ';color:var(--hk-fg-dim);text-decoration:none}
+@media(max-width:600px){.hk-wiki-page{padding:0 16px}.hk-wiki-header h1{font-size:29px}.hk-wiki-terms{font-size:15px}}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('hk-glossary-search');
-    const items = Array.from(document.querySelectorAll('.hk-glossary-item'));
+    const terms = Array.from(document.querySelectorAll('.hk-wiki-term'));
     const empty = document.getElementById('hk-glossary-empty');
     if (!input) return;
     input.addEventListener('input', function () {
         const q = input.value.trim().toLowerCase();
         let visible = 0;
-        items.forEach(function (item) {
-            const match = !q || item.dataset.term.toLowerCase().includes(q);
-            item.hidden = !match;
+        terms.forEach(function (term) {
+            const match = !q || term.dataset.term.toLowerCase().includes(q);
+            term.hidden = !match;
             if (match) visible++;
         });
         empty.hidden = visible !== 0;
