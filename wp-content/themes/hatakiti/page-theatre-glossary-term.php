@@ -884,6 +884,60 @@ $terms = array(
 'detail-745'=>array('name'=>'集団の関係','category'=>'演技・関係','definition'=>'「集団の関係」を演劇の理解や実践と関連づけて考えるための用語・概念。','points'=>array('「集団の関係」は、演劇の中で人物・舞台・観客・表現などを考えるときに関連する概念です。','作品や演技の具体的な場面と結びつけて考えると理解しやすくなります。','他の関連する用語と一緒に見ることで、演劇の仕組みや表現の違いが見えてきます。')),
 'detail-746'=>array('name'=>'観客との関係','category'=>'演技・関係','definition'=>'「観客との関係」を演劇の理解や実践と関連づけて考えるための用語・概念。','points'=>array('「観客との関係」は、演劇の中で人物・舞台・観客・表現などを考えるときに関連する概念です。','作品や演技の具体的な場面と結びつけて考えると理解しやすくなります。','他の関連する用語と一緒に見ることで、演劇の仕組みや表現の違いが見えてきます。')),
 );
+function hk_glossary_linked_text( $text, $current_slug, $terms ) {
+    $names = array();
+    foreach ( $terms as $name => $item ) {
+        if ( $item['slug'] === $current_slug ) {
+            continue;
+        }
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) {
+            continue;
+        }
+        $names[ $name ] = $item['slug'];
+    }
+    uksort( $names, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    if ( empty( $names ) ) {
+        return esc_html( $text );
+    }
+    $pattern = '/(' . implode( '|', array_map( 'preg_quote', array_keys( $names ) ) ) . ')/u';
+    $parts = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+    $html = '';
+    foreach ( $parts as $part ) {
+        if ( isset( $names[ $part ] ) ) {
+            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/glossary/' . $names[ $part ] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
+        } else {
+            $html .= esc_html( $part );
+        }
+    }
+    return $html;
+}
+
+function hk_glossary_related_terms( $term, $current_slug, $terms ) {
+    $haystack = $term['definition'] . ' ' . implode( ' ', $term['points'] );
+    $related = array();
+    foreach ( $terms as $name => $item ) {
+        if ( $item['slug'] === $current_slug ) {
+            continue;
+        }
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) {
+            continue;
+        }
+        if ( mb_strpos( $haystack, $name ) !== false ) {
+            $related[ $name ] = $item;
+        }
+    }
+    uksort( $related, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    return array_slice( $related, 0, 12, true );
+}
+
 $path=trim(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),'/');
 $base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
 if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
@@ -892,15 +946,48 @@ if(!isset($terms[$slug])){$slug='theatre';}
 $term=$terms[$slug];
 get_header();
 ?>
+<?php $related_terms = hk_glossary_related_terms( $term, $slug, $terms ); ?>
 <main class="hk-container hk-glossary-term">
-<header class="hk-textbook-hero"><p class="hk-textbook-kicker">HATAKITI 演劇の教科書｜演劇用語集</p><h1><?php echo esc_html($term['name']); ?></h1><p><?php echo esc_html($term['category']); ?></p></header>
-<nav class="hk-chapter-nav" aria-label="演劇用語集ナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/')); ?>">← 用語集</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a><span></span></nav>
-<section class="hk-section"><div class="hk-term-definition"><span>意味</span><p><?php echo esc_html($term['definition']); ?></p></div><div class="hk-term-points"><h2>ポイント</h2><ul><?php foreach($term['points'] as $point): ?><li><?php echo esc_html($point); ?></li><?php endforeach; ?></ul></div></section>
-<section class="hk-section hk-term-related"><div class="hk-section-head"><h2>関連する言葉</h2><p>用語は単独で覚えるのではなく、関係する言葉と一緒に見ると理解しやすくなります。</p></div><p><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/')); ?>">演劇用語集の一覧へ戻る →</a></p></section>
+<article class="hk-wiki-term-page">
+<header class="hk-wiki-header">
+<p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜演劇用語集</p>
+<h1><?php echo esc_html($term['name']); ?></h1>
+</header>
+<nav class="hk-wiki-nav" aria-label="演劇用語集ナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/')); ?>">← 演劇用語集</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
+<section class="hk-wiki-definition">
+<p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $terms ); ?></p>
+</section>
+<section class="hk-wiki-section">
+<h2>概要</h2>
+<ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $terms ); ?></li><?php endforeach; ?></ul>
+</section>
+<?php if ( ! empty( $related_terms ) ) : ?>
+<section class="hk-wiki-section">
+<h2>関連項目</h2>
+<ul class="hk-wiki-related">
+<?php foreach ( $related_terms as $related_name => $related_term ) : ?>
+<li><a href="<?php echo esc_url(home_url('/theatre-textbook/glossary/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li>
+<?php endforeach; ?>
+</ul>
+</section>
+<?php endif; ?>
+</article>
 </main>
 <style>
-.hk-glossary-term .hk-textbook-hero{max-width:760px;margin:56px auto 48px;text-align:center}.hk-glossary-term .hk-textbook-hero h1{font-family:var(--hk-font-serif);font-size:40px;margin-bottom:10px}.hk-glossary-term .hk-textbook-hero>p:last-child{color:var(--hk-accent-warm)}
-.hk-term-definition{padding:30px;border:1px solid var(--hk-border);background:var(--hk-bg-elevated);border-left:4px solid var(--hk-accent-warm)}.hk-term-definition>span{font-size:12px;color:var(--hk-accent-warm);letter-spacing:.1em}.hk-term-definition p{font-size:18px;line-height:2;margin:10px 0 0}.hk-term-points{margin-top:28px;padding:26px;border:1px solid var(--hk-border);background:var(--hk-bg-card)}.hk-term-points h2{margin-top:0}.hk-term-points li{margin-bottom:10px;line-height:1.8}.hk-term-related{padding-bottom:60px}
-@media(max-width:600px){.hk-glossary-term .hk-textbook-hero h1{font-size:31px}.hk-term-definition p{font-size:16px}}
+.hk-wiki-term-page{max-width:900px;margin:42px auto 80px;padding:0 24px;color:var(--hk-fg)}
+.hk-wiki-header{border-bottom:1px solid var(--hk-border);padding-bottom:18px}
+.hk-wiki-kicker{font-size:13px;color:var(--hk-fg-dim);margin:0 0 8px}
+.hk-wiki-header h1{font-family:var(--hk-font-serif);font-size:36px;font-weight:600;margin:0}
+.hk-wiki-nav{display:flex;gap:18px;padding:12px 0;border-bottom:1px solid var(--hk-border);font-size:14px}
+.hk-wiki-nav a,.hk-wiki-definition a,.hk-wiki-points a,.hk-wiki-related a{color:var(--hk-link,#2457a6);text-decoration:none}
+.hk-wiki-nav a:hover,.hk-wiki-definition a:hover,.hk-wiki-points a:hover,.hk-wiki-related a:hover{text-decoration:underline}
+.hk-wiki-definition{font-size:17px;line-height:2;margin:28px 0}
+.hk-wiki-definition p{margin:0}
+.hk-wiki-section{margin:30px 0}
+.hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 14px}
+.hk-wiki-points{margin:0;padding-left:1.5em;line-height:1.9}
+.hk-wiki-points li{margin-bottom:8px}
+.hk-wiki-related{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding-left:1.5em;line-height:1.9}
+@media(max-width:600px){.hk-wiki-term-page{padding:0 16px}.hk-wiki-header h1{font-size:30px}.hk-wiki-definition{font-size:16px}}
 </style>
 <?php get_footer(); ?>
