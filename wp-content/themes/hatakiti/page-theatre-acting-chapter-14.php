@@ -10,14 +10,14 @@
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-14-1-character-has-purpose.png' ) ); ?>" alt="14-1　人物には目的がある図説" loading="lazy"></figure>
 <p>この節では「人物には目的がある」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「人物には目的がある」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>人物は、いつも何かを求めながら動いているんだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>14-2　何を求めているのか</h2><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p></div>
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-14-2-what-do-they-want.png' ) ); ?>" alt="14-2　何を求めているのか図説" loading="lazy"></figure>
 <p>この節では「何を求めているのか」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「何を求めているのか」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>欲しいものが分かると、その人物が何をするのか考えやすくなるんだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>14-3　目的と感情は違う</h2><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p></div>
@@ -31,7 +31,7 @@
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-14-4-purpose-changes.png' ) ); ?>" alt="14-4　目的が変わる瞬間図説" loading="lazy"></figure>
 <p>この節では「目的が変わる瞬間」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「目的が変わる瞬間」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-confused.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>目的と感情は同じじゃないから、分けて考えるんだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>14-5　目的を達成するために行動する</h2><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p></div>
@@ -45,11 +45,11 @@
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-14-6-speak-with-purpose.png' ) ); ?>" alt="14-6　目的を持って台詞を言う図説" loading="lazy"></figure>
 <p>この節では「目的を持って台詞を言う」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「目的を持って台詞を言う」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-pointing.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>目的を達成するために、言葉や行動を選ぶんだニャ。</p></div></div>
 </section>
 <section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p></div>
 <div class="hk-exercise"><h3>目的から人物をつくる　10分</h3><ol><li>テーマを一つ決める。</li><li>人物が置かれている状況を設定する。</li><li>人物には目的があるを意識する。</li><li>次に目的と感情は違うを加える。</li><li>目的を持って台詞を言うまでつなげて短い場面を演じる。</li><li>見る側は「どう見えたか」を伝える。</li><li>演じた側は「何を意図したか」を振り返る。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化が人物の行動にどうつながるかを感じてみましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>目的を持って台詞を言うと、言葉がちゃんと相手に届きそうだニャ！</p></div></div></section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第14章まとめ</h3><p><strong>目的を知る → 求める → 行動する → 変化する</strong></p><p>人物が何を求めているのかを明確にし、その目的を持って行動します。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-13/' ) ); ?>">← 第13章　状況</a>
