@@ -7,36 +7,42 @@
 <a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-14/' ) ); ?>">第14章　目的 →</a></nav>
 <section class="hk-section">
 <div class="hk-section-head"><h2>13-1　状況とは何か</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-13-1-what-is-situation.png' ) ); ?>" alt="13-1　状況とは何か図説" loading="lazy"></figure>
 <p>この節では「状況とは何か」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「状況とは何か」って、演技ではどう使えばいいんだろう？</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>13-2　いつ・どこで</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-13-2-when-where.png' ) ); ?>" alt="13-2　いつ・どこで図説" loading="lazy"></figure>
 <p>この節では「いつ・どこで」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「いつ・どこで」って、演技ではどう使えばいいんだろう？</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>13-3　誰といるのか</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-13-3-who-is-there.png' ) ); ?>" alt="13-3　誰といるのか図説" loading="lazy"></figure>
 <p>この節では「誰といるのか」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>13-4　何が起きたのか</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-13-4-what-happened.png' ) ); ?>" alt="13-4　何が起きたのか図説" loading="lazy"></figure>
 <p>この節では「何が起きたのか」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「何が起きたのか」って、演技ではどう使えばいいんだろう？</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>13-5　その場に何があるのか</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-13-5-what-is-around.png' ) ); ?>" alt="13-5　その場に何があるのか図説" loading="lazy"></figure>
 <p>この節では「その場に何があるのか」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>13-6　状況を身体で感じる</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
+<figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-13-6-feel-situation-in-body.png' ) ); ?>" alt="13-6　状況を身体で感じる図説" loading="lazy"></figure>
 <p>この節では「状況を身体で感じる」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
 <div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「状況を身体で感じる」って、演技ではどう使えばいいんだろう？</p></div></div>
@@ -66,4 +72,6 @@
 .hk-acting .hk-nyakakichi-question{position:relative;background:#242424;border:1px solid var(--hk-border);border-radius:14px;padding:16px 20px;color:var(--hk-fg)}
 .hk-acting .hk-nyakakichi-question p{margin:0;line-height:1.8}
 @media(max-width:700px){.hk-acting .hk-nyakakichi{grid-template-columns:82px minmax(0,1fr)}.hk-acting .hk-nyakakichi-image img{width:82px}}
+
+.hk-acting .hk-acting-figure{margin:28px 0 32px}.hk-acting .hk-acting-figure img{display:block;width:100%;height:auto;border-radius:10px}
 </style><?php get_footer(); ?>
