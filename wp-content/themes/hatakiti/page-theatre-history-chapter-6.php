@@ -117,11 +117,7 @@ get_header();
         <figure class="hk-history-diagram"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/history/history-chapter6-05-many-forms-of-theatre.png' ) ); ?>" alt="現代演劇がリアリズム、身体表現、社会、不条理、実験、野外、観客参加などへ多様化したことを示す図" loading="lazy"></figure>
     </section>
 
-    <section class="hk-section hk-reading-note">
-        <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>ここでは、演劇がどのように一つの型から多様な表現へ広がったのかを追ってみましょう。</p>
-    </section>
-
-    <section class="hk-section">
+<section class="hk-section">
         <div class="hk-section-head"><h2>やってみよう　同じ場面を3種類の演劇にする</h2></div>
         <div class="hk-exercise">
             <h3>「誰かを待つ」という場面</h3>
