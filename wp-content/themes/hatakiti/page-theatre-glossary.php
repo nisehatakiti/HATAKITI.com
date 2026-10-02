@@ -968,7 +968,8 @@ if ( class_exists( 'Collator' ) ) {
                     <div class="hk-wiki-terms">
                         <?php $category_terms = array_values( array_filter( $groups[ $category ], function( $item ) { return ! empty( $item['slug'] ); } ) ); ?>
                         <?php foreach ( $category_terms as $index => $term ) : ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $term['name'] ?? '' ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $term['name'] ?? '' ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
+                            <?php $term_name = array_search( $term, $groups[ $category ], true ); ?>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $term_name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $term_name ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
                         <?php endforeach; ?>
                     </div>
                 </section>
