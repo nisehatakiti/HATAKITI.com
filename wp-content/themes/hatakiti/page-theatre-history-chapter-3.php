@@ -176,11 +176,7 @@ get_header();
         </div>
     </section>
 
-    <section class="hk-section hk-reading-note">
-        <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では用語を覚えることより、演劇がどこで、誰によって、何を表現していたのかを追ってみましょう。</p>
-    </section>
-
-    <section class="hk-section hk-summary">
+<section class="hk-section hk-summary">
         <div class="hk-section-head"><h2>第3章まとめ</h2></div>
         <p>中世の演劇は、古代の劇場をそのまま受け継いだものではありませんでした。教会や典礼と結びついた劇的な表現が発展し、やがて教会の外や町、広場などにも上演の場が広がりました。</p>
         <p>宗教的な物語だけでなく、道徳や笑いを扱う劇も生まれ、日本では能や狂言など、別の歴史的背景を持つ舞台表現も発展していきました。</p>
