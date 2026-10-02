@@ -61,6 +61,11 @@ get_header();
                 <h3>舞台を作る</h3>
                 <p>照明、音響、舞台監督、美術、制作。役者以外の仕事も実践的に学ぶ。</p>
             </a>
+            <a class="hk-textbook-card" href="<?php echo esc_url( home_url( '/theatre-textbook/glossary/' ) ); ?>">
+                <span class="hk-textbook-number">08</span>
+                <h3>演劇用語集</h3>
+                <p>演劇の歴史、演技、舞台スタッフなどで出てくる言葉を調べる。</p>
+            </a>
         </div>
     </section>
 
