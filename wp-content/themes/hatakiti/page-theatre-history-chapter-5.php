@@ -131,11 +131,7 @@ get_header();
         </div>
     </section>
 
-    <section class="hk-section hk-reading-note">
-        <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>ここでは、リアリズムや演出、演技論がどのようにつながったのかを追ってみましょう。</p>
-    </section>
-
-    <section class="hk-section">
+<section class="hk-section">
         <div class="hk-section-head"><h2>やってみよう　同じ台詞を違って演じる</h2></div>
         <div class="hk-exercise">
             <h3>「帰ってきた」を3通りで</h3>
