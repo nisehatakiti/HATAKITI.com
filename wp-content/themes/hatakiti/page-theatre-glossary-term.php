@@ -920,7 +920,7 @@ function hk_glossary_related_terms( $term, $current_slug, $terms ) {
     $haystack = $term['definition'] . ' ' . implode( ' ', $term['points'] );
     $related = array();
     foreach ( $terms as $name => $item ) {
-        if ( $item['slug'] === $current_slug ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) {
             continue;
         }
         if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) {
