@@ -968,7 +968,7 @@ if ( class_exists( 'Collator' ) ) {
                     <div class="hk-wiki-terms">
                         <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
                             <?php if ( empty( $term['slug'] ) ) { continue; } ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a><span class="hk-wiki-separator" aria-hidden="true"> ・ </span>
                         <?php endforeach; ?>
                     </div>
                 </section>
@@ -983,7 +983,7 @@ if ( class_exists( 'Collator' ) ) {
                     <div class="hk-wiki-terms">
                         <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
                             <?php if ( empty( $term['slug'] ) ) { continue; } ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a><span class="hk-wiki-separator" aria-hidden="true"> ・ </span>
                         <?php endforeach; ?>
                     </div>
                 </section>
@@ -1010,10 +1010,9 @@ if ( class_exists( 'Collator' ) ) {
 .hk-wiki-category h3{font-family:var(--hk-font-serif);font-size:19px;font-weight:600;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--hk-border)}
 .hk-wiki-note,.hk-wiki-section>p{color:var(--hk-fg-dim);font-size:14px;line-height:1.8}
 .hk-wiki-terms{line-height:2.05;font-size:16px}
-.hk-wiki-term{display:inline;text-decoration:none!important}
+.hk-wiki-term{display:inline!important;text-decoration:none!important;border-bottom:0!important;box-shadow:none!important}
 .hk-wiki-term:hover{text-decoration:underline!important}
-.hk-wiki-term:not(:last-child)::after{content:' ・ ';color:var(--hk-fg-dim);text-decoration:none!important}
-.hk-wiki-term::after{text-decoration:none!important}
+.hk-wiki-separator{display:inline;color:var(--hk-fg-dim);text-decoration:none!important;border:0!important;box-shadow:none!important}
 @media(max-width:600px){.hk-wiki-page{padding:0 16px}.hk-wiki-header h1{font-size:29px}.hk-wiki-terms{font-size:15px}}
 </style>
 <script>
