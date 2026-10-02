@@ -306,7 +306,7 @@ function hatakiti_theatre_textbook_route( $template ) {
     if ( 'theatre-textbook/glossary' === $path || 'theatre-textbook/hakatipedia' === $path ) {
         return get_template_directory() . '/page-theatre-glossary.php';
     }
-    if ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) ) {
+    if ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) || 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ) {
         return get_template_directory() . '/page-theatre-glossary-term.php';
     }
 
@@ -347,7 +347,7 @@ function hatakiti_theatre_textbook_title( $parts ) {
     } elseif ( 'theatre-textbook/history/chapter-6' === $path ) {
         $parts['title'] = '第6章 現代演劇への広がり｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/glossary' === $path || 'theatre-textbook/hakatipedia' === $path ) {
-        $parts['title'] = '演劇用語集｜演劇の教科書';
+        $parts['title'] = 'HATAKITIpedia｜演劇の教科書';
     } elseif ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) ) {
         $parts['title'] = '演劇用語集｜演劇の教科書';
     } elseif ( 'theatre-textbook/acting-theory' === $path ) {
