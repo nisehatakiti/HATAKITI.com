@@ -140,11 +140,7 @@ get_header();
 
         </section>
 
-        <section class="hk-section hk-reading-note">
-            <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では用語を覚えることより、演劇がどのように形を変えてきたのかを追ってみましょう。</p>
-        </section>
-
-        <section class="hk-section hk-summary">
+<section class="hk-section hk-summary">
             <div class="hk-section-head"><h2>第2章まとめ</h2></div>
             <p>古代ギリシャでは、祭りや社会の中で演劇が発展し、「演じる人」と「見る人」の関係がはっきりしていきました。悲劇や喜劇が生まれ、演劇を見るための劇場も整えられます。</p>
             <p>そしてギリシャの演劇文化はローマへも広がり、演劇はより大きな公共空間へと発展していきました。</p>
