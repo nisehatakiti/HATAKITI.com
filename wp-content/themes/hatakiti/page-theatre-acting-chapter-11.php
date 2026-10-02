@@ -5,18 +5,8 @@
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-10/' ) ); ?>">← 第10章　感覚</a>
 <a class="hk-nav-center" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/' ) ); ?>">目次</a>
 <a class="hk-nav-next" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-12/' ) ); ?>">第12章　人物 →</a></nav>
-<section class="hk-section">
-<div class="hk-section-head"><h2>11-1　感情と役を分けない</h2><p>第一部で学んだ身体を使い、役の状況の中で感情を動かします。</p></div>
-<p>この節では「感情と役を分けない」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「感情と役を分けない」って、演技ではどう使えばいいんだろう？</p></div></div>
-</section>
-<section class="hk-section">
-<div class="hk-section-head"><h2>11-2　状況から感情が生まれる</h2><p>第一部で学んだ身体を使い、役の状況の中で感情を動かします。</p></div>
-<p>この節では「状況から感情が生まれる」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
-<div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「状況から感情が生まれる」って、演技ではどう使えばいいんだろう？</p></div></div>
-</section>
+<section class="hk-section"><div class="hk-section-head"><h2>11-1　感情と役を分けない</h2><p>感情を無理に作るのではなく、自分の感覚と役の状況をつなげていきます。</p></div><p>役の感情は、自分とは別の感情をゼロから作り出すものではありません。台本に書かれた人物の目的や状況、相手との関係を受け取りながら、自分の中に起きる感情を役の中で使っていきます。自分の感情をそのまま役にするのではなく、役の状況を通して自分の感情を動かすことが大切です。</p><figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-11-1-emotion-and-role.png' ) ); ?>" alt="11-1　感情と役を分けない図説" loading="lazy"></figure><div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然に立ち、自分の今の気持ちを感じる。</li><li>人物の状況と目的を一つ設定する。</li><li>その状況に置かれた自分の身体や気持ちの変化を感じる。</li><li>その変化を人物の行動につなげる。</li><li>自分の感情と役の状況がどうつながったか振り返る。</li></ol></div><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>自分の感情を使うけれど、そのまま自分になるわけじゃないんだね。</p></div></div></section>
+<section class="hk-section"><div class="hk-section-head"><h2>11-6　感情を行動につなげる</h2><p>感じた感情を内側だけに置かず、具体的な行動として舞台上に表します。</p></div><p>観客に伝わる演技にするには、感情を感じるだけで終わらせないことが大切です。「近づく」「離れる」「見る」「黙る」「声をかける」「手を伸ばす」など、感情から生まれる具体的な行動につなげます。感情と行動が結びつくことで、人物が何をしようとしているのかが見えてきます。</p><figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-11-6-emotion-to-action.png' ) ); ?>" alt="11-6　感情を行動につなげる図説" loading="lazy"></figure><div class="hk-exercise"><h3>やってみよう</h3><ol><li>人物が今感じていることを確認する。</li><li>その感情から何をしたくなるのか考える。</li><li>具体的な行動を一つ選ぶ。</li><li>身体、視線、声、間などを使って行動する。</li><li>行動した結果、相手や状況がどう変わったか受け取る。</li></ol></div><div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じたことを行動にすると、人物の気持ちが舞台で見えるようになるんだね。</p></div></div></section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>11-3　感情は変化する</h2><p>第一部で学んだ身体を使い、役の状況の中で感情を動かします。</p></div>
 <p>この節では「感情は変化する」について考え、役を生きるための土台をつくります。まず自分の感覚や考えに気づき、そこから舞台上の人物へつなげていきます。</p>
