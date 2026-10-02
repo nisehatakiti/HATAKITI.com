@@ -195,12 +195,7 @@ get_header();
         <p>演劇には、<strong>他人を想像する</strong>という役割もあるのです。</p>
     </section>
 
-
-    <section class="hk-section hk-reading-note">
-        <p><strong>この章で出てきた言葉は、あとで「演劇用語集」にまとめます。</strong>本文では言葉の説明を増やしすぎず、まず演劇そのものの流れを読んでみましょう。</p>
-    </section>
-
-    <section class="hk-section">
+<section class="hk-section">
         <div class="hk-section-head">
             <h2>やってみよう　「演じる」の原点</h2>
             <p>演技の一番基本的なところを体験してみましょう。</p>
