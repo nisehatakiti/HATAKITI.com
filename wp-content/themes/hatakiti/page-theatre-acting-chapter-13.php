@@ -49,7 +49,7 @@
 </section>
 <section class="hk-section"><div class="hk-section-head"><h2>実践エチュード</h2><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div>
 <div class="hk-exercise"><h3>状況から人物をつくる　10分</h3><ol><li>テーマを一つ決める。</li><li>人物が置かれている状況を設定する。</li><li>状況とは何かを意識する。</li><li>次に誰といるのかを加える。</li><li>状況を身体で感じるまでつなげて短い場面を演じる。</li><li>見る側は「どう見えたか」を伝える。</li><li>演じた側は「何を意図したか」を振り返る。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化が人物の行動にどうつながるかを感じてみましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>一つずつ積み重ねると、人物が見えてきそうだね。</p></div></div></section>
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第13章まとめ</h3><p><strong>いつ・どこで・誰と → 何が起きた → どう感じる</strong></p><p>人物が置かれている状況を具体的にし、その場にいる身体をつくります。</p></div></section>
 <nav class="hk-chapter-nav hk-acting-chapter-nav" aria-label="演技をする章ナビゲーション">
 <a class="hk-nav-prev" href="<?php echo esc_url( home_url( '/theatre-textbook/acting/chapter-12/' ) ); ?>">← 第12章　人物</a>
