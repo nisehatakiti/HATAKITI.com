@@ -224,7 +224,7 @@ function hatakiti_theatre_textbook_route( $template ) {
         'theatre-textbook/staff/sound',
         'theatre-textbook/staff/stage-management',
     );
-    $is_glossary_route = 'theatre-textbook/glossary' === $path || 0 === strpos( $path, 'theatre-textbook/glossary/' );
+    $is_glossary_route = 'theatre-textbook/glossary' === $path || 0 === strpos( $path, 'theatre-textbook/glossary/' ) || 'theatre-textbook/hakatipedia' === $path || 0 === strpos( $path, 'theatre-textbook/hakatipedia/' );
     $is_gel_filter_route = 'theatre-textbook/staff/lighting/filters' === $path
         || 0 === strpos( $path, 'theatre-textbook/staff/lighting/filters/' );
 
@@ -303,7 +303,7 @@ function hatakiti_theatre_textbook_route( $template ) {
         return get_template_directory() . '/page-theatre-history-chapter-6.php';
     }
 
-    if ( 'theatre-textbook/glossary' === $path ) {
+    if ( 'theatre-textbook/glossary' === $path || 'theatre-textbook/hakatipedia' === $path ) {
         return get_template_directory() . '/page-theatre-glossary.php';
     }
     if ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) ) {
@@ -346,7 +346,7 @@ function hatakiti_theatre_textbook_title( $parts ) {
         $parts['title'] = '第5章 近代演劇が生まれる｜演劇の歴史｜演劇の教科書';
     } elseif ( 'theatre-textbook/history/chapter-6' === $path ) {
         $parts['title'] = '第6章 現代演劇への広がり｜演劇の歴史｜演劇の教科書';
-    } elseif ( 'theatre-textbook/glossary' === $path ) {
+    } elseif ( 'theatre-textbook/glossary' === $path || 'theatre-textbook/hakatipedia' === $path ) {
         $parts['title'] = '演劇用語集｜演劇の教科書';
     } elseif ( 0 === strpos( $path, 'theatre-textbook/glossary/' ) ) {
         $parts['title'] = '演劇用語集｜演劇の教科書';
