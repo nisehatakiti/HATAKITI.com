@@ -47,7 +47,7 @@
 <figure class="hk-acting-figure"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/acting/acting-09-2-five-senses-imagination.png' ) ); ?>" alt="図説②　五感で想像する" loading="lazy"></figure>
 
 <div class="hk-exercise"><h3>やってみよう</h3><ol><li>自然な状態で立つ。</li><li>この節のテーマを一つ意識する。</li><li>身体や気持ちに起きる変化を観察する。</li><li>短い場面で試してみる。</li><li>最後に、何が変わったか振り返る。</li></ol></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>「五感で想像する」って、演技ではどう使えばいいんだろう？</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-thinking.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>五感を使って想像すると、もっとその場所がはっきりしてきそうだニャ。</p></div></div>
 </section>
 <section class="hk-section">
 <div class="hk-section-head"><h2>9-3　場所を想像する</h2><p>想像したものを身体の中に置き、舞台上で生きてみます。</p></div>
