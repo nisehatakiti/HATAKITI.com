@@ -62,7 +62,7 @@
 <section class="hk-section">
 <div class="hk-section-head"><h2>実践エチュード　相手を感じて反応する</h2><p>10分で「感じる → 受け取る → 反応する」の流れを体験します。</p></div>
 <div class="hk-exercise"><ol><li>二人で向かい合い、何もせず立つ。</li><li>相手の視線、呼吸、姿勢、距離を感じる。</li><li>一人がゆっくり動き、もう一人はその変化を受け取る。</li><li>受け取った変化に、呼吸・視線・身体のどれかで反応する。</li><li>役割を交代する。</li><li>最後に短い台詞を加え、感じながらやり取りする。</li></ol><p><strong>ポイント：</strong>大きく表現することではなく、小さな変化を感じ、それが次の反応につながることを意識しましょう。</p></div>
-<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-question.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じることから始めると、相手とのやり取りが変わってきそうだね。</p></div></div>
+<div class="hk-nyakakichi"><div class="hk-nyakakichi-image"><img src="<?php echo esc_url( content_url( 'plugins/hatakiti-core/assets/images/nyakakichi/nyakakichi-surprised.png' ) ); ?>" alt="にゃかきち" loading="lazy"></div><div class="hk-nyakakichi-question"><p>感じることから始めると、相手とのやり取りが変わってきそうだね。</p></div></div>
 </section>
 
 <section class="hk-section"><div class="hk-panel hk-summary"><h3>第10章まとめ</h3><p><strong>自分を感じる → 相手を感じる → 舞台を感じる → 変化を感じる → 反応する → 感じ続ける</strong></p><p>感覚は、演技をその場で生きるための土台です。次の第11章では、感じたものから生まれる「感情」について考えます。</p></div></section>
