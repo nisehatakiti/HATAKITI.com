@@ -891,12 +891,53 @@ $terms = array(
     '観客との関係' => array('slug'=>'detail-746','category'=>'演技・関係','summary'=>'「観客との関係」を演劇の理解や実践と関連づけて考えるための用語・概念。'),
 );
 
-$items = $terms;
+$category_order = array(
+    '基本',
+    '劇場・空間',
+    '古代・儀式',
+    '古代演劇',
+    '古代・演技',
+    '中世演劇',
+    '日本演劇',
+    '近世演劇',
+    'ルネサンス・近代演劇',
+    '近代演劇',
+    '近代・演出',
+    '近代・演劇論',
+    '現代演劇',
+    'ジャンル',
+    '演技・想像',
+    '演技・感覚',
+    '演技・感情',
+    '演技・人物',
+    '演技・状況',
+    '演技・目的',
+    '演技・欲求',
+    '演技・関係',
+);
+$category_labels = array(
+    '近代・演出' => '近代演劇・演出',
+    '近代・演劇論' => '近代演劇・演劇論',
+);
+$groups = array();
+foreach ( $terms as $name => $term ) {
+    $category = $term['category'];
+    if ( ! isset( $groups[ $category ] ) ) {
+        $groups[ $category ] = array();
+    }
+    $groups[ $category ][ $name ] = $term;
+}
 if ( class_exists( 'Collator' ) ) {
     $collator = new Collator( 'ja_JP' );
-    $collator->asort( $items );
+    foreach ( $groups as &$group ) {
+        uksort( $group, array( $collator, 'compare' ) );
+    }
+    unset( $group );
 } else {
-    ksort( $items, SORT_NATURAL | SORT_FLAG_CASE );
+    foreach ( $groups as &$group ) {
+        uksort( $group, 'strnatcasecmp' );
+    }
+    unset( $group );
 }
 ?>
 <main class="hk-container hk-glossary">
@@ -904,7 +945,7 @@ if ( class_exists( 'Collator' ) ) {
         <header class="hk-wiki-header">
             <p class="hk-wiki-kicker">HATAKITI 演劇の教科書</p>
             <h1>HATAKITIpedia</h1>
-            <p class="hk-wiki-lead">演劇に関する用語を調べるためのWikiです。</p>
+            <p class="hk-wiki-lead">演劇に関する知識を調べ、関連する項目をたどるためのWikiです。</p>
         </header>
 
         <nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション">
@@ -918,19 +959,36 @@ if ( class_exists( 'Collator' ) ) {
         </div>
 
         <section class="hk-wiki-section" id="glossary-list">
-            <h2>用語一覧</h2>
-            <p class="hk-wiki-note">用語名をクリックすると、その用語の詳しいページを開きます。</p>
-            <div class="hk-wiki-terms">
-                <?php foreach ( $items as $name => $term ) : ?>
-                    <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
-                <?php endforeach; ?>
-            </div>
+            <h2>項目一覧</h2>
+            <p class="hk-wiki-note">分野ごとに整理しています。項目名をクリックすると、その項目の詳しいページを開きます。</p>
+            <?php foreach ( $category_order as $category ) : ?>
+                <?php if ( empty( $groups[ $category ] ) ) { continue; } ?>
+                <section class="hk-wiki-category">
+                    <h3><?php echo esc_html( $category_labels[ $category ] ?? $category ); ?></h3>
+                    <div class="hk-wiki-terms">
+                        <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
+                            <?php if ( empty( $term['slug'] ) ) { continue; } ?>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                </section>
+            <?php endforeach; ?>
+            <?php
+            $remaining = array_diff( array_keys( $groups ), $category_order );
+            if ( ! empty( $remaining ) ) :
+                foreach ( $remaining as $category ) :
+            ?>
+                <section class="hk-wiki-category">
+                    <h3><?php echo esc_html( $category ); ?></h3>
+                    <div class="hk-wiki-terms">
+                        <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
+                            <?php if ( empty( $term['slug'] ) ) { continue; } ?>
+                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                </section>
+            <?php endforeach; endif; ?>
             <p id="hk-glossary-empty" hidden>該当する用語はありません。</p>
-        </section>
-
-        <section class="hk-wiki-section">
-            <h2>演劇の教科書から調べる</h2>
-            <p>演劇の歴史、演技、舞台スタッフなどの本文からも用語を調べることができます。</p>
         </section>
     </article>
 </main>
@@ -947,17 +1005,22 @@ if ( class_exists( 'Collator' ) ) {
 .hk-wiki-search label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}
 .hk-wiki-search input{width:100%;max-width:560px;box-sizing:border-box;padding:9px 11px;border:1px solid #a2a9b1;background:var(--hk-bg-elevated);color:var(--hk-fg);font:inherit}
 .hk-wiki-section{margin:28px 0}
-.hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 12px}
+.hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 18px}
+.hk-wiki-category{margin:0 0 28px}
+.hk-wiki-category h3{font-family:var(--hk-font-serif);font-size:19px;font-weight:600;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--hk-border)}
 .hk-wiki-note,.hk-wiki-section>p{color:var(--hk-fg-dim);font-size:14px;line-height:1.8}
 .hk-wiki-terms{line-height:2.05;font-size:16px}
-.hk-wiki-term{display:inline}
-.hk-wiki-term:not(:last-child)::after{content:' ・ ';color:var(--hk-fg-dim);text-decoration:none}
+.hk-wiki-term{display:inline;text-decoration:none!important}
+.hk-wiki-term:hover{text-decoration:underline!important}
+.hk-wiki-term:not(:last-child)::after{content:' ・ ';color:var(--hk-fg-dim);text-decoration:none!important}
+.hk-wiki-term::after{text-decoration:none!important}
 @media(max-width:600px){.hk-wiki-page{padding:0 16px}.hk-wiki-header h1{font-size:29px}.hk-wiki-terms{font-size:15px}}
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('hk-glossary-search');
     const terms = Array.from(document.querySelectorAll('.hk-wiki-term'));
+    const categories = Array.from(document.querySelectorAll('.hk-wiki-category'));
     const empty = document.getElementById('hk-glossary-empty');
     if (!input) return;
     input.addEventListener('input', function () {
@@ -967,6 +1030,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const match = !q || term.dataset.term.toLowerCase().includes(q);
             term.hidden = !match;
             if (match) visible++;
+        });
+        categories.forEach(function (category) {
+            category.hidden = !category.querySelector('.hk-wiki-term:not([hidden])');
         });
         empty.hidden = visible !== 0;
     });
