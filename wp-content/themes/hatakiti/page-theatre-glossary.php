@@ -1,6 +1,6 @@
 <?php
 /**
- * Virtual page: 演劇用語集
+ * Virtual page: HATAKITIpedia
  *
  * Wiki-style index for theatre terminology used throughout the textbook.
  */
@@ -903,17 +903,17 @@ if ( class_exists( 'Collator' ) ) {
     <article class="hk-wiki-page">
         <header class="hk-wiki-header">
             <p class="hk-wiki-kicker">HATAKITI 演劇の教科書</p>
-            <h1>演劇用語集</h1>
+            <h1>HATAKITIpedia</h1>
             <p class="hk-wiki-lead">演劇に関する用語を調べるためのWikiです。</p>
         </header>
 
-        <nav class="hk-wiki-nav" aria-label="演劇用語集ナビゲーション">
+        <nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション">
             <a href="<?php echo esc_url( home_url( '/theatre-textbook/' ) ); ?>">演劇の教科書</a>
             <a href="<?php echo esc_url( home_url( '/theatre-textbook/history/chapter-1/' ) ); ?>">演劇の歴史</a>
         </nav>
 
         <div class="hk-wiki-search">
-            <label for="hk-glossary-search">演劇用語集を検索</label>
+            <label for="hk-glossary-search">HATAKITIpediaを検索</label>
             <input type="search" id="hk-glossary-search" placeholder="用語を入力">
         </div>
 
@@ -922,7 +922,7 @@ if ( class_exists( 'Collator' ) ) {
             <p class="hk-wiki-note">用語名をクリックすると、その用語の詳しいページを開きます。</p>
             <div class="hk-wiki-terms">
                 <?php foreach ( $items as $name => $term ) : ?>
-                    <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/glossary/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
+                    <a class="hk-wiki-term" data-term="<?php echo esc_attr( $name ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $name ); ?></a>
                 <?php endforeach; ?>
             </div>
             <p id="hk-glossary-empty" hidden>該当する用語はありません。</p>
