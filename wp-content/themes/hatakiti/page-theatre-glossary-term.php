@@ -916,8 +916,116 @@ $terms = array(
 'detail-742'=>array('name'=>'共同創作','category'=>'演技・関係','definition'=>'共同創作とは、複数の人が互いの提案や反応を受け取りながら、一人では生まれなかった表現や場面を作り上げる過程です。最初から完成形を固定するのではなく、相手の発見を材料に自分の選択を変えていきます。','points'=>array('自分が持ち込む意図と、相手から受け取りたいものを分けて考える','相手の提案を評価して終わらせず、取り入れる、変形する、組み合わせるなど応答する','自分の案が変わることを失敗と捉えず、相互作用によって作品が発見される過程を作る','最終的に誰の案かではなく、共同で何が生まれたのかを成果として確認する')),
 'detail-743'=>array('name'=>'場面の成立','category'=>'演技・関係','definition'=>'場面の成立とは、台詞を言い終えることではなく、人物同士の目的と働きかけが観客にも追える形で作用し、状況が変化した状態です。誰が何を求め、相手がどう応答し、その結果何が変わったかが存在すると場面は動きます。','points'=>array('場面開始時の状況、人物の目的、相手への働きかけを具体化する','相手の反応によって予定していた行動が変化する余地を残す','場面の終わりに何が変わったのかを、関係、情報、決定、感情、状況などから確認する','変化が起きていない場合は、台詞や動作を足す前に目的と相手への働きかけを見直す')),
 'detail-744'=>array('name'=>'二人の関係','category'=>'演技・関係','definition'=>'二人の関係とは、二人の人物が互いをどう認識し、何を求め、何を恐れ、どの程度の距離や力を持って接しているかという動的な関係です。関係は設定ではなく、場面ごとのやり取りによって更新されます。','points'=>array('二人それぞれの欲求、目的、恐れ、期待、秘密を整理し、同じ関係でも異なる見方を作る','現在の信頼、距離、力関係だけでなく、過去の出来事が現在の反応にどう影響するかを設定する','一方の働きかけにもう一方がどう応答するかを連続させ、関係の変化を場面の中で作る','場面の最初と最後で二人が相手をどう見るようになったかを比較し、関係の変化を確認する')),
-'detail-745'=>array('name'=>'集団の関係','category'=>'演技・関係','definition'=>'「集団の関係」を演劇の理解や実践と関連づけて考えるための用語・概念。','points'=>array('「集団の関係」は、演劇の中で人物・舞台・観客・表現などを考えるときに関連する概念です。','作品や演技の具体的な場面と結びつけて考えると理解しやすくなります。','他の関連する用語と一緒に見ることで、演劇の仕組みや表現の違いが見えてきます。')),
-'detail-746'=>array('name'=>'観客との関係','category'=>'演技・関係','definition'=>'「観客との関係」を演劇の理解や実践と関連づけて考えるための用語・概念。','points'=>array('「観客との関係」は、演劇の中で人物・舞台・観客・表現などを考えるときに関連する概念です。','作品や演技の具体的な場面と結びつけて考えると理解しやすくなります。','他の関連する用語と一緒に見ることで、演劇の仕組みや表現の違いが見えてきます。')),
+'detail-745'=>array('name'=>'集団の関係','category'=>'演技・関係','definition'=>'集団の関係とは、複数の人物が互いの存在や役割、目的、力関係に影響を与えながら、一つの場や出来事を形成している状態です。集団では二人の関係だけでなく、誰が誰を支持し、誰を警戒し、誰の反応に全員が影響されるのかを見る必要があります。','points'=>array('集団の共通目的と、各人物が個別に持っている欲求や立場を分けて整理する','誰の発言が集団を動かし、誰が沈黙し、誰が空気を変えるのかを具体的な働きかけとして見る','一人の行動に対する他の人物の反応が連鎖し、集団全体の判断や力関係が変化する流れを作る','集団の人数を増やすことだけで終わらせず、個々の人物が互いに何を受け取り、次の行動を選んでいるかを演じる')),
+);
+function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
+    $names = array();
+    foreach ( $link_terms as $name => $item ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) {
+            continue;
+        }
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) {
+            continue;
+        }
+        $names[ $name ] = $item['slug'];
+    }
+    uksort( $names, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    if ( empty( $names ) ) {
+        return esc_html( $text );
+    }
+    $pattern = '/(' . implode( '|', array_map( 'preg_quote', array_keys( $names ) ) ) . ')/u';
+    $parts = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+    $html = '';
+    foreach ( $parts as $part ) {
+        if ( isset( $names[ $part ] ) ) {
+            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/hakatipedia/' . $names[ $part ] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
+        } else {
+            $html .= esc_html( $part );
+        }
+    }
+    return $html;
+}
+
+function hk_glossary_related_terms( $term, $current_slug, $terms ) {
+    $haystack = $term['definition'] . ' ' . implode( ' ', $term['points'] );
+    $related = array();
+    foreach ( $terms as $name => $item ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) {
+            continue;
+        }
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) {
+            continue;
+        }
+        if ( mb_strpos( $haystack, $name ) !== false ) {
+            $related[ $name ] = $item;
+        }
+    }
+    uksort( $related, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    return array_slice( $related, 0, 12, true );
+}
+
+$path=trim(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),'/');
+$base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
+if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
+$prefix = 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ? 'theatre-textbook/hakatipedia/' : 'theatre-textbook/glossary/';
+$slug=trim(substr($path,strlen($prefix)),'/');
+if(!isset($terms[$slug])){$slug='theatre';}
+$term=$terms[$slug];
+get_header();
+?>
+<?php $related_terms = hk_glossary_related_terms( $term, $slug, $terms ); ?>
+<main class="hk-container hk-glossary-term">
+<article class="hk-wiki-term-page">
+<header class="hk-wiki-header">
+<p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜HATAKITIpedia</p>
+<h1><?php echo esc_html($term['name']); ?></h1>
+</header>
+<nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/')); ?>">← HATAKITIpedia</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
+<section class="hk-wiki-definition">
+<p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $related_terms ); ?></p>
+</section>
+<section class="hk-wiki-section">
+<h2>概要</h2>
+<ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $related_terms ); ?></li><?php endforeach; ?></ul>
+</section>
+<?php if ( ! empty( $related_terms ) ) : ?>
+<section class="hk-wiki-section">
+<h2>関連項目</h2>
+<ul class="hk-wiki-related">
+<?php foreach ( $related_terms as $related_name => $related_term ) : ?>
+<li><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li>
+<?php endforeach; ?>
+</ul>
+</section>
+<?php endif; ?>
+</article>
+</main>
+<style>
+.hk-wiki-term-page{max-width:900px;margin:42px auto 80px;padding:0 24px;color:var(--hk-fg)}
+.hk-wiki-header{border-bottom:1px solid var(--hk-border);padding-bottom:18px}
+.hk-wiki-kicker{font-size:13px;color:var(--hk-fg-dim);margin:0 0 8px}
+.hk-wiki-header h1{font-family:var(--hk-font-serif);font-size:36px;font-weight:600;margin:0}
+.hk-wiki-nav{display:flex;gap:18px;padding:12px 0;border-bottom:1px solid var(--hk-border);font-size:14px}
+.hk-wiki-nav a,.hk-wiki-definition a,.hk-wiki-points a,.hk-wiki-related a{color:var(--hk-link,#2457a6);text-decoration:none}
+.hk-wiki-nav a:hover,.hk-wiki-definition a:hover,.hk-wiki-points a:hover,.hk-wiki-related a:hover{text-decoration:underline}
+.hk-wiki-definition{font-size:17px;line-height:2;margin:28px 0}
+.hk-wiki-definition p{margin:0}
+.hk-wiki-section{margin:30px 0}
+.hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 14px}
+.hk-wiki-points{margin:0;padding-left:1.5em;line-height:1.9}
+.hk-wiki-points li{margin-bottom:8px}
+.hk-wiki-related{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding-left:1.5em;line-height:1.9}
+@media(max-width:600px){.hk-wiki-term-page{padding:0 16px}.hk-wiki-header h1{font-size:30px}.hk-wiki-definition{font-size:16px}}
+</style>
+<?php get_footer(); ?'detail-746'=>array('name'=>'観客との関係','category'=>'演技・関係','definition'=>'観客との関係とは、俳優と観客が同じ時間と空間を共有し、俳優の行動や沈黙、視線、間、声などを観客が受け取りながら舞台上の出来事を成立させていく関係です。観客に直接話しかけなくても、観客の存在を意識した演技の選択によって関係は変化します。','points'=>array('観客に何を理解させるかだけでなく、何を感じ、何を想像し、何を待ってほしいのかを具体化する','観客の反応を操作しようとしすぎず、舞台上の人物同士の目的とやり取りを通して結果として観客へ届く構造を作る','沈黙、間、視線、声量、動作速度などを、観客が受け取る時間や情報量まで考えて選択する','観客の反応によって自分の演技をその場で大きく変えるのではなく、観客がいることで生まれる集中や共有感覚を舞台上の行動につなげる')),
 );
 function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
     $names = array();
