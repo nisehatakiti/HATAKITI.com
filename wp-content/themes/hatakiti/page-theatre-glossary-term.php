@@ -1107,6 +1107,9 @@ $legacy_detail_aliases = array(
     'detail-346' => 'detail-26',
     'detail-362' => 'detail-164',
     'detail-376' => 'detail-253',
+    'detail-372' => 'detail-338',
+    'detail-550' => 'detail-328',
+    'detail-664' => 'detail-307',
     'detail-429' => 'detail-189',
     'detail-450' => 'detail-406',
     'detail-746' => 'detail-183',
@@ -1118,7 +1121,7 @@ $legacy_detail_aliases = array(
     'detail-807' => 'detail-445',
     'detail-810' => 'detail-416',
     'detail-811' => 'detail-433',
-    'detail-853' => 'detail-772',
+    'detail-853' => 'detail-608',
 );
 if ( isset( $legacy_detail_aliases[ $slug ] ) ) {
     $slug = $legacy_detail_aliases[ $slug ];
