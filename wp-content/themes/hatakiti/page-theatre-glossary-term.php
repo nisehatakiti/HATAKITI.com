@@ -1249,4 +1249,87 @@ $terms = array(
 'detail-1103'=>array('name'=>'搬送通路','category'=>'舞台基礎','definition'=>'搬送通路とは、装置、機材、小道具などを人や台車で移動させるために確保された通路である。','points'=>array('最大寸法の装置や台車を通し、曲がり角、扉、段差、すれ違いを確認する。','転換動線と重なる場合は搬送順序を整理する。','搬送時間の増加は転換や開演準備に影響する。','通路幅、扉、床荷重、段差、避難経路との兼用を確認する。')),
 'detail-1104'=>array('name'=>'作業通路','category'=>'舞台基礎','definition'=>'作業通路とは、舞台裏や仕込み区域で人が作業場所へ移動するために確保された通行帯である。','points'=>array('工具や部材を置く場所と通路を分け、通行幅を維持する。','出演者の裏動線と共有する場合は作業と登退場が干渉しない時間を設定する。','作業音や会話が舞台へ漏れる場合がある。','段差、ケーブル、工具、台車などを通路から除き、非常時にも通れる状態を保つ。')),
 'detail-1105'=>array('name'=>'機材通路','category'=>'舞台基礎','definition'=>'機材通路とは、照明、音響、映像、電源関連機器などを搬送・設置・撤去するために確保された通路である。','points'=>array('機材を搬入から設置位置まで実際に通し、方向転換できるか確認する。','搬送時間が場当たりや転換に影響しないよう工程に組み込む。','搬送音や設置音が上演中に客席へ漏れることがある。','重量物、ケーブル、床面、段差、扉幅を確認し、通路を塞がない。')),
-'detail-1106'=>array('name'=>'仕込みスペース','category'=>'舞台基礎','definition'=>'仕込みスペースとは、舞台装置、照明、音響、映像、小道具などを組み立て、設置、調整するために確保された作業空間である。','points'=>array('作業順序に合わせて工具や部材を配置し、作業空間と通路を分ける。','必要な調整時間を確保し、本番の表現条件から工程を逆算する。','仕込み不足は照明、音響、装置などの表現条件に直接影響する。','床荷重、電源、換気、火気、工具、脚立、高所作業、避難経路を確認する。')),
+'detail-1106'=>array('name'=>'仕込みスペース','category'=>'舞台基礎','definition'=>'仕込みスペースとは、舞台装置、照明、音響、映像、小道具などを組み立て、設置、調整するために確保された作業空間である。','points'=>array('作業順序に合わせて工具や部材を配置し、作業空間と通路を分ける。','必要な調整時間を確保し、本番の表現条件から工程を逆算する。','仕込み不足は照明、音響、装置などの表現条件に直接影響する。','床荷重、電源、換気、火気、工具、脚立、高所作業、避難経路を確認する。'))
+'detail-1107'=>array('name'=>'搬送待機位置','category'=>'舞台基礎','definition'=>'搬送待機位置とは、装置や機材を目的地へ運ぶ前に、人や台車が安全に待機するために定めた位置である。','points'=>array('搬送物、担当者、開始合図を確認し、通路を塞がずに待機できる位置を決める。','待機時間が長い場合も舞台進行を妨げないよう、次の場面との関係を整理する。','台車や機材が見えると舞台裏の存在が意識されるため、見切れを確認する。','車輪ロック、積載状態、通路、避難経路を確認する。')),
+'detail-1108'=>array('name'=>'搬送開始位置','category'=>'舞台基礎','definition'=>'搬送開始位置とは、装置や機材を目的地へ向けて動かし始めるための基準位置である。','points'=>array('実際の搬送物を置き、担当者が安全に操作を始められるか確認する。','開始の瞬間を転換や仕込みの合図と連動させることができる。','見える搬送では動き出しの迷いが舞台のテンポに影響する。','周囲の人、装置、扉、段差との距離を確認する。')),
+'detail-1109'=>array('name'=>'搬送完了位置','category'=>'舞台基礎','definition'=>'搬送完了位置とは、装置や機材を目的地へ運び終え、次の作業を開始できる状態にするための最終位置である。','points'=>array('到着後の設置、固定、接続まで含めて完了条件を決める。','搬送完了から次の作業へ移る時間も仕込み工程として設計する。','位置が数cmずれるだけでも舞台上の見え方や機材条件が変わる場合がある。','転倒防止、固定、ケーブル処理、通路確保を確認する。')),
+'detail-1110'=>array('name'=>'装置搬送','category'=>'舞台基礎','definition'=>'装置搬送とは、舞台装置を搬入口、保管場所、舞台、舞台裏などの間で移動させる作業である。','points'=>array('装置の寸法、重量、分解方法、搬送経路を事前に確認する。','搬送の順序によって仕込みの速度や舞台の完成順序が変わる。','搬送音や作業時間が上演前の環境に影響することがある。','重量物は人数や器具を確保し、無理な持ち方や急な方向転換を避ける。')),
+'detail-1111'=>array('name'=>'装置退避位置','category'=>'舞台基礎','definition'=>'装置退避位置とは、使用しない舞台装置を一時的に舞台上や主要な動線から外して置くための位置である。','points'=>array('次の転換で再利用する装置を、取り出しやすく安全な位置へ退避させる。','装置を見せないのか舞台裏の存在として残すのかを決める。','袖や舞台裏から装置が見えると、次の場面を予告する効果が生まれる場合がある。','転倒、落下、通路閉塞、避難経路への干渉を防ぐ。')),
+'detail-1112'=>array('name'=>'装置待機位置','category'=>'舞台基礎','definition'=>'装置待機位置とは、次の場面や転換で使用する舞台装置を、出番まで安全に待機させるための位置である。','points'=>array('使用順序に合わせて配置し、先に使う装置へすぐアクセスできるようにする。','待機装置をあえて見せるか隠すかを演出上判断する。','見切れた装置が次の場面を予告する場合がある。','通路幅、固定、転倒防止、他の装置との干渉を確認する。')),
+'detail-1113'=>array('name'=>'仕込み動線','category'=>'舞台基礎','definition'=>'仕込み動線とは、装置、機材、工具、スタッフなどが仕込み作業のために移動する経路である。','points'=>array('搬入から設置までの順序を確認し、人と物の交差を減らす。','仕込み動線を整理することで、本番に必要な状態へ効率よく到達できる。','仕込み作業は通常観客には見えないが、作業音や光が漏れる場合がある。','搬送通路、作業スペース、避難経路が干渉しないよう区分する。')),
+'detail-1114'=>array('name'=>'仕込み順序','category'=>'舞台基礎','definition'=>'仕込み順序とは、舞台装置、照明、音響、映像、小道具などを、どの順番で設置・調整するかを定めた手順である。','points'=>array('先に設置したものが後の作業を妨げないよう、工程を組み立てる。','作品の表現条件に直結する作業を優先し、調整時間を確保する。','順序の遅れは場当たりや本番準備の時間不足として現れる。','高所作業や重量物など危険を伴う工程は施設・担当者の手順を優先する。')),
+'detail-1115'=>array('name'=>'仕込み時間','category'=>'舞台基礎','definition'=>'仕込み時間とは、劇場や会場へ入ってから、本番に必要な舞台・機材・装置などを設置し調整するために必要な時間である。','points'=>array('搬入、組立、調整、確認まで含めた実測値を把握する。','限られた時間の中で何を優先して完成させるかを演出と技術側で共有する。','仕込み不足は照明、音響、装置などの表現品質に影響する。','休憩、交代、搬入遅延、設備使用時間なども含めて計画する。')),
+'detail-1116'=>array('name'=>'仕込み確認','category'=>'舞台基礎','definition'=>'仕込み確認とは、設置・調整した舞台装置や機材が予定どおり機能し、安全に使用できる状態かを確認する工程である。','points'=>array('設置位置、接続、動作、バミリ、転換動線を実際に確認する。','表現として必要な明るさ、音、視界、装置位置まで客席側から確認する。','技術的には動いていても、観客からの見え方が成立しているか確認する。','固定、電源、ケーブル、高所作業箇所、避難経路を確認する。')),
+'detail-1117'=>array('name'=>'仕込み完了','category'=>'舞台基礎','definition'=>'仕込み完了とは、予定した舞台装置、機材、環境設定などが設置・調整され、本番または次の稽古工程へ進める状態になったことをいう。','points'=>array('単に物を置き終えるのではなく、動作確認と安全確認まで完了条件に含める。','完成した舞台が演出意図どおり機能するか、場当たりへ移る前に確認する。','観客に見える舞台面だけでなく、舞台裏の動線も本番可能な状態にする。','未確認箇所を残したまま完了扱いにせず、責任者と共有して記録する。')),
+);
+
+function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
+    $names = array();
+    foreach ( $link_terms as $name => $item ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) continue;
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) continue;
+        $names[ $name ] = $item['slug'];
+    }
+    uksort( $names, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    if ( empty( $names ) ) return esc_html( $text );
+    $pattern = '/(' . implode( '|', array_map( 'preg_quote', array_keys( $names ) ) ) . ')/u';
+    $parts = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+    $html = '';
+    foreach ( $parts as $part ) {
+        if ( isset( $names[ $part ] ) ) {
+            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/hakatipedia/' . $names[ $part ] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
+        } else $html .= esc_html( $part );
+    }
+    return $html;
+}
+function hk_glossary_related_terms( $term, $current_slug, $terms ) {
+    $haystack = $term['definition'] . ' ' . implode( ' ', $term['points'] );
+    $related = array();
+    foreach ( $terms as $name => $item ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) continue;
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) continue;
+        if ( mb_strpos( $haystack, $name ) !== false ) $related[ $name ] = $item;
+    }
+    uksort( $related, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    return array_slice( $related, 0, 12, true );
+}
+$path=trim(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),'/');
+$base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
+if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
+$prefix = 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ? 'theatre-textbook/hakatipedia/' : 'theatre-textbook/glossary/';
+$slug=trim(substr($path,strlen($prefix)),'/');
+$legacy_detail_aliases = array(
+    'detail-261' => 'detail-223','detail-315' => 'detail-12','detail-346' => 'detail-26','detail-362' => 'detail-164','detail-376' => 'detail-253',
+    'detail-372' => 'detail-338','detail-550' => 'detail-328','detail-664' => 'detail-307','detail-429' => 'detail-189','detail-450' => 'detail-406',
+    'detail-746' => 'detail-183','detail-764' => 'detail-182','detail-772' => 'detail-608','detail-793' => 'detail-413','detail-798' => 'detail-184',
+    'detail-800' => 'detail-189','detail-807' => 'detail-445','detail-810' => 'detail-416','detail-811' => 'detail-433','detail-853' => 'detail-608',
+);
+if ( isset( $legacy_detail_aliases[ $slug ] ) ) $slug = $legacy_detail_aliases[ $slug ];
+if(!isset($terms[$slug])){$slug='theatre';}
+$term=$terms[$slug];
+get_header();
+?>
+<?php $related_terms = hk_glossary_related_terms( $term, $slug, $terms ); ?>
+<main class="hk-container hk-glossary-term"><article class="hk-wiki-term-page">
+<header class="hk-wiki-header"><p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜HATAKITIpedia</p><h1><?php echo esc_html($term['name']); ?></h1></header>
+<nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/')); ?>">← HATAKITIpedia</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
+<section class="hk-wiki-definition"><p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $related_terms ); ?></p></section>
+<section class="hk-wiki-section"><h2>概要</h2><ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $related_terms ); ?></li><?php endforeach; ?></ul></section>
+<?php if ( ! empty( $related_terms ) ) : ?><section class="hk-wiki-section"><h2>関連項目</h2><ul class="hk-wiki-related"><?php foreach ( $related_terms as $related_name => $related_term ) : ?><li><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li><?php endforeach; ?></ul></section><?php endif; ?>
+</article></main>
+<style>
+.hk-wiki-term-page{max-width:900px;margin:42px auto 80px;padding:0 24px;color:var(--hk-fg)}
+.hk-wiki-header{border-bottom:1px solid var(--hk-border);padding-bottom:18px}.hk-wiki-kicker{font-size:13px;color:var(--hk-fg-dim);margin:0 0 8px}.hk-wiki-header h1{font-family:var(--hk-font-serif);font-size:36px;font-weight:600;margin:0}
+.hk-wiki-nav{display:flex;gap:18px;padding:12px 0;border-bottom:1px solid var(--hk-border);font-size:14px}.hk-wiki-nav a,.hk-wiki-definition a,.hk-wiki-points a,.hk-wiki-related a{color:var(--hk-link,#2457a6);text-decoration:none}.hk-wiki-nav a:hover,.hk-wiki-definition a:hover,.hk-wiki-points a:hover,.hk-wiki-related a:hover{text-decoration:underline}
+.hk-wiki-definition{font-size:17px;line-height:2;margin:28px 0}.hk-wiki-definition p{margin:0}.hk-wiki-section{margin:30px 0}.hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 14px}.hk-wiki-points{margin:0;padding-left:1.5em;line-height:1.9}.hk-wiki-points li{margin-bottom:8px}.hk-wiki-related{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0;padding-left:1.5em;line-height:1.9}
+@media(max-width:600px){.hk-wiki-term-page{padding:0 16px}.hk-wiki-header h1{font-size:30px}.hk-wiki-definition{font-size:16px}}
+</style>
+<?php get_footer(); ?>
