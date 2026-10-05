@@ -921,6 +921,16 @@ $terms = array(
     '小道具' => array('slug'=>'detail-942','category'=>'舞台基礎','summary'=>'「小道具」を舞台の一般知識として理解するための基本用語。'),
     '本番' => array('slug'=>'detail-943','category'=>'舞台基礎','summary'=>'「本番」を舞台の一般知識として理解するための基本用語。'),
     '操作卓' => array('slug'=>'detail-944','category'=>'舞台基礎','summary'=>'「操作卓」を舞台の一般知識として理解するための基本用語。'),
+    '反響板' => array('slug'=>'detail-945','category'=>'舞台基礎','summary'=>'「反響板」を舞台の一般知識として理解するための基本用語。'),
+    '音響反射板' => array('slug'=>'detail-946','category'=>'舞台基礎','summary'=>'「音響反射板」を舞台の一般知識として理解するための基本用語。'),
+    '袖' => array('slug'=>'detail-947','category'=>'舞台基礎','summary'=>'「袖」を舞台の一般知識として理解するための基本用語。'),
+    '上手袖' => array('slug'=>'detail-948','category'=>'舞台基礎','summary'=>'「上手袖」を舞台の一般知識として理解するための基本用語。'),
+    '下手袖' => array('slug'=>'detail-949','category'=>'舞台基礎','summary'=>'「下手袖」を舞台の一般知識として理解するための基本用語。'),
+    '客席通路' => array('slug'=>'detail-950','category'=>'舞台基礎','summary'=>'「客席通路」を舞台の一般知識として理解するための基本用語。'),
+    '搬入口' => array('slug'=>'detail-951','category'=>'舞台基礎','summary'=>'「搬入口」を舞台の一般知識として理解するための基本用語。'),
+    '搬入経路' => array('slug'=>'detail-952','category'=>'舞台基礎','summary'=>'「搬入経路」を舞台の一般知識として理解するための基本用語。'),
+    '舞台袖幕' => array('slug'=>'detail-953','category'=>'舞台基礎','summary'=>'「舞台袖幕」を舞台の一般知識として理解するための基本用語。'),
+    '一文字幕' => array('slug'=>'detail-954','category'=>'舞台基礎','summary'=>'「一文字幕」を舞台の一般知識として理解するための基本用語。'),
 );
 
 $category_order = array(
