@@ -1276,4 +1276,66 @@ $terms = array(
 'detail-1127'=>array('name'=>'搬出待機位置','category'=>'舞台基礎','definition'=>'搬出待機位置とは、装置や機材を搬出口へ運び出す直前まで一時的に待機させるための位置である。','points'=>array('搬出順に並べ、先に出す物へアクセスしやすくする。','待機物が搬送通路や扉前に滞留しないよう位置を決める。','搬出車両の到着前に、待機位置から搬出口までの経路を確認する。','台車の固定、積載状態、転倒防止、避難経路を確認する。')),
 'detail-1128'=>array('name'=>'搬出順序','category'=>'舞台基礎','definition'=>'搬出順序とは、装置・機材・資材などを会場からどの順番で運び出すかを定めた手順である。','points'=>array('車両への積載順序と逆算して、最後に出す物から先に準備する。','分解が必要な物や大型物の搬出を、他の物が邪魔しない順番にする。','搬出先での荷下ろしや保管場所まで考えて順序を決める。','重量物や大型物は必要人数・器具・誘導者を確保してから動かす。')),
 'detail-1129'=>array('name'=>'搬出時間','category'=>'舞台基礎','definition'=>'搬出時間とは、会場内の装置や機材を搬出口から車両などへ移し終えるまでに必要な時間である。','points'=>array('物量、人数、台車数、搬入口までの距離などを考慮して見積もる。','搬出車両の待機時間を減らすため、現場側の準備完了時刻を逆算する。','夜間搬出では周辺への騒音や作業時間にも配慮する。','遅延した場合に何を優先して搬出するか、代替手順を決めておく。')),
-'detail-1130'=>array('name'=>'搬出確認','category'=>'舞台基礎','definition'=>'搬出確認とは、予定した装置・機材・資材などがすべて会場から搬出され、残置物や忘れ物がないことを確認する工程である。','points'=>array('搬出台帳やリストと照合し、数量や返却先を確認する。','舞台、袖、楽屋、客席、倉庫、搬入口周辺まで残置物を確認する。','施設備品を誤って搬出していないか、借用品を返却したか確認する。','搬出口の閉鎖、施錠、清掃、原状復帰まで確認して終了とする。')),
+'detail-1130'=>array('name'=>'搬出確認','category'=>'舞台基礎','definition'=>'搬出確認とは、予定した装置・機材・資材などがすべて会場から搬出され、残置物や忘れ物がないことを確認する工程である。','points'=>array('搬出台帳やリストと照合し、数量や返却先を確認する。','舞台、袖、楽屋、客席、倉庫、搬入口周辺まで残置物を確認する。','施設備品を誤って搬出していないか、借用品を返却したか確認する。','搬出口の閉鎖、施錠、清掃、原状復帰まで確認して終了とする。'))
+);
+
+function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
+    $names = array();
+    foreach ( $link_terms as $name => $item ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) continue;
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) continue;
+        $names[ $name ] = $item['slug'];
+    }
+    uksort( $names, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    if ( empty( $names ) ) return esc_html( $text );
+    $pattern = '/(' . implode( '|', array_map( 'preg_quote', array_keys( $names ) ) ) . ')/u';
+    $parts = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
+    $html = '';
+    foreach ( $parts as $part ) {
+        if ( isset( $names[ $part ] ) ) {
+            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/hakatipedia/' . $names[ $part] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
+        } else $html .= esc_html( $part );
+    }
+    return $html;
+}
+function hk_glossary_related_terms( $term, $current_slug, $terms ) {
+    $haystack = $term['definition'] . ' ' . implode( ' ', $term['points'] );
+    $related = array();
+    foreach ( $terms as $name => $item ) {
+        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) continue;
+        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) continue;
+        if ( mb_strpos( $haystack, $name ) !== false ) $related[ $name ] = $item;
+    }
+    uksort( $related, function( $a, $b ) {
+        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+        return $lb <=> $la;
+    } );
+    return array_slice( $related, 0, 12, true );
+}
+$path=trim(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),'/');
+$base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
+if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
+$prefix = 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ? 'theatre-textbook/hakatipedia/' : 'theatre-textbook/glossary/';
+$slug=trim(substr($path,strlen($prefix)),'/');
+$legacy_detail_aliases = array(
+    'detail-261'=>'detail-223','detail-315'=>'detail-12','detail-346'=>'detail-26','detail-362'=>'detail-164','detail-376'=>'detail-253','detail-372'=>'detail-338','detail-550'=>'detail-328','detail-664'=>'detail-307','detail-429'=>'detail-189','detail-450'=>'detail-406','detail-746'=>'detail-183','detail-764'=>'detail-182','detail-772'=>'detail-608','detail-793'=>'detail-413','detail-798'=>'detail-184','detail-800'=>'detail-189','detail-807'=>'detail-445','detail-810'=>'detail-416','detail-811'=>'detail-433','detail-853'=>'detail-608',
+);
+if ( isset( $legacy_detail_aliases[ $slug ] ) ) $slug = $legacy_detail_aliases[ $slug ];
+if(!isset($terms[$slug])){$slug='theatre';}
+$term=$terms[$slug];
+get_header();
+?>
+<?php $related_terms = hk_glossary_related_terms( $term, $slug, $terms ); ?>
+<main class="hk-container hk-glossary-term"><article class="hk-wiki-term-page">
+<header class="hk-wiki-header"><p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜HATAKITIpedia</p><h1><?php echo esc_html($term['name']); ?></h1></header>
+<nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/')); ?>">← HATAKITIpedia</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
+<section class="hk-wiki-definition"><p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $related_terms ); ?></p></section>
+<section class="hk-wiki-section"><h2>概要</h2><ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $related_terms ); ?></li><?php endforeach; ?></ul></section>
+<?php if ( ! empty( $related_terms ) ) : ?><section class="hk-wiki-section"><h2>関連項目</h2><ul class="hk-wiki-related"><?php foreach ( $related_terms as $related_name => $related_term ) : ?><li><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li><?php endforeach; ?></ul></section><?php endif; ?>
+</article></main>
+<?php get_footer(); ?>
