@@ -907,6 +907,20 @@ $terms = array(
     '降ろし' => array('slug'=>'detail-928','category'=>'舞台基礎','summary'=>'「降ろし」を舞台の一般知識として理解するための基本用語。'),
     '間口' => array('slug'=>'detail-929','category'=>'舞台基礎','summary'=>'「間口」を舞台の一般知識として理解するための基本用語。'),
     '舞台面' => array('slug'=>'detail-930','category'=>'舞台基礎','summary'=>'「舞台面」を舞台の一般知識として理解するための基本用語。'),
+    '客席' => array('slug'=>'detail-931','category'=>'舞台基礎','summary'=>'「客席」を舞台の一般知識として理解するための基本用語。'),
+    'アクティングエリア' => array('slug'=>'detail-932','category'=>'舞台基礎','summary'=>'「アクティングエリア」を舞台の一般知識として理解するための基本用語。'),
+    '暗転' => array('slug'=>'detail-933','category'=>'舞台基礎','summary'=>'「暗転」を舞台の一般知識として理解するための基本用語。'),
+    '明転' => array('slug'=>'detail-934','category'=>'舞台基礎','summary'=>'「明転」を舞台の一般知識として理解するための基本用語。'),
+    'きっかけ' => array('slug'=>'detail-935','category'=>'舞台基礎','summary'=>'「きっかけ」を舞台の一般知識として理解するための基本用語。'),
+    'キュー' => array('slug'=>'detail-936','category'=>'舞台基礎','summary'=>'「キュー」を舞台の一般知識として理解するための基本用語。'),
+    'インカム' => array('slug'=>'detail-937','category'=>'舞台基礎','summary'=>'「インカム」を舞台の一般知識として理解するための基本用語。'),
+    '舞台進行' => array('slug'=>'detail-938','category'=>'舞台基礎','summary'=>'「舞台進行」を舞台の一般知識として理解するための基本用語。'),
+    '美術進行' => array('slug'=>'detail-939','category'=>'舞台基礎','summary'=>'「美術進行」を舞台の一般知識として理解するための基本用語。'),
+    '所作台' => array('slug'=>'detail-940','category'=>'舞台基礎','summary'=>'「所作台」を舞台の一般知識として理解するための基本用語。'),
+    '大道具' => array('slug'=>'detail-941','category'=>'舞台基礎','summary'=>'「大道具」を舞台の一般知識として理解するための基本用語。'),
+    '小道具' => array('slug'=>'detail-942','category'=>'舞台基礎','summary'=>'「小道具」を舞台の一般知識として理解するための基本用語。'),
+    '本番' => array('slug'=>'detail-943','category'=>'舞台基礎','summary'=>'「本番」を舞台の一般知識として理解するための基本用語。'),
+    '操作卓' => array('slug'=>'detail-944','category'=>'舞台基礎','summary'=>'「操作卓」を舞台の一般知識として理解するための基本用語。'),
 );
 
 $category_order = array(
