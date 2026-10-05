@@ -68,6 +68,8 @@ add_action( 'pre_get_posts', 'hatakiti_search_post_types' );
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/booklog.php';
+require_once get_template_directory() . '/inc/hakatikipedia/category-map.php';
+require_once get_template_directory() . '/inc/hakatikipedia/admin.php';
 
 /**
  * Add 演劇の教科書 to the center of the primary global navigation.
