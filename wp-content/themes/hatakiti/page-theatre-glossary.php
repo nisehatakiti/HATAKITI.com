@@ -931,6 +931,16 @@ $terms = array(
     '搬入経路' => array('slug'=>'detail-952','category'=>'舞台基礎','summary'=>'「搬入経路」を舞台の一般知識として理解するための基本用語。'),
     '舞台袖幕' => array('slug'=>'detail-953','category'=>'舞台基礎','summary'=>'「舞台袖幕」を舞台の一般知識として理解するための基本用語。'),
     '一文字幕' => array('slug'=>'detail-954','category'=>'舞台基礎','summary'=>'「一文字幕」を舞台の一般知識として理解するための基本用語。'),
+    '定式幕' => array('slug'=>'detail-955','category'=>'舞台基礎','summary'=>'「定式幕」を舞台の一般知識として理解するための基本用語。'),
+    '浅葱幕' => array('slug'=>'detail-956','category'=>'舞台基礎','summary'=>'「浅葱幕」を舞台の一般知識として理解するための基本用語。'),
+    '道具幕' => array('slug'=>'detail-957','category'=>'舞台基礎','summary'=>'「道具幕」を舞台の一般知識として理解するための基本用語。'),
+    '大黒幕' => array('slug'=>'detail-958','category'=>'舞台基礎','summary'=>'「大黒幕」を舞台の一般知識として理解するための基本用語。'),
+    'ホリゾント幕' => array('slug'=>'detail-959','category'=>'舞台基礎','summary'=>'「ホリゾント幕」を舞台の一般知識として理解するための基本用語。'),
+    'ホリゾント' => array('slug'=>'detail-960','category'=>'舞台基礎','summary'=>'「ホリゾント」を舞台の一般知識として理解するための基本用語。'),
+    'バックドロップ' => array('slug'=>'detail-961','category'=>'舞台基礎','summary'=>'「バックドロップ」を舞台の一般知識として理解するための基本用語。'),
+    '引割幕' => array('slug'=>'detail-962','category'=>'舞台基礎','summary'=>'「引割幕」を舞台の一般知識として理解するための基本用語。'),
+    '割幕' => array('slug'=>'detail-963','category'=>'舞台基礎','summary'=>'「割幕」を舞台の一般知識として理解するための基本用語。'),
+    '暗幕' => array('slug'=>'detail-964','category'=>'舞台基礎','summary'=>'「暗幕」を舞台の一般知識として理解するための基本用語。'),
 );
 
 $category_order = array(
