@@ -1126,34 +1126,42 @@ if ( class_exists( 'Collator' ) ) {
         </div>
 
         <?php
+        /*
+         * 大分類タブ。
+         * 細かな既存カテゴリは失わず、名称から4つの大分類へ振り分ける。
+         * 新しいカテゴリが追加されても、原則としていずれかのタブに自動で入る。
+         */
         $tab_groups = array(
-            'basic' => array(
-                'label' => '基本・ジャンル',
-                'categories' => array('基本', 'ジャンル'),
-            ),
-            'history' => array(
-                'label' => '演劇史',
-                'categories' => array(
-                    '古代・儀式', '古代演劇', '古代・演技',
-                    '中世演劇', '日本演劇', '近世演劇',
-                    'ルネサンス・近代演劇', '近代演劇',
-                    '近代・演出', '近代・演劇論', '現代演劇',
-                ),
-            ),
-            'acting' => array(
-                'label' => '演技',
-                'categories' => array(
-                    '演技・想像', '演技・感覚', '演技・感情',
-                    '演技・人物', '演技・状況', '演技・目的',
-                    '演技・欲求', '演技・関係', '演技・空間',
-                    '演技・実践', '演技・時間',
-                ),
-            ),
-            'stage' => array(
-                'label' => '舞台関連',
-                'categories' => array('劇場・空間', '舞台基礎'),
-            ),
+            'basic' => array('label' => '基本・ジャンル', 'categories' => array()),
+            'history' => array('label' => '演劇史', 'categories' => array()),
+            'acting' => array('label' => '演技', 'categories' => array()),
+            'stage' => array('label' => '舞台関連', 'categories' => array()),
         );
+
+        $ordered_categories = array();
+        foreach ( $category_order as $category ) {
+            if ( isset( $groups[ $category ] ) ) {
+                $ordered_categories[] = $category;
+            }
+        }
+        foreach ( array_keys( $groups ) as $category ) {
+            if ( ! in_array( $category, $ordered_categories, true ) ) {
+                $ordered_categories[] = $category;
+            }
+        }
+
+        foreach ( $ordered_categories as $category ) {
+            if ( '基本' === $category || 'ジャンル' === $category ) {
+                $tab_id = 'basic';
+            } elseif ( preg_match( '/古代|中世|近世|近代|ルネサンス|演劇史|芸能史|日本演劇史|西洋演劇史/', $category ) ) {
+                $tab_id = 'history';
+            } elseif ( preg_match( '/演技|俳優|役柄|身体表現|人物造形|演劇表現|演技技法/', $category ) ) {
+                $tab_id = 'acting';
+            } else {
+                $tab_id = 'stage';
+            }
+            $tab_groups[ $tab_id ]['categories'][] = $category;
+        }
         ?>
 
         <section class="hk-wiki-section" id="glossary-list">
