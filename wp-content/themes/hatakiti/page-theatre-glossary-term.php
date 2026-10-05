@@ -1101,6 +1101,28 @@ $base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
 if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
 $prefix = 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ? 'theatre-textbook/hakatipedia/' : 'theatre-textbook/glossary/';
 $slug=trim(substr($path,strlen($prefix)),'/');
+$legacy_detail_aliases = array(
+    'detail-261' => 'detail-223',
+    'detail-315' => 'detail-12',
+    'detail-346' => 'detail-26',
+    'detail-362' => 'detail-164',
+    'detail-376' => 'detail-253',
+    'detail-429' => 'detail-189',
+    'detail-450' => 'detail-406',
+    'detail-746' => 'detail-183',
+    'detail-764' => 'detail-182',
+    'detail-772' => 'detail-608',
+    'detail-793' => 'detail-413',
+    'detail-798' => 'detail-184',
+    'detail-800' => 'detail-189',
+    'detail-807' => 'detail-445',
+    'detail-810' => 'detail-416',
+    'detail-811' => 'detail-433',
+    'detail-853' => 'detail-772',
+);
+if ( isset( $legacy_detail_aliases[ $slug ] ) ) {
+    $slug = $legacy_detail_aliases[ $slug ];
+}
 if(!isset($terms[$slug])){$slug='theatre';}
 $term=$terms[$slug];
 get_header();
