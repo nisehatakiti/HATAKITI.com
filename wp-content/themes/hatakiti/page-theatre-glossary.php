@@ -1121,43 +1121,71 @@ if ( class_exists( 'Collator' ) ) {
 
         <div class="hk-wiki-search">
             <label for="hk-glossary-search">HATAKITIpediaを検索</label>
-            <input type="search" id="hk-glossary-search" placeholder="用語を入力">
+            <input type="search" id="hk-glossary-search" placeholder="全カテゴリから用語を検索">
+            <p class="hk-wiki-search-note">検索すると、すべてのカテゴリを横断して該当する用語を表示します。</p>
         </div>
+
+        <?php
+        $tab_groups = array(
+            'basic' => array(
+                'label' => '基本・ジャンル',
+                'categories' => array('基本', 'ジャンル'),
+            ),
+            'history' => array(
+                'label' => '演劇史',
+                'categories' => array(
+                    '古代・儀式', '古代演劇', '古代・演技',
+                    '中世演劇', '日本演劇', '近世演劇',
+                    'ルネサンス・近代演劇', '近代演劇',
+                    '近代・演出', '近代・演劇論', '現代演劇',
+                ),
+            ),
+            'acting' => array(
+                'label' => '演技',
+                'categories' => array(
+                    '演技・想像', '演技・感覚', '演技・感情',
+                    '演技・人物', '演技・状況', '演技・目的',
+                    '演技・欲求', '演技・関係', '演技・空間',
+                    '演技・実践', '演技・時間',
+                ),
+            ),
+            'stage' => array(
+                'label' => '舞台関連',
+                'categories' => array('劇場・空間', '舞台基礎'),
+            ),
+        );
+        ?>
 
         <section class="hk-wiki-section" id="glossary-list">
             <h2>項目一覧</h2>
-            <p class="hk-wiki-note">分野ごとに整理しています。項目名をクリックすると、その項目の詳しいページを開きます。</p>
-            <?php foreach ( $category_order as $category ) : ?>
-                <?php if ( empty( $groups[ $category ] ) ) { continue; } ?>
-                <section class="hk-wiki-category">
-                    <h3><?php echo esc_html( $category_labels[ $category ] ?? $category ); ?></h3>
-                    <div class="hk-wiki-terms">
-                        <?php $category_terms = array(); ?>
-                        <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
-                            <?php if ( empty( $term['slug'] ) ) { continue; } ?>
-                            <?php $category_terms[] = array( 'name' => ( $term['name'] ?? $name ), 'term' => $term ); ?>
-                        <?php endforeach; ?>
-                        <?php foreach ( $category_terms as $index => $entry ) : ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $entry['name'] ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $entry['term']['slug'] . '/' ) ); ?>"><?php echo esc_html( $entry['name'] ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
-                        <?php endforeach; ?>
-                    </div>
-                </section>
-            <?php endforeach; ?>
-            <?php
-            $remaining = array_diff( array_keys( $groups ), $category_order );
-            if ( ! empty( $remaining ) ) :
-                foreach ( $remaining as $category ) :
-            ?>
-                <section class="hk-wiki-category">
-                    <h3><?php echo esc_html( $category ); ?></h3>
-                    <div class="hk-wiki-terms">
-                        <?php $category_terms = array_values( array_filter( $groups[ $category ], function( $item ) { return ! empty( $item['slug'] ); } ) ); ?>
-                        <?php foreach ( $category_terms as $index => $term ) : ?>
-                            <a class="hk-wiki-term" data-term="<?php echo esc_attr( $term['name'] ?? '' ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $term['slug'] . '/' ) ); ?>"><?php echo esc_html( $term['name'] ?? '' ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
+            <p class="hk-wiki-note">分野ごとに整理しています。タブで大分類を切り替え、項目名をクリックすると詳しいページを開けます。</p>
+            <div class="hk-wiki-tabs" role="tablist" aria-label="HATAKITIpediaカテゴリ">
+                <?php $tab_index = 0; foreach ( $tab_groups as $tab_id => $tab ) : ?>
+                    <button type="button" class="hk-wiki-tab<?php echo 0 === $tab_index ? ' is-active' : ''; ?>" id="hk-tab-<?php echo esc_attr( $tab_id ); ?>" role="tab" aria-selected="<?php echo 0 === $tab_index ? 'true' : 'false'; ?>" aria-controls="hk-panel-<?php echo esc_attr( $tab_id ); ?>" data-tab="<?php echo esc_attr( $tab_id ); ?>"><?php echo esc_html( $tab['label'] ); ?></button>
+                <?php $tab_index++; endforeach; ?>
+            </div>
+            <div class="hk-wiki-tab-panels">
+                <?php $tab_index = 0; foreach ( $tab_groups as $tab_id => $tab ) : ?>
+                    <div class="hk-wiki-tab-panel<?php echo 0 === $tab_index ? ' is-active' : ''; ?>" id="hk-panel-<?php echo esc_attr( $tab_id ); ?>" role="tabpanel" aria-labelledby="hk-tab-<?php echo esc_attr( $tab_id ); ?>" data-panel="<?php echo esc_attr( $tab_id ); ?>" <?php echo 0 === $tab_index ? '' : 'hidden'; ?>>
+                        <?php foreach ( $tab['categories'] as $category ) : ?>
+                            <?php if ( empty( $groups[ $category ] ) ) { continue; } ?>
+                            <section class="hk-wiki-category">
+                                <h3><?php echo esc_html( $category_labels[ $category ] ?? $category ); ?></h3>
+                                <div class="hk-wiki-terms">
+                                    <?php $category_terms = array(); ?>
+                                    <?php foreach ( $groups[ $category ] as $name => $term ) : ?>
+                                        <?php if ( empty( $term['slug'] ) ) { continue; } ?>
+                                        <?php $category_terms[] = array( 'name' => ( $term['name'] ?? $name ), 'term' => $term ); ?>
+                                    <?php endforeach; ?>
+                                    <?php foreach ( $category_terms as $index => $entry ) : ?>
+                                        <a class="hk-wiki-term" data-term="<?php echo esc_attr( $entry['name'] ); ?>" href="<?php echo esc_url( home_url( '/theatre-textbook/hakatipedia/' . $entry['term']['slug'] . '/' ) ); ?>"><?php echo esc_html( $entry['name'] ); ?></a><?php if ( $index < count( $category_terms ) - 1 ) : ?><span class="hk-wiki-separator" aria-hidden="true"> ・ </span><?php endif; ?>
+                                    <?php endforeach; ?>
+                                </div>
+                            </section>
                         <?php endforeach; ?>
                     </div>
-                </section>
-            <?php endforeach; endif; ?>
+                <?php $tab_index++; endforeach; ?>
+            </div>
             <p id="hk-glossary-empty" hidden>該当する用語はありません。</p>
         </section>
     </article>
@@ -1174,7 +1202,14 @@ if ( class_exists( 'Collator' ) ) {
 .hk-wiki-search{margin:24px 0}
 .hk-wiki-search label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}
 .hk-wiki-search input{width:100%;max-width:560px;box-sizing:border-box;padding:9px 11px;border:1px solid #a2a9b1;background:var(--hk-bg-elevated);color:var(--hk-fg);font:inherit}
+.hk-wiki-search-note{margin:7px 0 0;color:var(--hk-fg-dim);font-size:13px;line-height:1.7}
 .hk-wiki-section{margin:28px 0}
+.hk-wiki-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;border-bottom:1px solid var(--hk-border);padding-bottom:8px}
+.hk-wiki-tab{appearance:none;border:1px solid var(--hk-border);border-radius:5px;background:var(--hk-bg-elevated);color:var(--hk-fg);padding:8px 16px;font:inherit;font-size:14px;cursor:pointer}
+.hk-wiki-tab:hover{border-color:var(--hk-link,#2457a6)}
+.hk-wiki-tab.is-active{background:var(--hk-link,#2457a6);border-color:var(--hk-link,#2457a6);color:#fff}
+.hk-wiki-tab-panel[hidden]{display:none}
+.hk-wiki-tab-panel.is-searching{display:block}
 .hk-wiki-section h2{font-family:var(--hk-font-serif);font-size:24px;font-weight:600;border-bottom:1px solid var(--hk-border);padding-bottom:8px;margin:0 0 18px}
 .hk-wiki-category{margin:0 0 28px}
 .hk-wiki-category h3{font-family:var(--hk-font-serif);font-size:19px;font-weight:600;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--hk-border)}
@@ -1190,21 +1225,80 @@ document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('hk-glossary-search');
     const terms = Array.from(document.querySelectorAll('.hk-wiki-term'));
     const categories = Array.from(document.querySelectorAll('.hk-wiki-category'));
+    const tabs = Array.from(document.querySelectorAll('.hk-wiki-tab'));
+    const panels = Array.from(document.querySelectorAll('.hk-wiki-tab-panel'));
     const empty = document.getElementById('hk-glossary-empty');
     if (!input) return;
+
+    function updateCategoryVisibility() {
+        categories.forEach(function (category) {
+            category.hidden = !category.querySelector('.hk-wiki-term:not([hidden])');
+        });
+        panels.forEach(function (panel) {
+            panel.dataset.hasVisible = panel.querySelector('.hk-wiki-term:not([hidden])') ? 'true' : 'false';
+        });
+    }
+
+    function setTab(tabId) {
+        tabs.forEach(function (tab) {
+            const active = tab.dataset.tab === tabId;
+            tab.classList.toggle('is-active', active);
+            tab.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        panels.forEach(function (panel) {
+            const active = panel.dataset.panel === tabId;
+            panel.classList.toggle('is-active', active);
+            if (!input.value.trim()) {
+                panel.hidden = !active;
+            }
+        });
+    }
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            if (input.value.trim()) {
+                input.value = '';
+                terms.forEach(function (term) { term.hidden = false; });
+                categories.forEach(function (category) { category.hidden = false; });
+                panels.forEach(function (panel) {
+                    panel.classList.remove('is-searching');
+                });
+                empty.hidden = true;
+            }
+            setTab(tab.dataset.tab);
+        });
+    });
+
     input.addEventListener('input', function () {
         const q = input.value.trim().toLowerCase();
         let visible = 0;
+
         terms.forEach(function (term) {
             const match = !q || term.dataset.term.toLowerCase().includes(q);
             term.hidden = !match;
             if (match) visible++;
         });
-        categories.forEach(function (category) {
-            category.hidden = !category.querySelector('.hk-wiki-term:not([hidden])');
-        });
+
+        updateCategoryVisibility();
+
+        if (q) {
+            // 検索中はタブを越えて全カテゴリを横断表示する。
+            panels.forEach(function (panel) {
+                panel.hidden = panel.dataset.hasVisible !== 'true';
+                panel.classList.add('is-searching');
+            });
+        } else {
+            panels.forEach(function (panel) {
+                panel.classList.remove('is-searching');
+            });
+            const activeTab = tabs.find(function (tab) { return tab.classList.contains('is-active'); });
+            if (activeTab) setTab(activeTab.dataset.tab);
+        }
+
         empty.hidden = visible !== 0;
     });
+
+    if (tabs.length) setTab(tabs[0].dataset.tab);
 });
 </script>
 <?php get_footer(); ?>
