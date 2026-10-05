@@ -984,6 +984,7 @@ $terms = array(
     '平面図' => array('slug'=>'detail-1005','category'=>'舞台基礎','summary'=>'「平面図」を舞台の構造・実務・演技との関係から理解するための用語。'),
     '立面図' => array('slug'=>'detail-1006','category'=>'舞台基礎','summary'=>'「立面図」を舞台の構造・実務・演技との関係から理解するための用語。'),
     '断面図' => array('slug'=>'detail-1007','category'=>'舞台基礎','summary'=>'「断面図」を舞台の構造・実務・演技との関係から理解するための用語。'),
+    '八百屋' => array('slug'=>'detail-1008','category'=>'舞台基礎','summary'=>'舞台を傾斜させる「八百屋」を、空間・演技・安全・観客の見え方から理解するための用語。'),
 );
 
 $category_order = array(
