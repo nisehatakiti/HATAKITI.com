@@ -941,6 +941,16 @@ $terms = array(
     '引割幕' => array('slug'=>'detail-962','category'=>'舞台基礎','summary'=>'「引割幕」を舞台の一般知識として理解するための基本用語。'),
     '割幕' => array('slug'=>'detail-963','category'=>'舞台基礎','summary'=>'「割幕」を舞台の一般知識として理解するための基本用語。'),
     '暗幕' => array('slug'=>'detail-964','category'=>'舞台基礎','summary'=>'「暗幕」を舞台の一般知識として理解するための基本用語。'),
+    '吊り元' => array('slug'=>'detail-965','category'=>'舞台基礎','summary'=>'「吊り元」を舞台の一般知識として理解するための基本用語。'),
+    '錘' => array('slug'=>'detail-966','category'=>'舞台基礎','summary'=>'「錘」を舞台の一般知識として理解するための基本用語。'),
+    'カウンターウェイト' => array('slug'=>'detail-967','category'=>'舞台基礎','summary'=>'「カウンターウェイト」を舞台の一般知識として理解するための基本用語。'),
+    '滑車' => array('slug'=>'detail-968','category'=>'舞台基礎','summary'=>'「滑車」を舞台の一般知識として理解するための基本用語。'),
+    'ワイヤーロープ' => array('slug'=>'detail-969','category'=>'舞台基礎','summary'=>'「ワイヤーロープ」を舞台の一般知識として理解するための基本用語。'),
+    '電動バトン' => array('slug'=>'detail-970','category'=>'舞台基礎','summary'=>'「電動バトン」を舞台の一般知識として理解するための基本用語。'),
+    '手動バトン' => array('slug'=>'detail-971','category'=>'舞台基礎','summary'=>'「手動バトン」を舞台の一般知識として理解するための基本用語。'),
+    '舞台機構操作' => array('slug'=>'detail-972','category'=>'舞台基礎','summary'=>'「舞台機構操作」を舞台の一般知識として理解するための基本用語。'),
+    '舞台機構安全' => array('slug'=>'detail-973','category'=>'舞台基礎','summary'=>'「舞台機構安全」を舞台の一般知識として理解するための基本用語。'),
+    '転換表' => array('slug'=>'detail-974','category'=>'舞台基礎','summary'=>'「転換表」を舞台の一般知識として理解するための基本用語。'),
 );
 
 $category_order = array(
