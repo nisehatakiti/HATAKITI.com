@@ -1265,63 +1265,15 @@ $terms = array(
 'detail-1118'=>array('name'=>'仕込み終了確認','category'=>'舞台基礎','definition'=>'仕込み終了確認とは、仕込み作業を終える前に、設置・調整・安全・動線などが予定どおり整い、次の場当たりや稽古へ移れる状態かを最終確認する工程である。','points'=>array('装置、照明、音響、映像、小道具などの未完了箇所を確認し、次工程に影響するものを共有する。','演出側と技術側で、実際の舞台が予定した表現条件を満たしているか確認する。','観客から見える舞台面だけでなく、舞台裏の動線や不要な物の露出も確認する。','工具、脚立、余剰部材、ケーブルなどを整理し、避難経路と作業区域を本番可能な状態へ戻す。')),
 );
 
-function hk_glossary_linked_text( $text, $current_slug, $link_terms ) {
-    $names = array();
-    foreach ( $link_terms as $name => $item ) {
-        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) continue;
-        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) continue;
-        $names[ $name ] = $item['slug'];
-    }
-    uksort( $names, function( $a, $b ) {
-        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
-        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
-        return $lb <=> $la;
-    } );
-    if ( empty( $names ) ) return esc_html( $text );
-    $pattern = '/(' . implode( '|', array_map( 'preg_quote', array_keys( $names ) ) ) . ')/u';
-    $parts = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
-    $html = '';
-    foreach ( $parts as $part ) {
-        if ( isset( $names[ $part ] ) ) {
-            $html .= '<a href="' . esc_url( home_url( '/theatre-textbook/hakatipedia/' . $names[ $part] . '/' ) ) . '">' . esc_html( $part ) . '</a>';
-        } else $html .= esc_html( $part );
-    }
-    return $html;
-}
-function hk_glossary_related_terms( $term, $current_slug, $terms ) {
-    $haystack = $term['definition'] . ' ' . implode( ' ', $term['points'] );
-    $related = array();
-    foreach ( $terms as $name => $item ) {
-        if ( ! isset( $item['slug'] ) || $item['slug'] === $current_slug ) continue;
-        if ( function_exists( 'mb_strlen' ) ? mb_strlen( $name, 'UTF-8' ) < 2 : strlen( $name ) < 2 ) continue;
-        if ( mb_strpos( $haystack, $name ) !== false ) $related[ $name ] = $item;
-    }
-    uksort( $related, function( $a, $b ) {
-        $la = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
-        $lb = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
-        return $lb <=> $la;
-    } );
-    return array_slice( $related, 0, 12, true );
-}
-$path=trim(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),'/');
-$base=trim(parse_url(home_url('/'),PHP_URL_PATH),'/');
-if($base&&0===strpos($path,$base.'/')){$path=substr($path,strlen($base)+1);}
-$prefix = 0 === strpos( $path, 'theatre-textbook/hakatipedia/' ) ? 'theatre-textbook/hakatipedia/' : 'theatre-textbook/glossary/';
-$slug=trim(substr($path,strlen($prefix)),'/');
-$legacy_detail_aliases = array(
-    'detail-261'=>'detail-223','detail-315'=>'detail-12','detail-346'=>'detail-26','detail-362'=>'detail-164','detail-376'=>'detail-253','detail-372'=>'detail-338','detail-550'=>'detail-328','detail-664'=>'detail-307','detail-429'=>'detail-189','detail-450'=>'detail-406','detail-746'=>'detail-183','detail-764'=>'detail-182','detail-772'=>'detail-608','detail-793'=>'detail-413','detail-798'=>'detail-184','detail-800'=>'detail-189','detail-807'=>'detail-445','detail-810'=>'detail-416','detail-811'=>'detail-433','detail-853'=>'detail-608',
-);
-if ( isset( $legacy_detail_aliases[ $slug ] ) ) $slug = $legacy_detail_aliases[ $slug ];
-if(!isset($terms[$slug])){$slug='theatre';}
-$term=$terms[$slug];
-get_header();
-?>
-<?php $related_terms = hk_glossary_related_terms( $term, $slug, $terms ); ?>
-<main class="hk-container hk-glossary-term"><article class="hk-wiki-term-page">
-<header class="hk-wiki-header"><p class="hk-wiki-kicker">HATAKITI 演劇の教科書｜HATAKITIpedia</p><h1><?php echo esc_html($term['name']); ?></h1></header>
-<nav class="hk-wiki-nav" aria-label="HATAKITIpediaナビゲーション"><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/')); ?>">← HATAKITIpedia</a><a href="<?php echo esc_url(home_url('/theatre-textbook/')); ?>">演劇の教科書</a></nav>
-<section class="hk-wiki-definition"><p><?php echo hk_glossary_linked_text( $term['definition'], $slug, $related_terms ); ?></p></section>
-<section class="hk-wiki-section"><h2>概要</h2><ul class="hk-wiki-points"><?php foreach($term['points'] as $point): ?><li><?php echo hk_glossary_linked_text( $point, $slug, $related_terms ); ?></li><?php endforeach; ?></ul></section>
-<?php if ( ! empty( $related_terms ) ) : ?><section class="hk-wiki-section"><h2>関連項目</h2><ul class="hk-wiki-related"><?php foreach ( $related_terms as $related_name => $related_term ) : ?><li><a href="<?php echo esc_url(home_url('/theatre-textbook/hakatipedia/' . $related_term['slug'] . '/')); ?>"><?php echo esc_html($related_name); ?></a></li><?php endforeach; ?></ul></section><?php endif; ?>
-</article></main>
-<?php get_footer(); ?>
+'detail-1119'=>array('name'=>'仕込み撤収','category'=>'舞台基礎','definition'=>'仕込み撤収とは、本番や稽古のために設置した装置・機材・資材などを、使用終了後に安全に片付けて原状または次の用途へ戻す作業である。','points'=>array('撤去する物、残す物、返却する物を事前に区別し、順序を決める。','公演終了直後は疲労が大きいため、急いで作業せず担当と手順を共有する。','舞台上から物がなくなる過程も観客に見える場合があるため、公開撤収か非公開撤収かを判断する。','電源遮断、高所作業、重量物、工具、避難経路を確認しながら進める。')),
+'detail-1120'=>array('name'=>'撤収順序','category'=>'舞台基礎','definition'=>'撤収順序とは、舞台装置、照明、音響、映像、小道具などを、どの順番で取り外し搬出するかを定めた手順である。','points'=>array('後の作業を妨げる物や、先に撤去すると危険になる物を見極めて順序を決める。','撤収後も必要な設備や出演者の動線を残すなど、終了直後の運用まで考える。','観客が残っている場合は、撤収作業が見えたり音が聞こえたりしないよう配慮する。','高所・電気・重量物など危険度の高い工程は安全手順を優先する。')),
+'detail-1121'=>array('name'=>'撤収動線','category'=>'舞台基礎','definition'=>'撤収動線とは、使用を終えた装置・機材・小道具などを舞台や舞台裏から搬出場所へ移動させる経路である。','points'=>array('搬出する物の大きさと台車の動きを基準に、交差や渋滞を避ける。','撤収する物と、まだ使用する物・人の動線を分離する。','舞台上で見える撤収では、作品終了後の時間として演出上の扱いを決める。','通路、扉、エレベーター、階段、避難経路を塞がない。')),
+'detail-1122'=>array('name'=>'撤収時間','category'=>'舞台基礎','definition'=>'撤収時間とは、上演や稽古終了後から、装置・機材などを所定の状態まで片付けるために必要な時間である。','points'=>array('実際の人数と物量で計測し、理想的な最短時間だけを基準にしない。','劇場の使用可能時間や搬出車両の到着時刻から逆算する。','観客の退館時間や周辺への作業音も含めて終了時刻を考える。','休憩、交代、清掃、忘れ物確認まで含めると実際の必要時間を把握しやすい。')),
+'detail-1123'=>array('name'=>'撤収スペース','category'=>'舞台基礎','definition'=>'撤収スペースとは、使用済みの装置・機材・資材を分解、整理、梱包するために確保された作業空間である。','points'=>array('分解する物と、そのまま搬出する物を分けて配置する。','梱包作業と搬送作業が互いに邪魔をしないよう区域を分ける。','舞台裏の限られた場所では、先に搬出する物を取り出しやすい位置に置く。','工具、部材、梱包材、廃棄物を整理し、通路や避難経路を確保する。')),
+'detail-1124'=>array('name'=>'撤収確認','category'=>'舞台基礎','definition'=>'撤収確認とは、撤去・分解・梱包した物が漏れなく整理され、劇場を安全に明け渡せる状態かを確認する工程である。','points'=>array('装置、機材、小道具、工具、ケーブル、備品などを一覧と照合する。','破損や紛失がないか確認し、必要なら記録して次回へ引き継ぐ。','舞台面や客席に不要な物が残っていないか確認する。','電源、吊り物、扉、施錠、避難経路、施設設備の原状復帰を確認する。')),
+'detail-1125'=>array('name'=>'搬出準備','category'=>'舞台基礎','definition'=>'搬出準備とは、舞台や会場から装置・機材・資材などを運び出すために、分解、梱包、仕分け、搬送経路の確保などを行う工程である。','points'=>array('搬出車両の到着時刻から逆算して、先にまとめる物と最後まで使用する物を分ける。','梱包後の寸法や重量を考え、積載順序まで決める。','搬出作業が観客や出演者の退館動線と重ならないよう時間帯を整理する。','搬入口、扉、エレベーター、台車などの使用条件を事前に確認する。')),
+'detail-1126'=>array('name'=>'搬出動線','category'=>'舞台基礎','definition'=>'搬出動線とは、舞台や保管場所から搬出口・車両まで、装置や機材を運び出すための経路である。','points'=>array('最大寸法の搬出物を基準に、曲がり角、扉、段差、エレベーターを確認する。','複数の台車が同時に動く場合は交差や待機場所を決める。','搬出経路が観客や一般利用者の動線と重なる場合は時間を分ける。','床面、段差、扉、照明、誘導、避難経路を確認し、安全な搬出を行う。')),
+'detail-1127'=>array('name'=>'搬出待機位置','category'=>'舞台基礎','definition'=>'搬出待機位置とは、装置や機材を搬出口へ運び出す直前まで一時的に待機させるための位置である。','points'=>array('搬出順に並べ、先に出す物へアクセスしやすくする。','待機物が搬送通路や扉前に滞留しないよう位置を決める。','搬出車両の到着前に、待機位置から搬出口までの経路を確認する。','台車の固定、積載状態、転倒防止、避難経路を確認する。')),
+'detail-1128'=>array('name'=>'搬出順序','category'=>'舞台基礎','definition'=>'搬出順序とは、装置・機材・資材などを会場からどの順番で運び出すかを定めた手順である。','points'=>array('車両への積載順序と逆算して、最後に出す物から先に準備する。','分解が必要な物や大型物の搬出を、他の物が邪魔しない順番にする。','搬出先での荷下ろしや保管場所まで考えて順序を決める。','重量物や大型物は必要人数・器具・誘導者を確保してから動かす。')),
+'detail-1129'=>array('name'=>'搬出時間','category'=>'舞台基礎','definition'=>'搬出時間とは、会場内の装置や機材を搬出口から車両などへ移し終えるまでに必要な時間である。','points'=>array('物量、人数、台車数、搬入口までの距離などを考慮して見積もる。','搬出車両の待機時間を減らすため、現場側の準備完了時刻を逆算する。','夜間搬出では周辺への騒音や作業時間にも配慮する。','遅延した場合に何を優先して搬出するか、代替手順を決めておく。')),
+'detail-1130'=>array('name'=>'搬出確認','category'=>'舞台基礎','definition'=>'搬出確認とは、予定した装置・機材・資材などがすべて会場から搬出され、残置物や忘れ物がないことを確認する工程である。','points'=>array('搬出台帳やリストと照合し、数量や返却先を確認する。','舞台、袖、楽屋、客席、倉庫、搬入口周辺まで残置物を確認する。','施設備品を誤って搬出していないか、借用品を返却したか確認する。','搬出口の閉鎖、施錠、清掃、原状復帰まで確認して終了とする。')),
