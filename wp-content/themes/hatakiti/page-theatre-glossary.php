@@ -1127,40 +1127,144 @@ if ( class_exists( 'Collator' ) ) {
 
         <?php
         /*
-         * 大分類タブ。
-         * 細かな既存カテゴリは失わず、名称から4つの大分類へ振り分ける。
-         * 新しいカテゴリが追加されても、原則としていずれかのタブに自動で入る。
+         * 大分類マッピング（101カテゴリを明示的に固定）。
+         * 細分類の名称から推測せず、この対応表を唯一の分類ルールとして使う。
          */
-        $tab_groups = array(
-            'basic' => array('label' => '基本・ジャンル', 'categories' => array()),
-            'history' => array('label' => '演劇史', 'categories' => array()),
-            'acting' => array('label' => '演技', 'categories' => array()),
-            'stage' => array('label' => '舞台関連', 'categories' => array()),
+        $major_categories = array(
+            '基本・ジャンル' => array(
+                '基本',
+                'ジャンル',
+                '上演形式',
+            ),
+            '演技' => array(
+                '集団・演技',
+                '演技・音',
+                '身体表現',
+                '音楽・演技',
+                '身体・音',
+                '演技・創作',
+                '演技技法',
+                '役柄・演技',
+                '演技・表現',
+                '役柄・演劇表現',
+                '演技・理論',
+                '俳優・訓練',
+                '演技・集団表現',
+                '演技・演出論',
+                '演技・人物造形',
+                '演技・脚本',
+                '演技・舞台美術',
+                '演技・想像',
+                '演技・身体',
+                '演技・空間',
+                '演技・音響',
+                '演技・関係',
+                '演技・感情',
+                '演技・人物',
+                '演技・欲求',
+                '演技・状況',
+                '人物・状況',
+                '人物・関係',
+                '人物・環境',
+                '人物・社会',
+                '人物・時間',
+                '構成・時間',
+                '構成・状況',
+                '人物・作品',
+                '構成・演技',
+                '演技・目的',
+                '演技・実践',
+                '演技・時間',
+            ),
+            '演出・構成・演劇論' => array(
+                '宗教・演劇論',
+                '演劇表現',
+                '演劇論・表現',
+                '舞台・演劇表現',
+                '演出・理論',
+            ),
+            '演劇史' => array(
+                '古代演劇',
+                '古代演劇・音楽・演技',
+                '古代演劇・身体表現',
+                '古代演劇・祭礼・身体表現',
+                '古代・演技',
+                '中世・演劇史',
+                '宗教・演劇史',
+                '中世・宗教文化',
+                '宗教・音楽',
+                '言語・演劇史',
+                '中世・上演空間',
+                '中世・芸能史',
+                '芸能史',
+                '日本演劇史',
+                '西洋演劇史',
+                '舞台技術・演劇史',
+                '日本演劇史・組織',
+                '演劇組織・芸能史',
+                '人物造形・演劇史',
+                '演劇史・人物類型',
+                '近代演劇史',
+                '近代演劇史・演劇表現',
+                '近代演劇',
+                '現代演劇',
+            ),
+            '日本伝統芸能' => array(
+                '能・舞台',
+                '能・演技',
+                '能・声楽',
+                '能・音楽',
+                '能・役柄',
+                '歌舞伎・舞台空間',
+                '日本伝統芸能',
+                '歌舞伎・観客文化',
+                '歌舞伎・演技',
+                '歌舞伎・役柄',
+                '歌舞伎・舞台技術',
+                '歌舞伎・舞台音楽',
+                '歌舞伎・舞台機構',
+            ),
+            '劇場・空間' => array(
+                '劇場・空間',
+                '社会・上演空間',
+                '祭礼・上演空間',
+            ),
+            '舞台美術・舞台機構' => array(
+                '舞台美術',
+                '舞台機構',
+                '舞台美術・衣裳',
+                '舞台美術・人物表現',
+                '舞台基礎',
+            ),
+            '舞台技術・音響' => array(
+                '舞台技術',
+                '舞台技術・演出',
+                '舞台音響',
+            ),
+            '制作・運営・産業' => array(
+                '上演・制作',
+                '演劇産業',
+                '演劇組織',
+                '俳優・職業',
+                '演劇制作',
+                '舞台制作・運営',
+            ),
+            '観客・上演' => array(
+                '観客・上演',
+            ),
         );
 
-        $ordered_categories = array();
-        foreach ( $category_order as $category ) {
-            if ( isset( $groups[ $category ] ) ) {
-                $ordered_categories[] = $category;
+        $tab_groups = array();
+        foreach ( $major_categories as $major_id => $categories ) {
+            $tab_groups[ $major_id ] = array(
+                'label' => $major_id,
+                'categories' => array(),
+            );
+            foreach ( $categories as $category ) {
+                if ( isset( $groups[ $category ] ) ) {
+                    $tab_groups[ $major_id ]['categories'][] = $category;
+                }
             }
-        }
-        foreach ( array_keys( $groups ) as $category ) {
-            if ( ! in_array( $category, $ordered_categories, true ) ) {
-                $ordered_categories[] = $category;
-            }
-        }
-
-        foreach ( $ordered_categories as $category ) {
-            if ( '基本' === $category || 'ジャンル' === $category ) {
-                $tab_id = 'basic';
-            } elseif ( preg_match( '/古代|中世|近世|近代|ルネサンス|演劇史|芸能史|日本演劇史|西洋演劇史/', $category ) ) {
-                $tab_id = 'history';
-            } elseif ( preg_match( '/演技|俳優|役柄|身体表現|人物造形|演劇表現|演技技法/', $category ) ) {
-                $tab_id = 'acting';
-            } else {
-                $tab_id = 'stage';
-            }
-            $tab_groups[ $tab_id ]['categories'][] = $category;
         }
         ?>
 
