@@ -951,6 +951,16 @@ $terms = array(
     '舞台機構操作' => array('slug'=>'detail-972','category'=>'舞台基礎','summary'=>'「舞台機構操作」を舞台の一般知識として理解するための基本用語。'),
     '舞台機構安全' => array('slug'=>'detail-973','category'=>'舞台基礎','summary'=>'「舞台機構安全」を舞台の一般知識として理解するための基本用語。'),
     '転換表' => array('slug'=>'detail-974','category'=>'舞台基礎','summary'=>'「転換表」を舞台の一般知識として理解するための基本用語。'),
+    'ゲネプロ' => array('slug'=>'detail-975','category'=>'舞台基礎','summary'=>'「ゲネプロ」を舞台の一般知識として理解するための基本用語。'),
+    '総稽古' => array('slug'=>'detail-976','category'=>'舞台基礎','summary'=>'「総稽古」を舞台の一般知識として理解するための基本用語。'),
+    '通し稽古' => array('slug'=>'detail-977','category'=>'舞台基礎','summary'=>'「通し稽古」を舞台の一般知識として理解するための基本用語。'),
+    '抜き稽古' => array('slug'=>'detail-978','category'=>'舞台基礎','summary'=>'「抜き稽古」を舞台の一般知識として理解するための基本用語。'),
+    '立ち稽古' => array('slug'=>'detail-979','category'=>'舞台基礎','summary'=>'「立ち稽古」を舞台の一般知識として理解するための基本用語。'),
+    '転換稽古' => array('slug'=>'detail-980','category'=>'舞台基礎','summary'=>'「転換稽古」を舞台の一般知識として理解するための基本用語。'),
+    '舞台稽古' => array('slug'=>'detail-981','category'=>'舞台基礎','summary'=>'「舞台稽古」を舞台の一般知識として理解するための基本用語。'),
+    'テクニカルリハーサル' => array('slug'=>'detail-982','category'=>'舞台基礎','summary'=>'「テクニカルリハーサル」を舞台の一般知識として理解するための基本用語。'),
+    '仕込み図' => array('slug'=>'detail-983','category'=>'舞台基礎','summary'=>'「仕込み図」を舞台の一般知識として理解するための基本用語。'),
+    '進行表' => array('slug'=>'detail-984','category'=>'舞台基礎','summary'=>'「進行表」を舞台の一般知識として理解するための基本用語。'),
 );
 
 $category_order = array(
