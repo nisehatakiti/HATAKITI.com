@@ -5,68 +5,22 @@
   "title":"庚申さま",
   "title_normalized":"庚申さま",
   "title_origin":"local_tradition_title",
-  "summary":{
-    "text":"猫実村では江戸時代から庚申講が行われ、正徳5年（1715）に庚申塔が建立された。現在も「猫実の庚申様」として地域に信仰が受け継がれている。",
-    "based_on_source_ids":["SRC-URAYASU-LIB-KOSHIN","SRC-URAYASU-KOSHIN-LOCAL"]
-  },
-  "story_summary":"猫実村の庚申講の信者が正徳5年（1715）1月に庚申塔を建立した。塔には青面金剛菩薩と三猿が刻まれ、浦安市内で最も古い青面金剛型の庚申塔とされる。大正時代には毎月25日が祭礼日となり、病気の回復などが祈願された。現在も「猫実の庚申様」として地域で大切にされている。",
-  "story_content":"猫実の庚申塔は、正徳5年（1715）1月に猫実村の庚申講によって建立されたとされる。塔の正面には邪鬼を踏みつける青面金剛菩薩と、庚申の「かのえさる」にちなむ見ざる・聞かざる・言わざるの三猿が刻まれている。浦安市教育委員会の説明では、この地域で庚申の夜に夜通し祭礼を行ったという記録は残っていない。一方、大正時代には毎月25日が祭礼日とされ、病気の回復などが祈願され、祭礼日には堂前の道に露店が並び多くの参拝者で賑わったという。現在も塔は「猫実の庚申様」と呼ばれ、地域の信仰対象として受け継がれている。",
-  "region":{
-    "prefecture":"千葉県",
-    "historical_province":"下総国",
-    "municipality":"浦安市",
-    "area_name":"猫実・猫実村"
-  },
-  "locations":[
-    {
-      "name":"猫実の庚申塔",
-      "location_type":"stone_monument",
-      "description":"正徳5年（1715）に猫実村の庚申講によって建立された庚申塔。現在も猫実の庚申様として祀られている。",
-      "latitude":null,
-      "longitude":null,
-      "precision":"area",
-      "source_ids":["SRC-URAYASU-LIB-KOSHIN","SRC-URAYASU-KOSHIN-LOCAL"]
-    }
-  ],
+  "summary":{"text":"猫実村では江戸時代から庚申講が行われ、正徳5年（1715）に庚申塔が建立された。現在も「猫実の庚申様」として地域に信仰が受け継がれている。1985年『浦安の昔ばなし 続』にも「猫実の庚申様」として再録されている。","based_on_source_ids":["SRC-URAYASU-LIB-KOSHIN","SRC-URAYASU-KOSHIN-LOCAL","SRC-URAYASU-MUKASHIBANASHI-ZOKU-1985"]},
+  "story_summary":"猫実村の庚申講の信者が正徳5年（1715）1月に庚申塔を建立した。塔には青面金剛菩薩と三猿が刻まれ、大正時代には毎月25日が祭礼日となり、病気の回復などが祈願された。現在も「猫実の庚申様」として地域で大切にされている。",
+  "story_content":"猫実の庚申塔は、正徳5年（1715）1月に猫実村の庚申講によって建立されたとされる。塔の正面には邪鬼を踏みつける青面金剛菩薩と、庚申の「かのえさる」にちなむ見ざる・聞かざる・言わざるの三猿が刻まれている。浦安市教育委員会の説明では、この地域で庚申の夜に夜通し祭礼を行ったという記録は残っていない。一方、大正時代には毎月25日が祭礼日とされ、病気の回復などが祈願され、祭礼日には堂前の道に露店が並び多くの参拝者で賑わったという。現在も塔は「猫実の庚申様」と呼ばれ、地域の信仰対象として受け継がれている。さらに千葉県立図書館の浦安民話索引では、1985年『浦安の昔ばなし 続』に「猫実の庚申様」として再録されていることが確認できる。ただし1985年版本文は未確認のため、本文の細部は既確認資料から補完していない。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"猫実・猫実村"},
+  "locations":[{"name":"猫実の庚申塔","location_type":"stone_monument","description":"正徳5年（1715）に猫実村の庚申講によって建立された庚申塔。現在も猫実の庚申様として祀られている。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-URAYASU-LIB-KOSHIN","SRC-URAYASU-KOSHIN-LOCAL"]}],
   "characters":[],
-  "beings":[
-    {
-      "name":"青面金剛菩薩",
-      "type":"仏・信仰対象",
-      "role":"庚申塔に刻まれ、邪鬼を踏みつける姿で表される"
-    },
-    {
-      "name":"三猿",
-      "type":"信仰的図像",
-      "role":"見ざる・聞かざる・言わざるとして庚申塔に刻まれる"
-    }
-  ],
+  "beings":[{"name":"青面金剛菩薩","type":"仏・信仰対象","role":"庚申塔に刻まれ、邪鬼を踏みつける姿で表される"},{"name":"三猿","type":"信仰的図像","role":"見ざる・聞かざる・言わざるとして庚申塔に刻まれる"}],
   "themes":["庚申信仰","猫実","石造物","地域信仰","病気平癒","祭礼"],
   "story_type":["信仰伝承","地域史","寺社・石造物伝承"],
   "related_records":["chiba-urayasu-nekozane-benten-sama"],
   "sources":[
-    {
-      "source_id":"SRC-URAYASU-LIB-KOSHIN",
-      "title":"千葉県の民話 浦安市",
-      "publisher":"千葉県立図書館",
-      "source_type":"public_library_index",
-      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-      "accessed_date":"2026-10-08",
-      "relevant_section":"「庚申さま」および「猫実の庚申様」の収録情報",
-      "language":"ja"
-    },
-    {
-      "source_id":"SRC-URAYASU-KOSHIN-LOCAL",
-      "title":"浦安・猫実の庚申塔",
-      "publisher":"浦安市教育委員会の案内板を紹介する地域資料",
-      "source_type":"local_history",
-      "url":"https://ameblo.jp/tkyburabura/entry-10648174858.html",
-      "accessed_date":"2026-10-08",
-      "relevant_section":"正徳5年建立、青面金剛・三猿、祭礼、現在の信仰",
-      "language":"ja"
-    }
+    {"source_id":"SRC-URAYASU-LIB-KOSHIN","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","source_type":"public_library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-10-08","relevant_section":"「庚申さま」および「猫実の庚申様」の収録情報","language":"ja"},
+    {"source_id":"SRC-URAYASU-KOSHIN-LOCAL","title":"浦安・猫実の庚申塔","publisher":"浦安市教育委員会の案内板を紹介する地域資料","source_type":"local_history","url":"https://ameblo.jp/tkyburabura/entry-10648174858.html","accessed_date":"2026-10-08","relevant_section":"正徳5年建立、青面金剛・三猿、祭礼、現在の信仰","language":"ja"},
+    {"source_id":"SRC-URAYASU-MUKASHIBANASHI-ZOKU-1985","title":"浦安の昔ばなし 続","publisher":"浦安市","publication_date":"1985","source_type":"folklore_collection_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-10-08","relevant_section":"「猫実の庚申様」収録情報","language":"ja"}
   ],
   "confidence":"high",
   "research_status":"deep_researched",
-  "research_notes":"千葉県立図書館の民話索引で『浦安の世間話』第5章「庚申さま」の収録と猫実・猫実村との関連を確認。さらに浦安市教育委員会の案内板内容を紹介する地域資料で、1715年建立、図像、祭礼、現在の信仰まで具体的に確認できた。『庚申さま』は単なる昔話ではなく、実在する石造物と地域信仰を核とする伝承として登録した。"
+  "research_notes":"千葉県立図書館の民話索引で『浦安の世間話』第5章「庚申さま」と1985年『浦安の昔ばなし 続』「猫実の庚申様」の双方を確認。浦安市教育委員会の案内板内容を紹介する地域資料で、1715年建立、図像、祭礼、現在の信仰まで具体的に確認した。1985年版本文そのものは未確認のため、その本文内容を既確認資料から推測していない。"
 }
