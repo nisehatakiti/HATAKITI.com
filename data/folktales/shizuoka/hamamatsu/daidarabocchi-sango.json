@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-hamamatsu-daidarabocchi-sango",
+  "status": "draft",
+  "title": "井伊谷の三合山とダイダラボッチ",
+  "title_normalized": "井伊谷の三合山とダイダラボッチ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "浜松市井伊谷では、ダイダラボッチが琵琶湖の土をもっこに入れて富士山を作ろうとし、こぼれた土で三合山ができたという伝承が記録されている。",
+    "based_on_source_ids": [
+      "turn0search9"
+    ]
+  },
+  "story_summary": "ダイダラボッチが琵琶湖の土をもっこに入れて富士山を作ろうとし、その土をこぼしてできたのが井伊谷村の三合山だと伝えられている。",
+  "story_content": "ダイダラボッチが琵琶湖の土をもっこに入れて富士山を作ろうとし、その土をこぼしてできたのが井伊谷村の三合山だと伝えられている。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": null,
+    "municipality": "浜松市",
+    "area_name": "北区・井伊谷"
+  },
+  "locations": [
+    {
+      "name": "三合山",
+      "type": "伝承地・地形",
+      "description": "資料に記録された伝承地。",
+      "source_ids": [
+        "turn0search9"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "山",
+    "富士山",
+    "地形由来"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "turn0search9",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0222119-000",
+      "relevant_section": "井伊谷の三合山とダイダラボッチ",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、日文研の地域別伝承記録から代表例を登録。後段で現地訪問情報・本文・関連史料を深掘りする。"
+}
