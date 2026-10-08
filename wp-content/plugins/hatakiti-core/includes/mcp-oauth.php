@@ -39,6 +39,34 @@ function hatakiti_oauth_add_routes() {
 }
 add_action( 'rest_api_init', 'hatakiti_oauth_add_routes' );
 
+function hatakiti_oauth_authorize_parse_request( $wp ) {
+    $request_path = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+    $request_path = strtok( $request_path, '?' );
+
+    if ( '/wp-json/hatakiti/v1/oauth/authorize' !== $request_path ) {
+        return;
+    }
+
+    $method = isset( $_SERVER['REQUEST_METHOD'] ) ? strtoupper( $_SERVER['REQUEST_METHOD'] ) : 'GET';
+    if ( ! in_array( $method, array( 'GET', 'POST' ), true ) ) {
+        return;
+    }
+
+    // Browser-based OAuth authorization is intentionally handled before
+    // WordPress REST authentication. Otherwise an existing WP login cookie
+    // makes the REST API require X-WP-Nonce and returns rest_cookie_invalid_nonce
+    // before our OAuth handler can display the consent/login page.
+    $oauth_request = new WP_REST_Request( $method, '/hatakiti/v1/oauth/authorize' );
+    $oauth_request->set_query_params( wp_unslash( $_GET ) );
+
+    if ( 'POST' === $method ) {
+        $oauth_request->set_body_params( wp_unslash( $_POST ) );
+    }
+
+    hatakiti_oauth_authorize( $oauth_request );
+}
+add_action( 'parse_request', 'hatakiti_oauth_authorize_parse_request', 0 );
+
 function hatakiti_oauth_metadata_response( $data ) {
     nocache_headers();
     status_header( 200 );
