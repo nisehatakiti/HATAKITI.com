@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "hashihime",
+  "canonical_name": "橋姫・橋の怪異伝承",
+  "aliases": [
+    "橋姫",
+    "橋の女",
+    "橋の神"
+  ],
+  "summary": "橋を守る女神・霊、橋に現れる怪異、橋を渡る際の禁忌など、橋を境界として語る全国の伝承を整理するハブ。神格と怪異の両面を持つ。",
+  "sub_motifs": [
+    "橋の守護神",
+    "橋姫",
+    "橋の女",
+    "橋の怪異",
+    "橋を渡る禁忌",
+    "橋での怪異遭遇",
+    "橋と婚姻・縁結び"
+  ],
+  "known_connections": [
+    {
+      "region": "東北・関東",
+      "note": "橋神・橋姫・川の境界伝承。"
+    },
+    {
+      "region": "中部",
+      "note": "峠・橋・川の境界神。"
+    },
+    {
+      "region": "近畿",
+      "note": "橋姫・橋守護の伝承。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "橋と水辺の怪異。"
+    },
+    {
+      "region": "九州",
+      "note": "橋・川の霊的境界伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "産女",
+      "七人ミサキ",
+      "河童",
+      "川の神",
+      "道祖神"
+    ],
+    "caution": "橋姫が神・霊・怪異のどれとして語られるかを個別記録で保持する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "橋姫・橋の怪異伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
