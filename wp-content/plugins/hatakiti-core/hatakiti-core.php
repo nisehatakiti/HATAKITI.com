@@ -48,6 +48,7 @@ require_once HATAKITI_CORE_DIR . 'includes/occult-weekly-ai-edit.php';
 require_once HATAKITI_CORE_DIR . 'includes/occult-weekly-pdf.php';
 require_once HATAKITI_CORE_DIR . 'includes/occult-weekly-auto-publish.php';
 require_once HATAKITI_CORE_DIR . 'includes/rest-draft-endpoint.php';
+require_once HATAKITI_CORE_DIR . 'includes/mcp-draft-endpoint.php';
 require_once HATAKITI_CORE_DIR . 'includes/cli-import-theatre.php';
 
 function hatakiti_core_activate() {
