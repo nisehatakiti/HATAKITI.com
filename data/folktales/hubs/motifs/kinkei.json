@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "kinkei",
+  "canonical_name": "金鶏・黄金の鳥伝承",
+  "aliases": [
+    "金鶏伝説",
+    "黄金の鶏",
+    "金の鶏"
+  ],
+  "summary": "山・城跡・井戸・地中などに金の鶏がいる、鳴き声を聞く、財宝の場所を示すなどの全国伝承を整理するハブ。埋蔵金や地名由来と結び付くことが多い。",
+  "sub_motifs": [
+    "金鶏が鳴く",
+    "山中の金鶏",
+    "城跡の金鶏",
+    "井戸の金鶏",
+    "財宝を示す鳥",
+    "正月・祭礼の金鶏"
+  ],
+  "known_connections": [
+    {
+      "region": "東北",
+      "note": "山・城跡・金鉱伝承との結び付き。"
+    },
+    {
+      "region": "関東",
+      "note": "城跡・山・埋蔵金伝承。"
+    },
+    {
+      "region": "中部",
+      "note": "鉱山・黄金伝承と接続。"
+    },
+    {
+      "region": "近畿",
+      "note": "寺社・城・宝物伝承。"
+    },
+    {
+      "region": "九州",
+      "note": "城跡・隠し財宝との結び付き。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "埋蔵金",
+      "長者",
+      "黄金伝説",
+      "鶴・鳥の伝承"
+    ],
+    "caution": "金鶏が実際の動物・紋章・祭礼表現を指す場合と伝説を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "金鶏・黄金鳥伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
