@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shimane-kappa-letter",
+  "status": "draft",
+  "title": "島根の河童の手紙",
+  "title_normalized": "島根の河童の手紙",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "島根県には、女から手紙を預かって淵へ投げ込むよう頼まれ、その手紙が河童のものだと考えられて焼かれたという伝承がある。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-2240182"
+    ]
+  },
+  "story_summary": "行商人が歩いていると女から手紙を渡され、淵に投げ込んでほしいと頼まれた。手紙を開くと人間の字ではなく河童の手紙らしいと考えられ、焼いてしまったという。",
+  "story_content": "行商人が歩いていると女から手紙を渡され、淵に投げ込んでほしいと頼まれた。手紙を開くと人間の字ではなく河童の手紙らしいと考えられ、焼いてしまったという。",
+  "region": {
+    "prefecture": "島根県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "淵",
+      "type": "水辺・地域",
+      "description": "伝承・資料に記録された場所または地域。",
+      "source_ids": [
+        "SRC-YOUKAI-2240182"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "水の怪異",
+      "description": "地域の水辺に現れるとされる存在。",
+      "source_ids": [
+        "SRC-YOUKAI-2240182"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "手紙",
+    "淵",
+    "異類との接触"
+  ],
+  "story_type": [
+    "河童伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-2240182",
+      "title": "河童俗伝",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1928",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2240182",
+      "relevant_section": "島根県",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで実例を先行登録。後段で伝承本文・現地情報・現在の訪問可能性を深掘りする。"
+}
