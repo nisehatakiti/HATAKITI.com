@@ -53,6 +53,13 @@
       "relationship": "source_index_candidate",
       "evidence_level": "source_index",
       "note": "1992年『浦安の世間話』収録。本文未確認。"
+    },
+    {
+      "record_id": null,
+      "title": "立ち不動と座り不動",
+      "relationship": "reprint_candidate",
+      "evidence_level": "multi_source_index",
+      "note": "1985年『浦安の昔ばなし 続』と1992年『浦安の世間話』の双方に同題で収録。さらに県立図書館索引では1992年版の関連地として御滝の不動さま（御滝不動尊）、成田山の不動さま、行徳渡しなどが示される。本文比較前のため統合せず再録候補として保持。"
     }
   ],
   "new_cross_region_findings": [
@@ -105,5 +112,5 @@
   ],
   "confidence": "high",
   "research_status": "partial",
-  "research_notes": " 2026-10-08再確認：1992年『浦安の世間話』の収録題名と慈悲地蔵尊の地域史的背景を確認したが、個別話の本文は公開Webでは未確認。"
+  "research_notes": "2026-10-08：立ち不動と座り不動について1985年版と1992年版の同題再録を確認。本文未比較。"
 }
