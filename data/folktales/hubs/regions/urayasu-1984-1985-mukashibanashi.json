@@ -35,7 +35,8 @@
     {
       "title": "キツネのおんがえし 浦安市のはなし",
       "publisher": "日本標準",
-      "year": 1991
+      "year": 1991,
+      "catalog_note": "千葉県版青空文庫。八田敏子／文、畠山敦夫／絵、請求記号J913/アオ/2。千葉県立中央図書館の児童資料リストで確認。"
     }
   ],
   "research_findings": [
@@ -80,6 +81,12 @@
       "status": "same_tradition_cluster_but_text_unconfirmed",
       "finding": "1984年版『久助稲荷のキツネ』、1995年『久助稲荷のはなし』、既存正式レコード『久助稲荷』が同じ大蓮寺・久助稲荷の伝承圏を指す。",
       "interpretation": "同じ伝承圏である可能性は高いが、本文比較なしに統合しない。"
+    },
+    {
+      "title": "月に化けたタヌキ／月に化けたムジナ",
+      "status": "same_theme_but_not_same_story",
+      "finding": "1984年には『月に化けたタヌキ』（堀江・大蓮寺）と『月に化けたムジナ』（猫実）が別題で掲載。1992年には『月に化けた狢』が善福寺・猫実・堀江に関連して掲載される。",
+      "interpretation": "月への変身というモチーフは共通するが、タヌキとムジナを本文未確認のまま統合しない。"
     }
   ],
   "confirmed_or_existing_overlap": [
