@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "hidden-village",
+  "canonical_name": "隠れ里・秘境伝承",
+  "aliases": [
+    "隠れ里",
+    "隠し里",
+    "桃源郷",
+    "山奥の里"
+  ],
+  "summary": "山奥・谷間などに外界から隔絶された集落があるとする全国の伝承を整理するハブ。平家落人、戦乱避難、異界との境界、独自の生活文化など複数の起源が語られる。",
+  "sub_motifs": [
+    "平家落人伝説",
+    "源氏・南朝落人",
+    "山奥の隠れ里",
+    "異界の里",
+    "外界との時間差",
+    "隠れ里からの帰還",
+    "禁忌を破って里が消える"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "山間部に広く分布。"
+    },
+    {
+      "region": "東北・関東",
+      "note": "落人・山村起源の隠れ里。"
+    },
+    {
+      "region": "中部",
+      "note": "山岳地帯の秘境・落人伝承。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "平家落人伝説との結び付き。"
+    },
+    {
+      "region": "九州",
+      "note": "落人・隠田集落の伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "長者",
+      "平家落人",
+      "桃源郷",
+      "異界"
+    ],
+    "caution": "歴史学的な落人伝説の真偽と、口承伝承としての存在を分けて扱う。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "隠れ里・落人伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
