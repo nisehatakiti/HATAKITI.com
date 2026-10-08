@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nara-tengu-ashiato",
+  "status": "draft",
+  "title": "奈良・天狗の足跡",
+  "title_normalized": "奈良・天狗の足跡",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "奈良県では街道沿いの岩壁にある大きな足跡を、天狗が太鼓を盗み出して打ち鳴らしたときのものとする伝承が記録されている。",
+    "based_on_source_ids": [
+      "nara-tengu-ashiato-src"
+    ]
+  },
+  "story_summary": "奈良県では街道沿いの岩壁にある大きな足跡を、天狗が太鼓を盗み出して打ち鳴らしたときのものとする伝承が記録されている。",
+  "story_content": "奈良県では街道沿いの岩壁にある大きな足跡を、天狗が太鼓を盗み出して打ち鳴らしたときのものとする伝承が記録されている。",
+  "region": {
+    "prefecture": "奈良県",
+    "historical_province": null,
+    "municipality": "奈良県内",
+    "area_name": "新笠置街道周辺"
+  },
+  "locations": [
+    {
+      "name": "天狗の足跡と太鼓の伝承地",
+      "type": "伝承地・地域",
+      "description": "天狗の足跡と太鼓の伝承地",
+      "source_ids": [
+        "nara-tengu-ashiato-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "怪異・伝承存在",
+      "description": "天狗に関する地域伝承。",
+      "source_ids": [
+        "nara-tengu-ashiato-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nara-tengu-ashiato-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1500011",
+      "relevant_section": "奈良・天狗の足跡",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承として登録。後段で本文、地理的位置、現地訪問情報を深掘りする。"
+}
