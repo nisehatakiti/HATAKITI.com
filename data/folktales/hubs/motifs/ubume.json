@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "ubume",
+  "canonical_name": "産女・産死者の女怪異伝承",
+  "aliases": [
+    "産女",
+    "ウブメ",
+    "姑獲鳥",
+    "産婦の幽霊"
+  ],
+  "summary": "出産で亡くなった女性や、子を残して死んだ女性が現れる全国の伝承を横断するハブ。赤子を抱かせる、子を預ける、夜道に現れる、川や橋に出るなどの型がある。",
+  "sub_motifs": [
+    "赤子を抱かせる",
+    "子を預ける",
+    "夜道の産女",
+    "橋・川の産女",
+    "母子の霊",
+    "出産死者の供養"
+  ],
+  "known_connections": [
+    {
+      "region": "関東",
+      "note": "橋・川・夜道の怪異。"
+    },
+    {
+      "region": "中部",
+      "note": "産死者・赤子を抱かせる伝承。"
+    },
+    {
+      "region": "近畿",
+      "note": "産女・姑獲鳥系。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "水辺・夜道の母子怪異。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "幽霊",
+      "橋姫",
+      "七人ミサキ",
+      "子どもの霊"
+    ],
+    "caution": "中国古典の姑獲鳥と日本の産女伝承を同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "産女系伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
