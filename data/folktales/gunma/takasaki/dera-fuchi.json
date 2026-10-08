@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gunma-takasaki-dera-fuchi-daidarabocchi",
+  "status": "draft",
+  "title": "高崎・でら渕のデラボッチ",
+  "title_normalized": "高崎・でら渕のデラボッチ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "高崎市下滝のでら渕に、赤城山に腰掛け利根川で足を洗ったデラボッチの足跡があったという伝承。",
+    "based_on_source_ids": [
+      "SRC-JFOLKLORE-DAIDARA-TAKASAKI"
+    ]
+  },
+  "story_summary": "赤城神社そばのでら渕には、赤城山に腰掛けて利根川で足を洗ったデラボッチの跡があったとされる。高崎市東部地区の民俗調査報告に収録された伝承である。",
+  "story_content": "赤城神社そばのでら渕には、赤城山に腰掛けて利根川で足を洗ったデラボッチの跡があったとされる。高崎市東部地区の民俗調査報告に収録された伝承である。",
+  "region": {
+    "prefecture": "群馬県",
+    "historical_province": null,
+    "municipality": "高崎市",
+    "area_name": "下滝"
+  },
+  "locations": [
+    {
+      "name": "でら渕",
+      "type": "淵・水辺",
+      "description": "デラボッチの足跡伝承が残る場所。",
+      "source_ids": [
+        "SRC-JFOLKLORE-DAIDARA-TAKASAKI"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "足跡",
+    "赤城山"
+  ],
+  "story_type": [
+    "巨人伝説",
+    "地形由来伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-JFOLKLORE-DAIDARA-TAKASAKI",
+      "title": "でら渕とデラボッチ",
+      "publisher": "日本伝承マップ",
+      "publication_date": "web",
+      "source_type": "folklore_database",
+      "url": "https://www.j-folklore.com/l/book_400_ep_008",
+      "relevant_section": "群馬県高崎市下滝",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
