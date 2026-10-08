@@ -1,0 +1,61 @@
+{
+  "schema_version":"1.0",
+  "hub_id":"hub-region-urayasu-chapter5-nogata-edo-mae",
+  "title":"浦安「ノガタ・江戸前・世間話」伝承群",
+  "hub_type":"source-chapter-cluster",
+  "region":"千葉県浦安市",
+  "description":"『浦安の世間話 : 前田治郎助の語り』第5章「ノガタ・江戸前・世間話」に収録された、信仰・地名・地域史・怪異・天文などの異質な伝承を、本文確認状況を明示しながら横断管理するためのハブ。本文未確認の題名から内容を推測して個別レコードを捏造しない。",
+  "source":{
+    "title":"浦安の世間話 : 前田治郎助の語り",
+    "author":"前田治郎助",
+    "editor":"米屋陽一",
+    "publisher":"青弓社",
+    "year":1992,
+    "url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
+  },
+  "confirmed_records":[
+    {"record_id":"chiba-urayasu-akai-torii","title":"赤い鳥居"},
+    {"record_id":"chiba-urayasu-sangi-jin","title":"三義人"},
+    {"record_id":"chiba-urayasu-meraboshi","title":"メラボシ"}
+  ],
+  "related_hubs":[
+    {"hub_id":"hub-motif-urayasu-star-traditions","title":"浦安の星の伝承"},
+    {"hub_id":"hub-regional-otaki-fudoson-urayasu-tradition","title":"浦安・御滝山不動尊信仰伝承"},
+    {"hub_id":"hub-motif-urayasu-jizo-sword-traditions","title":"浦安の地蔵・刀剣伝承群"}
+  ],
+  "candidates":[
+    {"title":"おサンさま","research_status":"researching"},
+    {"title":"御台場の泥かつぎ","research_status":"researching"},
+    {"title":"サンコウさま","research_status":"researching"},
+    {"title":"がんがん岩","research_status":"researching"},
+    {"title":"馬頭観音","research_status":"researching"},
+    {"title":"無縁仏","research_status":"researching"},
+    {"title":"古井戸の障り","research_status":"researching"},
+    {"title":"金剛杖の清水","research_status":"researching"},
+    {"title":"御滝山金蔵寺","research_status":"researching"},
+    {"title":"立ち不動と座り不動","research_status":"researching"},
+    {"title":"姉が崎神社","research_status":"researching"},
+    {"title":"仁右衛門島","research_status":"researching"},
+    {"title":"庚申さま","research_status":"researching"},
+    {"title":"首きり地蔵","research_status":"researching"},
+    {"title":"彰義隊","research_status":"researching"},
+    {"title":"兵隊の幽霊","research_status":"researching"},
+    {"title":"キタノホシほか","research_status":"researching"},
+    {"title":"ホウキボシ","research_status":"researching"}
+  ],
+  "research_notes":[
+    "千葉県立図書館の浦安市索引で第5章の収録事実と一部の関連地域を確認。",
+    "『浦安の世間話』本文は国立国会図書館で書誌・目次を確認できるが、本文公開範囲の制約によりウェブ上で各話の全文を直接検証できない項目が多い。",
+    "そのため題名・収録地域だけから物語本文を推定せず、外部資料で具体的な筋が確認できたものだけ正式レコード化する方針。",
+    "庚申さまについては浦安市郷土博物館に猫実庚申さまの1958年頃の写真資料があり、実在する地域信仰対象であることは確認済み。ただし第5章の語り本文とは別に扱う。",
+    "立ち不動と座り不動は千葉県立図書館索引で成田山の不動さまとの関連が確認できるが、語りの具体的内容は未確認。",
+    "仁右衛門島は千葉県立図書館索引で浦安の世間話収録と所在地「仁右衛門島」を確認できるが、本文の具体的な浦安伝承化の内容は未確認。"
+  ],
+  "sources":[
+    {"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"},
+    {"title":"国立国会図書館サーチ 浦安の世間話","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"},
+    {"title":"浦安市郷土博物館 1958年頃、猫実庚申さま前","url":"https://jmapps.ne.jp/urayasufkm/det.html?data_id=58692"}
+  ],
+  "confidence":"high",
+  "research_status":"partial"
+}
