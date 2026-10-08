@@ -1,0 +1,80 @@
+{
+  "schema_version":"1.0",
+  "hub_id":"hub-region-urayasu-1991-boso-minwasen",
+  "title":"浦安『房総・民話撰』採録伝承群",
+  "hub_type":"source-cluster",
+  "region":"千葉県浦安市",
+  "source":{
+    "title":"房総・民話撰",
+    "author":"安藤操",
+    "publisher":"千秋社",
+    "year":1991,
+    "pages":223,
+    "ndl_url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002130684"
+  },
+  "entries":[
+    {
+      "title":"海の亡霊二話　その一　明神様のたたり",
+      "record_id":"chiba-urayasu-sea-ghost-myojin",
+      "status":"title_index_only",
+      "finding":"千葉県立図書館の浦安市索引で1991年『房総・民話撰』の浦安市採録として確認。本文未取得。",
+      "related_hub":"urayasu-sea-ghost-traditions"
+    },
+    {
+      "title":"海の亡霊二話　その二　子どもの魂がさそう",
+      "record_id":"chiba-urayasu-sea-ghost-children-soul",
+      "status":"title_index_only",
+      "finding":"千葉県立図書館の浦安市索引で1991年『房総・民話撰』の浦安市採録として確認。本文未取得。",
+      "related_hub":"urayasu-sea-ghost-traditions"
+    },
+    {
+      "title":"狐のはなし　その一　狐の恩返し",
+      "record_id":"chiba-urayasu-fox-return-1991",
+      "status":"reprint_candidate_body_unconfirmed",
+      "finding":"1984年『浦安の昔ばなし』の『キツネの恩返し』と題名・地域が一致し、1991年『房総・民話撰』に再録候補として掲載。本文比較前。",
+      "related_records":["chiba-urayasu-fox-return"],
+      "related_hub":"urayasu-fox-traditions"
+    },
+    {
+      "title":"狐のはなし　その二　にせの大黒様",
+      "record_id":"chiba-urayasu-daikoku-fox-1991",
+      "status":"reprint_candidate_body_unconfirmed",
+      "finding":"1984年『浦安の昔ばなし』の『大黒様に化けたキツネ』と強い題名対応を示すが、本文比較前。",
+      "related_records":["chiba-urayasu-daikoku-fox"],
+      "related_hub":"urayasu-fox-traditions"
+    },
+    {
+      "title":"狐のはなし　その三　背負い籠が重い",
+      "record_id":"chiba-urayasu-fox-seoi-kago-1991",
+      "status":"title_index_only",
+      "finding":"1991年『房総・民話撰』の浦安市採録として確認。1984年索引には対応する同題が見当たらないため、独立候補として保持。",
+      "related_hub":"urayasu-fox-traditions"
+    }
+  ],
+  "research_notes":[
+    "『房総・民話撰』は1991年3月刊、223ページの安藤操著。",
+    "千葉県立図書館の浦安市索引で上記5件の採録情報を確認した。",
+    "公開検索では5件の本文を取得できなかったため、筋を推測して正式本文を作成しない。",
+    "『狐の恩返し』『にせの大黒様』は1984年採録との再録関係が強いが、本文照合までは別レコード候補として管理する。",
+    "『背負い籠が重い』は対応する1984年題名を確認できないため独立候補とする。",
+    "『海の亡霊二話』は既存の浦安海上怪異ハブへ接続するが、既存『海ぼうず』と同一話とは扱わない。"
+  ],
+  "sources":[
+    {
+      "source_id":"SRC-CHIBA-LIB-URAYASU-INDEX",
+      "title":"千葉県の民話 浦安市",
+      "publisher":"千葉県立図書館",
+      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+    },
+    {
+      "source_id":"SRC-NDL-BOSO-MINWASEN",
+      "title":"房総・民話撰",
+      "author":"安藤操",
+      "publisher":"千秋社",
+      "year":1991,
+      "url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002130684"
+    }
+  ],
+  "research_status":"partial",
+  "confidence":"high"
+}
