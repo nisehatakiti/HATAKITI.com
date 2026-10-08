@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-tohno-oshirasama",
+  "status": "draft",
+  "title": "遠野・オシラサマ",
+  "title_normalized": "遠野・オシラサマ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県の旧家などで祭られるオシラサマは、養蚕や目の神とされる二体一組の像で、遠野物語にも関連する民話が紹介されている。",
+    "based_on_source_ids": [
+      "SRC-IWATE-LIB-OSHIRASAMA"
+    ]
+  },
+  "story_summary": "オシラサマは30センチほどの木や竹で作られた二体一組の像で、娘と馬、男神と女神などの姿を持つ。気仙・上閉伊・下閉伊・九戸・二戸地方に多く見られ、布をかぶせて祀り、祭日に新しい布を着せる。",
+  "story_content": "オシラサマは30センチほどの木や竹で作られた二体一組の像で、娘と馬、男神と女神などの姿を持つ。気仙・上閉伊・下閉伊・九戸・二戸地方に多く見られ、布をかぶせて祀り、祭日に新しい布を着せる。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": null,
+    "municipality": "遠野市ほか",
+    "area_name": "県南・沿岸北部など"
+  },
+  "locations": [
+    {
+      "name": "オシラサマを祀る旧家・ほこら・神棚",
+      "type": "民間信仰",
+      "description": "地域の旧家などで祀られる伝承。",
+      "source_ids": [
+        "SRC-IWATE-LIB-OSHIRASAMA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "オシラサマ",
+    "養蚕",
+    "馬",
+    "神",
+    "遠野物語"
+  ],
+  "story_type": [
+    "民間信仰",
+    "伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-reiju",
+      "relationship": "related_motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-IWATE-LIB-OSHIRASAMA",
+      "title": "こども向け郷土資料 vol.6 チャグチャグ馬コ",
+      "publisher": "岩手県立図書館",
+      "publication_date": "web",
+      "source_type": "library_pdf",
+      "url": "https://www.library.pref.iwate.jp/kids/kids_kyoudo/kyoudo_06.pdf",
+      "relevant_section": "オシラサマ",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
