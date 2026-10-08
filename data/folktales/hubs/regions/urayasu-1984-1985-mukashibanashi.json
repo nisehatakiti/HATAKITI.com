@@ -10,34 +10,31 @@
     {"title":"浦安の昔ばなし","publisher":"浦安市教育委員会社会教育課","year":1984},
     {"title":"浦安の昔ばなし 続","publisher":"浦安市","year":1985},
     {"title":"浦安の世間話 : 前田治郎助の語り","publisher":"青弓社","year":1992,"url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"},
-    {"title":"房総・民話撰","publisher":"千秋社","year":1991},
-    {"title":"キツネのおんがえし 浦安市のはなし","publisher":"日本標準","catalog_year_conflict":["[1991]","1976"],"author":"八田敏子","illustrator":"畠山敦夫","call_number":"J913/アオ/2","catalog_note":"千葉県立図書館の『ぶらり千葉学ジュニア版』では［1991］、同館の『千葉県の民話リストに採録した資料リスト』では1976と表示される。同一資料名・著者・出版社だが書誌年表示が不一致のため、現時点では年を確定値として扱わない。","urls":["https://www.library.pref.chiba.lg.jp/school/chibakennominwa.pdf","https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/booklist.html"]}
+    {"title":"房総・民話撰","publisher":"千秋社","year":1991}
   ],
   "research_findings":[
-    {"title":"長さんギツネ①・②","status":"new_1984_candidates","finding":"1984年『浦安の昔ばなし』に『長さんギツネ①』『長さんギツネ②』が収録。①は堀江・境川・久助稲荷、②は当代島・久助稲荷が関連地として索引に記録される。","interpretation":"既存『久助稲荷』『久助稲荷のキツネ』と同じ伝承圏だが、長さんギツネの本文は未確認。別話として候補管理する。"},
-    {"title":"狐の恩返しの1991年再録群","status":"reprint_cluster_confirmed","finding":"1984年『浦安の昔ばなし』に『キツネの恩返し』（堀江）があり、1991年には『房総・民話撰』の『狐のはなし その一 狐の恩返し』、さらに日本標準の『キツネのおんがえし 浦安市のはなし』が確認される。","interpretation":"少なくとも複数媒体に展開した浦安の狐伝承であることは確認できるが、本文未確認のため正式レコードへの統合は保留する。"},
-    {"title":"大黒様に化けたキツネ／にせの大黒様","status":"reprint_candidate","finding":"1984年『大黒様に化けたキツネ』（堀江）と1991年『狐のはなし その二 にせの大黒様』（浦安市）が千葉県立図書館索引上で確認できる。","interpretation":"題名・地域が対応する強い再録候補。ただし本文未確認なので同一話とはまだ断定しない。"},
-    {"title":"狐のはなし その三 背負い籠が重い","status":"unmatched_1991_candidate","finding":"1991年『房総・民話撰』に浦安市の話として収録。1984年索引から直接対応する題名は現時点で特定できない。","interpretation":"独立候補として保持する。"},
-    {"title":"やへいの弁天様／ヤヘイの弁天さま","status":"same_title_reprint_confirmed","finding":"1984年『浦安の昔ばなし』に『やへいの弁天様』として当代島の話が収録され、1992年『浦安の世間話』には『ヤヘイの弁天さま』として収録される。","interpretation":"同一題系の再録であることは確実だが、本文が未確認なので細部は記録しない。"},
-    {"title":"蛇の泡とり／蛇の橋","status":"same_title_reprint_candidate","finding":"1984年版と1992年版の双方に『蛇の泡とり』『蛇の橋』が掲載される。1992年版では『蛇の泡とり』の関連地としてヒャッケンノイリ（堀江の地名）、『蛇の橋』の関連地として堀江が記録される。","interpretation":"同題再録候補として扱う。"},
-    {"title":"月に化けたタヌキ／月に化けたムジナ","status":"same_theme_but_not_same_story","finding":"1984年には『月に化けたタヌキ』（堀江・大蓮寺）と『月に化けたムジナ』（猫実）が別題で掲載。1992年には『月に化けた狢』が善福寺・猫実・堀江に関連して掲載される。","interpretation":"月への変身というモチーフは共通するが、タヌキとムジナを本文未確認のまま統合しない。"}
+    {"title":"長さんギツネ①・②","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』の①は堀江・境川・久助稲荷、②は堀江・当代島・久助稲荷。市川市索引にも『長さんギツネ②』が浦安資料として現れ、関連地に市川・行徳が記録される。","interpretation":"浦安だけでなく行徳方面との接点を持つ候補。本文取得までは独立候補として保持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"]},
+    {"title":"福富稲荷のキツネ①〜⑤","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に①〜⑤の5本がすべて堀江の話として掲載される。","interpretation":"単一タイトルではなく5本の連続採録群として扱う。本文なしで一つの話へ統合しない。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
+    {"title":"キツネのお礼","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に堀江の話として掲載。一般検索で同名の他地域民話が多数出るため、他地域の本文を浦安版に流用しない。","interpretation":"浦安版本文が取れるまでresearchingを維持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
+    {"title":"一つ圦のキツネ","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に堀江の話として掲載。既存候補では境川との関連が記録されている。","interpretation":"地名由来を本文から推測せず、本文未確認候補として保持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
+    {"title":"まさき稲荷のキツネ","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に堀江の話として掲載。稲荷名は確認できるが、物語内容は検索結果から取得できなかった。","interpretation":"稲荷信仰の一般説明を本文として代用しない。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
+    {"title":"月に化けたタヌキ／月に化けたムジナ","status":"multi_title_confirmed","finding":"1984年には『月に化けたタヌキ』（堀江・大蓮寺）と『月に化けたムジナ』（猫実）が別々に掲載。1992年には『月に化けた狢』（善福寺・猫実・堀江）が掲載される。","interpretation":"同一モチーフ群としてハブ管理するが、本文未確認のまま統合しない。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"]},
+    {"title":"久助稲荷のキツネ","status":"tradition_context_confirmed_text_unconfirmed","finding":"大蓮寺公式説明では久助稲荷の由来として、故人となっていた久助が稲荷復興を頼みに現れたという伝承が確認できる。浦安市公式の史跡一覧・郷土博物館年報でも久助稲荷が実在する史跡として確認できる。","interpretation":"これは既存正式『久助稲荷』を裏付ける地域資料であり、『久助稲荷のキツネ』本文そのものではない。両者を混同しない。","sources":["https://dairenji.jp/about/","https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html","https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/038/107/r4nenpou.pdf"]},
+    {"title":"弁天様の恩返し","status":"index_only_after_batch_search","finding":"1985年『浦安の昔ばなし 続』に掲載されるが、今回の公開検索では本文を取得できなかった。","interpretation":"『猫実の弁天様』『ヤヘイの弁天さま』とは別候補として保持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]}
   ],
   "confirmed_or_existing_overlap":[
-    {"title":"手拭いかぶって踊った猫","record_id":"chiba-urayasu-tenugui-neko","source_year":1984},
-    {"title":"庚申さま／猫実の庚申様","record_id":"chiba-urayasu-koshin-sama","source_year":1985},
-    {"title":"蛇の橋","record_id":"chiba-urayasu-hebi-no-hashi","source_year":1984,"note":"本文比較前。"},
-    {"title":"蛇の泡とり","record_id":"chiba-urayasu-hebi-no-awatori","source_year":1984,"note":"本文比較前。"},
-    {"title":"白蛇の恩返し","record_id":"chiba-urayasu-hakushebi-no-ongaeshi","source_year":1984,"note":"1985『白蛇を見たって』とは別題。"},
-    {"title":"久助稲荷","record_id":"chiba-urayasu-kyusuke-inari","source_year":1984,"note":"『久助稲荷のキツネ』『長さんギツネ①②』との本文同一性未比較。"},
-    {"title":"月に化けた狢・ムジナ","record_id":"chiba-urayasu-moon-mujina","source_year":1984,"note":"本文比較前。"}
+    {"title":"キツネの恩返し","record_id":"chiba-urayasu-fox-return","note":"1984→1991再録候補。本文取得待ち。"},
+    {"title":"大黒様に化けたキツネ","record_id":"chiba-urayasu-daikoku-fox","note":"1984→1991『にせの大黒様』再録候補。本文取得待ち。"},
+    {"title":"月に化けたムジナ","record_id":"chiba-urayasu-moon-mujina","note":"1984→1992同題系。本文比較前。"},
+    {"title":"久助稲荷","record_id":"chiba-urayasu-kyusuke-inari","note":"大蓮寺公式・浦安市資料で伝承と史跡を補強済み。"}
   ],
   "research_rules":[
     "索引掲載だけでは正式レコードを作らない。",
     "同題・類題でも本文比較なしに統合しない。",
     "地名・寺社名から物語本文を推測しない。",
-    "本文が確認できたものから正式レコード化し、未確認題名はこのハブで候補管理する。",
-    "書誌年が資料間で食い違う場合は確定値にせず、両方の表示を記録する。"
+    "他地域の同名民話本文を浦安版へ流用しない。",
+    "本文が確認できたものから正式レコード化し、未確認題名はこのハブで候補管理する。"
   ],
-  "confidence":"high",
-  "research_status":"partial"
+  "research_status":"partial",
+  "confidence":"high"
 }
