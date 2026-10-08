@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "sunakake",
+  "canonical_name": "砂かけ婆・砂をかける怪異",
+  "aliases": [
+    "砂かけ婆",
+    "砂掛け婆",
+    "砂かけ"
+  ],
+  "summary": "人や旅人に砂を浴びせる老婆・妖怪など、砂をかける行為を特徴とする伝承を整理するハブ。地域によって妖怪名・姿・出現場所が異なる。",
+  "sub_motifs": [
+    "砂をかける老婆",
+    "山道の砂かけ",
+    "神社の砂かけ",
+    "子どもへのいたずら",
+    "正体不明の砂"
+  ],
+  "known_connections": [
+    {
+      "region": "近畿",
+      "note": "砂かけ婆として知られる伝承。"
+    },
+    {
+      "region": "中国",
+      "note": "山道・社寺の砂かけ怪異。"
+    },
+    {
+      "region": "四国",
+      "note": "砂・土を使う妖怪伝承との接続。"
+    },
+    {
+      "region": "関東・中部",
+      "note": "類似する山道怪異。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "山姥",
+      "天狗",
+      "峠の怪異",
+      "狸"
+    ],
+    "caution": "現代の妖怪図鑑で広まったイメージと地域口承を分ける。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "砂かけ系怪異の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
