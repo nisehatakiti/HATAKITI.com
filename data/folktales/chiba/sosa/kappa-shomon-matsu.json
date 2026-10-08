@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-sosa-kappa-shomon-matsu",
+  "status": "draft",
+  "title": "河童の証文松",
+  "title_normalized": "河童の証文松",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "匝瑳市吉崎・新堀渕・宝珠院に結び付く河童伝承。河童の証文をめぐる話として複数の郷土資料に収録されている。",
+    "based_on_source_ids": [
+      "SRC-CHIBA-LIB-SOUSA"
+    ]
+  },
+  "story_summary": "河童が宝珠院のお坊さんに懲らしめられ、証文を残したという話が『河童の証文松』として伝えられている。千葉県立図書館の民話索引では吉崎地区、新堀渕、宝珠院が関連地点として挙げられている。",
+  "story_content": "河童が宝珠院のお坊さんに懲らしめられ、証文を残したという話が『河童の証文松』として伝えられている。千葉県立図書館の民話索引では吉崎地区、新堀渕、宝珠院が関連地点として挙げられている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": null,
+    "municipality": "匝瑳市",
+    "area_name": "吉崎地区"
+  },
+  "locations": [
+    {
+      "name": "新堀渕・宝珠院",
+      "type": "水辺・寺院",
+      "description": "河童の証文松に関連する伝承地。",
+      "source_ids": [
+        "SRC-CHIBA-LIB-SOUSA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "河童",
+    "寺",
+    "渕",
+    "証文"
+  ],
+  "story_type": [
+    "河童伝承",
+    "寺社縁起・世間話"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-CHIBA-LIB-SOUSA",
+      "title": "千葉県の民話 匝瑳市",
+      "publisher": "千葉県立図書館",
+      "publication_date": "web",
+      "source_type": "library_index",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/sousa.html",
+      "relevant_section": "河童の証文・河童の証文松",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
