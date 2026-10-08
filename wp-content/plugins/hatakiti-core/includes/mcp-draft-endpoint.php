@@ -150,6 +150,11 @@ function hatakiti_handle_mcp_request( WP_REST_Request $request ) {
             ) );
 
         case 'tools/call':
+            $auth = hatakiti_oauth_validate_access_token( $request );
+            if ( is_wp_error( $auth ) ) {
+                return hatakiti_mcp_auth_required( $id, $auth );
+            }
+
             $params = isset( $body['params'] ) && is_array( $body['params'] )
                 ? $body['params']
                 : array();
