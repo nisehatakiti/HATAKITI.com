@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "rokurokubi",
+  "canonical_name": "ろくろ首・首の伸びる女怪異",
+  "aliases": [
+    "ろくろ首",
+    "轆轤首",
+    "抜け首"
+  ],
+  "summary": "夜間に首が伸びる、首だけが抜けて飛ぶなどの身体変化を特徴とする全国の怪異伝承を整理するハブ。ろくろ首と抜け首は近縁だが別型として保持する。",
+  "sub_motifs": [
+    "首が伸びる",
+    "首が抜ける",
+    "首だけ飛ぶ",
+    "女のろくろ首",
+    "正体が家族に知られる",
+    "旅人を脅かす"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "怪談・説話として広く知られる。"
+    },
+    {
+      "region": "関東・中部",
+      "note": "ろくろ首の地域伝承。"
+    },
+    {
+      "region": "近畿",
+      "note": "寺・宿・旅人の怪談。"
+    },
+    {
+      "region": "九州",
+      "note": "抜け首型との接続。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "飛頭蛮",
+      "化け猫",
+      "幽霊",
+      "のっぺらぼう"
+    ],
+    "caution": "文学・芝居で形成されたイメージと地域口承を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "ろくろ首・抜け首の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
