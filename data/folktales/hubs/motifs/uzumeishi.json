@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "buried-treasure",
+  "canonical_name": "埋蔵金・隠し財宝伝承",
+  "aliases": [
+    "埋蔵金",
+    "隠し金",
+    "隠し財宝",
+    "黄金伝説"
+  ],
+  "summary": "武将・長者・寺社などが財宝を地中や山中に隠したとする全国の伝承を横断するハブ。戦国・幕末・落人・寺社縁起など起源が多様で、場所を示す地形・石・井戸などの手掛かりを伴うことが多い。",
+  "sub_motifs": [
+    "武将の隠し金",
+    "長者の財宝",
+    "寺社の埋宝",
+    "落人の財宝",
+    "山中の黄金",
+    "財宝を守る怪異",
+    "地図・暗号・目印"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "城跡・山・寺社周辺に多数の財宝伝承。"
+    },
+    {
+      "region": "東北",
+      "note": "金山・黄金伝説。"
+    },
+    {
+      "region": "関東",
+      "note": "戦国武将・寺社・長者の隠し財宝。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "鉱山・寺社・武将伝承。"
+    },
+    {
+      "region": "九州",
+      "note": "島津・平家落人等の財宝伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "長者",
+      "隠れ里",
+      "黄金伝説",
+      "落人"
+    ],
+    "caution": "史料で確認された埋蔵文化財と伝承上の埋蔵金を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "財宝・伝説の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
