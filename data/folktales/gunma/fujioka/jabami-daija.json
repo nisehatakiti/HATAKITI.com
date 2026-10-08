@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gunma-fujioka-jabami-daija",
+  "status": "draft",
+  "title": "藤岡・蛇喰渓谷の大蛇",
+  "title_normalized": "藤岡・蛇喰渓谷の大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "群馬県藤岡市の鮎川にある蛇喰渓谷には、大蛇を退治したという伝説が記録されている。",
+    "based_on_source_ids": [
+      "gunma-fujioka-jabami-daija-src"
+    ]
+  },
+  "story_summary": "群馬県藤岡市の鮎川にある蛇喰渓谷には、大蛇を退治したという伝説が記録されている。",
+  "story_content": "群馬県藤岡市の鮎川にある蛇喰渓谷には、大蛇を退治したという伝説が記録されている。",
+  "region": {
+    "prefecture": "群馬県",
+    "historical_province": null,
+    "municipality": "藤岡市",
+    "area_name": "鮎川・蛇喰渓谷"
+  },
+  "locations": [
+    {
+      "name": "鮎川・蛇喰渓谷",
+      "type": "伝承地",
+      "description": "出典に記録された具体的な伝承地。",
+      "source_ids": [
+        "gunma-fujioka-jabami-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "gunma-fujioka-jabami-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇"
+  ],
+  "story_type": [
+    "地域伝承",
+    "場所伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "gunma-fujioka-jabami-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "relevant_section": "藤岡・蛇喰渓谷の大蛇",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承として登録。後段で原資料、地点座標、現地訪問情報を深掘りする。"
+}
