@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "irui-kekkon",
+  "canonical_name": "異類婚姻・異類女房伝承",
+  "aliases": [
+    "異類婚姻譚",
+    "蛇女房",
+    "狐女房",
+    "鶴女房",
+    "魚女房"
+  ],
+  "summary": "人間と動物・妖怪・異界の存在が夫婦になる全国の昔話・伝説を横断するハブ。正体の露見、禁忌、別離、恩返しなどが主要な型で、動物種によって地域分布が異なる。",
+  "sub_motifs": [
+    "蛇女房",
+    "狐女房",
+    "鶴女房",
+    "魚女房",
+    "蛤女房",
+    "異類の恩返し",
+    "正体を見る禁忌",
+    "異類との別離"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "日本の昔話の主要類型の一つ。"
+    },
+    {
+      "region": "東北・関東",
+      "note": "蛇・狐・鶴など。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "鶴女房・蛇女房等。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "蛇・魚・鳥の異類婚姻。"
+    },
+    {
+      "region": "九州",
+      "note": "蛇女房・異類女房等。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "狐",
+      "大蛇",
+      "人魚",
+      "鶴",
+      "恩返し"
+    ],
+    "caution": "個々の昔話本文を同一伝承とせず、国際的な昔話類型との対応は別途管理する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "異類婚姻・動物女房伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
