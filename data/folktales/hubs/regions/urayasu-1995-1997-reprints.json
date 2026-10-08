@@ -1,80 +1,136 @@
 {
-  "schema_version":"1.0",
-  "hub_id":"hub-region-urayasu-1995-1997-reprints",
-  "title":"浦安 1995〜1997年再録・周辺資料伝承群",
-  "hub_type":"source-cluster",
-  "region":"千葉県浦安市",
-  "description":"1995〜1997年の千葉県立図書館浦安民話索引から、浦安伝承として確認できる後年資料を整理する。本文未確認のものは正式JSON化せず、既存伝承との関係候補として管理する。",
-  "sources":[
-    {"title":"千葉県ふるさとのむかし話","publisher":"暁印書館","year":1995},
-    {"title":"謎のなんじゃもんじゃ　千葉の民話","publisher":"げんごろう","year":1996},
-    {"title":"千葉県妖怪奇異史談","publisher":"暁印書館","year":1997}
-  ],
-  "records":[
+  "schema_version": "1.0",
+  "hub_id": "hub-region-urayasu-1995-1997-reprints",
+  "title": "浦安 1995〜1997年再録・周辺資料伝承群",
+  "hub_type": "source-cluster",
+  "region": "千葉県浦安市",
+  "description": "1995〜1997年の千葉県立図書館浦安民話索引から、浦安伝承として確認できる後年資料を整理する。本文未確認のものは正式JSON化せず、既存伝承との関係候補として管理する。",
+  "sources": [
     {
-      "title":"久助稲荷のはなし",
-      "year":1995,
-      "source":"千葉県ふるさとのむかし話",
-      "status":"index_only",
-      "relation_candidates":[
-        {"title":"久助稲荷のキツネ","source":"浦安の昔ばなし","year":1984,"relation":"tradition_cluster_candidate"},
-        {"title":"久助稲荷","source":"existing Urayasu record","year":null,"relation":"existing_cluster"}
-      ],
-      "note":"大蓮寺・堀江の久助稲荷に関する伝承群として接続するが、本文比較前に同一話とは確定しない。"
+      "title": "千葉県ふるさとのむかし話",
+      "publisher": "暁印書館",
+      "year": 1995
     },
     {
-      "title":"やくさま寺",
-      "year":1996,
-      "source":"謎のなんじゃもんじゃ　千葉の民話",
-      "status":"index_only",
-      "location":"堀江村",
-      "note":"浦安市資料として索引確認。既存の浦安寺社伝承との本文関係は未確認。"
+      "title": "謎のなんじゃもんじゃ　千葉の民話",
+      "publisher": "げんごろう",
+      "year": 1996
     },
     {
-      "title":"浦安の海産物行商相馬家の赤鞘",
-      "year":1997,
-      "source":"千葉県妖怪奇異史談",
-      "status":"index_only",
-      "location":"浦安市当代島",
-      "relation_candidates":[
-        {"title":"相馬の家の赤鞘","source":"浦安の昔ばなし 続","year":1985,"relation":"strong_reprint_candidate"}
-      ],
-      "note":"題名拡張を伴う後年再録候補。本文未確認。"
-    },
-    {
-      "title":"牢死した漁民の供養",
-      "year":1997,
-      "source":"千葉県妖怪奇異史談",
-      "status":"cross_region_index_only",
-      "indexed_municipality":"船橋市",
-      "location_basis":"猫実村",
-      "note":"浦安・猫実村を根拠として索引に現れるが、資料上の市町村欄は船橋市。浦安市の正式採録とは扱わず、周辺・関連資料として別管理する。"
+      "title": "千葉県妖怪奇異史談",
+      "publisher": "暁印書館",
+      "year": 1997
     }
   ],
-  "research_findings":[
+  "records": [
     {
-      "finding":"1995年『久助稲荷のはなし』は浦安市・大蓮寺・堀江を根拠として索引掲載され、1984年『久助稲荷のキツネ』との伝承クラスター候補になる。",
-      "evidence_level":"source_index"
+      "title": "久助稲荷のはなし",
+      "year": 1995,
+      "source": "千葉県ふるさとのむかし話",
+      "status": "index_only",
+      "relation_candidates": [
+        {
+          "title": "久助稲荷のキツネ",
+          "source": "浦安の昔ばなし",
+          "year": 1984,
+          "relation": "tradition_cluster_candidate"
+        },
+        {
+          "title": "久助稲荷",
+          "source": "existing Urayasu record",
+          "year": null,
+          "relation": "existing_cluster"
+        }
+      ],
+      "note": "大蓮寺・堀江の久助稲荷に関する伝承群として接続するが、本文比較前に同一話とは確定しない。"
     },
     {
-      "finding":"1996年『やくさま寺』は浦安市・堀江村を根拠として索引掲載される。",
-      "evidence_level":"source_index"
+      "title": "やくさま寺",
+      "year": 1996,
+      "source": "謎のなんじゃもんじゃ　千葉の民話",
+      "status": "index_only",
+      "location": "堀江村",
+      "note": "浦安市資料として索引確認。既存の浦安寺社伝承との本文関係は未確認。"
     },
     {
-      "finding":"1997年『浦安の海産物行商相馬家の赤鞘』は浦安市当代島を根拠として索引掲載され、1985年『相馬の家の赤鞘』との再録候補として優先比較対象になる。",
-      "evidence_level":"multi_source_title_comparison"
+      "title": "十二段へえしち",
+      "year": 1996,
+      "source": "謎のなんじゃもんじゃ　千葉の民話",
+      "status": "index_only",
+      "relation_candidates": [
+        {
+          "title": "十二段のはしごべえ",
+          "source": "浦安の昔ばなし",
+          "year": 1984,
+          "relation": "strong_title_variant_candidate"
+        },
+        {
+          "title": "十二段のはしご屁",
+          "source": "浦安の世間話",
+          "year": 1992,
+          "relation": "title_variant_candidate"
+        }
+      ],
+      "note": "1996年資料の浦安市欄に掲載。1984年・1992年の近似題名が存在するが、本文比較前に同一話とは確定しない。"
     },
     {
-      "finding":"1997年『牢死した漁民の供養』は市町村欄が船橋市で、猫実村が根拠地として記載されるため、浦安正式資料には数えない。",
-      "evidence_level":"source_index_boundary_check"
+      "title": "浦安の海産物行商相馬家の赤鞘",
+      "year": 1997,
+      "source": "千葉県妖怪奇異史談",
+      "status": "index_only",
+      "location": "浦安市当代島",
+      "relation_candidates": [
+        {
+          "title": "相馬の家の赤鞘",
+          "source": "浦安の昔ばなし 続",
+          "year": 1985,
+          "relation": "strong_reprint_candidate"
+        }
+      ],
+      "note": "題名拡張を伴う後年再録候補。本文未確認。"
+    },
+    {
+      "title": "牢死した漁民の供養",
+      "year": 1997,
+      "source": "千葉県妖怪奇異史談",
+      "status": "cross_region_index_only",
+      "indexed_municipality": "船橋市",
+      "location_basis": "猫実村",
+      "note": "浦安・猫実村を根拠として索引に現れるが、資料上の市町村欄は船橋市。浦安市の正式採録とは扱わず、周辺・関連資料として別管理する。"
     }
   ],
-  "research_rules":[
+  "research_findings": [
+    {
+      "finding": "1995年『久助稲荷のはなし』は浦安市・大蓮寺・堀江を根拠として索引掲載され、1984年『久助稲荷のキツネ』との伝承クラスター候補になる。",
+      "evidence_level": "source_index"
+    },
+    {
+      "finding": "1996年『やくさま寺』は浦安市・堀江村を根拠として索引掲載される。",
+      "evidence_level": "source_index"
+    },
+    {
+      "finding": "1997年『浦安の海産物行商相馬家の赤鞘』は浦安市当代島を根拠として索引掲載され、1985年『相馬の家の赤鞘』との再録候補として優先比較対象になる。",
+      "evidence_level": "multi_source_title_comparison"
+    },
+    {
+      "finding": "1997年『牢死した漁民の供養』は市町村欄が船橋市で、猫実村が根拠地として記載されるため、浦安正式資料には数えない。",
+      "evidence_level": "source_index_boundary_check"
+    },
+    {
+      "finding": "1996年『謎のなんじゃもんじゃ　千葉の民話』には『やくさま寺』に加えて『十二段へえしち』も浦安市資料として掲載される。後者は1984年『十二段のはしごべえ』および1992年『十二段のはしご屁』との本文比較候補。",
+      "evidence_level": "multi_source_title_comparison"
+    },
+    {
+      "finding": "千葉県立図書館の現行浦安市民話索引を通覧した範囲では、1997年『千葉県妖怪奇異史談』より後の発行年で浦安市欄に掲載される資料は確認できなかった。現段階では1995〜1997年を後年再録探索の主要区切りとして扱う。",
+      "evidence_level": "complete_current_index_review"
+    }
+  ],
+  "research_rules": [
     "索引掲載だけでは正式レコードを作らない。",
     "同題・類題でも本文比較なしに統合しない。",
     "市町村欄と地名根拠が食い違う資料は浦安正式資料へ自動算入しない。",
     "他地域の同名民話本文を浦安版へ流用しない。"
   ],
-  "research_status":"partial",
-  "confidence":"high"
+  "research_status": "partial",
+  "confidence": "high"
 }
