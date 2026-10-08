@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "jumoku",
+  "canonical_name": "巨木・御神木・神木伝承",
+  "aliases": [
+    "御神木",
+    "神木",
+    "巨木伝説",
+    "神木伝承"
+  ],
+  "summary": "巨大な木・長寿の木・神が宿る木などをめぐる全国の伝承を整理するハブ。伐採の禁忌、木の霊、地名由来、寺社縁起など多様な形を持つ。",
+  "sub_motifs": [
+    "御神木",
+    "伐ってはいけない木",
+    "木の精",
+    "木が動く",
+    "木の由来",
+    "巨木と寺社",
+    "巨木と地名",
+    "木の祟り"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "寺社・集落・山中に広く分布。"
+    },
+    {
+      "region": "東北・関東",
+      "note": "巨木・神木・伐採禁忌。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "寺社縁起と神木。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "楠・杉・松などの巨木伝承。"
+    },
+    {
+      "region": "九州",
+      "note": "楠・杉・神木と神社伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "巨石",
+      "龍",
+      "蛇神",
+      "山神",
+      "天狗"
+    ],
+    "caution": "樹齢・天然記念物などの実在情報と伝承上の神木性を分ける。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "巨木・神木伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
