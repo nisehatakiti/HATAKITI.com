@@ -18,6 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+require_once HATAKITI_CORE_DIR . 'includes/mcp-oauth.php';
+
 function hatakiti_register_mcp_route() {
     register_rest_route( 'hatakiti/v1', '/mcp', array(
         'methods'             => 'POST',
