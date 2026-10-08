@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gifu-yamanba-treasure",
+  "status": "draft",
+  "title": "岐阜・山姥がくれた宝物",
+  "title_normalized": "岐阜・山姥がくれた宝物",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岐阜県山県市では、山姥から宝物をもらった人物とその子孫にまつわる伝承が記録されている。",
+    "based_on_source_ids": [
+      "gifu-yamanba-treasure-src"
+    ]
+  },
+  "story_summary": "岐阜県山県市では、山姥から宝物をもらった人物とその子孫にまつわる伝承が記録されている。",
+  "story_content": "岐阜県山県市では、山姥から宝物をもらった人物とその子孫にまつわる伝承が記録されている。",
+  "region": {
+    "prefecture": "岐阜県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "岐阜・山姥がくれた宝物",
+      "type": "伝承地域",
+      "description": "出典に記録された地域・伝承地。",
+      "source_ids": [
+        "gifu-yamanba-treasure-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "山姥に関する地域伝承。",
+      "source_ids": [
+        "gifu-yamanba-treasure-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "gifu-yamanba-treasure-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "relevant_section": "岐阜・山姥がくれた宝物",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズでの代表的個別伝承。後段で現地情報・原資料・詳細な伝承内容を深掘りする。"
+}
