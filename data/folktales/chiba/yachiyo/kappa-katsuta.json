@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-yachiyo-kappa-katsuta",
+  "status": "draft",
+  "title": "勝田の河童",
+  "title_normalized": "勝田の河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "八千代市勝田の民俗資料に記録された河童伝承。深い川で泳いだり遊んだりしていると河童が現れて悪さをすると語られている。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-1310111"
+    ]
+  },
+  "story_summary": "勝田では、川の深いところで泳いだり遊んだりしていると河童が出てきて悪さをするという世間話が記録されている。",
+  "story_content": "勝田では、川の深いところで泳いだり遊んだりしていると河童が出てきて悪さをするという世間話が記録されている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": null,
+    "municipality": "八千代市",
+    "area_name": "勝田"
+  },
+  "locations": [
+    {
+      "name": "勝田の川",
+      "type": "水辺",
+      "description": "河童が現れるとされた川の深み。",
+      "source_ids": [
+        "SRC-YOUKAI-1310111"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "河童",
+    "川",
+    "子ども",
+    "水難"
+  ],
+  "story_type": [
+    "河童伝承",
+    "世間話"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-1310111",
+      "title": "河童（勝田の民俗 千葉県八千代市勝田）",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1983",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiCard/1310111.html",
+      "relevant_section": "地域・要約",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
