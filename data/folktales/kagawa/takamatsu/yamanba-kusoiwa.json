@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kagawa-takamatsu-yamanba-kusoiwa",
+  "status": "draft",
+  "title": "高松・山姥と牛の小岩",
+  "title_normalized": "高松・山姥と牛の小岩",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "香川県高松市では、牛の小岩に山姥が腰を下ろしていたという伝承があり、金毘羅山周辺などでも山姥に出会った話が記録されている。",
+    "based_on_source_ids": [
+      "kagawa-takamatsu-yamanba-kusoiwa-src"
+    ]
+  },
+  "story_summary": "香川県高松市では、牛の小岩に山姥が腰を下ろしていたという伝承があり、金毘羅山周辺などでも山姥に出会った話が記録されている。",
+  "story_content": "香川県高松市では、牛の小岩に山姥が腰を下ろしていたという伝承があり、金毘羅山周辺などでも山姥に出会った話が記録されている。",
+  "region": {
+    "prefecture": "香川県",
+    "historical_province": null,
+    "municipality": "高松市",
+    "area_name": "金毘羅山周辺・牛の小岩"
+  },
+  "locations": [
+    {
+      "name": "金毘羅山周辺・牛の小岩",
+      "type": "伝承地",
+      "description": "出典に記録された具体的な伝承地。",
+      "source_ids": [
+        "kagawa-takamatsu-yamanba-kusoiwa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "山姥に関する地域伝承。",
+      "source_ids": [
+        "kagawa-takamatsu-yamanba-kusoiwa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥"
+  ],
+  "story_type": [
+    "地域伝承",
+    "場所伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kagawa-takamatsu-yamanba-kusoiwa-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "relevant_section": "高松・山姥と牛の小岩",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承として登録。後段で原資料、地点座標、現地訪問情報を深掘りする。"
+}
