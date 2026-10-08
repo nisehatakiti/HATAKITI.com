@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "sea-bozu",
+  "canonical_name": "海坊主・海上の坊主怪異伝承",
+  "aliases": [
+    "海坊主",
+    "ウミボウズ",
+    "ウミボーズ",
+    "海入道"
+  ],
+  "summary": "海上・沿岸に現れる坊主姿の怪異を全国横断で整理するハブ。船を襲う、柄杓で水を汲ませる、船を進ませない、水死者の霊とされるなど地域差がある。船幽霊・海入道など近縁伝承は関連付けるが同一伝承には統合しない。",
+  "sub_motifs": [
+    "柄杓を貸せ・底を抜いた柄杓",
+    "船を沈める",
+    "櫓を漕いでも進まない",
+    "水死者の霊",
+    "海上に巨大な姿が現れる",
+    "人・火の玉・女などへの変身",
+    "海坊主との相撲・格闘",
+    "見ると長寿する"
+  ],
+  "known_connections": [
+    {
+      "prefecture": "宮城県",
+      "examples": [
+        "モウレイ（柄杓を貸せ型）"
+      ],
+      "relationship": "related_sea_ghost"
+    },
+    {
+      "prefecture": "千葉県",
+      "examples": [
+        "浦安の海ぼうず"
+      ],
+      "relationship": "confirmed_record"
+    },
+    {
+      "prefecture": "東京都",
+      "examples": [
+        "海坊主は人に憑く",
+        "海から坊主が船に乗る"
+      ],
+      "relationship": "exact_name_or_related"
+    },
+    {
+      "prefecture": "静岡県",
+      "examples": [
+        "海坊主を海難者とする"
+      ],
+      "relationship": "exact_name"
+    },
+    {
+      "prefecture": "大阪府",
+      "examples": [
+        "貝塚付近に海坊主が現れる"
+      ],
+      "relationship": "exact_name"
+    },
+    {
+      "prefecture": "兵庫県",
+      "examples": [
+        "船に乗る海坊主・柄杓型"
+      ],
+      "relationship": "exact_name"
+    },
+    {
+      "prefecture": "島根県",
+      "examples": [
+        "海坊主／のろうま・柄杓型"
+      ],
+      "relationship": "exact_name_or_alias"
+    },
+    {
+      "prefecture": "山口県",
+      "examples": [
+        "海坊主が船に乗り恐ろしいものを問う"
+      ],
+      "relationship": "exact_name_or_related"
+    },
+    {
+      "prefecture": "香川県",
+      "examples": [
+        "海坊主を水死者の霊とする"
+      ],
+      "relationship": "exact_name"
+    },
+    {
+      "prefecture": "徳島県",
+      "examples": [
+        "海坊主が『しゃくくれ』と声をかける"
+      ],
+      "relationship": "exact_name"
+    },
+    {
+      "prefecture": "愛媛県",
+      "examples": [
+        "赤銅色の海坊主",
+        "柄杓型",
+        "相撲を挑む",
+        "見た者が長寿する"
+      ],
+      "relationship": "major_cluster"
+    },
+    {
+      "prefecture": "大分県",
+      "examples": [
+        "海坊主／幻が柄杓を求める"
+      ],
+      "relationship": "exact_name_or_related"
+    },
+    {
+      "prefecture": "長崎県",
+      "examples": [
+        "船幽霊・海坊主・磯女の複合伝承"
+      ],
+      "relationship": "exact_name_or_related"
+    }
+  ],
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/youkai_card.cgi?ID=0080200",
+      "role": "愛媛県の具体例"
+    },
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1070653",
+      "role": "各地の海坊主・船幽霊比較"
+    },
+    {
+      "title": "千葉県立図書館 千葉県の民話 浦安市",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+      "role": "浦安の海ぼうず"
+    }
+  ],
+  "research_status": "hub_ready_expanded",
+  "research_notes": "2026-10-08全国展開。名称が海坊主の事例と、船幽霊・モウレイ等の近縁海上怪異を区別。西日本、とくに瀬戸内・山陰・九州側で具体例が多く、関東にも事例がある。"
+}
