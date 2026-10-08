@@ -1,88 +1,31 @@
 {
-  "schema_version":"1.0",
   "hub_id":"urayasu-jizo-sword-traditions",
   "canonical_name":"浦安の地蔵・刀剣伝承群",
   "status":"draft",
   "category":"motif_hub",
-  "summary":"浦安の民話資料には、延命寺のお地蔵さん、首きり地蔵、慈悲地蔵の御利益、地蔵さまがついた、妖刀むらまさ、壁に隠されてた刀など、地蔵・刀剣をめぐる伝承が複数収録されている。現時点では題名と場所の確認が中心で、個別本文を推測せず候補群として整理する。",
+  "summary":"浦安の民話資料には、延命寺のお地蔵さん、首きり地蔵、慈悲地蔵の御利益、地蔵さまがついた、妖刀むらまさ、壁に隠されてた刀など、地蔵・刀剣をめぐる伝承が複数収録されている。今回、首きり地蔵が浦安だけでなく市川・新井・関宿方面の索引にも現れることを確認し、同名伝承を本文比較前に混同しない方針を明確化した。",
   "known_connections":[
-    {
-      "record_id":"chiba-urayasu-fushigi-na-tanjo",
-      "title":"不思議な誕生",
-      "relationship":"related_record",
-      "evidence_level":"source_index",
-      "note":"浦安の世間話の索引で堀江・首きり地蔵との関連が明記される。本文では巣鴨地蔵への祈願が確認されているため、首きり地蔵そのものの由来とは区別する。"
-    },
-    {
-      "record_id":null,
-      "title":"延命寺のお地蔵さん",
-      "relationship":"source_index_candidate",
-      "evidence_level":"source_index",
-      "note":"1985年『浦安の昔ばなし 続』、当代島・延命寺。本文未確認。"
-    },
-    {
-      "record_id":null,
-      "title":"首きり地蔵",
-      "relationship":"source_index_candidate",
-      "evidence_level":"multi_region_index",
-      "note":"1992年『浦安の世間話』、島尻・新井・延命寺。市川側索引にも同題があり、地域的な広がりを確認。本文未確認。"
-    },
-    {
-      "record_id":null,
-      "title":"妖刀むらまさ",
-      "relationship":"source_index_candidate",
-      "evidence_level":"cross_regional_index",
-      "note":"1984年『浦安の昔ばなし』、堀江。県立図書館船橋索引では船橋との関連も明記。本文未確認。"
-    },
-    {
-      "record_id":null,
-      "title":"壁に隠されてた刀",
-      "relationship":"source_index_candidate",
-      "evidence_level":"source_index",
-      "note":"1985年『浦安の昔ばなし 続』収録。本文未確認。妖刀むらまさと同一話とは扱わない。"
-    },
-    {
-      "record_id":null,
-      "title":"慈悲地蔵の御利益",
-      "relationship":"source_index_candidate",
-      "evidence_level":"source_index",
-      "note":"1992年『浦安の世間話』、浦安町。本文未確認。"
-    },
-    {
-      "record_id":null,
-      "title":"地蔵さまがついた",
-      "relationship":"source_index_candidate",
-      "evidence_level":"source_index",
-      "note":"1992年『浦安の世間話』収録。本文未確認。"
-    }
+    {"record_id":"chiba-urayasu-fushigi-na-tanjo","title":"不思議な誕生","relationship":"related_record","evidence_level":"source_index","note":"浦安の世間話の索引で堀江・首きり地蔵との関連が明記されるが、本文は巣鴨地蔵への祈願。首きり地蔵そのものの由来とは区別する。"},
+    {"record_id":null,"title":"延命寺のお地蔵さん","relationship":"source_index_candidate","evidence_level":"source_index","note":"1985年『浦安の昔ばなし 続』、当代島・延命寺。本文未確認。"},
+    {"record_id":null,"title":"首きり地蔵","relationship":"source_index_candidate","evidence_level":"multi_region_index","note":"1992年『浦安の世間話』。浦安側の関連地に島尻・新井・延命寺が記録される。市川側にも同題、野田側には同じ『浦安の世間話』を出典とする関宿関連掲載がある。別伝承か地名検索による再掲かは本文比較が必要。"},
+    {"record_id":null,"title":"妖刀むらまさ","relationship":"source_index_candidate","evidence_level":"cross_regional_index","note":"1984年『浦安の昔ばなし』、堀江。船橋側索引でも関連が確認される。本文未確認。"},
+    {"record_id":null,"title":"壁に隠されてた刀","relationship":"source_index_candidate","evidence_level":"source_index","note":"1985年『浦安の昔ばなし 続』収録。本文未確認。妖刀むらまさと同一話とは扱わない。"},
+    {"record_id":null,"title":"慈悲地蔵の御利益","relationship":"source_index_candidate","evidence_level":"source_index","note":"1992年『浦安の世間話』、浦安町。本文未確認。"},
+    {"record_id":null,"title":"地蔵さまがついた","relationship":"source_index_candidate","evidence_level":"source_index","note":"1992年『浦安の世間話』収録。本文未確認。"}
+  ],
+  "new_cross_region_findings":[
+    {"title":"首きり地蔵","region":"市川","evidence":"千葉県立図書館市川市索引に同題が掲載される。"},
+    {"title":"首きり地蔵","region":"野田・関宿","evidence":"千葉県立図書館野田市索引にも掲載されるが、出典は『浦安の世間話』、資料記載地域は浦安、関連地は関宿。したがって野田採録の別話とは断定しない。"}
   ],
   "classification":{
     "core_motifs":["地蔵信仰","寺社伝承","首切り地蔵","刀剣怪異","妖刀"],
-    "caution":"『首きり地蔵』は浦安・新井・延命寺の伝承と、他地域の同名地蔵伝承を混同しない。『妖刀むらまさ』も一般的な村正妖刀伝説から本文を補完しない。"
+    "caution":"同名の首きり地蔵や一般的な村正妖刀伝説から浦安版本文を補完しない。"
   },
   "sources":[
-    {
-      "source_id":"SRC-CHIBA-LIB-URAYASU-JIZO-SWORD",
-      "title":"千葉県の民話 浦安市",
-      "publisher":"千葉県立図書館",
-      "source_type":"library_index",
-      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-      "accessed_date":"2026-10-08",
-      "relevant_section":"延命寺のお地蔵さん／首きり地蔵／妖刀むらまさ／壁に隠されてた刀／慈悲地蔵の御利益／地蔵さまがついた",
-      "language":"ja"
-    },
-    {
-      "source_id":"SRC-CHIBA-LIB-ICHIKAWA-JIZO",
-      "title":"千葉県の民話 市川市",
-      "publisher":"千葉県立図書館",
-      "source_type":"library_index",
-      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
-      "accessed_date":"2026-10-08",
-      "relevant_section":"首きり地蔵／延命寺のお地蔵さん",
-      "language":"ja"
-    }
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-JIZO-SWORD","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-10-08"},
+    {"source_id":"SRC-CHIBA-LIB-ICHIKAWA-JIZO","title":"千葉県の民話 市川市","publisher":"千葉県立図書館","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html","accessed_date":"2026-10-08"},
+    {"source_id":"SRC-CHIBA-LIB-NODA-JIZO","title":"千葉県の民話 野田市","publisher":"千葉県立図書館","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/noda.html","accessed_date":"2026-10-08"}
   ],
   "confidence":"high",
-  "research_status":"partial",
-  "research_notes":"県立図書館索引で収録年・地域・関連寺院を確認。本文未確認の候補は推測でストーリー化していない。"
+  "research_status":"partial"
 }
