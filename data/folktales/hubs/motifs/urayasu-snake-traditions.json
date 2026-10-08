@@ -1,0 +1,79 @@
+{
+  "schema_version":"1.0",
+  "hub_id":"urayasu-snake-traditions",
+  "canonical_name":"浦安の蛇伝承群",
+  "status":"draft",
+  "category":"motif_hub",
+  "aliases":["浦安のヘビ伝承","浦安の蛇話"],
+  "summary":"浦安の民話資料には、蛇の橋、蛇の泡とり、蛇の恩返し、蛇の引越し、蛇の目玉に手え突っこんだ、白蛇の恩返し、白蛇を見たってなど、蛇をめぐる複数の伝承が記録されている。1984年・1985年・1992年の資料をまたぐものがあり、同題・類題を本文比較なしに統合しないことが重要である。",
+  "known_connections":[
+    {
+      "record_id":"chiba-urayasu-hebi-no-hashi",
+      "title":"蛇の橋",
+      "relationship":"confirmed_partial_record",
+      "evidence_level":"multi_source_index",
+      "note":"1984年『浦安の昔ばなし』では当代島、堀江・大三角との関連、1992年『浦安の世間話』では堀江として収録。既存canonical recordを維持。"
+    },
+    {
+      "record_id":"chiba-urayasu-hebi-no-awatori",
+      "title":"蛇の泡とり",
+      "relationship":"confirmed_partial_record",
+      "evidence_level":"multi_source_index",
+      "note":"1984年版では当代島、1992年版ではヒャッケンノイリ（堀江）として収録。既存canonical recordを維持。"
+    },
+    {
+      "record_id":"chiba-urayasu-hakushebi-no-ongaeshi",
+      "title":"白蛇の恩返し",
+      "relationship":"confirmed_partial_record",
+      "evidence_level":"source_index",
+      "note":"1984年版・当代島。既存canonical record。"
+    },
+    {
+      "record_id":null,
+      "title":"蛇の恩返し",
+      "relationship":"source_index_candidate",
+      "evidence_level":"source_index",
+      "note":"1992年『浦安の世間話』収録。本文未確認。白蛇の恩返しとは別タイトルのため統合しない。"
+    },
+    {
+      "record_id":null,
+      "title":"蛇の引越し",
+      "relationship":"source_index_candidate",
+      "evidence_level":"source_index",
+      "note":"1985年『浦安の昔ばなし 続』収録。本文未確認。"
+    },
+    {
+      "record_id":null,
+      "title":"蛇の目玉に手え突っこんだ",
+      "relationship":"cross_regional_candidate",
+      "evidence_level":"multi_source_index",
+      "note":"1985年『浦安の昔ばなし 続』収録。市川市新井・相之川との関連が県立図書館索引で確認され、別に市川側canonical recordがある。本文比較が必要。"
+    },
+    {
+      "record_id":null,
+      "title":"白蛇を見たって",
+      "relationship":"source_index_candidate",
+      "evidence_level":"source_index",
+      "note":"1985年『浦安の昔ばなし 続』、善福寺関連。本文未確認。"
+    }
+  ],
+  "classification":{
+    "core_motifs":["蛇の怪異","蛇と場所","蛇の報恩","白蛇信仰","変身・境界"],
+    "caution":"『蛇の恩返し』と『白蛇の恩返し』、『蛇の橋』と他地域の同題話などを自動統合しない。浦安の異版間でも地名が異なるため、本文取得後に関係を確定する。"
+  },
+  "sources":[
+    {
+      "source_id":"SRC-CHIBA-LIB-URAYASU-SNAKE",
+      "title":"千葉県の民話 浦安市",
+      "publisher":"千葉県立図書館",
+      "source_type":"library_index",
+      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+      "accessed_date":"2026-10-08",
+      "relevant_section":"蛇の橋／蛇の泡とり／蛇の恩返し／蛇の引越し／蛇の目玉に手え突っこんだ／白蛇の恩返し／白蛇を見たって",
+      "language":"ja"
+    }
+  ],
+  "confidence":"high",
+  "research_status":"partial",
+  "research_notes":"1984・1985・1992年の県立図書館索引を照合して伝承群を整理。個別本文未確認のものは内容を推測せず候補として保持する。既存canonical recordsは重複作成しない。"
+}
