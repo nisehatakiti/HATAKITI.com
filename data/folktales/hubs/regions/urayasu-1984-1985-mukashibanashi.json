@@ -4,7 +4,7 @@
   "title": "浦安『昔ばなし』『昔ばなし 続』採録伝承群",
   "hub_type": "source-cluster",
   "region": "千葉県浦安市",
-  "description": "浦安市教育委員会社会教育課による1984年『浦安の昔ばなし』と、浦安市による1985年『浦安の昔ばなし 続』の採録題名を整理し、1991〜1992年の再採録資料との重複・派生・未確認本文を管理するハブ。",
+  "description": "浦安市教育委員会社会教育課による1984年『浦安の昔ばなし』と、浦安市による1985年『浦安の昔ばなし 続』の採録題名を整理し、1991〜1997年の再採録資料および1992年『浦安の世間話』との重複・派生・未確認本文を管理するハブ。",
   "sources": [
     {
       "title": "千葉県の民話 浦安市",
@@ -31,6 +31,11 @@
       "title": "房総・民話撰",
       "publisher": "千秋社",
       "year": 1991
+    },
+    {
+      "title": "千葉県妖怪奇異史談",
+      "publisher": "暁印書館",
+      "year": 1997
     }
   ],
   "research_findings": [
@@ -45,74 +50,57 @@
       ]
     },
     {
-      "title": "福富稲荷のキツネ①〜⑤",
-      "status": "index_only_after_batch_search",
-      "finding": "1984年『浦安の昔ばなし』に①〜⑤の5本がすべて堀江の話として掲載。",
-      "interpretation": "5本の連続採録群として扱う。",
+      "title": "1991年『房総・民話撰』狐のはなし三篇",
+      "status": "reprint_relation_confirmed_title_only",
+      "finding": "千葉県立図書館は『狐のはなし その一 狐の恩返し』『その二 にせの大黒様』『その三 背負い籠が重い』を1991年『房総・民話撰』の浦安市資料として掲載。同じ索引には1984年『キツネの恩返し』『大黒様に化けたキツネ』も掲載される。",
+      "interpretation": "その一・その二は1984年題名との強い再録候補。その三『背負い籠が重い』は1984年の狐題名一覧には対応タイトルが見当たらず、独立候補として保持。本文比較前に統合しない。",
       "sources": [
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
       ]
     },
     {
-      "title": "キツネのお礼／一つ圦のキツネ／まさき稲荷のキツネ",
-      "status": "index_only_after_batch_search",
-      "finding": "いずれも1984年『浦安の昔ばなし』の浦安採録として確認。",
-      "interpretation": "本文未確認の候補として保持し、他地域同名話を流用しない。",
+      "title": "1991年『キツネのおんがえし 浦安市のはなし』",
+      "status": "bibliographic_overlap",
+      "finding": "千葉県立図書館索引は1991年、日本標準、八田敏子・畠山敦夫による『キツネのおんがえし 浦安市のはなし』を浦安市資料として掲載。一方、同館別資料では同タイトル・著者・出版社に1976年の年表示もあり、書誌年に不一致がある。",
+      "interpretation": "1984年『キツネの恩返し』との関係は強く疑われるが、本文確認までは同一話確定しない。年は競合情報として保持。",
       "sources": [
-        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+        "https://www.library.pref.chiba.lg.jp/school/chibakennominwa.pdf",
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/booklist.html"
       ]
     },
     {
-      "title": "月に化けたタヌキ／月に化けたムジナ",
-      "status": "multi_title_confirmed",
-      "finding": "1984年に別題として掲載。1992年には『月に化けた狢』が掲載。",
-      "interpretation": "モチーフ群ハブで管理するが本文比較なしで統合しない。",
+      "title": "久助稲荷のはなし",
+      "status": "bibliographic_overlap",
+      "finding": "千葉県立図書館は1995年『千葉県ふるさとのむかし話』（暁印書館）の『久助稲荷のはなし』を浦安市・大蓮寺・堀江の資料として掲載。",
+      "interpretation": "1984年『久助稲荷のキツネ』および既存正式『久助稲荷』と伝承クラスターが重なるが、本文同一性は未確認。",
       "sources": [
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
-      ]
-    },
-    {
-      "title": "久助稲荷のキツネ",
-      "status": "tradition_context_confirmed_text_unconfirmed",
-      "finding": "大蓮寺公式説明で、故人となった久助が稲荷復興を頼みに現れた由来伝承を確認。",
-      "interpretation": "既存正式『久助稲荷』の補強資料であり、本タイトル本文とは区別。",
-      "sources": [
         "https://dairenji.jp/about/"
       ]
     },
     {
-      "title": "弁天様の恩返し／延命寺のお地蔵さん／大川端のお地蔵さん／壁に隠されてた刀／火渡り／引越し念仏",
-      "status": "index_only_after_batch_search",
-      "finding": "1985年『浦安の昔ばなし 続』の採録題名として確認。",
-      "interpretation": "関連する既存伝承があっても本文確認前は統合しない。",
+      "title": "相馬の家の赤鞘",
+      "status": "later_title_overlap",
+      "finding": "1985年『浦安の昔ばなし 続』に『相馬の家の赤鞘』、1997年『千葉県妖怪奇異史談』に『浦安の海産物行商相馬家の赤鞘』が浦安市当代島資料として掲載。",
+      "interpretation": "同一伝承の改題・再録候補として優先比較対象。ただし本文未確認。",
       "sources": [
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
       ]
     },
     {
-      "title": "通運丸と高瀬船／薪船と松葉船／水門こさえに行った話",
-      "status": "index_only_after_batch_search",
-      "finding": "1985年『浦安の昔ばなし 続』の浦安採録として確認。水運・河川施設に関する題名群。",
-      "interpretation": "一般水運史ではなく浦安版本文を確認してから正式化。",
+      "title": "1992年『浦安の世間話』蛇・ムジナ群",
+      "status": "source_confirmed_body_unavailable",
+      "finding": "『月に化けた狢』『狢のまね声』『蛇の泡とり』『蛇の恩返し』『蛇の橋』が同書目次に掲載。1984年・1985年の浦安採録にも『蛇の泡とり』『蛇の橋』『蛇の引越し』『蛇の目玉に手え突っこんだ』などがあり、再録・別話比較の優先群。",
+      "interpretation": "本文取得までは既存蛇・ムジナハブに接続し、同題でも別レコード候補として保持。",
       "sources": [
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466",
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
-      ]
-    },
-    {
-      "title": "道路の真ん中に爆弾落っこった",
-      "status": "cross_region_index_confirmed",
-      "finding": "1985年浦安採録で、今井の橋が関連地。市川市索引にも浦安資料として同題が掲載。",
-      "interpretation": "浦安採録として保持し、市川版との本文同一性は未確定。",
-      "sources": [
-        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"
       ]
     },
     {
       "title": "立ち不動と座り不動",
       "status": "cross_region_multi_source",
-      "finding": "浦安では1985年と1992年の双方に掲載。市川市索引にも浦安資料として掲載。",
+      "finding": "浦安では1985年『浦安の昔ばなし 続』と1992年『浦安の世間話』の双方に掲載。市川市索引にも浦安資料として掲載。",
       "interpretation": "地域差を含む伝承群として本文比較する。",
       "sources": [
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
@@ -121,40 +109,12 @@
       ]
     },
     {
-      "title": "まあち／博打の逃げしゃり／だんなの山／とくべえさんち／門付／縁台将棋／中座と前座／菜っ葉に屁／湯を水にする／とったかみたかなくなりました／隣近所が一軒の家／高梨のだんな",
-      "status": "index_only_after_batch_search",
-      "finding": "いずれも千葉県立図書館の浦安索引で1985年『浦安の昔ばなし 続』の採録題名として確認できる。高梨のだんなは当代島・堀江・猫実・浦安村をまたぐ関連地が記録される。",
-      "interpretation": "題名から筋を推測せず候補として一括管理。",
+      "title": "海の亡霊二話 その二 子どもの魂がさそう",
+      "status": "source_confirmed_reprint_candidate",
+      "finding": "1991年『房総・民話撰』の浦安市資料として千葉県立図書館索引に掲載。既存の『浦安の海の亡霊・海上怪異伝承』ハブに関連する。",
+      "interpretation": "『海ぼうず』とは題名・構成が異なるため別候補として保持。本文比較前に統合しない。",
       "sources": [
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
-      ]
-    },
-    {
-      "title": "流れ出した棺桶／流れ灌頂／湯灌樽・流れ灌頂／霊魂この世にとどまりて",
-      "status": "index_only_after_batch_search",
-      "finding": "1985年『浦安の昔ばなし 続』の採録題名として確認。『流れ出した棺桶』『流れ灌頂』は善福寺、『霊魂この世にとどまりて』は堀江・船堀・猫実が関連地。",
-      "interpretation": "葬送・死者伝承群としてまとめて比較対象にするが、本文なしで同一話扱いしない。",
-      "sources": [
-        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
-      ]
-    },
-    {
-      "title": "相馬の家の赤鞘／大正十二年の震災",
-      "status": "index_only_after_batch_search",
-      "finding": "1985年『浦安の昔ばなし 続』の浦安採録として確認。前者は浦安、後者は当代島が関連地。1997年『千葉県妖怪奇異史談』には別題『浦安の海産物行商相馬家の赤鞘』が浦安市当代島資料として掲載される。",
-      "interpretation": "相馬家の赤鞘は後年資料との照合価値が高いが、本文同一性は未確認。大正十二年の震災も別レコード候補。",
-      "sources": [
-        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
-      ]
-    },
-    {
-      "title": "1992年『浦安の世間話』蛇・ムジナ群",
-      "status": "source_confirmed_body_unavailable",
-      "finding": "1992年の目次に『月に化けた狢』『狢のまね声』『蛇の泡とり』『蛇の恩返し』『蛇の橋』が連続掲載される。NDLでは同書が1992年7月刊、230p、前田治郎助の語りを米屋陽一が編んだ資料であることを確認できる。",
-      "interpretation": "本文取得までは各タイトルを独立候補として保持し、既存の蛇・ムジナ・月変身ハブへ接続する。",
-      "sources": [
-        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466",
-        "https://www.books.or.jp/book-details/9784787290649"
       ]
     }
   ],
@@ -162,12 +122,12 @@
     {
       "title": "キツネの恩返し",
       "record_id": "chiba-urayasu-fox-return",
-      "note": "1984→1991再録候補。本文取得待ち。"
+      "note": "1984→1991『狐のはなし その一』→1991『キツネのおんがえし 浦安市のはなし』の再録候補群。本文取得待ち。"
     },
     {
       "title": "大黒様に化けたキツネ",
       "record_id": "chiba-urayasu-daikoku-fox",
-      "note": "1984→1991『にせの大黒様』再録候補。本文取得待ち。"
+      "note": "1984→1991『狐のはなし その二 にせの大黒様』の再録候補。本文取得待ち。"
     },
     {
       "title": "月に化けたムジナ",
@@ -177,7 +137,7 @@
     {
       "title": "久助稲荷",
       "record_id": "chiba-urayasu-kyusuke-inari",
-      "note": "大蓮寺公式・浦安市資料で伝承と史跡を補強済み。"
+      "note": "1984『久助稲荷のキツネ』、1995『久助稲荷のはなし』、大蓮寺公式由来の伝承クラスター。本文同一性未確認。"
     }
   ],
   "research_rules": [
@@ -185,7 +145,8 @@
     "同題・類題でも本文比較なしに統合しない。",
     "地名・寺社名から物語本文を推測しない。",
     "他地域の同名民話本文を浦安版へ流用しない。",
-    "本文が確認できたものから正式レコード化し、未確認題名はこのハブで候補管理する。"
+    "本文が確認できたものから正式レコード化し、未確認題名はこのハブで候補管理する。",
+    "書誌年が競合する場合は一方に決め打ちせず競合情報を記録する。"
   ],
   "research_status": "partial",
   "confidence": "high"
