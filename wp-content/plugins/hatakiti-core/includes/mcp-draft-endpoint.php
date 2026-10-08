@@ -69,6 +69,35 @@ function hatakiti_mcp_error( $id, $code, $message, $data = null ) {
 }
 
 /**
+ * Return the MCP OAuth challenge that causes ChatGPT to launch account linking.
+ */
+function hatakiti_mcp_auth_required( $id, $error ) {
+    $description = $error->get_error_message();
+    return new WP_REST_Response(
+        array(
+            'jsonrpc' => '2.0',
+            'id'      => $id,
+            'result'  => array(
+                'content' => array(
+                    array(
+                        'type' => 'text',
+                        'text' => 'Authentication required: ' . $description,
+                    ),
+                ),
+                '_meta' => array(
+                    'mcp/www_authenticate' => array(
+                        'Bearer resource_metadata="' . HATAKITI_OAUTH_ISSUER . '/.well-known/oauth-protected-resource", error="invalid_token", error_description="' . $description . '"',
+                    ),
+                ),
+                'isError' => true,
+            ),
+        ),
+        200,
+        array( 'Content-Type' => 'application/json' )
+    );
+}
+
+/**
  * MCP Streamable HTTP request handler.
  *
  * Supports the initialize/tools/list/tools/call lifecycle used by ChatGPT.
