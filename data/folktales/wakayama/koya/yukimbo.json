@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "wakayama-yukimbo",
+  "status": "draft",
+  "title": "和歌山・雪坊の足跡",
+  "title_normalized": "和歌山・雪坊の足跡",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "和歌山県では、小さく凹んだ雪の跡を一本足の小童・雪坊の足跡とする伝承が記録されている。",
+    "based_on_source_ids": [
+      "wakayama-yukimbo-src"
+    ]
+  },
+  "story_summary": "和歌山県では、小さく凹んだ雪の跡を一本足の小童・雪坊の足跡とする伝承が記録されている。",
+  "story_content": "和歌山県では、小さく凹んだ雪の跡を一本足の小童・雪坊の足跡とする伝承が記録されている。",
+  "region": {
+    "prefecture": "和歌山県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "紀伊地方"
+  },
+  "locations": [
+    {
+      "name": "紀伊地方",
+      "type": "伝承地・地域",
+      "description": "出典に記録された地域または伝承地。",
+      "source_ids": [
+        "wakayama-yukimbo-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "雪坊",
+      "type": "伝承存在",
+      "description": "雪坊に関する地域伝承。",
+      "source_ids": [
+        "wakayama-yukimbo-src"
+      ]
+    }
+  ],
+  "themes": [
+    "雪坊"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yukionna",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "wakayama-yukimbo-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "relevant_section": "和歌山・雪坊の足跡",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承として登録。後段で原資料、具体的地点、現在の現地情報を深掘りする。"
+}
