@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "yamanba",
+  "canonical_name": "山姥・山女伝承",
+  "aliases": [
+    "山姥",
+    "ヤマンバ",
+    "ヤマウバ",
+    "山女"
+  ],
+  "summary": "山中に住む女の怪異・異人を全国横断で整理するハブ。人を食う恐ろしい存在から、子を助ける・家に福をもたらす存在、山の神に近い存在まで性格は幅広い。",
+  "sub_motifs": [
+    "旅人を襲う山姥",
+    "人食い山姥",
+    "子どもを育てる山姥",
+    "山姥から恩を受ける",
+    "山姥の機織り",
+    "山姥と山の神",
+    "山女・山姫"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "山姥・ヤマウバ等の呼称が広く確認される。"
+    },
+    {
+      "region": "四国",
+      "note": "ヤマンバ約60事例"
+    },
+    {
+      "region": "東北",
+      "note": "山の女・山姥系の伝承群"
+    },
+    {
+      "region": "中部",
+      "note": "山姥・山女系の伝承群"
+    },
+    {
+      "region": "関東",
+      "note": "山姥・姥神などの伝承群"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "天狗",
+      "山の神",
+      "鬼婆",
+      "雪女"
+    ],
+    "caution": "昔話の山姥と地域の山女・姥神伝承を一括同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%85%A8%E5%9B%BD&Name=%E3%82%A6%E3%83%90&Pref=",
+      "role": "山姥・山女等の全国事例"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
