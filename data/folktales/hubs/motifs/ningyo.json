@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "ningyo",
+  "canonical_name": "人魚・海人異類伝承",
+  "aliases": [
+    "人魚",
+    "人魚の肉",
+    "八百比丘尼"
+  ],
+  "summary": "人魚および人魚の肉・不死・海の異類に関する全国伝承を横断するハブ。八百比丘尼伝説との接続が強く、海辺の地域伝承、寺社縁起、異類婚姻などに展開する。",
+  "sub_motifs": [
+    "人魚を捕らえる",
+    "人魚の肉",
+    "不老不死",
+    "八百比丘尼",
+    "人魚の予言",
+    "海の異類",
+    "人魚の骨・塚"
+  ],
+  "known_connections": [
+    {
+      "region": "日本海側",
+      "note": "人魚・八百比丘尼伝承が多い。"
+    },
+    {
+      "region": "北陸",
+      "note": "八百比丘尼・人魚の肉に関する寺社縁起。"
+    },
+    {
+      "region": "近畿",
+      "note": "若狭・丹後を中心に八百比丘尼伝承。"
+    },
+    {
+      "region": "九州・瀬戸内",
+      "note": "海の異類・人魚の記録。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "龍宮",
+      "海坊主",
+      "磯女",
+      "八百比丘尼"
+    ],
+    "caution": "近代的な人魚像と地域の人魚・異類伝承を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "人魚・八百比丘尼伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
