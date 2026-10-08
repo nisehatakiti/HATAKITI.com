@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-seiyo-kappa-wakamiya",
+  "status": "draft",
+  "title": "若宮神社の河童伝説",
+  "title_normalized": "若宮神社の河童伝説",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "西予市明浜町高山の若宮神社には、河童が助けてもらった礼として鯛を持ってきたという伝説があり、河童型の狛犬にも結び付いている。",
+    "based_on_source_ids": [
+      "SRC-EHIME-REKIHAKU-168"
+    ]
+  },
+  "story_summary": "若宮神社の祭神にいたずらをしようとした河童が助けられ、そのお礼として毎日鯛を持ってきたという。1881年にはこの伝説にちなむ河童形の狛犬が社殿前に制作・寄進され、現在は西予市有形民俗文化財とされる。",
+  "story_content": "若宮神社の祭神にいたずらをしようとした河童が助けられ、そのお礼として毎日鯛を持ってきたという。1881年にはこの伝説にちなむ河童形の狛犬が社殿前に制作・寄進され、現在は西予市有形民俗文化財とされる。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": null,
+    "municipality": "西予市",
+    "area_name": "明浜町高山"
+  },
+  "locations": [
+    {
+      "name": "若宮神社",
+      "type": "神社",
+      "description": "河童伝説と河童型狛犬が結び付く場所。",
+      "source_ids": [
+        "SRC-EHIME-REKIHAKU-168"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "河童",
+    "神社",
+    "恩返し",
+    "鯛",
+    "狛犬"
+  ],
+  "story_type": [
+    "河童伝承",
+    "神社縁起"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-EHIME-REKIHAKU-168",
+      "title": "県内各地の河童伝説",
+      "publisher": "愛媛県歴史文化博物館",
+      "publication_date": "2024-06-29",
+      "source_type": "museum_article",
+      "url": "https://www.i-rekihaku.jp/research/monogatari/article/168.html",
+      "relevant_section": "西予市明浜町高山・若宮神社",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
