@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "hitotsumekozou",
+  "canonical_name": "一つ目・片目の怪異伝承",
+  "aliases": [
+    "一つ目小僧",
+    "一つ目",
+    "片目の妖怪",
+    "一目小僧"
+  ],
+  "summary": "目が一つしかない人物・妖怪・神が現れる全国の伝承を整理するハブ。妖怪だけでなく山の神・鍛冶神・祭礼・禁忌との関係も個別に扱う。",
+  "sub_motifs": [
+    "一つ目小僧",
+    "一つ目の山神",
+    "片目の神",
+    "一つ目の巨人",
+    "片目になる由来",
+    "祭礼の一つ目"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "妖怪・神・祭礼伝承として広く分布。"
+    },
+    {
+      "region": "関東・中部",
+      "note": "一つ目小僧・山の怪異。"
+    },
+    {
+      "region": "近畿",
+      "note": "寺社・古典怪談との結び付き。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "一つ目の神・山の神との接続。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "天狗",
+      "山神",
+      "道祖神",
+      "のっぺらぼう"
+    ],
+    "caution": "一つ目小僧と一つ目の神・山神は性格が異なるため統合しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "一つ目系伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
