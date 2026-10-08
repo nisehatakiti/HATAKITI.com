@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "zashikiwarashi",
+  "canonical_name": "座敷童子・家の子ども霊伝承",
+  "aliases": [
+    "座敷童子",
+    "ザシキワラシ",
+    "ザシキボッコ",
+    "クラワラシ",
+    "クラボッコ",
+    "アカシャグマ"
+  ],
+  "summary": "家・座敷に現れる子どもの姿の霊的存在を全国横断で整理するハブ。特に岩手を中心とする東北で濃厚だが、異称や類似伝承は他地域にも見られる。家の繁栄・衰退、物音、枕返し、夢枕などが代表的な型。",
+  "sub_motifs": [
+    "家を繁盛させる童子",
+    "いなくなると家が衰える",
+    "座敷で物音を立てる",
+    "枕返し",
+    "寝ている人を押さえる",
+    "姿を見せない童子",
+    "赤い服の童子",
+    "地域異称"
+  ],
+  "known_connections": [
+    {
+      "region": "岩手",
+      "note": "中心的な分布地域。"
+    },
+    {
+      "region": "青森・秋田・宮城",
+      "note": "ザシキワラシ系の異称・類似伝承。"
+    },
+    {
+      "region": "愛媛・徳島",
+      "note": "アカシャグマと呼ばれる類似伝承が記録される。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "家の神",
+      "子どもの霊",
+      "河童",
+      "枕返し"
+    ],
+    "caution": "家の守護霊・子どもの幽霊・妖怪など、資料上の性格を保持する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0411050-000",
+      "role": "岩手を中心とする分布と異称"
+    },
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%85%A8%E5%9B%BD&Name=%E3%82%B6%E3%82%B7%E3%82%AD&Pref=",
+      "role": "全国のザシキ系事例"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
