@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kumamoto-nankan-gappa-suisha",
+  "status": "draft",
+  "title": "北肥後のガッパと水車",
+  "title_normalized": "北肥後のガッパと水車",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "熊本県南関町に伝わるガッパのいたずら伝承。水車を止めたり大きな音を立てたりし、酒を供えると静まったと記録されている。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-1230167"
+    ]
+  },
+  "story_summary": "南関町では、ガッパが水車を止めたり大きな音を立てたりして人々を驚かせたという。いたずらが続くときは酒を欲しがっていると考え、水車に酒を注ぐと止んだという明治期の話が記録されている。",
+  "story_content": "南関町では、ガッパが水車を止めたり大きな音を立てたりして人々を驚かせたという。いたずらが続くときは酒を欲しがっていると考え、水車に酒を注ぐと止んだという明治期の話が記録されている。",
+  "region": {
+    "prefecture": "熊本県",
+    "historical_province": null,
+    "municipality": "南関町",
+    "area_name": "旧玉名郡南関町"
+  },
+  "locations": [
+    {
+      "name": "水車",
+      "type": "水辺・生業",
+      "description": "ガッパのいたずらの舞台。",
+      "source_ids": [
+        "SRC-YOUKAI-1230167"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "河童",
+    "水車",
+    "酒",
+    "いたずら"
+  ],
+  "story_type": [
+    "河童伝承",
+    "水辺の怪異"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-1230167",
+      "title": "ガッパ（北肥後の河童話）",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1932",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230167",
+      "relevant_section": "地域・要約",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
