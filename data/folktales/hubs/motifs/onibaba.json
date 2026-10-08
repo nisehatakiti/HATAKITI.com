@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "onibaba",
+  "canonical_name": "鬼婆・人食い老婆伝承",
+  "aliases": [
+    "鬼婆",
+    "鬼女",
+    "人食い婆",
+    "山姥"
+  ],
+  "summary": "老婆が鬼・怪物となり、人を襲う・食う・旅人を脅かすなどの全国伝承を整理するハブ。山姥とは重なる場合があるが、鬼婆として語られる個別伝承を保持する。",
+  "sub_motifs": [
+    "旅人を襲う鬼婆",
+    "人食い老婆",
+    "寺・庵の鬼婆",
+    "妊婦を襲う鬼婆",
+    "鬼婆退治",
+    "鬼婆と洞窟",
+    "鬼婆の正体"
+  ],
+  "known_connections": [
+    {
+      "region": "東北",
+      "note": "鬼婆・山姥系の伝承。"
+    },
+    {
+      "region": "関東",
+      "note": "鬼婆・姥神・山中怪異。"
+    },
+    {
+      "region": "中部",
+      "note": "山・峠・寺に関する鬼婆。"
+    },
+    {
+      "region": "近畿・中国",
+      "note": "鬼女・鬼婆・人食い老婆。"
+    },
+    {
+      "region": "九州",
+      "note": "鬼婆・山女系怪異。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "山姥",
+      "鬼",
+      "産女",
+      "橋姫"
+    ],
+    "caution": "山姥と鬼婆は物語上重なるが、個別記録では名称と性格を保持する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "全国の鬼婆・鬼女系伝承"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
