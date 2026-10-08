@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-matsumoto-deiraboccha",
+  "status": "draft",
+  "title": "長野のデーラボッチャ",
+  "title_normalized": "長野のデーラボッチャ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県にはデーラボッチャが山を運び、足跡や背負った土などが山・岩・窪地になったとする複数の伝承が記録されている。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-C2030411"
+    ]
+  },
+  "story_summary": "長野県の伝承では、デーラボッチャが山を担いで運び、室山を作った、背負子の土が背中という山になった、草履の土を払った場所が中山になった、足跡が各地の窪地になったなど、巨人の身体や行動を地形に結び付ける話が複数記録されている。",
+  "story_content": "長野県の伝承では、デーラボッチャが山を担いで運び、室山を作った、背負子の土が背中という山になった、草履の土を払った場所が中山になった、足跡が各地の窪地になったなど、巨人の身体や行動を地形に結び付ける話が複数記録されている。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": null,
+    "municipality": "松本市ほか",
+    "area_name": "松本・安曇野・塩尻周辺"
+  },
+  "locations": [
+    {
+      "name": "室山・背負山・中山・足跡伝承地",
+      "type": "山・地形",
+      "description": "デーラボッチャの行動による地形由来とされる複数地点。",
+      "source_ids": [
+        "SRC-YOUKAI-C2030411"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "山",
+    "足跡",
+    "地形由来"
+  ],
+  "story_type": [
+    "巨人伝説",
+    "地形由来伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-C2030411",
+      "title": "デイラボッチ・デーラボッチャ等",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1989-1990",
+      "source_type": "database_search",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=C2030411-000",
+      "relevant_section": "長野県の類似事例",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
