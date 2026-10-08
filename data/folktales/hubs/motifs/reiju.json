@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "reiju",
+  "canonical_name": "霊獣・神使の動物伝承",
+  "aliases": [
+    "霊獣",
+    "神使",
+    "眷属",
+    "神の使い"
+  ],
+  "summary": "狐・狼・鹿・猿・蛇・鳥などが神の使い・守護者として現れる全国の信仰伝承を横断するハブ。妖怪としての動物伝承とは区別し、寺社・祭礼・禁忌との関係を整理する。",
+  "sub_motifs": [
+    "狐神使",
+    "狼神使",
+    "鹿神使",
+    "猿神使",
+    "蛇神使",
+    "鳥神使",
+    "神使を傷つける禁忌"
+  ],
+  "known_connections": [
+    {
+      "region": "東北",
+      "note": "狼・鹿・蛇などの神使。"
+    },
+    {
+      "region": "関東",
+      "note": "狐・狼・猿などの神使伝承。"
+    },
+    {
+      "region": "中部",
+      "note": "山岳信仰と動物神使。"
+    },
+    {
+      "region": "近畿",
+      "note": "狐・鹿・猿・烏など寺社神使。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "蛇・猿・狼・鳥など多様な神使。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "狐",
+      "大蛇",
+      "龍",
+      "稲荷",
+      "山神"
+    ],
+    "caution": "同じ動物でも妖怪・神・神使の役割が異なるため個別記録を統合しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "神使・霊獣伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
