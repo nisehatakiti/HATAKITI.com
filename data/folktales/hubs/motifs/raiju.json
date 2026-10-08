@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "raiju",
+  "canonical_name": "雷獣・雷の動物伝承",
+  "aliases": [
+    "雷獣",
+    "雷の獣",
+    "雷神の使い"
+  ],
+  "summary": "雷とともに現れる獣、雷が落ちた場所に残る動物、雷神の使いなどを語る全国の伝承を整理するハブ。狐・狸・猫・犬など具体的な動物像には地域差がある。",
+  "sub_motifs": [
+    "雷獣の落下",
+    "雷獣の捕獲",
+    "雷獣の姿",
+    "雷獣の毛・爪",
+    "雷と動物",
+    "雷神の使い"
+  ],
+  "known_connections": [
+    {
+      "region": "関東",
+      "note": "雷獣・雷と動物の伝承。"
+    },
+    {
+      "region": "中部",
+      "note": "山岳部の雷獣伝承。"
+    },
+    {
+      "region": "近畿",
+      "note": "雷神・雷獣の説話。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "雷と動物・怪異の結び付き。"
+    },
+    {
+      "region": "東北",
+      "note": "雷神・天候神との関係。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "雷神",
+      "龍神",
+      "狐",
+      "猫又"
+    ],
+    "caution": "気象現象としての雷説明と民俗上の雷獣伝承を分ける。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "雷獣・雷神伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
