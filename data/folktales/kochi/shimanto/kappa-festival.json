@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kochi-shimanto-kappa-festival",
+  "status": "draft",
+  "title": "四万十の河童と河童祭",
+  "title_normalized": "四万十の河童と河童祭",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "四万十市では、河童が馬を川へ引き込もうとして逆に馬に引きずられ、村に害を加えないと約束して許されたという伝承が記録され、6月15日に河童祭を行うとされる。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-1232620"
+    ]
+  },
+  "story_summary": "百姓が馬を川端につないでおくと河童が現れ、馬を引きずり込もうとした。逆に馬に引きずられた河童は、村の男女・牛馬・鶏・犬に害を加えないと約束して許され、その後6月15日に河童祭を行うと記録されている。",
+  "story_content": "百姓が馬を川端につないでおくと河童が現れ、馬を引きずり込もうとした。逆に馬に引きずられた河童は、村の男女・牛馬・鶏・犬に害を加えないと約束して許され、その後6月15日に河童祭を行うと記録されている。",
+  "region": {
+    "prefecture": "高知県",
+    "historical_province": null,
+    "municipality": "四万十市",
+    "area_name": "四万十市"
+  },
+  "locations": [
+    {
+      "name": "川端",
+      "type": "水辺・地域",
+      "description": "伝承・資料に記録された場所または地域。",
+      "source_ids": [
+        "SRC-YOUKAI-1232620"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "水の怪異",
+      "description": "地域の水辺に現れるとされる存在。",
+      "source_ids": [
+        "SRC-YOUKAI-1232620"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "馬",
+    "河童祭",
+    "水難"
+  ],
+  "story_type": [
+    "河童伝承",
+    "祭礼伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-1232620",
+      "title": "河童（河童の方言）",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1934",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232620",
+      "relevant_section": "高知県四万十市",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで実例を先行登録。後段で伝承本文・現地情報・現在の訪問可能性を深掘りする。"
+}
