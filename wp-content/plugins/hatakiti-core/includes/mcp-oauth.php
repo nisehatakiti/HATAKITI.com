@@ -172,7 +172,7 @@ function hatakiti_oauth_error_redirect( $params, $error, $description ) {
         $query['state'] = $params['state'];
     }
 
-    wp_safe_redirect( add_query_arg( $query, $params['redirect_uri'] ) );
+    wp_redirect( add_query_arg( $query, $params['redirect_uri'] ) );
     exit;
 }
 
@@ -248,6 +248,10 @@ function hatakiti_oauth_token( WP_REST_Request $request ) {
     $client = hatakiti_oauth_client_metadata( $client_id );
     if ( is_wp_error( $client ) ) {
         return $client;
+    }
+
+    if ( HATAKITI_MCP_RESOURCE !== ( isset( $params['resource'] ) ? $params['resource'] : HATAKITI_MCP_RESOURCE ) ) {
+        return new WP_Error( 'invalid_target', 'Invalid resource.' );
     }
 
     if ( 'authorization_code' === $grant_type ) {
