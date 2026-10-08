@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "takara-mono",
+  "canonical_name": "宝物・霊宝伝承",
+  "aliases": [
+    "霊宝",
+    "宝物伝説",
+    "神宝",
+    "宝の伝承"
+  ],
+  "summary": "神社・寺院・龍宮・異界・長者などから伝わったとされる宝物をめぐる全国の伝承を整理するハブ。宝物の由来、授与、紛失、盗難、禁忌などを個別に記録する。",
+  "sub_motifs": [
+    "神宝",
+    "寺宝",
+    "龍宮の宝",
+    "異界の宝",
+    "宝珠",
+    "宝剣",
+    "宝鏡",
+    "宝を盗む",
+    "宝を返す"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "寺社縁起・昔話・伝説に広く登場。"
+    },
+    {
+      "region": "東北・関東",
+      "note": "神宝・埋蔵財宝・武将伝承。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "寺社の霊宝・宝剣・宝鏡。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "龍宮・海神・神宝伝承。"
+    },
+    {
+      "region": "九州",
+      "note": "神社縁起・海上伝承と結び付く。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "埋蔵金",
+      "龍宮",
+      "浦島",
+      "長者",
+      "神社縁起"
+    ],
+    "caution": "実在する文化財と伝承上の由来を明確に区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "宝物・霊宝伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
