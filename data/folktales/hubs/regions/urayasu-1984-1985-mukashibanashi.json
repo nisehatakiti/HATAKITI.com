@@ -136,6 +136,35 @@
         "https://www.kinokuniya.co.jp/f/dsg-01-9784787290649",
         "https://www.kinokuniya.co.jp/f/dsg-08-9920469106"
       ]
+    },
+    {
+      "title": "ヤヘイの弁天さま",
+      "status": "title_overlap_confirmed",
+      "finding": "1984年『浦安の昔ばなし』に『やへいの弁天様』（当代島）、1992年『浦安の世間話』に『ヤヘイの弁天さま』が掲載される。千葉県立図書館索引で同一地域・同系題名の再録関係が確認できる。",
+      "interpretation": "再録候補として優先比較。本文未照合のため正式統合はしない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "ねんねろよォ",
+      "status": "source_confirmed_title_and_secondary_context",
+      "finding": "1992年『浦安の世間話』の目次に収録され、別の民話集『語り継ぐふるさとの民話』でも前田治郎助の語りとして『飛んでもふぐ／ねんねろよォ』が紹介されている。",
+      "interpretation": "浦安の前田治郎助による語りとしての存在を補強できるが、個別本文は未確認なので正式本文レコードはまだ作らない。",
+      "sources": [
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466",
+        "https://books.rakuten.co.jp/rb/487428/"
+      ]
+    },
+    {
+      "title": "1992年『浦安の世間話』公開Web調査の到達点",
+      "status": "research_boundary_confirmed",
+      "finding": "複数の書誌DBで全目次を確認できる一方、電子版の商品説明では本文検索・ハイライト・引用等が利用できないと明記されている。公開書評には一部の具体的な筋がある。",
+      "interpretation": "今後は公開二次資料から具体的本文が得られたものだけ正式レコードを深掘りし、それ以外は索引・候補として管理する。",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-08-9920469106",
+        "https://allreviews.jp/review/1819/"
+      ]
     }
   ],
   "confirmed_or_existing_overlap": [
