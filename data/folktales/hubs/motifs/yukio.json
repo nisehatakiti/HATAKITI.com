@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "yukiotoko",
+  "canonical_name": "雪男・雪男系山怪伝承",
+  "aliases": [
+    "雪男",
+    "雪男郎",
+    "山男",
+    "雪男のような怪異"
+  ],
+  "summary": "雪山・深山に現れる大男・毛むくじゃらの人型存在を横断するハブ。雪女と対になる伝承として扱われる場合もあるが、山男・山人・異人伝承との境界が曖昧なため、名称と本文上の性格を保持する。",
+  "sub_motifs": [
+    "雪山の大男",
+    "雪の足跡",
+    "毛むくじゃらの怪物",
+    "山男との遭遇",
+    "雪女との対",
+    "山人・異人との接続"
+  ],
+  "known_connections": [
+    {
+      "region": "東北・北海道",
+      "note": "雪山・山人系伝承との接続が多い。"
+    },
+    {
+      "region": "北陸・中部",
+      "note": "雪深い山地の山男・異人伝承。"
+    },
+    {
+      "region": "関東",
+      "note": "奥山の山人・雪男類似伝承。"
+    },
+    {
+      "region": "全国",
+      "note": "現代の『雪男』概念と古い山男伝承を区別して扱う。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "雪女",
+      "山男",
+      "山姥",
+      "天狗"
+    ],
+    "caution": "近代的なUMAとしての雪男と、伝統的な山男・山人伝承を同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "山男・雪山怪異の比較調査"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
