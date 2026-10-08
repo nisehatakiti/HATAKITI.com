@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "tanuki",
+  "canonical_name": "狸伝承・狸の化かし",
+  "aliases": [
+    "狸",
+    "タヌキ",
+    "たぬき",
+    "狸の化かし"
+  ],
+  "summary": "狸をめぐる全国の化かし・変身・いたずら・恩返し・祟りなどを整理するハブ。狐と共通する型が多い一方、腹鼓、金玉、化ける道具、寺や山との関係など狸独自の表現もある。",
+  "sub_motifs": [
+    "狸に化かされる",
+    "狸が人に化ける",
+    "狸の腹鼓",
+    "狸の恩返し",
+    "狸の祟り",
+    "狸の相撲",
+    "狸の茶釜",
+    "狸と寺",
+    "狸と山"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "日文研DBで狸系約1,000事例。"
+    },
+    {
+      "region": "四国",
+      "note": "狸伝承が特に豊富。"
+    },
+    {
+      "region": "中国",
+      "note": "化け狸・寺狸等。"
+    },
+    {
+      "region": "関東",
+      "note": "狸の化かし・山狸・寺狸等。"
+    },
+    {
+      "region": "九州",
+      "note": "狸・化け物・山の怪異としての伝承群。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "狐",
+      "ムジナ",
+      "化け猫",
+      "狸の茶釜"
+    ],
+    "caution": "昔話・説話・妖怪伝承の狸を区別し、狐との混同を避ける。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "全国の狸伝承分布"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
