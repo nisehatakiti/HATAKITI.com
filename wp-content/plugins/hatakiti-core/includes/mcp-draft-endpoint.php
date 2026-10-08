@@ -227,6 +227,7 @@ function hatakiti_handle_mcp_request( WP_REST_Request $request ) {
             $draft_request->set_param( 'meta', isset( $arguments['meta'] ) ? $arguments['meta'] : array() );
 
             $draft_result = hatakiti_handle_draft_request( $draft_request );
+            wp_set_current_user( $previous_user_id );
 
             if ( is_wp_error( $draft_result ) ) {
                 return hatakiti_mcp_error(
