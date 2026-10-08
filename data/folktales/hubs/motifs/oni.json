@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "oni",
+  "canonical_name": "鬼・鬼神・鬼の里伝承",
+  "aliases": [
+    "鬼",
+    "オニ",
+    "鬼神",
+    "鬼婆"
+  ],
+  "summary": "鬼をめぐる日本各地の伝承を、山・洞窟・寺社・地名・災害・退治・祭礼などの型から横断整理する全国ハブ。古典的な鬼、地域の山鬼・鬼婆、地名由来の鬼伝承などを同一話として統合せず関連付ける。",
+  "sub_motifs": [
+    "鬼退治",
+    "鬼の住む山・洞窟",
+    "鬼の足跡",
+    "鬼が作った地形",
+    "鬼の落とし物",
+    "鬼婆",
+    "鬼と寺社",
+    "鬼の祭礼・追儺",
+    "鬼の地名由来"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "日文研DBで『オニ』約670事例。"
+    },
+    {
+      "region": "東北",
+      "note": "約100事例。"
+    },
+    {
+      "region": "近畿",
+      "note": "約140事例。"
+    },
+    {
+      "region": "九州・沖縄",
+      "note": "約60事例。"
+    },
+    {
+      "region": "中部・関東",
+      "note": "多数の鬼・鬼婆・鬼神系事例。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "鬼婆",
+      "酒呑童子",
+      "天狗",
+      "山姥",
+      "羅刹"
+    ],
+    "caution": "昔話の鬼、信仰上の鬼神、地名伝承、祭礼の鬼を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "全国・地域別の鬼伝承件数"
+    },
+    {
+      "title": "国際日本文化研究センター 近畿地域検索",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/kinkiSearch.html",
+      "role": "近畿の鬼伝承分布"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
