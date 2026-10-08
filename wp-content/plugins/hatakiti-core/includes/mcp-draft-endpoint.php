@@ -170,9 +170,15 @@ function hatakiti_handle_mcp_request( WP_REST_Request $request ) {
                             'additionalProperties' => false,
                         ),
                         'annotations' => array(
-                            'readOnlyHint'  => false,
+                            'readOnlyHint'   => false,
                             'destructiveHint'=> false,
                             'openWorldHint'  => false,
+                        ),
+                        'securitySchemes' => array(
+                            array(
+                                'type'   => 'oauth2',
+                                'scopes' => array( HATAKITI_OAUTH_SCOPE ),
+                            ),
                         ),
                     ),
                 ),
