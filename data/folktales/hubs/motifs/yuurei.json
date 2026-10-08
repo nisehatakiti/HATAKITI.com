@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "yuurei",
+  "canonical_name": "幽霊・死者の怪異伝承",
+  "aliases": [
+    "幽霊",
+    "亡霊",
+    "死霊",
+    "死人"
+  ],
+  "summary": "死者の霊が現れる全国の伝承を横断する大分類ハブ。恨み、未練、供養、知らせ、祟り、道案内、家への帰還など目的と性格は多様で、個別の地域伝承を統合せず類型として接続する。",
+  "sub_motifs": [
+    "死者からの知らせ",
+    "死者の頼み",
+    "未練の幽霊",
+    "祟り",
+    "供養を求める幽霊",
+    "家に帰る死者",
+    "水死者の幽霊",
+    "墓・寺に現れる幽霊",
+    "幽霊火",
+    "夢枕"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "幽霊・亡霊系は全国的に大量の伝承がある。"
+    },
+    {
+      "region": "海岸部",
+      "note": "水死者・船幽霊との接続が多い。"
+    },
+    {
+      "region": "山間部",
+      "note": "峠・山道・墓地の幽霊。"
+    },
+    {
+      "region": "都市部",
+      "note": "寺・屋敷・橋・道の怪談。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "船幽霊",
+      "海坊主",
+      "幽霊火",
+      "七人ミサキ",
+      "産女"
+    ],
+    "caution": "文学的怪談と地域の口承伝承を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "全国の幽霊・亡霊伝承"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
