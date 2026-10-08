@@ -1,0 +1,59 @@
+{
+  "schema_version":"1.0",
+  "motif_id":"urayasu-star-traditions",
+  "canonical_name":"浦安の星の伝承",
+  "status":"draft",
+  "category":"motif_hub",
+  "aliases":["メラボシ","六部の星","キタノホシ","ホウキボシ"],
+  "summary":"浦安の漁村で語られた星に関する伝承群。『浦安の世間話』にはメラボシ、キタノホシほか、ホウキボシが収録され、星を海上・天候・地域の記憶と結び付ける語りがまとまっている。本文が確認できた『メラボシ』では、浦安の魚売りが海面からいくらも昇らない『ロクブノホシ（六部の星）』について語った記録が残る。",
+  "known_connections":[
+    {
+      "record_id":"chiba-urayasu-meraboshi",
+      "title":"メラボシ",
+      "relationship":"confirmed_record",
+      "evidence_level":"partial_text"
+    },
+    {
+      "record_id":"chiba-urayasu-kitanohoshi",
+      "title":"キタノホシほか",
+      "relationship":"source_index_only",
+      "evidence_level":"table_of_contents"
+    },
+    {
+      "record_id":"chiba-urayasu-hokiboshi",
+      "title":"ホウキボシ",
+      "relationship":"source_index_only",
+      "evidence_level":"table_of_contents"
+    }
+  ],
+  "classification":{
+    "core_motif":"星と海・天候・漁村生活",
+    "related_motifs":["海の怪異","天候伝承","漁師の伝承","死者・霊の星化"],
+    "caution":"メラボシ、キタノホシ、ホウキボシを同一の星や同一伝承とは断定しない。本文比較後に個別関係を判定する。"
+  },
+  "sources":[
+    {
+      "source_id":"SRC-NDL-URAYASU-STAR-TOC",
+      "title":"浦安の世間話 : 前田治郎助の語り",
+      "publisher":"国立国会図書館",
+      "source_type":"library_bibliographic_record",
+      "url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466",
+      "accessed_date":"2026-10-08",
+      "relevant_section":"5 ノガタ・江戸前・世間話／メラボシ／キタノホシほか／ホウキボシ",
+      "language":"ja"
+    },
+    {
+      "source_id":"SRC-CHIBA-LIB-URAYASU-STAR",
+      "title":"千葉県の民話 浦安市",
+      "publisher":"千葉県立図書館",
+      "source_type":"library_index",
+      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+      "accessed_date":"2026-10-08",
+      "relevant_section":"メラボシ／浦安の世間話",
+      "language":"ja"
+    }
+  ],
+  "confidence":"high",
+  "research_status":"partial",
+  "research_notes":"『浦安の世間話』の目次で星関連の3項目群を確認し、メラボシについては別途本文に近い記録を確認済み。キタノホシとホウキボシは本文未確認のため、個別レコード化・内容推測は行わない。"
+}
