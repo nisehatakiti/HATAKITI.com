@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "shichininmisaki",
+  "canonical_name": "七人ミサキ・集団水死者の怪異",
+  "aliases": [
+    "七人ミサキ",
+    "七人御前",
+    "七人の水死人"
+  ],
+  "summary": "水難で死んだ複数の人の霊が連れ立って現れ、生者を水中へ引き込むとされる伝承を横断するハブ。特に四国・中国・九州・瀬戸内の海岸河川に多く、人数や名称が地域で異なる。",
+  "sub_motifs": [
+    "七人の水死者",
+    "生者を一人ずつ引き込む",
+    "人数が減ると新しい死者が加わる",
+    "海・川・淵の集団霊",
+    "女性集団のミサキ"
+  ],
+  "known_connections": [
+    {
+      "region": "四国",
+      "note": "高知・徳島・愛媛などで濃厚。"
+    },
+    {
+      "region": "中国",
+      "note": "山口・広島・岡山等。"
+    },
+    {
+      "region": "九州",
+      "note": "海岸・川の水死者伝承。"
+    },
+    {
+      "region": "瀬戸内",
+      "note": "海難・水難伝承との接続が多い。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "船幽霊",
+      "海坊主",
+      "水死者の幽霊",
+      "ミサキ"
+    ],
+    "caution": "『ミサキ』は地域によって神・霊・怪異の意味が異なるため、七人ミサキと同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "七人ミサキの全国比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
