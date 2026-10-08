@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "nopperabo",
+  "canonical_name": "のっぺらぼう・顔のない怪異",
+  "aliases": [
+    "のっぺらぼう",
+    "顔なし",
+    "無顔の怪異"
+  ],
+  "summary": "顔の目鼻口がない、あるいは顔を見せると消える怪異を横断するハブ。橋・坂・墓地・道などに現れる怪談が多いが、地域差と文学的変化を保持する。",
+  "sub_motifs": [
+    "顔のない人",
+    "顔を見せて消える",
+    "橋ののっぺらぼう",
+    "墓地の怪異",
+    "夜道の怪異",
+    "別の人物にも同じ顔がない"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "都市怪談として広く知られる。"
+    },
+    {
+      "region": "関東",
+      "note": "坂・橋・夜道の怪談。"
+    },
+    {
+      "region": "近畿",
+      "note": "寺社・道・旅人の怪談。"
+    },
+    {
+      "region": "九州",
+      "note": "顔のない女などの類似怪異。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "ろくろ首",
+      "幽霊",
+      "一つ目小僧"
+    ],
+    "caution": "現代都市伝説と古い口承を混同しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "のっぺらぼう系怪異の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
