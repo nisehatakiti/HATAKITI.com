@@ -1,40 +1,272 @@
 {
-  "schema_version":"1.0",
-  "hub_id":"hub-region-urayasu-1984-1985-mukashibanashi",
-  "title":"浦安『昔ばなし』『昔ばなし 続』採録伝承群",
-  "hub_type":"source-cluster",
-  "region":"千葉県浦安市",
-  "description":"浦安市教育委員会社会教育課による1984年『浦安の昔ばなし』と、浦安市による1985年『浦安の昔ばなし 続』の採録題名を整理し、1991〜1992年の再採録資料との重複・派生・未確認本文を管理するハブ。",
-  "sources":[
-    {"title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"},
-    {"title":"浦安の昔ばなし","publisher":"浦安市教育委員会社会教育課","year":1984},
-    {"title":"浦安の昔ばなし 続","publisher":"浦安市","year":1985},
-    {"title":"浦安の世間話 : 前田治郎助の語り","publisher":"青弓社","year":1992,"url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"},
-    {"title":"房総・民話撰","publisher":"千秋社","year":1991}
+  "schema_version": "1.0",
+  "hub_id": "hub-region-urayasu-1984-1985-mukashibanashi",
+  "title": "浦安『昔ばなし』『昔ばなし 続』採録伝承群",
+  "hub_type": "source-cluster",
+  "region": "千葉県浦安市",
+  "description": "浦安市教育委員会社会教育課による1984年『浦安の昔ばなし』と、浦安市による1985年『浦安の昔ばなし 続』の採録題名を整理し、1991〜1992年の再採録資料との重複・派生・未確認本文を管理するハブ。",
+  "sources": [
+    {
+      "title": "千葉県の民話 浦安市",
+      "publisher": "千葉県立図書館",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+    },
+    {
+      "title": "浦安の昔ばなし",
+      "publisher": "浦安市教育委員会社会教育課",
+      "year": 1984
+    },
+    {
+      "title": "浦安の昔ばなし 続",
+      "publisher": "浦安市",
+      "year": 1985
+    },
+    {
+      "title": "浦安の世間話 : 前田治郎助の語り",
+      "publisher": "青弓社",
+      "year": 1992,
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
+    },
+    {
+      "title": "房総・民話撰",
+      "publisher": "千秋社",
+      "year": 1991
+    }
   ],
-  "research_findings":[
-    {"title":"長さんギツネ①・②","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』の①は堀江・境川・久助稲荷、②は堀江・当代島・久助稲荷。市川市索引にも『長さんギツネ②』が浦安資料として現れ、関連地に市川・行徳が記録される。","interpretation":"浦安だけでなく行徳方面との接点を持つ候補。本文取得までは独立候補として保持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"]},
-    {"title":"福富稲荷のキツネ①〜⑤","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に①〜⑤の5本がすべて堀江の話として掲載される。","interpretation":"単一タイトルではなく5本の連続採録群として扱う。本文なしで一つの話へ統合しない。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
-    {"title":"キツネのお礼","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に堀江の話として掲載。一般検索で同名の他地域民話が多数出るため、他地域の本文を浦安版に流用しない。","interpretation":"浦安版本文が取れるまでresearchingを維持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
-    {"title":"一つ圦のキツネ","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に堀江の話として掲載。既存候補では境川との関連が記録されている。","interpretation":"地名由来を本文から推測せず、本文未確認候補として保持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
-    {"title":"まさき稲荷のキツネ","status":"index_only_after_batch_search","finding":"1984年『浦安の昔ばなし』に堀江の話として掲載。稲荷名は確認できるが、物語内容は検索結果から取得できなかった。","interpretation":"稲荷信仰の一般説明を本文として代用しない。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]},
-    {"title":"月に化けたタヌキ／月に化けたムジナ","status":"multi_title_confirmed","finding":"1984年には『月に化けたタヌキ』（堀江・大蓮寺）と『月に化けたムジナ』（猫実）が別々に掲載。1992年には『月に化けた狢』（善福寺・猫実・堀江）が掲載される。","interpretation":"同一モチーフ群としてハブ管理するが、本文未確認のまま統合しない。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"]},
-    {"title":"久助稲荷のキツネ","status":"tradition_context_confirmed_text_unconfirmed","finding":"大蓮寺公式説明では久助稲荷の由来として、故人となっていた久助が稲荷復興を頼みに現れたという伝承が確認できる。浦安市公式の史跡一覧・郷土博物館年報でも久助稲荷が実在する史跡として確認できる。","interpretation":"これは既存正式『久助稲荷』を裏付ける地域資料であり、『久助稲荷のキツネ』本文そのものではない。両者を混同しない。","sources":["https://dairenji.jp/about/","https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html","https://www.city.urayasu.lg.jp/_res/projects/default_project/_page_/001/038/107/r4nenpou.pdf"]},
-    {"title":"弁天様の恩返し","status":"index_only_after_batch_search","finding":"1985年『浦安の昔ばなし 続』に掲載されるが、今回の公開検索では本文を取得できなかった。","interpretation":"『猫実の弁天様』『ヤヘイの弁天さま』とは別候補として保持する。","sources":["https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"]}
+  "research_findings": [
+    {
+      "title": "長さんギツネ①・②",
+      "status": "index_only_after_batch_search",
+      "finding": "1984年『浦安の昔ばなし』の①は堀江・境川・久助稲荷、②は堀江・当代島・久助稲荷。市川市索引にも『長さんギツネ②』が浦安資料として現れ、関連地に市川・行徳が記録される。",
+      "interpretation": "浦安だけでなく行徳方面との接点を持つ候補。本文取得までは独立候補として保持する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"
+      ]
+    },
+    {
+      "title": "福富稲荷のキツネ①〜⑤",
+      "status": "index_only_after_batch_search",
+      "finding": "1984年『浦安の昔ばなし』に①〜⑤の5本がすべて堀江の話として掲載される。",
+      "interpretation": "単一タイトルではなく5本の連続採録群として扱う。本文なしで一つの話へ統合しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "キツネのお礼",
+      "status": "index_only_after_batch_search",
+      "finding": "1984年『浦安の昔ばなし』に堀江の話として掲載。",
+      "interpretation": "浦安版本文が取れるまでresearchingを維持する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "一つ圦のキツネ",
+      "status": "index_only_after_batch_search",
+      "finding": "1984年『浦安の昔ばなし』に堀江・境川の話として掲載。",
+      "interpretation": "地名由来を本文から推測せず、本文未確認候補として保持する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "まさき稲荷のキツネ",
+      "status": "index_only_after_batch_search",
+      "finding": "1984年『浦安の昔ばなし』に堀江の話として掲載。",
+      "interpretation": "稲荷名から物語内容を推測しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "月に化けたタヌキ／月に化けたムジナ",
+      "status": "multi_title_confirmed",
+      "finding": "1984年には『月に化けたタヌキ』（堀江・大蓮寺）と『月に化けたムジナ』（猫実）が別々に掲載。1992年には『月に化けた狢』（善福寺・猫実・堀江）が掲載される。",
+      "interpretation": "同一モチーフ群としてハブ管理するが、本文未確認のまま統合しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
+      ]
+    },
+    {
+      "title": "久助稲荷のキツネ",
+      "status": "tradition_context_confirmed_text_unconfirmed",
+      "finding": "大蓮寺公式説明では久助稲荷の由来として、故人となっていた久助が稲荷復興を頼みに現れたという伝承が確認できる。",
+      "interpretation": "既存正式『久助稲荷』を補強する地域資料であり、本タイトル本文とは区別する。",
+      "sources": [
+        "https://dairenji.jp/about/"
+      ]
+    },
+    {
+      "title": "弁天様の恩返し",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』に掲載。公開検索では本文を取得できなかった。",
+      "interpretation": "『猫実の弁天様』『ヤヘイの弁天さま』とは別候補として保持する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "延命寺のお地蔵さん",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "既存『不思議な誕生』『慈悲地蔵のご利益』『地蔵さまがついた』などと題名だけで統合しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "大川端のお地蔵さん",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "地蔵信仰の一般情報を本文代用にしない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "壁に隠されてた刀",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "既存の地蔵・刀剣ハブに接続できるが、本文未確認のため正式レコード化しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "火渡り",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "修験・火渡り一般の説明を浦安版本文として扱わない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "引越し念仏",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "念仏・葬送一般の説明を本文代用にしない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "通運丸と高瀬船",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "水運史の一般情報と浦安版の語りを分離する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "道路の真ん中に爆弾落っこった",
+      "status": "cross-region_index_confirmed",
+      "finding": "浦安版は1985年『浦安の昔ばなし 続』、関連地は今井の橋。市川市索引にも同じタイトルが浦安資料として掲載され、今井の橋が関連地として確認される。",
+      "interpretation": "浦安採録として管理し、市川版とは別本文の可能性を残す。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"
+      ]
+    },
+    {
+      "title": "立ち不動と座り不動",
+      "status": "cross-region_multi_source",
+      "finding": "浦安では1985年『浦安の昔ばなし 続』と1992年『浦安の世間話』の双方に掲載。市川市索引にも浦安資料として掲載され、関連地は行徳渡し・今井の渡し。",
+      "interpretation": "御滝山・成田山・行徳渡しなどの地域差を含む伝承群として本文比較する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
+      ]
+    },
+    {
+      "title": "まあち",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録で、関連地は猫実・堀江。",
+      "interpretation": "題名の意味や内容を推測せず候補管理する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "薪船と松葉船",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録で、関連地は浦安。",
+      "interpretation": "船の一般史ではなく浦安採録本文の確認を優先する。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "博打の逃げしゃり",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録で、関連地は当代島。",
+      "interpretation": "題名だけから筋を推測しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "だんなの山",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録で、関連地は善福寺。",
+      "interpretation": "寺院名から伝承内容を推測しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "とくべえさんち",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録で、関連地は善福寺。",
+      "interpretation": "人物・家の由来を題名から推測しない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    },
+    {
+      "title": "門付",
+      "status": "index_only_after_batch_search",
+      "finding": "1985年『浦安の昔ばなし 続』の浦安採録題名として確認。",
+      "interpretation": "門付の一般民俗説明を浦安版本文に置き換えない。",
+      "sources": [
+        "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+      ]
+    }
   ],
-  "confirmed_or_existing_overlap":[
-    {"title":"キツネの恩返し","record_id":"chiba-urayasu-fox-return","note":"1984→1991再録候補。本文取得待ち。"},
-    {"title":"大黒様に化けたキツネ","record_id":"chiba-urayasu-daikoku-fox","note":"1984→1991『にせの大黒様』再録候補。本文取得待ち。"},
-    {"title":"月に化けたムジナ","record_id":"chiba-urayasu-moon-mujina","note":"1984→1992同題系。本文比較前。"},
-    {"title":"久助稲荷","record_id":"chiba-urayasu-kyusuke-inari","note":"大蓮寺公式・浦安市資料で伝承と史跡を補強済み。"}
+  "confirmed_or_existing_overlap": [
+    {
+      "title": "キツネの恩返し",
+      "record_id": "chiba-urayasu-fox-return",
+      "note": "1984→1991再録候補。本文取得待ち。"
+    },
+    {
+      "title": "大黒様に化けたキツネ",
+      "record_id": "chiba-urayasu-daikoku-fox",
+      "note": "1984→1991『にせの大黒様』再録候補。本文取得待ち。"
+    },
+    {
+      "title": "月に化けたムジナ",
+      "record_id": "chiba-urayasu-moon-mujina",
+      "note": "1984→1992同題系。本文比較前。"
+    },
+    {
+      "title": "久助稲荷",
+      "record_id": "chiba-urayasu-kyusuke-inari",
+      "note": "大蓮寺公式・浦安市資料で伝承と史跡を補強済み。"
+    }
   ],
-  "research_rules":[
+  "research_rules": [
     "索引掲載だけでは正式レコードを作らない。",
     "同題・類題でも本文比較なしに統合しない。",
     "地名・寺社名から物語本文を推測しない。",
     "他地域の同名民話本文を浦安版へ流用しない。",
     "本文が確認できたものから正式レコード化し、未確認題名はこのハブで候補管理する。"
   ],
-  "research_status":"partial",
-  "confidence":"high"
+  "research_status": "partial",
+  "confidence": "high"
 }
