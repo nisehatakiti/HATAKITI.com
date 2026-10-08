@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "toge-no-kaii",
+  "canonical_name": "峠・坂・辻の怪異伝承",
+  "aliases": [
+    "峠の怪",
+    "坂の怪異",
+    "辻の怪異",
+    "道の怪異"
+  ],
+  "summary": "峠・坂・辻・分かれ道など、人の移動と境界になる場所で語られる全国の怪異・神霊伝承を横断するハブ。旅人、夜道、道祖神、妖怪との遭遇など多様な型を含む。",
+  "sub_motifs": [
+    "峠の妖怪",
+    "辻の怪異",
+    "夜道の怪異",
+    "旅人への化け物",
+    "道祖神",
+    "一つ目の怪異",
+    "道での禁忌"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "交通路・峠・辻に広く分布。"
+    },
+    {
+      "region": "東北・中部",
+      "note": "山越え・峠の怪異。"
+    },
+    {
+      "region": "関東・近畿",
+      "note": "辻・坂・夜道の怪談。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "峠の神・妖怪・旅人伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "天狗",
+      "山姥",
+      "道祖神",
+      "一つ目小僧",
+      "幽霊"
+    ],
+    "caution": "特定の妖怪名ではなく場所類型のハブ。個々の怪異名を統合しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "道・峠・辻の怪異比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
