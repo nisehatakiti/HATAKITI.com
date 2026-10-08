@@ -222,13 +222,15 @@
         "恩返し",
         "怪異"
       ],
-      "research_status": "researching",
+      "research_status": "promoted_to_canonical_record",
       "sources": [
         {
           "title": "千葉県立図書館 千葉県の民話 浦安市",
           "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
         }
-      ]
+      ],
+      "promoted_to": "data/folktales/chiba/records/urayasu/hebi-no-ongaeshi.json",
+      "research_notes": " 2026-10-08、日本伝承マップ経由で本文を確認し、同record_idのまま data/folktales/chiba/records/urayasu/hebi-no-ongaeshi.json へ正本として格上げした。"
     },
     {
       "record_id": "chiba-urayasu-hebi-no-hikkoshi",

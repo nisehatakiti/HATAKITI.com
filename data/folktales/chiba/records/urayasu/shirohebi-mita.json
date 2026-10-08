@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-shirohebi-mita","status":"draft","title":"白蛇を見たって","title_normalized":"白蛇を見たって","title_origin":"source_title",
+  "summary":{"text":"善福寺裏手の田に水を入れに行った子どもが真っ白な蛇を見つけて逃げ出し、戻ったときには既に消えていたという体験談で、善福寺のイチョウの穴に白蛇が住むという言い伝えに結び付く。","based_on_source_ids":["SRC-JFOLKLORE-SHIROHEBI"]},
+  "story_summary":"浦安・善福寺の裏手には青大将がたくさんいたが、ある日、子どもの頃の話者が友人と田に水を入れに行った際、真っ白な蛇を見つけて驚いて逃げ出した。戻ってみるとその白蛇はもう消えていたが、善福寺のイチョウの木の穴に白蛇が住んでいるという言い伝えがあったと伝えられている。",
+  "story_content":"善福寺の裏あたりには、昔から蛇がたくさんいた。たいていは青大将で、漁師の家にはどこも浅蜊を採る籠をこしらえる八番線の針金が置いてあり、それを切って先を尖らせ、糸を付けて狙い撃ちにすると見事に絡みついたという。\n\nある日、まだ子どもだった話者は、友人と一緒に田に水を入れに出かけた。すると、そこで真っ白な蛇を見つけた。驚いた二人はその場から逃げ出し、しばらくしてから恐る恐る戻ってみたが、白蛇はもうどこにも見当たらなかった。\n\n善福寺には、境内のイチョウの木にある穴に白蛇が住んでいるという言い伝えが残っており、話者が見た白蛇も、この言い伝えと結び付けて語られてきたという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"善福寺","source_description":"千葉県立図書館の浦安市民話索引では『浦安の世間話』収録として善福寺を関連地に掲載している。"},
+  "locations":[{"name":"善福寺","location_type":"temple","description":"境内のイチョウの木の穴に白蛇が住むという言い伝えが残る寺院。浦安市当代島二丁目の市指定文化財・宝篋印塔がある寺院として公式記録がある。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-SHIROHEBI"]}],
+  "characters":[{"name":"話者（子ども時代）","role":"善福寺裏手の田で白蛇を目撃した人物","attributes":[],"source_ids":["SRC-JFOLKLORE-SHIROHEBI"]}],
+  "beings":[{"name":"白蛇","type":"animal","attributes":["善福寺のイチョウの穴に住むと伝えられる"],"source_ids":["SRC-JFOLKLORE-SHIROHEBI"]}],
+  "themes":["白蛇","善福寺","水辺","体験談"],"story_type":["体験談","動物怪異譚","寺社伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-hakushebi-no-ongaeshi","relationship":"related_tradition_group","note":"同じ白蛇信仰に連なる別タイトルの伝承。本文照合前のため同一話とはしない。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-SHIROHEBI","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-10-08","relevant_section":"白蛇を見たって","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-SHIROHEBI","title":"善福寺の田で出会った真白な蛇（日本伝承マップ：現代民話考9〈木霊・蛇〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考9 木霊・蛇』、話者：関口大治郎・木村邦子","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_482_ep_184.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考9 木霊・蛇』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only stub（data/folktales/chiba/urayasu/2026-08-batch-009-index-sweep-b.json内）で予約済みのrecord_id（chiba-urayasu-shirohebi-mita）を維持し、本ファイルへ正本として格上げした。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"千葉県立図書館索引と善福寺の公式文化財情報で地域根拠を確認していたが本文未確認だった。2026-10-08、日本伝承マップ経由で『現代民話考9（木霊・蛇）』所収の引用本文（話者：関口大治郎・木村邦子、『浦安の世間話』とは異なる話者）を確認し、本文確認済みへ格上げした。『白蛇の恩返し』とは別タイトルのため統合していない。"
+}

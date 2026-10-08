@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-hebi-no-awatori","status":"draft","title":"蛇の泡とり","title_normalized":"蛇の泡とり","title_origin":"source_title",
+  "summary":{"text":"百間の入でボラ漁をしていた男が弁当を取りに戻る途中、何千匹もの蛇が丸い泡の玉を奪い合う『蛇の泡とり』を目撃し、籠で泡を奪って持ち帰ると、その家に大漁が続いたという伝承。","based_on_source_ids":["SRC-JFOLKLORE-HEBI-NO-AWATORI"]},
+  "story_summary":"浦安・百間の入でボラ漁をしていた男が、弁当を取りに家へ戻る途中、何千匹もの蛇が丸い泡の玉を奪い合う『蛇の泡とり』を見かける。担いでいた籠をかぶせて泡を奪い、家に持ち帰ると、その家には大漁が続いたと伝えられている。",
+  "story_content":"百間の入のあたりでボラ漁に出ていた男が、ある日、漁がうまくいかず、もう少し働きたいのに弁当を切らしてしまった。昔はお櫃を籠に入れて担いでいくのが常だったので、男は弁当を取りに家まで戻ることにした。その道の途中で、男は『蛇の泡とり』という不思議な光景に出くわした。蛇の固まりがあり、その中に丸い泡の玉がある。蛇たちはその泡を一匹で奪おうと、何千匹もが絡まり合って取り合っていたという。男は担いでいた籠をその蛇の群れにかぶせて押さえた。蛇たちは驚いて籠の網目から逃げ出し、泡だけをその場に残していった。男がその泡を持って帰ると、それから家には大漁が続いたという。蛇が一匹でその泡を飲むと神の位に昇るといわれ、それを人間が持ち帰ったため、福は人間の方へ向いて、何をやっても運よく事が運んだと伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"百間の入（ヒャッケンノイリ）","source_description":"千葉県立図書館の浦安市民話索引では『浦安の世間話』（百間の入）、『浦安の昔ばなし』（当代島）の双方に同題の収録が確認できる。"},
+  "locations":[{"name":"百間の入","location_type":"sea_area","description":"蛇の泡とりが目撃されたとされる漁場。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-HEBI-NO-AWATORI"]}],
+  "characters":[{"name":"ボラ漁の男","role":"蛇の泡とりを目撃し、泡を持ち帰った人物","attributes":[],"source_ids":["SRC-JFOLKLORE-HEBI-NO-AWATORI"]}],
+  "beings":[{"name":"蛇","type":"animal","attributes":["泡の玉を奪い合う","泡を飲むと神の位に昇るとされる"],"source_ids":["SRC-JFOLKLORE-HEBI-NO-AWATORI"]}],
+  "themes":["蛇","水辺","怪異","大漁","百間の入"],"story_type":["怪談","動物怪異譚","豊漁祈願伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-hebi-no-hashi","relationship":"same_tradition_cluster","note":"同じ『現代民話考9（木霊・蛇）』に収録される浦安の蛇怪異譚群。"},{"record_id":"chiba-urayasu-hebi-no-ongaeshi","relationship":"related_tradition_group","note":"同じ百間の入を舞台とする別の蛇の恩返し譚。本文照合前のため同一話とはしない。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-AWATORI","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-08-26","relevant_section":"蛇の泡とり","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-HEBI-NO-AWATORI","title":"籠で奪った蛇の泡の玉（日本伝承マップ：現代民話考9〈木霊・蛇〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考9 木霊・蛇』、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_482_ep_546.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考9 木霊・蛇』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only record（data/folktales/chiba/ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json内、related_locations『ヒャッケンノイリ』）のrecord_idを維持し、本ファイルへ正本として格上げした。『ヒャッケンノイリ』は『百間の入』の表記であることを確認した。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"千葉県立図書館索引で双方の資料への収録と地名『ヒャッケンノイリ』を確認していたが本文未確認だった（2026-08-26時点）。2026-10-08、日本伝承マップ経由で『現代民話考9（木霊・蛇）』所収の引用本文を確認し、『ヒャッケンノイリ』が『百間の入』であることも確定した。本文の話者・採録者は『浦安の世間話』と同一だが、収録書誌自体は別のため、両書で完全に同一の本文かは未照合。"
+}

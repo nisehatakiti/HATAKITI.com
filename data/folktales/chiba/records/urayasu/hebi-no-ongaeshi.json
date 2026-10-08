@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-hebi-no-ongaeshi","status":"draft","title":"蛇の恩返し","title_normalized":"蛇の恩返し","title_origin":"source_title",
+  "summary":{"text":"百間の入沖で投網をしていた船のとだてに蛇がとぐろを巻いて居座り、しばらくそこにいた後に陸へ帰っていくと、その船は大漁となり、弁天様の恩返しだろうと言われたという伝承。","based_on_source_ids":["SRC-JFOLKLORE-HEBI-NO-ONGAESHI"]},
+  "story_summary":"浦安・百間の入沖で投網をしていた船に、上総の方から蛇が泳いできて船のとだてにとぐろを巻いて居座った。追い払おうとしても何度も戻ってくるため、漁師はそのままにしておき、陸に近づくと蛇は自分で降りていった。その後、船は大漁となり、あれは弁天様の恩返しだったのだろうと語られている。",
+  "story_content":"百間の入の沖で投網をしていたところ、上総の方から一匹の蛇が泳いで渡ってきた。浦安の漁師は、蛇や猿を口にすることは絶対にしない。それをすれば必ず漁がなくなり、時には遭難することもあるとされ、蛇は『ながもん』、猿は『えて』と呼び名を変えて呼ぶほど忌むべき存在だった。\n\n芝えびぶちで波が立っているあたりに、一尺五寸ほどの蛇が姿を現し、船の『とだて』の側へ入り込んで、そこにとぐろを巻いた。漁師は船を洗うたわしの柄で遠くへ放ったが、しばらくするとまた同じところへ戻ってくる。二、三度それを繰り返した後はそのままにしておいたところ、蛇は何時間もの間、おとなしくそこに留まっていた。\n\nやがて船が陸へ近づき、百間の入の近くまで来ると、蛇は自分から陸へ降りていった。その後、この船は大漁に恵まれた。漁師たちは、あれは弁天様が姿を変えて恩返しをしてくれたのだろうと語り伝えている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"百間の入","source_description":"千葉県立図書館の浦安市民話索引では『浦安の世間話』収録として掲載されている。"},
+  "locations":[{"name":"百間の入","location_type":"sea_area","description":"蛇が船に居座り、やがて大漁をもたらしたとされる漁場。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-HEBI-NO-ONGAESHI"]}],
+  "characters":[{"name":"投網の漁師","role":"船に居座った蛇を見守り、大漁を得た人物","attributes":[],"source_ids":["SRC-JFOLKLORE-HEBI-NO-ONGAESHI"]}],
+  "beings":[{"name":"蛇（弁天様の化身）","type":"animal","attributes":["船にとぐろを巻いて居座る","大漁をもたらす","弁天様の化身とされる"],"source_ids":["SRC-JFOLKLORE-HEBI-NO-ONGAESHI"]}],
+  "themes":["蛇","弁財天","大漁","恩返し","漁師の禁忌"],"story_type":["動物報恩譚","漁村伝承","信仰伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-hebi-no-awatori","relationship":"related_tradition_group","note":"同じ百間の入を舞台とする別の蛇怪異譚。本文照合前のため同一話とはしない。"},{"record_id":"chiba-urayasu-hakushebi-no-ongaeshi","relationship":"title_distinction","note":"『白蛇の恩返し』（1984年版・当代島）とは別タイトルの伝承として区別する。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-ONGAESHI","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-09-07","relevant_section":"蛇の恩返し","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-HEBI-NO-ONGAESHI","title":"船にとぐろを巻いた蛇と大漁（日本伝承マップ：現代民話考9〈木霊・蛇〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考9 木霊・蛇』、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_482_ep_544.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考9 木霊・蛇』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only record（data/folktales/chiba/urayasu/2026-08-batch-001-water-snake-disaster.json内）のrecord_idを維持し、本ファイルへ正本として格上げした。『白蛇の恩返し』とは別タイトルのため統合していない。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"千葉県立図書館索引で『浦安の世間話』への収録を確認していたが本文未確認だった。2026-10-08、日本伝承マップ経由で『現代民話考9（木霊・蛇）』所収の引用本文を確認し、本文確認済みへ格上げした。本文の話者・採録者は『浦安の世間話』と同一だが、収録書誌自体は別のため、両書で完全に同一の本文かは未照合。"
+}

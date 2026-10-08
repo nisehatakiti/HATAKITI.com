@@ -192,8 +192,9 @@
         "蛇伝承",
         "寺社伝承"
       ],
-      "status": "partial",
-      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。"
+      "status": "promoted_to_canonical_record",
+      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。",
+      "promoted_to": "data/folktales/chiba/records/urayasu/shirohebi-mita.json"
     },
     {
       "title": "古井戸の障り",
@@ -463,7 +464,9 @@
         "子守唄",
         "民俗"
       ],
-      "status": "partial"
+      "status": "promoted_to_canonical_record",
+      "record_id": "chiba-urayasu-nennero-yo",
+      "promoted_to": "data/folktales/chiba/records/urayasu/nennero-yo.json"
     },
     {
       "title": "まいごろ",

@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-sanko-anii","status":"draft","title":"サンコ兄い","title_normalized":"サンコ兄い","title_origin":"source_title",
+  "summary":{"text":"明治26年に浦安で生まれた漁師サンコ兄いが、東京湾であさり取りをしていた夜、橋げたに吊った蚊帳を潮が引いたために見失い、以後『かやは橋げたになんぞつるもんでねえ』と語り続けたという笑い話。","based_on_source_ids":["SRC-JFOLKLORE-SANKO-ANII"]},
+  "story_summary":"明治26年に浦安で生まれ、10歳になるかならぬうちから漁師になったサンコ兄いは、ある夏の夕方、相棒と東京湾であさり取りをしていた際、蚊に悩まされて近くの橋げたに蚊帳を吊って眠り込んだ。目覚めると潮が引いて舟が下がり、蚊帳は頭上はるかの橋げたに引っかかっていたという失敗話が、サンコ兄いの決まり文句とともに語り継がれている。",
+  "story_content":"明治二十六年に浦安で生まれたサンコ兄いは、十歳になるかならぬうちから海に出て漁師になった。ある夏の夕方、相棒と東京湾であさり取りをしていたところ、蚊に悩まされてしまう。近くの橋げたに蚊帳を吊って、その中で眠り込んでしまった。\n\n目が覚めると、吊ったはずの蚊帳がどこにも見当たらない。見上げると、潮が引いて舟が下がっていたため、蚊帳ははるか頭上の橋げたに引っかかっていた。サンコ兄いはそれ以来、人に会うたびに「かやは橋げたになんぞつるもんでねえ」と語ったという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"『浦安の世間話：前田治郎助の語り』第2章「ムラ話・様々な人々」に収録。"},
+  "locations":[{"name":"東京湾の橋げた","location_type":"tradition_site","description":"サンコ兄いが蚊帳を吊って眠り込んだ場所。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-SANKO-ANII"]}],
+  "characters":[{"name":"サンコ兄い","role":"明治26年浦安生まれの漁師。失敗話の主人公","attributes":["十歳前から漁師になった","あさり取りの最中に蚊帳を潮に流された"],"source_ids":["SRC-JFOLKLORE-SANKO-ANII"]}],
+  "beings":[],
+  "themes":["漁師","笑話","潮の満ち引き","浦安の人物"],"story_type":["人物笑話","漁村伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-NDL-URAYASU-SEKENWA-SANKO","title":"浦安の世間話 : 前田治郎助の語り","publisher":"国立国会図書館","author":null,"publication_date":"1992","source_type":"bibliographic_index","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-10-08","relevant_section":"第2章 ムラ話・様々な人々／サンコ兄い","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-SANKO-ANII","title":"橋げたに蚊帳を吊ったさんこ兄い（日本伝承マップ：現代民話考〈偽汽車〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考 偽汽車』（ちくま文庫・2003年）","author":null,"publication_date":"2003","source_type":"digital_archive","url":"https://j-folklore.com/l/book_116_ep_257.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考 偽汽車』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存hub（urayasu-mura-people-stories）のindex-only candidate（record_id: null）を本recordで正式化した。"},
+  "confidence":"high","research_status":"deep_researched",
+  "research_notes":"『浦安の世間話』第2章の目次題名として確認していたが本文未確認だった。2026-10-08、日本伝承マップ経由で『現代民話考 偽汽車』所収の引用本文を確認し、本文確認済みへ格上げした。"
+}

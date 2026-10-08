@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-kyusuke-inari-oonyudo","status":"draft","title":"きゅうすけ稲荷に出た大入道","title_normalized":"きゅうすけ稲荷に出た大入道","title_origin":"generated_for_identification",
+  "summary":{"text":"浦安では、ムジナが姿を変えて人を驚かせると語られ、特にきゅうすけ稲荷のあたりでは、得体の知れない大きな人影がふいに後ろに立つ『大入道』がよく出たと伝えられている。","based_on_source_ids":["SRC-JFOLKLORE-OONYUDO"]},
+  "story_summary":"浦安では、ムジナが自分で姿を変えて人を驚かせるのだと語られており、昔はきゅうすけ稲荷のあたりに、得体の知れない大きな人影がふいに後ろに立つ『大入道』がよく出たと伝えられている。",
+  "story_content":"浦安市では、ムジナが自分で姿を変えて人を驚かせるのだと語られている。昔は大入道がよく出たといい、得体の知れない大きな人影がふいに後ろに立っているように見せかけたという。顔かたちや格好がどうというのではなく、ただぼうっと大きな入道が立ってみせて人を脅かすのがムジナのやり方だといい、きゅうすけ稲荷のあたりでは特にこの大入道がよく出たと伝わっている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"きゅうすけ稲荷周辺","source_description":"『現代民話考11 狸・むじな』（松谷みよ子・1995年）にきゅうすけ稲荷周辺のムジナ怪異として収録。"},
+  "locations":[{"name":"きゅうすけ稲荷","location_type":"shrine","description":"大入道の化け物が特によく出たと伝えられる稲荷社周辺。既存の正式record『久助稲荷』とは別の、ムジナの怪異譚として区別して保持する。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-OONYUDO"]}],
+  "characters":[],
+  "beings":[{"name":"ムジナ","type":"animal","attributes":["姿を変えて人を驚かせる","大入道の姿で後ろに立つ"],"source_ids":["SRC-JFOLKLORE-OONYUDO"]}],
+  "themes":["ムジナ","大入道","化かし","きゅうすけ稲荷","久助稲荷"],"story_type":["怪異譚","動物怪異譚","化かし話"],
+  "related_records":[{"record_id":"chiba-urayasu-kyusuke-inari","relationship":"same_location_tradition_cluster","note":"同じ久助稲荷に結び付く伝承群。久助稲荷本体の由来譚とは別の、ムジナの化かし譚として区別する。"}],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-OONYUDO","title":"きゅうすけ稲荷に立つぼうっとした大入道（日本伝承マップ：現代民話考11〈狸・むじな〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考11 狸・むじな』(1995)、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"1995","source_type":"digital_archive","url":"https://j-folklore.com/l/book_472_ep_175.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考11 狸・むじな』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。索引上の正式な題名は未確認のため、内容を識別するための仮タイトルを付した（title_origin: generated_for_identification）。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"既存の正式record『久助稲荷』（chiba-urayasu-kyusuke-inari）は、学誉冏鑑と忠僕・久助の由来譚であり、本recordのムジナによる大入道の化かし話とは別の伝承として区別する。千葉県立図書館の浦安市民話索引には本題そのものは未確認だが、『現代民話考11』で前田治郎助の語りとして確認できた。"
+}

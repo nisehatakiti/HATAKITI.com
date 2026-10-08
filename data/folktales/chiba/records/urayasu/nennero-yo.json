@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-nennero-yo","status":"draft","title":"ねんねろよォ","title_normalized":"ねんねろよォ","title_origin":"source_title",
+  "summary":{"text":"浦安の漁船が矢向沖に停泊すると、夜中に『ねんねろよォ』と子守唄を歌う女が海から現れて子を抱かせ、油断すると舟に海水を汲み入れるため、底を抜いたヒシャクを渡すのが対処法だと伝えられる海の怪異譚。","based_on_source_ids":["SRC-JFOLKLORE-NENNERO"]},
+  "story_summary":"浦安の漁船が矢向の沖で停泊すると、夜中に『ねんねろよォ』と子守唄のように歌いながら女が海から現れ、子どもを抱いていてくれと頼む。抱いていると次第に重くなり、その間に女はヒシャクで海水を何杯も舟へ汲み入れる。この化け物に出会ったら、底を抜いたヒシャクを渡すものだと語り伝えられている。",
+  "story_content":"浦安の漁船が矢向の沖に停泊していると、夜中に『ねんねろよォ』と、子守唄のように歌う声が聞こえてくる。声の主は海から現れた女で、漁師に子どもを抱いていてくれと頼んでくる。頼まれて抱いてやると、その子どもは次第に重くなっていく。そうしている間に、女はヒシャクで海水を何杯も汲んでは舟の中へ注ぎ込んでいく。うっかり油断していると、舟の中に塩水を汲み入れられてしまう。\n\nこの化け物に出会ったときは、底を抜いたヒシャクを渡すものだと語り伝えられている。底の抜けたヒシャクでは水を汲むことができないため、女はいつまでも水を汲み続け、舟が沈められることはないという。この女が亡くなった人の祟りなのか、ムジナやタヌキの化身なのかは、はっきりしないと伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"矢向沖","source_description":"『浦安の昔ばなし』（1984）当代島、『浦安の世間話』（1992）に同題が収録され、再録候補として整理されている。"},
+  "locations":[{"name":"矢向の沖","location_type":"sea_area","description":"漁船が停泊すると『ねんねろよォ』の女が現れると伝えられる海域。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-NENNERO"]}],
+  "characters":[],
+  "beings":[{"name":"ねんねろよォの女","type":"supernatural_entity","attributes":["子守唄を歌いながら海から現れる","子を抱かせて舟に水を汲み入れる","死者の祟りかムジナ・タヌキの化身か不明"],"source_ids":["SRC-JFOLKLORE-NENNERO"]}],
+  "themes":["海の怪異","船幽霊","子守唄","禁忌・対処法"],"story_type":["怪談","海の怪異","船幽霊伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-NENNERO","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-10-08","relevant_section":"ねんねろよ","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-NENNERO","title":"矢向の沖でねんねろよと子を抱かせる女（日本伝承マップ：現代民話考〈偽汽車〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考 偽汽車』（ちくま文庫・2003年）、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"2003","source_type":"digital_archive","url":"https://j-folklore.com/l/book_116_ep_050.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考 偽汽車』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only stub（data/folktales/chiba/urayasu/2026-08-batch-008-index-sweep-faith-place-everyday.json内）を本recordで正式化した。"},
+  "confidence":"high","research_status":"deep_researched",
+  "research_notes":"『浦安の昔ばなし』『浦安の世間話』双方の目次題名として確認していたが本文未確認だった。2026-10-08、日本伝承マップ経由で『現代民話考 偽汽車』所収の引用本文（話者：前田治郎助、採録：米屋陽一、『浦安の世間話』と同一）を確認し、本文確認済みへ格上げした。船幽霊（底を抜いたヒシャクで対処する）の全国的な類型に連なる伝承である。"
+}

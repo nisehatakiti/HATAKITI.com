@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-hebi-no-hashi","status":"draft","title":"蛇の橋","title_normalized":"蛇の橋","title_origin":"source_title",
+  "summary":{"text":"浦安・堀江の田を見回っていた男が、池に架かる生臭い黒い丸太のような橋を見つけ、しばらく眺めていると、それがずるずると動き始めたという怪異譚。","based_on_source_ids":["SRC-JFOLKLORE-HEBI-NO-HASHI"]},
+  "story_summary":"浦安・堀江で百姓をしていた男が、夕方に田を見回りに行った際、池に架かる生臭い黒い丸太のような橋を見つける。しばらく眺めていると、その橋がずるずると動き始め、驚いて逃げた男が後で確かめに行くと、すでに姿を消していたという。",
+  "story_content":"堀江の方で百姓をしていた男が、ある日の夕方、田の見回りに出かけた。歩いていくと、なんとなく生臭いにおいがする。そのまま進むと、太郎池だったか次郎池だったか、その池に長い橋が架かっているのが見えた。黒く、丸太のような橋である。男は「あんな所に橋が架かっている、たいがい何だろうな」と思い、しばらく立ち止まって見ていた。すると、その橋がずるずるずるずると動き始めた。男は驚いて逃げ出し、後になって確かめに行ったが、その橋はもうどこにも見当たらなかったという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"堀江","source_description":"千葉県立図書館の浦安市民話索引では『浦安の世間話』（堀江）、『浦安の昔ばなし』（当代島・堀江・大三角）の双方に同題の収録が確認できる。"},
+  "locations":[{"name":"太郎池・次郎池（堀江）","location_type":"pond","description":"生臭い黒い橋が現れたと伝えられる池。どちらの池かは伝承内でも確定していない。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-HEBI-NO-HASHI"]}],
+  "characters":[{"name":"堀江の百姓","role":"田の見回り中に蛇の橋を目撃した人物","attributes":[],"source_ids":["SRC-JFOLKLORE-HEBI-NO-HASHI"]}],
+  "beings":[{"name":"蛇","type":"animal","attributes":["丸太のような黒い橋の姿で池に現れる"],"source_ids":["SRC-JFOLKLORE-HEBI-NO-HASHI"]}],
+  "themes":["蛇","水辺","怪異","堀江","池"],"story_type":["怪談","動物怪異譚","水辺伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-hebi-no-awatori","relationship":"same_tradition_cluster","note":"同じ『現代民話考9（木霊・蛇）』に収録される浦安の蛇怪異譚群。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-HASHI","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-08-26","relevant_section":"蛇の橋","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-HEBI-NO-HASHI","title":"池に架かった生臭い黒い橋（日本伝承マップ：現代民話考9〈木霊・蛇〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考9 木霊・蛇』、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_482_ep_388.html","accessed_date":"2026-10-08","relevant_section":"伝承内容の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考9 木霊・蛇』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only record（data/folktales/chiba/ichikawa/2026-08-batch-006-waterfront-urayasu-connection.json内）のrecord_idを維持し、本ファイルへ正本として格上げした。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"千葉県立図書館索引で『浦安の世間話』『浦安の昔ばなし』双方への収録を確認していたが本文未確認だった（2026-08-26時点）。2026-10-08、日本伝承マップ経由で『現代民話考9（木霊・蛇）』所収の引用本文を確認し、本記録を本文確認済みへ格上げした。本文の話者・採録者（前田治郎助・米屋陽一）は『浦安の世間話』と同一だが、収録書誌自体は別のため、両書で完全に同一の本文かは未照合。"
+}

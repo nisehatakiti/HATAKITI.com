@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-tondemo-fugu","status":"draft","title":"飛んでもふぐ","title_normalized":"飛んでもふぐ","title_origin":"source_title",
+  "summary":{"text":"沖に浮かぶ白く丸いものを見て、ふぐだと言い張った漁師が、それが飛び立ってかもめだと分かった後も『飛んでもふぐだ』と言い続けたという、強情な人物を評する浦安の言い回しの由来譚。","based_on_source_ids":["SRC-JFOLKLORE-TONDEMO-FUGU"]},
+  "story_summary":"浦安の漁師たちが沖合いに白く丸いものを見つけ、一人は腹を膨らませたふぐだと言い、もう一人はかもめだと言い張った。やがてそれが飛び立ってかもめだったと分かったが、なおも「飛んでもふぐだ」と言い張る者がいたことから、強情な人をこの土地では「飛んでもふぐだ」と評するようになったという。",
+  "story_content":"ある日、浦安の漁師たちが沖合いを見ていると、白く丸いものが浮いているのに気づいた。一人は「あれは腹をふくらませたふぐだ」と言い、もう一人は「かもめだろう」と言い張った。やがてその白いものが飛び立ったので、かもめだったことがはっきりした。ところが、それでもなお「飛んでもふぐだ」と言い張る者がいたという。\n\nそれ以来、浦安では、物事がはっきりしてもなお意地を張り続ける強情な人を「飛んでもふぐだ」と評するようになった。語り手は、かつて東京湾には腹を大きく膨らませる巨大なふぐがいたと振り返っている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"『浦安の世間話：前田治郎助の語り』第2章「ムラ話・様々な人々」に収録。"},
+  "locations":[],
+  "characters":[],
+  "beings":[],
+  "themes":["漁師","笑話","言い回しの由来","強情"],"story_type":["人物笑話","言葉の由来譚","漁村伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-NDL-URAYASU-SEKENWA-FUGU","title":"浦安の世間話 : 前田治郎助の語り","publisher":"国立国会図書館","author":null,"publication_date":"1992","source_type":"bibliographic_index","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-10-08","relevant_section":"第2章 ムラ話・様々な人々／飛んでもふぐ","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-TONDEMO-FUGU","title":"飛んでもふぐだと言い張る強情っぱり（日本伝承マップ：現代民話考〈偽汽車〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考 偽汽車』（ちくま文庫・2003年）、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"2003","source_type":"digital_archive","url":"https://j-folklore.com/l/book_116_ep_256.html","accessed_date":"2026-10-08","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考 偽汽車』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存hub（urayasu-mura-people-stories）のindex-only candidate（record_id: null）を本recordで正式化した。"},
+  "confidence":"high","research_status":"deep_researched",
+  "research_notes":"『浦安の世間話』第2章の目次題名として確認していたが本文未確認だった。2026-10-08、日本伝承マップ経由で『現代民話考 偽汽車』所収の引用本文を確認し、本文確認済みへ格上げした。"
+}
