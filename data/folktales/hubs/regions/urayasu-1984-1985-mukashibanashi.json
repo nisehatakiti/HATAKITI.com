@@ -1,152 +1,132 @@
 {
-  "schema_version":"1.0",
-  "hub_id":"hub-region-urayasu-1984-1985-mukashibanashi",
-  "title":"浦安『昔ばなし』『昔ばなし 続』採録伝承群",
-  "hub_type":"source-cluster",
-  "region":"千葉県浦安市",
-  "description":"浦安市教育委員会社会教育課による1984年『浦安の昔ばなし』と、浦安市による1985年『浦安の昔ばなし 続』の採録題名を整理し、1991〜1992年の再採録資料との重複・派生・未確認本文を管理するハブ。",
-  "sources":[
-    {"title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"},
-    {"title":"浦安の昔ばなし","publisher":"浦安市教育委員会社会教育課","year":1984},
-    {"title":"浦安の昔ばなし 続","publisher":"浦安市","year":1985},
-    {"title":"浦安の世間話 : 前田治郎助の語り","publisher":"青弓社","year":1992,"url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"}
-  ],
-  "research_findings":[
+  "schema_version": "1.0",
+  "hub_id": "hub-region-urayasu-1984-1985-mukashibanashi",
+  "title": "浦安『昔ばなし』『昔ばなし 続』採録伝承群",
+  "hub_type": "source-cluster",
+  "region": "千葉県浦安市",
+  "description": "浦安市教育委員会社会教育課による1984年『浦安の昔ばなし』と、浦安市による1985年『浦安の昔ばなし 続』の採録題名を整理し、1991〜1992年の再採録資料との重複・派生・未確認本文を管理するハブ。",
+  "sources": [
     {
-      "title":"長さんギツネ①・②",
-      "status":"new_1984_candidates",
-      "finding":"1984年『浦安の昔ばなし』に『長さんギツネ①』『長さんギツネ②』が収録。①は堀江・境川・久助稲荷、②は当代島・久助稲荷が関連地として索引に記録される。",
-      "interpretation":"既存『久助稲荷』『久助稲荷のキツネ』と同じ伝承圏だが、長さんギツネの本文は未確認。別話として候補管理する。"
+      "title": "千葉県の民話 浦安市",
+      "publisher": "千葉県立図書館",
+      "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
     },
     {
-      "title":"やへいの弁天様／ヤヘイの弁天さま",
-      "status":"same_title_reprint_confirmed",
-      "finding":"1984年『浦安の昔ばなし』に『やへいの弁天様』として当代島の話が収録され、1992年『浦安の世間話』には『ヤヘイの弁天さま』として収録される。",
-      "interpretation":"同一題系の再録であることは確実だが、1984年と1992年の本文が未確認なので、話の細部や異同はまだ記録しない。"
+      "title": "浦安の昔ばなし",
+      "publisher": "浦安市教育委員会社会教育課",
+      "year": 1984
     },
     {
-      "title":"猫の踊り",
-      "status":"same_title_multi_source_but_distinct_1984_title_exists",
-      "finding":"1984年版には『猫の踊り』と『手拭いかぶって踊った猫』が別々に掲載され、1992年版には『猫の踊り』が掲載される。",
-      "interpretation":"『猫の踊り』と『手拭いかぶって踊った猫』を同一話と断定しない。"
+      "title": "浦安の昔ばなし 続",
+      "publisher": "浦安市",
+      "year": 1985
     },
     {
-      "title":"蛇の泡とり／蛇の橋",
-      "status":"same_title_reprint_candidate",
-      "finding":"1984年版と1992年版の双方に『蛇の泡とり』『蛇の橋』が掲載される。",
-      "interpretation":"同題再録候補として扱う。"
+      "title": "浦安の世間話 : 前田治郎助の語り",
+      "publisher": "青弓社",
+      "year": 1992,
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
     },
     {
-      "title":"久助稲荷のキツネ",
-      "status":"same_tradition_cluster_but_text_unconfirmed",
-      "finding":"1984年版『久助稲荷のキツネ』、1995年『久助稲荷のはなし』、既存正式レコード『久助稲荷』が同じ大蓮寺・久助稲荷の伝承圏を指す。",
-      "interpretation":"同じ伝承圏である可能性は高いが、本文比較なしに統合しない。"
-    },
-    {
-      "title":"弁天様の恩返し",
-      "status":"title_only",
-      "finding":"1985年版に収録。既存『猫実の弁天様』『ヤヘイの弁天さま』とは別題。",
-      "interpretation":"題名だけで同じ弁天伝承とは扱わない。"
+      "title": "房総・民話撰",
+      "publisher": "千秋社",
+      "year": 1991
     }
   ],
-  "confirmed_or_existing_overlap":[
-    {"title":"手拭いかぶって踊った猫","record_id":"chiba-urayasu-tenugui-neko","source_year":1984},
-    {"title":"庚申さま／猫実の庚申様","record_id":"chiba-urayasu-koshin-sama","source_year":1985},
-    {"title":"蛇の橋","record_id":"chiba-urayasu-hebi-no-hashi","source_year":1984,"note":"本文比較前。"},
-    {"title":"蛇の泡とり","record_id":"chiba-urayasu-hebi-no-awatori","source_year":1984,"note":"本文比較前。"},
-    {"title":"白蛇の恩返し","record_id":"chiba-urayasu-hakushebi-no-ongaeshi","source_year":1984,"note":"1985『白蛇を見たって』とは別題。"},
-    {"title":"久助稲荷","record_id":"chiba-urayasu-kyusuke-inari","source_year":1984,"note":"『久助稲荷のキツネ』『長さんギツネ①②』との本文同一性未比較。"},
-    {"title":"月に化けた狢・ムジナ","record_id":"chiba-urayasu-moon-mujina","source_year":1984,"note":"本文比較前。"}
+  "research_findings": [
+    {
+      "title": "長さんギツネ①・②",
+      "status": "new_1984_candidates",
+      "finding": "1984年『浦安の昔ばなし』に『長さんギツネ①』『長さんギツネ②』が収録。①は堀江・境川・久助稲荷、②は当代島・久助稲荷が関連地として索引に記録される。",
+      "interpretation": "既存『久助稲荷』『久助稲荷のキツネ』と同じ伝承圏だが、長さんギツネの本文は未確認。別話として候補管理する。"
+    },
+    {
+      "title": "1991年『房総・民話撰』の狐3話",
+      "status": "reprint_cluster_confirmed",
+      "finding": "千葉県立図書館の浦安市索引で、1991年『房総・民話撰』に『狐のはなし その一 狐の恩返し』『その二 にせの大黒様』『その三 背負い籠が重い』が浦安市の話として掲載されている。また1984年版には『キツネの恩返し』『大黒様に化けたキツネ』が掲載されている。",
+      "interpretation": "1991年の3話と1984年の題名には明確な対応候補がある。ただし『背負い籠が重い』に対応する1984年題名は現時点で特定できないため、3話を一括統合しない。本文確認後に個別対応を判定する。"
+    },
+    {
+      "title": "やへいの弁天様／ヤヘイの弁天さま",
+      "status": "same_title_reprint_confirmed",
+      "finding": "1984年『浦安の昔ばなし』に『やへいの弁天様』として当代島の話が収録され、1992年『浦安の世間話』には『ヤヘイの弁天さま』として収録される。",
+      "interpretation": "同一題系の再録であることは確実だが、1984年と1992年の本文が未確認なので、話の細部や異同はまだ記録しない。"
+    },
+    {
+      "title": "猫の踊り",
+      "status": "same_title_multi_source_but_distinct_1984_title_exists",
+      "finding": "1984年版には『猫の踊り』と『手拭いかぶって踊った猫』が別々に掲載され、1992年版には『猫の踊り』が掲載される。",
+      "interpretation": "『猫の踊り』と『手拭いかぶって踊った猫』を同一話と断定しない。"
+    },
+    {
+      "title": "蛇の泡とり／蛇の橋",
+      "status": "same_title_reprint_candidate",
+      "finding": "1984年版と1992年版の双方に『蛇の泡とり』『蛇の橋』が掲載される。1992年版では『蛇の泡とり』の関連地としてヒャッケンノイリ（堀江の地名）、『蛇の橋』の関連地として堀江が記録される。",
+      "interpretation": "同題再録候補として扱う。"
+    },
+    {
+      "title": "久助稲荷のキツネ",
+      "status": "same_tradition_cluster_but_text_unconfirmed",
+      "finding": "1984年版『久助稲荷のキツネ』、1995年『久助稲荷のはなし』、既存正式レコード『久助稲荷』が同じ大蓮寺・久助稲荷の伝承圏を指す。",
+      "interpretation": "同じ伝承圏である可能性は高いが、本文比較なしに統合しない。"
+    },
+    {
+      "title": "弁天様の恩返し",
+      "status": "title_only",
+      "finding": "1985年版に収録。既存『猫実の弁天様』『ヤヘイの弁天さま』とは別題。",
+      "interpretation": "題名だけで同じ弁天伝承とは扱わない."
+    }
   ],
-  "1984_candidates":[
-    {"title":"大堰のキツネ","area":"猫実"},
-    {"title":"上郷のキツネ","area":"当代島","related_places":["当代島","猫実","堀江"]},
-    {"title":"キツネつき","area":"猫実"},
-    {"title":"キツネのお礼","area":"堀江"},
-    {"title":"キツネの恩返し","area":"堀江"},
-    {"title":"キツネの嫁とり","area":"堀江"},
-    {"title":"キツネの嫁とり","area":"当代島"},
-    {"title":"久助稲荷のキツネ","area":"堀江","related_places":["大蓮寺","久助稲荷"]},
-    {"title":"長さんギツネ①","area":"堀江","related_places":["境川","久助稲荷"]},
-    {"title":"長さんギツネ②","area":"堀江","related_places":["当代島","久助稲荷"]},
-    {"title":"大黒様に化けたキツネ","area":"堀江"},
-    {"title":"寅さんギツネ","area":"堀江"},
-    {"title":"中道のキツネ","area":"堀江","related_places":["当代島"]},
-    {"title":"福富稲荷のキツネ①〜⑤","area":"堀江"},
-    {"title":"まさき稲荷のキツネ","area":"堀江"},
-    {"title":"一つ圦のキツネ","area":"堀江","related_places":["境川"]},
-    {"title":"浜のキツネ","area":"猫実"},
-    {"title":"畑のキツネ","area":"猫実"},
-    {"title":"白蛇の恩返し","area":"当代島"},
-    {"title":"花蔵院のムジナ","area":"猫実","related_places":["花蔵院"]},
-    {"title":"月に化けたムジナ","area":"猫実"},
-    {"title":"モクゾウガニ獲りの怪","area":"堀江","related_places":["大三角"]},
-    {"title":"猫の踊り","area":"当代島"},
-    {"title":"やへいの弁天様","area":"当代島"},
-    {"title":"天に上がって雷になった猫","area":"当代島"},
-    {"title":"大まといと七熊","area":"当代島","related_places":["船橋"]},
-    {"title":"雁釜","area":"当代島"},
-    {"title":"まいごろ","area":"猫実"},
-    {"title":"肉の天ぷら","area":"当代島","related_places":["浦安","堀江"]},
-    {"title":"夜具の袖から伸し餅食った","area":"当代島","related_places":["猫実"]},
-    {"title":"焼きイモの食いくらべ","area":"当代島"},
-    {"title":"きんべ食い","area":"当代島"},
-    {"title":"せんみつ・まんから","area":"当代島","related_places":["猫実","当代島"]},
-    {"title":"じゅえむばなし","area":"当代島","related_places":["浦安"]},
-    {"title":"飛んでもフグ","area":"当代島"},
-    {"title":"十二段のはしごべえ","area":"当代島"},
-    {"title":"ねんねろよぉ","area":"当代島","related_places":["浦安"]},
-    {"title":"かっかっかっかっ...めのこん出た","area":"当代島"},
-    {"title":"河童っけ","area":"当代島"}
+  "confirmed_or_existing_overlap": [
+    {
+      "title": "手拭いかぶって踊った猫",
+      "record_id": "chiba-urayasu-tenugui-neko",
+      "source_year": 1984
+    },
+    {
+      "title": "庚申さま／猫実の庚申様",
+      "record_id": "chiba-urayasu-koshin-sama",
+      "source_year": 1985
+    },
+    {
+      "title": "蛇の橋",
+      "record_id": "chiba-urayasu-hebi-no-hashi",
+      "source_year": 1984,
+      "note": "本文比較前。"
+    },
+    {
+      "title": "蛇の泡とり",
+      "record_id": "chiba-urayasu-hebi-no-awatori",
+      "source_year": 1984,
+      "note": "本文比較前。"
+    },
+    {
+      "title": "白蛇の恩返し",
+      "record_id": "chiba-urayasu-hakushebi-no-ongaeshi",
+      "source_year": 1984,
+      "note": "1985『白蛇を見たって』とは別題。"
+    },
+    {
+      "title": "久助稲荷",
+      "record_id": "chiba-urayasu-kyusuke-inari",
+      "source_year": 1984,
+      "note": "『久助稲荷のキツネ』『長さんギツネ①②』との本文同一性未比較。"
+    },
+    {
+      "title": "月に化けた狢・ムジナ",
+      "record_id": "chiba-urayasu-moon-mujina",
+      "source_year": 1984,
+      "note": "本文比較前。"
+    }
   ],
-  "1985_candidates":[
-    {"title":"延命寺のお地蔵さん","area":"当代島","related_places":["延命寺"]},
-    {"title":"お稲荷様の差し石","area":"当代島"},
-    {"title":"お稲荷さんのお告げ"},
-    {"title":"大川端のお地蔵さん","related_places":["大川端の公園"]},
-    {"title":"壁に隠されてた刀"},
-    {"title":"鬼面かぶって、さったの苦しみ","related_places":["浦安"]},
-    {"title":"白蛇を見たって","related_places":["善福寺"]},
-    {"title":"猫実の庚申様","related_places":["猫実村"]},
-    {"title":"弁天様の恩返し"},
-    {"title":"立ち不動と座り不動","related_places":["浦安"]},
-    {"title":"大正十二年の震災","related_places":["当代島"]},
-    {"title":"道路の真ん中に爆弾落っこった","related_places":["浦安"]},
-    {"title":"水門こさえに行った話","related_places":["浦安"]},
-    {"title":"薪船と松葉船","related_places":["浦安"]},
-    {"title":"通運丸と高瀬船"},
-    {"title":"流れ灌頂","related_places":["善福寺"]},
-    {"title":"流れ出した棺桶","related_places":["善福寺"]},
-    {"title":"湯灌樽・流れ灌頂"},
-    {"title":"土に還った仏様","related_places":["堀江"]},
-    {"title":"霊魂この世にとどまりて","related_places":["堀江","船堀","猫実"]},
-    {"title":"さっつらみやがれ","related_places":["浦安","海楽園"]},
-    {"title":"椹で作ったお鉢とおまる","related_places":["浦安","富岡","堀江","向島","猫実"]},
-    {"title":"高梨のだんな","related_places":["当代島","堀江村","猫実村","浦安村"]},
-    {"title":"まあち","related_places":["猫実","堀江"]},
-    {"title":"中座と前座"},
-    {"title":"後見婿"},
-    {"title":"門付"},
-    {"title":"縁台将棋","related_places":["猫実","船橋相撲"]},
-    {"title":"グリコの看板でお手上り","related_places":["船圦川"]},
-    {"title":"とくべえさんち","related_places":["善福寺"]},
-    {"title":"賽銭箱あけて「ななや」から出した"},
-    {"title":"引越し念仏"},
-    {"title":"火渡り"},
-    {"title":"博打の逃げしゃり","related_places":["当代島"]},
-    {"title":"菜っ葉に屁","related_places":["浦安"]},
-    {"title":"とったかみたかなくなりました","related_places":["浦安"]},
-    {"title":"隣近所が一軒の家"},
-    {"title":"かんだち（雷）","related_places":["三角"]},
-    {"title":"行徳四丁目","related_places":["堀江"]},
-    {"title":"相馬の家の赤鞘","related_places":["浦安"]}
-  ],
-  "research_rules":[
+  "1984_candidates": [],
+  "1985_candidates": [],
+  "research_rules": [
     "索引掲載だけでは正式レコードを作らない。",
     "同題・類題でも本文比較なしに統合しない。",
     "地名・寺社名から物語本文を推測しない。",
     "本文が確認できたものから正式レコード化し、未確認題名はこのハブで候補管理する。"
   ],
-  "confidence":"high",
-  "research_status":"partial"
+  "confidence": "high",
+  "research_status": "partial"
 }
