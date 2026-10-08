@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-tengu-child-search",
+  "status": "draft",
+  "title": "富山の天狗と行方不明の子ども",
+  "title_normalized": "富山の天狗と行方不明の子ども",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "富山県では、天狗にさらわれた子どもを探す際、天狗が棲むとされた場所で名前を呼び、太鼓や一升枡の底を叩くと子どもを返すという伝承が記録されている。",
+    "based_on_source_ids": [
+      "toyama-tengu-child-search-src"
+    ]
+  },
+  "story_summary": "富山県では、天狗にさらわれた子どもを探す際、天狗が棲むとされた場所で名前を呼び、太鼓や一升枡の底を叩くと子どもを返すという伝承が記録されている。",
+  "story_content": "富山県では、天狗にさらわれた子どもを探す際、天狗が棲むとされた場所で名前を呼び、太鼓や一升枡の底を叩くと子どもを返すという伝承が記録されている。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": null,
+    "municipality": "富山県内",
+    "area_name": "火の宮・愛宕の大杉周辺"
+  },
+  "locations": [
+    {
+      "name": "天狗の住処とされた場所",
+      "type": "伝承地・地域",
+      "description": "天狗の住処とされた場所",
+      "source_ids": [
+        "toyama-tengu-child-search-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "怪異・伝承存在",
+      "description": "天狗に関する地域伝承。",
+      "source_ids": [
+        "toyama-tengu-child-search-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "toyama-tengu-child-search-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1230296",
+      "relevant_section": "富山の天狗と行方不明の子ども",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承として登録。後段で本文、地理的位置、現地訪問情報を深掘りする。"
+}
