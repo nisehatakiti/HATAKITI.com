@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "yukionna",
+  "canonical_name": "雪女・雪の女・雪の精霊伝承",
+  "aliases": [
+    "雪女",
+    "雪の女",
+    "雪の精霊",
+    "雪女郎"
+  ],
+  "summary": "雪深い地域を中心に、雪の夜に現れる女・精霊・怪異の伝承を横断するハブ。旅人への接触、子どもを連れた女、生命を奪う存在、雪の精霊など型が分かれる。",
+  "sub_motifs": [
+    "雪の夜に現れる女",
+    "旅人を襲う雪女",
+    "子どもを抱いた雪女",
+    "雪の精霊",
+    "雪女と夫婦になる話",
+    "雪女の正体を明かしてはならない"
+  ],
+  "known_connections": [
+    {
+      "region": "東北・日本海側",
+      "note": "雪国の伝承として複数資料に確認。"
+    },
+    {
+      "region": "関東・中部",
+      "note": "雪女の事例も確認される。"
+    },
+    {
+      "region": "全国",
+      "note": "日文研DBで『ユキオンナ』28事例を確認。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "雪男",
+      "山女",
+      "産女",
+      "幽霊"
+    ],
+    "caution": "文学作品として有名な雪女像と、地域の民俗伝承を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%85%A8%E5%9B%BD&Name=%E3%83%A6%E3%82%AD%E3%82%AA%E3%83%B3%E3%83%8A&Pref=",
+      "role": "全国の雪女事例"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
