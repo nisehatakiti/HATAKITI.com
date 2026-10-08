@@ -233,7 +233,11 @@ function hatakiti_oauth_authorize( WP_REST_Request $request ) {
 
     $html = '<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HATAKITI Draftの接続</title></head><body style="font-family:sans-serif;max-width:640px;margin:48px auto;padding:24px"><h1>HATAKITI Draft</h1><p>ChatGPTからHATAKITI.comへ記事を<strong>下書きとして登録</strong>する権限を要求しています。</p><p>公開・削除・更新・管理者操作は許可されません。</p><form method="post">' . wp_nonce_field( 'hatakiti_oauth_consent', '_wpnonce', true, false ) . $hidden . '<button type="submit" style="padding:10px 20px">許可して接続</button></form></body></html>';
 
-    return new WP_REST_Response( $html, 200, array( 'Content-Type' => 'text/html; charset=UTF-8' ) );
+    wp_die( $html, 'HATAKITI Draft', array(
+        'response' => 200,
+        'type'     => 'text/html',
+        'exit'     => true,
+    ) );
 }
 
 function hatakiti_oauth_token( WP_REST_Request $request ) {
