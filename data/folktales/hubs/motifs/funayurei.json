@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "funayurei",
+  "canonical_name": "船幽霊・幽霊船伝承",
+  "aliases": [
+    "船幽霊",
+    "舟幽霊",
+    "幽霊船",
+    "浜幽霊",
+    "磯幽霊",
+    "ウグメ"
+  ],
+  "summary": "海上で船を襲う亡霊・幽霊船の全国伝承を横断するハブ。水死者の霊、難破船の乗組員、海から来る神など由来が異なり、柄杓を求めて船を沈める型、幻の島や船を見せる型、声だけを聞かせる型などがある。",
+  "sub_motifs": [
+    "柄杓を貸せ",
+    "底抜け柄杓",
+    "船を沈める",
+    "幻の島・岩礁",
+    "幽霊船が追ってくる",
+    "難破船の乗組員の霊",
+    "海難死者の霊",
+    "声だけ聞こえる",
+    "握り飯で退ける",
+    "灰で退ける"
+  ],
+  "known_connections": [
+    {
+      "region": "東北",
+      "examples": [
+        "宮城の亡霊火・海上亡霊"
+      ]
+    },
+    {
+      "region": "関東",
+      "examples": [
+        "千葉九十九里浜",
+        "茨城霞ヶ浦"
+      ]
+    },
+    {
+      "region": "中部",
+      "examples": [
+        "三重浜幽霊"
+      ]
+    },
+    {
+      "region": "近畿",
+      "examples": [
+        "大阪の船幽霊"
+      ]
+    },
+    {
+      "region": "中国",
+      "examples": [
+        "岡山・島根・山口"
+      ]
+    },
+    {
+      "region": "四国",
+      "examples": [
+        "高知・香川・愛媛"
+      ]
+    },
+    {
+      "region": "九州",
+      "examples": [
+        "佐賀・長崎・大分・鹿児島"
+      ]
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "海坊主",
+      "磯女",
+      "七人ミサキ",
+      "亡霊火"
+    ],
+    "caution": "海坊主・船幽霊・磯幽霊などは重なる事例があるが、呼称と本文上の性格を保持する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%85%A8%E5%9B%BD&Name=%E3%83%95%E3%83%8A%E3%83%A6%E3%82%A6&Pref=",
+      "role": "全国70事例の船幽霊系検索"
+    },
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1230149",
+      "role": "千葉・茨城・高知・長崎の比較事例"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
