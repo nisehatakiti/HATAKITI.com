@@ -77,7 +77,7 @@
       "publication_date": "web",
       "source_type": "prefectural_library_minnwa_index",
       "url": "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
-      "accessed_date": "2026-09-14",
+      "accessed_date": "2026-10-08",
       "relevant_section": "大正六年の大津波（一）～（四）",
       "language": "ja"
     },
@@ -88,12 +88,12 @@
       "publication_date": "2014頃",
       "source_type": "academic_conference_paper",
       "url": "https://ko-sho.org/download/K_038/SFNRJ_K_038-06.pdf",
-      "accessed_date": "2026-09-14",
-      "relevant_section": "大正六年の大津波に関する浦安の災害伝承",
+      "accessed_date": "2026-10-08",
+      "relevant_section": "PDF pp.64-65（大正六年の大津波に関する浦安の災害伝承）",
       "language": "ja"
     }
   ],
   "confidence": "high",
   "research_status": "deep_researched",
-  "research_notes": "『大正六年の大津波』は千葉県立図書館の民話索引で四つの個別話に分かれて掲載されている。現時点で各話本文を直接確認できていないため、四話の細部を創作せず、研究論考で確認できた伝承群として統合記録した。米屋陽一の論考には実際は津波ではなく高潮との指摘があるため、自然現象については断定しない。"
+  "research_notes": "千葉県立図書館の民話索引に加え、米屋陽一『災害と口承文芸』公開PDF本文を直接確認した。PDFでは浦安の大正六年の災害伝承として、①倒れた鎮守の松が元通りに立った話、②神さまの声を聞いた話、③木の上に多数の蛇が登った話、④津波から命を守った鎮守さまの話、さらに妊婦の出産と『ツナ』『なみ』等の命名が紹介されている。したがって伝承群としての本文周辺証拠は確認済み。ただしPDFは各話の全文ではないため、四話それぞれの詳細本文を再現した正式個別レコードにはまだ分割しない。またPDF本文には『大正六年』に対して1921年と記す箇所があるが、大正6年は1917年であるため、本データでは書誌・年次表記としては『大正六年』を優先し、自然現象が津波ではなく高潮だったとの論考上の指摘も保持する。"
 }
