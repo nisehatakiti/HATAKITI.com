@@ -180,6 +180,16 @@ function hatakiti_handle_mcp_request( WP_REST_Request $request ) {
                                 'scopes' => array( HATAKITI_OAUTH_SCOPE ),
                             ),
                         ),
+                        // Mirror securitySchemes in _meta for ChatGPT clients
+                        // that still read the compatibility location.
+                        '_meta' => array(
+                            'securitySchemes' => array(
+                                array(
+                                    'type'   => 'oauth2',
+                                    'scopes' => array( HATAKITI_OAUTH_SCOPE ),
+                                ),
+                            ),
+                        ),
                     ),
                 ),
             ) );
