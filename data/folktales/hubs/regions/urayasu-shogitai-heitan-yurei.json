@@ -1,0 +1,59 @@
+{
+  "schema_version":"1.0",
+  "hub_id":"urayasu-shogitai-heitan-yurei",
+  "title":"浦安・彰義隊／兵隊の幽霊伝承群",
+  "hub_type":"regional_history_ghost_tradition_hub",
+  "region":"千葉県浦安市",
+  "description":"『浦安の世間話』第5章に収録される「彰義隊」「兵隊の幽霊」を、浦安・市川周辺の幕末維新史・戦争記憶・幽霊伝承の接点として管理するハブ。現時点では本文そのものをウェブ上で確認できていないため、具体的な筋を推測せず、収録事実と関連地のみを確定情報として扱う。",
+  "confirmed_index_evidence":[
+    {
+      "title":"彰義隊",
+      "source":"浦安の世間話",
+      "year":1992,
+      "region":"浦安",
+      "related_places":["当代島","猫実"],
+      "cross_region_evidence":"市川市の民話索引にも同題が収録され、関連地として相の川・新井が記載されている。"
+    },
+    {
+      "title":"兵隊の幽霊",
+      "source":"浦安の世間話",
+      "year":1992,
+      "region":"浦安",
+      "cross_region_evidence":"現時点で具体的本文を確認できる外部資料は未発見。"
+    }
+  ],
+  "research_direction":[
+    "彰義隊の史実そのものと、浦安・当代島・猫実で語られた地域伝承を分離して調査する。",
+    "市川側の相の川・新井の「彰義隊」と本文比較し、同一伝承の地域差か別伝承かを判定する。",
+    "「兵隊の幽霊」は戦争史一般の幽霊談を流用せず、浦安の語りとして確認できる本文・再録資料を優先する。"
+  ],
+  "sources":[
+    {
+      "source_id":"SRC-URAYASU-SHOGITAI-INDEX",
+      "title":"千葉県の民話 浦安市",
+      "publisher":"千葉県立図書館",
+      "source_type":"library_index",
+      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html",
+      "accessed_date":"2026-10-08"
+    },
+    {
+      "source_id":"SRC-ICHIKAWA-SHOGITAI-INDEX",
+      "title":"千葉県の民話 市川市",
+      "publisher":"千葉県立図書館",
+      "source_type":"library_index",
+      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html",
+      "accessed_date":"2026-10-08"
+    },
+    {
+      "source_id":"SRC-NDL-URAYASU-INTERVIEW",
+      "title":"浦安の世間話 : 前田治郎助の語り",
+      "publisher":"青弓社",
+      "source_type":"national_library_catalog",
+      "url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466",
+      "accessed_date":"2026-10-08"
+    }
+  ],
+  "confidence":"high",
+  "research_status":"partial",
+  "research_notes":"収録事実と関連地は県立図書館索引で確認済み。本文未確認のため正式なstory_contentはまだ作成しない。"
+}
