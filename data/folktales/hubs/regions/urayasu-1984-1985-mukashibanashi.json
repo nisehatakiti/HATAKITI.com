@@ -13,43 +13,43 @@
   ],
   "research_findings":[
     {
-      "title":"延命寺のお地蔵さん",
-      "status":"source_and_site_confirmed_body_unavailable",
-      "finding":"1985年版の題名で関連地は当代島・延命寺。市川市索引にも同題・同出典・資料記載地域浦安・関連地延命寺として掲載される。",
-      "interpretation":"延命寺という実在寺院との結び付きは確認できるが、別地域の延命寺地蔵譚を浦安版本文として流用しない。"
+      "title":"ヤヘイの弁天さま",
+      "status":"same_title_reprint_confirmed",
+      "finding":"1984年『浦安の昔ばなし』に『やへいの弁天様』として当代島の話が収録され、1992年『浦安の世間話』には『ヤヘイの弁天さま』として収録される。",
+      "interpretation":"同一題系の再録であることは確実だが、1984年と1992年の本文が未確認なので、話の細部や異同はまだ記録しない。"
     },
     {
-      "title":"猫実の庚申様",
-      "status":"strong_overlap_with_existing_record",
-      "finding":"1985年版に『猫実の庚申様』として収録。既存正式レコード『庚申さま』は正徳5年（1715）の庚申塔、猫実村の庚申講、祭礼・信仰を実地資料から確認している。",
-      "interpretation":"同一史跡・伝承の再録候補として既存レコードへsource追加するのが適切。1985年本文未確認のため新規重複レコードは作らない。"
+      "title":"猫の踊り",
+      "status":"same_title_multi_source_but_distinct_1984_title_exists",
+      "finding":"1984年版には『猫の踊り』と『手拭いかぶって踊った猫』が別々に掲載され、1992年版には『猫の踊り』が掲載される。既存正式レコード『手拭いかぶって踊った猫』では竹やぶで二、三匹の猫が手拭いをかぶって踊る具体例を確認済み。",
+      "interpretation":"『猫の踊り』と『手拭いかぶって踊った猫』を同一話と断定しない。1984年→1992年の『猫の踊り』再録と、別題『手拭いかぶって踊った猫』の関係を本文比較対象として保持する。"
     },
     {
-      "title":"蛇伝承群",
-      "status":"cross_source_candidates",
-      "finding":"1984年『蛇の泡とり』『蛇の橋』、1985年『白蛇を見たって』などが採録される。既存の浦安蛇伝承ハブには『蛇の橋』『蛇の泡とり』『白蛇の恩返し』がすでに部分確定している。",
-      "interpretation":"1985年『白蛇を見たって』は既存『白蛇の恩返し』と題名が異なるため別候補として保持する。一般的な白蛇信仰資料から内容を補完しない。"
+      "title":"蛇の泡とり／蛇の橋",
+      "status":"same_title_reprint_candidate",
+      "finding":"1984年版と1992年版の双方に『蛇の泡とり』『蛇の橋』が掲載される。1992年版は『浦安の世間話』第1章の不思議な体験として収録。",
+      "interpretation":"同題再録候補として扱う。一般的な蛇伝説や他地域の『蛇橋』を本文として流用しない。"
     },
     {
-      "title":"流れ出した棺桶／流れ灌頂／湯灌樽・流れ灌頂",
-      "status":"funeral-culture-cluster_candidate",
-      "finding":"1985年版に『流れ出した棺桶』『湯灌樽・流れ灌頂』があり、『流れ灌頂』も採録される。関連地として善福寺が付される題目がある。",
-      "interpretation":"浦安の葬送・水辺文化を扱う可能性が高いが、題名だけで筋を創作しない。"
+      "title":"久助稲荷のキツネ",
+      "status":"same_tradition_cluster_but_text_unconfirmed",
+      "finding":"1984年版『久助稲荷のキツネ』と別資料の『久助稲荷のはなし』があり、既存正式レコード『久助稲荷』は大蓮寺・久助稲荷にまつわる具体的な由来を別資料から確認済み。",
+      "interpretation":"同じ伝承圏である可能性は高いが、本文比較なしに統合しない。"
     },
     {
-      "title":"霊魂この世にとどまりて",
-      "status":"cross_region_source_geography_confirmed_body_unavailable",
-      "finding":"1985年版に収録され、関連地は堀江・船堀・猫実。周辺地域を含む浦安の語りの性格を示す。",
-      "interpretation":"死者伝承ハブへの候補接続は可能だが、本文未確認。"
+      "title":"弁天様の恩返し",
+      "status":"title_only",
+      "finding":"1985年版に収録。既存『猫実の弁天様』や『ヤヘイの弁天さま』とは別題。",
+      "interpretation":"題名だけで同じ弁天伝承とは扱わない。"
     }
   ],
   "confirmed_or_existing_overlap":[
     {"title":"手拭いかぶって踊った猫","record_id":"chiba-urayasu-tenugui-neko","source_year":1984},
-    {"title":"庚申さま／猫実の庚申様","record_id":"chiba-urayasu-koshin-sama","source_year":1985,"note":"本文比較前。重複正式レコードは作らない。"},
+    {"title":"庚申さま／猫実の庚申様","record_id":"chiba-urayasu-koshin-sama","source_year":1985},
     {"title":"蛇の橋","record_id":"chiba-urayasu-hebi-no-hashi","source_year":1984,"note":"本文比較前。"},
     {"title":"蛇の泡とり","record_id":"chiba-urayasu-hebi-no-awatori","source_year":1984,"note":"本文比較前。"},
-    {"title":"白蛇の恩返し","record_id":"chiba-urayasu-hakushebi-no-ongaeshi","source_year":1984,"note":"1985『白蛇を見たって』とは別題。本文比較前。"},
-    {"title":"久助稲荷のキツネ","record_id":"chiba-urayasu-kyusuke-inari","source_year":1984,"note":"本文同一性未比較。"},
+    {"title":"白蛇の恩返し","record_id":"chiba-urayasu-hakushebi-no-ongaeshi","source_year":1984,"note":"1985『白蛇を見たって』とは別題。"},
+    {"title":"久助稲荷","record_id":"chiba-urayasu-kyusuke-inari","source_year":1984,"note":"『久助稲荷のキツネ』との本文同一性未比較。"},
     {"title":"月に化けた狢・ムジナ","record_id":"chiba-urayasu-moon-mujina","source_year":1984,"note":"本文比較前。"}
   ],
   "1984_candidates":[
@@ -74,6 +74,7 @@
     {"title":"月に化けたムジナ","area":"猫実"},
     {"title":"モクゾウガニ獲りの怪","area":"堀江","related_places":["大三角"]},
     {"title":"猫の踊り","area":"当代島"},
+    {"title":"やへいの弁天様","area":"当代島"},
     {"title":"天に上がって雷になった猫","area":"当代島"},
     {"title":"大まといと七熊","area":"当代島","related_places":["船橋"]},
     {"title":"雁釜","area":"当代島"},
