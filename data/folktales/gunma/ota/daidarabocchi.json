@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gunma-ota-daidarabocchi",
+  "status": "draft",
+  "title": "太田のデッタラボッチ",
+  "title_normalized": "太田のデッタラボッチ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "太田市に伝わる巨人伝説。デッタラボッチが赤城山に腰掛けて利根川で足を洗い、足跡が池になったとする。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-C1040166"
+    ]
+  },
+  "story_summary": "デッタラボッチという大男が赤城山に腰掛け、利根川で足を洗った。そのときの足跡が吉沢の池と東金井分の池になり、丸山は煙草の灰だと伝えられている。",
+  "story_content": "デッタラボッチという大男が赤城山に腰掛け、利根川で足を洗った。そのときの足跡が吉沢の池と東金井分の池になり、丸山は煙草の灰だと伝えられている。",
+  "region": {
+    "prefecture": "群馬県",
+    "historical_province": null,
+    "municipality": "太田市",
+    "area_name": "吉沢・東金井周辺"
+  },
+  "locations": [
+    {
+      "name": "吉沢の池・東金井分の池",
+      "type": "池・地形",
+      "description": "巨人の足跡とされる伝承地。",
+      "source_ids": [
+        "SRC-YOUKAI-C1040166"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "足跡",
+    "池",
+    "赤城山"
+  ],
+  "story_type": [
+    "巨人伝説",
+    "地形由来伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-C1040166",
+      "title": "デッタラボッチ，ダイダラボッチ",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1982",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1040166-000",
+      "relevant_section": "群馬県太田市",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
