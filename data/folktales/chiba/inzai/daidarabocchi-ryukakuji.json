@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-inzai-daedarabocchi-ryukakuji",
+  "status": "draft",
+  "title": "安食・龍角寺のデエダラボッチ",
+  "title_normalized": "安食・龍角寺のデエダラボッチ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "安食周辺では、デエダラボッチの足跡や背負っていたものが地形になったとする伝承が記録され、印旛沼も巨人の行動と結び付けられている。",
+    "based_on_source_ids": [
+      "turn0search2"
+    ]
+  },
+  "story_summary": "デエダラボッチの足跡だとされる場所が各地にあり、安食町の龍角寺付近の足跡や、印旛沼、大鷲神社の山が巨人の行動によってできたと伝えられている。",
+  "story_content": "デエダラボッチの足跡だとされる場所が各地にあり、安食町の龍角寺付近の足跡や、印旛沼、大鷲神社の山が巨人の行動によってできたと伝えられている。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": null,
+    "municipality": "印旛郡栄町・印西周辺",
+    "area_name": "安食・龍角寺周辺"
+  },
+  "locations": [
+    {
+      "name": "龍角寺・大鷲神社・印旛沼",
+      "type": "伝承地・地形",
+      "description": "資料に記録された伝承地。",
+      "source_ids": [
+        "turn0search2"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "印旛沼",
+    "龍角寺",
+    "地形由来"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "turn0search2",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=2210031",
+      "relevant_section": "安食・龍角寺のデエダラボッチ",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、日文研の地域別伝承記録から代表例を登録。後段で現地訪問情報・本文・関連史料を深掘りする。"
+}
