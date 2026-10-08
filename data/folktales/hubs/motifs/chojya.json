@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "chojya",
+  "canonical_name": "長者・長者屋敷伝承",
+  "aliases": [
+    "長者伝説",
+    "長者屋敷",
+    "長者どん"
+  ],
+  "summary": "大金持ち・豪族・長者の栄枯盛衰、屋敷、財宝、没落、地名由来などを全国横断で整理する昔話・伝説ハブ。",
+  "sub_motifs": [
+    "長者の栄華",
+    "長者の没落",
+    "長者屋敷",
+    "長者の財宝",
+    "長者の娘",
+    "長者と貧者",
+    "長者の地名由来",
+    "長者の祟り"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "各地の長者屋敷・長者山・長者原など地名伝承。"
+    },
+    {
+      "region": "東北",
+      "note": "長者伝説と黄金・埋蔵財宝。"
+    },
+    {
+      "region": "関東",
+      "note": "長者屋敷・長者山など。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "豪族・寺社縁起と結び付く長者伝承。"
+    },
+    {
+      "region": "九州",
+      "note": "長者屋敷・財宝・没落譚。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "埋蔵金",
+      "隠れ里",
+      "黄金伝説",
+      "寺社縁起"
+    ],
+    "caution": "歴史上実在する豪族と伝説上の長者を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "長者・屋敷・財宝伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
