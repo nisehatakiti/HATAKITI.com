@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "ryu",
+  "canonical_name": "龍・龍神・龍宮伝承",
+  "aliases": [
+    "龍",
+    "竜",
+    "龍神",
+    "龍宮"
+  ],
+  "summary": "龍・龍神・龍宮に関する全国の水神・雨乞い・湖沼・海・異界訪問伝承を横断するハブ。蛇神・大蛇と連続する伝承も多いが、龍としての信仰・物語を保持する。",
+  "sub_motifs": [
+    "龍神",
+    "龍宮へ行く",
+    "龍神の妻",
+    "雨を降らせる龍",
+    "龍の祟り",
+    "湖・池の龍",
+    "海の龍",
+    "龍の玉",
+    "龍と寺社"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "水神・龍神信仰として広く分布。"
+    },
+    {
+      "region": "東北・関東",
+      "note": "湖沼・池・雨乞いの龍神伝承。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "山寺・池・川と龍神。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "海・雨・龍宮との結び付きが強い。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "大蛇",
+      "蛇神",
+      "河童",
+      "水神",
+      "人魚"
+    ],
+    "caution": "神話上の龍と地域の龍神・池の主を同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "龍・龍神・水神系伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
