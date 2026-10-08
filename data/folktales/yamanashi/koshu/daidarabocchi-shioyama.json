@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamanashi-koshu-deedarabocchi-shioyama",
+  "status": "draft",
+  "title": "塩の山・石森山のデエダラボッチ",
+  "title_normalized": "塩の山・石森山のデエダラボッチ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "デエダラボッチが山を担いで運ぶ途中、縄が切れて山が落ち、現在の塩の山や石森山になったという伝承が記録されている。",
+    "based_on_source_ids": [
+      "turn0search1"
+    ]
+  },
+  "story_summary": "デエダラボッチが塩の山と石森山を担いで東山から西山へ跨ごうとしたところ、緒ガラが切れて二つの山が落ちたという。落ちた場所や土質によって山の形が生まれたと説明される。",
+  "story_content": "デエダラボッチが塩の山と石森山を担いで東山から西山へ跨ごうとしたところ、緒ガラが切れて二つの山が落ちたという。落ちた場所や土質によって山の形が生まれたと説明される。",
+  "region": {
+    "prefecture": "山梨県",
+    "historical_province": null,
+    "municipality": "甲州市ほか",
+    "area_name": "塩山周辺"
+  },
+  "locations": [
+    {
+      "name": "塩の山・石森山",
+      "type": "伝承地・地形",
+      "description": "資料に記録された伝承地。",
+      "source_ids": [
+        "turn0search1"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "山",
+    "地形由来"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "turn0search1",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=C1450117-000",
+      "relevant_section": "塩の山・石森山のデエダラボッチ",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、日文研の地域別伝承記録から代表例を登録。後段で現地訪問情報・本文・関連史料を深掘りする。"
+}
