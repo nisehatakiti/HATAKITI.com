@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saitama-chichibu-daidarabou-togamine",
+  "status": "draft",
+  "title": "秩父のダイダラ坊と定峰峠",
+  "title_normalized": "秩父のダイダラ坊と定峰峠",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "秩父のダイダラ坊が峠で休み、粥を煮、箸を立て、笠を置いた跡が現在の地名や山になったという伝承。",
+    "based_on_source_ids": [
+      "turn0search1"
+    ]
+  },
+  "story_summary": "ダイダラ坊が旅の途中で定峰峠に腰を下ろし、粥新田峠で粥を煮、二本木峠に箸を立て、笠山に笠を置いたという。身体や道具の跡が地形・地名になったと説明される。",
+  "story_content": "ダイダラ坊が旅の途中で定峰峠に腰を下ろし、粥新田峠で粥を煮、二本木峠に箸を立て、笠山に笠を置いたという。身体や道具の跡が地形・地名になったと説明される。",
+  "region": {
+    "prefecture": "埼玉県",
+    "historical_province": null,
+    "municipality": "秩父地方",
+    "area_name": "定峰峠"
+  },
+  "locations": [
+    {
+      "name": "定峰峠・粥新田峠・二本木峠・笠山",
+      "type": "伝承地・地形",
+      "description": "資料に記録された伝承地。",
+      "source_ids": [
+        "turn0search1"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "ダイダラボッチ",
+    "巨人",
+    "峠",
+    "地名由来",
+    "地形"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daidarabocchi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "turn0search1",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=C1450117-000",
+      "relevant_section": "秩父のダイダラ坊と定峰峠",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、日文研の地域別伝承記録から代表例を登録。後段で現地訪問情報・本文・関連史料を深掘りする。"
+}
