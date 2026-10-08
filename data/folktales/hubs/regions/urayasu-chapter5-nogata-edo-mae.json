@@ -12,41 +12,30 @@
     {"record_id":"chiba-urayasu-meraboshi","title":"メラボシ"},
     {"record_id":"chiba-urayasu-koshin-sama","title":"庚申さま"}
   ],
-  "related_hubs":[
-    {"hub_id":"hub-motif-urayasu-star-traditions","title":"浦安の星の伝承"},
-    {"hub_id":"hub-regional-otaki-fudoson-urayasu-tradition","title":"浦安・御滝山不動尊信仰伝承"},
-    {"hub_id":"hub-motif-urayasu-jizo-sword-traditions","title":"浦安の地蔵・刀剣伝承群"}
-  ],
   "research_findings":[
     {
-      "title":"姉が崎神社",
-      "status":"source_geography_confirmed",
-      "evidence":"『浦安の世間話』第5章収録。千葉県立図書館の市原市民話索引にも同題が掲載されるが、資料名・出典は同じ『浦安の世間話』で、資料記載地域は浦安、根拠は姉が崎神社とされている。",
-      "interpretation":"市原市索引に現れること自体は市原で採録された別伝承を意味しない。『浦安の世間話』の収録話が、題名の所在地である市原市姉崎を根拠として市原側索引にも再掲されたものと判断するのが安全。"
+      "title":"無縁仏",
+      "status":"cross_region_source_geography_confirmed",
+      "evidence":"浦安市索引では出典『浦安の世間話』、資料記載地域は浦安。市川市索引では同じ出典・資料記載地域浦安で関連地が新井、船橋市索引では同じ出典・資料記載地域浦安で関連地が法典。",
+      "interpretation":"市川・船橋の索引掲載は各地域の別採録を意味しない。浦安の語りが周辺地名を扱う話として再掲されている可能性が高い。本文未確認のため個別伝承の筋は作らない。"
     },
     {
-      "title":"仁右衛門島",
-      "status":"source_geography_confirmed",
-      "evidence":"『浦安の世間話』第5章収録。千葉県立図書館の浦安市索引では資料記載地域が浦安、根拠が仁右衛門島。鴨川市索引にも同題が掲載されるが、出典は同じ『浦安の世間話』で、資料記載地域は浦安、根拠は仁右衛門島。",
-      "interpretation":"鴨川市索引にあることは鴨川採録の別話を意味しない。題名の実在地が鴨川市にあるため、市町村別索引で地名検索により再掲された可能性が高い。本文確認なしに鴨川版・浦安版の異本とは扱わない。"
+      "title":"馬頭観音",
+      "status":"source_index_confirmed",
+      "evidence":"『浦安の世間話』第5章に収録。千葉県立図書館船橋市索引にも同じ出典・資料記載地域浦安で関連地法典が記録される。",
+      "interpretation":"浦安の語りに法典など内陸側の地名・馬頭観音信仰が入り込んでいる可能性があるが、本文未確認。一般的な馬頭観音伝説から補完しない。"
     },
     {
-      "title":"がんがん岩",
-      "status":"cross_region_research",
-      "evidence":"浦安側では猫実、船橋側にも同題が掲載される。",
-      "interpretation":"本文比較まで保留。"
+      "title":"おサンさま",
+      "status":"researching",
+      "evidence":"『浦安の世間話』第5章収録を確認。外部本文は未確認。",
+      "interpretation":"名称から神格・人物・由来を推測しない。"
     },
     {
-      "title":"古井戸の障り",
-      "status":"cross_region_research",
-      "evidence":"浦安・市川双方の索引に関連地がある。",
-      "interpretation":"本文比較まで保留。"
-    },
-    {
-      "title":"サンコウさま",
-      "status":"cross_region_research",
-      "evidence":"浦安・鎌ケ谷・船橋の索引に同題が確認される。",
-      "interpretation":"広域伝承候補だが本文未確認。"
+      "title":"御台場の泥かつぎ",
+      "status":"researching",
+      "evidence":"『浦安の世間話』第5章収録を確認。外部本文は未確認。",
+      "interpretation":"御台場の史実と語り本文を分離して調査する。"
     }
   ],
   "candidates":[
@@ -54,32 +43,33 @@
     {"title":"御台場の泥かつぎ","research_status":"researching"},
     {"title":"サンコウさま","research_status":"cross_region_research"},
     {"title":"がんがん岩","research_status":"cross_region_research"},
-    {"title":"馬頭観音","research_status":"researching"},
-    {"title":"無縁仏","research_status":"researching"},
+    {"title":"馬頭観音","research_status":"source_index_confirmed"},
+    {"title":"無縁仏","research_status":"cross_region_source_geography_confirmed"},
     {"title":"古井戸の障り","research_status":"cross_region_research"},
     {"title":"金剛杖の清水","research_status":"researching"},
     {"title":"御滝山金蔵寺","research_status":"researching"},
     {"title":"立ち不動と座り不動","research_status":"cross_region_research"},
     {"title":"姉が崎神社","research_status":"source_geography_confirmed"},
     {"title":"仁右衛門島","research_status":"source_geography_confirmed"},
-    {"title":"首きり地蔵","research_status":"researching"},
+    {"title":"庚申さま","research_status":"confirmed_record"},
+    {"title":"首きり地蔵","research_status":"cross_region_research"},
     {"title":"彰義隊","research_status":"cross_region_research"},
     {"title":"兵隊の幽霊","research_status":"researching"},
-    {"title":"キタノホシほか","research_status":"researching"},
-    {"title":"ホウキボシ","research_status":"researching"}
+    {"title":"キタノホシほか","research_status":"title_only"},
+    {"title":"ホウキボシ","research_status":"title_only"}
   ],
   "research_notes":[
-    "千葉県立図書館の浦安・市川・船橋・市原・鴨川の索引を横断照合した。",
-    "市原市の「姉が崎神社」と鴨川市の「仁右衛門島」は、いずれも出典が『浦安の世間話』で資料記載地域も浦安であるため、地域別採録の別話とは扱わない。",
+    "千葉県立図書館の浦安・市川・船橋索引を横断照合した。",
+    "『浦安の世間話』の内容紹介は、下総国葛飾郡当代島村の江戸前漁村の原風景と、人々の暮らしを漁師・前田治郎助の語りで再生する資料であることを確認した。",
+    "無縁仏・馬頭観音は周辺地域の地名と結び付くが、索引上の再掲と別採録を区別する。",
     "本文未確認の題名から物語本文を推測して正式レコード化しない。"
   ],
   "sources":[
     {"title":"千葉県立図書館 千葉県の民話 浦安市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"},
     {"title":"千葉県立図書館 千葉県の民話 市川市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichikawa.html"},
     {"title":"千葉県立図書館 千葉県の民話 船橋市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/funabashi.html"},
-    {"title":"千葉県立図書館 千葉県の民話 市原市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/ichihara.html"},
-    {"title":"千葉県立図書館 千葉県の民話 鴨川市","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/kamogawa.html"},
-    {"title":"国立国会図書館サーチ 浦安の世間話","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"}
+    {"title":"国立国会図書館サーチ 浦安の世間話","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"},
+    {"title":"Books 出版書誌データベース 浦安の世間話","url":"https://www.books.or.jp/book-details/9784787290649"}
   ],
   "confidence":"high",
   "research_status":"partial"
