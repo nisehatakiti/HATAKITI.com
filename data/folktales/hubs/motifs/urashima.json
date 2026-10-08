@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "urashima",
+  "canonical_name": "浦島・異界訪問伝承",
+  "aliases": [
+    "浦島太郎",
+    "龍宮訪問",
+    "異界訪問譚"
+  ],
+  "summary": "海・山・地下などの異界を訪れ、現世と異なる時間を経験して帰還する全国の昔話・伝説を横断するハブ。浦島型だけでなく異界訪問の広い型を接続する。",
+  "sub_motifs": [
+    "龍宮訪問",
+    "異界の時間差",
+    "禁忌を破る",
+    "玉手箱",
+    "異界からの帰還",
+    "異界の贈り物",
+    "現世での老い"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "浦島型説話が広く知られる。"
+    },
+    {
+      "region": "日本海側",
+      "note": "海上・異界との往来伝承。"
+    },
+    {
+      "region": "瀬戸内・太平洋岸",
+      "note": "海神・龍宮との結び付き。"
+    },
+    {
+      "region": "山間部",
+      "note": "山・洞窟・異界訪問型の類話。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "龍宮",
+      "人魚",
+      "隠れ里",
+      "異類婚姻",
+      "天女"
+    ],
+    "caution": "浦島太郎という特定作品と、地域の異界訪問伝承を同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "異界訪問・浦島型伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
