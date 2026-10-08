@@ -118,7 +118,7 @@ function hatakiti_handle_mcp_request( WP_REST_Request $request ) {
             return hatakiti_mcp_response( $id, array(
                 'protocolVersion' => '2025-11-25',
                 'capabilities'    => array(
-                    'tools' => array(),
+                    'tools' => (object) array(),
                 ),
                 'serverInfo'      => array(
                     'name'    => 'HATAKITI Draft',
