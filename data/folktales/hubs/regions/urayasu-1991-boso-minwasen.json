@@ -1,37 +1,33 @@
 {
   "schema_version":"1.0",
   "hub_id":"hub-region-urayasu-1991-boso-minwasen",
-  "title":"浦安『房総・民話撰』採録伝承群",
+  "title":"浦安『房総・民話撰』（1991）採録伝承群",
   "hub_type":"source-cluster",
   "region":"千葉県浦安市",
+  "description":"1991年刊『房総・民話撰』（千秋社・安藤操著）について、千葉県立図書館の浦安民話索引で浦安市資料として確認できる採録題名を整理する。本文未確認の題名は正式JSON化せず、1984・1985年資料との再録候補関係のみを記録する。",
   "source":{
     "title":"房総・民話撰",
     "author":"安藤操",
     "publisher":"千秋社",
     "year":1991,
     "pages":223,
-    "ndl_url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002130684"
+    "ndl_url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002130684",
+    "source_index":{
+      "title":"千葉県の民話 浦安市",
+      "publisher":"千葉県立図書館",
+      "url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
+    }
   },
   "entries":[
-    {
-      "title":"海の亡霊二話　その一　明神様のたたり",
-      "record_id":"chiba-urayasu-sea-ghost-myojin",
-      "status":"title_index_only",
-      "finding":"千葉県立図書館の浦安市索引で1991年『房総・民話撰』の浦安市採録として確認。本文未取得。",
-      "related_hub":"urayasu-sea-ghost-traditions"
-    },
-    {
-      "title":"海の亡霊二話　その二　子どもの魂がさそう",
-      "record_id":"chiba-urayasu-sea-ghost-children-soul",
-      "status":"title_index_only",
-      "finding":"千葉県立図書館の浦安市索引で1991年『房総・民話撰』の浦安市採録として確認。本文未取得。",
-      "related_hub":"urayasu-sea-ghost-traditions"
-    },
     {
       "title":"狐のはなし　その一　狐の恩返し",
       "record_id":"chiba-urayasu-fox-return-1991",
       "status":"reprint_candidate_body_unconfirmed",
-      "finding":"1984年『浦安の昔ばなし』の『キツネの恩返し』と題名・地域が一致し、1991年『房総・民話撰』に再録候補として掲載。本文比較前。",
+      "finding":"1984年『浦安の昔ばなし』堀江の『キツネの恩返し』と題名・地域が一致し、1991年『房総・民話撰』に再録候補として掲載。本文比較前のため同一話とは確定しない。",
+      "related_candidates":[
+        {"title":"キツネの恩返し","source":"浦安の昔ばなし（堀江）","year":1984,"relation":"strong_reprint_candidate"},
+        {"title":"キツネのおんがえし浦安市のはなし","source":"キツネのおんがえし浦安市のはなし（別冊）","year":"[1991]","relation":"bibliographic_overlap","note":"同時期に別の冊子としても確認できるため、1991年『房総・民話撰』版と同一本文かは未照合。"}
+      ],
       "related_records":["chiba-urayasu-fox-return"],
       "related_hub":"urayasu-fox-traditions"
     },
@@ -39,7 +35,10 @@
       "title":"狐のはなし　その二　にせの大黒様",
       "record_id":"chiba-urayasu-daikoku-fox-1991",
       "status":"reprint_candidate_body_unconfirmed",
-      "finding":"1984年『浦安の昔ばなし』の『大黒様に化けたキツネ』と強い題名対応を示すが、本文比較前。",
+      "finding":"1984年『浦安の昔ばなし』堀江の『大黒様に化けたキツネ』と強い題名対応を示すが、本文比較前のため同一話とは確定しない。",
+      "related_candidates":[
+        {"title":"大黒様に化けたキツネ","source":"浦安の昔ばなし（堀江）","year":1984,"relation":"strong_reprint_candidate"}
+      ],
       "related_records":["chiba-urayasu-daikoku-fox"],
       "related_hub":"urayasu-fox-traditions"
     },
@@ -47,9 +46,35 @@
       "title":"狐のはなし　その三　背負い籠が重い",
       "record_id":"chiba-urayasu-fox-seoi-kago-1991",
       "status":"title_index_only",
-      "finding":"1991年『房総・民話撰』の浦安市採録として確認。1984年索引には対応する同題が見当たらないため、独立候補として保持。",
+      "finding":"1991年『房総・民話撰』の浦安市採録として確認。1984年索引には直接対応する同題が見当たらないため、独立候補として保持する。他地域の同名話を流用しない。",
       "related_hub":"urayasu-fox-traditions"
+    },
+    {
+      "title":"海の亡霊二話　その一　明神様のたたり",
+      "record_id":"chiba-urayasu-sea-ghost-myojin",
+      "status":"title_index_only",
+      "finding":"千葉県立図書館の浦安市索引で1991年『房総・民話撰』の浦安市採録として確認。本文未取得。既存の浦安『明神様のたたり』候補と題名が一致するが、1991年版本文は未確認。",
+      "related_hub":"urayasu-sea-ghost-traditions"
+    },
+    {
+      "title":"海の亡霊二話　その二　子どもの魂がさそう",
+      "record_id":"chiba-urayasu-sea-ghost-children-soul",
+      "status":"title_index_only",
+      "finding":"千葉県立図書館の浦安市索引で1991年『房総・民話撰』の浦安市採録として確認。本文未取得。『海ぼうず』など別題の海上怪異とは本文比較前に統合しない。",
+      "related_hub":"urayasu-sea-ghost-traditions"
     }
+  ],
+  "research_findings":[
+    {"finding":"1991年『房総・民話撰』の浦安市資料として、狐3題と海の亡霊2題の計5題を千葉県立図書館索引で確認した。","evidence_level":"source_index"},
+    {"finding":"狐のはなしその一は1984年『キツネの恩返し』、その二は1984年『大黒様に化けたキツネ』との再録候補関係が強い。","evidence_level":"multi_source_title_comparison"},
+    {"finding":"その三『背負い籠が重い』は現時点の1984年浦安狐題名一覧に直接対応する題名がなく、独立候補として保持する。","evidence_level":"title_inventory_comparison"},
+    {"finding":"『海の亡霊二話』はその一『明神様のたたり』とその二『子どもの魂がさそう』の2題からなる。","evidence_level":"source_index"}
+  ],
+  "research_rules":[
+    "索引掲載だけでは正式レコードを作らない。",
+    "同題・類題でも本文比較なしに統合しない。",
+    "他地域の同名民話本文を浦安版へ流用しない。",
+    "本文が取得できた段階で正式JSON化し、source/reprint relationsを更新する。"
   ],
   "research_notes":[
     "『房総・民話撰』は1991年3月刊、223ページの安藤操著。",
@@ -57,7 +82,8 @@
     "公開検索では5件の本文を取得できなかったため、筋を推測して正式本文を作成しない。",
     "『狐の恩返し』『にせの大黒様』は1984年採録との再録関係が強いが、本文照合までは別レコード候補として管理する。",
     "『背負い籠が重い』は対応する1984年題名を確認できないため独立候補とする。",
-    "『海の亡霊二話』は既存の浦安海上怪異ハブへ接続するが、既存『海ぼうず』と同一話とは扱わない。"
+    "『海の亡霊二話』は既存の浦安海上怪異ハブへ接続するが、既存『海ぼうず』と同一話とは扱わない。",
+    "2026-10-08、本ハブと同内容の別ファイル（urayasu-1991-boso-minwa-sen.json、hub_id: hub-region-urayasu-1991-boso-minwa-sen）が重複作成されていたため、本ファイルへ統合し、重複ファイルは削除した。"
   ],
   "sources":[
     {

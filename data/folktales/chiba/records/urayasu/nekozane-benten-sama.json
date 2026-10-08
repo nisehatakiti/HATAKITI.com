@@ -53,7 +53,10 @@
   ],
   "themes":["弁財天","災害予知","守護神","大津波","高潮","猫実","地域信仰"],
   "story_type":["寺社伝承","予兆伝承","守護神伝承","災害伝承"],
-  "related_records":["chiba-urayasu-taisho-roku-otsunami"],
+  "related_records":[
+    {"record_id":"chiba-urayasu-taisho-roku-otsunami","relationship":"related_event","note":"大正6年の高潮災害による堂宇流失の経緯を共有する。"},
+    {"record_id":"urayasu-yahai-no-benten-sama","relationship":"possible_related_record","note":"浦安市の弁天信仰伝承として関連候補。ただし同一伝承とは断定しない。"}
+  ],
   "sources":[
     {
       "source_id":"SRC-URAYASU-KANKOU-BENTEN",
@@ -74,9 +77,19 @@
       "accessed_date":"2026-10-08",
       "relevant_section":"明治17年建立、女の姿で災害を知らせる伝承、灰やのくるわ、大正6年の堂宇流失",
       "language":"ja"
+    },
+    {
+      "source_id":"SRC-URAYASU-CITY-HISTORIC-SIGNS",
+      "title":"市内史跡等表示板一覧",
+      "publisher":"浦安市",
+      "source_type":"municipal_official",
+      "url":"https://www.city.urayasu.lg.jp/shisei/profile/rekishi/1001475.html",
+      "accessed_date":"2026-09-07",
+      "relevant_section":"左右天命弁財天",
+      "language":"ja"
     }
   ],
   "confidence":"high",
   "research_status":"deep_researched",
-  "research_notes":"浦安市観光公式サイトと浦安市教育委員会の案内板を紹介する地域資料で伝承本文を確認した。大正6年の出来事については、地域の案内では「大津波」とされる一方、浦安の災害史研究では台風による高潮として扱われるため、物理的災害の分類を伝承名称と混同しないよう記述した。『ヤヘイの弁天さま』とは同一話と断定せず、別タイトルとして保持する。"
+  "research_notes":"浦安市観光公式サイト、浦安市教育委員会の案内板を紹介する地域資料、浦安市公式の市内史跡等表示板一覧の3資料で伝承本文を確認した。大正6年の出来事については、地域の案内では「大津波」とされる一方、浦安の災害史研究では台風による高潮として扱われるため、物理的災害の分類を伝承名称と混同しないよう記述した。『ヤヘイの弁天さま』とは同一話と断定せず、別タイトルとして保持する。2026-10-08、本recordと重複する別ファイル（nekozane-no-benten-sama.json、record_id: chiba-urayasu-nekozane-no-benten-sama）が存在したため、独自の出典（市内史跡等表示板一覧）と関連候補ノートを本recordへ統合し、重複ファイルは削除した。"
 }
