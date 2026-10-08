@@ -96,7 +96,8 @@
         "信仰",
         "世間話"
       ],
-      "status": "researching"
+      "status": "partial",
+      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。"
     },
     {
       "title": "おサンさま",
@@ -115,7 +116,8 @@
         "信仰",
         "怪異"
       ],
-      "status": "researching"
+      "status": "partial",
+      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。"
     },
     {
       "title": "金剛杖の清水",
@@ -169,7 +171,8 @@
         "寺社伝承",
         "恩返し"
       ],
-      "status": "researching"
+      "status": "partial",
+      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。"
     },
     {
       "title": "ヤヘイの弁天さま",
@@ -178,7 +181,8 @@
         "寺社伝承",
         "人物関連"
       ],
-      "status": "researching"
+      "status": "partial",
+      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。"
     },
     {
       "title": "白蛇を見たって",
@@ -188,7 +192,8 @@
         "蛇伝承",
         "寺社伝承"
       ],
-      "status": "researching"
+      "status": "partial",
+      "research_notes": "1992年『浦安の世間話』の収録題名をNDL・千葉県立図書館等で確認。公開Webでは個別本文未確認のため、筋は補完しない。"
     },
     {
       "title": "古井戸の障り",
@@ -470,5 +475,9 @@
       "status": "researching"
     }
   ],
-  "batch_notes": "浦安市民話索引を五十音順に巡回し、既存バッチで未回収だった寺社・信仰・由来・生活話を追加。本文未確認はresearchingとし、類似題・異表記はrelated_titlesまたはhub_membersで束ねた。"
+  "batch_notes": "浦安市民話索引を五十音順に巡回し、既存バッチで未回収だった寺社・信仰・由来・生活話を追加。本文未確認はresearchingとし、類似題・異表記はrelated_titlesまたはhub_membersで束ねた。",
+  "research_boundary": {
+    "date": "2026-10-08",
+    "note": "1992年『浦安の世間話』について、書誌・目次は複数の公開DBで確認可能。本文は公開Web上で個別確認できないものが多く、電子版も検索・引用機能がないため、本文未確認項目は候補/部分確認として保持する。"
+  }
 }
