@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "amabie",
+  "canonical_name": "アマビエ・予言する海中異類",
+  "aliases": [
+    "アマビエ",
+    "アマビコ",
+    "尼彦"
+  ],
+  "summary": "海中から現れ、豊作・疫病などの未来を予言する異類の伝承を横断するハブ。アマビエとアマビコは近縁だが、資料上の名称と出現地を保持して関連付ける。",
+  "sub_motifs": [
+    "海から現れる予言者",
+    "疫病予言",
+    "豊作予言",
+    "姿を写す",
+    "海の異類",
+    "アマビコ"
+  ],
+  "known_connections": [
+    {
+      "region": "熊本",
+      "note": "弘化年間のアマビエ伝承で知られる。"
+    },
+    {
+      "region": "肥後・九州",
+      "note": "アマビコ等の類似予言獣伝承。"
+    },
+    {
+      "region": "江戸時代全国",
+      "note": "写し絵・瓦版を通じた流布。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "人魚",
+      "龍宮",
+      "予言獣",
+      "神使"
+    ],
+    "caution": "アマビエとアマビコを同一個体とはせず、近縁類型として扱う。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "アマビエ・予言獣の資料比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
