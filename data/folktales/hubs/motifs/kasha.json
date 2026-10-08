@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "kasha",
+  "canonical_name": "火車・葬送を襲う怪異",
+  "aliases": [
+    "火車",
+    "かしゃ",
+    "猫の火車"
+  ],
+  "summary": "葬送・死者・罪人の遺体などに関わり、火をまとった車や怪物が死者を奪うとする伝承を整理するハブ。猫・車・地獄の使者などの形に地域差がある。",
+  "sub_motifs": [
+    "葬列を襲う",
+    "死体を奪う",
+    "火の車",
+    "猫の火車",
+    "悪人を地獄へ運ぶ",
+    "寺・墓地の怪異"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "仏教説話・寺社縁起と結び付いて広く知られる。"
+    },
+    {
+      "region": "関東・中部",
+      "note": "葬送・寺院周辺の怪談。"
+    },
+    {
+      "region": "近畿",
+      "note": "仏教説話・地獄観との接続。"
+    },
+    {
+      "region": "九州",
+      "note": "猫・葬送怪異との結び付き。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "化け猫",
+      "幽霊",
+      "人魂",
+      "鬼"
+    ],
+    "caution": "仏教説話としての火車と民間の猫怪異を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "火車・葬送怪異の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
