@@ -215,9 +215,48 @@ function hatakiti_oauth_authorize( WP_REST_Request $request ) {
     }
 
     if ( ! is_user_logged_in() ) {
-        $return_to = add_query_arg( $params, rest_url( 'hatakiti/v1/oauth/authorize' ) );
-        wp_safe_redirect( wp_login_url( $return_to ) );
-        exit;
+        // Keep the OAuth flow on the same HATAKITI origin instead of bouncing
+        // through wp-login.php. This avoids losing the OAuth request/session
+        // state when ChatGPT follows the external authorization redirect.
+        if ( 'POST' === $request->get_method() && isset( $params['hatakiti_login'] ) ) {
+            if ( empty( $params['_wpnonce'] ) || ! wp_verify_nonce( $params['_wpnonce'], 'hatakiti_oauth_login' ) ) {
+                return new WP_Error( 'invalid_request', 'Invalid login request.' );
+            }
+
+            $credentials = array(
+                'user_login'    => isset( $params['log'] ) ? sanitize_user( $params['log'] ) : '',
+                'user_password' => isset( $params['pwd'] ) ? $params['pwd'] : '',
+                'remember'      => ! empty( $params['rememberme'] ),
+            );
+
+            $user = wp_signon( $credentials, is_ssl() );
+            if ( is_wp_error( $user ) ) {
+                $login_error = $user->get_error_message();
+            } else {
+                wp_set_current_user( $user->ID );
+                $redirect_url = add_query_arg( $params, rest_url( 'hatakiti/v1/oauth/authorize' ) );
+                wp_redirect( $redirect_url );
+                exit;
+            }
+        }
+
+        $hidden = '';
+        foreach ( $params as $key => $value ) {
+            if ( in_array( $key, array( '_wpnonce', 'hatakiti_login', 'log', 'pwd', 'rememberme' ), true ) || is_array( $value ) ) {
+                continue;
+            }
+            $hidden .= '<input type="hidden" name="' . esc_attr( $key ) . '" value="' . esc_attr( $value ) . '">';
+        }
+
+        $error_html = isset( $login_error ) ? '<p style="color:#b32d2e;background:#fbeaea;padding:10px;border-radius:4px">' . wp_kses_post( $login_error ) . '</p>' : '';
+
+        $login_html = '<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HATAKITI Draft ログイン</title></head><body style="font-family:sans-serif;max-width:520px;margin:48px auto;padding:24px"><h1>HATAKITI Draft</h1><p>HATAKITI.comのWordPressアカウントでログインしてください。</p>' . $error_html . '<form method="post">' . wp_nonce_field( 'hatakiti_oauth_login', '_wpnonce', true, false ) . $hidden . '<p><label>ユーザー名またはメールアドレス<br><input type="text" name="log" autocomplete="username" required style="width:100%;padding:10px;box-sizing:border-box"></label></p><p><label>パスワード<br><input type="password" name="pwd" autocomplete="current-password" required style="width:100%;padding:10px;box-sizing:border-box"></label></p><p><label><input type="checkbox" name="rememberme" value="forever"> ログイン状態を保存する</label></p><button type="submit" name="hatakiti_login" value="1" style="padding:10px 20px">ログインして続行</button></form></body></html>';
+
+        wp_die( $login_html, 'HATAKITI Draft', array(
+            'response' => 200,
+            'type'     => 'text/html',
+            'exit'     => true,
+        ) );
     }
 
     if ( ! hatakiti_current_user_can_create_draft() ) {
