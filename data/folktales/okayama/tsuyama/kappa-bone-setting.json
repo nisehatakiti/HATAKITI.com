@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okayama-tsuyama-kappa-bone-setting",
+  "status": "draft",
+  "title": "津山の河童と接骨法",
+  "title_normalized": "津山の河童と接骨法",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "津山市では、怪我をした河童を助けた人が、後に子どもの脱臼を河童に治してもらい、接骨法を教えられたという恩返し型の伝承が記録されている。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-0310049"
+    ]
+  },
+  "story_summary": "山仕事の途中で怪我をした河童に出会った男が薬で手当てをした。後日その子どもが足を脱臼すると河童が現れ、接骨法を教えてくれたという。",
+  "story_content": "山仕事の途中で怪我をした河童に出会った男が薬で手当てをした。後日その子どもが足を脱臼すると河童が現れ、接骨法を教えてくれたという。",
+  "region": {
+    "prefecture": "岡山県",
+    "historical_province": null,
+    "municipality": "津山市",
+    "area_name": "千代雫山のふもと"
+  },
+  "locations": [
+    {
+      "name": "千代雫山",
+      "type": "水辺・地域",
+      "description": "伝承・資料に記録された場所または地域。",
+      "source_ids": [
+        "SRC-YOUKAI-0310049"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "水の怪異",
+      "description": "地域の水辺に現れるとされる存在。",
+      "source_ids": [
+        "SRC-YOUKAI-0310049"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "恩返し",
+    "治療",
+    "接骨"
+  ],
+  "story_type": [
+    "河童伝承",
+    "恩返し譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-0310049",
+      "title": "久米町の伝説",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1964",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0310049",
+      "relevant_section": "岡山県津山市",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで実例を先行登録。後段で伝承本文・現地情報・現在の訪問可能性を深掘りする。"
+}
