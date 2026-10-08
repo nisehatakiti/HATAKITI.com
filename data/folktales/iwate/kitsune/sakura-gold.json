@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-kitsune-sakura-gold",
+  "status": "draft",
+  "title": "岩手・桜の下の黄金と狐",
+  "title_normalized": "岩手・桜の下の黄金と狐",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県では桜の下に黄金があるという言い伝えを信じて掘ったところ狐の穴を荒らしてしまい、狐の祟りを受けたため稲荷神社を建てたという伝承が記録されている。",
+    "based_on_source_ids": [
+      "iwate-kitsune-sakura-gold-src"
+    ]
+  },
+  "story_summary": "岩手県では桜の下に黄金があるという言い伝えを信じて掘ったところ狐の穴を荒らしてしまい、狐の祟りを受けたため稲荷神社を建てたという伝承が記録されている。",
+  "story_content": "岩手県では桜の下に黄金があるという言い伝えを信じて掘ったところ狐の穴を荒らしてしまい、狐の祟りを受けたため稲荷神社を建てたという伝承が記録されている。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": null,
+    "municipality": "岩手県内",
+    "area_name": "桜の下・稲荷神社"
+  },
+  "locations": [
+    {
+      "name": "狐の穴と稲荷信仰が結び付く伝承",
+      "type": "伝承地・地域",
+      "description": "狐の穴と稲荷信仰が結び付く伝承",
+      "source_ids": [
+        "iwate-kitsune-sakura-gold-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "怪異・伝承存在",
+      "description": "狐に関する地域伝承。",
+      "source_ids": [
+        "iwate-kitsune-sakura-gold-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-kitsune-sakura-gold-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1230348",
+      "relevant_section": "岩手・桜の下の黄金と狐",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承として登録。後段で本文、地理的位置、現地訪問情報を深掘りする。"
+}
