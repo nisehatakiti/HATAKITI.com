@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aichi-tengu-kagura",
+  "status": "draft",
+  "title": "愛知の天狗と花祭り",
+  "title_normalized": "愛知の天狗と花祭り",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛知県では、花祭りや御神楽の際に天狗が高い所に現れる、天狗は神楽を好むとする伝承が記録されている。",
+    "based_on_source_ids": [
+      "turn0search4"
+    ]
+  },
+  "story_summary": "花祭りのとき高嶺に天狗が現れたので提灯を灯して迎えた、天狗は賑やかなことを好み松の木の上で太鼓を打ったことがある、高いところから神楽を見ているという話が記録されている。",
+  "story_content": "花祭りのとき高嶺に天狗が現れたので提灯を灯して迎えた、天狗は賑やかなことを好み松の木の上で太鼓を打ったことがある、高いところから神楽を見ているという話が記録されている。",
+  "region": {
+    "prefecture": "愛知県",
+    "historical_province": null,
+    "municipality": "奥三河地域",
+    "area_name": "高嶺・大谷周辺"
+  },
+  "locations": [
+    {
+      "name": "高嶺・大谷の神楽",
+      "type": "伝承地・地形",
+      "description": "資料に記録された伝承地。",
+      "source_ids": [
+        "turn0search4"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "天狗",
+    "花祭り",
+    "神楽",
+    "山",
+    "神事"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "turn0search4",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=C0222247-000",
+      "relevant_section": "愛知の天狗と花祭り",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、日文研の地域別伝承記録から代表例を登録。後段で現地訪問情報・本文・関連史料を深掘りする。"
+}
