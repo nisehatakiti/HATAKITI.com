@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "sacred-stone",
+  "canonical_name": "巨石・磐座・動く石伝承",
+  "aliases": [
+    "磐座",
+    "巨石",
+    "動く石",
+    "泣き石",
+    "夜泣き石"
+  ],
+  "summary": "巨大な石・岩・磐座が神として祀られる、泣く・動く・飛ぶ、地名や寺社の由来になるなどの全国伝承を整理するハブ。自然信仰と昔話・怪異が重なる領域。",
+  "sub_motifs": [
+    "磐座",
+    "神石",
+    "泣き石",
+    "夜泣き石",
+    "動く石",
+    "飛び石",
+    "鬼の石",
+    "巨人の石",
+    "石になった人"
+  ],
+  "known_connections": [
+    {
+      "region": "全国",
+      "note": "神社・山岳・海岸などに広く分布。"
+    },
+    {
+      "region": "東北・関東",
+      "note": "泣き石・夜泣き石・鬼石等。"
+    },
+    {
+      "region": "中部・近畿",
+      "note": "磐座・神石・巨石信仰。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "鬼石・飛び石・石神伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "ダイダラボッチ",
+      "鬼",
+      "石神",
+      "地蔵"
+    ],
+    "caution": "考古学的な磐座と民話上の怪異石を同一視せず、伝承上の役割を保持する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "石・岩・怪異伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
