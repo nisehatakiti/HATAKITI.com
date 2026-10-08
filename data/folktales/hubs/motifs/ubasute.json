@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "ubasute",
+  "canonical_name": "姥捨て・姨捨伝承",
+  "aliases": [
+    "姥捨て山",
+    "姨捨山",
+    "老女遺棄伝承"
+  ],
+  "summary": "高齢者を山に捨てるという説話・伝説を中心に、老親をめぐる知恵、家族、共同体の価値観を語る全国の伝承を整理するハブ。実際の習俗と物語上のモチーフを区別する。",
+  "sub_motifs": [
+    "親を山へ送る",
+    "親の知恵で危機を救う",
+    "捨てられた親の帰還",
+    "老親を大切にする教訓",
+    "姥捨て地名伝承"
+  ],
+  "known_connections": [
+    {
+      "region": "信濃・長野",
+      "note": "姨捨山の伝承・地名で特に著名。"
+    },
+    {
+      "region": "東北",
+      "note": "老人遺棄・親孝行説話の類型。"
+    },
+    {
+      "region": "関東・中部",
+      "note": "山中への老親送り伝承。"
+    },
+    {
+      "region": "中国・四国・九州",
+      "note": "親孝行・老親知恵型の類話。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "親孝行",
+      "長者",
+      "隠れ里",
+      "山の伝承"
+    ],
+    "caution": "姥捨ての物語と実際の高齢者遺棄の歴史的事実を混同しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "姥捨て・老人説話の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
