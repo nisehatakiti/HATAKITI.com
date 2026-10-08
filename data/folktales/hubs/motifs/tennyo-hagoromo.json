@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "tennyo-hagoromo",
+  "canonical_name": "天女・羽衣伝承",
+  "aliases": [
+    "羽衣伝説",
+    "天女伝説",
+    "羽衣天女"
+  ],
+  "summary": "天から来た女性が羽衣を失い、人間界で暮らした後に天へ帰る全国の伝承を整理するハブ。水浴、羽衣の隠匿、婚姻、別離などの型を持つ。",
+  "sub_motifs": [
+    "天女の水浴",
+    "羽衣を隠す",
+    "人間との婚姻",
+    "子どもの誕生",
+    "羽衣の発見",
+    "天への帰還",
+    "天女と土地の由来"
+  ],
+  "known_connections": [
+    {
+      "region": "東北・関東",
+      "note": "海岸・湖沼・泉などの羽衣伝承。"
+    },
+    {
+      "region": "中部",
+      "note": "羽衣・天女と寺社・地名の結び付き。"
+    },
+    {
+      "region": "近畿",
+      "note": "古典・寺社縁起と結び付く天女伝承。"
+    },
+    {
+      "region": "中国・四国",
+      "note": "海岸・池・泉の天女伝承。"
+    },
+    {
+      "region": "九州",
+      "note": "天女・羽衣型の異類婚姻。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "異類婚姻",
+      "人魚",
+      "龍宮",
+      "白鳥処女"
+    ],
+    "caution": "日本の地域伝承と古典文学上の羽衣説話を別レイヤーで扱う。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "天女・羽衣伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
