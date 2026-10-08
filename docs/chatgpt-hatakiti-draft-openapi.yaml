@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: HATAKITI.com Draft API
+  version: 1.0.0
+  description: Create WordPress drafts on HATAKITI.com. Publishing is never exposed.
+servers:
+  - url: https://hatakiti.com
+paths:
+  /wp-json/hatakiti/v1/draft:
+    post:
+      operationId: createHatakitiDraft
+      summary: Create a HATAKITI WordPress draft
+      description: Creates a draft only. The WordPress endpoint always forces post_status=draft.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DraftRequest'
+      responses:
+        '200':
+          description: Draft created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DraftResponse'
+        '401':
+          description: Authentication required
+        '403':
+          description: Draft creation is not permitted
+        '500':
+          description: Draft creation failed
+components:
+  schemas:
+    DraftRequest:
+      type: object
+      required:
+        - content_type
+        - title
+        - body
+      properties:
+        content_type:
+          type: string
+          enum:
+            - daily
+            - theatre_essay
+            - theatre_record
+            - film_record
+        title:
+          type: string
+        body:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        meta:
+          type: object
+          additionalProperties: true
+    DraftResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+        post_type:
+          type: string
+        status:
+          type: string
+          enum:
+            - draft
+        edit_link:
+          type: string
+          nullable: true
