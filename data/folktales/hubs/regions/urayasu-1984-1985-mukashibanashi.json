@@ -116,6 +116,26 @@
       "sources": [
         "https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html"
       ]
+    },
+    {
+      "title": "1992年『浦安の世間話』本文周辺の公開書評による内容確認",
+      "status": "public_review_body_evidence",
+      "finding": "森まゆみの書評（2017-12-18）は、本文の具体的場面として「不思議な誕生」の難産と巣鴨地蔵の護符、「大正六年の大津波」の当代島・稲荷神社の松、「死者からの頼み」に対応する六文銭の逸話、「おなつ狐」の綿を求める狐、「月に化けた狢」、海坊主などを紹介している。",
+      "interpretation": "本文全体の公開ではないが、書評者が本文を読んだうえで記述した具体的内容なので、該当タイトルのresearch evidenceとして利用可能。書評にない細部は補わず、正式レコード側では『公開書評で確認できた範囲』として扱う。",
+      "sources": [
+        "https://allreviews.jp/review/1819/",
+        "https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466"
+      ]
+    },
+    {
+      "title": "1992年版の電子版流通確認",
+      "status": "access_route_confirmed",
+      "finding": "『浦安の世間話』は現在も電子版が案内されているが、検索可能な公開本文ではなく、商品ページ上では本文全文の公開閲覧は確認できない。",
+      "interpretation": "本文取得を目的とする場合は、電子版または所蔵館での閲覧を次の確認経路とする。公開Web本文として扱わない。",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784787290649",
+        "https://www.kinokuniya.co.jp/f/dsg-08-9920469106"
+      ]
     }
   ],
   "confirmed_or_existing_overlap": [
