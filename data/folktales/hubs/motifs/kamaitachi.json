@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "kamaitachi",
+  "canonical_name": "鎌鼬・風による無傷の切り傷伝承",
+  "aliases": [
+    "鎌鼬",
+    "かまいたち",
+    "鎌風",
+    "風の怪異"
+  ],
+  "summary": "突然転ぶ・切り傷ができるなど、風や見えない存在によって身体に傷が生じると説明する全国の伝承を横断するハブ。三人一組の鎌鼬など地域ごとの型を保持する。",
+  "sub_motifs": [
+    "突然転ぶ",
+    "無傷なのに血が出る",
+    "後から傷が現れる",
+    "三人の鎌鼬",
+    "風の刃",
+    "鎌風",
+    "薬を塗ると治る"
+  ],
+  "known_connections": [
+    {
+      "region": "中部",
+      "note": "鎌鼬伝承の代表的地域。"
+    },
+    {
+      "region": "関東",
+      "note": "鎌風・風の怪異。"
+    },
+    {
+      "region": "東北",
+      "note": "風による傷の説明伝承。"
+    },
+    {
+      "region": "北陸・甲信",
+      "note": "雪国・山間部の鎌鼬類似伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "風神",
+      "一反木綿",
+      "風の怪異"
+    ],
+    "caution": "医学的・気象的説明と民俗伝承上の説明を区別する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "鎌鼬・風の怪異の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
