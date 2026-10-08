@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "doso-shin",
+  "canonical_name": "道祖神・道の境界神伝承",
+  "aliases": [
+    "道祖神",
+    "道神",
+    "塞の神",
+    "サエノカミ"
+  ],
+  "summary": "村境・道・峠などに立ち、悪霊や疫病を防ぐ神として祀られる全国の境界神伝承を整理するハブ。男女神、石、夫婦神、塞の神など地域ごとの姿を保持する。",
+  "sub_motifs": [
+    "村境の神",
+    "塞の神",
+    "男女一対の石神",
+    "旅の守護神",
+    "疫病除け",
+    "峠の神",
+    "道の石神"
+  ],
+  "known_connections": [
+    {
+      "region": "東北",
+      "note": "村境・道祖神・石神信仰。"
+    },
+    {
+      "region": "関東",
+      "note": "道祖神・双体道祖神が広く分布。"
+    },
+    {
+      "region": "中部",
+      "note": "峠・村境の塞神。"
+    },
+    {
+      "region": "近畿・中国",
+      "note": "道・辻の境界神。"
+    },
+    {
+      "region": "四国・九州",
+      "note": "塞の神・道の神の伝承。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "橋姫",
+      "庚申",
+      "石神",
+      "地蔵",
+      "峠の怪異"
+    ],
+    "caution": "神道・民間信仰・仏教習合など地域ごとの性格を保持する。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "道祖神・境界神伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
