@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukushima-iide-uba-gongen-rain",
+  "status": "draft",
+  "title": "飯豊山・姥権現の涙雨",
+  "title_normalized": "飯豊山・姥権現の涙雨",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福島県飯豊山では、姥清水で水垢離をした女性が山頂近くで石になり、その後、長尾の人が登山すると雨が降るのを姥の涙雨とする伝承が記録されている。",
+    "based_on_source_ids": [
+      "fukushima-iide-uba-gongen-rain-src"
+    ]
+  },
+  "story_summary": "福島県飯豊山では、姥清水で水垢離をした女性が山頂近くで石になり、その後、長尾の人が登山すると雨が降るのを姥の涙雨とする伝承が記録されている。",
+  "story_content": "福島県飯豊山では、姥清水で水垢離をした女性が山頂近くで石になり、その後、長尾の人が登山すると雨が降るのを姥の涙雨とする伝承が記録されている。",
+  "region": {
+    "prefecture": "福島県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "飯豊山"
+  },
+  "locations": [
+    {
+      "name": "飯豊山",
+      "type": "伝承地・地域",
+      "description": "出典に記録された伝承地。",
+      "source_ids": [
+        "fukushima-iide-uba-gongen-rain-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "姥清水・姥権現",
+      "type": "伝承存在",
+      "description": "姥清水・姥権現に関する地域伝承。",
+      "source_ids": [
+        "fukushima-iide-uba-gongen-rain-src"
+      ]
+    }
+  ],
+  "themes": [
+    "姥清水・姥権現"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "姥・山の神",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukushima-iide-uba-gongen-rain-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "relevant_section": "飯豊山・姥権現の涙雨",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承。後段で原資料・具体的地点・現地訪問情報を深掘りする。"
+}
