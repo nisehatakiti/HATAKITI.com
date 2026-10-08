@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tottori-hinogawa-kappa",
+  "status": "draft",
+  "title": "日野川の河童伝説",
+  "title_normalized": "日野川の河童伝説",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "鳥取県の日野川周辺には河童伝説が多く集められていると鳥取県立図書館が案内している。",
+    "based_on_source_ids": [
+      "SRC-TOTTORI-LIB-HINOGAWA"
+    ]
+  },
+  "story_summary": "日野川沿いでは河童伝説が地域の代表的な伝承として知られ、鳥取県立図書館も日野川の伝説資料として河童伝説を紹介している。",
+  "story_content": "日野川沿いでは河童伝説が地域の代表的な伝承として知られ、鳥取県立図書館も日野川の伝説資料として河童伝説を紹介している。",
+  "region": {
+    "prefecture": "鳥取県",
+    "historical_province": null,
+    "municipality": "日野郡・日野川流域",
+    "area_name": "日野川周辺"
+  },
+  "locations": [
+    {
+      "name": "日野川",
+      "type": "水辺・地域",
+      "description": "伝承・資料に記録された場所または地域。",
+      "source_ids": [
+        "SRC-TOTTORI-LIB-HINOGAWA"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "水の怪異",
+      "description": "地域の水辺に現れるとされる存在。",
+      "source_ids": [
+        "SRC-TOTTORI-LIB-HINOGAWA"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "川",
+    "水辺"
+  ],
+  "story_type": [
+    "河童伝承",
+    "地域伝説"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-TOTTORI-LIB-HINOGAWA",
+      "title": "自然・災害編7 河川について調べよう！",
+      "publisher": "鳥取県立図書館",
+      "publication_date": "web",
+      "source_type": "library_guide",
+      "url": "https://www.library.pref.tottori.jp/information/cat16/cat5/5-4.html",
+      "relevant_section": "日野川の伝説",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで実例を先行登録。後段で伝承本文・現地情報・現在の訪問可能性を深掘りする。"
+}
