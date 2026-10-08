@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "oita-saiki-kappa-sumo",
+  "status": "draft",
+  "title": "佐伯の河童相撲",
+  "title_normalized": "佐伯の河童相撲",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "佐伯市米水津では、河童が人を相撲に誘い、酒に酔った人を狙うなどの伝承が記録されている。仏を拝むと河童が退くという型もある。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-2363444"
+    ]
+  },
+  "story_summary": "河童は人を相撲に誘い、皿に水があると非常に強いとされた。「逆とんぼり」などを言うと逃げる、仏を拝んでから行くと姿を消す、酒に酔った人を迎えに来るなどの話が記録されている。",
+  "story_content": "河童は人を相撲に誘い、皿に水があると非常に強いとされた。「逆とんぼり」などを言うと逃げる、仏を拝んでから行くと姿を消す、酒に酔った人を迎えに来るなどの話が記録されている。",
+  "region": {
+    "prefecture": "大分県",
+    "historical_province": null,
+    "municipality": "佐伯市",
+    "area_name": "米水津"
+  },
+  "locations": [
+    {
+      "name": "海・川",
+      "type": "水辺・地域",
+      "description": "伝承・資料に記録された場所または地域。",
+      "source_ids": [
+        "SRC-YOUKAI-2363444"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "水の怪異",
+      "description": "地域の水辺に現れるとされる存在。",
+      "source_ids": [
+        "SRC-YOUKAI-2363444"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "相撲",
+    "酒",
+    "仏",
+    "水辺"
+  ],
+  "story_type": [
+    "河童伝承",
+    "怪異対処伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-2363444",
+      "title": "大分県南海部郡米水津村",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1976",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2363444",
+      "relevant_section": "佐伯市",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで実例を先行登録。後段で伝承本文・現地情報・現在の訪問可能性を深掘りする。"
+}
