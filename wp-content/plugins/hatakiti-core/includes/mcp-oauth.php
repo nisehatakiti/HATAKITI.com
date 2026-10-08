@@ -76,6 +76,35 @@ function hatakiti_oauth_metadata_template() {
 }
 add_action( 'template_redirect', 'hatakiti_oauth_metadata_template', 0 );
 
+// Serve OAuth discovery before normal theme/template routing so the
+// well-known endpoints are not intercepted by theme or 404 handling.
+function hatakiti_oauth_metadata_parse_request( $wp ) {
+    $request_path = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+    $request_path = strtok( $request_path, '?' );
+
+    if ( '/.well-known/oauth-protected-resource' === $request_path ) {
+        hatakiti_oauth_metadata_response( array(
+            'resource'              => HATAKITI_MCP_RESOURCE,
+            'authorization_servers' => array( HATAKITI_OAUTH_ISSUER ),
+            'scopes_supported'      => array( HATAKITI_OAUTH_SCOPE ),
+        ) );
+    }
+
+    if ( '/.well-known/oauth-authorization-server' === $request_path ) {
+        hatakiti_oauth_metadata_response( array(
+            'issuer' => HATAKITI_OAUTH_ISSUER,
+            'authorization_response_iss_parameter_supported' => true,
+            'authorization_endpoint' => rest_url( 'hatakiti/v1/oauth/authorize' ),
+            'token_endpoint' => rest_url( 'hatakiti/v1/oauth/token' ),
+            'client_id_metadata_document_supported' => true,
+            'token_endpoint_auth_methods_supported' => array( 'none' ),
+            'code_challenge_methods_supported' => array( 'S256' ),
+            'scopes_supported' => array( HATAKITI_OAUTH_SCOPE ),
+        ) );
+    }
+}
+add_action( 'parse_request', 'hatakiti_oauth_metadata_parse_request', 0 );
+
 function hatakiti_oauth_client_metadata( $client_id ) {
     if ( ! is_string( $client_id ) || 0 !== strpos( $client_id, 'https://' ) ) {
         return new WP_Error( 'invalid_client', 'Invalid client_id.' );
@@ -219,7 +248,9 @@ function hatakiti_oauth_authorize( WP_REST_Request $request ) {
             'iss'   => HATAKITI_OAUTH_ISSUER,
             'state' => isset( $params['state'] ) ? $params['state'] : '',
         ), $params['redirect_uri'] );
-        wp_safe_redirect( $redirect_url );
+        // ChatGPT's OAuth callback is an external host, so use the normal
+        // redirect function rather than WordPress's internal-host-only helper.
+        wp_redirect( $redirect_url );
         exit;
     }
 
