@@ -215,7 +215,10 @@ function hatakiti_handle_mcp_request( WP_REST_Request $request ) {
             }
 
             // Reuse the existing WordPress endpoint handler so all existing
-            // draft-only rules remain authoritative.
+            // draft-only rules remain authoritative. Bind the OAuth identity
+            // to the WordPress user for the duration of this operation.
+            $previous_user_id = get_current_user_id();
+            wp_set_current_user( (int) $auth['user_id'] );
             $draft_request = new WP_REST_Request( 'POST', '/hatakiti/v1/draft' );
             $draft_request->set_param( 'content_type', $arguments['content_type'] );
             $draft_request->set_param( 'title', $arguments['title'] );
