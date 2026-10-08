@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "hub_type": "national_motif_hub",
+  "motif_id": "nue",
+  "canonical_name": "鵺・異形の獣伝承",
+  "aliases": [
+    "鵺",
+    "ぬえ",
+    "夜鳥の怪"
+  ],
+  "summary": "夜に鳴く怪鳥・異形の獣として語られる鵺を中心に、複数の動物的特徴を持つ怪異や宮廷怪談との接続を整理するハブ。",
+  "sub_motifs": [
+    "夜鳴きの怪",
+    "宮中の怪異",
+    "異形の獣",
+    "鵺退治",
+    "弓矢による退治",
+    "声だけの怪異"
+  ],
+  "known_connections": [
+    {
+      "region": "近畿",
+      "note": "平安京・宮廷説話との結び付きが強い。"
+    },
+    {
+      "region": "全国",
+      "note": "鵺の名称・退治譚が広く知られる。"
+    },
+    {
+      "region": "中部・関東",
+      "note": "鵺に類する異形獣・夜鳴き怪異との接続。"
+    }
+  ],
+  "classification": {
+    "related_motifs": [
+      "雷獣",
+      "鬼",
+      "天狗",
+      "異形獣"
+    ],
+    "caution": "古典文学上の鵺と地域口承の異形獣を同一視しない。"
+  },
+  "sources": [
+    {
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "role": "鵺・異形獣伝承の比較"
+    }
+  ],
+  "research_status": "hub_ready_expanded"
+}
