@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kumamoto-amakusa-kappa-sumo",
+  "status": "draft",
+  "title": "五和の河童相撲",
+  "title_normalized": "五和の河童相撲",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "天草市の五和に伝わる、河童が人間に相撲を挑む伝承。夜通し相撲を取り、夜明けに河童が逃げたと記録されている。",
+    "based_on_source_ids": [
+      "SRC-YOUKAI-0040006"
+    ]
+  },
+  "story_summary": "五和の民話では、相撲好きの河童がほろ酔い気分の男に試合を挑み、夜通し相撲になった。光が差して夜が明けると河童が逃げ出し、男は助かった。",
+  "story_content": "五和の民話では、相撲好きの河童がほろ酔い気分の男に試合を挑み、夜通し相撲になった。光が差して夜が明けると河童が逃げ出し、男は助かった。",
+  "region": {
+    "prefecture": "熊本県",
+    "historical_province": null,
+    "municipality": "天草市",
+    "area_name": "五和"
+  },
+  "locations": [
+    {
+      "name": "五和の伝承地",
+      "type": "地域",
+      "description": "五和の民話として記録。",
+      "source_ids": [
+        "SRC-YOUKAI-0040006"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "河童",
+    "相撲",
+    "酒",
+    "夜"
+  ],
+  "story_type": [
+    "河童伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "SRC-YOUKAI-0040006",
+      "title": "河童（五和の民話）",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "1992",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0040006",
+      "relevant_section": "地域・要約",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズで、公開されている公的図書館・博物館または日文研資料から確認できる代表的伝承として登録。後段で本文・由来・現地情報を深掘りする。"
+}
