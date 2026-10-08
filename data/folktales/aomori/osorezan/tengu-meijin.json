@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aomori-osorezan-tengu-meijin",
+  "status": "draft",
+  "title": "青森・恐山の狗賓・天狗",
+  "title_normalized": "青森・恐山の狗賓・天狗",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "青森県恐山の明神堂では、女人が入ると雨が降るのは狗賓の仕業とされ、夕闇には白衣の天狗が現れて舞うという伝承が記録されている。",
+    "based_on_source_ids": [
+      "aomori-osorezan-tengu-meijin-src"
+    ]
+  },
+  "story_summary": "青森県恐山の明神堂では、女人が入ると雨が降るのは狗賓の仕業とされ、夕闇には白衣の天狗が現れて舞うという伝承が記録されている。",
+  "story_content": "青森県恐山の明神堂では、女人が入ると雨が降るのは狗賓の仕業とされ、夕闇には白衣の天狗が現れて舞うという伝承が記録されている。",
+  "region": {
+    "prefecture": "青森県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "むつ市・恐山"
+  },
+  "locations": [
+    {
+      "name": "むつ市・恐山",
+      "type": "伝承地・地域",
+      "description": "出典に記録された伝承地。",
+      "source_ids": [
+        "aomori-osorezan-tengu-meijin-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "明神堂",
+      "type": "伝承存在",
+      "description": "明神堂に関する地域伝承。",
+      "source_ids": [
+        "aomori-osorezan-tengu-meijin-src"
+      ]
+    }
+  ],
+  "themes": [
+    "明神堂"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "天狗",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aomori-osorezan-tengu-meijin-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "web",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "relevant_section": "青森・恐山の狗賓・天狗",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開フェーズの代表的個別伝承。後段で原資料・具体的地点・現地訪問情報を深掘りする。"
+}
