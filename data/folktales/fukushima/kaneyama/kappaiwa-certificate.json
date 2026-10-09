@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukushima-kaneyama-kappaiwa-certificate",
+  "status": "draft",
+  "title": "金山町・河童石と証文",
+  "title_normalized": "金山町・河童石と証文",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福島県金山町の野尻川には「河童石」と呼ばれる石があった。洗い淵で馬を洗うと河童が尾についてきたため、橋のそばの石より上流へ来ないと証文を取って許したという。河童の血で書かれた証文は観音堂に置かれた後、なくなったと伝えられる。",
+    "based_on_source_ids": [
+      "fukushima-kaneyama-kappaiwa-src"
+    ]
+  },
+  "story_summary": "馬に付いてきた河童を許す際、橋のそばの石から上流へ来ないという証文を取った。その約束を示す石は洪水で流され、証文も観音堂からなくなったという。",
+  "story_content": "中央大学民俗研究会『福島県大沼郡金山町 調査報告書』に記録された伝承。野尻川に河童石と呼ばれる石があり、洗い淵で馬を洗っていると尾に河童が付いてきた。人々は河童から、橋のそばの石より上へは来ないという証文を取って許した。その石は取り決めの目印だったが洪水で流され、河童が指をかみ切って血で書いた証文も観音様のお堂に置かれた後になくなったとされる。",
+  "region": {
+    "prefecture": "福島県",
+    "historical_province": "陸奥",
+    "municipality": "大沼郡金山町",
+    "area_name": "野尻川・洗い淵"
+  },
+  "locations": [
+    {
+      "name": "野尻川",
+      "type": "河川",
+      "description": "河童石と洗い淵の伝承が記録された川。伝承上の石の正確な位置は未確認。",
+      "source_ids": [
+        "fukushima-kaneyama-kappaiwa-src"
+      ]
+    },
+    {
+      "name": "河童石（旧伝承地）",
+      "type": "石・伝承地",
+      "description": "河童との約束の目印とされた石。洪水で流されたと伝えられる。",
+      "source_ids": [
+        "fukushima-kaneyama-kappaiwa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "馬に付いてきて、上流へ来ないという証文を書いたとされる。",
+      "source_ids": [
+        "fukushima-kaneyama-kappaiwa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "河童石",
+    "証文",
+    "洪水",
+    "川"
+  ],
+  "story_type": [
+    "河童伝承",
+    "石の由来",
+    "約束譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukushima-kaneyama-kappaiwa-src",
+      "title": "福島県大沼郡金山町 調査報告書",
+      "publisher": "中央大学民俗研究会（『常民』26号）",
+      "publication_date": "1990-02-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1070515",
+      "relevant_section": "掲載頁167–168",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。河童石は洪水で流されたとされ、現地で現存する石として案内しない。"
+}
