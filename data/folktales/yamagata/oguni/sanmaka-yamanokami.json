@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamagata-oguni-sanmaka-yamanokami",
+  "status": "draft",
+  "title": "小国町・サンマッカと山の神",
+  "title_normalized": "小国町・サンマッカと山の神",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山形県西置賜郡小国町では、「サンマッカ」と呼ばれる三つ又の大木に山の神が宿るとされた。熊狩りで山に入る際には「山の神迎え」として手を合わせてから入ったという。",
+    "based_on_source_ids": [
+      "yamagata-oguni-sanmaka-yamanokami-src"
+    ]
+  },
+  "story_summary": "三つ又の大木「サンマッカ」には山の神が宿ると考えられていた。熊狩りで山に入る時には、山の神迎えとして手を合わせてから入ったという。",
+  "story_content": "成城大学民俗学研究会の調査報告に記録された信仰。山形県西置賜郡小国町では、サンマッカと呼ばれる三つ又の大木に山の神が宿るとされ、熊狩りで山へ入る時には山の神迎えとして手を合わせてから入った。特定の木への信仰と山に入る前の儀礼を記録する。",
+  "region": {
+    "prefecture": "山形県",
+    "historical_province": "出羽",
+    "municipality": "西置賜郡小国町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "サンマッカ（三つ又の大木・所在地未詳）",
+      "type": "樹木・信仰対象",
+      "description": "山の神が宿るとされた三つ又の大木。現在の所在・現存状況は未確認。",
+      "source_ids": [
+        "yamagata-oguni-sanmaka-yamanokami-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山の神",
+      "type": "信仰対象",
+      "description": "サンマッカと呼ばれる大木に宿ると考えられ、山入り前の儀礼で迎えられた。",
+      "source_ids": [
+        "yamagata-oguni-sanmaka-yamanokami-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山の神",
+    "神木",
+    "熊狩り",
+    "山入り儀礼"
+  ],
+  "story_type": [
+    "信仰伝承",
+    "山の民俗",
+    "樹木信仰"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-iwa-kami",
+      "relationship": "related_motif"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamagata-oguni-sanmaka-yamanokami-src",
+      "title": "信仰",
+      "publisher": "成城大学民俗学研究会（『成城大学民俗調査報告書』2号）",
+      "publication_date": "1977-04-30",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1150009",
+      "relevant_section": "掲載頁45",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。サンマッカの具体的な場所と現存状況は未確認。旅行向けの訪問地点として表示するには追加調査が必要。"
+}
