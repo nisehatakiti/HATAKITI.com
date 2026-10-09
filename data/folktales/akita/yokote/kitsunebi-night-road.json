@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "akita-yokote-kitsunebi-night-road",
+  "status": "draft",
+  "title": "横手・夜道に現れて消える狐火",
+  "title_normalized": "横手・夜道に現れて消える狐火",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "秋田県横手市の採録では、暗い道を歩いていると遠くに明るい火が見え、人の灯りなら消えずに続くが、狐火ならぱっと消え、しばらくすると再び現れると語られた。",
+    "based_on_source_ids": [
+      "akita-yokote-kitsunebi-src"
+    ]
+  },
+  "story_summary": "暗い道で遠くに見える火は、人の灯りなら続くが、狐火なら突然消えて、しばらくするとまた現れるとされた。",
+  "story_content": "国学院大学民俗文学研究会「世間話」に記録された横手市の伝承。暗い時に歩いていると、遠方にぱっと明るい火が見える。人の灯りであればずっとついているが、狐火であれば突然消え、しばらくすると再びぽっかりと現れるという。狐火を見分ける特徴として語られた具体的な説明を記録する。",
+  "region": {
+    "prefecture": "秋田県",
+    "historical_province": "出羽",
+    "municipality": "横手市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異現象",
+      "description": "暗い道の遠方に現れ、突然消えて再び現れると語られた光。",
+      "source_ids": [
+        "akita-yokote-kitsunebi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "夜道",
+    "光",
+    "見分け方"
+  ],
+  "story_type": [
+    "狐火伝承",
+    "世間話"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "akita-yokote-kitsunebi-src",
+      "title": "世間話",
+      "publisher": "国学院大学民俗文学研究会（『伝承文芸』通巻17号）",
+      "publication_date": "1990-11-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1370091",
+      "relevant_section": "掲載頁159",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現代的な光学的説明を付加せず、採録された語りを記録した。"
+}
