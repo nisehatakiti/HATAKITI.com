@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-nanto-nawaike-daija",
+  "status": "draft",
+  "title": "南砺・縄が池の大蛇と雨乞い",
+  "title_normalized": "南砺・縄が池の大蛇と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "富山県南砺市の縄が池は雨乞いの池とされ、泰澄大師が里人を害していた大蛇を縄で閉じ込めたところ池になったという伝承が記録されている。",
+    "based_on_source_ids": [
+      "toyama-nanto-nawaike-daija-src"
+    ]
+  },
+  "story_summary": "富山県南砺市の縄が池は雨乞いの池とされ、泰澄大師が里人を害していた大蛇を縄で閉じ込めたところ池になったという伝承が記録されている。",
+  "story_content": "富山県南砺市の縄が池は雨乞いの池とされ、泰澄大師が里人を害していた大蛇を縄で閉じ込めたところ池になったという伝承が記録されている。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": null,
+    "municipality": "南砺市",
+    "area_name": "縄が池"
+  },
+  "locations": [
+    {
+      "name": "縄が池",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "toyama-nanto-nawaike-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "toyama-nanto-nawaike-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "toyama-nanto-nawaike-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1610098-000",
+      "relevant_section": "南砺・縄が池の大蛇と雨乞い",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
