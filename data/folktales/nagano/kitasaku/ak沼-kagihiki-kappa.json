@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-kitasaku-aknuma-kappa",
+  "status": "draft",
+  "title": "長野・赤沼の鍵引き河童",
+  "title_normalized": "長野・赤沼の鍵引き河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県北佐久地方では、赤沼の河童が旅人に鍵引きを挑んで沼へ引きずり込んでいた。諏訪の頼遠に負けた河童は沼を去る約束をし、一夜で山中に池を作って移ったという。",
+    "based_on_source_ids": [
+      "nagano-kitasaku-aknuma-kappa-src"
+    ]
+  },
+  "story_summary": "長野県北佐久地方では、赤沼の河童が旅人に鍵引きを挑んで沼へ引きずり込んでいた。諏訪の頼遠に負けた河童は沼を去る約束をし、一夜で山中に池を作って移ったという。",
+  "story_content": "長野県北佐久地方では、赤沼の河童が旅人に鍵引きを挑んで沼へ引きずり込んでいた。諏訪の頼遠に負けた河童は沼を去る約束をし、一夜で山中に池を作って移ったという。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": null,
+    "municipality": "北佐久郡",
+    "area_name": "赤沼・鍵引石・和田の山中"
+  },
+  "locations": [
+    {
+      "name": "赤沼・鍵引石・和田の山中",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "nagano-kitasaku-aknuma-kappa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "nagano-kitasaku-aknuma-kappa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-kitasaku-aknuma-kappa-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0610050",
+      "relevant_section": "長野・赤沼の鍵引き河童",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
