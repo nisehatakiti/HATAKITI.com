@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okinawa-yaeyama-sea-serpent",
+  "status": "draft",
+  "title": "八重山・海蛇の伝承候補",
+  "title_normalized": "八重山・海蛇の伝承候補",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "沖縄県八重山地方では、海や水辺に関わる蛇・神霊の伝承が地域信仰と結び付いている。個別の伝承名と原資料を確認するまで候補として管理する。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "沖縄県八重山地方では、海や水辺に関わる蛇・神霊の伝承が地域信仰と結び付いている。個別の伝承名と原資料を確認するまで候補として管理する。",
+  "story_content": "",
+  "region": {
+    "prefecture": "沖縄県",
+    "historical_province": null,
+    "municipality": "八重山地方",
+    "area_name": "海・水辺"
+  },
+  "locations": [
+    {
+      "name": "海・水辺",
+      "type": "伝承地域",
+      "description": "地域レベルの調査候補。個別地点は未確定。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "蛇・水神",
+      "type": "伝承・信仰対象",
+      "description": "蛇・水神に関する伝承候補。"
+    }
+  ],
+  "themes": [
+    "蛇・水神"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "候補管理用の仮レコード。一次資料・個別の伝承名・正確な地域が確認できるまで、確定した個別伝承として公開しない。次段階で公的文化財資料、地域史、日文研DB等を照合し、確認できなければ削除または候補一覧へ移す。"
+}
