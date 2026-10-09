@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ibaraki-tsukuba-tengu",
+  "status": "draft",
+  "title": "筑波山の天狗伝承",
+  "title_normalized": "筑波山の天狗伝承",
+  "title_origin": "research_title",
+  "summary": {
+    "text": "茨城県の筑波山には天狗にまつわる伝承があり、山岳信仰や山中の奇異な出来事と結び付いて語られている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "茨城県の筑波山には天狗にまつわる伝承があり、山岳信仰や山中の奇異な出来事と結び付いて語られている。",
+  "story_content": "茨城県の筑波山には天狗にまつわる伝承があり、山岳信仰や山中の奇異な出来事と結び付いて語られている。",
+  "region": {
+    "prefecture": "茨城県",
+    "historical_province": null,
+    "municipality": "つくば市",
+    "area_name": "筑波山"
+  },
+  "locations": [
+    {
+      "name": "筑波山",
+      "type": "伝承地域",
+      "description": "地域伝承と関係する地名・信仰地。現地地点の確定は後続調査で行う。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在・信仰対象",
+      "description": "天狗に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "全国の伝承候補として仮登録。個別の一次資料・伝承内容・正確な地点を確認するまで、確定済みの実例として扱わない。出典確認後にsummary、sources、confidenceを更新する。"
+}
