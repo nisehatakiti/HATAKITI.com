@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ibaraki-tsuchiura-tengu-sumo",
+  "status": "draft",
+  "title": "茨城・庭石に降りた天狗",
+  "title_normalized": "茨城・庭石に降りた天狗",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "茨城県では、天狗が庭石に降り立ち、人を土嶽へ連れて行って相撲を取ったという伝承が記録されている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "茨城県では、天狗が庭石に降り立ち、人を土嶽へ連れて行って相撲を取ったという伝承が記録されている。",
+  "story_content": "茨城県では、天狗が庭石に降り立ち、人を土嶽へ連れて行って相撲を取ったという伝承が記録されている。",
+  "region": {
+    "prefecture": "茨城県",
+    "historical_province": null,
+    "municipality": "茨城県内",
+    "area_name": "庭石・土嶽"
+  },
+  "locations": [
+    {
+      "name": "庭石・土嶽",
+      "type": "伝承地域",
+      "description": "日文研の伝承検索で確認された地域情報。正確な個別地点・記録IDは追加確認が必要。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "天狗に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "source_record_verification_needed",
+  "research_notes": "伝承の概要は日文研データベースの検索結果に基づく候補。正確な個別カードURL・原資料・地点を照合してから確定扱いにする。"
+}
