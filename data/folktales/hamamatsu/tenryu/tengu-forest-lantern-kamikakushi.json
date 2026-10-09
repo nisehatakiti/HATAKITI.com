@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "record_id": "hamamatsu-tenryu-tengu-forest-lantern-kamikakushi",
+  "status": "draft",
+  "title": "天竜・天狗の森に連なる提灯と神隠し",
+  "title_normalized": "天竜・天狗の森に連なる提灯と神隠し",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県浜松市天竜区の記録では、天狗の森に赤く少し青みがかった提灯のような光が数珠つなぎに見えることがあり、その近くで考え事や居眠りをするなど気が緩むと、天狗にさらわれるとされた。",
+    "based_on_source_ids": [
+      "hamamatsu-tengu-forest-lantern-src"
+    ]
+  },
+  "story_summary": "天狗の森に連なる提灯のような光が現れ、その近くで気を緩めると天狗にさらわれるとされた伝承。",
+  "story_content": "久谷哲久・斉藤八千代・井上まなみ「伝説」に記録された静岡県浜松市天竜区の伝承。天狗の森には、赤く、少し青みがかった提灯のようなものが数珠つなぎに見えることがある。その近くで考え事をしたり居眠りをしたりするなど、心に隙があると天狗にさらわれるとされた。同じ地域の別カードには、天狗が提灯を持って通り、その火を見ると赤痢や疫痢にかかるという話もある。本記録は、光を見ること自体を病と結び付ける話ではなく、光の近くで注意を失うことが連れ去りにつながる話として区別する。資料要約にない具体的な被害者や帰還の展開は補わない。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "遠江",
+    "municipality": "浜松市天竜区",
+    "area_name": "天狗の森"
+  },
+  "locations": [
+    {
+      "name": "天狗の森",
+      "type": "伝承地",
+      "description": "提灯状の光が連なって見え、天狗による神隠しが語られる場所。現在の具体的地点は資料要約からは特定できない。",
+      "source_ids": [
+        "hamamatsu-tengu-forest-lantern-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "森の提灯状の光の近くで気を緩めた者をさらうとされる。",
+      "source_ids": [
+        "hamamatsu-tengu-forest-lantern-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "天狗の森",
+    "提灯状の光",
+    "神隠し",
+    "注意の弛緩",
+    "山林の禁忌"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "神隠し伝承",
+    "禁忌伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "hamamatsu-tengu-forest-lantern-src",
+      "title": "伝説",
+      "publisher": "中京大学郷土研究会『中京民俗』通巻8号",
+      "publication_date": "1971-04-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1260003",
+      "relevant_section": "掲載頁86",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード1260003に基づく。大茂沢の「提灯の火を見ると病になる」カード1260004とは別記録で、前者は光の近くでの神隠し、後者は火を見る禁忌として別々に保持する。"
+}
