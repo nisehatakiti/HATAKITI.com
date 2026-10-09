@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyazaki-hyuga-tengu-nose-growing-drum",
+  "status": "draft",
+  "title": "日向・天狗の鼻高なれの太鼓",
+  "title_normalized": "日向・天狗の鼻高なれの太鼓",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮崎県の日向の天狗伝承。子供が天狗をだまして太鼓を手に入れ、その太鼓を打って「天狗様の鼻高なれ」と唱えると、天狗の鼻が伸び、先端が山火事になって天狗は鼻をやけどした。以来、天狗の鼻は赤くなったと語られる。",
+    "based_on_source_ids": [
+      "miyazaki-hyuga-tengu-nose-growing-drum-src"
+    ]
+  },
+  "story_summary": "子供にだまされた天狗は、太鼓の音と唱え言葉によって鼻を伸ばされ、鼻先を火傷する。そのため天狗の鼻は赤くなったという由来譚。",
+  "story_content": "矢口裕康「日向の天狗伝承」に採録された話。ある子供が天狗をだまし、覗き眼鏡と引き換えに「鼻高なれ」の太鼓を手に入れる。怒った天狗に対して子供が太鼓を叩きながら「天狗様の鼻高なれ」と唱えると、天狗の鼻が伸び、その先で山火事が起きた。天狗は鼻先を火傷し、それ以来、天狗の鼻は赤くなったと説明される。",
+  "region": {
+    "prefecture": "宮崎県",
+    "historical_province": "日向",
+    "municipality": null,
+    "area_name": "日向地方"
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "子供",
+      "type": "人間",
+      "description": "天狗をだまして太鼓を手に入れる人物。",
+      "source_ids": [
+        "miyazaki-hyuga-tengu-nose-growing-drum-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "子供に太鼓を使われて鼻を伸ばされ、鼻先を火傷する。",
+      "source_ids": [
+        "miyazaki-hyuga-tengu-nose-growing-drum-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "鼻",
+    "太鼓",
+    "由来譚",
+    "知恵比べ"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyazaki-hyuga-tengu-nose-growing-drum-src",
+      "title": "日向の天狗伝承",
+      "publisher": "山村民俗の会（『あしなか』通巻257号）",
+      "publication_date": "2001-06",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030461",
+      "relevant_section": "掲載頁2–3",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。地域欄は宮崎県までのため、市町村は特定せず日向地方とした。"
+}
