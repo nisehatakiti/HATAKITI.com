@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "hyogo-akashi-umibozu-shakushi",
+  "status": "draft",
+  "title": "明石・海坊主と底の抜けた杓子",
+  "title_normalized": "明石・海坊主と底の抜けた杓子",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "兵庫県明石市大久保町の漁船伝承では、凪の日に海坊主が船へ乗り込んだような気配を見せる。杓子で海水を汲んで船首へ投げ、杓子の底を抜いて海へ流すとよいとされた。",
+    "based_on_source_ids": [
+      "hyogo-akashi-umibozu-shakushi-src"
+    ]
+  },
+  "story_summary": "海坊主は凪の日に船に現れ、何かが乗ったような気配がするのに姿は見えないという。海水を杓子ですくって船首に投げ、杓子の底を抜いて海へ流す対処法が伝えられている。",
+  "story_content": "日文研の記録「舞子の漁船」では、兵庫県明石市大久保町の伝承として、海坊主が船に乗ることがあり、何かが乗った感じがするものの姿は見えないとする。杓子で海水を汲み、船の先へ投げかけ、杓子の底を抜いて海へ流すとよいと記録されている。また、海坊主は時化の日ではなく凪の日に現れるという。",
+  "region": {
+    "prefecture": "兵庫県",
+    "historical_province": null,
+    "municipality": "明石市大久保町",
+    "area_name": "舞子周辺の漁船伝承"
+  },
+  "locations": [
+    {
+      "name": "明石市大久保町の沿岸",
+      "type": "沿岸・伝承地域",
+      "description": "日文研の個別記録に示された地域。海坊主の伝承地点を特定の海岸や港に限定する資料は未確認。",
+      "source_ids": [
+        "hyogo-akashi-umibozu-shakushi-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "姿が見えないまま船に乗った気配を生じさせる海の怪異。",
+      "source_ids": [
+        "hyogo-akashi-umibozu-shakushi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主",
+    "漁船",
+    "海難除け",
+    "杓子"
+  ],
+  "story_type": [
+    "地域伝承",
+    "海上伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "hyogo-akashi-umibozu-shakushi-src",
+      "title": "舞子の漁船",
+      "publisher": "三元社（『旅と伝説』8巻6号・通巻90号）",
+      "publication_date": "1935-06-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232841",
+      "relevant_section": "掲載頁59–60",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。資料の地域表示と現在の行政区分・具体的な沿岸地点の対応は後段で補完する。"
+}
