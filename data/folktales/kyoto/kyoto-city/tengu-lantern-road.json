@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kyoto-kyoto-city-tengu-lantern-road",
+  "status": "draft",
+  "title": "京都・天狗の出る場所の石灯籠",
+  "title_normalized": "京都・天狗の出る場所の石灯籠",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "京都市の天狗が住むと噂された場所で、道の中央に突然現れた石灯籠を殴った男が気を失い、見当もつかない場所で倒れていた。額にはつつじの切り株が刺さっており、天狗に山上へ投げ上げられたらしいと語られた。",
+    "based_on_source_ids": [
+      "kyoto-kyoto-city-tengu-lantern-road-src"
+    ]
+  },
+  "story_summary": "天狗が出ると噂された場所で石灯籠を殴った男が、気を失って別の場所で見つかる。天狗に山上へ投げ上げられたと考えられた。",
+  "story_content": "竹内不死鳥「天狗の話（四）」に収録された京都市の伝承。天狗が住んでいるという噂の場所で、道の中央に突然現れた石灯籠を男が殴りつけた。その後男は気を失い、気がつくと見当もつかない場所に倒れており、額にはつつじの切り株が刺さっていた。天狗に山上へ放り上げられたらしいと説明されている。",
+  "region": {
+    "prefecture": "京都府",
+    "historical_province": "山城",
+    "municipality": "京都市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "石灯籠を殴った男",
+      "type": "人間",
+      "description": "天狗が出ると噂された場所で、道に現れた石灯籠を殴る。",
+      "source_ids": [
+        "kyoto-kyoto-city-tengu-lantern-road-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "男を山上へ投げ上げたらしい存在として語られる。",
+      "source_ids": [
+        "kyoto-kyoto-city-tengu-lantern-road-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "石灯籠",
+    "気絶",
+    "山",
+    "怪異"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kyoto-kyoto-city-tengu-lantern-road-src",
+      "title": "天狗の話（四）",
+      "publisher": "郷土趣味社（『郷土趣味』通巻13号）",
+      "publication_date": "1919-06",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0690027",
+      "relevant_section": "掲載頁4–5",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。天狗の仕業は資料上も「らしい」とされているため、断定していない。"
+}
