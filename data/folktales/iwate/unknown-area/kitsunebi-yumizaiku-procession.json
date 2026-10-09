@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-unknown-area-kitsunebi-yumizaiku-procession",
+  "status": "draft",
+  "title": "岩手・弓細工集落の山に見える狐火の行列",
+  "title_normalized": "岩手・弓細工集落の山に見える狐火の行列",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "1973年の岩手県の狐火伝承として、弓細工集落の山に狐火の行列が見え、麓から目撃したこと、提灯の光とは色が異なることが記録されている。自治体名や詳細書誌は、参照できた検索対象事例からは確定できない。",
+    "based_on_source_ids": [
+      "iwate-kitsunebi-yumizaiku-src"
+    ]
+  },
+  "story_summary": "狐火は提灯の光とは色が違い、弓細工集落の山を行列しているのを麓から見たことがあるという。光の行列という視覚的特徴に加え、通常の提灯との色の違いが伝承の識別点となっている。",
+  "story_content": "日文研怪異・妖怪伝承データベースのカード1460577を検索対象とする類似事例ページには、1973年の岩手県の記録として「狐火は提灯の光とは色が違う。弓細工集落の山を行列しているのを、麓から見たことがある」と記載されている。この記録では、狐火の存在理由や正体を説明するよりも、目撃場所（集落の山）、観察位置（麓）、見え方（行列）、提灯との色の違いが中心となる。別の岩手県の狐火記録1460556にも季節性と行列の記述があるが、同一の証言とは確認できないため、別レコードとして保持する。弓細工集落の現在の所在地や個別カードの詳細書誌は未確認であり、ここでは補完しない。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "弓細工集落の山（資料表記）"
+  },
+  "locations": [
+    {
+      "name": "弓細工集落の山",
+      "type": "伝承地（資料表記）",
+      "description": "麓から狐火の行列を見たという記録。現在の自治体・所在地は未確認。",
+      "source_ids": [
+        "iwate-kitsunebi-yumizaiku-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異・伝承現象",
+      "description": "提灯の光とは色が異なり、山を行列するように見えたと記録される。",
+      "source_ids": [
+        "iwate-kitsunebi-yumizaiku-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "光の行列",
+    "山",
+    "提灯との比較"
+  ],
+  "story_type": [
+    "怪異伝承",
+    "目撃伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "iwate-ichinoseki-kitsunebi-autumn-winter-mountain-procession",
+      "relationship": "related_variant"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-kitsunebi-yumizaiku-src",
+      "title": "狐火（検索対象事例：カード1460577）",
+      "publisher": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publication_year": 1973,
+      "source_type": "database_simsearch_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1460577",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion_source_detail_pending",
+  "research_notes": "2026-10-09作成。カード1460577の検索対象事例に明記された伝承要素に限定して記述。個別カード表示の書誌情報・正確な自治体は未確認。1460556と近い要素があるが、証言の同一性が確認できないため統合していない。"
+}
