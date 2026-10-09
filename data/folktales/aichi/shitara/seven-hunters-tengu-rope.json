@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aichi-shitara-seven-hunters-tengu-rope",
+  "status": "draft",
+  "title": "設楽・七人狩人の塚と天狗のいたずら",
+  "title_normalized": "設楽・七人狩人の塚と天狗のいたずら",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛知県北設楽郡設楽町の伝承。山で草を刈って帰る途中、馬の背に積んだ荷の縄が何度直してもすぐにほどけ、村へ帰るのに長い時間がかかった。人々は天狗のいたずらではないかと考えた。",
+    "based_on_source_ids": [
+      "aichi-shitara-seven-hunters-tengu-rope-src"
+    ]
+  },
+  "story_summary": "山からの帰りに荷縄が何度もほどけ、天狗のいたずらと考えられた話。",
+  "story_content": "早川孝太郎「七人狩人の塚」に記録された設楽町の伝承。山へ草を刈りに行った帰り道、馬の背に積んだ荷の縄が、何度直してもすぐにほどけてしまった。そのため村に戻るまで長い時間がかかり、天狗のいたずらではないかと考えられた。題名には「七人狩人の塚」とあるが、要約で説明される出来事との詳細な関係は明示されていないため、ここでは荷縄の怪異を中心に記録する。",
+  "region": {
+    "prefecture": "愛知県",
+    "historical_province": "三河",
+    "municipality": "設楽町",
+    "area_name": "北設楽郡"
+  },
+  "locations": [
+    {
+      "name": "山道",
+      "type": "山道",
+      "description": "草刈りから帰る途中、荷縄が何度もほどけたとされる場所。",
+      "source_ids": [
+        "aichi-shitara-seven-hunters-tengu-rope-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "草刈りに行った人",
+      "type": "人間",
+      "description": "馬に草を積んで帰る途中、荷縄が何度もほどける怪異に遭う。",
+      "source_ids": [
+        "aichi-shitara-seven-hunters-tengu-rope-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "荷縄を何度もほどくいたずらの原因ではないかと考えられた。",
+      "source_ids": [
+        "aichi-shitara-seven-hunters-tengu-rope-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "荷縄",
+    "山道",
+    "いたずら",
+    "七人狩人の塚"
+  ],
+  "story_type": [
+    "天狗のいたずら譚",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aichi-shitara-seven-hunters-tengu-rope-src",
+      "title": "七人狩人の塚",
+      "publisher": "三元社（『旅と伝説』通巻12号）",
+      "publication_date": "1928-12-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230043",
+      "relevant_section": "掲載頁53",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。塚の由来に関する詳しい説明は要約にないため、荷縄の怪異と題名を分けて扱った。"
+}
