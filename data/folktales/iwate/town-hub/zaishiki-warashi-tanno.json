@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-tono-zashiki-warashi-tradition",
+  "status": "draft",
+  "title": "遠野・座敷童子の伝承",
+  "title_normalized": "遠野・座敷童子の伝承",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県遠野地方を含む東北各地では、家に住み着く子どもの姿の存在を座敷童子と呼び、家の繁栄と結び付けて語る伝承がある。遠野の伝承として知られるが、個々の家・話型を混同しないよう個別資料による確認が必要である。",
+    "based_on_source_ids": [
+      "iwate-tono-zashiki-warashi-src"
+    ]
+  },
+  "story_summary": "座敷童子は家に住み着く子どもの姿の存在とされ、姿を見たり気配を感じたりした家は栄えると語られることがある。地域や家ごとに語りの内容は異なる。",
+  "story_content": "遠野地方の民俗伝承として知られる座敷童子は、家の中にいる子どもの姿の存在として語られ、家運や繁栄と結び付けられる場合がある。ただし、座敷童子は遠野だけに限られる存在ではなく、伝承の内容も一様ではない。このレコードは地域の伝承群を示す入口として扱い、特定の家屋や個別の怪異談を確定するものではない。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": "陸中",
+    "municipality": "遠野市",
+    "area_name": "遠野地方"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "座敷童子",
+      "type": "伝承存在",
+      "description": "家に住み着く子どもの姿の存在とされ、家運・繁栄と結び付けて語られる。",
+      "source_ids": [
+        "iwate-tono-zashiki-warashi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "座敷童子",
+    "家の守護",
+    "家運",
+    "繁栄"
+  ],
+  "story_type": [
+    "家の怪異伝承",
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-zashikiwarashi",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-tono-zashiki-warashi-src",
+      "title": "遠野物語と座敷童子に関する地域資料",
+      "publisher": "遠野市立博物館（公式案内）",
+      "source_type": "institutional_overview",
+      "url": "https://tonojikan.jp/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "候補ハブとしての暫定記録。出典は地域公式案内の入口であり、座敷童子を扱う個別資料を確認するまでは確定伝承として扱わない。"
+}
