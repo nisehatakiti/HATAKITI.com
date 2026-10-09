@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-tsushima-sago-umi-bozu-akatori",
+  "status": "draft",
+  "title": "対馬・佐護湊の海坊主とアカトリ",
+  "title_normalized": "対馬・佐護湊の海坊主とアカトリ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県対馬の佐護湊では、海坊主が船に現れて「アカトリ」を貸すよう求め、断ると船を沈めると脅すという。貸すと海水を船に汲み入れて沈めるため、漁師は船玉様を祀って災難を避けようとした。",
+    "based_on_source_ids": [
+      "nagasaki-sago-umi-bozu-src"
+    ]
+  },
+  "story_summary": "海坊主が船に来てアカトリを貸せと迫り、断ると船を沈めると脅す。貸した場合も海水を船へ汲み入れて沈めるという。災難除けに漁師が船玉様を祀ったとされる。",
+  "story_content": "鈴木正崇「対馬・佐護湊の民間信仰」に記録された海の伝承。海坊主は船に現れてアカトリを貸すよう求め、貸さなければ船を沈めると脅す。貸すと海の潮を船へ汲み込んで船を沈めるという。別説では死者の魂と説明される。こうした災難を避けるため、漁師は船玉様を船に祀って祈願した。海の怪異と船の守護信仰を併せて記録する。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "対馬",
+    "municipality": "対馬市",
+    "area_name": "佐護湊"
+  },
+  "locations": [
+    {
+      "name": "佐護湊",
+      "type": "港・伝承地域",
+      "description": "海坊主と船玉信仰が記録された対馬の港。伝承に対応する具体的な地点は未特定。",
+      "source_ids": [
+        "nagasaki-sago-umi-bozu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "船に近づき、アカトリを求め、船を沈めるとされた海の怪異。",
+      "source_ids": [
+        "nagasaki-sago-umi-bozu-src"
+      ]
+    },
+    {
+      "name": "船玉様",
+      "type": "信仰対象",
+      "description": "船の災難を避けるため漁師が船に祀った守護神。",
+      "source_ids": [
+        "nagasaki-sago-umi-bozu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主",
+    "船の怪異",
+    "アカトリ",
+    "船玉信仰",
+    "海難"
+  ],
+  "story_type": [
+    "海の伝承",
+    "怪異伝承",
+    "航海安全の信仰"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-sago-umi-bozu-src",
+      "title": "対馬・佐護湊の民間信仰",
+      "publisher": "民俗と歴史の会（『民俗と歴史』通巻15号）",
+      "publication_date": "1983-12-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2390020",
+      "relevant_section": "掲載頁17",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。「アカトリ」は資料表記を維持し、道具の具体的な形状・用途は追加確認まで断定しない。"
+}
