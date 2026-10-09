@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aichi-mirane-kappa-horse-tail",
+  "status": "draft",
+  "title": "愛知・ミラネ淵の河童と馬の尾",
+  "title_normalized": "愛知・ミラネ淵の河童と馬の尾",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛知県のミラネ淵には河童が住むとされ、馬の尾につかまったまま引きずられてきた河童に水を与えると、後に魚を届けるようになったという伝承が記録されている。",
+    "based_on_source_ids": [
+      "aichi-mirane-kappa-horse-tail-src"
+    ]
+  },
+  "story_summary": "愛知県のミラネ淵には河童が住むとされ、馬の尾につかまったまま引きずられてきた河童に水を与えると、後に魚を届けるようになったという伝承が記録されている。",
+  "story_content": "愛知県のミラネ淵には河童が住むとされ、馬の尾につかまったまま引きずられてきた河童に水を与えると、後に魚を届けるようになったという伝承が記録されている。",
+  "region": {
+    "prefecture": "愛知県",
+    "historical_province": null,
+    "municipality": "地域詳細は原資料確認中",
+    "area_name": "ミラネ淵"
+  },
+  "locations": [
+    {
+      "name": "ミラネ淵",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "aichi-mirane-kappa-horse-tail-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "aichi-mirane-kappa-horse-tail-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aichi-mirane-kappa-horse-tail-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=2240204",
+      "relevant_section": "愛知・ミラネ淵の河童と馬の尾",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
