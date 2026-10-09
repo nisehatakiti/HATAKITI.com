@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kumamoto-yatsushiro-kappa-hinagu-seasonal-cycle",
+  "status": "draft",
+  "title": "八代・日奈久のガワッパと季節の節目",
+  "title_normalized": "八代市日奈久町・ガワッパの季節移動",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "1985年刊『季刊人類学』の採録では、日奈久町のガコ／ガワッパは正月11日に人里へ下り、半夏生には田の根ざらいのため田に入り、八朔の日に山へ上るとされる。農事暦や年中行事の節目と、山・人里・田の移動が結び付く記録である。",
+    "based_on_source_ids": [
+      "kumamoto-kappa-hinagu-seasonal-cycle-src"
+    ]
+  },
+  "story_summary": "日奈久町のガコ／ガワッパは正月11日に人里へ下り、半夏生には田の根ざらいのため降りて田に入り、八朔の日に山へ上ると伝えられる。",
+  "story_content": "日文研怪異・妖怪伝承データベースのカード0570095「ガゴ，ガワッパ」は、奥野広隆「山にのぼる河童」（『季刊人類学』16巻1号、1985年）に収録された熊本県八代市日奈久町の記録である。要約によれば、ガコは正月11日に人里に下り、半夏生には田の根ざらいのため降りて来て田に入り河童になり、八朔の日に山へ上る。\n\nこの記録では、山と川だけでなく、人里や田が季節移動の途中に現れる。正月11日、半夏生、八朔という具体的な暦日・節目が移動の時期として挙げられており、農作業（根ざらい）との関係も明記される。熊本県人吉市・上益城郡のカード0570088「セコ」は春彼岸に山から下り、秋彼岸に川を伝って山へ帰るとされるが、日奈久の記録は日付・農事との関係・呼称が異なる別の採録である。これらを同一の年間行動パターンとして合成せず、地域ごとの暦と移動経路を保持する。",
+  "region": {
+    "prefecture": "熊本県",
+    "historical_province": null,
+    "municipality": "八代市",
+    "area_name": "日奈久町"
+  },
+  "locations": [
+    {
+      "name": "日奈久町",
+      "type": "伝承地域",
+      "description": "日文研DBカード0570095の地域欄に記載された熊本県八代市日奈久町。",
+      "source_ids": [
+        "kumamoto-kappa-hinagu-seasonal-cycle-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "ガコ／ガワッパ",
+      "type": "河童・山童系の伝承存在",
+      "description": "正月11日に人里へ下り、半夏生に田へ入り、八朔の日に山へ上ると記録される。",
+      "source_ids": [
+        "kumamoto-kappa-hinagu-seasonal-cycle-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "ガワッパ",
+    "季節移動",
+    "農事暦",
+    "半夏生",
+    "八朔",
+    "田の根ざらい"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "季節伝承",
+    "農耕・年中行事伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "kumamoto-unknown-area-kappa-yamawaro-seasonal-migration",
+      "relationship": "regional_comparison"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kumamoto-kappa-hinagu-seasonal-cycle-src",
+      "title": "ガゴ，ガワッパ",
+      "author": "奥野広隆",
+      "work_title": "山にのぼる河童",
+      "publisher": "京都大学人類学研究室・講談社",
+      "publication_date": "1985-03-15",
+      "publication_year": 1985,
+      "volume_issue": "季刊人類学16巻1号",
+      "pages": "168–211",
+      "relevant_section": "199頁",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0570095",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion_source_verified",
+  "research_notes": "2026-10-09作成。個別カード0570095の要約と地域・書誌情報に基づく。正月11日、半夏生、八朔という節目と田の根ざらいの関係を記録。別地域の春秋彼岸型と同一の季節移動として合成せず、比較リンクのみ設定。"
+}
