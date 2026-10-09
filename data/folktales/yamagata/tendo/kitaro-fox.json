@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamagata-tendo-kitaro-fox",
+  "status": "draft",
+  "title": "天童・きたろう狐",
+  "title_normalized": "天童・きたろう狐",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山形県天童市には、きたろうという狐が人に化けて殿様の飛脚を務め、非常に速く手紙を届けたという昔話がある。油揚げを食べる様子から狐と疑われ、罠にかかったという結末が記録されている。",
+    "based_on_source_ids": [
+      "yamagata-tendo-kitaro-fox-src"
+    ]
+  },
+  "story_summary": "山形県天童市には、きたろうという狐が人に化けて殿様の飛脚を務め、非常に速く手紙を届けたという昔話がある。油揚げを食べる様子から狐と疑われ、罠にかかったという結末が記録されている。",
+  "story_content": "山形県天童市には、きたろうという狐が人に化けて殿様の飛脚を務め、非常に速く手紙を届けたという昔話がある。油揚げを食べる様子から狐と疑われ、罠にかかったという結末が記録されている。",
+  "region": {
+    "prefecture": "山形県",
+    "historical_province": null,
+    "municipality": "天童市",
+    "area_name": "天童・旧家や街道の伝承"
+  },
+  "locations": [
+    {
+      "name": "天童・旧家や街道の伝承",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "yamagata-tendo-kitaro-fox-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "伝承存在",
+      "description": "狐に関する地域伝承。",
+      "source_ids": [
+        "yamagata-tendo-kitaro-fox-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamagata-tendo-kitaro-fox-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0730068",
+      "relevant_section": "天童・きたろう狐",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
