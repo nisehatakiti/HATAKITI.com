@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "oita-kunisaki-umibozu-hishaku",
+  "status": "draft",
+  "title": "国東・尼が瀬の海坊主と柄杓",
+  "title_normalized": "国東・尼が瀬の海坊主と柄杓",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "大分県国東市国東町の尼が瀬沖では、舟の中で寝ると海坊主に襲われるとされ、女の海坊主は築港内、男は外海に出ると語られた。海坊主に柄杓を求められたら、底を抜いた柄杓を渡すとよいという。",
+    "based_on_source_ids": [
+      "oita-kunisaki-umibozu-hishaku-src"
+    ]
+  },
+  "story_summary": "国東町の尼が瀬沖では、船中で寝ていると海坊主に襲われるという。海坊主に柄杓を求められた場合、底のある柄杓を渡すと海水を船に汲み込まれるため、底を抜いた柄杓を渡すとよいと伝えられる。船霊様を祀る船の中央にいれば現れないともいう。",
+  "story_content": "『大分県史 民俗篇』に収録された記録では、国東市国東町の松原沖にある尼が瀬で、船の中で寝ると海坊主に襲われるとされる。女の海坊主は築港の中に、男は外海に出るという。船霊様を祀る舟の中央部にいれば現れず、海坊主が柄杓を求めた時には底を抜いたものを渡すとよいと記録されている。",
+  "region": {
+    "prefecture": "大分県",
+    "historical_province": null,
+    "municipality": "国東市国東町",
+    "area_name": "松原沖・尼が瀬"
+  },
+  "locations": [
+    {
+      "name": "尼が瀬",
+      "type": "沖・海上伝承地",
+      "description": "日文研の記録に示される松原沖の海域。正確な位置や現在の地図上の呼称は追加確認が必要。",
+      "source_ids": [
+        "oita-kunisaki-umibozu-hishaku-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "船中の人を襲い、柄杓を求める海の怪異。男女の別や出現場所も語られる。",
+      "source_ids": [
+        "oita-kunisaki-umibozu-hishaku-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主",
+    "船霊信仰",
+    "海難除け",
+    "柄杓"
+  ],
+  "story_type": [
+    "地域伝承",
+    "海上伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "oita-kunisaki-umibozu-hishaku-src",
+      "title": "第四章 第四節 三 妖怪・霊異（二）水の怪",
+      "publisher": "大分県（『大分県史 民俗篇』）",
+      "publication_date": "1986-03-31",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C4410026-000",
+      "relevant_section": "掲載頁360",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。尼が瀬の現地比定と安全な訪問情報は未確認のため、地図の正確なピンは後段で検証する。"
+}
