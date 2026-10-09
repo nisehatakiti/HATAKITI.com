@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kanagawa-odawara-tengu-oomatsu-kamikakushi",
+  "status": "draft",
+  "title": "小田原・天狗の住処とされた大松",
+  "title_normalized": "小田原・天狗の住処とされた大松",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "神奈川県小田原市の山の神を祀る山には、天狗の住処といわれる大松があった。美しい娘が行方不明になり、松のもとで見つかった後、天狗にさらわれたと語ったという。",
+    "based_on_source_ids": [
+      "kanagawa-odawara-tengu-oomatsu-src"
+    ]
+  },
+  "story_summary": "山の神を祀る山に天狗の住処といわれる大松があった。ある日、美しい娘が行方不明になり、村人が松のもとを探すと娘が座り込んでいた。娘は天狗にさらわれたと話したという。",
+  "story_content": "稲葉鈴子「相模の民話⑮」に記録された小田原の伝承。山の神を祀る山に天狗の住処とされる大松があった。ある日、美しい娘が行方不明となり、村人が松のところを探すと娘が座り込んでいた。話を聞くと天狗にさらわれたという。大松と神隠しの伝承を結び付けた事例として登録する。",
+  "region": {
+    "prefecture": "神奈川県",
+    "historical_province": "相模",
+    "municipality": "小田原市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "天狗の大松（伝承地未詳）",
+      "type": "樹木・伝承地",
+      "description": "山の神の山にあり天狗の住処とされた大松。小田原市内の具体地点はカードから特定できない。",
+      "source_ids": [
+        "kanagawa-odawara-tengu-oomatsu-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "行方不明になった娘",
+      "type": "人物",
+      "description": "天狗にさらわれたと語ったとされる娘。",
+      "source_ids": [
+        "kanagawa-odawara-tengu-oomatsu-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "大松を住処とし、娘をさらったとされる。",
+      "source_ids": [
+        "kanagawa-odawara-tengu-oomatsu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "大松",
+    "山の神",
+    "神隠し"
+  ],
+  "story_type": [
+    "地域伝承",
+    "神隠し伝承",
+    "樹木伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kanagawa-odawara-tengu-oomatsu-src",
+      "title": "相模の民話⑮",
+      "publisher": "常民文化研究会（『常民文化』通巻5号）",
+      "publication_date": "1981-06-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1080014",
+      "relevant_section": "掲載頁125",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。小田原市内の伝承地は詳細不明のため、地図上の一点を推定して設定しない。"
+}
