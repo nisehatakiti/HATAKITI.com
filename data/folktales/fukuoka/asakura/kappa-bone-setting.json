@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukuoka-asakura-kappa-bone-setting",
+  "status": "draft",
+  "title": "朝倉・河童の妙薬と接骨法",
+  "title_normalized": "朝倉・河童の妙薬と接骨法",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福岡県朝倉市の伝承では、夜に便所へ行った接骨医が何度も手を撫でられ、刀でその手を切り落とすと河童の手だった。手を返す代わりに、医師は河童から接骨法を教わったという。",
+    "based_on_source_ids": [
+      "fukuoka-asakura-kappa-bone-setting-src"
+    ]
+  },
+  "story_summary": "夜、便所で何者かに手を撫でられることが続いた接骨医は、刀を持って行き、その手を切り落とした。手は河童のものだった。河童に手を返す代わりに、医師は接骨法を教わったと伝えられる。",
+  "story_content": "中田千畝「河童の妙藥」に記録された話。接骨医師が夜に便所へ行くと、何者かに尻を撫でられることが続いた。刀を持って入った医師はその手を切り落とし、それが河童の手と分かった。手を返す代わりに、医師は河童から接骨法を教わったという。",
+  "region": {
+    "prefecture": "福岡県",
+    "historical_province": "筑前",
+    "municipality": "朝倉市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "朝倉市内（具体地点未詳）",
+      "type": "伝承地域",
+      "description": "日文研カードの行政地域表示。家や便所の所在地は記録から特定できない。",
+      "source_ids": [
+        "fukuoka-asakura-kappa-bone-setting-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "接骨医",
+      "type": "人物",
+      "description": "河童の手を切り落とし、手を返す代わりに接骨法を教わったとされる。",
+      "source_ids": [
+        "fukuoka-asakura-kappa-bone-setting-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "医師に手を切り落とされ、接骨法を教えたとされる。",
+      "source_ids": [
+        "fukuoka-asakura-kappa-bone-setting-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "接骨法",
+    "妙薬",
+    "恩返し"
+  ],
+  "story_type": [
+    "昔話",
+    "河童伝承",
+    "技術伝授譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukuoka-asakura-kappa-bone-setting-src",
+      "title": "河童の妙藥",
+      "publisher": "三元社（『旅と伝説』2号）",
+      "publication_date": "1928-02-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231426",
+      "relevant_section": "掲載頁6–7",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。岡山県津山市などの類話と似るが、地域と出典が異なるため別記録として保持する。"
+}
