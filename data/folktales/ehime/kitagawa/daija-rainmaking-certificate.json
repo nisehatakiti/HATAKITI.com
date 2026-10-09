@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-kihoku-daija-rainmaking-certificate",
+  "status": "draft",
+  "title": "鬼北町・大蛇と雨乞いの証文",
+  "title_normalized": "鬼北町・大蛇と雨乞いの証文",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県北宇和郡鬼北町の伝承では、庄屋の娘が大蛇に連れられて滝壺へ入り、帰れないと告げる。娘が残した証文を雨乞いに用いると雨が降ったとされ、滝壺での祈願が伝えられている。",
+    "based_on_source_ids": [
+      "ehime-kihoku-daija-rainmaking-src"
+    ]
+  },
+  "story_summary": "庄屋の娘が大蛇と関わり、滝壺へ入って戻れなくなる。娘は証文を書き、それを雨乞いの際に滝壺へ掛けて祈ると雨が降ると約束したという。",
+  "story_content": "桜田勝徳「雨乞伝説の一例」に記録された鬼北町の伝承。庄屋の一人娘が大蛇と関わり、大蛇の引く白糸をたどって滝壺へ入った。親が探しに行くと娘と大蛇がおり、娘はもう帰れないと告げて証文を書いた。その証文を雨乞いの際に滝壺へ掛けて祈願すると雨が降ったという。記録には、他村の者が祈願した場合には同じ結果にならないという地域的な限定も記される。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": "伊予",
+    "municipality": "北宇和郡鬼北町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "伝承の滝壺（地点未詳）",
+      "type": "滝壺・伝承地",
+      "description": "大蛇と娘の伝承および雨乞いの祈願場所。資料から具体的な滝名は特定できない。",
+      "source_ids": [
+        "ehime-kihoku-daija-rainmaking-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "庄屋の娘",
+      "type": "人物",
+      "description": "大蛇に連れられて滝壺へ入り、証文を残したとされる。",
+      "source_ids": [
+        "ehime-kihoku-daija-rainmaking-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "娘を滝壺へ連れて行き、雨乞いの証文に関わる存在。",
+      "source_ids": [
+        "ehime-kihoku-daija-rainmaking-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い",
+    "滝壺",
+    "証文",
+    "地域限定の信仰"
+  ],
+  "story_type": [
+    "雨乞い伝承",
+    "蛇の伝承",
+    "水辺伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-kihoku-daija-rainmaking-src",
+      "title": "雨乞伝説の一例",
+      "publisher": "民間伝承の会（『民間伝承』10巻5号・通巻103号）",
+      "publication_date": "1944-05-05",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiCard/2181819.html",
+      "relevant_section": "掲載頁8",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。記録内で滝の固有名は確認できないため、具体地点を推定しない。"
+}
