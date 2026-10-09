@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okayama-coastal-funayuurei-bottomless-scoop",
+  "status": "draft",
+  "title": "岡山・海上の船幽霊と底抜け杓",
+  "title_normalized": "岡山・海上の船幽霊と底抜け杓",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岡山県史の民俗記録では、海上で船幽霊に出会うことがあり、幽霊は水を求めて漁船に近づくと説明される。見かけたときは底の抜けた杓を用意するとよいと伝えられた。",
+    "based_on_source_ids": [
+      "okayama-coastal-funayuurei-src"
+    ]
+  },
+  "story_summary": "船幽霊は水を求めて漁船に近づくとされ、海上で見かけたときには底の抜けた杓を用意するとよいと伝えられた。",
+  "story_content": "『岡山県史』第15巻「民俗Ⅰ」に収録された海の信仰と俗信の記録。海上では船幽霊に会うことがあり、これは水を求めて漁船に近づくのだと説明される。遭遇した際には底の抜けた杓を用意するとよいとされた。地域の詳細な話者・出現地点はカードから特定できないため、岡山県の海上伝承として広域に登録する。",
+  "region": {
+    "prefecture": "岡山県",
+    "historical_province": "備前・備中・美作",
+    "municipality": null,
+    "area_name": "沿岸・海上"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "船幽霊",
+      "type": "伝承存在",
+      "description": "水を求めて漁船に近づくとされた海の怪異。",
+      "source_ids": [
+        "okayama-coastal-funayuurei-src"
+      ]
+    }
+  ],
+  "themes": [
+    "船幽霊",
+    "底抜け杓",
+    "海の信仰",
+    "漁業"
+  ],
+  "story_type": [
+    "海の怪異",
+    "船幽霊伝承",
+    "民間信仰"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "okayama-coastal-funayuurei-src",
+      "title": "第二章 生業 第四節 海の信仰と俗信（四 海の信仰と俗信）",
+      "publisher": "岡山県（『岡山県史』15巻 民俗Ⅰ）",
+      "publication_date": "1983-03-31",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3310013-000",
+      "relevant_section": "掲載頁189–190",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。市町村の地域欄がないため、特定の港・沿岸に結び付けない。"
+}
