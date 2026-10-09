@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saitama-ogose-kitsune-lost-in-mountain",
+  "status": "draft",
+  "title": "越生・狐に迷わされた参詣人",
+  "title_normalized": "越生・狐に迷わされた参詣人",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "埼玉県越生の伝承。毎月28日に川越の不動様へ参詣していた人が、ある早朝に道に迷った。狐が出る場所だと思い出し、腰の火打石で火を点けると夜が明け始め、同じ山中をぐるぐる回っていたことに気づいたという。",
+    "based_on_source_ids": [
+      "saitama-ogose-kitsune-lost-in-mountain-src"
+    ]
+  },
+  "story_summary": "不動参詣の道中で迷った人が、狐の出る場所だと思い出して火打石を使うと、同じ山中を巡っていたことに気づいたという話。",
+  "story_content": "新井良輔「越生の妖怪ばなし」に収録された伝承。曽祖父は毎月28日に川越の不動様へ欠かさず参詣していたが、ある日の早朝、道に迷ってしまった。その辺りは狐が出る場所だと思い出し、腰の火打石で火を点けると、夜はたちまち明け始め、同じ山中をぐるぐる回っていたことに気づいたという。狐の仕業と考えられた道迷いの話として記録する。",
+  "region": {
+    "prefecture": "埼玉県",
+    "historical_province": "武蔵",
+    "municipality": "越生町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "川越の不動様",
+      "type": "寺社・信仰対象",
+      "description": "主人公が毎月参詣していた場所。",
+      "source_ids": [
+        "saitama-ogose-kitsune-lost-in-mountain-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "参詣人",
+      "type": "人間",
+      "description": "不動参詣の道中で山中に迷い、火打石を使う。",
+      "source_ids": [
+        "saitama-ogose-kitsune-lost-in-mountain-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "動物・怪異",
+      "description": "道迷いの原因と考えられた存在。",
+      "source_ids": [
+        "saitama-ogose-kitsune-lost-in-mountain-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "道迷い",
+    "山",
+    "火打石",
+    "参詣"
+  ],
+  "story_type": [
+    "狐伝承",
+    "道迷い譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "saitama-ogose-kitsune-lost-in-mountain-src",
+      "title": "越生の妖怪ばなし",
+      "publisher": "山村民俗の会（『あしなか』通巻201号）",
+      "publication_date": "1987-07",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030371",
+      "relevant_section": "掲載頁2",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードの要約に基づく。狐が直接姿を現したとは記されていないため、道迷いとの関連として表現した。"
+}
