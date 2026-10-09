@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyagi-tome-oni-bridge-origin",
+  "status": "draft",
+  "title": "登米・鬼橋の由来",
+  "title_normalized": "登米・鬼橋の由来",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮城県登米市東和町の鬼橋について、鬼そのものが川に橋となっているためという説と、将軍が退治した鬼の死骸を橋柱に結びつけて沈めたためという説が伝えられる。",
+    "based_on_source_ids": [
+      "miyagi-tome-oni-bridge-origin-src"
+    ]
+  },
+  "story_summary": "鬼橋という名の由来を、鬼が橋になったという説と、退治された鬼の死骸を橋柱に沈めたという説で説明する伝承。",
+  "story_content": "小野寺正人「北上山地の鬼地名と伝説」に収録された宮城県登米市東和町の鬼橋の由来。鬼が川の橋となっているためだという説明のほか、将軍が退治した鬼の死骸を橋柱に結びつけて沈めたことに由来するという説明も記録されている。資料では複数の由来説が並んでいるため、一つの説明に統合せずに記録する。",
+  "region": {
+    "prefecture": "宮城県",
+    "historical_province": "陸前",
+    "municipality": "登米市東和町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "鬼橋",
+      "type": "橋・伝承地",
+      "description": "鬼に由来する複数の説明が伝わる橋。",
+      "source_ids": [
+        "miyagi-tome-oni-bridge-origin-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "将軍",
+      "type": "人間",
+      "description": "一方の由来説で鬼を退治した人物として登場する。",
+      "source_ids": [
+        "miyagi-tome-oni-bridge-origin-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "鬼",
+      "type": "妖怪",
+      "description": "橋そのものになったという説、または退治され死骸を橋柱に沈められたという説がある。",
+      "source_ids": [
+        "miyagi-tome-oni-bridge-origin-src"
+      ]
+    }
+  ],
+  "themes": [
+    "鬼",
+    "橋",
+    "地名由来",
+    "複数の伝承"
+  ],
+  "story_type": [
+    "鬼伝承",
+    "地名由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyagi-tome-oni-bridge-origin-src",
+      "title": "北上山地の鬼地名と伝説",
+      "publisher": "東北民俗の会（『東北民俗』通巻31号）",
+      "publication_date": "1997-06-07",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1440061",
+      "relevant_section": "掲載頁4",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードの要約をもとに、資料内の二つの由来説を分けて保持した。"
+}
