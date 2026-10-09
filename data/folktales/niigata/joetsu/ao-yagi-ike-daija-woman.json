@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-joetsu-ao-yagi-ike-daija-woman",
+  "status": "draft",
+  "title": "板倉・青柳の池の美女と大蛇",
+  "title_normalized": "板倉・青柳の池の美女と大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県上越市板倉町の青柳の池で、玉之助が美女と知り合い、夜ごと会うようになった。父が後をつけると美女は池のほとりで姿を消し、矢で射ると大蛇で、腹には子が宿っていた。その子は寺へ送られ、成長後に出生の秘密を知って父たちを殺し盗賊になったという。",
+    "based_on_source_ids": [
+      "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+    ]
+  },
+  "story_summary": "池で美女と出会った若者の父が正体を探ると、美女は大蛇だった。大蛇の子は寺で育つが、出自を知った後に復讐し盗賊となったという伝承。",
+  "story_content": "尾崎久弥「越後青柳の池の伝説」に収録された話。松崎四郎太夫の息子玉之助が18歳の時、青柳の池で美女と知り合い、夜ごと訪れるようになった。父の四郎太夫が不審に思って後をつけると、美女は池のほとりで姿を消した。化生の者と考えて矢を射ると、その正体は大蛇で、腹には子が宿っていた。その子は米山の寺に僧にするため送られたが、16歳の時に自分の生い立ちを知り、四郎太夫たちを殺して盗賊になったという。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "上越市板倉区",
+    "area_name": "青柳の池"
+  },
+  "locations": [
+    {
+      "name": "青柳の池",
+      "type": "池",
+      "description": "玉之助が美女と出会い、美女の正体が大蛇と判明する場所。",
+      "source_ids": [
+        "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+      ]
+    },
+    {
+      "name": "米山の寺",
+      "type": "寺院",
+      "description": "大蛇の子が僧にするため送られたとされる寺。",
+      "source_ids": [
+        "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "玉之助",
+      "type": "人間",
+      "description": "青柳の池で美女と知り合う若者。",
+      "source_ids": [
+        "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+      ]
+    },
+    {
+      "name": "松崎四郎太夫",
+      "type": "人間",
+      "description": "息子の様子を怪しみ、美女の正体を探る父。",
+      "source_ids": [
+        "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+      ]
+    },
+    {
+      "name": "大蛇の子",
+      "type": "人物",
+      "description": "寺で育てられるが、成長後に出生の秘密を知り盗賊になる。",
+      "source_ids": [
+        "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "池のほとりで美女の姿を消し、正体を現す。",
+      "source_ids": [
+        "niigata-joetsu-ao-yagi-ike-daija-woman-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "池",
+    "美女への変化",
+    "出生の秘密",
+    "復讐"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "変化譚",
+    "異類婚姻譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-joetsu-ao-yagi-ike-daija-woman-src",
+      "title": "越後青柳の池の伝説",
+      "publisher": "三元社（『旅と伝説』5巻1号・通巻49号）",
+      "publication_date": "1932-01-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232167",
+      "relevant_section": "掲載頁21–22",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの要約に基づく。怪異の話と、その子の後日譚まで一つの伝承として記録した。"
+}
