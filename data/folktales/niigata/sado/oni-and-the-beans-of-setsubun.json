@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-sado-oni-and-the-beans-of-setsubun",
+  "status": "draft",
+  "title": "佐渡を取ろうとした鬼と節分の豆",
+  "title_normalized": "佐渡を取ろうとした鬼と節分の豆",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "新潟県佐渡市金沢村の伝承では、北から来た鬼が佐渡を取ると言うと、金北山大権現は節分の豆から芽が出たら渡すと答えた。豆が芽を出したため、権現は土竜を作って豆を枯らそうとしたが、鬼は猫を作って土竜を捕らえさせた。この話から節分の豆はよく炒らなければならないと説明される。",
+    "based_on_source_ids": [
+      "0640237_001"
+    ]
+  },
+  "story_summary": "鬼と金北山大権現の駆け引きから、節分の豆を炒る習俗の由来を語る伝承。",
+  "story_content": "茅原鐵蔵「佐渡金澤村より」によれば、昔、北から来た鬼が佐渡を取ると言った。金北山大権現は、節分の豆から芽が出たら佐渡を渡そうと応じたが、豆は芽を出した。そこで権現は土竜を作って大豆を枯らそうとしたものの、鬼は猫を作り、土竜を捕まえさせたという。この由来譚は、節分の豆をよく炒る習俗を説明する形で伝えられている。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "佐渡国",
+    "municipality": "佐渡市",
+    "area_name": "旧金沢村"
+  },
+  "locations": [
+    "金北山"
+  ],
+  "characters": [
+    "金北山大権現"
+  ],
+  "beings": [
+    "鬼"
+  ],
+  "themes": [
+    "節分",
+    "豆まき",
+    "習俗の由来",
+    "鬼との駆け引き"
+  ],
+  "story_type": [
+    "由来譚",
+    "神仏譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "0640237_001",
+      "title": "佐渡金澤村より",
+      "publisher": "郷土研究社（『郷土研究』4巻1号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640237_001",
+      "publication_date": "1916-04-01",
+      "relevant_section": "掲載頁56–57",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。土竜は資料の表記を保持し、現代語での生物分類に置き換えていない。"
+}
