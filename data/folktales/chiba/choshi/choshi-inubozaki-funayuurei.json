@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-choshi-inubozaki-sea-apparition-candidate",
+  "status": "draft",
+  "title": "銚子・犬吠埼周辺の海の怪異（候補）",
+  "title_normalized": "銚子・犬吠埼周辺の海の怪異（候補）",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "千葉県銚子市の犬吠埼周辺は海難や海の伝承を調べる対象地域だが、現時点では個別の怪異伝承とその出典を確定できていない。調査対象として候補登録する。",
+    "based_on_source_ids": [
+      "chiba-choshi-sea-apparition-src"
+    ]
+  },
+  "story_summary": "犬吠埼周辺の海の怪異について、個別伝承と出典を調査するための候補レコード。具体的な物語は未確認。",
+  "story_content": "本レコードは、地域別の伝承調査で犬吠埼周辺を調べるための候補管理用であり、確認済みの昔話・怪異談を示すものではない。出典のない海坊主・船幽霊の物語を地域に結び付けないよう、個別資料が見つかるまで本文を空想で補わない。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総",
+    "municipality": "銚子市",
+    "area_name": "犬吠埼周辺"
+  },
+  "locations": [
+    {
+      "name": "犬吠埼周辺",
+      "type": "海岸地域",
+      "description": "地域別資料を調査する範囲。特定の怪異伝承地を示すものではない。",
+      "source_ids": [
+        "chiba-choshi-sea-apparition-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "海岸",
+    "海の伝承",
+    "調査候補"
+  ],
+  "story_type": [
+    "候補・要出典確認"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "research_topic"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "chiba-choshi-sea-apparition-src",
+      "title": "銚子市公式ホームページ（地域資料の調査入口）",
+      "publisher": "銚子市",
+      "source_type": "candidate_source",
+      "url": "https://www.city.choshi.chiba.jp/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "個別の伝承出典未確認。確認済み記録と誤認されないよう候補として登録。"
+}
