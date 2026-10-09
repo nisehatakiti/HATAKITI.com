@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ishikawa-hakusan-tengu-thirty-three-years-water-rope",
+  "status": "draft",
+  "title": "白山・天狗に連れ去られ三十三年修行した男",
+  "title_normalized": "白山・天狗に連れ去られ三十三年修行した男",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "石川県白山市の天狗伝説。男が天狗にだまされて連れて行かれ、弟子として修行し、三十三年目に帰ってきた。帰郷後、畑の周囲を指でなぞると火が燃え広がらずに消える「天狗さんの水縄」を使ったという。",
+    "based_on_source_ids": [
+      "ishikawa-hakusan-tengu-thirty-three-years-water-rope-src"
+    ]
+  },
+  "story_summary": "天狗のもとで三十三年修行して帰った男が、火の延焼を防ぐ不思議な技を伝えたという話。",
+  "story_content": "小倉学「加賀・能登の天狗伝説考」に記録された白山市の伝承。男は天狗にだまされて連れて行かれ、その弟子となって修行した後、三十三年目に帰ってきた。男は雑木原を燃やす際、「天狗さんの水縄」と呼ばれる方法を使った。畑の周りを指で書くと、火はその線を越えて燃え広がらず、そこで消えてしまうという。その時には天狗の使者である鳶が鳴き、天狗の親方「ミナカミの旦那」が現れると伝えられる。",
+  "region": {
+    "prefecture": "石川県",
+    "historical_province": "加賀",
+    "municipality": "白山市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "天狗に連れ去られた男",
+      "type": "人間",
+      "description": "天狗の弟子となって修行し、三十三年目に帰郷した。",
+      "source_ids": [
+        "ishikawa-hakusan-tengu-thirty-three-years-water-rope-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "男を連れ去り、修行させる存在。",
+      "source_ids": [
+        "ishikawa-hakusan-tengu-thirty-three-years-water-rope-src"
+      ]
+    },
+    {
+      "name": "鳶",
+      "type": "動物・天狗の使者",
+      "description": "天狗の使者とされ、火を防ぐ技が使われる際に鳴く。",
+      "source_ids": [
+        "ishikawa-hakusan-tengu-thirty-three-years-water-rope-src"
+      ]
+    },
+    {
+      "name": "ミナカミの旦那",
+      "type": "天狗の親方",
+      "description": "天狗の親方として現れると伝えられる。",
+      "source_ids": [
+        "ishikawa-hakusan-tengu-thirty-three-years-water-rope-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "異界での修行",
+    "三十三年",
+    "火伏せ",
+    "水縄",
+    "鳶"
+  ],
+  "story_type": [
+    "天狗隠し",
+    "異界滞在譚",
+    "火伏せ伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ishikawa-hakusan-tengu-thirty-three-years-water-rope-src",
+      "title": "加賀・能登の天狗伝説考",
+      "publisher": "昔話伝説研究会（『昔話伝説研究』2号）",
+      "publication_date": "1972-04-30",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2470002",
+      "relevant_section": "掲載頁19",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研のカード要約に基づく。水縄の具体的な由来や技法について、記録にない説明は加えていない。"
+}
