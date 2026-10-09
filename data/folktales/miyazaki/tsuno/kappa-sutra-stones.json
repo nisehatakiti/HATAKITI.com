@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyazaki-tsuno-kappa-sutra-stones",
+  "status": "draft",
+  "title": "都農町・河童と千個の経文石",
+  "title_normalized": "都農町・河童と千個の経文石",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮崎県都農町では、寺の馬が河童をくわえて戻ったため柱に縛ると仲間が悪さをした。和尚が七日七夜祈り、経文を書いた千個の石を川へ投げ入れ、河童に「炒り豆に芽が出るまで害をしない」と約束させたという。",
+    "based_on_source_ids": [
+      "miyazaki-tsuno-kappa-stones-src"
+    ]
+  },
+  "story_summary": "寺の馬が河童を捕らえた後、河童の仲間が悪さをした。和尚は経文を書いた千個の石を川に投げ、河童に害をしない約束をさせたという。",
+  "story_content": "『宮崎県史 資料編 民俗2』に収録された都農町の伝承。徳泉寺の馬が河童をくわえて戻ってきたため、河童を柱に縛ると仲間が押しかけて悪さをした。和尚は七日七夜祈祷し、千個の石に経文を書いて「石が溶けるまで害をなすな」と川に投げ込んだ。謝りに来た河童に「炒り豆に芽が出るまで害をしない」と約束させ、石を除いた後は河童の害がなくなったと伝える。",
+  "region": {
+    "prefecture": "宮崎県",
+    "historical_province": "日向",
+    "municipality": "児湯郡都農町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "徳泉寺",
+      "type": "寺院・伝承地",
+      "description": "河童と馬、和尚の祈祷の話が記録された寺。現在の伝承地・関連遺物は別途確認する。",
+      "source_ids": [
+        "miyazaki-tsuno-kappa-stones-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "和尚",
+      "type": "人物",
+      "description": "祈祷と経文石によって河童に約束をさせたとされる。",
+      "source_ids": [
+        "miyazaki-tsuno-kappa-stones-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "寺の馬に捕らえられ、経文石と約束に関わる存在。",
+      "source_ids": [
+        "miyazaki-tsuno-kappa-stones-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "経文石",
+    "寺院",
+    "約束",
+    "馬"
+  ],
+  "story_type": [
+    "河童伝承",
+    "寺院伝承",
+    "由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyazaki-tsuno-kappa-stones-src",
+      "title": "第十一章 民間説話と子どもの遊び：第二節 民間説話の種々相",
+      "publisher": "宮崎県（『宮崎県史 資料編 民俗2』）",
+      "publication_date": "1992-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C4510125-000",
+      "relevant_section": "掲載頁976",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。寺院名の現存・現在地、石に関する遺物の有無は別途確認する。"
+}
