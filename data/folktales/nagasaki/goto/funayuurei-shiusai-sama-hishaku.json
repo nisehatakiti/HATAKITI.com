@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-goto-funayuurei-shiusai-sama-hishaku",
+  "status": "draft",
+  "title": "しゆうさいさまと船幽霊",
+  "title_normalized": "しゆうさいさまと船幽霊",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県五島市の伝承では、大正11年秋の深夜、漁船の乗組員が萬燈のように明るい汽船を目撃し、船幽霊とされた。また、罪を人に負わせたため淵に沈められた人物の祟りを鎮める神として「しゆうさいさま」を祀り、海上では柄杓を貸せと求めると伝えられている。",
+    "based_on_source_ids": [
+      "1230179"
+    ]
+  },
+  "story_summary": "深夜に目撃された怪しい汽船と、海上で柄杓を求める「しゆうさいさま」の伝承。",
+  "story_content": "櫻田勝徳「船幽霊など」の記録には、長崎県五島市で大正11年秋の午前2時ごろ、雨が降り出した際、漁船の乗組員が萬燈のように灯をつけた汽船を見たという話が収録されている。それは船幽霊とされた。同じ記録では、「しゆうさいさま」は自分の罪を人に負わせたため淵に沈められて死んだ者の祟りを鎮めるために祀られた神と説明され、海に出ると柄杓を貸せと言うとも伝えられる。目撃談と神の由来は同一記事に記載されているが、両者の関係を資料以上に断定しない。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "肥前国",
+    "municipality": "五島市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    "しゆうさいさま"
+  ],
+  "beings": [
+    "船幽霊"
+  ],
+  "themes": [
+    "海の怪異",
+    "祟り",
+    "海上安全"
+  ],
+  "story_type": [
+    "怪異譚",
+    "由来譚",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1230179",
+      "title": "船幽霊など",
+      "publisher": "三元社（『旅と伝説』5巻8号・通巻56号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230179",
+      "publication_date": "1932-08-01",
+      "relevant_section": "掲載頁25",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。資料の表記「しゆうさいさま」を保持。既存の同誌・同地域の船幽霊記録（1230178）とは別カードで、異なる記述を独立記録として登録。"
+}
