@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nara-yoshino-tengu-matsu",
+  "status": "draft",
+  "title": "吉野・国栖の天狗松",
+  "title_normalized": "吉野・国栖の天狗松",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "奈良県吉野町国栖には、天狗が飛んできて止まるといわれた立派な松があり、「天狗松」と呼ばれていた。戦争中に松が枯れた際、物知りの人が「天狗松が枯れたから日本が負ける」と語ったという。",
+    "based_on_source_ids": [
+      "nara-yoshino-tengu-matsu-src"
+    ]
+  },
+  "story_summary": "天狗が飛んできて止まるといわれた立派な松が「天狗松」と呼ばれていた。戦争中に松が枯れたとき、ある人がそのことと日本の敗戦を結び付けて語ったという。",
+  "story_content": "比較民話研究会「奈良県吉野町・国栖の昔話（上）」に記録された伝承。天狗が飛んできて止まるといわれる立派な松があり、天狗松と呼ばれていた。松が戦争中に枯れると、物知りの人が「天狗松が枯れたから日本が負ける」と言ったという。樹木の異変を社会の大きな出来事と結び付けた地域の語りとして登録する。",
+  "region": {
+    "prefecture": "奈良県",
+    "historical_province": "大和",
+    "municipality": "吉野郡吉野町",
+    "area_name": "国栖"
+  },
+  "locations": [
+    {
+      "name": "天狗松（旧伝承地）",
+      "type": "樹木・伝承地",
+      "description": "天狗が止まるとされた松。記録では戦争中に枯れたとされ、現在の場所・樹木の痕跡は未確認。",
+      "source_ids": [
+        "nara-yoshino-tengu-matsu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "松に飛来して止まるといわれた存在。",
+      "source_ids": [
+        "nara-yoshino-tengu-matsu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "天狗松",
+    "戦争",
+    "樹木の兆し"
+  ],
+  "story_type": [
+    "地域伝承",
+    "樹木伝承",
+    "時代・社会の語り"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nara-yoshino-tengu-matsu-src",
+      "title": "奈良県吉野町・国栖の昔話（上）",
+      "publisher": "日本昔話学会（三弥井書店）",
+      "publication_date": "1991-06-30",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2450141",
+      "relevant_section": "掲載頁171",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。天狗松は記録時点で枯れており、現地訪問対象としては現存状況を確認する必要がある。"
+}
