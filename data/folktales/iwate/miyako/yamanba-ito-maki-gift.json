@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-miyako-yamanba-ito-maki-gift",
+  "status": "draft",
+  "title": "宮古・山姥がくれた尽きない糸巻き",
+  "title_normalized": "宮古・山姥がくれた尽きない糸巻き",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県宮古市の伝承。松月の妻が糸を紡ぐとき、いつも手伝いに来る女がいた。その女は自分が山姥であることを明かし、誰にも話さないように言って糸巻きを与えた。糸は使っても尽きなかったが、妻が夫に秘密を話すと、その夜さらわれ、鍋倉山の穴の前で遺体となって見つかった。村人が穴へ矢を射ると大きな音がし、山姥は消え、骨だけが残ったという。",
+    "based_on_source_ids": [
+      "iwate-miyako-yamanba-ito-maki-gift-src"
+    ]
+  },
+  "story_summary": "山姥から尽きない糸巻きをもらった妻が秘密を破り、山姥の報復を受ける話。",
+  "story_content": "村上辰午郎「宮古町と秋田与次郎稲荷の伝説―四山姥の伝説―」に記録された宮古市の伝承。松月の妻が糸を紡ぐとき、いつも手伝いに来る女がいた。ある日、その女は自分が山姥であることを明かし、他言しないよう告げて糸巻きを渡した。糸巻きはいくら使っても糸が尽きなかったが、妻が夫に話してしまうと、その夜さらわれ、鍋倉山の穴の前に遺体となって横たわっていた。村人が穴へ矢を射ると大きな音がし、山姥は消え失せ、骨だけが残っていたという。贈り物の恩恵と、秘密を守る約束の破綻が結びつく伝承として記録する。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": "陸中",
+    "municipality": "宮古市",
+    "area_name": "鍋倉山"
+  },
+  "locations": [
+    {
+      "name": "松月の家",
+      "type": "家",
+      "description": "山姥が糸紡ぎを手伝い、糸巻きを渡した場所。",
+      "source_ids": [
+        "iwate-miyako-yamanba-ito-maki-gift-src"
+      ]
+    },
+    {
+      "name": "鍋倉山の穴",
+      "type": "洞穴",
+      "description": "妻が遺体となって見つかり、村人が矢を射た場所。",
+      "source_ids": [
+        "iwate-miyako-yamanba-ito-maki-gift-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "松月の妻",
+      "type": "人間",
+      "description": "山姥から尽きない糸巻きを受け取ったが、秘密を夫に話してしまった。",
+      "source_ids": [
+        "iwate-miyako-yamanba-ito-maki-gift-src"
+      ]
+    },
+    {
+      "name": "松月",
+      "type": "人間",
+      "description": "妻が山姥の秘密を打ち明けた相手。",
+      "source_ids": [
+        "iwate-miyako-yamanba-ito-maki-gift-src"
+      ]
+    },
+    {
+      "name": "村人",
+      "type": "人間",
+      "description": "鍋倉山の穴へ矢を射た。",
+      "source_ids": [
+        "iwate-miyako-yamanba-ito-maki-gift-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "妖怪",
+      "description": "糸紡ぎを手伝い、尽きない糸巻きを与えるが、秘密が漏れた後に妻をさらったとされる。",
+      "source_ids": [
+        "iwate-miyako-yamanba-ito-maki-gift-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "糸巻き",
+    "尽きない糸",
+    "秘密",
+    "約束",
+    "報復"
+  ],
+  "story_type": [
+    "山姥伝承",
+    "不思議な宝物譚",
+    "禁忌破り譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-miyako-yamanba-ito-maki-gift-src",
+      "title": "宮古町と秋田与次郎稲荷の伝説―四山姥の伝説―",
+      "publisher": "三元社（『旅と伝説』2巻2号・通巻14号）",
+      "publication_date": "1929-02-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231614",
+      "relevant_section": "掲載頁17",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。"
+}
