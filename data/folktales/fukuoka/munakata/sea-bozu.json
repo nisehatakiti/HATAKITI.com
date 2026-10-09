@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukuoka-munakata-sea-bozu",
+  "status": "draft",
+  "title": "宗像・海坊主伝承候補",
+  "title_normalized": "宗像・海坊主伝承候補",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "福岡県宗像地方の沿岸には、海上の怪異に関する伝承が見られる。海坊主に該当する個別の話と伝承地点を資料で確認するための調査候補として登録する。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "福岡県宗像地方の沿岸には、海上の怪異に関する伝承が見られる。海坊主に該当する個別の話と伝承地点を資料で確認するための調査候補として登録する。",
+  "story_content": "",
+  "region": {
+    "prefecture": "福岡県",
+    "historical_province": null,
+    "municipality": "宗像地方",
+    "area_name": "沿岸・漁村"
+  },
+  "locations": [
+    {
+      "name": "沿岸・漁村",
+      "type": "伝承地域",
+      "description": "調査候補地域。個別の伝承地点・話型は未確認。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承・信仰対象",
+      "description": "海坊主に関する地域伝承候補。"
+    }
+  ],
+  "themes": [
+    "海坊主"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "調査候補としての仮登録。個別の一次資料・伝承本文・正確な地点を確認できるまで、確定済みの個別伝承として扱わない。"
+}
