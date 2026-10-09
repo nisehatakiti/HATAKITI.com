@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-uwajima-umibozu-no-racing",
+  "status": "draft",
+  "title": "宇和島・海坊主の船と競漕してはならない",
+  "title_normalized": "宇和島・海坊主の船と競漕してはならない",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県宇和島市の伝承では、海坊主の船には帆柱の滑車（セミ）が付いていないため見分けられるとされ、その船と競漕しても勝ち目がないので競争してはならないという。",
+    "based_on_source_ids": [
+      "ehime-uwajima-umibozu-no-racing-src"
+    ]
+  },
+  "story_summary": "海坊主の船は帆柱の滑車がないことを目印に見分けられ、競漕しても勝てないため、競争を避けるべきだと語られる。",
+  "story_content": "国際日本文化研究センター「怪異・妖怪伝承データベース」に収録された愛媛県宇和島市の記録。海坊主の船には帆柱のセミ（滑車）がついていないので、すぐに見分けられるという。その船と競漕しても勝ち目はないため、競漕してはいけないとされる。記録の中心は、海坊主の姿や船を沈める方法ではなく、船の装備に現れる異常な徴候と、それを見た際に避けるべき行動である。資料要約にない競漕の結果や海坊主の正体は補わない。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": "伊予",
+    "municipality": "宇和島市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "宇和島市沿岸",
+      "type": "伝承地域",
+      "description": "海坊主の船に関する伝承の記録地域。個別の出現地点は資料要約からは特定できない。",
+      "source_ids": [
+        "ehime-uwajima-umibozu-no-racing-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "帆柱の滑車がない船と結び付けられ、その船と競漕することを避けるよう伝えられる。",
+      "source_ids": [
+        "ehime-uwajima-umibozu-no-racing-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主",
+    "異常な船の特徴",
+    "競漕の禁忌",
+    "海上安全"
+  ],
+  "story_type": [
+    "海の怪異",
+    "禁忌伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-uwajima-umibozu-no-racing-src",
+      "title": "第五章 第三節：二 憑きもの・妖怪伝承",
+      "publisher": "愛媛県（『愛媛県史 民俗上巻』）",
+      "publication_date": "1983-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3820086-000",
+      "relevant_section": "掲載頁829",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードC3820086-000に基づく。カード要約に記された船の特徴・競漕の禁忌のみを採録し、他地域の海坊主伝承と混同しない。"
+}
