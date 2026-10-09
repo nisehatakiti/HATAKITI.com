@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-aoi-ningyo-meat-eight-hundred-years",
+  "status": "draft",
+  "title": "静岡・人魚の肉を食べた娘と八百歳",
+  "title_normalized": "静岡・人魚の肉を食べた娘と八百歳",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡市葵区の採録では、老人に招かれて海中へ連れて行かれた人々が人魚を料理する場面を見た。誰も食べなかったが、土産として持ち帰った人の娘が食べ、八百歳まで生きたと語られる。",
+    "based_on_source_ids": [
+      "shizuoka-aoi-ningyo-src"
+    ]
+  },
+  "story_summary": "老人に招かれ海中へ行った人々は、人魚を料理する場面を見ても食べなかった。土産に人魚の肉を持ち帰った一人の娘がそれを食べ、八百歳まで生きたという。",
+  "story_content": "窪徳忠「庚申縁起話」に記録された静岡市葵区の人魚伝承。ある人々が老人に招かれて行くと海中へ連れて行かれ、人魚を料理しているところを見た。皆は食べなかったが、土産に持たされた人魚の肉を一人だけ家に持ち帰り、その娘が食べたところ八百歳まで生きたという。人魚の肉と長寿を結び付ける話として登録する。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "駿河",
+    "municipality": "静岡市葵区",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "人魚の肉を食べた娘",
+      "type": "人物",
+      "description": "持ち帰られた人魚の肉を食べ、八百歳まで生きたとされる。",
+      "source_ids": [
+        "shizuoka-aoi-ningyo-src"
+      ]
+    },
+    {
+      "name": "海中へ招いた老人",
+      "type": "人物",
+      "description": "人々を招き、海中へ連れて行ったとされる。",
+      "source_ids": [
+        "shizuoka-aoi-ningyo-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "人魚",
+      "type": "伝承存在",
+      "description": "海中で料理され、その肉が長寿に関わると語られた存在。",
+      "source_ids": [
+        "shizuoka-aoi-ningyo-src"
+      ]
+    }
+  ],
+  "themes": [
+    "人魚",
+    "人魚の肉",
+    "長寿",
+    "八百比丘尼型"
+  ],
+  "story_type": [
+    "人魚伝承",
+    "長寿譚",
+    "異界訪問譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ningyo",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ubasute",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-aoi-ningyo-src",
+      "title": "庚申縁起話",
+      "publisher": "庚申懇話会（『庚申』通巻17号）",
+      "publication_date": "1960-12-30",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0760030",
+      "relevant_section": "掲載頁13",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。八百歳という数字は伝承の内容として記録し、史実として扱わない。"
+}
