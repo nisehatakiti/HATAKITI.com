@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shiga-takashima-chieiei-kappa",
+  "status": "draft",
+  "title": "高島・忠栄寺の河童供養",
+  "title_normalized": "高島・忠栄寺の河童供養",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "滋賀県高島市マキノ町の知内川沿いの淵では、河童が子どもを引き込むと恐れられていた。忠栄寺の僧が21日間経を唱えた後、河童が現れなくなったという伝承。",
+    "based_on_source_ids": [
+      "shiga-takashima-chieiei-kappa-src"
+    ]
+  },
+  "story_summary": "滋賀県高島市マキノ町の知内川沿いの淵では、河童が子どもを引き込むと恐れられていた。忠栄寺の僧が21日間経を唱えた後、河童が現れなくなったという伝承。",
+  "story_content": "滋賀県高島市マキノ町の知内川沿いの淵では、河童が子どもを引き込むと恐れられていた。忠栄寺の僧が21日間経を唱えた後、河童が現れなくなったという伝承。",
+  "region": {
+    "prefecture": "滋賀県",
+    "historical_province": null,
+    "municipality": "高島市マキノ町",
+    "area_name": "知内川・忠栄寺"
+  },
+  "locations": [
+    {
+      "name": "知内川・忠栄寺",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "shiga-takashima-chieiei-kappa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "shiga-takashima-chieiei-kappa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shiga-takashima-chieiei-kappa-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2410098",
+      "relevant_section": "高島・忠栄寺の河童供養",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
