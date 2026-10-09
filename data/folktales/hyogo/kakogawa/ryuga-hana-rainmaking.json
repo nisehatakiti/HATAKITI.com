@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "hyogo-kakogawa-ryuga-hana-rainmaking",
+  "status": "draft",
+  "title": "加古川・龍ヶ鼻の龍と雨乞い",
+  "title_normalized": "加古川・龍ヶ鼻の龍と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "兵庫県加古川市の伊保崎村にあった龍ヶ鼻という淵には、龍に似た大岩が川中に突き出ており、龍ヶ鼻・龍の岩と呼ばれた。日照りの際に川底を掘れば雨が降ると伝えられた。",
+    "based_on_source_ids": [
+      "hyogo-kakogawa-ryuga-hana-src"
+    ]
+  },
+  "story_summary": "加古川の分流・洗川が海に近づく伊保崎村には龍ヶ鼻と呼ばれる淵があり、川中に龍の頭に似た大岩が突き出していた。そこに龍が住み、日照りの際に川底を掘れば雨が降るといわれた。",
+  "story_content": "河本曼花「神吉久大夫の伝説―播磨の伝説―」に記録された伝承。加古川の分流である洗川が海へ入る近くの伊保崎村に龍ヶ鼻という淵があり、川中に突き出た大岩が龍の頭に似ることから龍ヶ鼻、龍の岩と呼ばれた。そこに龍が住み、長い日照りの際には川底を掘れば雨が降るといわれていた。",
+  "region": {
+    "prefecture": "兵庫県",
+    "historical_province": "播磨",
+    "municipality": "加古川市（旧伊保崎村周辺）",
+    "area_name": "龍ヶ鼻・洗川"
+  },
+  "locations": [
+    {
+      "name": "龍ヶ鼻（旧伝承地）",
+      "type": "淵・岩・伝承地",
+      "description": "龍の頭に似た岩があるとされた淵。河川改修後の現地比定・岩の現存状況は未確認。",
+      "source_ids": [
+        "hyogo-kakogawa-ryuga-hana-src"
+      ]
+    },
+    {
+      "name": "洗川",
+      "type": "河川",
+      "description": "加古川の分流として記録される川。旧河道と現在の地形の対応は追加確認が必要。",
+      "source_ids": [
+        "hyogo-kakogawa-ryuga-hana-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "龍",
+      "type": "伝承存在",
+      "description": "龍ヶ鼻の淵に住み、雨乞いに関わるとされた存在。",
+      "source_ids": [
+        "hyogo-kakogawa-ryuga-hana-src"
+      ]
+    }
+  ],
+  "themes": [
+    "龍",
+    "雨乞い",
+    "淵",
+    "岩の形",
+    "地名由来"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "hyogo-kakogawa-ryuga-hana-src",
+      "title": "神吉久大夫の伝説―播磨の伝説―",
+      "publisher": "三元社（『旅と伝説』2巻2号・通巻14号）",
+      "publication_date": "1929-02-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231619",
+      "relevant_section": "掲載頁21",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。旧伊保崎村・龍ヶ鼻・洗川の現在の地形との対応を確認するまでは、訪問地点を確定しない。"
+}
