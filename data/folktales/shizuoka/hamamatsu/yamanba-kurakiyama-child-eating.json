@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating",
+  "status": "draft",
+  "title": "天竜・倉木山の山姥と子ども",
+  "title_normalized": "天竜・倉木山の山姥と子ども",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県浜松市天竜区の伝承。倉木山の山姥は家々で子守りや藤紡ぎを手伝っていたが、家人の留守中にある家の子どもを食べ、倉木山の洞窟へ逃げ込んだ。そのとき辺りが暗くなったので倉木山という名になったと伝えられる。その後、山姥は討伐に来た者たちから逃れ、秋葉山へ飛び去ったという。",
+    "based_on_source_ids": [
+      "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src"
+    ]
+  },
+  "story_summary": "家事や子守りを手伝っていた山姥が子どもを食べ、倉木山の洞窟へ逃げ込んだという伝承。",
+  "story_content": "石川純一郎「山の神と山姥」に記録された浜松市天竜区の伝承。倉木山の山姥は各家で子守りや藤紡ぎを手伝っていたが、家人の留守中にある家の子どもを食べ、倉木山の洞窟へ逃げ込んだ。そのとき辺りが暗くなったため、倉木山と呼ぶようになったという。後に平賀中務と矢部後藤左衛門が勅命によって山姥を討ちに来ると、山姥は秋葉山へ飛び去ったとされる。山姥が日常の労働を助ける存在として現れながら、恐ろしい側面を示す伝承である。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "遠江",
+    "municipality": "浜松市天竜区",
+    "area_name": "倉木山・秋葉山"
+  },
+  "locations": [
+    {
+      "name": "倉木山",
+      "type": "山",
+      "description": "山姥が子どもを食べた後に逃げ込んだ洞窟があるとされ、地名の由来とも結びつく。",
+      "source_ids": [
+        "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src"
+      ]
+    },
+    {
+      "name": "秋葉山",
+      "type": "山",
+      "description": "討伐に来た者から山姥が飛び去った先とされる。",
+      "source_ids": [
+        "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "平賀中務",
+      "type": "人間",
+      "description": "勅命によって山姥討伐に来た人物の一人。",
+      "source_ids": [
+        "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src"
+      ]
+    },
+    {
+      "name": "矢部後藤左衛門",
+      "type": "人間",
+      "description": "勅命によって山姥討伐に来た人物の一人。",
+      "source_ids": [
+        "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "妖怪",
+      "description": "子守りや藤紡ぎを手伝う一方、子どもを食べて洞窟へ逃げたとされる。",
+      "source_ids": [
+        "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "子守り",
+    "藤紡ぎ",
+    "子ども",
+    "洞窟",
+    "地名由来"
+  ],
+  "story_type": [
+    "山姥伝承",
+    "地名由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-hamamatsu-yamanba-kurakiyama-child-eating-src",
+      "title": "第五編 二 山の信仰：四 山の神と山姥",
+      "publisher": "静岡県（『静岡県史 資料編25 民俗3』）",
+      "publication_date": "1991-03-20",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0222204-000",
+      "relevant_section": "掲載頁858",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。"
+}
