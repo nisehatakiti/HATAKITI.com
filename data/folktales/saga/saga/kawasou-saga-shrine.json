@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saga-saga-kawasou-saga-shrine",
+  "status": "draft",
+  "title": "佐賀市・カワソウと佐嘉神社の河童像",
+  "title_normalized": "佐賀市・カワソウと佐嘉神社の河童像",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "佐賀地方では河童を「カワソウ」と呼ぶという。佐賀市の佐嘉神社には、鉢巻きを締め、ひげを生やし、太鼓腹を抱えた姿の河童の木像があると記録されている。",
+    "based_on_source_ids": [
+      "saga-kawasou-src"
+    ]
+  },
+  "story_summary": "佐賀地方では河童を「カワソウ」と呼ぶ。佐嘉神社の河童の木像は、筋骨たくましく、鉢巻きやひげ、太鼓腹などの特徴を持つ姿として記録されている。",
+  "story_content": "日文研の「日峰さんの河童」によると、佐賀地方では河童を「カワソウ」と呼ぶ。佐賀市の佐嘉神社にある河童の木像は、筋骨隆々で鉢巻きを締め、どんぐりまなこ、あぐら鼻、ひげ、太鼓腹などの特徴を持つ姿として紹介されている。地域での河童の呼称と、神社に伝わる像に関する記録として登録する。",
+  "region": {
+    "prefecture": "佐賀県",
+    "historical_province": "肥前",
+    "municipality": "佐賀市",
+    "area_name": "佐嘉神社"
+  },
+  "locations": [
+    {
+      "name": "佐嘉神社",
+      "type": "神社・伝承関連地点",
+      "description": "河童の木像があると日文研の記録に記載される。現在の像の公開状況は訪問前に確認が必要。",
+      "source_ids": [
+        "saga-kawasou-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "カワソウ（河童）",
+      "type": "伝承存在",
+      "description": "佐賀地方で河童を指す呼称。佐嘉神社の木像の姿も記録される。",
+      "source_ids": [
+        "saga-kawasou-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "地域呼称",
+    "神社",
+    "木像"
+  ],
+  "story_type": [
+    "地域伝承",
+    "妖怪呼称",
+    "信仰・造形"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "saga-kawasou-src",
+      "title": "日峰さんの河童",
+      "publisher": "佐賀民俗学会（『佐賀の民俗』3号）",
+      "publication_date": "1968-10-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0820001",
+      "relevant_section": "掲載頁1",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。昔話の筋ではなく、地域呼称と神社の造形に関する記録として分類した。像の現存・公開状況は未確認。"
+}
