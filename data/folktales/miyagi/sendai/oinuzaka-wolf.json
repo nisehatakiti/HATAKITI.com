@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyagi-sendai-oinuzaka-wolf",
+  "status": "draft",
+  "title": "仙台・狼坂と狼の埋葬伝承",
+  "title_normalized": "仙台・狼坂と狼の埋葬伝承",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "仙台市太白区の旧北六番丁・四番丁の新坂通にあたる緩やかな坂は「狼坂」と呼ばれ、昔この辺りに多かった狼を八幡太郎義家の軍勢が退治して埋めた場所だという伝承が記録されている。狼は山神の使いとして火難・盗難除けの信仰も持った。",
+    "based_on_source_ids": [
+      "miyagi-sendai-oinuzaka-src"
+    ]
+  },
+  "story_summary": "仙台の狼坂は、かつて狼が多くいた場所で、八幡太郎義家の軍勢が狼を退治して埋めた場所だと伝えられる。狼は山神の使いともされ、火難や盗難を防ぐ信仰の対象でもあった。",
+  "story_content": "『宮城県史 民俗3』の「伝説：山の部」に記録された伝承。現在の東北大学医学部構内付近、旧北六番丁と四番丁の新坂通にあたる緩やかな坂は「狼坂」と呼ばれ、かつて狼が多く、八幡太郎義家の軍勢が狼を退治して埋めた場所とされる。また、狼は三峯山・古峯ヶ原・秋葉山の山神の使いとして火難・盗難除けの信仰を集めたという。",
+  "region": {
+    "prefecture": "宮城県",
+    "historical_province": "陸前",
+    "municipality": "仙台市太白区（旧北六番丁・四番丁周辺）",
+    "area_name": "狼坂・新坂通"
+  },
+  "locations": [
+    {
+      "name": "狼坂（新坂通周辺）",
+      "type": "坂・地名伝承地",
+      "description": "旧北六番丁・四番丁の新坂通にあたる坂として記録される。現在の道路名・範囲との照合が必要。",
+      "source_ids": [
+        "miyagi-sendai-oinuzaka-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "八幡太郎義家",
+      "type": "歴史的人物",
+      "description": "狼を退治した軍勢に関わる人物として伝承に登場する。",
+      "source_ids": [
+        "miyagi-sendai-oinuzaka-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狼",
+      "type": "動物・信仰対象",
+      "description": "地名由来の伝承に登場し、山神の使いとして火難・盗難除けの信仰対象ともされた。",
+      "source_ids": [
+        "miyagi-sendai-oinuzaka-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狼",
+    "坂の地名",
+    "八幡太郎義家",
+    "山神の使い",
+    "火難除け"
+  ],
+  "story_type": [
+    "地名由来伝承",
+    "動物伝承",
+    "信仰伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-reiju",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyagi-sendai-oinuzaka-src",
+      "title": "伝説：山の部",
+      "publisher": "宮城県史刊行会（『宮城県史 民俗3』）",
+      "publication_date": "1956-10-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0410779-000",
+      "relevant_section": "掲載頁273",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現在の道路・大学構内との位置関係を確認し、旅行者向け地図では歴史的伝承地点と現代の訪問可能範囲を区別する。"
+}
