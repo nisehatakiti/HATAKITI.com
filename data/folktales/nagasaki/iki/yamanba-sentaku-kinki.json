@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-iki-yamanba-sentaku-kinki",
+  "status": "draft",
+  "title": "壱岐・山姥の洗濯日と禁忌",
+  "title_normalized": "壱岐・山姥の洗濯日と禁忌",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県壱岐の民間伝承では、旧暦12月20日は山姥が洗濯をする日なので人は洗濯をしないとされ、12月25日とする地域もある。",
+    "based_on_source_ids": [
+      "nagasaki-iki-yamanba-laundry-src"
+    ]
+  },
+  "story_summary": "壱岐では、12月20日は山姥の洗濯日とされ、人間は洗濯を避ける。別の伝え方では25日ともいわれた。",
+  "story_content": "折口信夫「壹岐民間伝承採訪記」に記録された俗信。12月20日は山姥の洗濯日であるため洗濯をしないとされるが、日付を12月25日とする言い伝えもある。物語というより、年末の特定日に洗濯を避ける生活上の禁忌として記録する。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "壱岐",
+    "municipality": "壱岐市（島内の具体地域未詳）",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "壱岐島（地域未詳）",
+      "type": "伝承地域",
+      "description": "日文研の記録は壱岐の民間伝承として掲載。島内の特定集落はこのカードからは特定できない。",
+      "source_ids": [
+        "nagasaki-iki-yamanba-laundry-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "年末の特定日に洗濯をするとされ、その日を人間の洗濯禁忌と結び付けられる。",
+      "source_ids": [
+        "nagasaki-iki-yamanba-laundry-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "年末",
+    "洗濯",
+    "禁忌"
+  ],
+  "story_type": [
+    "俗信",
+    "年中行事・禁忌",
+    "山姥伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-iki-yamanba-laundry-src",
+      "title": "壹岐民間伝承採訪記",
+      "publisher": "民俗学会（『民俗学』1巻4号）",
+      "publication_date": "1929-10-10",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260045",
+      "relevant_section": "掲載頁57",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。壱岐島内の地域差と日付の異同は後段で調査する。昔話と俗信を区別して分類した。"
+}
