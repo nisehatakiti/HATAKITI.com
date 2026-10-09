@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-toyama-city-tengu-hides-sickle-taboo-phrase",
+  "status": "draft",
+  "title": "天狗に隠された鎌を言葉で取り戻す",
+  "title_normalized": "天狗に隠された鎌を言葉で取り戻す",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "富山県富山市の伝承では、稲刈りや草刈りの際に天狗が鎌を隠すことがある。そのとき、決まった言い回しを口にすると鎌がすぐ見つかるという。天狗はその言葉を嫌うため、鎌を返すと説明されている。",
+    "based_on_source_ids": [
+      "2240220"
+    ]
+  },
+  "story_summary": "天狗に鎌を隠されたとき、特定の言い回しを唱えると鎌が見つかるという伝承。",
+  "story_content": "高崎正秀「天狗の話」によると、富山県富山市では、天狗は「醒さ物」を嫌うとされ、稲刈りや草刈りの際に鎌を隠すことがある。その場合、「今朝塩鮪きっただが、何処へ行ったろうかの」と言うと、鎌がすぐ見つかるという。資料では、天狗がその言葉を嫌うので鎌を返すのだと説明されている。引用句は古い記録の表記を尊重し、意味の不明な語を現代語に置き換えていない。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": "越中国",
+    "municipality": "富山市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    "天狗"
+  ],
+  "themes": [
+    "鎌",
+    "言葉の禁忌",
+    "農作業",
+    "道具隠し"
+  ],
+  "story_type": [
+    "俗信",
+    "妖怪伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2240220",
+      "title": "天狗の話",
+      "publisher": "民族発行所（『民族』4巻1号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2240220",
+      "publication_date": "1928-11-03",
+      "relevant_section": "掲載頁182",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。古い記事にある「醒さ物」および呪句の意味は不確かなため、推測による解釈を加えていない。"
+}
