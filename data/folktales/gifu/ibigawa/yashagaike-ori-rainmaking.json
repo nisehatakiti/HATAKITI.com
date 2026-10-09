@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "record_id": "shiga-maibara-yashagaike-ori-rainmaking",
+  "record_id": "gifu-ibigawa-yashagaike-ori-rainmaking",
   "status": "draft",
   "title": "夜叉ヶ池・お里の化粧道具で占う雨乞い",
   "title_normalized": "夜叉ヶ池・お里の化粧道具で占う雨乞い",
@@ -8,7 +8,7 @@
   "summary": {
     "text": "夜叉ヶ池の雨乞い祭りでは、大蛇の妻となったお里が喜びそうな白粉や縫い針を笹の葉舟に乗せ、池に浮かべて扇であおぐ。舟が沈めば雨が降り、岸へ吹き返されれば願いはかなわないとされた。",
     "based_on_source_ids": [
-      "shiga-maibara-yashagaike-ori-rainmaking-src"
+      "gifu-ibigawa-yashagaike-ori-rainmaking-src"
     ]
   },
   "story_summary": "大蛇の妻となったお里への供物を笹の葉舟に乗せ、池に浮かべて雨乞いの成否を占う伝承。",
@@ -25,7 +25,7 @@
       "type": "池・信仰地",
       "description": "お里に供物を捧げて雨乞いの成否を占う場所。",
       "source_ids": [
-        "shiga-maibara-yashagaike-ori-rainmaking-src"
+        "gifu-ibigawa-yashagaike-ori-rainmaking-src"
       ]
     }
   ],
@@ -35,7 +35,7 @@
       "type": "伝説上の人物",
       "description": "大蛇の妻となったとされ、雨乞いの際に喜びそうな品を供える対象となる。",
       "source_ids": [
-        "shiga-maibara-yashagaike-ori-rainmaking-src"
+        "gifu-ibigawa-yashagaike-ori-rainmaking-src"
       ]
     }
   ],
@@ -45,7 +45,7 @@
       "type": "妖怪・池の主",
       "description": "お里の夫として夜叉ヶ池伝説に登場する。",
       "source_ids": [
-        "shiga-maibara-yashagaike-ori-rainmaking-src"
+        "gifu-ibigawa-yashagaike-ori-rainmaking-src"
       ]
     }
   ],
@@ -74,7 +74,7 @@
   ],
   "sources": [
     {
-      "source_id": "shiga-maibara-yashagaike-ori-rainmaking-src",
+      "source_id": "gifu-ibigawa-yashagaike-ori-rainmaking-src",
       "title": "夜叉ヶ池伝説考",
       "publisher": "滋賀県民俗学会（『民俗文化』通巻462号）",
       "publication_date": "2002-03-25",
