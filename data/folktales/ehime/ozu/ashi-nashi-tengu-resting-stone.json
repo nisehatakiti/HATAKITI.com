@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-ozu-ashi-nashi-tengu-resting-stone",
+  "status": "draft",
+  "title": "足なし天狗の足休めの岩",
+  "title_normalized": "足なし天狗の足休めの岩",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県大洲市旧河辺村の伝承では、山の神の祠の左にある大石を「足なし天狗の足休めの岩」と呼ぶ。山で木を切っていた杣が、何度も頭を踏まれるように感じて斧を振ると、天狗の足を切ってしまった。それ以来、足なし天狗として祀られたという。",
+    "based_on_source_ids": [
+      "2366255"
+    ]
+  },
+  "story_summary": "山仕事中に天狗の足を切った杣の話と、足なし天狗の岩の由来。",
+  "story_content": "国学院大学民俗学研究会「愛媛県喜多郡河辺村」に収録された伝承では、山の神の祠の左に大きな石があり、「足なし天狗の足休めの岩」と呼ばれている。杣が山で木を切っていると、何かが頭を何度も踏んだため払いのけたが、それでも続いた。杣があつかましいと思って斧を頭上で振ると、天狗の足を切ってしまったという。杣は無心で行ったため、天狗にも心を読めなかったのだと説明され、その後は足なし天狗として祀られた。天狗は風の神とも伝えられている。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": "伊予国",
+    "municipality": "大洲市",
+    "area_name": "旧喜多郡河辺村"
+  },
+  "locations": [
+    "山の神の祠",
+    "足なし天狗の足休めの岩"
+  ],
+  "characters": [
+    "杣"
+  ],
+  "beings": [
+    "天狗"
+  ],
+  "themes": [
+    "山の神",
+    "祠と岩",
+    "身体の一部を失う怪異",
+    "樹木伐採"
+  ],
+  "story_type": [
+    "由来譚",
+    "妖怪譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2366255",
+      "title": "愛媛県喜多郡河辺村",
+      "publisher": "国学院大学民俗学研究会（『民俗採訪』通巻昭和60年度号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2366255",
+      "publication_date": "1986-10-01",
+      "relevant_section": "掲載頁95",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現在の自治体名は大洲市、旧地名は河辺村として併記。"
+}
