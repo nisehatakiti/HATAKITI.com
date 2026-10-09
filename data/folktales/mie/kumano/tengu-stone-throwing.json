@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "record_id": "mie-kumano-tengu-stone-throwing",
+  "status": "draft",
+  "title": "熊野・曇天に山から石を投げる天狗",
+  "title_normalized": "熊野・曇天に山から石を投げる天狗",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "三重県熊野市の和気村では、今も天狗が住んでおり、曇天の日などには山から大きな石を投げてくると伝えられた。",
+    "based_on_source_ids": [
+      "mie-kumano-tengu-stone-throwing-src"
+    ]
+  },
+  "story_summary": "天狗が住むとされる和気村で、曇天の日などに山から大きな石が投げられるという伝承。",
+  "story_content": "田村吉永「天狗の話」に記録された三重県熊野市の伝承。和気村という場所には今でも天狗が住んでおり、曇天の日などには山から大きな石を投げてくるという。記録は短いため、被害の有無や石の具体的な場所など、資料にない細部は補わずに収録する。",
+  "region": {
+    "prefecture": "三重県",
+    "historical_province": "紀伊",
+    "municipality": "熊野市",
+    "area_name": "和気村"
+  },
+  "locations": [
+    {
+      "name": "和気村",
+      "type": "伝承地",
+      "description": "天狗が住むと伝えられた場所。",
+      "source_ids": [
+        "mie-kumano-tengu-stone-throwing-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "曇天の日などに山から大きな石を投げてくるとされる。",
+      "source_ids": [
+        "mie-kumano-tengu-stone-throwing-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "石",
+    "山",
+    "天候"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "怪異現象"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "mie-kumano-tengu-stone-throwing-src",
+      "title": "天狗の話",
+      "publisher": "郷土研究社（『郷土研究』3巻3号）",
+      "publication_date": "1915-05-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640104",
+      "relevant_section": "掲載頁55",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく短い記録。地名の歴史的範囲について追加確認は未実施。"
+}
