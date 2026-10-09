@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tokyo-hachioji-kama-no-kuchi-kappa",
+  "status": "draft",
+  "title": "八王子・かまの口の河童",
+  "title_normalized": "八王子・かまの口の河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "東京都八王子市の「かまの口」という場所には河童が現れ、人を川へ引き込んだ。村人が退治しようとしたが失敗し、最後は河童を捕まえて殺したため、それ以降出なくなったという伝承。",
+    "based_on_source_ids": [
+      "tokyo-hachioji-kama-no-kuchi-kappa-src"
+    ]
+  },
+  "story_summary": "東京都八王子市の「かまの口」という場所には河童が現れ、人を川へ引き込んだ。村人が退治しようとしたが失敗し、最後は河童を捕まえて殺したため、それ以降出なくなったという伝承。",
+  "story_content": "東京都八王子市の「かまの口」という場所には河童が現れ、人を川へ引き込んだ。村人が退治しようとしたが失敗し、最後は河童を捕まえて殺したため、それ以降出なくなったという伝承。",
+  "region": {
+    "prefecture": "東京都",
+    "historical_province": null,
+    "municipality": "八王子市",
+    "area_name": "かまの口"
+  },
+  "locations": [
+    {
+      "name": "かまの口",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "tokyo-hachioji-kama-no-kuchi-kappa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "tokyo-hachioji-kama-no-kuchi-kappa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tokyo-hachioji-kama-no-kuchi-kappa-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2450065",
+      "relevant_section": "八王子・かまの口の河童",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
