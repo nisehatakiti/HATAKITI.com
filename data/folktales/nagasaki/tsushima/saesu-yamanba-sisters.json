@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-tsushima-saesu-yamanba-sisters",
+  "status": "draft",
+  "title": "対馬・佐須の山姥と姉妹",
+  "title_normalized": "対馬・佐須の山姥と姉妹",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県対馬市の佐須村・椎根のむしろうちでは、姉妹がむしろを打っていると山姥が現れ、姉を連れ去った。妹が仇討ちに出かけ、焼けた石を山姥の胸に投げ入れて退治したという昔話が記録されている。",
+    "based_on_source_ids": [
+      "nagasaki-tsushima-yamanba-sisters-src"
+    ]
+  },
+  "story_summary": "佐須村の椎根のむしろうちで姉妹がむしろを打っていると、山姥が現れ、大きく膨らませた乳で姉を絡めて連れ去った。妹は仇討ちに出かけ、焼けた石を山姥の胸に投げ入れて退治したと伝えられる。",
+  "story_content": "鈴木棠三「対馬の昔話（一）」に記録された昔話。佐須村の椎根のむしろうちで姉妹がむしろ打ちをしていると山姥が現れ、姉を連れて行った。妹は姉の仇を討つため出かけ、焼けた石を山姥の胸に放り込んで退治したという。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "対馬",
+    "municipality": "対馬市（旧佐須村）",
+    "area_name": "椎根"
+  },
+  "locations": [
+    {
+      "name": "椎根のむしろうち",
+      "type": "伝承地・旧地名",
+      "description": "昔話の舞台として記録された場所。現在の地名・地点の対応は追加確認が必要。",
+      "source_ids": [
+        "nagasaki-tsushima-yamanba-sisters-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "姉妹",
+      "type": "人物",
+      "description": "むしろ打ちをしていた姉妹。姉が連れ去られ、妹が仇討ちに向かう。",
+      "source_ids": [
+        "nagasaki-tsushima-yamanba-sisters-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "姉を連れ去り、妹に退治される存在として語られる。",
+      "source_ids": [
+        "nagasaki-tsushima-yamanba-sisters-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "姉妹",
+    "むしろ打ち",
+    "仇討ち",
+    "焼き石"
+  ],
+  "story_type": [
+    "昔話",
+    "怪異伝承",
+    "仇討ち譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-tsushima-yamanba-sisters-src",
+      "title": "対馬の昔話（一）",
+      "publisher": "三元社（『旅と伝説』12巻8号・通巻140号）",
+      "publication_date": "1939-08-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230986_001",
+      "relevant_section": "掲載頁20–21",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。椎根の伝承地の現在地と現地に残る関連地名は未確認。似た山姥退治譚とは別の地域記録として保持する。"
+}
