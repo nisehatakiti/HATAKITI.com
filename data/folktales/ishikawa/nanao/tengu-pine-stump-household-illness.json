@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ishikawa-nanao-tengu-pine-stump-household-illness",
+  "status": "draft",
+  "title": "天狗の松の根株を踏んで病が続く",
+  "title_normalized": "天狗の松の根株を踏んで病が続く",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "石川県七尾市能登島の伝承では、昭和33年ごろ、家人がたびたび病気になる理由を占ってもらうと、天狗の松を切った祟りだと告げられた。根株が家の入口にあり、出入りのたびに踏んでいたため、小祠を建てて天狗を祀ったという。",
+    "based_on_source_ids": [
+      "2470008"
+    ]
+  },
+  "story_summary": "天狗の松を切った後、根株を踏み続けた家で病人が出たため、天狗を祀ったという伝承。",
+  "story_content": "小倉学「加賀・能登の天狗伝説考」によれば、昭和33年、家の者がよく病気になるので占ってもらったところ、天狗の松を切った祟りだとされた。松の根株は家の入口にあり、人々が出入りするたびに踏んでいたという。そこで小祠を建て、天狗を祀ったと記録されている。病気と祟りの関係は、伝承内での説明として記述する。",
+  "region": {
+    "prefecture": "石川県",
+    "historical_province": "能登国",
+    "municipality": "七尾市",
+    "area_name": "能登島"
+  },
+  "locations": [
+    "天狗の松",
+    "家の入口"
+  ],
+  "characters": [],
+  "beings": [
+    "天狗"
+  ],
+  "themes": [
+    "禁忌",
+    "祟り",
+    "樹木信仰",
+    "鎮祭"
+  ],
+  "story_type": [
+    "祟り譚",
+    "由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2470008",
+      "title": "加賀・能登の天狗伝説考",
+      "publisher": "昔話伝説研究会（『昔話伝説研究』2号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2470008",
+      "publication_date": "1972-04-30",
+      "relevant_section": "掲載頁17",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現在の市町村名はデータベース記載の七尾市に合わせ、地区名として能登島を記載。"
+}
