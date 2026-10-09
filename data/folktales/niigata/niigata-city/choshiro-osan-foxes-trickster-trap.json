@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-niigata-city-choshiro-osan-foxes-trickster-trap",
+  "status": "draft",
+  "title": "新潟近郊・長四郎狐とおさん狐の化かし合い",
+  "title_normalized": "新潟近郊・長四郎狐とおさん狐の化かし合い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟市東区の伝承。長四郎狐とおさん狐は、狐や人間に化けてうまく儲けようと相談していた。その計画を知った男は長十郎狐をだますことに成功する。腹を立てた狐が男のところへ行くと好物が置かれており、仕掛けられたひょうたんに引っかかって生け捕りにされたという。",
+    "based_on_source_ids": [
+      "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src"
+    ]
+  },
+  "story_summary": "人をだまそうとした狐たちの計画を見抜いた男が、逆に狐を罠にかけて捕らえる話。",
+  "story_content": "鏡淵九六郎「新潟近郊の狐を語る」に記録された新潟市東区の伝承。長四郎狐とおさん狐が話し合い、狐や人間に化けてうまく儲けようと計画した。その計画を知った男は長十郎狐をだますことに成功する。腹立たしく思った狐が男のところへ行くと、大好物が置いてあり、仕掛けられていたひょうたんに引っかかって生け捕りにされたという。狐が人を化かすだけでなく、人間側が狐の欲を利用して逆に捕らえる点に特徴がある。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "新潟市東区",
+    "area_name": "新潟近郊"
+  },
+  "locations": [
+    {
+      "name": "男の家",
+      "type": "家",
+      "description": "狐の好物と罠が用意され、狐が生け捕りにされた場所。",
+      "source_ids": [
+        "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "男",
+      "type": "人間",
+      "description": "狐たちの計画を知り、狐をだまして罠にかけた。",
+      "source_ids": [
+        "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "長四郎狐",
+      "type": "狐",
+      "description": "おさん狐とともに、人間や狐に化けて利益を得ようと相談した。",
+      "source_ids": [
+        "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src"
+      ]
+    },
+    {
+      "name": "おさん狐",
+      "type": "狐",
+      "description": "長四郎狐と化かし合いの計画を立てた。",
+      "source_ids": [
+        "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src"
+      ]
+    },
+    {
+      "name": "長十郎狐",
+      "type": "狐",
+      "description": "男にだまされ、ひょうたんの罠で生け捕りにされた狐。資料要約内では名称表記が長四郎狐と異なるため、同一個体とは断定しない。",
+      "source_ids": [
+        "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "化ける",
+    "化かし合い",
+    "知恵比べ",
+    "罠",
+    "ひょうたん"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "機知譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-niigata-city-choshiro-osan-foxes-trickster-trap-src",
+      "title": "新潟近郊の狐を語る",
+      "publisher": "新潟県民俗学会（『高志路』2巻5号・通巻17号）",
+      "publication_date": "1936-05",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0780033",
+      "relevant_section": "掲載頁42–44",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。本文要約に登場する長四郎狐・長十郎狐の表記が異なるため、同一個体と断定しない。"
+}
