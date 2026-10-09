@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ibaraki-kasumigaura-funayuurei-three-pronged-offshore",
+  "status": "draft",
+  "title": "霞ヶ浦の三叉沖に現れる船幽霊",
+  "title_normalized": "霞ヶ浦の三叉沖に現れる船幽霊",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "茨城県の霞ヶ浦では、雨の夕方に三叉沖を通ると幽霊船が浮かび上がり、「柄杓貸せ」と手を伸ばすという。柄杓を渡すと「幽霊友を呼ぶ」と言いながら船に水を注いで沈めるため、この海域を通る船は底の抜けた柄杓を用意したと伝えられる。",
+    "based_on_source_ids": [
+      "1230148"
+    ]
+  },
+  "story_summary": "霞ヶ浦の沖で柄杓を求める幽霊船と、底抜け柄杓による対処法の伝承。",
+  "story_content": "小寺融吉「船幽霊」によると、霞ヶ浦の三叉沖を雨の夕方に船が通ると、幽霊船が浮かび上がり「柄杓貸せ」と手を伸ばす。柄杓を投げ渡すと「幽霊友を呼ぶ」と言い、柄杓で船に水を注いで沈めるという。そのため、この海域を通る船は底の抜けた柄杓を用意していると記録されている。",
+  "region": {
+    "prefecture": "茨城県",
+    "historical_province": "常陸国",
+    "municipality": null,
+    "area_name": "霞ヶ浦・三叉沖"
+  },
+  "locations": [
+    "霞ヶ浦",
+    "三叉沖"
+  ],
+  "characters": [],
+  "beings": [
+    "船幽霊",
+    "幽霊船"
+  ],
+  "themes": [
+    "水難",
+    "底抜け柄杓",
+    "海上の禁忌"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1230148",
+      "title": "船幽霊",
+      "publisher": "三元社（『旅と伝説』5巻6号・通巻54号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230148",
+      "publication_date": "1932-06-01",
+      "relevant_section": "掲載頁10",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。霞ヶ浦の「三叉沖」の現代の位置を特定できていないため、自治体名は設定していない。"
+}
