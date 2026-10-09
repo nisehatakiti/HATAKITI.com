@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-suwa-moriyasama-snake",
+  "status": "draft",
+  "title": "諏訪・洩矢神と蛇の伝承",
+  "title_normalized": "諏訪・洩矢神と蛇の伝承",
+  "title_origin": "research_title",
+  "summary": {
+    "text": "長野県諏訪地域では、諏訪の古い神々をめぐる伝承が残り、洩矢神と建御名方神の争いは地域の神社や祭祀の由緒と結び付いて伝えられている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "長野県諏訪地域では、諏訪の古い神々をめぐる伝承が残り、洩矢神と建御名方神の争いは地域の神社や祭祀の由緒と結び付いて伝えられている。",
+  "story_content": "長野県諏訪地域では、諏訪の古い神々をめぐる伝承が残り、洩矢神と建御名方神の争いは地域の神社や祭祀の由緒と結び付いて伝えられている。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": null,
+    "municipality": "諏訪地域",
+    "area_name": "洩矢神ゆかりの地"
+  },
+  "locations": [
+    {
+      "name": "洩矢神ゆかりの地",
+      "type": "伝承地域",
+      "description": "地域伝承と関係する地名・信仰地。現地地点の確定は後続調査で行う。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "蛇・水神",
+      "type": "伝承存在・信仰対象",
+      "description": "蛇・水神に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "蛇・水神"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "全国の伝承候補として仮登録。個別の一次資料・伝承内容・正確な地点を確認するまで、確定済みの実例として扱わない。出典確認後にsummary、sources、confidenceを更新する。"
+}
