@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyazaki-saito-uchimeara-yamanba-todoroki",
+  "status": "draft",
+  "title": "西都市・打越川の滝と山姥",
+  "title_normalized": "西都市・打越川の滝と山姥",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮崎県西都市の打越川上流の滝には轟権現が祀られ、美しい女神で水神ともいわれる一方、山姥として子どもを欲しがったという伝承が記録されている。",
+    "based_on_source_ids": [
+      "miyazaki-saito-yamanba-todoroki-src"
+    ]
+  },
+  "story_summary": "打越川の上にある滝には轟権現が祀られていた。美しい女神で水神ともいわれるが、山姥でもあり、子どもを欲しがったという。子どもを求められた家が断ると、その子は死んだと伝えられる。",
+  "story_content": "千葉徳爾「日向東米良の伝承」に記録された話。打越川の上流には滝があり、轟権現が祀られていた。美しい女神で水神ともいわれる一方、山姥で子どもを欲しがったとも語られる。子どもを求められた家が断ったところ、その子は死んだという。伝承では水神・女神・山姥の性格が重なっている。",
+  "region": {
+    "prefecture": "宮崎県",
+    "historical_province": "日向",
+    "municipality": "西都市",
+    "area_name": "東米良・打越川上流"
+  },
+  "locations": [
+    {
+      "name": "打越川上流の滝・轟権現",
+      "type": "滝・祭祀伝承地",
+      "description": "日文研の記録に記載された滝と祀られる存在。現在の滝の名称・轟権現の場所は追加確認が必要。",
+      "source_ids": [
+        "miyazaki-saito-yamanba-todoroki-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥・轟権現",
+      "type": "伝承存在・信仰対象",
+      "description": "女神・水神とされながら、子どもを求める山姥としても語られる。",
+      "source_ids": [
+        "miyazaki-saito-yamanba-todoroki-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "水神",
+    "轟権現",
+    "子ども"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "神霊伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyazaki-saito-yamanba-todoroki-src",
+      "title": "日向東米良の伝承",
+      "publisher": "民間伝承の会（『民間伝承』5巻5号）",
+      "publication_date": "1940-02-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2181117",
+      "relevant_section": "掲載頁7",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。滝と轟権現の現地比定は未確認。旅行地図の確定ピンは追加調査後に設定する。"
+}
