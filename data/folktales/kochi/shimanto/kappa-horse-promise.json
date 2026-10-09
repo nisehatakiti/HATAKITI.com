@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kochi-shimanto-kappa-horse-promise",
+  "status": "draft",
+  "title": "四万十・馬を引き込む河童との約束",
+  "title_normalized": "四万十・馬を引き込む河童との約束",
+  "title_origin": "research_title",
+  "summary": {
+    "text": "高知県四万十地方では、河童が馬を川へ引き込もうとしたが、人と約束を交わしたことで祭日や地域の習俗に結び付いたという伝承が記録されている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "高知県四万十地方では、河童が馬を川へ引き込もうとしたが、人と約束を交わしたことで祭日や地域の習俗に結び付いたという伝承が記録されている。",
+  "story_content": "高知県四万十地方では、河童が馬を川へ引き込もうとしたが、人と約束を交わしたことで祭日や地域の習俗に結び付いたという伝承が記録されている。",
+  "region": {
+    "prefecture": "高知県",
+    "historical_province": null,
+    "municipality": "四万十市周辺",
+    "area_name": "川・河童祭に関わる地域"
+  },
+  "locations": [
+    {
+      "name": "川・河童祭に関わる地域",
+      "type": "伝承地域",
+      "description": "地域レベルの伝承情報。個別地点の精度は今後補完する。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承・信仰対象",
+      "description": "河童に関する地域伝承候補。"
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "medium",
+  "research_status": "source_detail_followup",
+  "research_notes": "概要レベルで整理したレコード。確定前に個別の一次資料・出典URL・地点を照合し、内容を補完する。"
+}
