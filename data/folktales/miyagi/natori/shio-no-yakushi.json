@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyagi-natori-shio-no-yakushi",
+  "status": "draft",
+  "title": "名取・塩の薬師と塩出山",
+  "title_normalized": "名取・塩の薬師と塩出山",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮城県名取市箕輪字塩手の伝承では、塩出山の下から塩水が湧き、老僧が塩を焼いて十二人の童子に村人へ配らせた。その塩で病が治ったため、老僧を薬師の化身として祀り「塩の薬師」と呼んだという。",
+    "based_on_source_ids": [
+      "miyagi-natori-shio-yakushi-src"
+    ]
+  },
+  "story_summary": "塩出山の下から塩水が湧き、老僧が塩を焼いて十二人の童子に村人へ配らせた。その塩で病が治ったことから、老僧を薬師の化身として祀り、塩の薬師と呼ぶようになったという。",
+  "story_content": "『宮城県史 民俗3』の「伝説：祠堂の部」に記録された話。名取市箕輪字塩手では、塩出山の下に塩水が湧き、老僧が塩を焼いて十二人の童子に村人へ分け与えた。その塩で病気が治ったため、老僧を薬師の化身として祀り「塩の薬師」と称した。塩が湧いた場所を塩河原、塩を煮たことから塩出と呼ぶ地名由来も記録される。",
+  "region": {
+    "prefecture": "宮城県",
+    "historical_province": "陸前",
+    "municipality": "名取市箕輪字塩手",
+    "area_name": "塩出山"
+  },
+  "locations": [
+    {
+      "name": "塩出山",
+      "type": "山・伝承地",
+      "description": "塩水が湧いたとされる山。現地での正確な位置・現在の地名は追加確認が必要。",
+      "source_ids": [
+        "miyagi-natori-shio-yakushi-src"
+      ]
+    },
+    {
+      "name": "塩の薬師（祠堂・所在地未詳）",
+      "type": "祠・信仰伝承地",
+      "description": "病を治す塩を配った老僧を薬師の化身として祀ったとされる。現存状況は未確認。",
+      "source_ids": [
+        "miyagi-natori-shio-yakushi-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "老僧",
+      "type": "人物・聖者",
+      "description": "塩を焼いて村人に配り、薬師の化身として祀られたとされる。",
+      "source_ids": [
+        "miyagi-natori-shio-yakushi-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "薬師如来",
+      "type": "信仰対象",
+      "description": "老僧が薬師の化身とみなされた伝承に関わる。",
+      "source_ids": [
+        "miyagi-natori-shio-yakushi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "塩",
+    "薬師信仰",
+    "病気平癒",
+    "地名由来"
+  ],
+  "story_type": [
+    "地域伝承",
+    "寺社・信仰伝承",
+    "地名由来伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-reiju",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyagi-natori-shio-yakushi-src",
+      "title": "伝説：祠堂の部",
+      "publisher": "宮城県史刊行会（『宮城県史 民俗3』）",
+      "publication_date": "1956-10-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0410870-000",
+      "relevant_section": "掲載頁305",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。塩出山・塩河原・塩の薬師の現在の所在地や現存状況は追加確認が必要。"
+}
