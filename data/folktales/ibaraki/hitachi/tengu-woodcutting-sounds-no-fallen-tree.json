@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ibaraki-hitachi-tengu-woodcutting-sounds-no-fallen-tree",
+  "status": "draft",
+  "title": "日立・天狗の木倒しと山中の怪音",
+  "title_normalized": "日立・天狗の木倒しと山中の怪音",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "茨城県日立市十王町の伝承。炭焼きのため小屋に泊まり込んでいた村人たちが、夜にけたたましい音と小屋の上を飛び立つものを感じ、その後、山奥から木を伐る音や大木が倒れる音を聞いた。翌日確かめても木は倒れておらず、天狗の木倒しだと考えられた。",
+    "based_on_source_ids": [
+      "ibaraki-hitachi-tengu-woodcutting-sounds-no-fallen-tree-src"
+    ]
+  },
+  "story_summary": "山中で木を伐る音や大木が倒れる音がしたのに、翌朝には何も倒れていなかったという天狗の怪音譚。",
+  "story_content": "岩波秀俊「十王町地方」に記録された日立市十王町の伝承。村人たちが炭焼きのため山小屋に泊まり込んでいると、けたたましい音がして小屋の上を飛び立つものがあった。その後、山奥から木を伐るような音や大木が倒れる音が聞こえた。翌日調べても木は倒れておらず、人々は天狗の木倒しだろうと考えたという。音の現象と翌朝の不在を中心に記録する。",
+  "region": {
+    "prefecture": "茨城県",
+    "historical_province": "常陸",
+    "municipality": "日立市十王町",
+    "area_name": "山中の炭焼き小屋"
+  },
+  "locations": [
+    {
+      "name": "山中の炭焼き小屋",
+      "type": "小屋",
+      "description": "炭焼きの村人が泊まり、夜に怪音を聞いた場所。",
+      "source_ids": [
+        "ibaraki-hitachi-tengu-woodcutting-sounds-no-fallen-tree-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "炭焼きの村人たち",
+      "type": "人間",
+      "description": "小屋に泊まり、夜の怪音を聞いた。翌朝に山を調べたが木は倒れていなかった。",
+      "source_ids": [
+        "ibaraki-hitachi-tengu-woodcutting-sounds-no-fallen-tree-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "木を伐る音や大木の倒れる音を起こしたと考えられた。",
+      "source_ids": [
+        "ibaraki-hitachi-tengu-woodcutting-sounds-no-fallen-tree-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "木倒し",
+    "怪音",
+    "炭焼き",
+    "山小屋",
+    "音と実景の食い違い"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "音の怪異"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ibaraki-hitachi-tengu-woodcutting-sounds-no-fallen-tree-src",
+      "title": "十王町地方",
+      "publisher": "茨城民俗学の会（『茨城の民俗』通巻6号）",
+      "publication_date": "1967-12-24",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0180006",
+      "relevant_section": "掲載頁66–67",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。音がしたことと、実際には木が倒れていなかったことを区別して記録。"
+}
