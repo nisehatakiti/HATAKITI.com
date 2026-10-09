@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-goto-funayuurei-ship-tamashii",
+  "status": "draft",
+  "title": "五島・船幽霊と船玉様",
+  "title_normalized": "五島・船幽霊と船玉様",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県五島では、幽霊船や海坊主が柄杓を貸すよう求め、底を抜かずに渡すと船へ水を注いで沈めると伝えられた。船幽霊は船尾から上がらないともされ、その理由を船玉様が船尾を向いているためと説明する語りがある。",
+    "based_on_source_ids": [
+      "nagasaki-goto-funayuurei-src"
+    ]
+  },
+  "story_summary": "幽霊船や海坊主に柄杓を求められても、底を抜いたものを渡す。船幽霊は船尾から上がらないとされ、船玉様の向きと結び付けて説明された。",
+  "story_content": "櫻田勝徳「船幽霊など」に記録された五島市の伝承。幽霊船や海坊主が柄杓を貸せと求め、底を抜かずに貸すと船へ水を注がれて沈められる。船幽霊は船尾からは上がってこないとされ、その理由は船玉様が船尾の方を向いているからだと説明された。同じ記録には、上半身が人間で下半身が幽霊のように流れる磯女の話も含まれるが、本レコードでは船幽霊と船玉信仰を中心に整理する。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "肥前",
+    "municipality": "五島市",
+    "area_name": "五島列島"
+  },
+  "locations": [
+    {
+      "name": "五島の沿岸海域",
+      "type": "海域・伝承地域",
+      "description": "船幽霊・海坊主と船玉信仰が記録された地域。特定の出現地点は未詳。",
+      "source_ids": [
+        "nagasaki-goto-funayuurei-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "船幽霊",
+      "type": "伝承存在",
+      "description": "柄杓を求め、船を沈めるとされる海の怪異。",
+      "source_ids": [
+        "nagasaki-goto-funayuurei-src"
+      ]
+    },
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "船幽霊とともに柄杓を求める存在として記録される。",
+      "source_ids": [
+        "nagasaki-goto-funayuurei-src"
+      ]
+    },
+    {
+      "name": "船玉様",
+      "type": "信仰対象",
+      "description": "船を守護する存在。船尾から怪異が上がらない理由として語られる。",
+      "source_ids": [
+        "nagasaki-goto-funayuurei-src"
+      ]
+    }
+  ],
+  "themes": [
+    "船幽霊",
+    "海坊主",
+    "船玉信仰",
+    "底抜け柄杓"
+  ],
+  "story_type": [
+    "海の怪異",
+    "船の守護信仰"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-goto-funayuurei-src",
+      "title": "船幽霊など",
+      "publisher": "三元社（『旅と伝説』5巻8号・通巻56号）",
+      "publication_date": "1932-08-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230178",
+      "relevant_section": "掲載頁24–25",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。複数の怪異が同一記録に含まれるため、本文では船幽霊・海坊主・船玉信仰を中心に扱う。"
+}
