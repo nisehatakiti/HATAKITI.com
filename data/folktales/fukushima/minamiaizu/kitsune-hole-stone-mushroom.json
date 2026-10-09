@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukushima-minamiaizu-kitsune-hole-stone-mushroom",
+  "status": "draft",
+  "title": "南会津・狐の穴を塞いだ石が大きな茸に見えた話",
+  "title_normalized": "南会津・狐の穴を塞いだ石が大きな茸に見えた話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福島県南会津町の伝承。狐の穴に石を投げ入れて塞いだ人が、夕方にマエダケを採りに行くと大きな茸を見つけた。喜んで持ち帰ったが、それは昼間に狐の穴へ投げた石だったという。",
+    "based_on_source_ids": [
+      "fukushima-minamiaizu-kitsune-hole-stone-mushroom-src"
+    ]
+  },
+  "story_summary": "狐の穴を塞いだ石が、夕方には大きな茸に見えたという狐の化かし譚。",
+  "story_content": "野口長義「南会津の民俗（完）」に記録された福島県南会津町の伝承。人が狐の穴へ石を投げ込んで塞いでおいた。夕方、マエダケを採りに出かけると大きな茸があったので喜んで持ち帰ったが、それは昼間に穴へ投げ込んだ石だったという。見慣れた石が茸に見えるという認識の変化を中心に記録する。",
+  "region": {
+    "prefecture": "福島県",
+    "historical_province": "陸奥",
+    "municipality": "南会津町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "狐の穴",
+      "type": "動物の穴",
+      "description": "石を投げ込んで塞いだとされる狐の穴。",
+      "source_ids": [
+        "fukushima-minamiaizu-kitsune-hole-stone-mushroom-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "石を投げ込んだ人",
+      "type": "人間",
+      "description": "狐の穴を石で塞いだ後、同じ石を茸と見誤って持ち帰った。",
+      "source_ids": [
+        "fukushima-minamiaizu-kitsune-hole-stone-mushroom-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "穴を塞いだ石が茸に見えるという化かしと結びつく。",
+      "source_ids": [
+        "fukushima-minamiaizu-kitsune-hole-stone-mushroom-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐の穴",
+    "石",
+    "茸",
+    "見間違い",
+    "化かし"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "見間違い譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukushima-minamiaizu-kitsune-hole-stone-mushroom-src",
+      "title": "南会津の民俗（完）",
+      "publisher": "三元社（『旅と伝説』11巻5号・通巻125号）",
+      "publication_date": "1938-05-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230662",
+      "relevant_section": "掲載頁72",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。「マエダケ」は資料表記を維持し、茸の種類を推測で特定していない。"
+}
