@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "record_id": "oita-naoiri-kappa-seasonal-waterway",
+  "status": "draft",
+  "title": "豊後直入・彼岸の雨夜に水路を通る河童",
+  "title_normalized": "豊後直入・彼岸の雨夜に水路を通る河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "豊後国直入地方では、春と秋の彼岸になると、雨の降る夜にヒュウヒュウと声を立てて水路に沿って通るものがあり、その後には赤子の足跡のような跡が残るとされた。これは河童が山と川を往来しているのだといわれた。",
+    "based_on_source_ids": [
+      "oita-naoiri-kappa-seasonal-waterway-src"
+    ]
+  },
+  "story_summary": "春秋の彼岸の雨夜、水路沿いに声を立てて通るものがあり、赤子の足跡のような跡を残す。河童の往来と説明された。",
+  "story_content": "長山源雄「豊後国直入地方の民間伝承」に収録された話。春と秋の彼岸になると、雨の降る夜にヒュウヒュウと声を立てて水路に沿って通るものがある。通った後には赤子の足跡のようなものが残るとされ、それは河童が山と川を往来するためだと語られた。姿そのものを見た話ではなく、音と足跡から河童の移動を説明する伝承として記録する。",
+  "region": {
+    "prefecture": "大分県",
+    "historical_province": "豊後",
+    "municipality": null,
+    "area_name": "直入地方"
+  },
+  "locations": [
+    {
+      "name": "水路",
+      "type": "水路",
+      "description": "彼岸の雨夜に声と足跡が残るとされた場所。",
+      "source_ids": [
+        "oita-naoiri-kappa-seasonal-waterway-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "山と川を往来するとされ、雨夜の音や赤子の足跡のような跡と結びつく。",
+      "source_ids": [
+        "oita-naoiri-kappa-seasonal-waterway-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "彼岸",
+    "雨夜",
+    "足跡",
+    "水路",
+    "山と川"
+  ],
+  "story_type": [
+    "河童伝承",
+    "怪異現象"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "oita-naoiri-kappa-seasonal-waterway-src",
+      "title": "豊後国直入地方の民間伝承",
+      "publisher": "民俗学会（『民俗学』1巻5号）",
+      "publication_date": "1929-11-10",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260060",
+      "relevant_section": "掲載頁46",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "同じ文献の別カードを参照する独立した伝承記録。既存の河童相撲の話とは内容を分け、季節・音・足跡の特徴を登録した。"
+}
