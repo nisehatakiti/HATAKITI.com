@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kanagawa-mitsuzawa-ike-ryu",
+  "status": "draft",
+  "title": "横浜・三ツ沢池の藁の大蛇と雨乞い",
+  "title_normalized": "横浜・三ツ沢池の藁の大蛇と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "神奈川県では、日照りの際に藁で大蛇を作り、三ツ沢池へ入れると池の主の大蛇が現れて雨を降らせるという雨乞いの伝承が記録されている。",
+    "based_on_source_ids": [
+      "kanagawa-mitsuzawa-ike-ryu-src"
+    ]
+  },
+  "story_summary": "神奈川県では、日照りの際に藁で大蛇を作り、三ツ沢池へ入れると池の主の大蛇が現れて雨を降らせるという雨乞いの伝承が記録されている。",
+  "story_content": "神奈川県では、日照りの際に藁で大蛇を作り、三ツ沢池へ入れると池の主の大蛇が現れて雨を降らせるという雨乞いの伝承が記録されている。",
+  "region": {
+    "prefecture": "神奈川県",
+    "historical_province": null,
+    "municipality": "横浜市周辺",
+    "area_name": "三ツ沢池"
+  },
+  "locations": [
+    {
+      "name": "三ツ沢池",
+      "type": "伝承地・地域",
+      "description": "日文研の検索記録に記載された地域・地形。正確な地点は原資料を再確認して補完する。",
+      "source_ids": [
+        "kanagawa-mitsuzawa-ike-ryu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇・龍神",
+      "type": "伝承存在",
+      "description": "大蛇・龍神に関する地域伝承。",
+      "source_ids": [
+        "kanagawa-mitsuzawa-ike-ryu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇・龍神",
+    "雨乞い"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kanagawa-mitsuzawa-ike-ryu-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=2360999",
+      "relevant_section": "横浜・三ツ沢池の藁の大蛇と雨乞い",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の検索記録に基づき登録。自治体・池名・伝承本文の対応は原資料を追加確認し、旅行用地図へ載せる前に地点精度を検証する。"
+}
