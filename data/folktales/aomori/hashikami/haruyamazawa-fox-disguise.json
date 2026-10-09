@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aomori-hashikami-haruyamazawa-fox-disguise",
+  "status": "draft",
+  "title": "階上岳・晴山沢の爺さまに化けた狐",
+  "title_normalized": "階上岳・晴山沢の爺さまに化けた狐",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "青森県階上町の階上岳の麓、晴山沢に人をよくだます狐がいた。ある夕方、狐は爺さまに化けて婆さまの前に現れたが、婆さまは正体を見破って狐を殺した。それ以来、この土地には人をだます狐がいなくなったという。",
+    "based_on_source_ids": [
+      "aomori-hashikami-haruyamazawa-fox-disguise-src"
+    ]
+  },
+  "story_summary": "老人に化けて人をだましていた狐を、化けた相手の婆さまが見破り、退治したという伝承。",
+  "story_content": "『青森県史 民俗編』に収録された「はしかみのむがしこ」の抄録。階上岳の麓の晴山沢には、人をよくだます狐がいた。近くに住む爺さまと婆さまのところへ、ある日の夕方、狐が爺さまに化けて現れた。婆さまは化けた姿を見破り、狐を殺したという。それ以来、この地には人をだます狐はいなくなったと伝えられる。狐の変化と、それを見破る人物、地域から怪異が消えたという結末を記録する。",
+  "region": {
+    "prefecture": "青森県",
+    "historical_province": "陸奥",
+    "municipality": "階上町",
+    "area_name": "階上岳麓・晴山沢"
+  },
+  "locations": [
+    {
+      "name": "晴山沢",
+      "type": "地域",
+      "description": "階上岳の麓にあり、人をだます狐がいたと伝えられる場所。",
+      "source_ids": [
+        "aomori-hashikami-haruyamazawa-fox-disguise-src"
+      ]
+    },
+    {
+      "name": "階上岳",
+      "type": "山",
+      "description": "伝承の舞台となる晴山沢の近くにある山。",
+      "source_ids": [
+        "aomori-hashikami-haruyamazawa-fox-disguise-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "爺さま",
+      "type": "人間",
+      "description": "狐が姿をまねた人物。",
+      "source_ids": [
+        "aomori-hashikami-haruyamazawa-fox-disguise-src"
+      ]
+    },
+    {
+      "name": "婆さま",
+      "type": "人間",
+      "description": "爺さまに化けた狐の正体を見破り、退治したとされる。",
+      "source_ids": [
+        "aomori-hashikami-haruyamazawa-fox-disguise-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "人をだます存在として語られ、爺さまに化けて婆さまの前に現れる。",
+      "source_ids": [
+        "aomori-hashikami-haruyamazawa-fox-disguise-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "化ける",
+    "正体を見破る",
+    "怪異の退治",
+    "階上岳"
+  ],
+  "story_type": [
+    "狐の化け話",
+    "怪異退治譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aomori-hashikami-haruyamazawa-fox-disguise-src",
+      "title": "第二部 第三章 資料 荻沢甚作：「はしかみのむがしこ」（抄録）",
+      "publisher": "青森県（『青森県史 民俗編』）",
+      "publication_date": "2001-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0220147-000",
+      "relevant_section": "掲載頁572",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。元資料は抄録であるため、記載された筋書き以上の詳細は加えていない。"
+}
