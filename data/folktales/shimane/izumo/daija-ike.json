@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shimane-izumo-daija-ike",
+  "status": "draft",
+  "title": "出雲・池の大蛇",
+  "title_normalized": "出雲・池の大蛇",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "島根県出雲地方には、池や淵に大蛇が住むという伝承が各地に残されている。個別の池名や由来は原資料の確認を継続し、ここでは出雲地方の大蛇伝承候補として管理する。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "島根県出雲地方には、池や淵に大蛇が住むという伝承が各地に残されている。個別の池名や由来は原資料の確認を継続し、ここでは出雲地方の大蛇伝承候補として管理する。",
+  "story_content": "",
+  "region": {
+    "prefecture": "島根県",
+    "historical_province": null,
+    "municipality": "出雲地方",
+    "area_name": "池・淵"
+  },
+  "locations": [
+    {
+      "name": "池・淵",
+      "type": "伝承地域",
+      "description": "地域レベルの調査候補。個別地点は未確定。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承・信仰対象",
+      "description": "大蛇に関する伝承候補。"
+    }
+  ],
+  "themes": [
+    "大蛇"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "候補管理用の仮レコード。一次資料・個別の伝承名・正確な地域が確認できるまで、確定した個別伝承として公開しない。次段階で公的文化財資料、地域史、日文研DB等を照合し、確認できなければ削除または候補一覧へ移す。"
+}
