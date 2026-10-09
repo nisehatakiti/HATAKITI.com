@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-imizu-kushida-daija",
+  "status": "draft",
+  "title": "射水・櫛田神社の大蛇と櫛",
+  "title_normalized": "射水・櫛田神社の大蛇と櫛",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "富山県射水市大門町では、池に現れて人を呑む大蛇が、女の櫛を恐れて出なくなった、または櫛が喉に引っかかって死んだと伝えられる。櫛田神社では櫛を祀ったという由緒に結び付く。",
+    "based_on_source_ids": [
+      "toyama-imizu-kushida-daija-src"
+    ]
+  },
+  "story_summary": "富山県射水市大門町では、池に現れて人を呑む大蛇が、女の櫛を恐れて出なくなった、または櫛が喉に引っかかって死んだと伝えられる。櫛田神社では櫛を祀ったという由緒に結び付く。",
+  "story_content": "富山県射水市大門町では、池に現れて人を呑む大蛇が、女の櫛を恐れて出なくなった、または櫛が喉に引っかかって死んだと伝えられる。櫛田神社では櫛を祀ったという由緒に結び付く。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": null,
+    "municipality": "射水市大門町",
+    "area_name": "櫛田神社"
+  },
+  "locations": [
+    {
+      "name": "櫛田神社",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "toyama-imizu-kushida-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "toyama-imizu-kushida-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "toyama-imizu-kushida-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2181358",
+      "relevant_section": "射水・櫛田神社の大蛇と櫛",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
