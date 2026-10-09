@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tokyo-taito-shinobazu-ike-daija-move",
+  "status": "draft",
+  "title": "不忍池・大蛇に見込まれた娘と池の移転譚",
+  "title_normalized": "不忍池・大蛇に見込まれた娘と池の移転譚",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "東京の不忍池にまつわる伝承。禁丹屋の美しい娘が大蛇に見込まれて池へ引きこまれた。後に池が埋め立てられて狭くなると、美女が池から現れ、辻車に乗って下総の湖へ移ったと語られる。",
+    "based_on_source_ids": [
+      "tokyo-taito-shinobazu-ike-daija-move-src"
+    ]
+  },
+  "story_summary": "不忍池の大蛇に見込まれた娘の話と、池が狭くなった後に美女が下総の湖へ移ったという伝承。",
+  "story_content": "後藤美心「蛇の伝説」に収録された不忍池の話。禁丹屋の美しい娘が大蛇に見込まれて不忍池に引きこまれたという。後年、池が埋められて狭くなると、一人の美女が池から現れ、辻車に乗って下総の湖へ引っ越したと語られる。記録では移転先の湖の名は特定されていないため、具体的な湖名は補わずに登録する。",
+  "region": {
+    "prefecture": "東京都",
+    "historical_province": "武蔵",
+    "municipality": "台東区",
+    "area_name": "不忍池"
+  },
+  "locations": [
+    {
+      "name": "不忍池",
+      "type": "池",
+      "description": "娘が大蛇に引きこまれ、後に美女が現れたとされる池。",
+      "source_ids": [
+        "tokyo-taito-shinobazu-ike-daija-move-src"
+      ]
+    },
+    {
+      "name": "下総の湖",
+      "type": "湖",
+      "description": "池から現れた美女が移ったとされるが、資料では具体名は不明。",
+      "source_ids": [
+        "tokyo-taito-shinobazu-ike-daija-move-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "禁丹屋の娘",
+      "type": "人間",
+      "description": "大蛇に見込まれて不忍池に引きこまれたとされる。",
+      "source_ids": [
+        "tokyo-taito-shinobazu-ike-daija-move-src"
+      ]
+    },
+    {
+      "name": "池から現れた美女",
+      "type": "人物・怪異",
+      "description": "池が狭くなった後に現れ、下総の湖へ移ったという。",
+      "source_ids": [
+        "tokyo-taito-shinobazu-ike-daija-move-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "禁丹屋の娘に関わり、不忍池の伝承に登場する。",
+      "source_ids": [
+        "tokyo-taito-shinobazu-ike-daija-move-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "不忍池",
+    "娘",
+    "池の埋め立て",
+    "移転"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "池の伝説",
+    "移転譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tokyo-taito-shinobazu-ike-daija-move-src",
+      "title": "蛇の伝説",
+      "publisher": "郷土趣味社（『郷土趣味』通巻17号）",
+      "publication_date": "1920-06",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0690038",
+      "relevant_section": "掲載頁17–18",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "資料の要約にある「下総の湖」は特定されていないため、現在の湖名を推測していない。"
+}
