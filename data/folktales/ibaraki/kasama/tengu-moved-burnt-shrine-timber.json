@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ibaraki-kasama-tengu-moved-burnt-shrine-timber",
+  "status": "draft",
+  "title": "笠間・焼けた社の材木を運んだ天狗",
+  "title_normalized": "笠間・焼けた社の材木を運んだ天狗",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "茨城県笠間市の伝承。明治初年ごろ、社が焼けた翌日に焼け跡を調べても灰ばかりで、木屑も焼けた材木も見当たらなかった。後に裏山の谷間で材木が見つかり、天狗が運んだのだろうと語られた。",
+    "based_on_source_ids": [
+      "ibaraki-kasama-tengu-moved-burnt-shrine-timber-src"
+    ]
+  },
+  "story_summary": "火災で焼けた社の材木が焼け跡から消え、裏山の谷間で見つかったため、天狗が運んだと考えられた伝承。",
+  "story_content": "木内一夫「天狗祭り」に記録された茨城県笠間市の伝承。明治初年ごろ、社が焼けた翌日に人々が焼け跡へ行くと、灰ばかりで木屑も焼けた材木も残っていなかった。不思議に思っていたところ、材木は裏山の谷間で発見された。人々は天狗が運んだのだろうと語ったという。社の火災と材木の移動を天狗の仕業として説明する伝承である。",
+  "region": {
+    "prefecture": "茨城県",
+    "historical_province": "常陸",
+    "municipality": "笠間市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "焼失した社",
+      "type": "社",
+      "description": "火災後、焼けた材木が見当たらなくなった場所。社名は資料要約では不明。",
+      "source_ids": [
+        "ibaraki-kasama-tengu-moved-burnt-shrine-timber-src"
+      ]
+    },
+    {
+      "name": "裏山の谷間",
+      "type": "谷",
+      "description": "焼けた社の材木が後に発見された場所。",
+      "source_ids": [
+        "ibaraki-kasama-tengu-moved-burnt-shrine-timber-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "焼けた社の材木を裏山の谷間へ運んだのではないかと語られた。",
+      "source_ids": [
+        "ibaraki-kasama-tengu-moved-burnt-shrine-timber-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "社",
+    "火災",
+    "材木の移動",
+    "不思議な出来事"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ibaraki-kasama-tengu-moved-burnt-shrine-timber-src",
+      "title": "天狗祭り",
+      "publisher": "民俗学会（『民俗学』4巻11号）",
+      "publication_date": "1932-11-10",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260242",
+      "relevant_section": "掲載頁62",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。社名や谷の固有名は資料要約にないため補っていない。"
+}
