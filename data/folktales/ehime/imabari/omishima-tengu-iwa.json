@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-imabari-omishima-tengu-iwa",
+  "status": "draft",
+  "title": "大三島・天狗岩と天狗の松",
+  "title_normalized": "大三島・天狗岩と天狗の松",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県今治市大三島町の伝承では、キノコ狩りをしていた女性が岩の上で天狗に落とされ、髪が抜けて坊主頭になったため、その岩を「天狗岩」と呼ぶようになった。また、日向の鼻の松に天狗が見張りに立ち、木の芯が止まって上に伸びないとも伝えられる。",
+    "based_on_source_ids": [
+      "ehime-imabari-omishima-tengu-iwa-src"
+    ]
+  },
+  "story_summary": "大三島では、岩の上で休んでいた女性が天狗に落とされ、髪が抜けてしまったことから岩を「天狗岩」と呼ぶようになったという。また、日向の鼻の松の木に天狗が見張りとして立つため、木が上へ伸びないという伝承も記録されている。",
+  "story_content": "日文研の「『宗方』聞書き」によると、キノコ狩りをしていた女性が岩の上で涼んでいると天狗が現れ、岩の上から落とした。女性は髪の毛がなくなり坊主頭になったため、その岩は「天狗岩」と呼ばれるようになった。また、天狗が日向の鼻の松の木の上で見張りをしていたため、その木は平らで上に伸びないといわれたという。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": null,
+    "municipality": "今治市大三島町",
+    "area_name": "天狗岩・日向の鼻"
+  },
+  "locations": [
+    {
+      "name": "天狗岩",
+      "type": "岩・伝承地",
+      "description": "女性が天狗に落とされたという伝承から名づけられたとされる岩。現在の位置・訪問可否は要確認。",
+      "source_ids": [
+        "ehime-imabari-omishima-tengu-iwa-src"
+      ]
+    },
+    {
+      "name": "日向の鼻の松",
+      "type": "樹木・伝承地",
+      "description": "天狗が見張りをしていたため木が上に伸びないとされる松の伝承。現存状況は未確認。",
+      "source_ids": [
+        "ehime-imabari-omishima-tengu-iwa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "岩の上の女性を落とし、松の木の上で見張る存在として語られる。",
+      "source_ids": [
+        "ehime-imabari-omishima-tengu-iwa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "岩の由来",
+    "樹木伝承",
+    "地名由来"
+  ],
+  "story_type": [
+    "地域伝承",
+    "地名由来伝承",
+    "樹木伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-imabari-omishima-tengu-iwa-src",
+      "title": "「宗方」聞書き",
+      "publisher": "愛媛大学農学部付属農業高等学校郷土研究部（『あゆみ―富郷の民俗―』4号）",
+      "publication_date": "1963-02-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0080152",
+      "relevant_section": "掲載頁34",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現在の地名との対応、天狗岩・松の現存状況、旅行者が安全に訪問できるかは後段で確認する。"
+}
