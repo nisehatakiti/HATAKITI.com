@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tokushima-naka-yamanba-katsura-thousand-branches",
+  "status": "draft",
+  "title": "那賀町・山姥と千本のかつら",
+  "title_normalized": "那賀町・山姥と千本のかつら",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "徳島県那賀町の伝承では、大きなかつらの木に住む山姥が村へ火種をもらいに来た。ある男が山姥を痛い目に遭わせると、山姥は「かつらの枝が千本になったらまた来る」と言い残して逃げ、村人は枝が千本になる前に切るようにしたという。",
+    "based_on_source_ids": [
+      "tokushima-naka-yamanba-katsura-src"
+    ]
+  },
+  "story_summary": "山姥は大きなかつらの木に住み、村へ火種をもらいに来た。ある男が山姥を痛い目に遭わせると、山姥は「かつらの枝が千本になったらまた来る」と言い残した。村では枝が千本にならないうちに切るようになったという。",
+  "story_content": "國學院大學説話研究会による「四国の口承文芸―木頭村出原・和無田・蝉谷周辺―」に記録された話。大きなかつらの木に山姥が住み、村へ火種をもらいに来た。ある男が山姥を痛い目に遭わせると、山姥は「かつらの枝が千本になったらまた来る」と言い残して逃げた。村では枝が千本にならないうちに切るという。",
+  "region": {
+    "prefecture": "徳島県",
+    "historical_province": "阿波",
+    "municipality": "那賀郡那賀町（旧木頭村周辺）",
+    "area_name": "出原・和無田・蝉谷周辺"
+  },
+  "locations": [
+    {
+      "name": "かつらの木（伝承地未詳）",
+      "type": "樹木・伝承地",
+      "description": "山姥が住んだとされる木。伝承の対象となる個別の木の位置・現存状況は未確認。",
+      "source_ids": [
+        "tokushima-naka-yamanba-katsura-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "かつらの木に住み、火種をもらいに来る存在。枝が千本になると戻ると告げた。",
+      "source_ids": [
+        "tokushima-naka-yamanba-katsura-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "かつらの木",
+    "火種",
+    "禁忌・予告"
+  ],
+  "story_type": [
+    "地域伝承",
+    "樹木伝承",
+    "山の伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tokushima-naka-yamanba-katsura-src",
+      "title": "四国の口承文芸―木頭村出原・和無田・蝉谷周辺―",
+      "publisher": "芸能発行所（『芸能』4巻8号・通巻42号）",
+      "publication_date": "1962-07-15",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0730051",
+      "relevant_section": "掲載頁41",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。伝承地に該当するかつらの木の比定は未確認。木頭周辺の複数集落を含む資料なので、地点を一か所に絞らず地域記録として保持する。"
+}
