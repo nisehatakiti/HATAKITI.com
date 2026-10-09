@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kyoto-minamiyamashiro-kitsune-fire-lantern",
+  "status": "draft",
+  "title": "南山城・提灯の人影と狐火",
+  "title_normalized": "南山城・提灯の人影と狐火",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "京都府相楽郡南山城村の採録では、油揚げなどを持って歩いていた母親が、前方に提灯を持つ人影を見てついていくと、いくつもの光が見えた後、人影が消えたという。狐にだまされた話として記録されている。",
+    "based_on_source_ids": [
+      "kyoto-minamiyamashiro-kitsune-fire-src"
+    ]
+  },
+  "story_summary": "提灯を持つ人影についていったところ、いくつもの光が見えた後に人影が消えた。狐にだまされた経験として語られた。",
+  "story_content": "奥野義雄「狐をめぐる伝承とその介在者について」に記録された南山城村の話。母親が油揚げなどを持って歩いていた際、前に提灯を持った人影があったためついていった。すると数個の光が見えたと思うと人影が消えたという。狐火と人を惑わす狐の語りが重なる事例として登録する。",
+  "region": {
+    "prefecture": "京都府",
+    "historical_province": "山城",
+    "municipality": "相楽郡南山城村",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "狐にだまされた母親",
+      "type": "人物",
+      "description": "提灯を持つ人影についていき、光を見た後に人影が消えたと語る。",
+      "source_ids": [
+        "kyoto-minamiyamashiro-kitsune-fire-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異現象",
+      "description": "人影が消える前に複数の光が見えたとされる。",
+      "source_ids": [
+        "kyoto-minamiyamashiro-kitsune-fire-src"
+      ]
+    },
+    {
+      "name": "狐",
+      "type": "伝承存在",
+      "description": "人をだます存在として話に関わる。",
+      "source_ids": [
+        "kyoto-minamiyamashiro-kitsune-fire-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "狐",
+    "提灯",
+    "人を惑わす"
+  ],
+  "story_type": [
+    "狐の伝承",
+    "狐火伝承",
+    "世間話"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kyoto-minamiyamashiro-kitsune-fire-src",
+      "title": "狐をめぐる伝承とその介在者について",
+      "publisher": "奈良県立民俗博物館（『奈良県立民俗博物館研究紀要』通巻15号）",
+      "publication_date": "1997-03-10",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1560003",
+      "relevant_section": "掲載頁3–4",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。題名上の狐火だけでなく、提灯の人影が消える語りも保持した。"
+}
