@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamanashi-fujiyoshida-mukohara-kitsune-mound",
+  "status": "draft",
+  "title": "富士吉田・向原の狐塚",
+  "title_normalized": "富士吉田・向原の狐塚",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山梨県富士吉田市向原では、開墾が進んで狐の住む場所がなくなった。狐たちが集まって行き場がないと話し合ったという。祟りを恐れた人々が狐塚を建てて祀ったと伝えられる。",
+    "based_on_source_ids": [
+      "yamanashi-fujiyoshida-mukohara-kitsune-mound-src"
+    ]
+  },
+  "story_summary": "開墾で居場所を失った狐たちの祟りを恐れ、人々が狐塚を建てて祀ったという伝承。",
+  "story_content": "『向原の民俗（上）』に収録された富士吉田市向原の伝承。昔の向原一帯は藪だったが、次第に開けて狐の居場所がなくなった。狐たちは一か所に集まり、行くところがなく困ったと話し合ったという。狐の祟りを恐れた人々は狐塚を建て、狐を祀ったとされる。開発による動物の棲み場所の変化と、祟りを避けるための塚の建立を結びつける地域伝承として記録する。",
+  "region": {
+    "prefecture": "山梨県",
+    "historical_province": "甲斐",
+    "municipality": "富士吉田市",
+    "area_name": "向原"
+  },
+  "locations": [
+    {
+      "name": "向原",
+      "type": "地域",
+      "description": "開墾で狐の居場所が減り、狐塚を建てたと伝えられる地域。",
+      "source_ids": [
+        "yamanashi-fujiyoshida-mukohara-kitsune-mound-src"
+      ]
+    },
+    {
+      "name": "狐塚",
+      "type": "塚・祭祀地",
+      "description": "狐の祟りを恐れて建て、狐を祀ったとされる塚。",
+      "source_ids": [
+        "yamanashi-fujiyoshida-mukohara-kitsune-mound-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "開墾で居場所を失い、祟りを恐れられた存在として語られる。",
+      "source_ids": [
+        "yamanashi-fujiyoshida-mukohara-kitsune-mound-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐塚",
+    "祟り",
+    "開墾",
+    "動物の棲み場所",
+    "祭祀"
+  ],
+  "story_type": [
+    "狐の伝承",
+    "塚の由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamanashi-fujiyoshida-mukohara-kitsune-mound-src",
+      "title": "Ⅸ口承文芸 §3伝説",
+      "publisher": "都留文科大学民俗学研究会（『向原の民俗（上）』）",
+      "publication_date": "1983-03-25",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1310152",
+      "relevant_section": "掲載頁87",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。狐塚の現存状況や正確な所在地は要約から判断できないため、追加していない。"
+}
