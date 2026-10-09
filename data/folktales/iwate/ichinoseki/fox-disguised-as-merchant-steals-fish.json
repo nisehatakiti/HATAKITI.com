@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-ichinoseki-fox-disguised-as-merchant-steals-fish",
+  "status": "draft",
+  "title": "大東・商人に化けた狐が魚を奪う",
+  "title_normalized": "大東・商人に化けた狐が魚を奪う",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県一関市大東町の伝承。魚を持って帰る途中の人を商人に化けた狐がだまし、魚を取ったという。",
+    "based_on_source_ids": [
+      "iwate-ichinoseki-fox-disguised-as-merchant-steals-fish-src"
+    ]
+  },
+  "story_summary": "魚を持って帰る人が商人に化けた狐にだまされ、魚を奪われる話。",
+  "story_content": "東洋大学民俗研究会『旧中川村の民俗―岩手県東磐井郡大東町旧中川村―』に記録された伝承。魚を持って帰る途中の人を、商人に化けた狐がだまして魚を取ったという。女に化けた狐が魚を奪う同地域の記録とは、化ける姿が異なるため別の事例として記録する。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": "陸中",
+    "municipality": "一関市大東町",
+    "area_name": "旧中川村"
+  },
+  "locations": [
+    {
+      "name": "帰り道",
+      "type": "道",
+      "description": "魚を持って帰る途中で狐に遭遇したとされる。具体的な地点は記録されていない。",
+      "source_ids": [
+        "iwate-ichinoseki-fox-disguised-as-merchant-steals-fish-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "魚を持って帰る人",
+      "type": "人間",
+      "description": "帰宅途中に商人に化けた狐にだまされ、魚を取られた。",
+      "source_ids": [
+        "iwate-ichinoseki-fox-disguised-as-merchant-steals-fish-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "商人に化けて魚を持ち帰る人をだまし、魚を奪った。",
+      "source_ids": [
+        "iwate-ichinoseki-fox-disguised-as-merchant-steals-fish-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "商人への変身",
+    "魚",
+    "詐術",
+    "化かし"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "変身譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-ichinoseki-fox-disguised-as-merchant-steals-fish-src",
+      "title": "九 口承文芸",
+      "publisher": "東洋大学民俗研究会（『旧中川村の民俗―岩手県東磐井郡大東町旧中川村―』昭和47年度号）",
+      "publication_date": "1973-06",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1460520",
+      "relevant_section": "掲載頁287",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。化かしの具体的な会話や経緯は記録されていない。"
+}
