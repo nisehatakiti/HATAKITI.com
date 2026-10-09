@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukushima-namie-tamanoi-daija-flood-plan",
+  "status": "draft",
+  "title": "浪江・玉の井の僧と泥海を企てる大蛇",
+  "title_normalized": "浪江・玉の井の僧と泥海を企てる大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福島県浪江町の伝承。目の見えない玉の井という僧が祈願すると、大蛇が目を開けようと現れた。しかし大蛇は周囲を泥海にする計画を語り、僧は多くの人が犠牲になることを恐れて人々に知らせた。大蛇は雷となって僧を殺し、体の各部が落ちた場所に地名がついたという。",
+    "based_on_source_ids": [
+      "fukushima-namie-tamanoi-daija-flood-plan-src"
+    ]
+  },
+  "story_summary": "目を治そうとする僧が大蛇の洪水計画を人々に知らせたため、雷となった大蛇に殺される。体の落ちた場所が地名になったという伝承。",
+  "story_content": "国学院大学民俗文学研究会「福島県双葉郡浪江町」に採録された話。玉の井という目の見えない僧が、目が見えるように祈願して満願の日を迎えると、池の大蛇が現れ、僧の目を開けてやろうとした。その際、大蛇は辺りを泥海にする計画を語った。僧は自分の目が治るために何万人もの人が殺されるのは忍びないと考え、その計画を人々に伝えた。大蛇は雷となって僧を八つ裂きにしたとされ、胴、耳、股が落ちた場所にそれぞれ「胴のおち」「耳かい」「股おち」という名がついたという。",
+  "region": {
+    "prefecture": "福島県",
+    "historical_province": "陸奥",
+    "municipality": "浪江町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "玉の井",
+      "type": "伝承地・地名",
+      "description": "目の見えない僧の祈願と池の大蛇の話に登場する。",
+      "source_ids": [
+        "fukushima-namie-tamanoi-daija-flood-plan-src"
+      ]
+    },
+    {
+      "name": "胴のおち",
+      "type": "地名",
+      "description": "大蛇に殺された僧の胴が落ちた場所とされる。",
+      "source_ids": [
+        "fukushima-namie-tamanoi-daija-flood-plan-src"
+      ]
+    },
+    {
+      "name": "耳かい",
+      "type": "地名",
+      "description": "僧の耳が落ちた場所とされる。",
+      "source_ids": [
+        "fukushima-namie-tamanoi-daija-flood-plan-src"
+      ]
+    },
+    {
+      "name": "股おち",
+      "type": "地名",
+      "description": "僧の股が落ちた場所とされる。",
+      "source_ids": [
+        "fukushima-namie-tamanoi-daija-flood-plan-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "玉の井",
+      "type": "僧侶",
+      "description": "目が見えるように祈願するが、大蛇の計画を知り人々に知らせる。",
+      "source_ids": [
+        "fukushima-namie-tamanoi-daija-flood-plan-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "僧の目を治すと申し出る一方で泥海の計画を語り、雷となって僧を殺したとされる。",
+      "source_ids": [
+        "fukushima-namie-tamanoi-daija-flood-plan-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "洪水",
+    "泥海",
+    "僧侶",
+    "犠牲",
+    "地名由来"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "地名由来譚",
+    "災害伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukushima-namie-tamanoi-daija-flood-plan-src",
+      "title": "福島県双葉郡浪江町",
+      "publisher": "国学院大学民俗文学研究会（『伝承文芸』通巻2号）",
+      "publication_date": "1964-03-31",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1370006",
+      "relevant_section": "掲載頁64",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの要約に基づく。僧の身体と地名の関係は伝承上の由来として記録した。"
+}
