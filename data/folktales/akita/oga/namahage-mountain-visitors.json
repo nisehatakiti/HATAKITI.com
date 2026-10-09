@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "record_id": "akita-oga-namahage-mountain-visitors",
+  "status": "draft",
+  "title": "男鹿・ナマハゲの来訪",
+  "title_normalized": "男鹿・ナマハゲの来訪",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "秋田県男鹿地方では、大晦日にナマハゲが家々を訪れ、怠けや悪事を戒める行事が伝えられている。集落ごとに面や作法に違いがあり、地域の年中行事として受け継がれてきた。",
+    "based_on_source_ids": [
+      "akita-oga-namahage-src"
+    ]
+  },
+  "story_summary": "大晦日にナマハゲが家々を訪れ、子どもや家人に訓戒を与える。単なる怪物譚ではなく、年の節目に来訪する存在と地域行事としての性格を持つ。",
+  "story_content": "男鹿地方のナマハゲは、年の暮れに家々を訪問する来訪神行事として知られる。面を着けたナマハゲが家人に怠けや悪事を戒める言葉をかける。具体的な装束、訪問の作法、受け入れ方は集落や家によって異なるため、この記録では地域全体の伝承の概略を登録し、各集落の異なる習俗は別資料で確認して区別する。",
+  "region": {
+    "prefecture": "秋田県",
+    "historical_province": "出羽",
+    "municipality": "男鹿市",
+    "area_name": "男鹿地方"
+  },
+  "locations": [
+    {
+      "name": "男鹿地方のナマハゲ行事地域",
+      "type": "行事地域",
+      "description": "集落ごとに異なる作法でナマハゲ行事が伝えられる。特定の訪問先を示すものではない。",
+      "source_ids": [
+        "akita-oga-namahage-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "ナマハゲ",
+      "type": "来訪神・民俗行事の存在",
+      "description": "年の暮れに家々を訪れ、家人を戒める存在として伝えられる。",
+      "source_ids": [
+        "akita-oga-namahage-src"
+      ]
+    }
+  ],
+  "themes": [
+    "ナマハゲ",
+    "来訪神",
+    "大晦日",
+    "年中行事",
+    "戒め"
+  ],
+  "story_type": [
+    "年中行事",
+    "来訪神伝承",
+    "地域習俗"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "akita-oga-namahage-src",
+      "title": "男鹿のナマハゲ",
+      "publisher": "文化庁・国指定文化財等データベース",
+      "source_type": "official_cultural_property_record",
+      "url": "https://kunishitei.bunka.go.jp/bsys/index",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "全国展開用の概要記録。出典URLは文化庁データベースの入口であり、今後、個別の文化財詳細ページ・集落別資料へ差し替え、地域差を記録する必要がある。"
+}
