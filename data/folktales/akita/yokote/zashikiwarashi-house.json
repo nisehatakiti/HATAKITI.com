@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "akita-yokote-zashiki-warashi-candidate",
+  "status": "draft",
+  "title": "横手周辺・座敷童子の伝承（候補）",
+  "title_normalized": "横手周辺・座敷童子の伝承（候補）",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "秋田県横手周辺の家屋にまつわる怪異・座敷童子の伝承を調査するための候補記録。現段階では個別の話と原資料を確定できていない。",
+    "based_on_source_ids": [
+      "akita-yokote-zashiki-src"
+    ]
+  },
+  "story_summary": "横手周辺の座敷童子・家の怪異に関する資料を調査するための候補レコード。具体的な物語は未確認。",
+  "story_content": "本レコードは地域別調査の候補管理用であり、横手市内に座敷童子の特定の話があると断定するものではない。自治体史、郷土資料、図書館・博物館資料から個別の採録を確認した後に、伝承本文と地域を確定する。",
+  "region": {
+    "prefecture": "秋田県",
+    "historical_province": "出羽",
+    "municipality": "横手市周辺",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "座敷童子",
+    "家の怪異",
+    "地域調査"
+  ],
+  "story_type": [
+    "候補・要出典確認"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-zashikiwarashi",
+      "relationship": "research_topic"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "akita-yokote-zashiki-src",
+      "title": "横手市公式ホームページ（郷土資料の調査入口）",
+      "publisher": "横手市",
+      "source_type": "candidate_source",
+      "url": "https://www.city.yokote.lg.jp/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "個別出典未確認の候補記録。特定の家屋・怪異談を作らず、資料確認後に確定する。"
+}
