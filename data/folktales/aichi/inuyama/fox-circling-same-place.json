@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aichi-inuyama-fox-circling-same-place",
+  "status": "draft",
+  "title": "犬山・狐に同じ場所を歩かされる",
+  "title_normalized": "犬山・狐に同じ場所を歩かされる",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛知県犬山市今井の口承文芸記録。狐は人を化かして、同じ場所をぐるぐる歩かせ、家へ帰れなくするといわれていた。",
+    "based_on_source_ids": [
+      "aichi-inuyama-fox-circling-same-place-src"
+    ]
+  },
+  "story_summary": "狐が人を化かして同じ場所を回らせ、帰れなくするという短い伝承。",
+  "story_content": "東京女子大学史学科民俗調査団『今井の民俗―愛知県犬山市今井―』に記録された口承文芸。狐は人を化かし、同じところをくるくる歩かせて帰れなくさせるという。千葉県八千代市の魚の匂いに関する話とは、迷い道のモチーフを共有するが、この記録には誘因が記されていないため独立した記録とする。",
+  "region": {
+    "prefecture": "愛知県",
+    "historical_province": "尾張",
+    "municipality": "犬山市",
+    "area_name": "今井"
+  },
+  "locations": [
+    {
+      "name": "道",
+      "type": "道",
+      "description": "狐に化かされた人が同じ場所を歩かされるとされる。具体的な地点は記録されていない。",
+      "source_ids": [
+        "aichi-inuyama-fox-circling-same-place-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "人を同じ場所に歩き回らせ、帰れなくするといわれる。",
+      "source_ids": [
+        "aichi-inuyama-fox-circling-same-place-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "化かし",
+    "迷い道",
+    "反復",
+    "帰宅できない"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aichi-inuyama-fox-circling-same-place-src",
+      "title": "九 口承文芸",
+      "publisher": "東京女子大学史学科民俗調査団（『今井の民俗―愛知県犬山市今井―』通巻28号）",
+      "publication_date": "1995-09",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1422250",
+      "relevant_section": "掲載頁130",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "短い記録のため、具体的な遭遇や解決方法は追加していない。"
+}
