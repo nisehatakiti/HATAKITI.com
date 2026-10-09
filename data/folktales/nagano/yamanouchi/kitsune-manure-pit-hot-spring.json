@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-yamanouchi-kitsune-manure-pit-hot-spring",
+  "status": "draft",
+  "title": "山ノ内・肥溜めを温泉と思わされた狐の話",
+  "title_normalized": "山ノ内・肥溜めを温泉と思わされた狐の話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県下高井郡山ノ内町の伝承。田舎の女性が狐に化かされ、田んぼの肥料溜まりに入って温泉のように気持ちよく感じていたという。",
+    "based_on_source_ids": [
+      "nagano-yamanouchi-kitsune-manure-pit-hot-spring-src"
+    ]
+  },
+  "story_summary": "狐に化かされた女性が、田の肥料溜まりを温泉と思い込んで入っていたという話。",
+  "story_content": "安間清「狐にばかされた話（二）」に記録された長野県下高井郡山ノ内町の伝承。田舎の女性が狐に化かされ、田んぼの肥料溜まりに入り、温泉のように気持ちよく感じていたという。資料の要約には、女性がどのように正気に戻ったかは記されていないため、結末は補わず記録する。狐が日常の場所の感覚を別のものに変えてしまう「化かし」の例である。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "山ノ内町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "田んぼの肥料溜まり",
+      "type": "農地の設備",
+      "description": "女性が温泉と思い込んで入っていたとされる場所。",
+      "source_ids": [
+        "nagano-yamanouchi-kitsune-manure-pit-hot-spring-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "女性",
+      "type": "人間",
+      "description": "狐に化かされ、肥料溜まりを温泉のように感じていた。",
+      "source_ids": [
+        "nagano-yamanouchi-kitsune-manure-pit-hot-spring-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "女性の感覚を惑わせ、肥料溜まりを温泉のように思わせたとされる。",
+      "source_ids": [
+        "nagano-yamanouchi-kitsune-manure-pit-hot-spring-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐に化かされる",
+    "幻覚",
+    "温泉",
+    "農村生活"
+  ],
+  "story_type": [
+    "狐の化かし譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-yamanouchi-kitsune-manure-pit-hot-spring-src",
+      "title": "狐にばかされた話（二）",
+      "publisher": "三元社（『旅と伝説』11巻9号・通巻129号）",
+      "publication_date": "1938-09-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230713",
+      "relevant_section": "掲載頁50–54",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。正気に戻る過程や後日談は資料要約にないため記載していない。"
+}
