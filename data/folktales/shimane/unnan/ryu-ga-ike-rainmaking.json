@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shimane-unnan-dragon-pond-rainmaking-candidate",
+  "status": "draft",
+  "title": "雲南・龍池の雨乞い伝承（候補）",
+  "title_normalized": "雲南・龍池の雨乞い伝承（候補）",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "島根県雲南地域の龍や池に関する雨乞い伝承を調査するための候補記録。個別の原資料・伝承地はまだ確定していない。",
+    "based_on_source_ids": [
+      "shimane-unnan-ryuike-src"
+    ]
+  },
+  "story_summary": "龍と池、雨乞いに関する地域伝承を探すための候補レコード。具体的な伝承内容は未確認。",
+  "story_content": "本レコードは島根県雲南地域で龍・池・雨乞いに関する個別資料を探すための候補管理用である。伝承名や地名の類似だけで物語を作らず、自治体史・郷土資料・博物館資料などの該当箇所を確認してから確定登録する。",
+  "region": {
+    "prefecture": "島根県",
+    "historical_province": "出雲",
+    "municipality": "雲南市周辺",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "龍",
+    "池",
+    "雨乞い",
+    "調査候補"
+  ],
+  "story_type": [
+    "候補・要出典確認"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "research_topic"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shimane-unnan-ryuike-src",
+      "title": "雲南市公式ホームページ（地域資料の調査入口）",
+      "publisher": "雲南市",
+      "source_type": "candidate_source",
+      "url": "https://www.city.unnan.shimane.jp/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "個別出典未確認の候補レコード。原資料が特定できるまでは確定記録にしない。"
+}
