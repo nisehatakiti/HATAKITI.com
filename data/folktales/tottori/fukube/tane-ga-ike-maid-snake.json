@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tottori-fukube-tane-ga-ike-maid-snake",
+  "status": "draft",
+  "title": "福部・たねが池の女中と蛇",
+  "title_normalized": "福部・たねが池の女中と蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "鳥取市福部町の多鯰ヶ池に伝わる話。長者の家の女中「たね」は、いつも甘い柿を持ってきた。不思議に思った人々が後を追うと、たねは蛇の姿になり、池の中の島へ柿を取りに行っていた。正体を見られたたねは、二度と戻らなかったという。",
+    "based_on_source_ids": [
+      "tottori-fukube-tane-ga-ike-maid-snake-src"
+    ]
+  },
+  "story_summary": "甘い柿を持ってくる女中の正体は蛇で、池の島へ柿を取りに行っていた。正体を見られた後、女中は戻らなくなった。",
+  "story_content": "鷲見貞雄「鳥取城下の民話」に記録された多鯰ヶ池の伝承の一つ。昔、長者の家に「たね」という女中がいて、いつも甘い柿を持ってきた。皆が不思議に思って後を追うと、たねは蛇の姿になり、池の中の島へ柿を取りに行っていた。正体を見られたたねは、その後戻ってこなかったという。",
+  "region": {
+    "prefecture": "鳥取県",
+    "historical_province": "因幡",
+    "municipality": "鳥取市福部町",
+    "area_name": "多鯰ヶ池"
+  },
+  "locations": [
+    {
+      "name": "多鯰ヶ池",
+      "type": "池",
+      "description": "女中たねが蛇の姿で島へ柿を取りに行ったとされる池。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-maid-snake-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "たね",
+      "type": "人物・変化譚の主人公",
+      "description": "長者の家の女中。蛇の姿で池の島へ柿を取りに行く。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-maid-snake-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "蛇",
+      "type": "変化する存在",
+      "description": "女中たねの正体として現れる。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-maid-snake-src"
+      ]
+    }
+  ],
+  "themes": [
+    "蛇",
+    "池",
+    "変化",
+    "柿",
+    "正体を見られる"
+  ],
+  "story_type": [
+    "蛇伝承",
+    "変化譚",
+    "池の由来伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "related_motif"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tottori-fukube-tane-ga-ike-maid-snake-src",
+      "title": "鳥取城下の民話",
+      "publisher": "一声社（『季刊民話』通巻7号）",
+      "publication_date": "1976-06-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0590192",
+      "relevant_section": "掲載頁72–73",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに同じ池の二つの伝説が併記されているため、もう一方の「おたねと稚児僧」の話とは別レコードに分けた。"
+}
