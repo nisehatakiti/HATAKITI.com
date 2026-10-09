@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-shinkamigoto-isoyurei-island-rice-ball",
+  "status": "draft",
+  "title": "島に化ける磯幽霊と握り飯",
+  "title_normalized": "島に化ける磯幽霊と握り飯",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "長崎県新上五島町の有川では、船幽霊を「磯幽霊」と呼び、波が打ち寄せない島の姿になることがあると伝えられる。柄杓を求められたら底を抜いて渡さないと船を沈められる。また、大きなものに化けるよう言うとその姿になり、しつこいときは握り飯を投げるとついてこなくなるという。",
+    "based_on_source_ids": [
+      "2570018"
+    ]
+  },
+  "story_summary": "島の姿にもなる磯幽霊に対し、底抜け柄杓や握り飯で対処する伝承。",
+  "story_content": "桜田勝徳「船幽霊と水死人」には、五島有川では船幽霊を磯幽霊と呼ぶとある。磯幽霊はしばしば島の姿になるが、その島には波が打ち寄せず、暗い時でも見えるという。アカトリ（柄杓）を貸せと言われたら底を抜いて渡し、そうしないと船に水を入れられて沈められる。鯨などの大きなものになれと言うとその姿になり、あまりにしつこいときは握り飯を投げるとついてこないと伝えられている。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "肥前国",
+    "municipality": "新上五島町",
+    "area_name": "有川"
+  },
+  "locations": [
+    "有川沿岸"
+  ],
+  "characters": [],
+  "beings": [
+    "磯幽霊",
+    "船幽霊"
+  ],
+  "themes": [
+    "島に化ける怪異",
+    "底抜け柄杓",
+    "握り飯",
+    "海上安全"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2570018",
+      "title": "船幽霊と水死人",
+      "publisher": "単美社（『俚俗と民譚』12号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2570018",
+      "publication_date": "1933-05-20",
+      "relevant_section": "掲載頁4",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。長崎県五島市の船幽霊記録とは別の出典・地域表記であり、磯幽霊の変身や握り飯による対処を独立して記録。"
+}
