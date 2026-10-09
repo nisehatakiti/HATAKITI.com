@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tenryu-river-kappa-ryugu-messenger-tatami",
+  "status": "draft",
+  "title": "天竜川流域・竜宮から来る水中の使者",
+  "title_normalized": "天竜川流域・竜宮から来る水中の使者",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "天竜川流域では、年に一度、水中の竜宮から使者が来て、その家の繁栄を保証すると伝えられた。ただし、蓼だけは食べさせないという約束を破ると、使者は淵へ戻って出てこなくなり、その家は衰えたという。",
+    "based_on_source_ids": [
+      "tenryu-kappa-ryugu-messenger-src"
+    ]
+  },
+  "story_summary": "竜宮から年に一度来る使者が家の繁栄を支えるが、蓼を食べさせない約束を破ると淵へ帰り、家が衰えるという話。",
+  "story_content": "柳田国男「河童の話」に記録された天竜川流域の伝承。水の中の竜宮から年に一度使者が来て、その家の繁栄を保証するとされる。ところが、蓼だけは食べさせないという約束を破ったため、使者は淵の中へ入ってしまい、戻ってこなくなった。その後、その家は衰えたという。話の中心は、河童が人を襲うことではなく、水界の使者と家の繁栄が約束によって結び付けられている点、そして禁じられた食物を与えたことが関係の断絶につながる点にある。記録の地域表記は天竜川流域であり、具体的な市町村や家の所在地は補わない。",
+  "region": {
+    "prefecture": null,
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "天竜川流域"
+  },
+  "locations": [
+    {
+      "name": "天竜川流域の淵",
+      "type": "水辺・伝承地域",
+      "description": "竜宮の使者が戻り、姿を消したとされる水域。固有名は資料要約にない。",
+      "source_ids": [
+        "tenryu-kappa-ryugu-messenger-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "竜宮からの使者",
+      "type": "水界の存在",
+      "description": "年に一度訪れて家の繁栄を保証するが、蓼を食べさせない約束が破られると淵へ戻る。",
+      "source_ids": [
+        "tenryu-kappa-ryugu-messenger-src"
+      ]
+    }
+  ],
+  "themes": [
+    "竜宮",
+    "水界の使者",
+    "家の繁栄",
+    "食物の禁忌",
+    "約束の破綻",
+    "淵"
+  ],
+  "story_type": [
+    "水界の来訪譚",
+    "禁忌譚",
+    "繁栄と衰退の由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tenryu-kappa-ryugu-messenger-src",
+      "title": "河童の話",
+      "publisher": "実業之日本社（『日本民俗学』2巻2号）",
+      "publication_date": "1954-09-30",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1710008",
+      "relevant_section": "掲載頁5–6",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード1710008に基づく。天竜川流域という記録範囲を維持し、特定県・市町村へ推定で割り当てない。河童という呼称はカード上の呼称に基づくが、要約では「水中の竜宮からの使者」として語られるため、本文ではその性格も保持する。"
+}
