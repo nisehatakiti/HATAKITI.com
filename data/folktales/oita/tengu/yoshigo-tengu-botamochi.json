@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "oita-tengu-yoshigo-botamochi",
+  "status": "draft",
+  "title": "大分・吉五が天狗からぼた餅をもらった話",
+  "title_normalized": "大分・吉五が天狗からぼた餅をもらった話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "大分県の伝承。天狗をよくだます吉五は、天狗に何が嫌いか尋ねられると、ぼた餅が一番嫌いだと答えた。翌日、帰宅すると窓からぼた餅が大量に降ってきて、吉五はたくさん食べることができたという。",
+    "based_on_source_ids": [
+      "oita-tengu-yoshigo-botamochi-src"
+    ]
+  },
+  "story_summary": "天狗に嫌いな食べ物を尋ねられた吉五が、逆の答えをしてぼた餅をたくさん得た機知譚。",
+  "story_content": "中田千畝「吉右衛門噺」に記録された大分県の伝承。吉五という男は、よく天狗をだましていた。ある日、天狗に何が一番嫌いかを尋ねられた吉五は、ぼた餅が一番嫌いだと答えた。翌日、家に帰ると窓からぼた餅が大量に降ってきたため、吉五はたくさん食べることができたという。天狗の問いを逆手に取り、嫌いだと偽ったものを得る機知譚として記録する。",
+  "region": {
+    "prefecture": "大分県",
+    "historical_province": "豊後",
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "吉五の家",
+      "type": "家",
+      "description": "帰宅した吉五の家の窓からぼた餅が大量に降ってきたとされる。",
+      "source_ids": [
+        "oita-tengu-yoshigo-botamochi-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "吉五",
+      "type": "人間",
+      "description": "天狗をよくだまし、ぼた餅が嫌いだと答えて大量に得た。",
+      "source_ids": [
+        "oita-tengu-yoshigo-botamochi-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "吉五に嫌いなものを尋ね、その答えを受けて翌日ぼた餅を降らせた。",
+      "source_ids": [
+        "oita-tengu-yoshigo-botamochi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "吉五",
+    "ぼた餅",
+    "機知",
+    "逆説"
+  ],
+  "story_type": [
+    "天狗譚",
+    "機知譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "oita-tengu-yoshigo-botamochi-src",
+      "title": "吉右衛門噺",
+      "publisher": "三元社（『旅と伝説』3号）",
+      "publication_date": "1928-03-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231462",
+      "relevant_section": "掲載頁17–18",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。自治体名は資料カードにないため大分県までの地域情報に留めた。"
+}
