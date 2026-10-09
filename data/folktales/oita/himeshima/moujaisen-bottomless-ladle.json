@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "record_id": "oita-himeshima-moujaisen-bottomless-ladle",
+  "status": "draft",
+  "title": "姫島の亡者船と底抜け柄杓",
+  "title_normalized": "姫島の亡者船と底抜け柄杓",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "大分県東国東郡姫島村の漁民伝承では、亡者船（幽霊船）に柄杓を貸すとき、底を抜いて渡さなければならない。そうしないと船に潮を汲み込まれて沈没すると伝えられている。",
+    "based_on_source_ids": [
+      "1350103"
+    ]
+  },
+  "story_summary": "亡者船に柄杓を求められた際、底を抜いた柄杓を渡すという姫島の海上伝承。",
+  "story_content": "河野憲一「国東・姫島村の漁民伝承」には、亡者船（幽霊船）に柄杓を貸すときは、船に潮を汲みこまれて沈没しないよう、底を抜いて渡すと記されている。短い記録ながら、船乗りが海上の怪異に備える具体的な対処法を伝える事例である。",
+  "region": {
+    "prefecture": "大分県",
+    "historical_province": "豊後国",
+    "municipality": "姫島村",
+    "area_name": "東国東郡"
+  },
+  "locations": [
+    "姫島周辺の海"
+  ],
+  "characters": [],
+  "beings": [
+    "亡者船",
+    "幽霊船"
+  ],
+  "themes": [
+    "漁民伝承",
+    "海上安全",
+    "底抜け柄杓"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1350103",
+      "title": "国東・姫島村の漁民伝承",
+      "publisher": "伝承文学研究会（『伝承文学研究』通巻25号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1350103",
+      "publication_date": "1981-04-20",
+      "relevant_section": "掲載頁67",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。記録に即して「亡者船」と「幽霊船」を併記し、追加の物語要素は補っていない。"
+}
