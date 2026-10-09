@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nara-nara-city-setsubun-oni-escaped-by-iwashi-holly",
+  "status": "draft",
+  "title": "焼いた鰯と柊を恐れて逃げる鬼",
+  "title_normalized": "焼いた鰯と柊を恐れて逃げる鬼",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "奈良県奈良市の年中行事記録では、節分の夜、鬼は焼いた鰯の臭いに誘われて家へ来るが、柊で目を突かれて逃げるとも、鰯の頭を焼いた悪臭を嫌って逃げるとも伝えられる。",
+    "based_on_source_ids": [
+      "C2910020-000"
+    ]
+  },
+  "story_summary": "節分に焼いた鰯と柊を用いて鬼を遠ざけるという習俗。",
+  "story_content": "『奈良県史12 民俗（上）』の年中行事の記録では、節分の夜に鬼が焼いた鰯の臭いに誘われてやって来るが、柊で目を突かれて逃げるという説明と、鰯の頭を焼いた悪臭を嫌って逃げるという説明が併記されている。鬼の侵入を防ぐために、臭いと棘のある植物を組み合わせる習俗として記録する。",
+  "region": {
+    "prefecture": "奈良県",
+    "historical_province": "大和国",
+    "municipality": "奈良市",
+    "area_name": null
+  },
+  "locations": [
+    "家の戸口"
+  ],
+  "characters": [],
+  "beings": [
+    "鬼"
+  ],
+  "themes": [
+    "節分",
+    "鬼除け",
+    "鰯",
+    "柊"
+  ],
+  "story_type": [
+    "年中行事",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "C2910020-000",
+      "title": "第五章 暮しのリズム：第二節 春の行事",
+      "publisher": "名著出版（『奈良県史12 民俗（上）』）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C2910020-000",
+      "publication_date": "1986-10-08",
+      "relevant_section": "掲載頁432",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。記録にある二つの説明を統合して断定せず、異なる説明として残した。"
+}
