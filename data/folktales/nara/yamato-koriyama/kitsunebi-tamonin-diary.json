@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nara-yamato-koriyama-tamonin-kitsunebi-record",
+  "status": "draft",
+  "title": "大和・『多聞院日記』に記された狐火",
+  "title_normalized": "大和・『多聞院日記』に記された狐火",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "奈良県の狐火に関する記録として、『多聞院日記』の天承14年8月21日の条に、17日・18日に京都や大阪で狐火が飛んだと記されている。特定の村の口承というより、日記に残された歴史的な怪異記録である。",
+    "based_on_source_ids": [
+      "nara-tamonin-kitsunebi-src"
+    ]
+  },
+  "story_summary": "『多聞院日記』に、17日・18日に京都や大阪で狐火が飛んだという記録がある。日記に記された狐火の記録として扱う。",
+  "story_content": "田村吉永「狐に関する民俗資料」に引用された『多聞院日記』の記録。天承14年8月21日の条に、17日・18日に京都・大阪で狐火が飛んだとある。採録された一つの村の昔話ではなく、日記に記された狐火の記録として登録し、日付や地名表記は出典に従う。暦年の換算や出来事の実証的解釈は別途史料確認が必要。",
+  "region": {
+    "prefecture": "奈良県",
+    "historical_province": "大和",
+    "municipality": null,
+    "area_name": "奈良周辺の歴史的記録"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異現象",
+      "description": "『多聞院日記』に京都・大阪で飛んだと記された光。",
+      "source_ids": [
+        "nara-tamonin-kitsunebi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "多聞院日記",
+    "歴史的記録",
+    "怪異"
+  ],
+  "story_type": [
+    "歴史記録",
+    "狐火伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nara-tamonin-kitsunebi-src",
+      "title": "狐に関する民俗資料",
+      "publisher": "民族発行所（『民族』1巻4号）",
+      "publication_date": "1926-05-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2240314",
+      "relevant_section": "掲載頁187–188",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。原史料の日付表記は出典カードに従い、現代暦への換算は未実施。"
+}
