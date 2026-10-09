@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kochi-otsuki-funayuurei-bottomless-ladle",
+  "status": "draft",
+  "title": "大月町・船幽霊と底抜け柄杓",
+  "title_normalized": "大月町・船幽霊と底抜け柄杓",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "高知県幡多郡大月町周辺の伝承では、船幽霊は船上で死んだ人々とされ、出会うと柄杓を貸してほしいと頼む。普通の柄杓を渡すと海水を船に注がれて沈められるため、底を抜いた柄杓を渡すとよいと伝えられている。",
+    "based_on_source_ids": [
+      "kochi-otsuki-funayuurei-src"
+    ]
+  },
+  "story_summary": "船幽霊に柄杓を求められても、底のある柄杓を渡すと海水を船に注がれ沈められる。底を抜いた柄杓なら被害を防げるとされた。",
+  "story_content": "『高知県史 民俗編』に収録された海の怪異の記録。文化年間、宿毛市柏島に船幽霊が出たと伝えられ、船上で死んだ人々と説明される。船幽霊に出会うと柄杓を貸してくれと頼まれ、言われた通りに貸すと海水を船へ注がれて沈められる。そのため、底を抜いた柄杓を貸せばよいとされた。記録の所在地表記には大月町と柏島（現在の宿毛市）が併記されるため、伝承地の行政区分と採録地は区別して扱う。",
+  "region": {
+    "prefecture": "高知県",
+    "historical_province": "土佐",
+    "municipality": "幡多郡大月町周辺（話中の柏島は現・宿毛市）",
+    "area_name": "柏島周辺"
+  },
+  "locations": [
+    {
+      "name": "柏島周辺",
+      "type": "島・海域",
+      "description": "船幽霊と柄杓の伝承が言及する海域。資料上の地域表記と現在の行政区分を区別する。",
+      "source_ids": [
+        "kochi-otsuki-funayuurei-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "船幽霊",
+      "type": "伝承存在",
+      "description": "柄杓を求め、海水を船に注いで沈めるとされた存在。",
+      "source_ids": [
+        "kochi-otsuki-funayuurei-src"
+      ]
+    }
+  ],
+  "themes": [
+    "船幽霊",
+    "底抜け柄杓",
+    "海難",
+    "死者の霊"
+  ],
+  "story_type": [
+    "海の怪異",
+    "船幽霊伝承",
+    "禁忌・対処法"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kochi-otsuki-funayuurei-src",
+      "title": "第四章 漁業 第三節 信仰と俗信（二 海の怪異）",
+      "publisher": "高知県（『高知県史』民俗編）",
+      "publication_date": "1978-03",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3920012-000",
+      "relevant_section": "掲載頁250–251",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。カードの地域欄は大月町、話中の柏島は宿毛市のため、地理情報を一つの地点に単純化しない。"
+}
