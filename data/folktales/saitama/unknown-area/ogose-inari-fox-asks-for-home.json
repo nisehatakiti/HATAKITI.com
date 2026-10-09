@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saitama-unknown-area-ogose-inari-fox-asks-for-home",
+  "status": "draft",
+  "title": "越生・居場所を求めて涙を流した狐",
+  "title_normalized": "越生・居場所を求めて涙を流した狐",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "埼玉県の「越生の妖怪ばなし」に記録された伝承。越生耕地の守護神だった稲荷が他の稲荷と合祀され、稲荷の敷地が売却された後、近くの家に狐が現れ、居場所を作ってほしいと涙を流したという。",
+    "based_on_source_ids": [
+      "0030370"
+    ]
+  },
+  "story_summary": "守護神として祀られていた稲荷が合祀され、その敷地が売られた後、狐が近隣の家に現れて居場所を求めたという伝承。",
+  "story_content": "新井良輔「越生の妖怪ばなし」に収録された埼玉県の伝承。越生耕地の守護神だった稲荷が、他の稲荷とまとめられて越生神社に合祀され、もとの稲荷の敷地は売られてしまった。その後、近くの家に一匹の狐が現れ、居場所を作ってほしいと涙を流したという。\n\nこの話の中心は、狐が人を化かしたり襲ったりすることではなく、祀られていた場所と祭祀の扱いが変わった後に、狐が居場所を求める点にある。稲荷の合祀、旧敷地の売却、狐の出現という順序が、信仰の場の変化と動物・神使の居場所の問題を結び付けている。ただし、狐が稲荷神そのものなのか、神使なのか、あるいは別の存在として語られているのかは、カードの要約だけでは断定できない。具体的な町村名や現在の敷地位置も記録にないため、地域は埼玉県までにとどめる。",
+  "region": {
+    "prefecture": "埼玉県",
+    "historical_province": "武蔵国",
+    "municipality": null,
+    "area_name": "越生耕地"
+  },
+  "locations": [
+    {
+      "name": "越生耕地（細かな地点不詳）",
+      "type": "伝承地域",
+      "description": "稲荷の合祀と旧敷地の売却、狐の出現が語られる地域。現在の敷地位置は特定できない。",
+      "source_ids": [
+        "0030370"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "近隣の家の住人",
+      "type": "人物",
+      "description": "狐が居場所を求めて現れたとされる家の住人。カード要約では個人名は記されない。",
+      "source_ids": [
+        "0030370"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "伝承存在",
+      "description": "稲荷の合祀と敷地売却の後、近くの家に現れ、居場所を作ってほしいと涙を流したとされる。",
+      "source_ids": [
+        "0030370"
+      ]
+    },
+    {
+      "name": "稲荷",
+      "type": "信仰対象",
+      "description": "越生耕地の守護神として祀られていたが、他の稲荷とともに越生神社へ合祀されたと語られる。",
+      "source_ids": [
+        "0030370"
+      ]
+    }
+  ],
+  "themes": [
+    "狐と稲荷",
+    "合祀",
+    "祭祀空間の変化",
+    "居場所を求める狐",
+    "信仰と土地"
+  ],
+  "story_type": [
+    "狐伝承",
+    "稲荷信仰伝承",
+    "祭祀の変化にまつわる伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "0030370",
+      "title": "越生の妖怪ばなし",
+      "author": "新井良輔",
+      "publisher": "山村民俗の会『あしなか』通巻201号",
+      "publication_date": "1987-07",
+      "relevant_section": "掲載頁1–2",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030370",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研カード0030370に基づく。地域欄に自治体名は記載されていないため、越生耕地というカード要約の地名以上に現行自治体や現在の敷地位置を推定しない。狐と稲荷の関係も、神そのもの・神使などの解釈を断定しない。"
+}
