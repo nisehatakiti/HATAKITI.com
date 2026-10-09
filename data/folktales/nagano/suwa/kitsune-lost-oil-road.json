@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-suwa-kitsune-lost-oil-road",
+  "status": "draft",
+  "title": "諏訪・油を買った帰りに狐に迷わされる",
+  "title_normalized": "諏訪・油を買った帰りに狐に迷わされる",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県諏訪市の伝承。ある晩、町で油を買った帰りの老人が道に迷い、歩き回った末に狐の仕業だと気づいた。自分が田の中をうろついており、買った油もなくなっていたという。",
+    "based_on_source_ids": [
+      "nagano-suwa-kitsune-lost-oil-road-src"
+    ]
+  },
+  "story_summary": "油を買って帰る老人が夜道で迷い、狐の仕業だと気づいた時には田の中にいて、油も失っていた。",
+  "story_content": "有賀恭一「信州諏訪湖畔の狐」に記録された話。ある晩、老人が町で油を買って帰る途中、道に迷った。散々歩いてから狐の仕業だと気づいて周囲を見ると、自分は田の中をうろついており、買った油もなくなっていたという。狐が人を惑わせるという語りを、採録された簡潔な形で記録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "諏訪市",
+    "area_name": "諏訪湖畔"
+  },
+  "locations": [
+    {
+      "name": "田",
+      "type": "農地",
+      "description": "老人が迷った末に自分が入り込んでいたと気づいた場所。",
+      "source_ids": [
+        "nagano-suwa-kitsune-lost-oil-road-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "老人",
+      "type": "人間",
+      "description": "町で油を買って帰る途中に道に迷う。",
+      "source_ids": [
+        "nagano-suwa-kitsune-lost-oil-road-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "動物・怪異",
+      "description": "老人を迷わせ、油を失わせた原因と考えられた。",
+      "source_ids": [
+        "nagano-suwa-kitsune-lost-oil-road-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "道迷い",
+    "油",
+    "夜道",
+    "田"
+  ],
+  "story_type": [
+    "狐伝承",
+    "道迷い譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-suwa-kitsune-lost-oil-road-src",
+      "title": "信州諏訪湖畔の狐",
+      "publisher": "郷土研究社（『郷土研究』7巻2号）",
+      "publication_date": "1933-02-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640441",
+      "relevant_section": "掲載頁25–26",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。狐の姿や具体的な手口は記載されていないため補っていない。"
+}
