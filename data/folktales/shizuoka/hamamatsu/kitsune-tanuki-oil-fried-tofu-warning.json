@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-hamamatsu-kitsune-tanuki-oil-fried-tofu-warning",
+  "status": "draft",
+  "title": "浜松・油揚げを食べて山へ行くと化かされる",
+  "title_normalized": "浜松・油揚げを食べて山へ行くと化かされる",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県浜松市北区の口承文芸記録。油揚げを食べてから山へ行くと、狸や狐に化かされると伝えられていた。具体的な化かされ方は記録されていない。",
+    "based_on_source_ids": [
+      "shizuoka-hamamatsu-kitsune-tanuki-oil-fried-tofu-warning-src"
+    ]
+  },
+  "story_summary": "油揚げを食べて山へ入ると狸や狐に化かされるという言い伝え。",
+  "story_content": "『中京民俗』通巻17号の「口承文芸」に記録された浜松市北区の言い伝え。油揚げを食べて山へ行ったりすると化かされるという。記録が短いため、具体的な出来事や回避方法は補わず、食べ物と山入りに関する禁忌・注意として記録する。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "遠江",
+    "municipality": "浜松市北区（現・浜松市浜名区）",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "山",
+      "type": "山林",
+      "description": "油揚げを食べて入ると化かされると伝えられた場所。",
+      "source_ids": [
+        "shizuoka-hamamatsu-kitsune-tanuki-oil-fried-tofu-warning-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狸",
+      "type": "妖怪・動物",
+      "description": "山へ行く人を化かす存在として言い伝えられる。",
+      "source_ids": [
+        "shizuoka-hamamatsu-kitsune-tanuki-oil-fried-tofu-warning-src"
+      ]
+    },
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "山へ行く人を化かす存在として言い伝えられる。",
+      "source_ids": [
+        "shizuoka-hamamatsu-kitsune-tanuki-oil-fried-tofu-warning-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狸",
+    "油揚げ",
+    "山の禁忌",
+    "化かし"
+  ],
+  "story_type": [
+    "禁忌・俗信",
+    "化かし伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-hamamatsu-kitsune-tanuki-oil-fried-tofu-warning-src",
+      "title": "口承文芸",
+      "publisher": "中京大学郷土研究会（『中京民俗』通巻17号）",
+      "publication_date": "1980-07-21",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1260116",
+      "relevant_section": "掲載頁159",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく短い記録。"
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyagi-watari-kitsune-trickery-witness-account",
+  "status": "draft",
+  "title": "亘理・狐に化かされた人を太鼓で探した話",
+  "title_normalized": "亘理・狐に化かされた人を太鼓で探した話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮城県亘理町の記録。1950年頃、狐に化かされて山道などから帰れなくなる人がいると、集落の人々は鼓や太鼓を鳴らして山中を探し回った。見つかった人の袂や帯には狐の毛がたくさん付いていたという。",
+    "based_on_source_ids": [
+      "miyagi-watari-kitsune-trickery-witness-account-src"
+    ]
+  },
+  "story_summary": "狐に化かされて帰らない人を、集落の人々が鼓や太鼓を鳴らして山中に探しに行ったという実見談。",
+  "story_content": "『宮城縣史 民俗3』「妖怪変化・幽霊：事例篇」に記録された亘理町の実見談。1950年頃、狐に化かされて山道などから帰宅しない人がいると、集落の人々は鼓や太鼓を鳴らしながら山中を探し回った。化かされた人は袂や帯に狐の毛を多く付けて戻ってきたという。記録は個人の体験談と当時の地域の対応を伝えるもので、狐の毛が付いた理由については伝承上の説明として記載する。",
+  "region": {
+    "prefecture": "宮城県",
+    "historical_province": "陸前",
+    "municipality": "亘理町",
+    "area_name": "山道・山中"
+  },
+  "locations": [
+    {
+      "name": "山道・山中",
+      "type": "山道",
+      "description": "狐に化かされた人が帰れなくなり、集落の人々が探し回った場所。",
+      "source_ids": [
+        "miyagi-watari-kitsune-trickery-witness-account-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "捜索する集落の人々",
+      "type": "人間",
+      "description": "鼓や太鼓を鳴らして山中を探し回った。",
+      "source_ids": [
+        "miyagi-watari-kitsune-trickery-witness-account-src"
+      ]
+    },
+    {
+      "name": "狐に化かされた人",
+      "type": "人間",
+      "description": "帰宅できなくなり、戻った際には袂や帯に狐の毛が付いていたとされる。",
+      "source_ids": [
+        "miyagi-watari-kitsune-trickery-witness-account-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "人を化かし、帰路を見失わせたと伝えられる。",
+      "source_ids": [
+        "miyagi-watari-kitsune-trickery-witness-account-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐に化かされる",
+    "山道",
+    "太鼓",
+    "捜索",
+    "実見談"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "近現代の伝承記録"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyagi-watari-kitsune-trickery-witness-account-src",
+      "title": "妖怪変化・幽霊：事例篇",
+      "publisher": "宮城県史刊行会（『宮城縣史 民俗3』21巻）",
+      "publication_date": "1956-10-20",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0411257-000",
+      "relevant_section": "掲載頁530",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。狐の毛の付着は記録中の伝承内容として記し、因果関係を検証済みの事実とは扱わない。"
+}

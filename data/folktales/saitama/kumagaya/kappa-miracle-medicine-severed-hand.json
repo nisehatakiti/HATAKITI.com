@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saitama-kumagaya-kappa-miracle-medicine-severed-hand",
+  "status": "draft",
+  "title": "熊谷・河童の手を返した礼に伝わる傷薬",
+  "title_normalized": "熊谷・河童の手を返した礼に伝わる傷薬",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "埼玉県熊谷市の伝承。便所で何度も尻を撫でられた女房が、毛むくじゃらの怪しい手を懐刀で切り落とした。翌日、手を返してほしいという老人が訪れ、手を返すと傷薬の処方を教えたという。",
+    "based_on_source_ids": [
+      "saitama-kumagaya-kappa-miracle-medicine-severed-hand-src"
+    ]
+  },
+  "story_summary": "正体不明の手を切り落とした女房が、手を返した礼として傷薬の処方を教わる話。",
+  "story_content": "中田千畝「河童の妙藥」に記録された熊谷市の伝承。女房が便所に入ると、尻を撫でられることが何度か続いた。毛むくじゃらの怪しい手だったため、女房は懐刀でその手を切った。翌日、老人がやって来て手を返してほしいと頼み、女房が返すと、老人は傷薬の処方を伝授したという。要約では老人の正体を明記していないため、河童との関係は題名と文脈に基づく伝承上の解釈として扱い、断定しない。",
+  "region": {
+    "prefecture": "埼玉県",
+    "historical_province": "武蔵",
+    "municipality": "熊谷市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "家の便所",
+      "type": "便所",
+      "description": "女房が怪しい手に尻を撫でられた場所。",
+      "source_ids": [
+        "saitama-kumagaya-kappa-miracle-medicine-severed-hand-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "女房",
+      "type": "人間",
+      "description": "怪しい手を懐刀で切り、後日訪れた老人に手を返した。",
+      "source_ids": [
+        "saitama-kumagaya-kappa-miracle-medicine-severed-hand-src"
+      ]
+    },
+    {
+      "name": "老人",
+      "type": "謎の人物",
+      "description": "切り落とされた手を返してもらい、礼として傷薬の処方を教えた。",
+      "source_ids": [
+        "saitama-kumagaya-kappa-miracle-medicine-severed-hand-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "資料の題名は河童の妙薬だが、要約本文では老人の正体を断定していない。",
+      "source_ids": [
+        "saitama-kumagaya-kappa-miracle-medicine-severed-hand-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "傷薬",
+    "切られた手",
+    "返礼",
+    "薬の伝授"
+  ],
+  "story_type": [
+    "河童伝承",
+    "異類との交渉",
+    "知識授与譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "saitama-kumagaya-kappa-miracle-medicine-severed-hand-src",
+      "title": "河童の妙藥",
+      "publisher": "三元社（『旅と伝説』2号）",
+      "publication_date": "1928-02-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231422",
+      "relevant_section": "掲載頁1–3",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。老人の正体は本文要約に明記されていないため、断定を避けた。"
+}
