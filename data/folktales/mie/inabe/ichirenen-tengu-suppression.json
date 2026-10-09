@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "mie-inabe-ichirenen-tengu-suppression",
+  "status": "draft",
+  "title": "いなべ・一目連社と天狗の祟り",
+  "title_normalized": "いなべ・一目連社と天狗の祟り",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "三重県いなべ市大安町の伝説。災いをもたらす天狗を退けたり、一目連社の扉を蹴破って祟りを防いだりした善知識がいて、村人から尊敬を集めたという。",
+    "based_on_source_ids": [
+      "mie-inabe-ichirenen-tengu-suppression-src"
+    ]
+  },
+  "story_summary": "天狗の災いを鎮め、一目連社に関わる祟りを防いだ人物が村人に尊敬されたという伝承。",
+  "story_content": "小川重太郎「北勢の伝説 其一」に記録された三重県いなべ市大安町の伝承。昔、禍をもたらす天狗を折伏したり、一目連社の扉を蹴破って祟りを防いだりした善知識がいた。その人物は村人の尊敬を集めたとされる。短い記録のため、人物名や出来事の詳しい経緯は補わず、天狗の祟りと社の信仰に関わる伝承として残す。",
+  "region": {
+    "prefecture": "三重県",
+    "historical_province": "伊勢",
+    "municipality": "いなべ市大安町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "一目連社",
+      "type": "社",
+      "description": "扉を蹴破ることで祟りを防いだと記録される社。",
+      "source_ids": [
+        "mie-inabe-ichirenen-tengu-suppression-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "善知識",
+      "type": "宗教的な人物",
+      "description": "天狗を折伏し、一目連社に関わる祟りを防いだとして村人に尊敬された。",
+      "source_ids": [
+        "mie-inabe-ichirenen-tengu-suppression-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "災いをもたらす存在として語られ、折伏の対象となる。",
+      "source_ids": [
+        "mie-inabe-ichirenen-tengu-suppression-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "祟り",
+    "折伏",
+    "一目連社",
+    "村の信仰"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "祟り鎮め譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "mie-inabe-ichirenen-tengu-suppression-src",
+      "title": "北勢の伝説 其一",
+      "publisher": "伊勢民俗学会（『伊勢民俗』1巻1号）",
+      "publication_date": "1952-04-28",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0150016",
+      "relevant_section": "掲載頁19",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードの短い要約に基づく。善知識の個人名や祟りの具体的内容は不明として扱う。"
+}
