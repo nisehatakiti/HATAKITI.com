@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tokushima-itano-oasa-tengu-sennin",
+  "status": "draft",
+  "title": "徳島・大麻神社奥院の天狗と戸板仙人",
+  "title_normalized": "徳島・大麻神社奥院の天狗と戸板仙人",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "徳島県板野郡の大麻神社の裏山、奥院付近には天狗が住み、一年間ともに木の実や草の根を食べると飛行自在の仙人になれるといわれた。しかし天狗に蹴落とされ、戸板に乗せられて帰るため「戸板仙人」と呼ばれたという。",
+    "based_on_source_ids": [
+      "tokushima-itano-oasa-tengu-sennin-src"
+    ]
+  },
+  "story_summary": "徳島県板野郡の大麻神社の裏山、奥院付近には天狗が住み、一年間ともに木の実や草の根を食べると飛行自在の仙人になれるといわれた。しかし天狗に蹴落とされ、戸板に乗せられて帰るため「戸板仙人」と呼ばれたという。",
+  "story_content": "徳島県板野郡の大麻神社の裏山、奥院付近には天狗が住み、一年間ともに木の実や草の根を食べると飛行自在の仙人になれるといわれた。しかし天狗に蹴落とされ、戸板に乗せられて帰るため「戸板仙人」と呼ばれたという。",
+  "region": {
+    "prefecture": "徳島県",
+    "historical_province": null,
+    "municipality": "板野郡",
+    "area_name": "大麻神社裏山・奥院付近"
+  },
+  "locations": [
+    {
+      "name": "大麻神社裏山・奥院付近",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。",
+      "source_ids": [
+        "tokushima-itano-oasa-tengu-sennin-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗・仙人",
+      "type": "伝承存在",
+      "description": "天狗・仙人に関する地域伝承。",
+      "source_ids": [
+        "tokushima-itano-oasa-tengu-sennin-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗・仙人"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tokushima-itano-oasa-tengu-sennin-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載の年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230147",
+      "relevant_section": "徳島・大麻神社奥院の天狗と戸板仙人",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく。後段で原資料の全文、現地地点の精度、旅行者向け情報を補完する。"
+}
