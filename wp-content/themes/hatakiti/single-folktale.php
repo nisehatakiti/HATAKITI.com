@@ -114,37 +114,49 @@ get_header();
                 <p class="hk-credit-badge">本ページの内容は、出典資料を参考にAIが整理・要約したものです。文責：チャッピー</p>
             <?php endif; ?>
 
+            <?php
+            // Only link to related_records that resolve to an actual
+            // folktale post. Many related_records entries point at
+            // internal GitHub-side hub_ids (hub-motif-kappa etc.) that
+            // were never meant to become posts — showing the raw
+            // record_id with a "未登録" badge would leak an internal
+            // identifier to visitors, so those are simply omitted here
+            // rather than rendered unresolved.
+            $related_links = array();
+            foreach ( (array) $related as $rel ) {
+                $rel_id = isset( $rel['record_id'] ) ? $rel['record_id'] : '';
+                if ( ! $rel_id ) {
+                    continue;
+                }
+                $rel_post = get_posts( array(
+                    'post_type'      => 'folktale',
+                    'post_status'    => 'any',
+                    'meta_key'       => 'hatakiti_folktale_record_id',
+                    'meta_value'     => $rel_id,
+                    'posts_per_page' => 1,
+                    'fields'         => 'ids',
+                ) );
+                if ( ! $rel_post ) {
+                    continue;
+                }
+                $related_links[] = array(
+                    'post_id' => $rel_post[0],
+                    'label'   => hatakiti_folktale_relationship_label( isset( $rel['relationship'] ) ? $rel['relationship'] : '' ),
+                );
+            }
+            ?>
             <?php hatakiti_render_divider(); ?>
             <h2 class="hk-review-heading">関連する民話</h2>
-            <?php if ( $related ) : ?>
+            <?php if ( $related_links ) : ?>
                 <ul class="hk-record-list">
-                    <?php foreach ( $related as $rel ) : ?>
-                        <?php
-                        $rel_id = isset( $rel['record_id'] ) ? $rel['record_id'] : '';
-                        if ( ! $rel_id ) {
-                            continue;
-                        }
-                        $rel_post = get_posts( array(
-                            'post_type'      => 'folktale',
-                            'post_status'    => 'any',
-                            'meta_key'       => 'hatakiti_folktale_record_id',
-                            'meta_value'     => $rel_id,
-                            'posts_per_page' => 1,
-                            'fields'         => 'ids',
-                        ) );
-                        ?>
+                    <?php foreach ( $related_links as $link ) : ?>
                         <li>
                             <div class="hk-record-info">
                                 <div class="hk-record-title">
-                                    <?php if ( $rel_post ) : ?>
-                                        <a href="<?php echo esc_url( get_permalink( $rel_post[0] ) ); ?>"><?php echo esc_html( get_the_title( $rel_post[0] ) ); ?></a>
-                                    <?php else : ?>
-                                        <?php echo esc_html( $rel_id ); ?> <span class="hk-badge-soon">未登録</span>
-                                    <?php endif; ?>
+                                    <a href="<?php echo esc_url( get_permalink( $link['post_id'] ) ); ?>"><?php echo esc_html( get_the_title( $link['post_id'] ) ); ?></a>
                                 </div>
-                                <?php $rel_label = hatakiti_folktale_relationship_label( isset( $rel['relationship'] ) ? $rel['relationship'] : '' ); ?>
-                                <?php if ( $rel_label ) : ?>
-                                    <div class="hk-record-sub"><?php echo esc_html( $rel_label ); ?></div>
+                                <?php if ( $link['label'] ) : ?>
+                                    <div class="hk-record-sub"><?php echo esc_html( $link['label'] ); ?></div>
                                 <?php endif; ?>
                             </div>
                         </li>
