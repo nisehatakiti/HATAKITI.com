@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-minamishimabara-kita-arima-fox-trickster",
+  "status": "draft",
+  "title": "北有馬・若者と性悪狐",
+  "title_normalized": "北有馬・若者と性悪狐",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県南島原市の旧北有馬町では、性悪な狐をだまそうとした若者が、狐の化けた姿を見破り、何度も策略を使って捕らえたという話が記録されている。",
+    "based_on_source_ids": [
+      "nagasaki-kita-arima-fox-src"
+    ]
+  },
+  "story_summary": "北有馬で、若者が人を化かす狐を逆にだまそうとする。狐は父親や位牌に化けて逃れようとするが、若者はさらに策略を重ねて捕らえたという。",
+  "story_content": "榊木敏「伝説の島原（三）」に記録された北有馬の狐話。性悪な狐を化かそうと若者が策略を練り、家にいない父親を迎えに行くように見せかけ、狐を馬の背に括り付けて連れ帰った。狐は釜でゆでられそうになると位牌に化けて逃れようとするが、若者はさらにだまして捕らえ、最後には釜で煮殺したという。狐の変化と人間側の知恵比べを中心とする昔話として登録する。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "肥前",
+    "municipality": "南島原市（旧南高来郡北有馬町）",
+    "area_name": "北有馬"
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "若者",
+      "type": "人物",
+      "description": "策略を用いて狐を捕らえたとされる人物。",
+      "source_ids": [
+        "nagasaki-kita-arima-fox-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "性悪狐",
+      "type": "狐の伝承存在",
+      "description": "父親や位牌などに化けて逃れようとしたとされる狐。",
+      "source_ids": [
+        "nagasaki-kita-arima-fox-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "化ける",
+    "知恵比べ",
+    "変化"
+  ],
+  "story_type": [
+    "昔話",
+    "狐の伝承",
+    "化かし話"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-animal-shapeshifter-traditions",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-kita-arima-fox-src",
+      "title": "伝説の島原（三）",
+      "publisher": "三元社（『旅と伝説』2巻6号・通巻18号）",
+      "publication_date": "1929-06-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230064",
+      "relevant_section": "掲載頁15–16",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。昔話の筋は資料要約に沿って記録し、現地の特定地点は設定しない。"
+}
