@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shiga-takashima-kitsune-inari-festival-lost-road",
+  "status": "draft",
+  "title": "高島・稲荷祭の夜に狐に道を惑わされた話",
+  "title_normalized": "高島・稲荷祭の夜に狐に道を惑わされた話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "滋賀県高島市の伝承。稲荷祭の夜、帰宅しようとした人が狐にだまされ、自宅を通り過ぎても歩き続けさせられたという。",
+    "based_on_source_ids": [
+      "shiga-takashima-kitsune-inari-festival-lost-road-src"
+    ]
+  },
+  "story_summary": "稲荷祭の夜に帰宅する人が狐に化かされ、家を通り過ぎても歩かされたという話。",
+  "story_content": "三田村耕治「狐の話」に記録された滋賀県高島市の伝承。稲荷様の祭りの夜、家に帰ろうとした人が狐にだまされ、自宅を過ぎてもどんどん歩かされたという。資料要約では、その後どのように正気に戻ったかは記されていないため、結末は補わず記録する。",
+  "region": {
+    "prefecture": "滋賀県",
+    "historical_province": "近江",
+    "municipality": "高島市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "帰宅途中の人",
+      "type": "人間",
+      "description": "稲荷祭の夜、狐にだまされて自宅を通り過ぎても歩かされた。",
+      "source_ids": [
+        "shiga-takashima-kitsune-inari-festival-lost-road-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "祭りの夜に人をだまし、帰り道を惑わせる。",
+      "source_ids": [
+        "shiga-takashima-kitsune-inari-festival-lost-road-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐に化かされる",
+    "道迷い",
+    "稲荷祭"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "道迷い譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shiga-takashima-kitsune-inari-festival-lost-road-src",
+      "title": "狐の話",
+      "publisher": "三元社（『旅と伝説』13巻3号・通巻147号）",
+      "publication_date": "1940-03-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231035",
+      "relevant_section": "掲載頁24–33",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。道迷いの後の展開は記載がないため補っていない。"
+}
