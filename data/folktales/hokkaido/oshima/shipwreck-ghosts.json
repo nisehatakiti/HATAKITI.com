@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "record_id": "hokkaido-oshima-sea-ghost-candidate",
+  "status": "draft",
+  "title": "渡島沿岸・海難の怪異伝承（候補）",
+  "title_normalized": "渡島沿岸・海難の怪異伝承（候補）",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "北海道渡島地方の海難や船の怪異に関する伝承を調査するための候補記録。現段階では個別の船幽霊・海坊主の話と原資料を特定できていない。",
+    "based_on_source_ids": [
+      "hokkaido-oshima-sea-ghost-src"
+    ]
+  },
+  "story_summary": "渡島沿岸の海難・船の怪異伝承を調査するための候補レコード。具体的な怪異談は未確認。",
+  "story_content": "このレコードは地域調査の候補を管理するためのもので、渡島地方に特定の船幽霊伝承が存在すると確定するものではない。郷土誌、漁業史、自治体史、博物館資料などの個別記録を確認してから、採録地と内容を登録する。",
+  "region": {
+    "prefecture": "北海道",
+    "historical_province": null,
+    "municipality": "渡島地方",
+    "area_name": "沿岸部"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "海難",
+    "船の怪異",
+    "海岸伝承",
+    "地域調査"
+  ],
+  "story_type": [
+    "候補・要出典確認"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "research_topic"
+    },
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "research_topic"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "hokkaido-oshima-sea-ghost-src",
+      "title": "北海道・渡島地域の郷土資料（調査入口）",
+      "publisher": "北海道",
+      "source_type": "candidate_source",
+      "url": "https://www.pref.hokkaido.lg.jp/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "個別出典未確認の候補。確定記録と混同しないよう本文を推測で補わない。"
+}
