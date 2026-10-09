@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okayama-nagi-jabuchi-daija-rainmaking",
+  "status": "draft",
+  "title": "奈義町・蛇淵の大蛇と雨乞い",
+  "title_normalized": "奈義町・蛇淵の大蛇と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岡山県勝田郡奈義町の那岐山中にある蛇淵では、五升樽の酒を投げ込めば大蛇が返礼として雨を降らせる、または鉄物を投げ込むと大蛇が怒って雨を降らせると伝えられた。",
+    "based_on_source_ids": [
+      "okayama-nagi-jabuchi-src"
+    ]
+  },
+  "story_summary": "那岐山中の蛇淵で雨乞いをする際、五升樽を投げ入れると酒への返礼に大蛇が雨を降らせる、あるいは鉄物を投げ込むと大蛇が怒って雨を降らせると語られた。",
+  "story_content": "『岡山県史』第15巻「民俗Ⅰ」の水神・雨乞いに関する記録。奈義町那岐山中の蛇淵では、雨乞いの方法として五升樽を淵に投げ込む話があり、大蛇が酒への返礼として雨を降らせるという。また、鉄物を投げ込んで大蛇を怒らせ、雨を降らせるという異なる説明も記録されている。雨乞いの儀礼と水辺の主への働きかけを示す事例として登録する。",
+  "region": {
+    "prefecture": "岡山県",
+    "historical_province": "美作",
+    "municipality": "勝田郡奈義町",
+    "area_name": "那岐山中・蛇淵"
+  },
+  "locations": [
+    {
+      "name": "蛇淵",
+      "type": "淵・伝承地",
+      "description": "那岐山中にあると記録された雨乞いの淵。現在の正確な位置や訪問可否は未確認。",
+      "source_ids": [
+        "okayama-nagi-jabuchi-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "蛇淵に関わり、酒への返礼または怒りによって雨を降らせるとされた。",
+      "source_ids": [
+        "okayama-nagi-jabuchi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い",
+    "水神",
+    "淵"
+  ],
+  "story_type": [
+    "雨乞い伝承",
+    "水辺伝承",
+    "蛇の伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "okayama-nagi-jabuchi-src",
+      "title": "第六章 民間信仰と修験道 第五節 水の神（二 雨乞い）",
+      "publisher": "岡山県（『岡山県史』15巻 民俗Ⅰ）",
+      "publication_date": "1983-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3310240-000",
+      "relevant_section": "掲載頁568",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。五升樽を投げる型と鉄物を投げる型は、同一記録内の異伝として併記。淵の現地比定は未確認。"
+}
