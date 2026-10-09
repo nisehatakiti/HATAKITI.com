@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-tsunan-tengu-stone-rolling-sound",
+  "status": "draft",
+  "title": "津南・音だけが聞こえる天狗の石ころがし",
+  "title_normalized": "津南・音だけが聞こえる天狗の石ころがし",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県中魚沼郡津南町では、春に山菜のゼンマイを採りに山へ入り山小屋に泊まると、夜中に山の上から石がごろごろ転がってくる音が聞こえることがあり、音はするが実際に石は転がってこない現象を「天狗の石ころがし」と呼んだ。",
+    "based_on_source_ids": [
+      "niigata-tsunan-tengu-stone-rolling-sound-src"
+    ]
+  },
+  "story_summary": "山小屋で夜を過ごすと、山の上から石が転がる音だけが聞こえ、石そのものは来ない。これを天狗の石ころがしと呼ぶ。",
+  "story_content": "水沢謙一「第5編 5 第3節 6 天狗の石ころがし」に記録された津南町の伝承。春にゼンマイ採りに山へ入り、山小屋に泊まっていると、夜中に山の上から小屋へ向かって石がごろごろ転がってくる音が聞こえる。しかし音だけで、石は実際には転がってこない。昔からこの現象を「天狗の石ころがし」と伝えている。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "津南町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "山小屋",
+      "type": "山中の建物",
+      "description": "ゼンマイ採りの際に泊まり、石が転がるような音を聞く場所。",
+      "source_ids": [
+        "niigata-tsunan-tengu-stone-rolling-sound-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗の石ころがし",
+      "type": "怪異現象",
+      "description": "石が転がる音だけが聞こえ、石自体は現れない現象。",
+      "source_ids": [
+        "niigata-tsunan-tengu-stone-rolling-sound-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "音",
+    "山小屋",
+    "ゼンマイ採り",
+    "山の怪異"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "怪異現象"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-tsunan-tengu-stone-rolling-sound-src",
+      "title": "第5編 第5 第3節 6 天狗の石ころがし",
+      "publisher": "新潟県（『新潟県史 資料編22 民俗1』）",
+      "publication_date": "1982-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1510217-000",
+      "relevant_section": "掲載頁901–902",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードの要約に基づく。音だけが聞こえるという伝承の特徴を保ち、実際の石の移動を付け加えていない。"
+}
