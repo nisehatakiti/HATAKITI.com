@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-hamamatsu-kurakiyama-yamanba-stone-dumpling",
+  "status": "draft",
+  "title": "天竜・倉木山の山姥と焼き石の団子",
+  "title_normalized": "天竜・倉木山の山姥と焼き石の団子",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県浜松市天竜区の倉木山の山姥は、家々で子守りや藤紡ぎを手伝っていたが、子どもを食べたため、焼いた河原石を団子に見せかけて食べさせられ、釜が淵へ入ったという。",
+    "based_on_source_ids": [
+      "shizuoka-hamamatsu-kurakiyama-yamanba-src"
+    ]
+  },
+  "story_summary": "倉木山の山姥は家々で子守りや藤紡ぎを手伝っていた。山姥に子どもを食べられたことへの仕返しに、焼いた河原石を団子に見せかけて食べさせると、山姥は熱さに驚いて釜が淵へ入ったと伝えられる。",
+  "story_content": "『静岡県史 資料編25 民俗3』に収録された山姥伝承。倉木山の山姥は、あちこちの家で子守りや藤紡ぎを手伝っていた。山姥に子どもを食べられた仕返し、あるいは山姥を疎ましく思ったことから、河原の丸石を焼いて団子に見せかけて食べさせた。山姥は熱さに驚いて釜が淵に入ってしまったという。佐久間町日向・舟戸、水窪町西浦の家にまつわる話として記録されている。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "遠江",
+    "municipality": "浜松市天竜区（旧佐久間町・水窪町周辺）",
+    "area_name": "倉木山・釜が淵"
+  },
+  "locations": [
+    {
+      "name": "倉木山",
+      "type": "山・伝承地",
+      "description": "山姥が住んでいたとされる山。伝承の広がる旧佐久間町・水窪町周辺との位置関係は追加確認が必要。",
+      "source_ids": [
+        "shizuoka-hamamatsu-kurakiyama-yamanba-src"
+      ]
+    },
+    {
+      "name": "釜が淵",
+      "type": "淵・伝承地",
+      "description": "山姥が入ったとされる淵。現在の地名との対応は未確認。",
+      "source_ids": [
+        "shizuoka-hamamatsu-kurakiyama-yamanba-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "子守りや藤紡ぎを手伝う一方、子どもを食べる存在として語られる。",
+      "source_ids": [
+        "shizuoka-hamamatsu-kurakiyama-yamanba-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "焼き石",
+    "子守り",
+    "淵の由来"
+  ],
+  "story_type": [
+    "昔話",
+    "山の伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-hamamatsu-kurakiyama-yamanba-src",
+      "title": "第五編 二 山の信仰：四 山の神と山姥",
+      "publisher": "静岡県（『静岡県史 資料編25 民俗3』）",
+      "publication_date": "1991-03-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0222205-000",
+      "relevant_section": "掲載頁858",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードおよび静岡県史の書誌情報に基づく。倉木山・釜が淵の現地比定は未確認。類話の類似だけで他地域の記録と統合せず、個別伝承として保持する。"
+}
