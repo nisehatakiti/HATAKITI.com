@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ishikawa-hakusan-tengu-abducted-disciple-thirty-three-years",
+  "status": "draft",
+  "title": "白山・天狗にさらわれ弟子となった男の帰還",
+  "title_normalized": "白山・天狗にさらわれ弟子となった男の帰還",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "石川県白山市の天狗伝承。天狗にだまされて連れ去られ、弟子として修行した男が33年目に帰還する。その男が雑木原を燃やす際、畑の周囲を指でなぞる「天狗さんの水縄」を行うと、火がそこから先へ燃え広がらなかったと語られる。",
+    "based_on_source_ids": [
+      "2470002"
+    ]
+  },
+  "story_summary": "天狗に連れ去られて弟子となった男が33年目に帰り、天狗から得たとされる火除けの技を示す伝承。",
+  "story_content": "国際日本文化研究センター「怪異・妖怪伝承データベース」カード2470002に収録された石川県白山市の伝承。男は天狗にだまされて連れて行かれ、弟子となって修行した。33年目に帰ってきた男が雑木原を燃やすとき、「天狗さんの水縄」と呼ばれる方法として、畑の周囲を指で書くと、火は延焼せず、その場所で消えたという。その際、天狗の使者とされる鳶が鳴き、天狗の親方である「ミナカミの旦那」が現れる。\n\n筋の構造は、連れ去りと修行、長期間の不在、帰還後に示される技、天狗側の使者・親方の出現という段階に分かれる。「天狗さんの水縄」は火の広がりを境界線で止める技として語られるが、資料が伝える民俗的な説明であり、実際の防火方法として扱うものではない。カードに記された以上の修行内容や、男がどこで過ごしたかは補わない。",
+  "region": {
+    "prefecture": "石川県",
+    "historical_province": "加賀国",
+    "municipality": "白山市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "白山市（具体地点不詳）",
+      "type": "伝承地域",
+      "description": "カードには市名が記載されるが、細かな地区・山名は特定できない。",
+      "source_ids": [
+        "2470002"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "天狗にさらわれた男",
+      "role": "天狗の弟子となり、33年目に帰還する人物"
+    },
+    {
+      "name": "ミナカミの旦那",
+      "role": "天狗の親方として語られる存在"
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "男を連れ去って弟子とし、帰還後の火除けの技や鳶の使者と結び付けられる。",
+      "source_ids": [
+        "2470002"
+      ]
+    },
+    {
+      "name": "鳶",
+      "type": "天狗の使者",
+      "description": "男が雑木原を燃やす際に鳴いたと記録される。",
+      "source_ids": [
+        "2470002"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗隠し",
+    "異界での修行",
+    "長期不在と帰還",
+    "火除け",
+    "境界を引く技"
+  ],
+  "story_type": [
+    "神隠し譚",
+    "天狗伝承",
+    "由来・技法伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2470002",
+      "title": "加賀・能登の天狗伝説考",
+      "author": "小倉学",
+      "publisher": "昔話伝説研究会『昔話伝説研究』通巻2号",
+      "publication_date": "1972-04-30",
+      "relevant_section": "掲載頁19",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2470002",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研カード2470002に基づく。33年、天狗さんの水縄、鳶、ミナカミの旦那の要素を採録。水縄を現実の防火技術として説明せず、具体的な修行場所など未記載情報を補わない。"
+}
