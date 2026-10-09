@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kyoto-kyoto-city-midorogaike-daija-log",
+  "status": "draft",
+  "title": "洛北・深泥池の丸太に見えた大蛇",
+  "title_normalized": "洛北・深泥池の丸太に見えた大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "京都市北区の深泥池近くで、道を横切るように太い丸太が横たわっていた。若者が蹴飛ばそうとすると丸太は長く動き続けて池に入り、池の主だったと気づいた若者たちは恐れおののいたという。",
+    "based_on_source_ids": [
+      "kyoto-kyoto-city-midorogaike-daija-log-src"
+    ]
+  },
+  "story_summary": "丸太だと思って蹴ろうとしたものが動き続けて池に入り、池の主である大蛇だったとわかったという話。",
+  "story_content": "岩田英彬「洛北の大蛇伝説」に記録された話。深泥池の近くで、道を横切るように太い丸太が横たわっていた。若者たちが蹴飛ばそうとしたところ、それはずっと動いて池に入っていった。若者たちは、それが池の主だったと気づいて恐れおののいたという。記録では「池の主、大蛇」とされるため、丸太に見えた池の主の伝承として整理する。",
+  "region": {
+    "prefecture": "京都府",
+    "historical_province": "山城",
+    "municipality": "京都市北区",
+    "area_name": "深泥池"
+  },
+  "locations": [
+    {
+      "name": "深泥池",
+      "type": "池",
+      "description": "丸太に見えた池の主が入っていったとされる池。",
+      "source_ids": [
+        "kyoto-kyoto-city-midorogaike-daija-log-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "若者たち",
+      "type": "人間",
+      "description": "丸太と思ったものを蹴ろうとし、池の主の正体に気づく。",
+      "source_ids": [
+        "kyoto-kyoto-city-midorogaike-daija-log-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "池の主",
+      "description": "道を横切る丸太のように見え、動いて池に入っていく。",
+      "source_ids": [
+        "kyoto-kyoto-city-midorogaike-daija-log-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "池の主",
+    "変化",
+    "丸太",
+    "深泥池"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "related_motif"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kyoto-kyoto-city-midorogaike-daija-log-src",
+      "title": "洛北の大蛇伝説",
+      "publisher": "山村民俗の会（『あしなか』通巻158号）",
+      "publication_date": "1976-09",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030329",
+      "relevant_section": "掲載頁15",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの呼称に「池の主，大蛇」とあることを踏まえた。丸太に見えたことを超自然的な変化として断定しすぎない表現にした。"
+}
