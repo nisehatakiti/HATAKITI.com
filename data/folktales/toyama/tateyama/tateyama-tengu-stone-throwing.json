@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-tateyama-tengu-stone-throwing",
+  "status": "draft",
+  "title": "立山・縛乗坊天狗の石投げ",
+  "title_normalized": "立山・縛乗坊天狗の石投げ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "富山県の立山には、立山縛乗坊という天狗が棲むと伝えられる。立山信仰の伝承では、参詣者が不敬な態度を取ったり慢心したりすると、天狗が怒って石を投げるという。",
+    "based_on_source_ids": [
+      "toyama-tateyama-tengu-stone-throwing-src"
+    ]
+  },
+  "story_summary": "立山の参詣者の不敬や慢心に天狗が怒り、石を投げるという信仰上の伝承。",
+  "story_content": "とよた時「天狗・仙人妖怪ばなし」に記録された富山県の伝承。館山（立山）には立山縛乗坊という天狗が棲むとされ、立山信仰の伝承には、参詣人が不敬な態度を取ったり慢心したりすると天狗が怒って石を投げるとある。参詣時の態度を戒める宗教的な山岳伝承として記録する。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": "越中",
+    "municipality": null,
+    "area_name": "立山"
+  },
+  "locations": [
+    {
+      "name": "立山",
+      "type": "山岳・信仰地",
+      "description": "縛乗坊天狗が棲むと伝えられる山。",
+      "source_ids": [
+        "toyama-tateyama-tengu-stone-throwing-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "立山縛乗坊",
+      "type": "天狗",
+      "description": "参詣者の不敬や慢心に怒り、石を投げるとされる。",
+      "source_ids": [
+        "toyama-tateyama-tengu-stone-throwing-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "立山信仰",
+    "石投げ",
+    "参詣",
+    "不敬",
+    "慢心"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "山岳信仰",
+    "禁忌・戒め"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "toyama-tateyama-tengu-stone-throwing-src",
+      "title": "天狗・仙人妖怪ばなし",
+      "publisher": "山村民俗の会（『あしなか』通巻225号）",
+      "publication_date": "1992-05",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030432",
+      "relevant_section": "掲載頁16",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。"
+}
