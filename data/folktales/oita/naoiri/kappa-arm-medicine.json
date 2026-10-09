@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "oita-naoiri-kappa-arm-medicine",
+  "status": "draft",
+  "title": "豊後直入・河童の腕と打身の薬",
+  "title_normalized": "豊後直入・河童の腕と打身の薬",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "大分県の豊後直入地方では、武士が仲間を襲った河童の腕を切り落とすと、河童が腕を返してほしいと訪ねてきた。腕を返した礼として、河童は打身の薬を教えたという。",
+    "based_on_source_ids": [
+      "oita-naoiri-kappa-arm-medicine-src"
+    ]
+  },
+  "story_summary": "大分県の豊後直入地方では、武士が仲間を襲った河童の腕を切り落とすと、河童が腕を返してほしいと訪ねてきた。腕を返した礼として、河童は打身の薬を教えたという。",
+  "story_content": "大分県の豊後直入地方では、武士が仲間を襲った河童の腕を切り落とすと、河童が腕を返してほしいと訪ねてきた。腕を返した礼として、河童は打身の薬を教えたという。",
+  "region": {
+    "prefecture": "大分県",
+    "historical_province": null,
+    "municipality": "竹田市・大分市・由布市の一部",
+    "area_name": "豊後直入地方"
+  },
+  "locations": [
+    {
+      "name": "豊後直入地方",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "oita-naoiri-kappa-arm-medicine-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "oita-naoiri-kappa-arm-medicine-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "oita-naoiri-kappa-arm-medicine-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260051",
+      "relevant_section": "豊後直入・河童の腕と打身の薬",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
