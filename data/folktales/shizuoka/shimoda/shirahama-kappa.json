@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-shimoda-shirahama-kappa",
+  "status": "draft",
+  "title": "下田白浜・河童との約束",
+  "title_normalized": "下田白浜・河童との約束",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県下田市白浜の人が、いじめられていた河童を助けた。河童は川を渡る際に「白浜だ」と唱えれば白浜の人には害をしないと約束し、以後白浜の人に川での水難がなかったという。",
+    "based_on_source_ids": [
+      "shizuoka-shimoda-shirahama-kappa-src"
+    ]
+  },
+  "story_summary": "静岡県下田市白浜の人が、いじめられていた河童を助けた。河童は川を渡る際に「白浜だ」と唱えれば白浜の人には害をしないと約束し、以後白浜の人に川での水難がなかったという。",
+  "story_content": "静岡県下田市白浜の人が、いじめられていた河童を助けた。河童は川を渡る際に「白浜だ」と唱えれば白浜の人には害をしないと約束し、以後白浜の人に川での水難がなかったという。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": null,
+    "municipality": "下田市",
+    "area_name": "白浜・河津の川"
+  },
+  "locations": [
+    {
+      "name": "白浜・河津の川",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "shizuoka-shimoda-shirahama-kappa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "shizuoka-shimoda-shirahama-kappa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-shimoda-shirahama-kappa-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0222101-000",
+      "relevant_section": "下田白浜・河童との約束",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
