@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "wakayama-aridagawa-oishiyama-tengu-night-sounds",
+  "status": "draft",
+  "title": "有田川・生石山の天狗と夜中の怪音",
+  "title_normalized": "有田川・生石山の天狗と夜中の怪音",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "和歌山県有田川町の生石山には天狗がいると伝えられ、生石明神の御手洗石そばにある御供所で、夜中に家が揺れるような音や、大きな岩・木が倒れるような音が聞こえることがあったという。",
+    "based_on_source_ids": [
+      "wakayama-aridagawa-oishiyama-tengu-night-sounds-src"
+    ]
+  },
+  "story_summary": "生石山の御供所で夜中に家が揺れるような音や、岩・木が倒れるような音が聞こえるという天狗伝承。",
+  "story_content": "高谷重夫「伝説」に記録された有田川町の伝承。生石山には天狗がいるといい、生石明神の御手洗石の傍にある御供所で、夜中に家を揺さぶるような音や、大きな岩や木が倒れるような音を聞くことがあったという。音の原因や、翌朝に何かが実際に倒れていたかどうかは個別カードの要約には記されていないため、確認できる範囲で記録する。",
+  "region": {
+    "prefecture": "和歌山県",
+    "historical_province": "紀伊",
+    "municipality": "有田川町",
+    "area_name": "生石山・生石明神御手洗石付近"
+  },
+  "locations": [
+    {
+      "name": "生石山",
+      "type": "山",
+      "description": "天狗がいると伝えられる山。",
+      "source_ids": [
+        "wakayama-aridagawa-oishiyama-tengu-night-sounds-src"
+      ]
+    },
+    {
+      "name": "生石明神の御供所",
+      "type": "祭祀施設",
+      "description": "御手洗石のそばにあり、夜中に怪音が聞こえるとされた場所。",
+      "source_ids": [
+        "wakayama-aridagawa-oishiyama-tengu-night-sounds-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "生石山にいると伝えられ、夜中の怪音と結びついている。",
+      "source_ids": [
+        "wakayama-aridagawa-oishiyama-tengu-night-sounds-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "生石山",
+    "怪音",
+    "岩の倒れる音",
+    "木の倒れる音",
+    "神域"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "怪音伝承",
+    "場所の伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "wakayama-aridagawa-oishiyama-tengu-night-sounds-src",
+      "title": "伝説",
+      "publisher": "近畿民俗学会（『近畿民俗』通巻66・67・68号）",
+      "publication_date": "1976-05-20",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0700221",
+      "relevant_section": "掲載頁77",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。別の「天狗の倒し木」伝承と関連するが、場所と記録が異なるため独立した記録としている。"
+}
