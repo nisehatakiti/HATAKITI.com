@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kochi-kuroshio-funayuurei-bottomless-ladle",
+  "status": "draft",
+  "title": "底を抜いた杓を求める船幽霊",
+  "title_normalized": "底を抜いた杓を求める船幽霊",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "高知県幡多郡田ノ口村（現在の黒潮町）の俗信では、船幽霊は船に「杓を貸せ」と求める。底を抜いていない杓を渡すと船内に海水を汲み入れられ、船が沈むと伝えられている。",
+    "based_on_source_ids": [
+      "2260176"
+    ]
+  },
+  "story_summary": "船幽霊に杓を求められたときは、底を抜いた杓を渡さなければならないという海上の俗信。",
+  "story_content": "怪異・妖怪伝承データベースの記録によれば、高知県幡多郡田ノ口村（現在の黒潮町）では、船幽霊は必ず「杓を貸せ」と言うとされた。底を打ち抜いた杓を貸さないと、船中いっぱいに海水を汲み込まれて沈没すると伝えられている。これは、船幽霊への対処法として「水を汲めない道具を渡す」という知恵を伝える話である。",
+  "region": {
+    "prefecture": "高知県",
+    "historical_province": "土佐国",
+    "municipality": "黒潮町",
+    "area_name": "旧幡多郡田ノ口村"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    "船幽霊"
+  ],
+  "themes": [
+    "海の怪異",
+    "船の安全",
+    "怪異への対処"
+  ],
+  "story_type": [
+    "俗信",
+    "妖怪伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2260176",
+      "title": "高知県幡多郡田ノ口村下田ノ口の俗信",
+      "publisher": "民俗学会（『民俗学』3巻5号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260176",
+      "publication_date": "1931-05",
+      "relevant_section": "掲載頁62",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研「怪異・妖怪伝承データベース」の個別カードに基づく。本文中の「阿迦換」は資料記載の表記を踏まえ、要約では一般的な道具名として杓とした。"
+}
