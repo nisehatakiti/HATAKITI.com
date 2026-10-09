@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-iki-dragon-palace-reed-escape",
+  "status": "draft",
+  "title": "龍宮から授かったはぎわらで海を割る",
+  "title_normalized": "龍宮から授かったはぎわらで海を割る",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "長崎県壱岐市の伝承では、長者原の夫婦が長く龍宮を信仰し、龍宮に招かれて龍王から「はぎわら」を授かった。それを先に立てると海が割れ、家へ帰ることができた。さらに望みを叶える力があったが、龍宮へ返すと得たものをすべて失ったという。",
+    "based_on_source_ids": [
+      "1233085"
+    ]
+  },
+  "story_summary": "龍宮から授かった不思議な「はぎわら」で海を割り、願いを叶える夫婦の話。",
+  "story_content": "山口麻太郎「昔話雑考」に収録された『壱岐国続風土記』由来の話では、長者原に住む夫婦が長年龍宮を信仰していたところ、龍宮へ招かれ、龍王から「はぎわら」を授かった。それを先達にすると海が割れ、すぐに家へ帰り着いた。夫婦はその道具を使って住居や蔵などを願い、望みを叶えたが、はぎわらを龍宮に返すと得たものをすべて失ったとされる。資料の「はぎわら」の具体的な物品・性質は、記録の表記以上に断定しない。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "壱岐国",
+    "municipality": "壱岐市",
+    "area_name": "長者原"
+  },
+  "locations": [
+    "長者原",
+    "龍宮"
+  ],
+  "characters": [
+    "夫婦",
+    "龍王"
+  ],
+  "beings": [
+    "龍王"
+  ],
+  "themes": [
+    "龍宮訪問",
+    "不思議な道具",
+    "願いの成就",
+    "返還による喪失"
+  ],
+  "story_type": [
+    "異界訪問譚",
+    "宝物譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1233085",
+      "title": "昔話雑考",
+      "publisher": "三元社（『旅と伝説』9巻4号・通巻100号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1233085",
+      "publication_date": "1936-04-01",
+      "relevant_section": "掲載頁175–176",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研「怪異・妖怪伝承データベース」の個別カードに基づく。道具名は資料の表記「はぎわら」を維持し、現代語での正体を推定していない。"
+}
