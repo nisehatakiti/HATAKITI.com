@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "osaka-daija-iron-pond",
+  "status": "draft",
+  "title": "大阪・池の大蛇と鉄の頼み",
+  "title_normalized": "大阪・池の大蛇と鉄の頼み",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "大阪府の伝承では、池の中に鉄類が投げ込まれていた。水神である大蛇が女に化け、通行人に鉄類を取り上げてほしいと頼んだという話が記録されている。",
+    "based_on_source_ids": [
+      "osaka-daija-iron-pond-src"
+    ]
+  },
+  "story_summary": "大阪府の伝承では、池の中に鉄類が投げ込まれていた。水神である大蛇が女に化け、通行人に鉄類を取り上げてほしいと頼んだという話が記録されている。",
+  "story_content": "大阪府の伝承では、池の中に鉄類が投げ込まれていた。水神である大蛇が女に化け、通行人に鉄類を取り上げてほしいと頼んだという話が記録されている。",
+  "region": {
+    "prefecture": "大阪府",
+    "historical_province": null,
+    "municipality": "大阪府内",
+    "area_name": "池"
+  },
+  "locations": [
+    {
+      "name": "池",
+      "type": "伝承地・地域",
+      "description": "日文研の検索記録に記載された地域・地形。正確な地点は原資料を再確認して補完する。",
+      "source_ids": [
+        "osaka-daija-iron-pond-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇・水神",
+      "type": "伝承存在",
+      "description": "大蛇・水神に関する地域伝承。",
+      "source_ids": [
+        "osaka-daija-iron-pond-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇・水神",
+    "雨乞い"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "osaka-daija-iron-pond-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=0700178",
+      "relevant_section": "大阪・池の大蛇と鉄の頼み",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の検索記録に基づき登録。自治体・池名・伝承本文の対応は原資料を追加確認し、旅行用地図へ載せる前に地点精度を検証する。"
+}
