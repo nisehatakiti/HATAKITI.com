@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamanashi-kofu-otengomatsu",
+  "status": "draft",
+  "title": "甲府・オテンゴマツと天狗隠し",
+  "title_normalized": "甲府・オテンゴマツと天狗隠し",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山梨県旧中道町右左口では、山の神の松を「オテンゴマツ」と呼び、そこにいる天狗が人をさらうと伝えられていた。",
+    "based_on_source_ids": [
+      "yamanashi-kofu-otengomatsu-src"
+    ]
+  },
+  "story_summary": "山の神の松は「オテンゴマツ」と呼ばれ、その場所にいる天狗が人をさらうと語られていた。",
+  "story_content": "東洋大学民俗研究会「右左口の民俗」に記録された伝承。山の神の松をオテンゴマツと呼び、そこにいる天狗が人をさらうといわれていた。山の神の樹木信仰と天狗による神隠しの語りが重なる地域例として登録する。",
+  "region": {
+    "prefecture": "山梨県",
+    "historical_province": "甲斐",
+    "municipality": "甲府市（旧東八代郡中道町右左口）",
+    "area_name": "右左口"
+  },
+  "locations": [
+    {
+      "name": "オテンゴマツ（旧伝承地）",
+      "type": "樹木・伝承地",
+      "description": "山の神の松として伝えられる。現在の木の現存状況・正確な場所は未確認。",
+      "source_ids": [
+        "yamanashi-kofu-otengomatsu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "オテンゴマツにいるとされ、人をさらう存在。",
+      "source_ids": [
+        "yamanashi-kofu-otengomatsu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "山の神",
+    "神隠し",
+    "松"
+  ],
+  "story_type": [
+    "地域伝承",
+    "樹木伝承",
+    "神隠し伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamanashi-kofu-otengomatsu-src",
+      "title": "九 口承文芸",
+      "publisher": "東洋大学民俗学研究会（『右左口の民俗―山梨県東八代郡中道町右左口地区―』）",
+      "publication_date": "1984-11",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1461394",
+      "relevant_section": "掲載頁174",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。旧中道町の地名と現在の甲府市内の位置を照合し、木の現存・公開状況は別途確認する。"
+}
