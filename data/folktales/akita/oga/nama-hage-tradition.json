@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "akita-oga-namahage-tradition",
+  "status": "draft",
+  "title": "男鹿・ナマハゲの来訪神伝承",
+  "title_normalized": "男鹿・ナマハゲの来訪神伝承",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "秋田県男鹿地方では、年中行事としてナマハゲが家々を訪れる伝承と実践が受け継がれている。地域の行事・信仰・暮らしに関わる来訪神の例として登録する。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "秋田県男鹿地方では、年中行事としてナマハゲが家々を訪れる伝承と実践が受け継がれている。地域の行事・信仰・暮らしに関わる来訪神の例として登録する。",
+  "story_content": "",
+  "region": {
+    "prefecture": "秋田県",
+    "historical_province": null,
+    "municipality": "男鹿市",
+    "area_name": "男鹿半島の集落"
+  },
+  "locations": [
+    {
+      "name": "男鹿半島の集落",
+      "type": "伝承地域",
+      "description": "地域レベルの調査候補。個別地点は未確定。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "来訪神",
+      "type": "伝承・信仰対象",
+      "description": "来訪神に関する伝承候補。"
+    }
+  ],
+  "themes": [
+    "来訪神"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "medium",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "候補管理用の仮レコード。一次資料・個別の伝承名・正確な地域が確認できるまで、確定した個別伝承として公開しない。次段階で公的文化財資料、地域史、日文研DB等を照合し、確認できなければ削除または候補一覧へ移す。"
+}
