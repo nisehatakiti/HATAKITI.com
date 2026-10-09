@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamanashi-doshi-daija-wooden-bridge",
+  "status": "draft",
+  "title": "道志・丸木橋に化けた大蛇",
+  "title_normalized": "道志・丸木橋に化けた大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山梨県南都留郡道志村の採録。渓流へ網打ちに行った男が見慣れない丸木橋を渡ると、橋が動き出し、実は大蛇だったと気づく。大蛇は草ずれの音を立てて薮へ消えたという。また、巨木に巻き付く大蛇を見たという話も記録されている。",
+    "based_on_source_ids": [
+      "yamanashi-doshi-daija-wooden-bridge-src"
+    ]
+  },
+  "story_summary": "丸木橋だと思って渡ったものが動き出し、大蛇だったとわかる。日常の風景に潜む大蛇の怪異を語る道志村の伝承。",
+  "story_content": "伊藤堅吉「道志炉辺談」に採録された話。ある男が渓流へ網打ちに行くと、見慣れない丸木橋が架かっていた。戸惑いながらも渡ると橋が動き出し、それが大蛇であることがわかった。大蛇は草ずれの音を立てながら薮へ姿を消したという。同じ資料には、巨木に巻き付く大蛇について語った老母の話も記録されている。",
+  "region": {
+    "prefecture": "山梨県",
+    "historical_province": "甲斐",
+    "municipality": "道志村",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "渓流",
+      "type": "自然地形",
+      "description": "男が網打ちに出かけ、丸木橋に見えた大蛇と遭遇した場所。",
+      "source_ids": [
+        "yamanashi-doshi-daija-wooden-bridge-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "網打ちに出かけた男",
+      "type": "人間",
+      "description": "渓流で丸木橋と思ったものを渡り、大蛇に遭遇する。",
+      "source_ids": [
+        "yamanashi-doshi-daija-wooden-bridge-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "丸木橋に見える姿で人を驚かせ、草ずれの音を立てて薮へ消える。",
+      "source_ids": [
+        "yamanashi-doshi-daija-wooden-bridge-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "変化",
+    "渓流",
+    "丸木橋",
+    "山村伝承"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "怪異譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamanashi-doshi-daija-wooden-bridge-src",
+      "title": "道志炉辺談",
+      "publisher": "山村民俗の会（『あしなか』通巻47号）",
+      "publication_date": "1955-07",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030139",
+      "relevant_section": "掲載頁16",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの要約に基づく。別段に記された巨木の大蛇も、同じ資料内の別の語りとして区別した。"
+}
