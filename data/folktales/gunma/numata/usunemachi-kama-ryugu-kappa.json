@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gunma-numata-usunemachi-kama-ryugu-kappa",
+  "status": "draft",
+  "title": "沼田・田釜川の深淵「釜」と河童",
+  "title_normalized": "沼田・田釜川の深淵「釜」と河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "群馬県沼田市薄根町を流れる田釜川には、大岩が立ち並ぶ深い淵があり、「釜」と呼ばれている。その一部は竜宮に通じ、河童が住むとも語り継がれている。",
+    "based_on_source_ids": [
+      "gunma-numata-kama-kappa-src"
+    ]
+  },
+  "story_summary": "大岩が並ぶ田釜川の深い淵「釜」の一部は竜宮に通じ、河童が住むと伝えられる。",
+  "story_content": "直江広治「利根川流域における水神信仰」に記録された群馬県沼田市薄根町の伝承。旧薄根村内を流れる田釜川には、大岩が立ち並ぶ深い淵があり、「釜」と呼ばれる。その淵の一部は竜宮に通じ、河童が住むとも語り継がれている。ここで重要なのは、河童が人を襲う具体的な事件ではなく、岩の並ぶ深淵という地形、固有の呼称「釜」、竜宮への接続、河童の居住伝承が一つの場所に重なっている点である。資料要約には河童の行動や目撃談、現在の安全な訪問経路までは記載されていないため、追加していない。",
+  "region": {
+    "prefecture": "群馬県",
+    "historical_province": "上野",
+    "municipality": "沼田市薄根町",
+    "area_name": "田釜川の淵「釜」"
+  },
+  "locations": [
+    {
+      "name": "田釜川の「釜」と呼ばれる淵",
+      "type": "河川・淵",
+      "description": "大岩が立ち並ぶ深い淵。竜宮に通じ、河童が住むとも語られる。正確な現在地・訪問可否は別途確認が必要。",
+      "source_ids": [
+        "gunma-numata-kama-kappa-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "田釜川の深い淵「釜」に住むとも語られる。",
+      "source_ids": [
+        "gunma-numata-kama-kappa-src"
+      ]
+    },
+    {
+      "name": "竜宮",
+      "type": "水界・異界",
+      "description": "淵の一部が通じているとされる水中の異界。",
+      "source_ids": [
+        "gunma-numata-kama-kappa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "田釜川",
+    "釜と呼ばれる淵",
+    "竜宮",
+    "水神信仰",
+    "深淵の禁忌"
+  ],
+  "story_type": [
+    "水辺の伝承",
+    "河童伝承",
+    "異界への入口"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "gunma-numata-kama-kappa-src",
+      "title": "利根川流域における水神信仰",
+      "publisher": "九学会連合（開明堂）『人類科学』通巻22号",
+      "publication_date": "1970-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1130007",
+      "relevant_section": "掲載頁195–196",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード1130007に基づく。記録された地域名・淵の呼称・竜宮との関係のみを採録し、現地地点の精度や河童の具体的行動は推測で補わない。"
+}
