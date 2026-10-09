@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamagata-mogami-kappa-iron-kettle-lid",
+  "status": "draft",
+  "title": "最上川・鉄瓶の蓋で河童の尻を守った話",
+  "title_normalized": "最上川・鉄瓶の蓋で河童の尻を守った話",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山形県の最上川流域の伝承。尻子玉を狙う河童に備えて、あらかじめ鉄瓶の蓋を尻にはめ込んでいた人に河童がかぶりついた。河童の歯は折れ、河童は泣きながら川へ沈み、二度と上がってこなかったという。",
+    "based_on_source_ids": [
+      "yamagata-mogami-kappa-iron-kettle-lid-src"
+    ]
+  },
+  "story_summary": "河童の尻子玉取りに備えて鉄瓶の蓋を使い、河童の歯を折って撃退した話。",
+  "story_content": "『最上川の民話』に記録された山形県の伝承。尻子玉を狙ってきた河童に対し、人はあらかじめ鉄瓶の蓋を尻にはめ込んで備えていた。河童がかぶりつくと歯が折れ、河童は泣きながら川へ沈み、二度と上がってこなかったという。河童の襲撃に対して、人間が先回りの工夫で身を守る話として記録する。",
+  "region": {
+    "prefecture": "山形県",
+    "historical_province": "出羽",
+    "municipality": null,
+    "area_name": "最上川流域"
+  },
+  "locations": [
+    {
+      "name": "川",
+      "type": "川",
+      "description": "河童が沈んでいった場所。個別の地点は資料カードに記されていない。",
+      "source_ids": [
+        "yamagata-mogami-kappa-iron-kettle-lid-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "河童に備えた人",
+      "type": "人間",
+      "description": "尻子玉を狙う河童に備え、鉄瓶の蓋を尻にはめ込んでいた。",
+      "source_ids": [
+        "yamagata-mogami-kappa-iron-kettle-lid-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "尻子玉を狙ってかぶりつくが、鉄瓶の蓋によって歯を折り、川へ沈んだ。",
+      "source_ids": [
+        "yamagata-mogami-kappa-iron-kettle-lid-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "尻子玉",
+    "鉄瓶の蓋",
+    "機転",
+    "撃退"
+  ],
+  "story_type": [
+    "河童退治譚",
+    "機知譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamagata-mogami-kappa-iron-kettle-lid-src",
+      "title": "最上川の民話",
+      "publisher": "一声社（『季刊民話』通巻2号）",
+      "publication_date": "1975-03-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0590031",
+      "relevant_section": "掲載頁11–13",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。市町村の情報がないため山形県・最上川流域として記録。"
+}
