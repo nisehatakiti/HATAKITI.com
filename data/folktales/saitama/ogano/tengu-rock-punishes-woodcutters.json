@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saitama-ogano-tengu-rock-punishes-woodcutters",
+  "status": "draft",
+  "title": "天狗を敬わず岩に襲われた川狩り人夫",
+  "title_normalized": "天狗を敬わず岩に襲われた川狩り人夫",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "埼玉県秩父地方の伝承では、腕のよい川狩り人夫が大仕事を控えた日に天狗へ御神酒を供えず、悪口を言っていた。仕事中に黒雲と雷鳴が起こり、山のような岩が飛んできて材木を埋め、若者は姿を消した。天狗の仕返しと伝えられる。",
+    "based_on_source_ids": [
+      "1240005"
+    ]
+  },
+  "story_summary": "天狗への礼を欠いた人夫が、仕事中に飛来した大岩に襲われるという祟り譚。",
+  "story_content": "小林茂「天狗の岩」によると、腕のいい川狩り人夫が大仕事を控えた日に、天狗様へ御神酒を供えず、悪口を言っていた。仕事中、突然黒雲が現れ、雷鳴が轟き、山ほどもある岩が人夫の上へ飛んできた。材木は岩の下に埋まり、若者は姿を消したという。人々は天狗の仕返しだと語った。",
+  "region": {
+    "prefecture": "埼玉県",
+    "historical_province": "武蔵国",
+    "municipality": "小鹿野町",
+    "area_name": "秩父地方"
+  },
+  "locations": [
+    "山林",
+    "川狩りの作業場"
+  ],
+  "characters": [
+    "川狩り人夫"
+  ],
+  "beings": [
+    "天狗"
+  ],
+  "themes": [
+    "祟り",
+    "供物",
+    "山の怪異",
+    "岩"
+  ],
+  "story_type": [
+    "祟り譚",
+    "妖怪伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1240005",
+      "title": "天狗の岩",
+      "publisher": "秩父民俗研究会（『秩父民俗』通巻1号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1240005",
+      "publication_date": "1968-05-01",
+      "relevant_section": "掲載頁40–43",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。地域はカードの市郡名「秩父市」と区町村名「小鹿野町」を踏まえ、現行自治体名の小鹿野町を記載。"
+}
