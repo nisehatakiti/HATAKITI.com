@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gifu-hida-tengu-mountain-work",
+  "status": "draft",
+  "title": "飛騨・山仕事と天狗",
+  "title_normalized": "飛騨・山仕事と天狗",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "岐阜県飛騨地方では、山仕事の際に天狗の領分を侵すことを避ける考え方が伝えられ、山中の異変を天狗と結び付けて説明する伝承が記録されている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "岐阜県飛騨地方では、山仕事の際に天狗の領分を侵すことを避ける考え方が伝えられ、山中の異変を天狗と結び付けて説明する伝承が記録されている。",
+  "story_content": "岐阜県飛騨地方では、山仕事の際に天狗の領分を侵すことを避ける考え方が伝えられ、山中の異変を天狗と結び付けて説明する伝承が記録されている。",
+  "region": {
+    "prefecture": "岐阜県",
+    "historical_province": null,
+    "municipality": "飛騨地方",
+    "area_name": "山林・山仕事の場"
+  },
+  "locations": [
+    {
+      "name": "山林・山仕事の場",
+      "type": "伝承地域",
+      "description": "日文研の伝承検索で確認された地域情報。正確な個別地点・記録IDは追加確認が必要。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "天狗に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "source_record_verification_needed",
+  "research_notes": "伝承の概要は日文研データベースの検索結果に基づく候補。正確な個別カードURL・原資料・地点を照合してから確定扱いにする。"
+}
