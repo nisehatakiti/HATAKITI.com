@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tottori-fukube-tane-ga-ike-beauty-snake",
+  "status": "draft",
+  "title": "福部・おたねと稚児僧、池の大蛇",
+  "title_normalized": "福部・おたねと稚児僧、池の大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "鳥取市福部町の多鯰ヶ池に伝わる別の話。おたねという美女が美しい稚児僧に恋焦がれて病気になった。法印が鏡に正体を映すと蛇だったため、池の主になるよう引導を渡すと、おたねは大蛇となって池に身を沈めたという。",
+    "based_on_source_ids": [
+      "tottori-fukube-tane-ga-ike-beauty-snake-src"
+    ]
+  },
+  "story_summary": "稚児僧に恋したおたねの正体は蛇だった。法印に池の主になるよう告げられると、大蛇となって池に沈んだという。",
+  "story_content": "鷲見貞雄「鳥取城下の民話」に記録された多鯰ヶ池のもう一つの伝説。おたねという美女が美しい稚児僧に恋焦がれ、病気になった。法印が鏡におたねの姿を映すと、正体は蛇であった。法印が池の主になれと引導を渡すと、おたねは大蛇となって砂丘の池に蛇体を没したという。池は「たねが池」と呼ばれるようになったと説明される。",
+  "region": {
+    "prefecture": "鳥取県",
+    "historical_province": "因幡",
+    "municipality": "鳥取市福部町",
+    "area_name": "多鯰ヶ池"
+  },
+  "locations": [
+    {
+      "name": "多鯰ヶ池（たねが池）",
+      "type": "池",
+      "description": "おたねが大蛇となって身を沈め、池の名の由来になったとされる。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-beauty-snake-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "おたね",
+      "type": "人物・変化譚の主人公",
+      "description": "稚児僧に恋焦がれ、正体を見破られた後に大蛇となる。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-beauty-snake-src"
+      ]
+    },
+    {
+      "name": "法印",
+      "type": "僧侶",
+      "description": "鏡によっておたねの正体を見破り、池の主になるよう告げる。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-beauty-snake-src"
+      ]
+    },
+    {
+      "name": "稚児僧",
+      "type": "人物",
+      "description": "おたねが恋焦がれた美しい僧。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-beauty-snake-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "おたねの正体として現れ、池の主になると語られる。",
+      "source_ids": [
+        "tottori-fukube-tane-ga-ike-beauty-snake-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "池の主",
+    "恋",
+    "正体",
+    "地名由来"
+  ],
+  "story_type": [
+    "蛇伝承",
+    "変化譚",
+    "地名由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tottori-fukube-tane-ga-ike-beauty-snake-src",
+      "title": "鳥取城下の民話",
+      "publisher": "一声社（『季刊民話』通巻7号）",
+      "publication_date": "1976-06-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0590192",
+      "relevant_section": "掲載頁72–73",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "同一カードに併記された女中たねの話と区別して登録。資料が伝える由来説明を記録し、歴史的事実としては断定しない。"
+}
