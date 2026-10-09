@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "wakayama-aridagawa-kamafuchi-daija-sickle-rainmaking",
+  "status": "draft",
+  "title": "有田川・鎌淵の大蛇と雨乞いの鎌",
+  "title_normalized": "有田川・鎌淵の大蛇と雨乞いの鎌",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "和歌山県有田川町の鎌淵では、水中に鎌を吊り下げておくと、鎌が大蛇の頭に当たり、大蛇が怒って雨を降らせると伝えられた。",
+    "based_on_source_ids": [
+      "wakayama-aridagawa-kamafuchi-daija-sickle-rainmaking-src"
+    ]
+  },
+  "story_summary": "淵に鎌を吊り下げ、大蛇を怒らせることで雨を降らせるという雨乞い伝承。",
+  "story_content": "高谷重夫「農耕儀礼」に記録された有田川町の伝承。カマ淵の水中に鎌を吊り下げておくと、それが大蛇の頭に当たり、大蛇が怒って雨を降らせるという。雨乞いのために水の主を刺激する行為として、資料にある短い説明をそのままの範囲で記録する。",
+  "region": {
+    "prefecture": "和歌山県",
+    "historical_province": "紀伊",
+    "municipality": "有田川町",
+    "area_name": "カマ淵"
+  },
+  "locations": [
+    {
+      "name": "カマ淵",
+      "type": "淵",
+      "description": "水中に鎌を吊り下げる雨乞いが行われたとされる場所。",
+      "source_ids": [
+        "wakayama-aridagawa-kamafuchi-daija-sickle-rainmaking-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪・淵の主",
+      "description": "頭に鎌が当たると怒り、雨を降らせるとされる。",
+      "source_ids": [
+        "wakayama-aridagawa-kamafuchi-daija-sickle-rainmaking-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い",
+    "鎌",
+    "淵の主",
+    "怒りと雨"
+  ],
+  "story_type": [
+    "雨乞い伝承",
+    "大蛇伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "wakayama-aridagawa-kamafuchi-daija-sickle-rainmaking-src",
+      "title": "農耕儀礼",
+      "publisher": "近畿民俗学会（『近畿民俗』通巻66・67・68号）",
+      "publication_date": "1976-05-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0700206",
+      "relevant_section": "掲載頁27",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。富山の樽見ヶ池の鎌による雨乞いと類似するが、地域と伝承地が異なるため独立して記録。"
+}
