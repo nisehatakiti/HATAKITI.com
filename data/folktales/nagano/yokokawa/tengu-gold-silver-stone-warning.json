@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-yokokawa-tengu-gold-silver-stone-warning",
+  "status": "draft",
+  "title": "横川山の天狗と金銀の混じった石",
+  "title_normalized": "横川山の天狗と金銀の混じった石",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "横川山に天狗が住み、笛や太鼓の音が聞こえるという。藤蔓を採りに入山した男は、道案内をした白髪の老人に弁当を分けた礼として金銀の混じった石をもらうが、他人に分けてはいけないという禁を破った知人は三日目に死んだと伝えられる。",
+    "based_on_source_ids": [
+      "nagano-yokokawa-tengu-gold-silver-stone-warning-src"
+    ]
+  },
+  "story_summary": "山中で親切にした男が不思議な石を授かるが、石を分け与えた相手に災いが及ぶという天狗伝承。",
+  "story_content": "有賀恭一「諏訪の石」に記録された長野県の伝承。横川山には天狗が住み、笛や太鼓の音がするといわれた。藤蔓を採りに山へ入った男は、道案内をしてくれた白髪の老人に弁当を分けた。老人は礼として金銀の混じった石を与え、他の者に分けてはいけないと告げた。しかし男がうっかり知人に分けると、その知人は三日目に死んだという。老人が天狗そのものだったかは要約だけでは断定せず、天狗の住む山に関わる不思議な授与譚として記録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": null,
+    "area_name": "横川山"
+  },
+  "locations": [
+    {
+      "name": "横川山",
+      "type": "山",
+      "description": "天狗が住み、笛や太鼓の音が聞こえると伝えられる山。",
+      "source_ids": [
+        "nagano-yokokawa-tengu-gold-silver-stone-warning-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "藤蔓を採りに来た男",
+      "type": "人間",
+      "description": "山中で白髪の老人に弁当を分け、不思議な石を授かる。",
+      "source_ids": [
+        "nagano-yokokawa-tengu-gold-silver-stone-warning-src"
+      ]
+    },
+    {
+      "name": "白髪の老人",
+      "type": "謎の人物",
+      "description": "男を案内し、金銀の混じった石を礼として渡す。天狗との同一性は資料要約から断定できない。",
+      "source_ids": [
+        "nagano-yokokawa-tengu-gold-silver-stone-warning-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "横川山に住み、笛や太鼓の音を立てると伝えられる。",
+      "source_ids": [
+        "nagano-yokokawa-tengu-gold-silver-stone-warning-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "山の怪異",
+    "不思議な石",
+    "禁忌",
+    "授与譚",
+    "恩返し"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "禁忌譚",
+    "不思議な授与譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-yokokawa-tengu-gold-silver-stone-warning-src",
+      "title": "諏訪の石",
+      "publisher": "郷土発行所（『郷土』2巻1・2・3号）",
+      "publication_date": "1932-07-25",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0610042",
+      "relevant_section": "掲載頁198",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。市町村はカードに記載されていないため補完していない。白髪の老人が天狗と明記されていない点も保持した。"
+}
