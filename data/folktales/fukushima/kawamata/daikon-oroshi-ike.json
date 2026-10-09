@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukushima-daikon-oroshi-ike-daija",
+  "status": "draft",
+  "title": "福島・大根オロシ池の大蛇と雨乞い",
+  "title_normalized": "福島・大根オロシ池の大蛇と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福島県の伝承では、雨乞いの際に男たちが大根オロシ池へ集まり、鉄類や棒、杭を投げ込むと、池の主の大蛇が怒って雨を降らせるといわれた。",
+    "based_on_source_ids": [
+      "fukushima-daikon-oroshi-ike-daija-src"
+    ]
+  },
+  "story_summary": "福島県の伝承では、雨乞いの際に男たちが大根オロシ池へ集まり、鉄類や棒、杭を投げ込むと、池の主の大蛇が怒って雨を降らせるといわれた。",
+  "story_content": "福島県の伝承では、雨乞いの際に男たちが大根オロシ池へ集まり、鉄類や棒、杭を投げ込むと、池の主の大蛇が怒って雨を降らせるといわれた。",
+  "region": {
+    "prefecture": "福島県",
+    "historical_province": null,
+    "municipality": "福島県内",
+    "area_name": "大根オロシ池"
+  },
+  "locations": [
+    {
+      "name": "大根オロシ池",
+      "type": "伝承地・地域",
+      "description": "日文研の検索記録に記載された地域・地形。正確な地点は原資料を再確認して補完する。",
+      "source_ids": [
+        "fukushima-daikon-oroshi-ike-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "fukushima-daikon-oroshi-ike-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukushima-daikon-oroshi-ike-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=0700206",
+      "relevant_section": "福島・大根オロシ池の大蛇と雨乞い",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の検索記録に基づき登録。自治体・池名・伝承本文の対応は原資料を追加確認し、旅行用地図へ載せる前に地点精度を検証する。"
+}
