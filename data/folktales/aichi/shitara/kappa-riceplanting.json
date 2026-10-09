@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aichi-shitara-kappa-riceplanting",
+  "status": "draft",
+  "title": "設楽・田植えを手伝う河童",
+  "title_normalized": "設楽・田植えを手伝う河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛知県北設楽郡の淵に住む河童（カワランベ）が、田植えの時期に膳椀を貸し、田植えも手伝ったという。後に食事に蓼を入れられたことをきっかけに家に不幸が続いたという伝承も記録されている。",
+    "based_on_source_ids": [
+      "aichi-shitara-kappa-riceplanting-src"
+    ]
+  },
+  "story_summary": "愛知県北設楽郡の淵に住む河童（カワランベ）が、田植えの時期に膳椀を貸し、田植えも手伝ったという。後に食事に蓼を入れられたことをきっかけに家に不幸が続いたという伝承も記録されている。",
+  "story_content": "愛知県北設楽郡の淵に住む河童（カワランベ）が、田植えの時期に膳椀を貸し、田植えも手伝ったという。後に食事に蓼を入れられたことをきっかけに家に不幸が続いたという伝承も記録されている。",
+  "region": {
+    "prefecture": "愛知県",
+    "historical_province": null,
+    "municipality": "北設楽郡設楽町・東栄町",
+    "area_name": "淵・田植えの家"
+  },
+  "locations": [
+    {
+      "name": "淵・田植えの家",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "aichi-shitara-kappa-riceplanting-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "aichi-shitara-kappa-riceplanting-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aichi-shitara-kappa-riceplanting-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2240087",
+      "relevant_section": "設楽・田植えを手伝う河童",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
