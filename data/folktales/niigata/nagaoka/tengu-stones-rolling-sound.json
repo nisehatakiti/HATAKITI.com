@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-nagaoka-tengu-stones-rolling-sound",
+  "status": "draft",
+  "title": "長岡・天狗の投げつぶてと石ころがし",
+  "title_normalized": "長岡・天狗の投げつぶてと石ころがし",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県長岡市の山で桑摘みや山道歩きをしていると、どこからか石を投げつけるような音がして木々にぱらぱら当たる。しかし石そのものは見えず、「天狗の投げつぶて」と呼ばれた。また山の上から石が転がり落ちるような音がする現象は「天狗の石ころがし」と呼ばれた。",
+    "based_on_source_ids": [
+      "niigata-nagaoka-tengu-stones-rolling-sound-src"
+    ]
+  },
+  "story_summary": "石が木に当たる音や石の転がる音だけが聞こえる山の怪異を、天狗の仕業とした伝承。",
+  "story_content": "水沢謙一『新潟県史 資料編22 民俗1』に記録された長岡市の伝承。山の畑で桑摘みなどをしていたり、山道を歩いたりしていると、どこからか投げた石つぶてが木にぱらぱら当たるような音がする。石そのものは見えず、これを「天狗の投げつぶて」と呼んだ。また、山の上から石が転がり落ちるような音がする現象は「天狗の石ころがし」と呼ばれた。音だけが知覚され、原因となる石を確認できない点に特徴がある。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "長岡市",
+    "area_name": "山の桑畑・山道"
+  },
+  "locations": [
+    {
+      "name": "山の桑畑",
+      "type": "畑",
+      "description": "桑摘みなどの作業中に石つぶてのような音が聞こえるとされた場所。",
+      "source_ids": [
+        "niigata-nagaoka-tengu-stones-rolling-sound-src"
+      ]
+    },
+    {
+      "name": "山道",
+      "type": "道",
+      "description": "歩行中に石が木に当たる音や石が転がる音が聞こえるとされた。",
+      "source_ids": [
+        "niigata-nagaoka-tengu-stones-rolling-sound-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "見えない石つぶてや石ころがしの音の原因とされた。",
+      "source_ids": [
+        "niigata-nagaoka-tengu-stones-rolling-sound-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "投げつぶて",
+    "石ころがし",
+    "山の怪音",
+    "不可視の音"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "怪音伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-nagaoka-tengu-stones-rolling-sound-src",
+      "title": "第5編 5 第3節 6 天狗の石ころがし",
+      "publisher": "新潟県（『新潟県史 資料編22 民俗1』）",
+      "publication_date": "1982-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1510218-000",
+      "relevant_section": "掲載頁901–902",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。既存の長岡市内の天狗怪音記録とは、現象の内容が異なるため別記録としている。"
+}
