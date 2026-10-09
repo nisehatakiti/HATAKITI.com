@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-okaya-tengu-whooshing-over-mountain-pass",
+  "status": "draft",
+  "title": "岡谷・峠を轟音で飛び過ぎた天狗",
+  "title_normalized": "岡谷・峠を轟音で飛び過ぎた天狗",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県岡谷市の伝承。七、八人が峠で草刈りをしていたところ、空中をすさまじい音を立てて何かが通り過ぎた。通過後、人々はあれは天狗だったのだろうと話し合ったという。",
+    "based_on_source_ids": [
+      "nagano-okaya-tengu-whooshing-over-mountain-pass-src"
+    ]
+  },
+  "story_summary": "峠で草刈りをしていた人々が、空を轟音とともに通り過ぎる何かを天狗と考えた話。",
+  "story_content": "有賀恭一「信濃諏訪の天狗」に記録された岡谷市の伝承。七、八人が峠で草刈りをしていたとき、空中をすさまじい音を立てて通り過ぎるものがあった。何かが通過した後、人々はあれは天狗だと話し合ったという。姿を確認したとは記されていないため、轟音を伴う通過現象を天狗と解釈した伝承として記録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "岡谷市",
+    "area_name": "峠"
+  },
+  "locations": [
+    {
+      "name": "峠",
+      "type": "峠",
+      "description": "草刈りをしていた人々が空中の轟音を聞いた場所。固有名は資料にない。",
+      "source_ids": [
+        "nagano-okaya-tengu-whooshing-over-mountain-pass-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "草刈りをしていた人々",
+      "type": "人間",
+      "description": "七、八人で峠におり、轟音とともに何かが通り過ぎるのを聞いた。",
+      "source_ids": [
+        "nagano-okaya-tengu-whooshing-over-mountain-pass-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "空中を轟音とともに通過した存在として人々に推測された。",
+      "source_ids": [
+        "nagano-okaya-tengu-whooshing-over-mountain-pass-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "轟音",
+    "峠",
+    "草刈り",
+    "姿の見えない怪異"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "音の怪異"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-okaya-tengu-whooshing-over-mountain-pass-src",
+      "title": "信濃諏訪の天狗",
+      "publisher": "郷土研究社（『郷土研究』7巻1号）",
+      "publication_date": "1933-01-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640415",
+      "relevant_section": "掲載頁79–80",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。天狗の姿は見えたとされていないため、音による解釈として記録。"
+}
