@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kumamoto-unknown-area-kappa-yamawaro-seasonal-migration",
+  "status": "draft",
+  "title": "熊本・春彼岸に山から下り秋彼岸に山へ戻る河童",
+  "title_normalized": "熊本・春秋彼岸の河童・山童の季節移動",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "奥野広隆「山にのぼる河童」に収録された熊本県の採録では、「セコ」は春彼岸に山から下りて来て、秋彼岸には川を伝って山へ帰るとされる。河童系の存在の居場所が山と水辺の間で季節により変化する記録だが、カード上の地域は人吉市・上益城郡と複数地域にまたがるため、特定の町村には限定しない。",
+    "based_on_source_ids": [
+      "kumamoto-kappa-yamawaro-season-src"
+    ]
+  },
+  "story_summary": "「セコ」は春彼岸に山から人里・水辺側へ下り、秋彼岸には川を伝って山へ帰ると伝えられる。山と川を往来する時期が春秋彼岸という暦の節目で示されている。",
+  "story_content": "日文研怪異・妖怪伝承データベースのカード0570088「セコ」は、奥野広広「山にのぼる河童」（『季刊人類学』16巻1号、1985年）に収録された熊本県の記録である。要約には、春彼岸に山から降りて来て、秋彼岸に川を伝って山に帰るとある。\n\nこの記録では、移動する存在の呼称は「セコ」とされ、移動時期は春彼岸と秋彼岸で区切られる。宮崎県のカード0640255にある「冬は山、夏は川」という説明と共通して山・川の季節的な居場所を扱うが、移動の時期の示し方は異なる。また、熊本県上天草市龍ヶ岳町のシブヤサン祭祀・山童の記録は、地域の祭祀と子どもへの言葉としての残存に焦点がある。これらを同一の伝承とせず、季節移動、祭祀、呼称の用法という別の軸で比較する。カードの地域欄は人吉市・上益城郡とされ、町村や具体的な川筋は特定できないため補っていない。",
+  "region": {
+    "prefecture": "熊本県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "人吉市・上益城郡（カードの地域欄）"
+  },
+  "locations": [
+    {
+      "name": "熊本県内（人吉市・上益城郡）",
+      "type": "伝承地域",
+      "description": "日文研DBカードの地域欄は人吉市・上益城郡。特定の町村・川筋は未確認。",
+      "source_ids": [
+        "kumamoto-kappa-yamawaro-season-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "セコ",
+      "type": "河童・山童系の伝承存在",
+      "description": "春彼岸に山から下り、秋彼岸に川を伝って山へ帰ると記録される。",
+      "source_ids": [
+        "kumamoto-kappa-yamawaro-season-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "山童",
+    "セコ",
+    "季節移動",
+    "春彼岸",
+    "秋彼岸",
+    "山と川"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "季節伝承",
+    "山川境界伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "miyazaki-unknown-area-kappa-mountain-river-season",
+      "relationship": "regional_comparison"
+    },
+    {
+      "record_id": "kumamoto-amakusa-kappa-shibuyasan-yamawaro",
+      "relationship": "regional_comparison"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kumamoto-kappa-yamawaro-season-src",
+      "title": "セコ",
+      "author": "奥野広隆",
+      "work_title": "山にのぼる河童",
+      "publisher": "京都大学人類学研究室・講談社",
+      "publication_date": "1985-03-15",
+      "publication_year": 1985,
+      "volume_issue": "季刊人類学16巻1号",
+      "pages": "168–211",
+      "relevant_section": "198頁",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0570088",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion_source_verified",
+  "research_notes": "2026-10-09作成。個別カード0570088の呼称・地域欄・掲載頁・要約に基づく。カードの地域欄は人吉市・上益城郡と広く、単一自治体や特定の河川名は推測で追加していない。宮崎県の冬山・夏川型とは移動時期の記述が異なるため、同一記録に統合せず比較リンクを設定。"
+}
