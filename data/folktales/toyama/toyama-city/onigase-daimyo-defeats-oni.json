@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-toyama-city-onigase-daimyo-defeats-oni",
+  "status": "draft",
+  "title": "鬼ヶ瀬の鬼と轡田豊後守",
+  "title_normalized": "鬼ヶ瀬の鬼と轡田豊後守",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "富山県富山市の伝承では、鬼ヶ瀬付近がまだ陸地だったころ、鬼が住み旅人を悩ませていた。轡田豊後守が一人で鬼と戦い、双方が気絶したが、風で団子の木から落ちた団子が殿の口に入り、先に目覚めた殿が鬼の首を取ったという。",
+    "based_on_source_ids": [
+      "2180423"
+    ]
+  },
+  "story_summary": "鬼と相打ちのように倒れた殿様が、偶然落ちてきた団子で目を覚まし、鬼を討つ話。",
+  "story_content": "種瓜平「伝説と行事」に収録された富山県富山市の伝承では、昔、鬼ヶ瀬のあたりが陸地だったころ、鬼が住んで旅人を苦しめていた。轡田豊後守という殿様が一人で鬼と戦い、双方とも気絶した。すると一陣の風で団子の木から団子が落ち、殿様の口に入ったため目を覚まし、鬼の首を取ることができたという。地形の変化に関する冒頭は、資料に記された伝承の枠組みとして残している。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": "越中国",
+    "municipality": "富山市",
+    "area_name": "鬼ヶ瀬"
+  },
+  "locations": [
+    "鬼ヶ瀬"
+  ],
+  "characters": [
+    "轡田豊後守"
+  ],
+  "beings": [
+    "鬼"
+  ],
+  "themes": [
+    "鬼退治",
+    "地名由来",
+    "偶然の助け"
+  ],
+  "story_type": [
+    "鬼退治譚",
+    "地名伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "2180423",
+      "title": "伝説と行事",
+      "publisher": "六人社（『民間伝承』24巻6号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180423",
+      "publication_date": "1960-11-05",
+      "relevant_section": "掲載頁29",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。地名「鬼ヶ瀬」の現在の行政上の範囲は未確認のため、市町村より細かい所在地は断定しない。"
+}
