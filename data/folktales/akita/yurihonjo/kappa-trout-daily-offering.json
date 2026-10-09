@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "akita-yurihonjo-kappa-trout-daily-offering",
+  "status": "draft",
+  "title": "由利本荘・河童が約束した毎朝の鱒",
+  "title_normalized": "由利本荘・河童が約束した毎朝の鱒",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "秋田県由利本荘市の伝承。馬の手綱に絡まっていた河童が見つかり、殺されそうになったところ、毎朝鱒を届けると約束して助けられた。しかし、下女が戸口の柱に鎌を掛けたままにしてから、鱒は届かなくなったという。",
+    "based_on_source_ids": [
+      "akita-yurihonjo-kappa-trout-daily-offering-src"
+    ]
+  },
+  "story_summary": "捕らえられた河童が命を助けてもらう代わりに毎朝鱒を届ける約束をしたが、鎌を掛けたことを境に贈り物が途絶えた話。",
+  "story_content": "早川孝太郎「諸国河童談」に記録された由利本荘市の伝承。河童が馬の手綱に絡まっているところを見つけられ、殺されそうになった。河童は毎朝鱒を届けると約束し、その約束によって助けられた。しかし、あるとき下女が戸錠前の柱に鎌を掛けたままにしていたところ、それから鱒は届けられなくなったという。約束による贈与と、家の側の行為を境に贈与が途絶える展開を記録する。",
+  "region": {
+    "prefecture": "秋田県",
+    "historical_province": "出羽",
+    "municipality": "由利本荘市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "馬の持ち主",
+      "type": "人間",
+      "description": "手綱に絡まった河童を見つけ、約束を受けて助けた人物。",
+      "source_ids": [
+        "akita-yurihonjo-kappa-trout-daily-offering-src"
+      ]
+    },
+    {
+      "name": "下女",
+      "type": "人間",
+      "description": "戸口の柱に鎌を掛けたままにし、その後、鱒が届かなくなった出来事に関わる。",
+      "source_ids": [
+        "akita-yurihonjo-kappa-trout-daily-offering-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "命を助けられる代わりに毎朝鱒を届けると約束する。",
+      "source_ids": [
+        "akita-yurihonjo-kappa-trout-daily-offering-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "約束",
+    "鱒",
+    "贈与",
+    "鎌",
+    "禁忌"
+  ],
+  "story_type": [
+    "河童譚",
+    "約束譚",
+    "贈与譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "akita-yurihonjo-kappa-trout-daily-offering-src",
+      "title": "諸国河童談",
+      "publisher": "民俗学会（『民俗学』1巻3号）",
+      "publication_date": "1929-09-10",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260024",
+      "relevant_section": "掲載頁67–68",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。「戸錠前」の語は原資料カードの表記を踏襲。鎌を掛けたことと贈与の停止の因果は伝承の語りとして記録する。"
+}
