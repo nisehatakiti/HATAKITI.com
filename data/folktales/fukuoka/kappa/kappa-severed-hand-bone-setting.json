@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukuoka-kappa-severed-hand-bone-setting",
+  "status": "draft",
+  "title": "福岡・河童の手を返して接骨法を習う",
+  "title_normalized": "福岡・河童の手を返して接骨法を習う",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福岡県の伝承。接骨医が夜に便所へ行くと、尻を撫でる手があったため切り落とした。それは河童の手で、毎夜「手を返せ」と声がする。手を返す代わりに、接骨医は接骨法を習ったという。",
+    "based_on_source_ids": [
+      "fukuoka-kappa-severed-hand-bone-setting-src"
+    ]
+  },
+  "story_summary": "河童の手を切り落とした接骨医が、手を返す代わりに接骨法を教わる話。",
+  "story_content": "中田千畝「河童の妙薬」に記録された福岡県の伝承。接骨医が夜に便所へ行くと、尻をなでまわす手があった。手を切り落とすと河童の手であり、その後、毎夜「手を返せ」という河童の声がした。接骨医は手を返す代わりに接骨法を習ったという。埼玉県熊谷の「傷薬の処方を教わる」伝承とは、同じ文献題名・河童の手を返す構造を持つが、地域と授けられる技術が異なるため別記録として扱う。",
+  "region": {
+    "prefecture": "福岡県",
+    "historical_province": "筑前・筑後・豊前のいずれかは特定不可",
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "便所",
+      "type": "便所",
+      "description": "接骨医が怪しい手に尻をなでられた場所。",
+      "source_ids": [
+        "fukuoka-kappa-severed-hand-bone-setting-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "接骨医",
+      "type": "人間",
+      "description": "河童の手を切り落とし、返す代わりに接骨法を習った。",
+      "source_ids": [
+        "fukuoka-kappa-severed-hand-bone-setting-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "夜に人の尻をなで、切り落とされた手を返すよう求めた。",
+      "source_ids": [
+        "fukuoka-kappa-severed-hand-bone-setting-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "接骨法",
+    "切られた手",
+    "返礼",
+    "技術の伝授"
+  ],
+  "story_type": [
+    "河童伝承",
+    "知識授与譚",
+    "異類との交渉"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukuoka-kappa-severed-hand-bone-setting-src",
+      "title": "河童の妙薬",
+      "publisher": "三元社（『旅と伝説』通巻2号）",
+      "publication_date": "1928-02-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230007",
+      "relevant_section": "掲載頁6",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの要約に基づく。市町村名が示されていないため県単位で記録。"
+}
