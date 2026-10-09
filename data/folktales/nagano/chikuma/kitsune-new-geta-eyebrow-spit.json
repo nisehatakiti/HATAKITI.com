@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-chikuma-kitsune-new-geta-eyebrow-spit",
+  "status": "draft",
+  "title": "長野・新しい下駄と狐よけの眉唾",
+  "title_normalized": "長野・新しい下駄と狐よけの眉唾",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野市・千曲市・埴科郡坂城町の一部に伝わる言い習わし。夜に新しい下駄を履くと狐に化かされるとされ、野原へ行くときは眉毛に唾をつけて毛を固めると狐に化かされないという。狐は眉毛の数で人を化かすとも語られた。",
+    "based_on_source_ids": [
+      "nagano-chikuma-kitsune-new-geta-eyebrow-spit-src"
+    ]
+  },
+  "story_summary": "夜に新しい下駄を履くことを避け、眉毛に唾をつけて狐よけにするという言い習わし。",
+  "story_content": "荒井きい「言ひ慣なし」に記録された長野県の言い習わし。夜に新しい下駄を履くと狐に化かされるといわれた。また、野原へ行くときは眉毛に唾をつけて毛を固めておけば狐に化かされないとされた。狐は眉毛の数によって人を化かすという説明も記録されている。具体的な物語というより、狐に化かされないための禁忌・予防法として扱う。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "長野市・千曲市・埴科郡坂城町の一部",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "夜の新しい下駄や眉毛に関する言い習わしの中で、人を化かす存在として語られる。",
+      "source_ids": [
+        "nagano-chikuma-kitsune-new-geta-eyebrow-spit-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐よけ",
+    "新しい下駄",
+    "眉毛",
+    "唾",
+    "禁忌"
+  ],
+  "story_type": [
+    "言い習わし",
+    "妖怪回避の習俗"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-chikuma-kitsune-new-geta-eyebrow-spit-src",
+      "title": "言ひ慣なし",
+      "publisher": "郷土発行所（『郷土』1巻1号）",
+      "publication_date": "1930-10-30",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0610017",
+      "relevant_section": "掲載頁118",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。地域欄はカードに記載された複数地域を保持し、単一の自治体に絞っていない。"
+}
