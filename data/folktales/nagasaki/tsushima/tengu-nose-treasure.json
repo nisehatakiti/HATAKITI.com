@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-tsushima-tengu-nose-treasure",
+  "status": "draft",
+  "title": "対馬・天狗から授かった鼻の宝物",
+  "title_normalized": "対馬・天狗から授かった鼻の宝物",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県対馬市の昔話では、道楽息子が天狗から鼻を自由に高くしたり低くしたりできる宝物をもらい、それを使って姫の婿になるが、鼻が元に戻らず天へ昇って死んだという話が記録されている。",
+    "based_on_source_ids": [
+      "nagasaki-tsushima-tengu-nose-treasure-src"
+    ]
+  },
+  "story_summary": "長崎県対馬市の昔話では、道楽息子が天狗から鼻を自由に高くしたり低くしたりできる宝物をもらい、それを使って姫の婿になるが、鼻が元に戻らず天へ昇って死んだという話が記録されている。",
+  "story_content": "長崎県対馬市の昔話では、道楽息子が天狗から鼻を自由に高くしたり低くしたりできる宝物をもらい、それを使って姫の婿になるが、鼻が元に戻らず天へ昇って死んだという話が記録されている。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": null,
+    "municipality": "対馬市",
+    "area_name": "対馬"
+  },
+  "locations": [
+    {
+      "name": "対馬",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。",
+      "source_ids": [
+        "nagasaki-tsushima-tengu-nose-treasure-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "天狗に関する地域伝承。",
+      "source_ids": [
+        "nagasaki-tsushima-tengu-nose-treasure-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-tsushima-tengu-nose-treasure-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載の年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231002",
+      "relevant_section": "対馬・天狗から授かった鼻の宝物",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく。後段で原資料の全文、現地地点の精度、旅行者向け情報を補完する。"
+}
