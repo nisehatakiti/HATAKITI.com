@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-koganehara-shikagari-hata","status":"draft","title":"山中家に伝わる小金原鹿狩りの人足の旗","title_normalized":"山中家に伝わる小金原鹿狩りの人足の旗","title_origin":"source_title",
+  "summary":{"text":"浦安・当代島の山中家に、江戸期に松戸の小金原で行われた徳川将軍の御鹿狩りの際、当代島村の人足十六人を率いた旗が伝わり、現在は浦安市役所に納められているという伝承。","based_on_source_ids":["SRC-JFOLKLORE-SHIKAGARI"]},
+  "story_summary":"浦安市当代島（現・葛南病院付近）にあった山中家には、徳川将軍の御鹿狩に使われた旗が伝わっていた。語り手の代で十七代目という山中家の先祖が、このあたりの人足を集めて小金原の鹿狩りに出たと伝えられ、旗は現在、浦安の役場に納められている。",
+  "story_content":"葛南病院の前に、木の茂ったわらぶきの農家があった。山中家といい、語り手の代で十七代目、家の周りには堀がめぐっていたという。この家には、徳川将軍の御鹿狩に使った旗が伝わっており、山中のじい様がこのあたりの人足を集めて狩り出しに出たと伝えられている。旗は現在、浦安の役場に納めてある。\n\n御鹿狩は三代にわたって松戸の小金原で行われ、銚子から茨城・栃木、上総まで十六万八千人もの人足が集められたという。「人足十六人当代島村」と記した旗を先頭に立てて獲物を追い、御立場の近くで大筒の合図とともに侍が獲物を射止めたと伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"当代島（葛南病院付近）","source_description":"市川の伝承民話の会が編んだ『市川の伝承民話 第1集』に収録。"},
+  "locations":[{"name":"山中家（当代島・葛南病院付近）","location_type":"historical_house","description":"小金原鹿狩りの人足の旗が伝わった家。十七代続いた農家とされる。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-SHIKAGARI"]},{"name":"小金原（松戸）","location_type":"historical_site","description":"徳川将軍の御鹿狩が三代にわたって行われたとされる場所。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-JFOLKLORE-SHIKAGARI"]}],
+  "characters":[{"name":"山中のじい様","role":"当代島村の人足十六人を率いて小金原の鹿狩りに出たと伝えられる人物","attributes":[],"source_ids":["SRC-JFOLKLORE-SHIKAGARI"]}],
+  "beings":[],
+  "themes":["御鹿狩","小金原","当代島","山中家","江戸時代"],"story_type":["人物伝承","歴史伝承","地域伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-SHIKAGARI","title":"山中家に伝わる小金原鹿狩りの人足の旗（日本伝承マップ：市川の伝承民話 第1集より）","publisher":"日本伝承マップ（j-folklore.com）／原典：市川民話の会『市川の伝承民話 第1集』（昭和55年頃刊）","author":null,"publication_date":"1980年頃","source_type":"digital_archive","url":"https://j-folklore.com/l/book_456_ep_085.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『市川の伝承民話 第1集』所収のあらすじを直接確認し、HATAKITI.com独自の文章として再構成した。市川民話の会の資料だが、伝承地・旧跡は浦安市当代島のため浦安のrecordとして登録する。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"新規発見。千葉県立図書館の浦安市民話索引には本題そのものは未確認だが、日本伝承マップ経由で『市川の伝承民話 第1集』所収のあらすじを確認した。小金原の御鹿狩自体は江戸時代の記録に残る歴史的行事であり、旗の実在・現所在（浦安市役所）については原本未確認のため、伝承として記録する。"
+}

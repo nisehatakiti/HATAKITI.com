@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-moon-tanuki","status":"draft","title":"月に化けたタヌキ","title_normalized":"月に化けたタヌキ","title_origin":"source_title",
+  "summary":{"text":"大蓮寺の銀杏の木の上に、本物の月とは別に光のない白い月がもう一つ現れ、『オーレ、エッケ』とはやし立てるとどんどん大きくなって破裂し、その正体はタヌキだったという伝承。","based_on_source_ids":["SRC-JFOLKLORE-MOON-TANUKI"]},
+  "story_summary":"浦安・堀江の大蓮寺で、本物の月が出ているのに、境内の銀杏の木の上にもう一つ光のない白い月が現れた。そこで『オーレ、エッケ（大きい）』とはやし立てると、月はどんどん大きくなり、しまいには破裂してしまった。その正体はタヌキだったという。",
+  "story_content":"浦安で語られた話である。タヌキというのはずいぶん間の抜けたもので、本物の月が出ているのに、大蓮寺の銀杏の木の上にもう一つ月を出すという。その月には光もなく、ただ白いものが大きく浮かんでいるだけだった。\n\nそこで誰かが『オーレ、エッケ（大きい）』とはやし立てると、月はどんどん大きくなり、しまいには破裂してしまった。その正体はタヌキだったのだという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"堀江・大蓮寺","source_description":"千葉県立図書館の浦安市民話索引では『浦安の昔ばなし』（1984）の堀江・大蓮寺採録として『月に化けたタヌキ』が掲載されている。"},
+  "locations":[{"name":"大蓮寺","location_type":"temple","description":"境内の銀杏の木の上にタヌキが化けた白い月が現れたと伝えられる寺院。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-MOON-TANUKI"]}],
+  "characters":[],
+  "beings":[{"name":"タヌキ","type":"animal","attributes":["銀杏の木の上に偽の月を出す","はやし立てられると大きくなって破裂する"],"source_ids":["SRC-JFOLKLORE-MOON-TANUKI"]}],
+  "themes":["タヌキ","月","大蓮寺","化かし"],"story_type":["動物怪異譚","化かし話"],
+  "related_records":[{"record_id":"chiba-urayasu-moon-mujina","relationship":"title_distinction","note":"『月に化けた狢』（1992年版）とは別タイトルとして区別する。"},{"record_id":"chiba-urayasu-moon-mujina-1984","relationship":"title_distinction","note":"『月に化けたムジナ』（1984年版・猫実）とは地域（堀江・大蓮寺 vs 猫実）が異なるため別タイトルとして区別する。"},{"record_id":"chiba-ichikawa-otsukisama-ga-bee","relationship":"related_tradition_group","note":"行徳の『お月様がべーえ』と同じ化けの月モチーフだが、同一話とは断定しない。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-MOONTANUKI","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-10-08","relevant_section":"月に化けたタヌキ","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-MOON-TANUKI","title":"大蓮寺の銀杏に出た白い月（日本伝承マップ：現代民話考11〈狸・むじな〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考11 狸・むじな』(1995)","author":null,"publication_date":"1995","source_type":"digital_archive","url":"https://j-folklore.com/l/book_472_ep_214.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考11 狸・むじな』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only候補（urayasu-1984-1985-mukashibanashi.jsonハブ内、record_id: chiba-urayasu-moon-tanuki、堀江・大蓮寺）と地域が一致するため、同record_idで正式record化した。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"既存ハブで『月に化けたタヌキ』（1984年・堀江・大蓮寺）として索引確認済みだったが本文未確認だった。2026-10-09、日本伝承マップ経由で『現代民話考11』所収の引用本文を確認し、地域（大蓮寺）の一致から同record_idで本文確認済みへ格上げした。『月に化けた狢』（1992・浦安市）『月に化けたムジナ』（1984・猫実）とは地域・資料が異なるため統合していない。"
+}

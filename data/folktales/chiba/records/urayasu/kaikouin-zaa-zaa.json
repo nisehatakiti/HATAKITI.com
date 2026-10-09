@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"urayasu-kaikouin-zaa-zaa","status":"draft","title":"回向院のザアー、ザアー","title_normalized":"回向院のザアー、ザアー","title_origin":"source_title",
+  "summary":{"text":"盆の期間中、浦安の海の中から大勢の人のざわめきと念仏を唱えるような声が聞こえ、海で亡くなった人々の霊が浮かばれず彷徨う姿だと語られる怪異譚。","based_on_source_ids":["SRC-JFOLKLORE-ZAAZAA"]},
+  "story_summary":"浦安では、盆の期間中に海の中から人間の声がガヤガヤと大勢ざわめき、念仏を唱えるような恨めしげな声が響くという。地元の老人によれば、これは海で亡くなった人々の霊が浮かばれず彷徨う姿とされ、盆の十六日には肝の小さい者は浜へ近づけないほどだったと伝えられている。",
+  "story_content":"浦安では、盆の期間中、海の中から人間の声がガヤガヤと大勢ざわめくのが聞こえ、念仏を唱えるような恨めしげな声が響くという。地元の老人によれば、これは海で亡くなった人々の霊が浮かばれず彷徨う姿とされ、盆の十六日には、肝の小さい者は浜へ近づけないほどの恐ろしさだったという。\n\nむかしは正月と盆の四日間だけは、どんなに生活が苦しくても仕事を休んで過ごしたと語り伝えられている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"当代島・堀江・猫実","source_description":"千葉県立図書館の浦安市民話索引では当代島・堀江・猫実を関連地として掲載している。"},
+  "locations":[{"name":"浦安の海","location_type":"sea_area","description":"盆の十六日に亡者の声が響くとされる海域。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-ZAAZAA"]}],
+  "characters":[],
+  "beings":[{"name":"海で亡くなった人々の霊","type":"ghost","attributes":["盆の十六日に海からざわめきと念仏の声を響かせる"],"source_ids":["SRC-JFOLKLORE-ZAAZAA"]}],
+  "themes":["海の怪異","盆","亡霊","念仏"],"story_type":["怪談","海の怪異","盆行事伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-umi-bozu","relationship":"related_tradition_group","note":"同じ盆の海の怪異伝承群。別の目撃談として区別する。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-ZAAZAA","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-08-26","relevant_section":"回向院のザアー、ザアー","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-ZAAZAA","title":"盆の十六日に海から聞こえる念仏の声（日本伝承マップ：現代民話考〈偽汽車〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考 偽汽車』（ちくま文庫・2003年）、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"2003","source_type":"digital_archive","url":"https://j-folklore.com/l/book_116_ep_082.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考 偽汽車』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only stub（data/folktales/chiba/urayasu/2026-08-batch-006-unclassified-kaidan-faith-place.json内）のrecord_idを維持し、本ファイルへ正本として格上げした。"},
+  "confidence":"high","research_status":"deep_researched",
+  "research_notes":"『浦安の世間話』の目次題名として索引確認していたが本文未確認だった。2026-10-09、日本伝承マップ経由で『現代民話考 偽汽車』所収の引用本文を確認し、本文確認済みへ格上げした。"
+}

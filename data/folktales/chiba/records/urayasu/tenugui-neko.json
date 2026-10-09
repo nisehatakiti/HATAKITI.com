@@ -56,7 +56,13 @@
     "動物伝承",
     "世間話"
   ],
-  "related_records": [],
+  "related_records": [
+    {
+      "record_id": "urayasu-neko-no-odori",
+      "relationship": "same_motif_distinct_title",
+      "note": "『猫の踊り』（12・13匹、おかつばあさんがなりすまされる筋）とは猫の数・筋の詳しさが異なるため、現段階では別タイトルの伝承として区別する。"
+    }
+  ],
   "sources": [
     {
       "source_id": "SRC-URAYASU-LIB-MINWA",

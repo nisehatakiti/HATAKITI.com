@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-katami-no-tsue","status":"draft","title":"形見の杖を返せと夢に出た祖父","title_normalized":"形見の杖を返せと夢に出た祖父","title_origin":"source_title",
+  "summary":{"text":"孫が買ってきた杖を愛用していた爺さんの死後、形見として一人暮らしの婆さんに譲られた杖を、面識のないその爺さんが婆さんの夢に出て返してほしいと頼み、婆さんは驚いて杖を墓場に立てたという伝承。","based_on_source_ids":["SRC-JFOLKLORE-KATAMI"]},
+  "story_summary":"長男の一治がまだ小学生の頃、高尾山への遠足で爺さんに杖を買ってきた。爺さんはその杖を肌身離さず持ち歩いていたが、八十で亡くなった後、兄の娘が新井の方で隣人の一人暮らしの婆さんに形見としてその杖を持って行った。すると二、三日後、面識もないはずの爺さんが婆さんの夢に出て『杖を返してもらいたい』と言い、婆さんは驚いて杖を墓場に立てたという。",
+  "story_content":"長男の一治が、まだ小学校の当時、高尾山へ遠足に行き、『爺につえを買ってきてあげた』と言って杖を買ってきた。語り手の男親はたいそう喜び、孫が買ってきた杖だからと、肌身離さずどこへ行くにも持ち歩いた。\n\nその爺さんが八十で亡くなった後、兄の娘が、新井の方で借りた家の隣に住む一人暮らしの婆さんのために、竹の杖をついて歩いていた様子を見て、爺さんが使っていた杖を持って行ってやった。ところが一日二日して、面識もないはずのその爺さんが婆さんの夢に出て、『悪いけどその杖を返してもらいたい、とられると困るのだ』と言った。婆さんは驚いて杖を返し、杖は墓場に立ててやったという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"新井","source_description":"『現代民話考4 夢の知らせ・火の玉・ぬけ出した魂』に浦安の体験談として収録。話者：前田治郎助。"},
+  "locations":[{"name":"新井","location_type":"tradition_site","description":"杖を譲られた一人暮らしの婆さんが住んでいた地域。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-KATAMI"]}],
+  "characters":[{"name":"一治","role":"小学生の頃、高尾山遠足で祖父に杖を買ってきた孫","attributes":[],"source_ids":["SRC-JFOLKLORE-KATAMI"]},{"name":"一治の祖父","role":"杖を愛用し、死後に夢に出て杖を取り返した人物","attributes":["80歳で死去"],"source_ids":["SRC-JFOLKLORE-KATAMI"]},{"name":"新井の一人暮らしの婆さん","role":"杖を形見として譲り受け、夢を見て杖を返した人物","attributes":[],"source_ids":["SRC-JFOLKLORE-KATAMI"]}],
+  "beings":[],
+  "themes":["夢の知らせ","形見","杖","死者"],"story_type":["体験談","死者伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-KATAMI","title":"形見の杖を返せと夢に出た祖父（日本伝承マップ：現代民話考4〈夢の知らせ・火の玉・ぬけ出した魂〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考4 夢の知らせ・火の玉・ぬけ出した魂』、話者：前田治郎助","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_474_ep_173.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考4 夢の知らせ・火の玉・ぬけ出した魂』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"新規発見。千葉県立図書館の浦安市民話索引には本題そのものは未確認だが、日本伝承マップ経由で『現代民話考4』所収の引用本文（話者：前田治郎助、『浦安の世間話』と同一）を確認した。"
+}

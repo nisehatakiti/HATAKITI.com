@@ -179,7 +179,9 @@
         "死者",
         "三途の川"
       ],
-      "research_status": "researching"
+      "research_status": "promoted_to_canonical_record",
+      "status": "promoted_to_canonical_record",
+      "promoted_to": "data/folktales/chiba/records/urayasu/sanzu-fare.json"
     },
     {
       "record_id": "chiba-urayasu-jizo-attached",

@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-sanzu-fare","status":"draft","title":"三途の川の渡し賃","title_normalized":"三途の川の渡し賃","title_origin":"source_title",
+  "summary":{"text":"意識を失った浦安の老女が三途の川で位牌の流れる様を見、恐ろしい顔の船頭に『おまえの来るところではない』と怒鳴られて我に返ったという、あの世から戻った体験談。","based_on_source_ids":["SRC-JFOLKLORE-SANZU"]},
+  "story_summary":"浦安のある老女は、あの世へ行って戻ってきたことがあると家族に語っていた。意識を失った際、位牌がいくつも流れる川に出て、恐ろしい顔の船頭に『船を渡してくれ』と頼むと『おまえの来るところではないから帰れ』と怒鳴られ、そこで我に返ったという。老女はそれを三途の川だと信じていた。",
+  "story_content":"浦安のある老女は、あの世へ行って戻ってきたことがあると語っていた。意識を失った際、川のほとりに出ると、位牌がいくつも流れているのが見えたという。そこには恐ろしい顔をした船頭がいて、老女が『船を渡してくれ』と頼むと、『おまえの来るところではないから帰れ』と怒鳴られた。そこで老女は我に返ったという。\n\n老女はこれを三途の川だと信じ、位牌が並んで流れていたことを何度も家族に語って伝えたという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"『浦安の世間話：前田治郎助の語り』第1章「ムラ話・不思議な体験」に収録。"},
+  "locations":[],
+  "characters":[{"name":"浦安の老女","role":"あの世へ行って戻ってきたと語った体験者","attributes":[],"source_ids":["SRC-JFOLKLORE-SANZU"]}],
+  "beings":[{"name":"三途の川の船頭","type":"supernatural_entity","attributes":["恐ろしい顔をしている","生者を怒鳴って追い返す"],"source_ids":["SRC-JFOLKLORE-SANZU"]}],
+  "themes":["三途の川","臨死体験","死者","あの世"],"story_type":["体験談","死者伝承","信仰伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-NDL-URAYASU-SANZU","title":"浦安の世間話 : 前田治郎助の語り","publisher":"国立国会図書館","author":null,"publication_date":"1992","source_type":"bibliographic_index","url":"https://ndlsearch.ndl.go.jp/books/R100000002-I000002197466","accessed_date":"2026-10-09","relevant_section":"第1章 ムラ話・不思議な体験／三途の川の渡し賃","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-SANZU","title":"位牌の流れる川と怒鳴る船頭（日本伝承マップ：現代民話考〈死の知らせ・あの世へ行った話〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考 死の知らせ・あの世へ行った話』、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_117_ep_036.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考 死の知らせ・あの世へ行った話』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only stub（batch-003/batch-008内）のrecord_idを維持し、本ファイルへ正本として格上げした。題名にある『渡し賃』という語そのものは今回確認した本文中には現れず、船頭に拒まれて戻った体験として記録されている。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"『浦安の世間話』の目次題名として索引確認していたが本文未確認だった。2026-10-09、日本伝承マップ経由で『現代民話考 死の知らせ・あの世へ行った話』所収の引用本文を確認したが、『渡し賃』の具体的な描写は確認できなかった。題名と場所（三途の川）・筋の大枠は一致するため同一record_idで格上げしたが、『渡し賃』の細部は未確認として保持する。"
+}

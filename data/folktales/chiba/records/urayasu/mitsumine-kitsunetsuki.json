@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-mitsumine-kitsunetsuki","status":"draft","title":"三峰のお犬様を借りて落とした狐つき","title_normalized":"三峰のお犬様を借りて落とした狐つき","title_origin":"source_title",
+  "summary":{"text":"浦安では、人に取り憑いて早死にさせるとされる狐つきを落とすため、行者が埼玉の三峰山まで狼の神『お犬様』の加護を借りに行く風習があったと伝えられる。","based_on_source_ids":["SRC-JFOLKLORE-MITSUMINE"]},
+  "story_summary":"浦安には昔から狐つきという現象が語られていた。人につく狐は腹の中に入り込んで中のものを食べてしまうため、憑かれた人は早死にするとされた。狐つきを落とすため、行者が埼玉の三峰山まで『お犬様』（狼の神）の加護を借りに行く風習があり、狐は狼を恐れて逃げ出すといわれた。",
+  "story_content":"浦安には、昔から狐つきという現象が語られていた。人に取り憑く狐は小さなもので、腹の中に入り込んで中のものを食べてしまうため、憑かれた人は早死にするとされた。\n\n狐つきになった人のために、行者が埼玉の三峰山まで『お犬様』、すなわち狼の神の加護を借りに行くという風習があったという。狐は狼を恐れて逃げ出すためで、お犬様を借りてくると、狐は離れていったと伝わる。また、狐がついている間は、誰も何も言わないのに何でも分かってしまうともいい、昔は狐がつかないよう三峰様のお札を家に貼っていたという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"『現代民話考10 狼・山犬、猫』に浦安の狐つきをめぐる風習として収録。浦安・猫実の豊受神社境内には三峰神社が祀られている。"},
+  "locations":[{"name":"三峰神社（埼玉県）","location_type":"shrine","description":"狐つきを落とすため行者が加護を借りに行ったとされる神社。浦安市猫実の豊受神社境内にも分祀の三峰神社がある。","latitude":null,"longitude":null,"precision":"region","source_ids":["SRC-JFOLKLORE-MITSUMINE"]}],
+  "characters":[],
+  "beings":[{"name":"お犬様（三峰の狼神）","type":"deity","attributes":["狐を追い払う加護を持つ"],"source_ids":["SRC-JFOLKLORE-MITSUMINE"]},{"name":"狐（狐つき）","type":"animal","attributes":["人の腹に入り込み取り憑く","憑かれた人を早死にさせるとされる","お犬様の加護を恐れて逃げ出す"],"source_ids":["SRC-JFOLKLORE-MITSUMINE"]}],
+  "themes":["狐つき","三峰神社","お犬様","憑依信仰","民間療法"],"story_type":["信仰伝承","民間療法伝承","動物怪異譚"],
+  "related_records":[{"record_id":"chiba-urayasu-toyoke-shrine-protective-deities","relationship":"related_place","note":"豊受神社境内の三峰神社と信仰的に結びつく。本文照合前のため同一の由来譚とは断定しない。"}],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-MITSUMINE","title":"三峰のお犬様を借りて落とした狐つき（日本伝承マップ：現代民話考10〈狼・山犬、猫〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考10 狼・山犬、猫』","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_471_ep_268.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考10 狼・山犬、猫』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存の正式record『豊受神社の末社群と生活を守る神々』に登場する三峰神社と信仰的に関連するが、個別の由来譚としては別recordとして保持する。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"新規発見。千葉県立図書館の浦安市民話索引には本題そのものは未確認だが、日本伝承マップ経由で『現代民話考10』所収の引用本文を確認した。三峰山への代参・お札信仰は関東各地に広く見られる習俗であり、浦安固有の独自性については既存資料のみでは判断していない。"
+}

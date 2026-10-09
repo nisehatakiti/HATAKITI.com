@@ -1,0 +1,19 @@
+{
+  "schema_version":"1.0","record_id":"urayasu-neko-no-odori","status":"draft","title":"猫の踊り","title_normalized":"猫の踊り","title_origin":"source_title",
+  "summary":{"text":"おかつばあさんの家で手拭いが毎日なくなるので確かめると、裏の竹やぶで十二、三匹の猫が手拭いを頭にのせて踊っていた。猫に口止めされたが話してしまったため殺され、猫がばあさんになりすまして暮らしていたという化け猫譚。","based_on_source_ids":["SRC-JFOLKLORE-NEKO-ODORI"]},
+  "story_summary":"おかつばあさんの家では毎日手拭いがなくなっていた。確かめると、猫が手拭いをとって裏の竹やぶへ行き、十二、三匹の猫がみな頭に手拭いをのせて『猫じゃ、猫じゃ』と踊っていた。ばあさんは猫から口止めされたが、あまりに怖くて話してしまう。すると猫はばあさんを殺し、なりすまして暮らしていたが、様子がおかしいので縁の下を見ると本物のばあさんの死骸があったという。",
+  "story_content":"おかつばあさんの家では、毎日手拭いがなくなるということが続いていた。不思議に思って見ていると、猫が手拭いをとって裏の竹やぶへ持っていくのが分かった。竹やぶをのぞいてみると、十二、三匹もの猫が集まり、みな頭に手拭いをのせて『猫じゃ、猫じゃ』と踊っていたのだという。\n\nばあさんはその猫から『じいさんに言うな』と口止めされた。しかし、あまりの恐ろしさに、ばあさんはついその出来事を話してしまう。すると猫は『ばばあ言ったな』と言って、ばあさんを殺してしまった。そして、猫はばあさんになりすまして、そのまま家で暮らし続けたという。\n\nやがて様子がおかしいことに気づいた家族が縁の下を見てみると、そこには本物のばあさんの死骸があったという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"千葉県立図書館の浦安市民話索引では複数資料に『猫の踊り』の収録が確認できる。"},
+  "locations":[{"name":"裏の竹やぶ","location_type":"tradition_site","description":"猫たちが手拭いをかぶって踊っていたとされる場所。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-NEKO-ODORI"]}],
+  "characters":[{"name":"おかつばあさん","role":"猫に殺され、なりすまされた老女","attributes":[],"source_ids":["SRC-JFOLKLORE-NEKO-ODORI"]}],
+  "beings":[{"name":"化け猫","type":"animal","attributes":["十二、三匹で手拭いをかぶって踊る","口止めを破られ人を殺してなりすます"],"source_ids":["SRC-JFOLKLORE-NEKO-ODORI"]}],
+  "themes":["化け猫","猫じゃ踊り","竹やぶ","変化"],"story_type":["怪談","動物怪異譚","化け猫伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-tenugui-neko","relationship":"same_motif_distinct_title","note":"『手拭いかぶって踊った猫』とは猫の数（2・3匹／12・13匹）と筋の詳しさが異なるため、現段階では別タイトルの伝承として区別する。"}],
+  "sources":[
+    {"source_id":"SRC-CHIBA-LIB-URAYASU-NEKOODORI","title":"千葉県の民話 浦安市","publisher":"千葉県立図書館","author":null,"publication_date":"web","source_type":"library_index","url":"https://www.library.pref.chiba.lg.jp/school/chibaken_minwa/urayasu.html","accessed_date":"2026-08-26","relevant_section":"猫の踊り","language":"ja"},
+    {"source_id":"SRC-JFOLKLORE-NEKO-ODORI","title":"ばあさんになりすました化け猫（日本伝承マップ：現代民話考10〈狼・山犬、猫〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考10 狼・山犬、猫』","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_471_ep_357.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":true,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考10 狼・山犬、猫』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。既存のindex-only stub（data/folktales/chiba/urayasu/2026-08-batch-006-unclassified-kaidan-faith-place.json内）のrecord_idを維持し、本ファイルへ正本として格上げした。『手拭いかぶって踊った猫』とは猫の数・筋の詳しさが異なるため統合していない。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"千葉県立図書館索引で題名のみ確認していたが本文未確認だった。2026-10-09、日本伝承マップ経由で『現代民話考10』所収の引用本文を確認し、本文確認済みへ格上げした。既存の『手拭いかぶって踊った猫』（chiba-urayasu-tenugui-neko）とは猫の数（2・3匹 vs 12・13匹）が異なり、本記録の方が筋も詳しいため、現段階では別伝承として保持する。"
+}

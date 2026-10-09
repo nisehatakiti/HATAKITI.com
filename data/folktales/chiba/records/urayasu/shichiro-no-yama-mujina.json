@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-shichiro-no-yama-mujina","status":"draft","title":"シチロウの山で頬を叩くムジナ","title_normalized":"シチロウの山で頬を叩くムジナ","title_origin":"source_title",
+  "summary":{"text":"ニイムの婆さんが「シチロウの山」を通りかかった際、ムジナに砂をかけられ、氷のように冷たい手で頬をぴたりと叩かれたという体験談。","based_on_source_ids":["SRC-JFOLKLORE-SHICHIRO"]},
+  "story_summary":"よく実家を訪ねてきていたニイムの婆さんが、話し込んだ帰り道に『シチロウの山』を通ったところ、ムジナに砂をぶっかけられ、さらに氷のように冷たい手で頬をぴたりと叩かれたという。",
+  "story_content":"ニイムの婆さんは、この家が実家だったため、しょっちゅう訪ねてきては話し込んでいったという。ある日、話し込んでから帰ろうとして『シチロウの山』を通ったところ、ムジナに砂をぶっかけられ、さらに冷たい手で頬をぴたりと叩かれたという。婆さんは、そのとき氷のような手で頬を叩かれて驚いたと語ったと伝わっている。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"シチロウの山","source_description":"『現代民話考11 狸・むじな』に浦安のムジナ怪異譚として収録。"},
+  "locations":[{"name":"シチロウの山","location_type":"tradition_site","description":"ムジナに砂をかけられ頬を叩かれたと伝えられる場所。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-SHICHIRO"]}],
+  "characters":[{"name":"ニイムの婆さん","role":"ムジナに頬を叩かれた体験者","attributes":[],"source_ids":["SRC-JFOLKLORE-SHICHIRO"]}],
+  "beings":[{"name":"ムジナ","type":"animal","attributes":["砂をかける","氷のように冷たい手で頬を叩く"],"source_ids":["SRC-JFOLKLORE-SHICHIRO"]}],
+  "themes":["ムジナ","化かし","体験談"],"story_type":["怪談","動物怪異譚"],
+  "related_records":[{"record_id":"chiba-urayasu-kyusuke-inari-oonyudo","relationship":"same_tradition_cluster","note":"同じ『現代民話考11 狸・むじな』に収録される浦安のムジナ怪異譚群。"}],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-SHICHIRO","title":"シチロウの山で頬を叩くムジナ（日本伝承マップ：現代民話考11〈狸・むじな〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考11 狸・むじな』(1995)","author":null,"publication_date":"1995","source_type":"digital_archive","url":"https://j-folklore.com/l/book_472_ep_100.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考11 狸・むじな』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"新規発見。千葉県立図書館の浦安市民話索引には本題そのものは未確認だが、日本伝承マップ経由で『現代民話考11』所収の引用本文を確認した。『シチロウの山』の具体的な所在地は未確認。"
+}

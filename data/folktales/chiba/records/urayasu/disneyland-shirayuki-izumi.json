@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-disneyland-shirayuki-izumi","status":"draft","title":"白雪姫の泉で別れるというジンクス","title_normalized":"白雪姫の泉で別れるというジンクス","title_origin":"source_title",
+  "summary":{"text":"浦安市内の東京ディズニーランドにまつわる、1990年代に国分高校の生徒が語ったという園内のジンクス・都市伝説。カップルで特定の場所を訪れると別れる、あるいは別れないという言い伝えが複数伝えられている。","based_on_source_ids":["SRC-JFOLKLORE-DISNEY-JINX"]},
+  "story_summary":"1990年代、国分高校の生徒が語った東京ディズニーランドのジンクスとして、園内のある泉のそばでカップルが過ごすと別れてしまうという話や、反対に別れないという言い伝えが伝えられている。地下に道路があるという噂や、人が本当に消えるという噂も合わせて語られていた。",
+  "story_content":"国分高校の生徒が語ったという、東京ディズニーランドにまつわるジンクスである。シンデレラ城から少し離れた所に泉があり、そこでは童謡が流れているため、カップルで行くと別れてしまうという。浦安の弁天様にも同じような話があると付け加えられている。\n\n一方で、あるアトラクションでは、乗り物が回転して向きが逆になった瞬間にキスをすると、二人は決して別れないとも言われている。園内で荷物を運ぶ車の姿を見ないのは地下に道路が通っているからだという話や、あるアトラクションで人が本当に消えるという噂も、生徒たちの間で語られていたという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"東京ディズニーランド","source_description":"市川民話の会が編んだ『市川の伝承民話 第7集』に、国分高校の生徒が語った伝承として収録。"},
+  "locations":[{"name":"東京ディズニーランド","location_type":"theme_park","description":"1990年代の生徒たちの間で複数のジンクス・都市伝説が語られたとされる場所。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-DISNEY-JINX"]}],
+  "characters":[{"name":"国分高校の生徒","role":"このジンクスを語った話者","attributes":[],"source_ids":["SRC-JFOLKLORE-DISNEY-JINX"]}],
+  "beings":[],
+  "themes":["都市伝説","ジンクス","1990年代","学校伝承"],"story_type":["現代伝承","都市伝説","学校伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-DISNEY-JINX","title":"白雪姫の泉で別れるというジンクス（日本伝承マップ：市川の伝承民話 第7集より）","publisher":"日本伝承マップ（j-folklore.com）／原典：市川民話の会『市川の伝承民話 第7集』","author":null,"publication_date":"1990年代","source_type":"digital_archive","url":"https://j-folklore.com/l/book_459_ep_141.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『市川の伝承民話 第7集』所収のあらすじを直接確認し、HATAKITI.com独自の文章として再構成した。アトラクション名・歌名などの固有名詞は、伝承の説明に必要な範囲でのみ言及し、歌詞の引用は行っていない。本記録は実在の施設の仕様を主張するものではなく、当時の生徒間で語られた都市伝説・ジンクスとして記録するものである。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"新規発見。昔話・伝説ではなく1990年代の学校発の現代伝承（都市伝説）だが、浦安市内の実在の場所にまつわる伝承として、市川民話の会の収集範囲に含まれている。他の歴史的民話とは性質が異なることを明示するため、story_typeを「現代伝承」とした。"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-edouri-kaeri-mujina","status":"draft","title":"江戸売り帰りの声をまねるムジナ","title_normalized":"江戸売り帰りの声をまねるムジナ","title_origin":"source_title",
+  "summary":{"text":"江戸への行商『江戸売り』から船で戻る亭主が着岸時に呼ぶ決まり文句を、ムジナが真似て祖母を呼び出したという化かし話。","based_on_source_ids":["SRC-JFOLKLORE-EDOURI"]},
+  "story_summary":"浦安の漁師の家では、亭主が『江戸売り』と呼ばれる江戸への行商から船で戻ると、着岸と同時に下駄を持ってくるよう呼ぶのが習わしだった。ある日、土間で藁仕事をしていた祖母がこの呼び声を聞いて下駄を持って出てみると誰もおらず、同じ声がもう一度聞こえたため、祖母はムジナのしわざだと気づいたという。",
+  "story_content":"浦安の漁師の家では、亭主が『江戸売り』と呼ばれる江戸への行商から船で戻ると、着岸と同時に『サンコえー、下駄持ってこい』と呼ぶのが習わしだった。\n\nある日、土間で藁仕事をしていた祖母がこの声を聞いて下駄を持って出てみると、そこには誰もいなかった。同じ呼び声がもう一度聞こえたため、祖母はこれはムジナのしわざだと気づいたという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"『現代民話考11 狸・むじな』に浦安の漁師の家のムジナ怪異譚として収録。"},
+  "locations":[],
+  "characters":[{"name":"祖母","role":"ムジナにだまされた体験者","attributes":["土間で藁仕事をしていた"],"source_ids":["SRC-JFOLKLORE-EDOURI"]}],
+  "beings":[{"name":"ムジナ","type":"animal","attributes":["『江戸売り』帰りの亭主の呼び声を真似る"],"source_ids":["SRC-JFOLKLORE-EDOURI"]}],
+  "themes":["ムジナ","化かし","漁師の習わし","江戸売り"],"story_type":["怪談","動物怪異譚","漁村伝承"],
+  "related_records":[{"record_id":"chiba-urayasu-sanko-anii","relationship":"motif_echo","note":"呼び声『サンコえー』は、別記録『サンコ兄い』の人名と同じ響きを持つが、同一人物・同一話とは断定しない。"},{"record_id":"chiba-urayasu-shichiro-no-yama-mujina","relationship":"same_tradition_cluster","note":"同じ『現代民話考11 狸・むじな』に収録される浦安のムジナ怪異譚群。"}],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-EDOURI","title":"江戸売り帰りの声をまねるムジナ（日本伝承マップ：現代民話考11〈狸・むじな〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考11 狸・むじな』(1995)","author":null,"publication_date":"1995","source_type":"digital_archive","url":"https://j-folklore.com/l/book_472_ep_124.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考11 狸・むじな』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。呼び声『サンコえー』と『サンコ兄い』の人名の類似は指摘のみとし、同一性の断定は行っていない。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"新規発見。千葉県立図書館の浦安市民話索引には本題そのものは未確認だが、日本伝承マップ経由で『現代民話考11』所収の引用本文を確認した。"
+}

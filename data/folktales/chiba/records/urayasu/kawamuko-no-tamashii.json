@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","record_id":"chiba-urayasu-kawamuko-no-tamashii","status":"draft","title":"川向こうを急ぐ老婆の魂","title_normalized":"川向こうを急ぐ老婆の魂","title_origin":"generated_for_identification",
+  "summary":{"text":"町にまだ川があった頃、男がいわかけの婆さんが川の向こう岸を杖をついて急ぎ歩くのを見かけたが、ちょうどその時刻に婆さんが亡くなっており、魂が善福寺へ急いでいたのだろうと語り合ったという体験談。","based_on_source_ids":["SRC-JFOLKLORE-KAWAMUKO"]},
+  "story_summary":"浦安でまだ町に川があった頃、話者の父の生家の爺さんが、川を挟んだ向こう岸を、いわかけの婆さんが杖をついて東のほうへ大急ぎで歩いていくのを見かけた。出先でその婆さんがたった今亡くなったと告げられ、二人はそれなら婆さんの魂が抜け出して善福寺へ急いでいたところに出会ったのだろうと話し合ったという。",
+  "story_content":"浦安でのことである。話者の父の生家、あみやの爺さんは、まだ町に川があったころ、川を挟んだ向こう岸を、いわかけの婆さんが杖をついて東のほうへ大急ぎで歩いていくのを見かけた。\n\n爺さんが出先へ行ったところ、そこでちょうどその婆さんが今しがた亡くなったと告げられた。二人は踊り仲間で兄弟のように付き合っていた間柄だった。爺さんは、たった今死んだのだと言われ、それならあの婆さんの魂が抜け出して、急いで善福寺へ向かっていたところに出くわしたのだろうと話し合ったという。",
+  "region":{"prefecture":"千葉県","historical_province":"下総国","municipality":"浦安市","area_name":"浦安","source_description":"『浦安の世間話：前田治郎助の語り』第1章「ムラ話・不思議な体験」に連なる死の知らせの体験談として、日本伝承マップで確認。"},
+  "locations":[{"name":"善福寺","location_type":"temple","description":"亡くなった老婆の魂が急いで向かっていたとされる寺院。","latitude":null,"longitude":null,"precision":"area","source_ids":["SRC-JFOLKLORE-KAWAMUKO"]}],
+  "characters":[{"name":"あみやの爺さん","role":"川向こうに老婆の魂を見かけた目撃者","attributes":[],"source_ids":["SRC-JFOLKLORE-KAWAMUKO"]},{"name":"いわかけの婆さん","role":"亡くなった際、魂が川向こうを急いでいたと語られる人物","attributes":["あみやの爺さんと踊り仲間で兄弟のように付き合っていた"],"source_ids":["SRC-JFOLKLORE-KAWAMUKO"]}],
+  "beings":[],
+  "themes":["死の知らせ","魂","善福寺","体験談"],"story_type":["体験談","死者伝承"],
+  "related_records":[],
+  "sources":[
+    {"source_id":"SRC-JFOLKLORE-KAWAMUKO","title":"川向こうを急ぐ老婆の魂（日本伝承マップ：現代民話考〈死の知らせ・あの世へ行った話〉より）","publisher":"日本伝承マップ（j-folklore.com）／原典：松谷みよ子編『現代民話考 死の知らせ・あの世へ行った話』、話者：前田治郎助、採録：米屋陽一","author":null,"publication_date":"web","source_type":"digital_archive","url":"https://j-folklore.com/l/book_117_ep_411.html","accessed_date":"2026-10-09","relevant_section":"伝承本文の引用","language":"ja"}
+  ],
+  "ai_processing":{"summary_generated":true,"sources_merged":false,"translation_used":false,"notes":"日本伝承マップ（j-folklore.com）が公開する『現代民話考 死の知らせ・あの世へ行った話』所収の引用本文を直接確認し、HATAKITI.com独自の文章として再構成した。千葉県立図書館の浦安市民話索引には対応する独立題名を確認できなかったため、内容を識別する仮タイトルを付した（title_origin: generated_for_identification）。"},
+  "confidence":"medium","research_status":"deep_researched",
+  "research_notes":"浦安市民話索引上の対応題名は未確認だが、同じ話者・採録者（前田治郎助・米屋陽一）による『浦安の世間話』系の死の知らせ体験談群に連なる内容として、日本伝承マップ経由で本文を確認した。"
+}
