@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-nagaoka-sanbai-ike-daija-foam",
+  "status": "draft",
+  "title": "長岡・三盃池の大蛇と水面の泡",
+  "title_normalized": "長岡・三盃池の大蛇と水面の泡",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県長岡市神田町の沼地は三盃池と呼ばれ、大蛇池ともいわれた。池の主の大蛇は退治されたが、その毒気は消えず、池のほとりで「サンバイ、サンバイ」と唱えると水面から泡が出たという。",
+    "based_on_source_ids": [
+      "niigata-nagaoka-sanbai-ike-daija-foam-src"
+    ]
+  },
+  "story_summary": "退治された大蛇の毒気が残り、池のほとりで「サンバイ、サンバイ」と唱えると水面に泡が出たという伝承。",
+  "story_content": "小林存「片目の鮒の系譜」に記録された長岡市神田町の伝承。沼地は三盃池と呼ばれ、別名を大蛇池といった。池の主である大蛇は退治されたが、その毒気は消えなかったとされる。池のほとりで「サンバイ、サンバイ」と唱えると、水面から泡が出てきたという。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "長岡市神田町",
+    "area_name": "三盃池（大蛇池）"
+  },
+  "locations": [
+    {
+      "name": "三盃池（大蛇池）",
+      "type": "池・旧沼地",
+      "description": "大蛇が退治された後も毒気が残り、唱え言葉に応じて泡が出たとされる場所。",
+      "source_ids": [
+        "niigata-nagaoka-sanbai-ike-daija-foam-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "池の主として語られ、退治された後も毒気が残ったとされる。",
+      "source_ids": [
+        "niigata-nagaoka-sanbai-ike-daija-foam-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "池の主",
+    "毒気",
+    "泡",
+    "唱え言葉"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "怪異現象"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-nagaoka-sanbai-ike-daija-foam-src",
+      "title": "片目の鮒の系譜",
+      "publisher": "新潟県民俗学会（『高志路』3期10号・通巻154号）",
+      "publication_date": "1954-06-17",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0780387",
+      "relevant_section": "掲載頁2",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "資料の短い要約に基づく。「毒気」は伝承内の表現として記録し、現象の科学的説明は加えていない。"
+}
