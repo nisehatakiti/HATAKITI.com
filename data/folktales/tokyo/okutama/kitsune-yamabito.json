@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tokyo-okutama-kitsune-yamabito",
+  "status": "draft",
+  "title": "奥多摩・狐に案内された山道",
+  "title_normalized": "奥多摩・狐に案内された山道",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "東京都西多摩郡奥多摩町では、夜道で「こちらだ」と呼ぶ声に従って帰ったつもりが山中にいたという、狐に化かされた話が記録されている。",
+    "based_on_source_ids": [
+      "tokyo-okutama-kitsune-yamabito-src"
+    ]
+  },
+  "story_summary": "東京都西多摩郡奥多摩町では、夜道で「こちらだ」と呼ぶ声に従って帰ったつもりが山中にいたという、狐に化かされた話が記録されている。",
+  "story_content": "東京都西多摩郡奥多摩町では、夜道で「こちらだ」と呼ぶ声に従って帰ったつもりが山中にいたという、狐に化かされた話が記録されている。",
+  "region": {
+    "prefecture": "東京都",
+    "historical_province": null,
+    "municipality": "西多摩郡奥多摩町",
+    "area_name": "山道"
+  },
+  "locations": [
+    {
+      "name": "山道",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "tokyo-okutama-kitsune-yamabito-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "伝承存在",
+      "description": "狐に関する地域伝承。",
+      "source_ids": [
+        "tokyo-okutama-kitsune-yamabito-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tokyo-okutama-kitsune-yamabito-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1080115",
+      "relevant_section": "奥多摩・狐に案内された山道",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
