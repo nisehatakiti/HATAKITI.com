@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-tengu-mountain-opening",
+  "status": "draft",
+  "title": "長野・山開き前の山と天狗",
+  "title_normalized": "長野・山開き前の山と天狗",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "長野県では、山仕事の男が山開き前に山へ入り、天狗の怒りに触れて事故に遭ったという伝承が記録されている。山の禁忌と安全観念に関わる話である。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "長野県では、山仕事の男が山開き前に山へ入り、天狗の怒りに触れて事故に遭ったという伝承が記録されている。山の禁忌と安全観念に関わる話である。",
+  "story_content": "長野県では、山仕事の男が山開き前に山へ入り、天狗の怒りに触れて事故に遭ったという伝承が記録されている。山の禁忌と安全観念に関わる話である。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": null,
+    "municipality": "長野県内",
+    "area_name": "山開き前の山域"
+  },
+  "locations": [
+    {
+      "name": "山開き前の山域",
+      "type": "伝承地域",
+      "description": "日文研の伝承検索で確認された地域情報。正確な個別地点・記録IDは追加確認が必要。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "天狗に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "source_record_verification_needed",
+  "research_notes": "伝承の概要は日文研データベースの検索結果に基づく候補。正確な個別カードURL・原資料・地点を照合してから確定扱いにする。"
+}
