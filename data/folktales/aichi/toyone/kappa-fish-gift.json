@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "aichi-toyone-kappa-fish-gift",
+  "status": "draft",
+  "title": "豊根・魚を届ける河童",
+  "title_normalized": "豊根・魚を届ける河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛知県北設楽郡豊根村では、青淵の河童が農作業を手伝い、来客時にはアメノウオを二尾ずつ届けたという。河童が使ったとされる器も伝わるという記録がある。",
+    "based_on_source_ids": [
+      "aichi-toyone-kappa-fish-gift-src"
+    ]
+  },
+  "story_summary": "愛知県北設楽郡豊根村では、青淵の河童が農作業を手伝い、来客時にはアメノウオを二尾ずつ届けたという。河童が使ったとされる器も伝わるという記録がある。",
+  "story_content": "愛知県北設楽郡豊根村では、青淵の河童が農作業を手伝い、来客時にはアメノウオを二尾ずつ届けたという。河童が使ったとされる器も伝わるという記録がある。",
+  "region": {
+    "prefecture": "愛知県",
+    "historical_province": null,
+    "municipality": "北設楽郡豊根村",
+    "area_name": "青淵・田原家"
+  },
+  "locations": [
+    {
+      "name": "青淵・田原家",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "aichi-toyone-kappa-fish-gift-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "aichi-toyone-kappa-fish-gift-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "aichi-toyone-kappa-fish-gift-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1140644",
+      "relevant_section": "豊根・魚を届ける河童",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
