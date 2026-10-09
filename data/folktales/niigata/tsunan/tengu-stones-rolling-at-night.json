@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-tsunan-tengu-stones-rolling-at-night",
+  "status": "draft",
+  "title": "津南・山小屋へ石が転がる音だけがする天狗の石ころがし",
+  "title_normalized": "津南・山小屋へ石が転がる音だけがする天狗の石ころがし",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県津南町の伝承。春に山へゼンマイ採りに行き山小屋に泊まっていると、夜中に山の上から小屋へ石がごろごろ転がってくる音がする。しかし音だけで、実際に石は転がってこない。昔から「天狗の石ころがし」と伝えられている。",
+    "based_on_source_ids": [
+      "niigata-tsunan-tengu-stones-rolling-at-night-src"
+    ]
+  },
+  "story_summary": "山小屋で夜を過ごす人が、実際の石は見えないのに石が転がる音を聞くという伝承。",
+  "story_content": "水沢謙一『新潟県史 資料編22 民俗1』に記録された津南町の伝承。春にゼンマイ採りに出かけ、山小屋に泊まっていると、夜中に山の上から小屋へ石がごろごろ転がってくる音が聞こえる。しかし音だけで、石そのものは転がってこない。こうした現象は昔から「天狗の石ころがし」と呼ばれた。長岡市の「天狗の投げつぶて」と同じ資料章に収録されるが、地域と音の状況が異なるため独立した記録として登録する。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "津南町",
+    "area_name": "山小屋・山中"
+  },
+  "locations": [
+    {
+      "name": "山小屋",
+      "type": "山小屋",
+      "description": "ゼンマイ採りに来た人が泊まり、石が転がる音を聞いた場所。",
+      "source_ids": [
+        "niigata-tsunan-tengu-stones-rolling-at-night-src"
+      ]
+    },
+    {
+      "name": "山の上",
+      "type": "山",
+      "description": "石が転がり落ちてくるような音の発生源と考えられた方向。",
+      "source_ids": [
+        "niigata-tsunan-tengu-stones-rolling-at-night-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "実際には石が見えないまま、山から石が転がる音を起こす存在として伝えられる。",
+      "source_ids": [
+        "niigata-tsunan-tengu-stones-rolling-at-night-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "石ころがし",
+    "山小屋",
+    "夜の怪音",
+    "不可視の現象"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "怪音伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-tsunan-tengu-stones-rolling-at-night-src",
+      "title": "第5編 5 第3節 6 天狗の石ころがし",
+      "publisher": "新潟県（『新潟県史 資料編22 民俗1』）",
+      "publication_date": "1982-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1510217-000",
+      "relevant_section": "掲載頁901–902",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。"
+}
