@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-sanjo-yoshigahira-daija-palace",
+  "status": "draft",
+  "title": "吉ケ平・池底の竜宮と大蛇の姫",
+  "title_normalized": "吉ケ平・池底の竜宮と大蛇の姫",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県三条市吉ケ平の伝承。池の大蛇を見ようと潜った武士は、池底に竜宮のような宮殿を見つけ、金装束の姫が舞う姿を見る。姫は見られたため池にいられないと語り、武士を案内して帰した。その夕方に暴風が起き、大蛇の怒りと考えられた。後に大蛇は若殿の妻となり、子を産んだという。",
+    "based_on_source_ids": [
+      "niigata-sanjo-yoshigahira-daija-palace-src"
+    ]
+  },
+  "story_summary": "池に潜った武士が竜宮のような宮殿と姫を見た。姫は大蛇で、後に人間の若殿の妻になったという伝承。",
+  "story_content": "難波麗泉「嵐渓紀行」に収録された吉ケ平の話。村松藩の勇士が大蛇を見ようとして池に潜ると、底には竜宮のような宮殿があり、金装束の麗姫が踊っていた。武士を見た姫は、見られたのでこの池にはいられないと語り、武士を案内してもてなし、帰した。その夕刻に暴風が起こり、大蛇の怒りだろうといわれた。その後、大蛇は堺家の若殿の妻となって子を産み、坂井家の主人には代々、脇の下に蛇の鱗が三枚あると語られる。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後",
+    "municipality": "三条市",
+    "area_name": "吉ケ平"
+  },
+  "locations": [
+    {
+      "name": "池",
+      "type": "池",
+      "description": "池底に竜宮のような宮殿があるとされ、大蛇の姫が住んでいた場所。",
+      "source_ids": [
+        "niigata-sanjo-yoshigahira-daija-palace-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "村松藩の勇士",
+      "type": "人間",
+      "description": "池に潜り、池底の宮殿と姫を目撃する。",
+      "source_ids": [
+        "niigata-sanjo-yoshigahira-daija-palace-src"
+      ]
+    },
+    {
+      "name": "麗姫",
+      "type": "人物・変化譚の主人公",
+      "description": "池底の宮殿で舞い、正体は大蛇とされる。後に若殿の妻になる。",
+      "source_ids": [
+        "niigata-sanjo-yoshigahira-daija-palace-src"
+      ]
+    },
+    {
+      "name": "若殿",
+      "type": "人間",
+      "description": "後に大蛇の姫の夫になると語られる。",
+      "source_ids": [
+        "niigata-sanjo-yoshigahira-daija-palace-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "池底の宮殿に住む姫の正体として語られ、人間の家に婚姻で結びつく。",
+      "source_ids": [
+        "niigata-sanjo-yoshigahira-daija-palace-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "池底",
+    "竜宮",
+    "姫",
+    "異類婚姻",
+    "暴風"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "異類婚姻譚",
+    "竜宮譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "niigata-sanjo-yoshigahira-daija-palace-src",
+      "title": "嵐渓紀行",
+      "publisher": "三元社（『旅と伝説』2巻7号・通巻19号）",
+      "publication_date": "1929-07-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231748",
+      "relevant_section": "掲載頁39",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの要約に基づく。坂井家の身体的特徴についても伝承上の説明として記録した。"
+}
