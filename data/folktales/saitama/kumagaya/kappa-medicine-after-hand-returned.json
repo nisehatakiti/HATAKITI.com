@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saitama-kumagaya-kappa-medicine-after-hand-returned",
+  "status": "draft",
+  "title": "河童が手を返してもらい妙薬を教える",
+  "title_normalized": "河童が手を返してもらい妙薬を教える",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "埼玉県熊谷市の伝承では、便所に入った女性が何度も毛むくじゃらの怪しい手に尻を撫でられ、その手を懐刀で切り落とした。翌日、老人が手を返してほしいと訪れ、手を返してもらうと傷薬の処方を伝えたという。",
+    "based_on_source_ids": [
+      "1231422"
+    ]
+  },
+  "story_summary": "女性に手を切り落とされた河童が、手を返してもらった礼に傷薬の処方を教える話。",
+  "story_content": "中田千畝「河童の妙藥」に収録された埼玉県熊谷市の話では、女性が便所に入るたびに、毛むくじゃらの怪しい手に尻を撫でられることが続いた。女性は懐刀でその手を切り落とした。翌日、老人が訪ねてきて手を返してほしいと頼み、女性が返すと、礼として傷薬の処方を教えたという。資料では怪しい手の主を河童とする文脈で紹介されている。",
+  "region": {
+    "prefecture": "埼玉県",
+    "historical_province": "武蔵国",
+    "municipality": "熊谷市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    "女性",
+    "老人"
+  ],
+  "beings": [
+    "河童"
+  ],
+  "themes": [
+    "薬",
+    "恩返し",
+    "身体の一部を返す"
+  ],
+  "story_type": [
+    "妖怪譚",
+    "報恩譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1231422",
+      "title": "河童の妙藥",
+      "publisher": "三元社（『旅と伝説』2号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231422",
+      "publication_date": "1928-02-01",
+      "relevant_section": "掲載頁1–3",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。福岡県の骨接ぎ伝授型の河童伝承とは地域・内容が異なるため、別の伝承として保持する。"
+}
