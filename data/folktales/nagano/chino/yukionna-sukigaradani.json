@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-chino-yukionna-sukigaradani",
+  "status": "draft",
+  "title": "茅野・鋤柄の谷の雪女",
+  "title_normalized": "茅野・鋤柄の谷の雪女",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県茅野市の伝承では、雪女は積雪の霊女で人に害をなさず、木こりが切り倒した大木を夜のうちに鋤柄の谷へ横たえて橋にすることがあるといわれた。",
+    "based_on_source_ids": [
+      "nagano-chino-yukionna-sukigaradani-src"
+    ]
+  },
+  "story_summary": "雪女は雪の霊女とされるが、人に害をなさないという。木こりが大木を切り倒して置いておくと、夜のうちに雪女がその木を鋤柄の谷へ運び、橋にすることがあると伝えられた。",
+  "story_content": "高橋宏一「蓼科山紀行」に記録された茅野市の伝承。雪女は積雪の霊女であるが害をなさないとされる。杣人が大木を切って置いておくと、夜のうちに鋤柄の谷へ横たえ、橋にすることがあるといわれた。雪女を見たという古老は、夢のように影がちらちらと見えたと語っている。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "茅野市",
+    "area_name": "蓼科山・鋤柄の谷"
+  },
+  "locations": [
+    {
+      "name": "鋤柄の谷",
+      "type": "谷・伝承地",
+      "description": "雪女が大木を橋にしたとされる谷。現在の地名・場所の比定は追加確認が必要。",
+      "source_ids": [
+        "nagano-chino-yukionna-sukigaradani-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "雪女",
+      "type": "伝承存在",
+      "description": "雪の霊女で、人に害を与えず、大木を谷の橋にすると語られる。",
+      "source_ids": [
+        "nagano-chino-yukionna-sukigaradani-src"
+      ]
+    }
+  ],
+  "themes": [
+    "雪女",
+    "雪",
+    "木こり",
+    "橋の由来"
+  ],
+  "story_type": [
+    "地域伝承",
+    "雪の伝承",
+    "自然由来伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yukionna",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-chino-yukionna-sukigaradani-src",
+      "title": "蓼科山紀行",
+      "publisher": "三元社（『旅と伝説』4巻7号・通巻43号）",
+      "publication_date": "1931-06-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232102",
+      "relevant_section": "掲載頁73–74",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。鋤柄の谷の現地比定と大木の橋の具体的な場所は未確認。雪女の類話と統合せず個別記録を保持する。"
+}
