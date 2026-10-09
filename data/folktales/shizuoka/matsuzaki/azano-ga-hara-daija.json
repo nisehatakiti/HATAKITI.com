@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-matsuzaki-azano-ga-hara-daija",
+  "status": "draft",
+  "title": "松崎・字野原の池の大蛇",
+  "title_normalized": "松崎・字野原の池の大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県賀茂郡松崎町の採録。池の主の大蛇を退治しようとした絹屋は、魔除けにしていた名刀をすり替えられ、大蛇に呑まれる。娘たちは計略を用いて大蛇を射ち、死んだ大蛇の骨を埋めた場所は大蛇院と呼ばれたという。",
+    "based_on_source_ids": [
+      "shizuoka-matsuzaki-azano-ga-hara-daija-src"
+    ]
+  },
+  "story_summary": "大蛇除けの名刀を失った絹屋が大蛇に呑まれ、その娘たちが知恵と弓で大蛇を退治した。大蛇の骨を埋めた場所に「大蛇院」の名が残ったとする伝承。",
+  "story_content": "『伊豆松崎の民俗』に収録された伝承。約250年前、甲斐国から来た絹屋が松崎の旧家に泊まり、字野原の池の主である大蛇を捕らえようと名刀を携えて出かけた。その刀は大蛇除けだったが、すり替えられたため絹屋は大蛇に呑まれた。絹屋の娘の姉妹は山や窪地の名に結びつく場所で大蛇を待ち伏せ、計略でおびき寄せて射た。大蛇は穴に入り込み、七日七夜うなって死んだ。その骨を埋めた場所を大蛇院と呼んだという。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "伊豆",
+    "municipality": "松崎町",
+    "area_name": "字野原"
+  },
+  "locations": [
+    {
+      "name": "字野原の池",
+      "type": "池",
+      "description": "大蛇の主がいたとされる池。",
+      "source_ids": [
+        "shizuoka-matsuzaki-azano-ga-hara-daija-src"
+      ]
+    },
+    {
+      "name": "大蛇院",
+      "type": "伝承地",
+      "description": "退治された大蛇の骨を埋めた場所とされる。",
+      "source_ids": [
+        "shizuoka-matsuzaki-azano-ga-hara-daija-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "絹屋",
+      "type": "人間",
+      "description": "名刀を携えて大蛇を退治しようとするが、刀をすり替えられて呑まれる。",
+      "source_ids": [
+        "shizuoka-matsuzaki-azano-ga-hara-daija-src"
+      ]
+    },
+    {
+      "name": "絹屋の娘たち",
+      "type": "人間",
+      "description": "計略を用いて大蛇をおびき寄せ、射ち退治する。",
+      "source_ids": [
+        "shizuoka-matsuzaki-azano-ga-hara-daija-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "字野原の池の主とされ、絹屋を呑むが娘たちに退治される。",
+      "source_ids": [
+        "shizuoka-matsuzaki-azano-ga-hara-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "池の主",
+    "退治譚",
+    "名刀",
+    "地名由来"
+  ],
+  "story_type": [
+    "大蛇伝承",
+    "退治譚",
+    "地名由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-matsuzaki-azano-ga-hara-daija-src",
+      "title": "（八）信仰俗信（五）俗信",
+      "publisher": "東京教育大学民俗学研究会（『伊豆松崎の民俗』）",
+      "publication_date": "1961-11-10",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1400060",
+      "relevant_section": "掲載頁73–74",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カードの要約に基づく。原資料の表記「アザノガハラ（字野原）」をタイトルに採用。"
+}
