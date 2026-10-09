@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ibaraki-goka-yamanba-wan-kashiana",
+  "status": "draft",
+  "title": "五霞町・薬師穴の山姥と椀貸し",
+  "title_normalized": "五霞町・薬師穴の山姥と椀貸し",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "茨城県猿島郡五霞町の薬師穴には山姥が住み、膳椀などを貸してくれたという。借りた椀を壊しても償わなかった者がいたため、それ以降は貸し出さなくなったという口碑が記録されている。",
+    "based_on_source_ids": [
+      "ibaraki-goka-yamanba-wan-kashiana-src"
+    ]
+  },
+  "story_summary": "薬師穴に住む山姥は、頼まれると膳椀などを貸してくれた。ところが借りた椀を一つ壊したのに償わない者がいたため、山姥はそれから道具を貸さなくなったと伝えられる。",
+  "story_content": "飯田豊雲「椀貸穴」に記録された口碑。茨城県猿島郡五霞町の薬師穴には山姥が住み、膳椀などを貸してくれたという。ある時、借りた道具を一つ壊した者が償いをしなかったため、それから貸し出さなくなったとされる。山姥の話と、洞穴・淵などが祭礼用の器物を貸す「椀貸し」伝承が結び付いた例として記録する。",
+  "region": {
+    "prefecture": "茨城県",
+    "historical_province": "下総",
+    "municipality": "猿島郡五霞町",
+    "area_name": "薬師穴"
+  },
+  "locations": [
+    {
+      "name": "薬師穴",
+      "type": "横穴・伝承地",
+      "description": "山姥が住み膳椀を貸したとされる穴。現在の位置・現存状況は追加確認が必要。",
+      "source_ids": [
+        "ibaraki-goka-yamanba-wan-kashiana-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "膳椀を貸すが、借り手が壊した器を償わなかったため貸し出しをやめたとされる。",
+      "source_ids": [
+        "ibaraki-goka-yamanba-wan-kashiana-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "椀貸し",
+    "薬師穴",
+    "約束・返礼"
+  ],
+  "story_type": [
+    "地域伝承",
+    "椀貸し伝承",
+    "洞穴伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ibaraki-goka-yamanba-wan-kashiana-src",
+      "title": "椀貸穴",
+      "publisher": "郷土研究社（『郷土研究』1巻3号）",
+      "publication_date": "1913-05-10",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640009",
+      "relevant_section": "掲載頁48–49",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。薬師穴の現地比定と現在の状態は未確認。椀貸しの他地域例とは同一話とみなさず個別記録として保持する。"
+}
