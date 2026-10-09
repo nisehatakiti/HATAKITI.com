@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okinawa-miyako-maiyaka-gi-tree-tradition",
+  "status": "draft",
+  "title": "宮古島・マイャーカギーの大木伝承",
+  "title_normalized": "宮古島・マイャーカギーの大木伝承",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "沖縄県宮古島の伝承では、マイャーカギーと呼ばれる大木にまつわる語りが記録されている。伝承の詳細と現在の場所は資料照合が必要なため、現段階では候補として登録する。",
+    "based_on_source_ids": [
+      "okinawa-miyako-maiyaka-src"
+    ]
+  },
+  "story_summary": "宮古島で記録された大木に関する伝承。語りの細部や木の現存状況は、原資料を再確認してから確定する。",
+  "story_content": "このレコードは宮古島の大木伝承候補を管理するための暫定登録である。現時点で参照可能な情報だけでは、物語の筋、場所、木の現存状況を十分に裏付けられないため、内容を推測で補わない。原資料の該当箇所を確認後、伝承の本文・地域名・出典情報を更新する。",
+  "region": {
+    "prefecture": "沖縄県",
+    "historical_province": "琉球",
+    "municipality": "宮古島市",
+    "area_name": "宮古島"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [],
+  "themes": [
+    "大木",
+    "樹木伝承",
+    "宮古島"
+  ],
+  "story_type": [
+    "候補・要出典確認"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "okinawa-miyako-maiyaka-src",
+      "title": "宮古島の民俗・伝承資料（出典候補）",
+      "publisher": "未確認",
+      "source_type": "candidate_source",
+      "url": "https://www.city.miyakojima.lg.jp/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "確定記録ではない。公式サイト入口のみで個別出典が未確認のため、公開データでは候補扱いを維持し、原資料を特定する。"
+}
