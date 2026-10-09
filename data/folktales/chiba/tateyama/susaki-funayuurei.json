@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-tateyama-susaki-funayuurei",
+  "status": "draft",
+  "title": "館山・洲崎の船幽霊と舟歌",
+  "title_normalized": "館山・洲崎の船幽霊と舟歌",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "安房国洲崎には潮の流れが鋭く、船が入ると逃れにくい場所があるとされ、船幽霊や難船した亡霊がその潮路をやって来て洲崎で止まり、恨めしげな舟歌を歌うという伝承が記録されている。",
+    "based_on_source_ids": [
+      "chiba-tateyama-susaki-funayuurei-src"
+    ]
+  },
+  "story_summary": "船幽霊や難破船の亡霊が潮路を進んで洲崎へ来て、そこで止まり、恨めしげな舟歌を歌うと語られた。",
+  "story_content": "藤沢衛彦「海から呼びかける怪異」に記録された安房国洲崎の伝承。洲崎には潮の流れが鋭く、船がひとたび入ると逃げられない場所があるとされた。船幽霊や難船した亡霊たちはその潮路をやって来るが、洲崎で止まり、恨めしげな舟歌を歌うという。海流の危険と海難の記憶が怪異の語りに結び付いた例として登録する。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "安房",
+    "municipality": "館山市",
+    "area_name": "洲崎"
+  },
+  "locations": [
+    {
+      "name": "洲崎",
+      "type": "岬・海域",
+      "description": "船幽霊と舟歌の伝承が記録された海域。危険な潮流の具体的な範囲は航海資料で別途確認する。",
+      "source_ids": [
+        "chiba-tateyama-susaki-funayuurei-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "船幽霊",
+      "type": "伝承存在",
+      "description": "難船した亡霊と結び付けられ、洲崎で舟歌を歌うとされた。",
+      "source_ids": [
+        "chiba-tateyama-susaki-funayuurei-src"
+      ]
+    },
+    {
+      "name": "難船した亡霊",
+      "type": "伝承存在",
+      "description": "潮路をたどって洲崎に現れると語られた。",
+      "source_ids": [
+        "chiba-tateyama-susaki-funayuurei-src"
+      ]
+    }
+  ],
+  "themes": [
+    "船幽霊",
+    "舟歌",
+    "海難",
+    "潮流",
+    "洲崎"
+  ],
+  "story_type": [
+    "海の怪異",
+    "船幽霊伝承",
+    "海難伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "chiba-tateyama-susaki-funayuurei-src",
+      "title": "海から呼びかける怪異",
+      "publisher": "日本伝説学会大鐙閣（『伝説』1巻4号）",
+      "publication_date": "1926-09-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1380005",
+      "relevant_section": "掲載頁37–38",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現地の海域を訪れる場合は、伝承紹介と実際の航行上の危険情報を混同しない。"
+}
