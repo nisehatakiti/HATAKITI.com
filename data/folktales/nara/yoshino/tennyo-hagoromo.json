@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nara-yoshino-tennyo-hagoromo",
+  "status": "draft",
+  "title": "吉野・天女の羽衣伝承",
+  "title_normalized": "吉野・天女の羽衣伝承",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "奈良県吉野地方には、天女の羽衣にまつわる伝承があり、水辺や山の景観、土地の由緒と結び付いて語られている。個別の地名・本文は原資料確認を継続する。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "奈良県吉野地方には、天女の羽衣にまつわる伝承があり、水辺や山の景観、土地の由緒と結び付いて語られている。個別の地名・本文は原資料確認を継続する。",
+  "story_content": "",
+  "region": {
+    "prefecture": "奈良県",
+    "historical_province": null,
+    "municipality": "吉野地方",
+    "area_name": "水辺・山間部"
+  },
+  "locations": [
+    {
+      "name": "水辺・山間部",
+      "type": "伝承地域",
+      "description": "調査候補地域。個別の伝承地点・話型は未確認。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天女",
+      "type": "伝承・信仰対象",
+      "description": "天女に関する地域伝承候補。"
+    }
+  ],
+  "themes": [
+    "天女"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tennyo-hagoromo",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "調査候補としての仮登録。個別の一次資料・伝承本文・正確な地点を確認できるまで、確定済みの個別伝承として扱わない。"
+}
