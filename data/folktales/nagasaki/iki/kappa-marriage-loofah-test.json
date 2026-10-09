@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-iki-kappa-marriage-loofah-test",
+  "status": "draft",
+  "title": "壱岐・河童の嫁入りと浮かぶ糸瓜",
+  "title_normalized": "壱岐・河童の嫁入りと浮かぶ糸瓜",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県壱岐市の伝承。旱魃の際、長者が湖の河童に田へ水を入れてくれれば娘を嫁にやると約束する。河童は約束を果たすが、長女と次女は嫁入りを拒み、末娘が向かうことになる。長者は中を空にして水に浮く糸瓜を荷物として持たせ、河童はそれを沈められない娘を嫁に迎えるのをやめたという。",
+    "based_on_source_ids": [
+      "nagasaki-iki-kappa-marriage-loofah-test-src"
+    ]
+  },
+  "story_summary": "旱魃を救う代わりに娘を求めた河童に、長者が浮かぶ糸瓜を持たせて嫁入りを断念させた話。",
+  "story_content": "山口麻太郎「昔話雑考」に記録された壱岐の伝承。旱魃のとき、長者は湖の河童に田へ十分な水を入れてくれれば娘を嫁にやると約束した。河童は水を満たしたが、長女と次女は嫁になることを拒み、末娘が嫁入りに向かうことになった。長者は中身を空にして水に浮く糸瓜を荷物にして持たせた。河童は娘の荷物だから沈めようとしたが沈まず、こんな荷物を持ってくる娘は嫁にいらないとして、嫁入りは成立しなかったという。水の恩恵と婚姻の約束、機転による回避を組み合わせた伝承である。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": "壱岐",
+    "municipality": "壱岐市",
+    "area_name": "湖のほとり"
+  },
+  "locations": [
+    {
+      "name": "湖",
+      "type": "湖",
+      "description": "旱魃の際、河童が水を満たしたとされる場所。固有名は資料要約にない。",
+      "source_ids": [
+        "nagasaki-iki-kappa-marriage-loofah-test-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "長者",
+      "type": "人間",
+      "description": "旱魃を救う代わりに娘を河童へ嫁がせる約束をし、末娘に糸瓜を持たせて機転を働かせた。",
+      "source_ids": [
+        "nagasaki-iki-kappa-marriage-loofah-test-src"
+      ]
+    },
+    {
+      "name": "末娘",
+      "type": "人間",
+      "description": "河童の嫁入りに向かうが、浮かぶ糸瓜を荷物として持たされる。",
+      "source_ids": [
+        "nagasaki-iki-kappa-marriage-loofah-test-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "旱魃を救う代わりに長者の娘を嫁に求める。",
+      "source_ids": [
+        "nagasaki-iki-kappa-marriage-loofah-test-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "旱魃",
+    "水の恩恵",
+    "婚姻の約束",
+    "糸瓜",
+    "機転"
+  ],
+  "story_type": [
+    "河童譚",
+    "婚姻譚",
+    "機知譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-iki-kappa-marriage-loofah-test-src",
+      "title": "昔話雑考",
+      "publisher": "三元社（『旅と伝説』9巻4号・通巻100号）",
+      "publication_date": "1936-04-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1233084",
+      "relevant_section": "掲載頁173–174",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。湖の固有名は記録にないため補っていない。"
+}
