@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagasaki-tsushima-sago-minato-umibozu",
+  "status": "draft",
+  "title": "対馬・佐護湊の海坊主とアカトリ",
+  "title_normalized": "対馬・佐護湊の海坊主とアカトリ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長崎県の対馬・佐護湊の民間信仰として、海坊主が船に現れてアカトリ（船で水を汲む道具）を貸すよう求め、貸すと海水を船に汲み入れて沈めると脅す伝承が記録されている。海難を避けるため船に船玉様を祀り、祈願したともいう。",
+    "based_on_source_ids": [
+      "nagasaki-tsushima-sago-minato-umibozu-src"
+    ]
+  },
+  "story_summary": "対馬・佐護湊では、海坊主が船に来てアカトリを貸すよう求める。貸さないと船を沈めると脅し、貸すと海水を船に汲み込むという。伝承資料には、海坊主を死者の魂とする説や、海難除けとして船玉様を祀る習俗も記録されている。",
+  "story_content": "日文研の記録「対馬・佐護湊の民間信仰」によると、海坊主は舟へ来てアカトリを貸すよう求め、貸さなければ船を沈めると脅す。アカトリを貸すと海の潮を船に汲み込んで船を沈めるという。一説では死んだ人間の魂ともされ、漁師は災難を避けるため船に船玉様を祀って祈願したと記録されている。",
+  "region": {
+    "prefecture": "長崎県",
+    "historical_province": null,
+    "municipality": "対馬市佐護湊",
+    "area_name": "佐護湊"
+  },
+  "locations": [
+    {
+      "name": "佐護湊",
+      "type": "港・伝承地域",
+      "description": "日文研の個別記録の題名に示される伝承地域。正確な現地地点や現在の案内情報は後続調査で確認する。",
+      "source_ids": [
+        "nagasaki-tsushima-sago-minato-umibozu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "船に現れ、アカトリを求める海の怪異として記録される。",
+      "source_ids": [
+        "nagasaki-tsushima-sago-minato-umibozu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主",
+    "船の安全",
+    "船玉信仰",
+    "海難除け"
+  ],
+  "story_type": [
+    "地域伝承",
+    "海上伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagasaki-tsushima-sago-minato-umibozu-src",
+      "title": "対馬・佐護湊の民間信仰",
+      "publisher": "民俗と歴史の会",
+      "publication_date": "1983-12-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2390020",
+      "relevant_section": "17頁「海坊主」",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。アカトリの道具としての詳細、佐護湊の現在の地理的範囲、船玉信仰の現地資料は後段で補完する。"
+}
