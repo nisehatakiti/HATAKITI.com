@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-shinshu-shinmachi-kitsunebi-mountain",
+  "status": "draft",
+  "title": "信州新町・山に現れる狐火",
+  "title_normalized": "信州新町・山に現れる狐火",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県長野市信州新町の民俗記録では、山に狐火が出ると短く記録されている。具体的な出現場所や目撃の様子は詳述されていない。",
+    "based_on_source_ids": [
+      "nagano-shinshu-shinmachi-kitsunebi-src"
+    ]
+  },
+  "story_summary": "信州新町の山には狐火が出ると記録されている。伝承本文は短く、詳しい状況は伝えられていない。",
+  "story_content": "『長野県史 民俗編 北信地方』の俗信・妖怪に関する記録では、長野市信州新町について「山には狐火が出る」と記されている。具体的な山名、時刻、目撃者、光の動きなどは個別カードからは分からないため、短い記録であること自体を明示して登録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "長野市",
+    "area_name": "信州新町"
+  },
+  "locations": [
+    {
+      "name": "信州新町の山（山名未詳）",
+      "type": "山域・伝承地域",
+      "description": "狐火が出ると記録された山域。具体的な山名は資料に記載されていない。",
+      "source_ids": [
+        "nagano-shinshu-shinmachi-kitsunebi-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異現象",
+      "description": "山に現れると記録された光。詳細な目撃談は記載されていない。",
+      "source_ids": [
+        "nagano-shinshu-shinmachi-kitsunebi-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "山",
+    "俗信"
+  ],
+  "story_type": [
+    "狐火伝承",
+    "民俗記録"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-shinshu-shinmachi-kitsunebi-src",
+      "title": "第一章 俗信 第五節 妖怪・幽霊（1 妖怪）",
+      "publisher": "長野県史刊行会（『長野県史 民俗編 北信地方』）",
+      "publication_date": "1988-03-10",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C2040160-000",
+      "relevant_section": "掲載頁68",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。資料が短いため、独自の物語展開を付け足さない。"
+}
