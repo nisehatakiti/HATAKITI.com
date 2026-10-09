@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_id": "osaka-hirakata-setsubun-holly-evil-eye",
+  "status": "draft",
+  "title": "柊の枝で鬼の目を突く節分",
+  "title_normalized": "柊の枝で鬼の目を突く節分",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "大阪府枚方市周辺の年中行事記録では、節分に鰯の頭を柊の小枝につけ、門口や裏口の柱に挿した。柊は俗に「鬼の目突き」と呼ばれ、鬼が家に入ろうとすると柊を恐れて立ち去ると説明される。",
+    "based_on_source_ids": [
+      "0640068"
+    ]
+  },
+  "story_summary": "柊と鰯の頭を戸口に飾り、鬼の侵入を防ぐ節分の習俗。",
+  "story_content": "岡市正人「河内枚方辺年中行事」には、二月の節分に鰯の頭を柊の小枝につけ、門の入口と裏口の左右の柱に挿す習俗が記されている。柊は俗に「鬼の目突き」と呼ばれ、鬼が家に入ろうとするとこれを恐れて立ち去るという。これは鬼を退治する物語というより、家の境界を守る年中行事の伝承として記録する。",
+  "region": {
+    "prefecture": "大阪府",
+    "historical_province": "河内国",
+    "municipality": "枚方市",
+    "area_name": "河内・枚方周辺"
+  },
+  "locations": [
+    "門口",
+    "裏口"
+  ],
+  "characters": [],
+  "beings": [
+    "鬼"
+  ],
+  "themes": [
+    "節分",
+    "鬼除け",
+    "柊",
+    "鰯"
+  ],
+  "story_type": [
+    "年中行事",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "0640068",
+      "title": "河内枚方辺年中行事",
+      "publisher": "郷土研究社（『郷土研究』3巻1号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640068",
+      "publication_date": "1915-03-01",
+      "relevant_section": "掲載頁46",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。鬼の目突きは柊の俗称として記録し、具体的な儀礼の効力を事実として断定しない。"
+}
