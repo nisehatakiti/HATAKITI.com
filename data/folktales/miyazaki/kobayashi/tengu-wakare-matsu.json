@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyazaki-kobayashi-tengu-wakare-matsu",
+  "status": "draft",
+  "title": "野尻・天狗の別れ松",
+  "title_normalized": "野尻・天狗の別れ松",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮崎県の野尻町と内山の天狗が縄張り争いをし、一本の松を両側から引っ張って裂いてしまったため、その松を「天狗の別れ松」と呼び、集落の境界になったという伝承。",
+    "based_on_source_ids": [
+      "miyazaki-kobayashi-tengu-wakare-matsu-src"
+    ]
+  },
+  "story_summary": "野尻の天狗と内山の天狗が一本の松を取り合い、両方から引っ張ったため松が裂けた。その松は「天狗の別れ松」と呼ばれ、部落の境界になったと伝えられる。",
+  "story_content": "日文研の「松の民俗伝承」記録では、野尻町の天狗と内山の天狗が縄張り争いをし、松の木を両方から引っ張ったため裂けてしまったという。そのため、その木を「天狗の別れ松」と呼び、部落の境界になっていると記録されている。",
+  "region": {
+    "prefecture": "宮崎県",
+    "historical_province": null,
+    "municipality": "小林市野尻町（旧野尻町）",
+    "area_name": "野尻・内山"
+  },
+  "locations": [
+    {
+      "name": "天狗の別れ松",
+      "type": "伝承地・樹木",
+      "description": "野尻と内山の天狗の争いに由来するとされる松。記録時点の伝承地と現存状況は未確認。",
+      "source_ids": [
+        "miyazaki-kobayashi-tengu-wakare-matsu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "野尻の天狗・内山の天狗",
+      "type": "伝承存在",
+      "description": "松を取り合い、縄張り争いをしたとされる二者。",
+      "source_ids": [
+        "miyazaki-kobayashi-tengu-wakare-matsu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "松の伝承",
+    "境界の由来",
+    "地名・樹木伝承"
+  ],
+  "story_type": [
+    "地域伝承",
+    "地名由来伝承",
+    "樹木伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyazaki-kobayashi-tengu-wakare-matsu-src",
+      "title": "松の民俗伝承",
+      "publisher": "山村民俗の会（『あしなか』通巻105号）",
+      "publication_date": "1967-09",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030248",
+      "relevant_section": "掲載頁9–10",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現在の地名・旧野尻町域の伝承地・松の現存状況は後段で補完する。"
+}
