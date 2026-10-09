@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamanashi-tengu-shrine-box",
+  "status": "draft",
+  "title": "山梨・天狗と天狗社の箱",
+  "title_normalized": "山梨・天狗と天狗社の箱",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "山梨県では、天狗が異界へ行き天皇を助けたという話や、天狗社に箱が伝わるという伝承が記録されている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "山梨県では、天狗が異界へ行き天皇を助けたという話や、天狗社に箱が伝わるという伝承が記録されている。",
+  "story_content": "山梨県では、天狗が異界へ行き天皇を助けたという話や、天狗社に箱が伝わるという伝承が記録されている。",
+  "region": {
+    "prefecture": "山梨県",
+    "historical_province": null,
+    "municipality": "山梨県内",
+    "area_name": "天狗社とされる場所"
+  },
+  "locations": [
+    {
+      "name": "天狗社とされる場所",
+      "type": "伝承地域",
+      "description": "日文研の伝承検索で確認された地域情報。正確な個別地点・記録IDは追加確認が必要。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "天狗に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "source_record_verification_needed",
+  "research_notes": "伝承の概要は日文研データベースの検索結果に基づく候補。正確な個別カードURL・原資料・地点を照合してから確定扱いにする。"
+}
