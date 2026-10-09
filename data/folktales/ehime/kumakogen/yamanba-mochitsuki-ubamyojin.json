@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-kumakogen-yamanba-mochitsuki-ubamyojin",
+  "status": "draft",
+  "title": "久万高原・山姥の餅つきと姥大明神",
+  "title_normalized": "久万高原・山姥の餅つきと姥大明神",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県久万高原町では、山姥が毎年正月に餅つきを手伝い、その餅は家業繁盛の福餅とされた。しかし村人が山姥を嫌って餅つきの日を変えると、天災や疫病が続いたため、姥大明神を創建し正月三日間は餅断ちをしたという。",
+    "based_on_source_ids": [
+      "ehime-kumakogen-yamanba-mochitsuki-src"
+    ]
+  },
+  "story_summary": "山姥は毎年正月に餅つきを手伝い、その餅は家業繁盛をもたらす福餅とされた。村人は身なりの汚い山姥を嫌い、餅つきの日を変えた。すると天災や疫病が続き、山姥の祟りと考えられたため、姥大明神を創建し、正月三日間は餅を食べないことにしたと伝えられる。",
+  "story_content": "『愛媛県史 民俗下巻』に収録された伝承。久万高原町では、山姥が毎年正月に餅つきを手伝い、その餅は家業繁盛の福餅とされていた。身なりが汚いことから村人が山姥を嫌い、餅つきの日を変更したところ、村に天災や疫病が続き、山姥の祟りと考えられた。そこで姥大明神を創建し、正月三日間は餅断ちをすることになったという。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": "伊予",
+    "municipality": "上浮穴郡久万高原町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "姥大明神（所在地未詳）",
+      "type": "祠・信仰伝承地",
+      "description": "山姥の祟りを鎮めるため創建されたとされる。該当する祠の現在地・現存状況は追加確認が必要。",
+      "source_ids": [
+        "ehime-kumakogen-yamanba-mochitsuki-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "伝承存在",
+      "description": "正月の餅つきを助ける福をもたらす存在だが、習俗の変更後は祟りをもたらしたとされる。",
+      "source_ids": [
+        "ehime-kumakogen-yamanba-mochitsuki-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "正月",
+    "餅つき",
+    "祟り",
+    "姥大明神"
+  ],
+  "story_type": [
+    "地域伝承",
+    "年中行事伝承",
+    "信仰伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-kumakogen-yamanba-mochitsuki-src",
+      "title": "第九章 第一節 三 正月と餅の民俗",
+      "publisher": "愛媛県（『愛媛県史 民俗下巻』）",
+      "publication_date": "1984-03-31",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3820135-000",
+      "relevant_section": "掲載頁442",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードおよび愛媛県史に基づく。姥大明神の具体的な所在地と現在の祭祀状況は未確認。"
+}
