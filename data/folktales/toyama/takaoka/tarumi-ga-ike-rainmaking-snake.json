@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-takaoka-tarumi-ga-ike-rainmaking-snake",
+  "status": "draft",
+  "title": "高岡・樽見ヶ池の蛇と雨乞い",
+  "title_normalized": "高岡・樽見ヶ池の蛇と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "富山県高岡市福岡町では、昔、村人が沢川の樽見ヶ池へ雨乞いに出かけた。池の主は蛇とされ、蛇が嫌う古鎌を池に投げ入れて水をもらい、夕方に境内で火を焚いて雨乞いをすると大風雨になったという。",
+    "based_on_source_ids": [
+      "toyama-takaoka-tarumi-ga-ike-rainmaking-snake-src"
+    ]
+  },
+  "story_summary": "蛇が主とされる池で古鎌を投げ入れて水を得て、境内で雨乞いをすると大風雨になったという伝承。",
+  "story_content": "伊藤曙覧「第五章：7 雨乞い・綱ひき・虫送り」に収録された高岡市福岡町の伝承。村人は昔、沢川の樽見ヶ池へ雨乞いに出かけた。この池の主は蛇で、蛇の嫌う古鎌を池に投げ入れ、水をもらって帰った。その日の夕方、境内で火を焚いて雨乞いをすると、大風雨になったと語られる。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": "越中",
+    "municipality": "高岡市福岡町",
+    "area_name": "沢川・樽見ヶ池"
+  },
+  "locations": [
+    {
+      "name": "樽見ヶ池",
+      "type": "池",
+      "description": "蛇が主とされ、雨乞いの際に水を得るため訪れた池。",
+      "source_ids": [
+        "toyama-takaoka-tarumi-ga-ike-rainmaking-snake-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "村人",
+      "type": "人間",
+      "description": "池に古鎌を投げ入れ、水を得て雨乞いを行う。",
+      "source_ids": [
+        "toyama-takaoka-tarumi-ga-ike-rainmaking-snake-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "蛇",
+      "type": "池の主",
+      "description": "樽見ヶ池の主とされ、古鎌を嫌うと伝えられる。",
+      "source_ids": [
+        "toyama-takaoka-tarumi-ga-ike-rainmaking-snake-src"
+      ]
+    }
+  ],
+  "themes": [
+    "蛇",
+    "雨乞い",
+    "池の主",
+    "水",
+    "古鎌"
+  ],
+  "story_type": [
+    "雨乞い伝承",
+    "蛇伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "related_motif"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "toyama-takaoka-tarumi-ga-ike-rainmaking-snake-src",
+      "title": "第五章：7 雨乞い・綱ひき・虫送り",
+      "publisher": "富山県（『富山県史 民俗編』）",
+      "publication_date": "1973-03-31",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1610097-000",
+      "relevant_section": "掲載頁849",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。蛇を池の主とする伝承と雨乞いの手順を分けず、採録された流れで記録した。"
+}
