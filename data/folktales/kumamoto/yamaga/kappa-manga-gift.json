@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kumamoto-yamaga-kappa-manga-gift",
+  "status": "draft",
+  "title": "山鹿・河童の巣の怪物退治と大魚",
+  "title_normalized": "山鹿・河童の巣の怪物退治と大魚",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "熊本県山鹿市では、夢に現れた河童から巣にかかった怪物を退治してほしいと頼まれ、川底の洞窟で網を取り除くと、翌朝大魚が置かれていた。河童は礼として村人に危害を加えないと告げたという。",
+    "based_on_source_ids": [
+      "kumamoto-yamaga-kappa-manga-gift-src"
+    ]
+  },
+  "story_summary": "熊本県山鹿市では、夢に現れた河童から巣にかかった怪物を退治してほしいと頼まれ、川底の洞窟で網を取り除くと、翌朝大魚が置かれていた。河童は礼として村人に危害を加えないと告げたという。",
+  "story_content": "熊本県山鹿市では、夢に現れた河童から巣にかかった怪物を退治してほしいと頼まれ、川底の洞窟で網を取り除くと、翌朝大魚が置かれていた。河童は礼として村人に危害を加えないと告げたという。",
+  "region": {
+    "prefecture": "熊本県",
+    "historical_province": null,
+    "municipality": "山鹿市",
+    "area_name": "河童の巣とされた川底の洞窟"
+  },
+  "locations": [
+    {
+      "name": "河童の巣とされた川底の洞窟",
+      "type": "伝承地・地域",
+      "description": "日文研の個別カードに記載された地域・場所。訪問地点の精度は後続確認で補完する。",
+      "source_ids": [
+        "kumamoto-yamaga-kappa-manga-gift-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "河童に関する地域伝承。",
+      "source_ids": [
+        "kumamoto-yamaga-kappa-manga-gift-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kumamoto-yamaga-kappa-manga-gift-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料の発行年は個別記録参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0570055",
+      "relevant_section": "山鹿・河童の巣の怪物退治と大魚",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。後段で原資料全文、伝承地点の現在地、旅行者向け案内を補完する。"
+}
