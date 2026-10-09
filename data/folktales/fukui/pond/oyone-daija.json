@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukui-oyone-daija",
+  "status": "draft",
+  "title": "福井・およね池の大蛇",
+  "title_normalized": "福井・およね池の大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福井県の伝承では、およねという女性が夜道に迷って池にはまり大蛇となり、その後は人に化けて男のもとへ通った。墓を見つけて供養すると、報恩講の日に雨が降らなくなったという。",
+    "based_on_source_ids": [
+      "fukui-oyone-daija-src"
+    ]
+  },
+  "story_summary": "福井県の伝承では、およねという女性が夜道に迷って池にはまり大蛇となり、その後は人に化けて男のもとへ通った。墓を見つけて供養すると、報恩講の日に雨が降らなくなったという。",
+  "story_content": "福井県の伝承では、およねという女性が夜道に迷って池にはまり大蛇となり、その後は人に化けて男のもとへ通った。墓を見つけて供養すると、報恩講の日に雨が降らなくなったという。",
+  "region": {
+    "prefecture": "福井県",
+    "historical_province": null,
+    "municipality": "福井県内",
+    "area_name": "およねが池にはまったとされる池・墓"
+  },
+  "locations": [
+    {
+      "name": "およねが池にはまったとされる池・墓",
+      "type": "伝承地・地域",
+      "description": "日文研の検索記録に記載された地域・地形。正確な地点は原資料を再確認して補完する。",
+      "source_ids": [
+        "fukui-oyone-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "fukui-oyone-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukui-oyone-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1570038",
+      "relevant_section": "福井・およね池の大蛇",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の検索記録に基づき登録。自治体・池名・伝承本文の対応は原資料を追加確認し、旅行用地図へ載せる前に地点精度を検証する。"
+}
