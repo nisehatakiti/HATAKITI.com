@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okayama-daisen-akamatsu-ike-daija",
+  "status": "draft",
+  "title": "岡山・大山赤松池の大蛇と雨乞い",
+  "title_normalized": "岡山・大山赤松池の大蛇と雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岡山県の伝承では、雨乞いで酒を入れた五升樽を大山赤松池へ投げ込むと、池の大蛇が酒を飲んで樽を空にする。池の水を樽に入れて村へ持ち帰ると大雨が降るといわれた。",
+    "based_on_source_ids": [
+      "okayama-daisen-akamatsu-ike-daija-src"
+    ]
+  },
+  "story_summary": "岡山県の伝承では、雨乞いで酒を入れた五升樽を大山赤松池へ投げ込むと、池の大蛇が酒を飲んで樽を空にする。池の水を樽に入れて村へ持ち帰ると大雨が降るといわれた。",
+  "story_content": "岡山県の伝承では、雨乞いで酒を入れた五升樽を大山赤松池へ投げ込むと、池の大蛇が酒を飲んで樽を空にする。池の水を樽に入れて村へ持ち帰ると大雨が降るといわれた。",
+  "region": {
+    "prefecture": "岡山県",
+    "historical_province": null,
+    "municipality": "岡山県内",
+    "area_name": "大山赤松池"
+  },
+  "locations": [
+    {
+      "name": "大山赤松池",
+      "type": "伝承地・地域",
+      "description": "日文研の検索記録に記載された地域・地形。正確な地点は原資料を再確認して補完する。",
+      "source_ids": [
+        "okayama-daisen-akamatsu-ike-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "okayama-daisen-akamatsu-ike-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "okayama-daisen-akamatsu-ike-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=2360999",
+      "relevant_section": "岡山・大山赤松池の大蛇と雨乞い",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の検索記録に基づき登録。自治体・池名・伝承本文の対応は原資料を追加確認し、旅行用地図へ載せる前に地点精度を検証する。"
+}
