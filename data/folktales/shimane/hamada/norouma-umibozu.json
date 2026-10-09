@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shimane-hamada-norouma-umibozu",
+  "status": "draft",
+  "title": "浜田・のろうまと海坊主",
+  "title_normalized": "浜田・のろうまと海坊主",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "島根県浜田市殿町では「のろうま」を海坊主とも呼び、船に近づいて柄杓を貸せと求める。底の抜けていない柄杓を貸すと、水を汲み入れられて船を沈められるという。",
+    "based_on_source_ids": [
+      "shimane-hamada-norouma-umibozu-src"
+    ]
+  },
+  "story_summary": "島根県浜田市殿町では「のろうま」を海坊主とも呼び、船に近づいて柄杓を貸せと求める。底の抜けていない柄杓を貸すと、水を汲み入れられて船を沈められるという。",
+  "story_content": "島根県浜田市殿町では「のろうま」を海坊主とも呼び、船に近づいて柄杓を貸せと求める。底の抜けていない柄杓を貸すと、水を汲み入れられて船を沈められるという。",
+  "region": {
+    "prefecture": "島根県",
+    "historical_province": null,
+    "municipality": "浜田市殿町",
+    "area_name": "海坊主"
+  },
+  "locations": [
+    {
+      "name": "海坊主",
+      "type": "伝承地域",
+      "description": "日文研データベースに記録された地域。正確な地点は今後の調査で補完する。",
+      "source_ids": [
+        "shimane-hamada-norouma-umibozu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "hub-motif-sea-bozu-traditions",
+      "type": "伝承存在",
+      "description": "hub-motif-sea-bozu-traditionsに関する地域伝承。",
+      "source_ids": [
+        "shimane-hamada-norouma-umibozu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "hub-motif-sea-bozu-traditions"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2260035",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shimane-hamada-norouma-umibozu-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "記録年は原資料参照",
+      "source_type": "database_record",
+      "relevant_section": "浜田・のろうまと海坊主",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別データベース記録に基づく全国展開用の個別伝承。具体的な座標・原文・現在の現地訪問情報は後段で補完する。"
+}
