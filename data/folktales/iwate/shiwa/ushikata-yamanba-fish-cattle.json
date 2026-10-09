@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-shiwa-ushikata-yamanba-fish-cattle",
+  "status": "draft",
+  "title": "紫波・魚を食べ尽くした山姥と牛方",
+  "title_normalized": "紫波・魚を食べ尽くした山姥と牛方",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県紫波郡の昔話。牛方が残った魚を山姥に与えたが、山姥は食い足りないと牛まで食べてしまう。逃げた牛方は百姓の家に隠れるが、その家の妻に長持ちへ閉じ込められ、湯を注がれて殺され、金を奪われたという。",
+    "based_on_source_ids": [
+      "iwate-shiwa-ushikata-yamanba-fish-cattle-src"
+    ]
+  },
+  "story_summary": "魚を食べた山姥に牛まで食われた牛方が逃げ込んだ家でも、家人に裏切られる昔話。",
+  "story_content": "関敬吾「牛方山姥の昔話―逃鼠昔話の一類型として―」に記録された『紫波郡昔話』の一話。牛方が残った魚を山姥に与えると、山姥は食い足りないと言って牛まで食べてしまう。牛方は逃げて百姓の家に隠れるが、その家の妻に長持ちへ穴を開けられ、湯を注がれて殺され、金を奪われる。山姥から逃げても安全が得られない構成であり、資料自身も主人公が不幸になる点を珍しいものとしている。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": "陸中",
+    "municipality": "紫波郡",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "山道・山中",
+      "type": "山林",
+      "description": "牛方が山姥に出会ったとされる場所。",
+      "source_ids": [
+        "iwate-shiwa-ushikata-yamanba-fish-cattle-src"
+      ]
+    },
+    {
+      "name": "百姓の家",
+      "type": "家",
+      "description": "逃げ込んだ牛方が家人に殺され、金を奪われた場所。",
+      "source_ids": [
+        "iwate-shiwa-ushikata-yamanba-fish-cattle-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "牛方",
+      "type": "人間",
+      "description": "魚を山姥に与え、牛を食われた後に逃げるが、逃げ込んだ家でも殺される。",
+      "source_ids": [
+        "iwate-shiwa-ushikata-yamanba-fish-cattle-src"
+      ]
+    },
+    {
+      "name": "百姓の家の妻",
+      "type": "人間",
+      "description": "牛方を長持ちに閉じ込め、湯を注いで殺し金を奪った。",
+      "source_ids": [
+        "iwate-shiwa-ushikata-yamanba-fish-cattle-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "妖怪",
+      "description": "牛方の魚を食べ尽くし、さらに牛も食べた。",
+      "source_ids": [
+        "iwate-shiwa-ushikata-yamanba-fish-cattle-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "牛方",
+    "魚",
+    "牛",
+    "逃走",
+    "裏切り"
+  ],
+  "story_type": [
+    "山姥昔話",
+    "逃走譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-shiwa-ushikata-yamanba-fish-cattle-src",
+      "title": "牛方山姥の昔話―逃鼠昔話の一類型として―",
+      "publisher": "三元社（『旅と伝説』9巻4号・通巻100号）",
+      "publication_date": "1936-04-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1233103",
+      "relevant_section": "掲載頁182",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。類型研究の一例として、地域伝承と昔話類型の両面を持つ記録。"
+}
