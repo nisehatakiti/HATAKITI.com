@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saga-coastal-funayuurei-lost-course",
+  "status": "draft",
+  "title": "佐賀・帰港できず同じ海域を回る船幽霊",
+  "title_normalized": "佐賀・帰港できず同じ海域を回る船幽霊",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "佐賀県の伝承では、漁から帰る途中に島へたどり着けず、同じ方向をぐるぐる回ることがあり、船幽霊の仕業とされた。船幽霊に柄杓を求められたとき、底を抜かずに渡すと海水を汲まれて船を沈められるという。",
+    "based_on_source_ids": [
+      "saga-coastal-funayuurei-src"
+    ]
+  },
+  "story_summary": "漁から帰る途中、島に着けず同じ方向を回り続ける現象が船幽霊の仕業とされた。柄杓を求められた場合は底を抜いて渡さないと、船に海水を入れられるという。",
+  "story_content": "日文研の怪異・妖怪伝承データベースに収録された1999年採録の佐賀県の伝承。漁から帰る途中に島へ着けず、同じ方向をぐるぐる回ってしまうことがあり、船幽霊の仕業と説明される。船幽霊は柄杓を貸してくれと求め、底を抜いて渡さなければ柄杓で海水を汲まれ、船を沈められてしまうという。採録資料に具体的な市町村名が示されていないため、県域の記録として登録する。",
+  "region": {
+    "prefecture": "佐賀県",
+    "historical_province": "肥前",
+    "municipality": null,
+    "area_name": "沿岸・漁場"
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "船幽霊",
+      "type": "伝承存在",
+      "description": "帰港できず同じ海域を回る現象や、柄杓で海水を汲み入れる怪異と結び付けられる。",
+      "source_ids": [
+        "saga-coastal-funayuurei-src"
+      ]
+    }
+  ],
+  "themes": [
+    "船幽霊",
+    "帰港できない",
+    "海上迷走",
+    "底抜け柄杓"
+  ],
+  "story_type": [
+    "海の怪異",
+    "船幽霊伝承",
+    "航海の俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayuurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "saga-coastal-funayuurei-src",
+      "title": "船幽霊（1999年佐賀県採録）",
+      "publisher": "国際日本文化研究センター（怪異・妖怪伝承データベース）",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230171",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。採録地域は佐賀県までのため、具体的な港や島を推定しない。"
+}
