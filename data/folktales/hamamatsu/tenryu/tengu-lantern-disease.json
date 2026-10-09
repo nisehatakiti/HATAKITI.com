@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "record_id": "hamamatsu-tenryu-tengu-lantern-disease",
+  "status": "draft",
+  "title": "浜松・天狗の提灯の火と病",
+  "title_normalized": "浜松・天狗の提灯の火と病",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県浜松市天竜区大茂沢では、天狗が提灯を持って通ることがあり、その提灯の火を見ると赤痢や疫痢にかかると伝えられた。天狗の姿そのものより、提灯の火を見ることが病につながるという警戒が中心の伝承である。",
+    "based_on_source_ids": [
+      "hamamatsu-tenryu-tengu-lantern-src"
+    ]
+  },
+  "story_summary": "天狗が提灯を持って通り、その火を見ると赤痢や疫痢にかかるとされた浜松・大茂沢の伝承。",
+  "story_content": "久谷哲久・斉藤八千代・井上まなみ「伝説」に収録された静岡県浜松市天竜区の記録。大茂沢では、時々天狗が提灯を持って通っていくといい、その提灯の火を見ると赤痢や疫痢にかかるとされた。記録にあるのは、天狗の提灯と病との結び付きであり、提灯が現れる時刻、天狗の姿、病を避ける具体的な方法までは示されていない。したがって、疫病の流行や特定の出来事と直接結び付けることはせず、火を見てはいけないという地域の警戒を伝える話として整理する。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": "遠江",
+    "municipality": "浜松市天竜区",
+    "area_name": "大茂沢"
+  },
+  "locations": [
+    {
+      "name": "大茂沢",
+      "type": "伝承地域",
+      "description": "天狗の提灯と病の伝承が記録された地域。現在の詳細な地点は追加調査対象。",
+      "source_ids": [
+        "hamamatsu-tenryu-tengu-lantern-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "提灯を持って通り、その火を見ることが病につながるとされた。",
+      "source_ids": [
+        "hamamatsu-tenryu-tengu-lantern-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "提灯",
+    "火を見る禁忌",
+    "疫病",
+    "地域の警戒"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "禁忌伝承",
+    "疫病由来・警戒譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "hamamatsu-tenryu-tengu-lantern-src",
+      "title": "伝説",
+      "publisher": "中京大学郷土研究会（『中京民俗』通巻8号）",
+      "publication_date": "1971-04-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1260004",
+      "relevant_section": "掲載頁86",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード1260004に基づく。カード要約にある大茂沢・提灯の火・赤痢／疫痢の関係のみを採録し、具体的な発生年や回避法は補っていない。"
+}
