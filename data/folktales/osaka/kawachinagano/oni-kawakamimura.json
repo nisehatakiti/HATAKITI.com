@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "record_id": "osaka-kawachinagano-oni-kawakamimura",
+  "status": "draft",
+  "title": "河内長野・鬼住の鬼退治",
+  "title_normalized": "河内長野・鬼住の鬼退治",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "大阪府河内長野市に伝わる鬼退治譚。舒明天皇の時代、葛城山の悪鬼が農作物や子供を食べたため、村人は氏神の大梵天に祈った。大梵天が大雨を降らせ、村人が弓矢や割竹、鐘太鼓で鬼を追い詰めたといい、鬼住という地名や延命寺の宝物にも結びつけられる。",
+    "based_on_source_ids": [
+      "osaka-kawachinagano-oni-kawakamimura-src"
+    ]
+  },
+  "story_summary": "農作物や子供を襲う鬼を、氏神への祈願と村人たちの協力によって退治したとする伝承。鬼住の地名や、延命寺に伝わるとされる弓矢に結びつく。",
+  "story_content": "栗山一夫「下里村の民譚」に収録された伝承。南河内郡川上村には「鬼住」という地名があり、舒明天皇の時代に葛城山の悪鬼が農作物や子供を食べていたという。鬼退治にあたり村人が氏神の大梵天に祈ると、大梵天は大雨を降らせ、弓矢、割竹、鐘太鼓を使って鬼を責める村人たちを助けたと語られる。延命寺には鬼退治に使った弓矢が宝物として保存されているという。",
+  "region": {
+    "prefecture": "大阪府",
+    "historical_province": "河内",
+    "municipality": "河内長野市",
+    "area_name": "川上村（旧地名）"
+  },
+  "locations": [
+    {
+      "name": "鬼住",
+      "type": "地名",
+      "description": "鬼退治譚に由来するとされる地名。",
+      "source_ids": [
+        "osaka-kawachinagano-oni-kawakamimura-src"
+      ]
+    },
+    {
+      "name": "延命寺",
+      "type": "寺院",
+      "description": "鬼退治に使ったとされる弓矢が宝物として保存されていると伝えられる。",
+      "source_ids": [
+        "osaka-kawachinagano-oni-kawakamimura-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "大梵天",
+      "type": "神格",
+      "description": "村人の祈願に応じて大雨を降らせ、鬼退治を助けたとされる。",
+      "source_ids": [
+        "osaka-kawachinagano-oni-kawakamimura-src"
+      ]
+    },
+    {
+      "name": "村人",
+      "type": "人間",
+      "description": "弓矢、割竹、鐘太鼓を用いて鬼を追い詰めたとされる。",
+      "source_ids": [
+        "osaka-kawachinagano-oni-kawakamimura-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "悪鬼",
+      "type": "妖怪",
+      "description": "葛城山にいて、農作物や子供を食べたとされる。",
+      "source_ids": [
+        "osaka-kawachinagano-oni-kawakamimura-src"
+      ]
+    }
+  ],
+  "themes": [
+    "鬼",
+    "鬼退治",
+    "地名由来",
+    "氏神",
+    "寺院伝承"
+  ],
+  "story_type": [
+    "鬼伝承",
+    "退治譚",
+    "地名由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-oni",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "osaka-kawachinagano-oni-kawakamimura-src",
+      "title": "下里村の民譚",
+      "publisher": "三元社（『旅と伝説』3巻7号・通巻31号）",
+      "publication_date": "1930-07-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231952",
+      "relevant_section": "掲載頁71",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。旧地名と現在の河内長野市の対応は資料の記載範囲を区別して記録。"
+}
