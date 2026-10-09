@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-nakano-kitsune-lantern-jizo-reveals-fox",
+  "status": "draft",
+  "title": "中野・地蔵に化けた狐と提灯",
+  "title_normalized": "中野・地蔵に化けた狐と提灯",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県中野市の伝承。野原に湧く湯に入った人が提灯を持って帰る途中、近所の人がぼんやり立っているのを見かけた。近づくと地蔵で、提灯を後ろへ差し出すと狐が鳴きながら飛び出して藪へ逃げたという。",
+    "based_on_source_ids": [
+      "nagano-nakano-kitsune-lantern-jizo-reveals-fox-src"
+    ]
+  },
+  "story_summary": "地蔵に見えたものの正体が狐だったと分かり、提灯を差し出すと狐が逃げたという話。",
+  "story_content": "安間清「狐にばかされた話（二）」に記録された長野県中野市の伝承。ある人が野原に湧く湯に入って提灯を持って帰っていると、近所の人がぼんやり立っているように見えた。近づくとそれは地蔵であった。提灯を後ろへ差し出したところ、狐が鳴きながら飛び出し、藪の中へ逃げたという。地蔵に見えたものと狐の正体が結びつく話として記録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "中野市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "野原の湧き湯",
+      "type": "湧泉",
+      "description": "入浴後、提灯を持って帰る人が地蔵に見えるものと出会った場所。",
+      "source_ids": [
+        "nagano-nakano-kitsune-lantern-jizo-reveals-fox-src"
+      ]
+    },
+    {
+      "name": "藪",
+      "type": "藪",
+      "description": "提灯を差し出された狐が逃げ込んだ場所。",
+      "source_ids": [
+        "nagano-nakano-kitsune-lantern-jizo-reveals-fox-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "湯から帰る人",
+      "type": "人間",
+      "description": "提灯を持って帰る途中、地蔵に見えるものに出会った。",
+      "source_ids": [
+        "nagano-nakano-kitsune-lantern-jizo-reveals-fox-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "地蔵に見える姿で人を惑わせたとみられ、提灯を差し出されると鳴きながら逃げた。",
+      "source_ids": [
+        "nagano-nakano-kitsune-lantern-jizo-reveals-fox-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "化ける",
+    "地蔵",
+    "提灯",
+    "湧き湯"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "正体露見譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-nakano-kitsune-lantern-jizo-reveals-fox-src",
+      "title": "狐にばかされた話（二）",
+      "publisher": "三元社（『旅と伝説』11巻9号・通巻129号）",
+      "publication_date": "1938-09-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230716",
+      "relevant_section": "掲載頁50",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。湧き湯の固有名や地蔵の由来は資料要約にないため補っていない。"
+}
