@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-ichinoseki-kitsunebi-autumn-winter-mountain-procession",
+  "status": "draft",
+  "title": "一関・秋から冬に山に見える狐火の行列",
+  "title_normalized": "一関・秋から冬に山に見える狐火の行列",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岩手県一関市大東町旧中川村の採録では、狐火は秋から冬にかけて山の方に見え、行列を作るが、提灯の明かりとは少し違うと語られる。",
+    "based_on_source_ids": [
+      "1460556"
+    ]
+  },
+  "story_summary": "秋から冬、山の方に提灯とは異なる光の行列が見えるものを狐火とする伝承。",
+  "story_content": "東洋大学民俗研究会『旧中川村の民俗―岩手県東磐井郡大東町旧中川村―』に収録された伝承。話者は小山一夫氏。狐火は秋から冬にかけて山の方に見え、行列を作るが、提灯の明かりとは少し違うと語られている。\n\nこの記録で明示される特徴は、季節（秋から冬）、方向（山の方）、形（行列）、比較対象（提灯の明かりとの違い）である。光の色や発生原因、行列の数・距離などはこのカードの要約には記されていないため、他地域の狐火伝承から補っていない。秋田県横手市の「突然消え、しばらくすると再び現れる」狐火とは、同じ狐火という呼称でも語られる識別点が異なるため、別記録として比較する。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": "陸中国",
+    "municipality": "一関市",
+    "area_name": "旧中川村（旧東磐井郡大東町）"
+  },
+  "locations": [
+    {
+      "name": "旧中川村の山地（具体地点不詳）",
+      "type": "伝承地域",
+      "description": "山の方に狐火の行列が見えると語られる。個別の山名・観察地点はカードから特定できない。",
+      "source_ids": [
+        "1460556"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "小山一夫",
+      "type": "話者",
+      "description": "資料でこの伝承の話者として記録される。",
+      "source_ids": [
+        "1460556"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異・伝承現象",
+      "description": "秋から冬に山の方に行列を作って見え、提灯の明かりとは少し違うと語られる。",
+      "source_ids": [
+        "1460556"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "光の行列",
+    "季節性",
+    "山の怪異",
+    "提灯との比較"
+  ],
+  "story_type": [
+    "怪異目撃譚",
+    "自然現象の伝承的解釈"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1460556",
+      "title": "九 口承文芸",
+      "author": "東洋大学民俗研究会",
+      "publisher": "東洋大学民俗研究会『旧中川村の民俗―岩手県東磐井郡大東町旧中川村―』昭和47年度号",
+      "publication_date": "1973-06",
+      "informant": "小山一夫",
+      "relevant_section": "掲載頁292",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1460556",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研個別カード1460556に基づく。旧地名の旧中川村・大東町と現行自治体名の一関市を併記。色・原因・行列の規模は出典要約にないため補わず、秋田県横手市の狐火記録と識別特徴を比較する。"
+}
