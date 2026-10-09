@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "record_id": "mie-taki-kitsune-deep-field-walking",
+  "status": "draft",
+  "title": "多気・着物を頭に載せて田を歩いた狐の化かし",
+  "title_normalized": "多気・着物を頭に載せて田を歩いた狐の化かし",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "三重県多気町の伝承。狐に化かされた人が、着物を頭に載せて「ああ深い、ああ深い」と言いながら田んぼの中を歩いたという。",
+    "based_on_source_ids": [
+      "mie-taki-kitsune-deep-field-walking-src"
+    ]
+  },
+  "story_summary": "狐に化かされた人が、着物を頭に載せて深い田の中を歩いていると思い込んだという話。",
+  "story_content": "『中京民俗』通巻18号「口承文芸」に記録された三重県多気町の伝承。狐に化かされた人は、着物を頭に載せ「ああ深い、ああ深い」と言いながら田んぼの中を歩いていたという。短い要約には化かされた人がどのように正気に戻ったかは記されていないため、結末は補わず、田の深さを誤認する狐の化かし譚として記録する。",
+  "region": {
+    "prefecture": "三重県",
+    "historical_province": "伊勢",
+    "municipality": "多気町",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "田んぼ",
+      "type": "農地",
+      "description": "狐に化かされた人が深い場所だと思い込んで歩いていたとされる場所。",
+      "source_ids": [
+        "mie-taki-kitsune-deep-field-walking-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "狐に化かされた人",
+      "type": "人間",
+      "description": "着物を頭に載せ、「ああ深い」と言いながら田んぼを歩いた。",
+      "source_ids": [
+        "mie-taki-kitsune-deep-field-walking-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "人の認識を惑わせ、田んぼを深い場所のように思わせたとされる。",
+      "source_ids": [
+        "mie-taki-kitsune-deep-field-walking-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐に化かされる",
+    "田んぼ",
+    "深さの誤認"
+  ],
+  "story_type": [
+    "狐の化かし譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "mie-taki-kitsune-deep-field-walking-src",
+      "title": "口承文芸",
+      "publisher": "中京大学郷土研究会（『中京民俗』通巻18号）",
+      "publication_date": "1981-08-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiCard/1260124.html",
+      "relevant_section": "掲載頁153",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。化かしが解けた経緯は要約にないため記載していない。"
+}
