@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shiga-koka-tobacco-loving-tengu-drum",
+  "status": "draft",
+  "title": "甲賀・煙草好きの天狗と炭小屋の太鼓音",
+  "title_normalized": "甲賀・煙草好きの天狗と炭小屋の太鼓音",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "滋賀県甲賀市土山町黒滝の伝承。炭小屋で仕事をしていると昼間から賑やかな太鼓の音が聞こえ、翌日も続いた。音のする方へ煙草の吸殻を投げると音が止み、天狗は煙草好きだと語られるようになった。",
+    "based_on_source_ids": [
+      "shiga-koka-tobacco-loving-tengu-drum-src"
+    ]
+  },
+  "story_summary": "炭焼き小屋に響く太鼓音へ煙草の吸殻を投げると音が止み、天狗は煙草好きだと考えられた話。",
+  "story_content": "大溪元千代「近江のたばこ天狗」に記録された甲賀郡土山町黒滝（現・甲賀市土山町）の伝承。山仕事や炭焼きをしていた人々が炭小屋にいると、昼間から賑やかな太鼓の音が聞こえた。翌日も音が続いたため、誰かが天狗の仕業だと言い出した。音のする方へ煙草の吸殻を投げると、たちまち音が止んだという。この出来事から、天狗は煙草好きだと話題になったとされる。",
+  "region": {
+    "prefecture": "滋賀県",
+    "historical_province": "近江",
+    "municipality": "甲賀市土山町",
+    "area_name": "黒滝"
+  },
+  "locations": [
+    {
+      "name": "黒滝の炭小屋",
+      "type": "炭焼き小屋",
+      "description": "昼間から太鼓の音が聞こえたとされる場所。",
+      "source_ids": [
+        "shiga-koka-tobacco-loving-tengu-drum-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "炭焼きの人々",
+      "type": "人間",
+      "description": "炭小屋で太鼓の音を聞き、煙草の吸殻を投げた。",
+      "source_ids": [
+        "shiga-koka-tobacco-loving-tengu-drum-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "太鼓音の原因と考えられ、煙草好きと語られる。",
+      "source_ids": [
+        "shiga-koka-tobacco-loving-tengu-drum-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "煙草",
+    "太鼓",
+    "怪音",
+    "炭焼き",
+    "音を止める行為"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "音の怪異",
+    "習俗由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shiga-koka-tobacco-loving-tengu-drum-src",
+      "title": "近江のたばこ天狗",
+      "publisher": "滋賀民俗学会（『民俗文化』通巻191号）",
+      "publication_date": "1979-08-25",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2410033",
+      "relevant_section": "掲載頁1852",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。黒滝は資料にある旧地名表記を併記した。"
+}
