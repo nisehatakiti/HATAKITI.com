@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "record_id": "saga-karatsu-yobuko-funayurei-circling-before-port",
+  "status": "draft",
+  "title": "帰港できず同じ方向を回る舟幽霊",
+  "title_normalized": "帰港できず同じ方向を回る舟幽霊",
+  "title_origin": "editorial",
+  "summary": {
+    "text": "佐賀県唐津市旧呼子町の漁民伝承では、漁から帰る途中、島に着けず同じ方向をぐるぐる回ってしまうことがあり、舟幽霊の仕業とされた。舟幽霊は柄杓を貸してほしいと言い、底を抜いた柄杓を渡さないと海水を汲み入れて舟を沈めるという。",
+    "based_on_source_ids": [
+      "1070861"
+    ]
+  },
+  "story_summary": "帰港途中に同じ方向を回り続ける現象を舟幽霊の仕業とし、底抜け柄杓で対処する話。",
+  "story_content": "中央大学民俗研究会「佐賀県東松浦郡呼子町 調査報告書」には、漁に出た帰りに島へ着けず、同じ方向をぐるぐる回ってしまうことがあるのは舟幽霊の仕業だという伝承が収録されている。舟幽霊は柄杓を貸してくれと求め、底を抜いて貸さないと、その柄杓で海水を汲まれて舟を沈められるとされた。",
+  "region": {
+    "prefecture": "佐賀県",
+    "historical_province": "肥前国",
+    "municipality": "唐津市",
+    "area_name": "旧東松浦郡呼子町"
+  },
+  "locations": [
+    "呼子周辺の海"
+  ],
+  "characters": [],
+  "beings": [
+    "舟幽霊"
+  ],
+  "themes": [
+    "帰港",
+    "道迷い",
+    "海上の怪異",
+    "底抜け柄杓"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "漁民伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "1070861",
+      "title": "佐賀県東松浦郡呼子町 調査報告書",
+      "publisher": "中央大学民俗研究会（『常民』35号）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1070861",
+      "publication_date": "1999-02-10",
+      "relevant_section": "掲載頁86",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。現在の行政区分を唐津市、資料当時の地域名を旧呼子町として併記。"
+}
