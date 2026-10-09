@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tottori-wakasa-gorota-ba-okami",
+  "status": "draft",
+  "title": "若桜・五郎太婆と狼の群れ",
+  "title_normalized": "若桜・五郎太婆と狼の群れ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "鳥取県八頭郡若桜町の伝承。山奥で日暮れを迎えた旅人を狼の群れが追い、狼たちは互いの背に乗って迫る。最後に呼ばれた大きな狼を旅人が斬ると、村では庄屋の五郎太婆が死んでいたという。",
+    "based_on_source_ids": [
+      "tottori-wakasa-gorota-ba-okami-src"
+    ]
+  },
+  "story_summary": "狼の群れに追われた旅人が、群れの上に乗る大狼を斬る。そのころ村では五郎太婆が死んでいたという、人と狼の正体が重なる怪異譚。",
+  "story_content": "保木本寿生「五郎太娑」に採録された若桜町の話。よそ者が山奥で日暮れを迎え、歩き続けると狼に後をつけられた。木に登って逃れると狼が集まり、狼の上に狼が乗って旅人に近づいてきた。もう少しで届くところで「五郎太婆をよんで来い」という声がし、とても大きな狼が現れて上に乗った。旅人がその狼を刀で切ると、村では庄屋の五郎太婆が死んでいたという。",
+  "region": {
+    "prefecture": "鳥取県",
+    "historical_province": "因幡",
+    "municipality": "若桜町",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "よそ者",
+      "type": "人間",
+      "description": "狼の群れに追われ、木に登って逃れようとする旅人。",
+      "source_ids": [
+        "tottori-wakasa-gorota-ba-okami-src"
+      ]
+    },
+    {
+      "name": "五郎太婆",
+      "type": "人物",
+      "description": "村の庄屋。狼の群れと結びつく存在として語られる。",
+      "source_ids": [
+        "tottori-wakasa-gorota-ba-okami-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狼",
+      "type": "動物・怪異",
+      "description": "群れで旅人を追い、互いの背に乗る。最後に現れた大狼は五郎太婆の死と同時に語られる。",
+      "source_ids": [
+        "tottori-wakasa-gorota-ba-okami-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狼",
+    "山道",
+    "変化",
+    "正体",
+    "怪異譚"
+  ],
+  "story_type": [
+    "狼伝承",
+    "怪異譚"
+  ],
+  "related_records": [],
+  "sources": [
+    {
+      "source_id": "tottori-wakasa-gorota-ba-okami-src",
+      "title": "五郎太娑",
+      "publisher": "鳥取郷土会（『因伯民談』1巻4号）",
+      "publication_date": "1936-05",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0240023",
+      "relevant_section": "掲載頁187–188",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。狼と五郎太婆の関係は採録文の語り方を越えて断定しない。"
+}
