@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-kujukuri-funayuurei-bottomless-hishaku",
+  "status": "draft",
+  "title": "上総・九十九里浜の船幽霊と底抜け柄杓",
+  "title_normalized": "上総・九十九里浜の船幽霊と底抜け柄杓",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "上総の九十九里浜沖では船幽霊が現れ、握り飯を投げると災いを避けられるが、応じないと「柄杓を貸せ」と迫られ、底のある柄杓を渡すと海水を注がれて船を沈められると伝えられた。",
+    "based_on_source_ids": [
+      "chiba-kujukuri-funayuurei-src"
+    ]
+  },
+  "story_summary": "九十九里浜沖で船幽霊に出会ったとき、握り飯を投げると災いを避けられる。柄杓を求められた場合は底を抜いたものを渡さないと、船に水を注がれて沈められるという。",
+  "story_content": "小寺融吉「船幽霊」に記録された上総の伝承。九十九里浜を沖へ出ると船幽霊がたびたび現れ、握り飯を投げれば禍を逃れられるとされた。そうしないと「柄杓貸せ」と迫る船が現れ、普通の柄杓を貸すと柄杓で海水を注がれて船を沈められるため、底を抜いた柄杓を貸すという。船幽霊への対処法を含む海の伝承として登録する。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "上総",
+    "municipality": "九十九里浜沖（沿岸各地）",
+    "area_name": "九十九里浜"
+  },
+  "locations": [
+    {
+      "name": "九十九里浜沖",
+      "type": "海域・伝承地域",
+      "description": "船幽霊の伝承が記録された沖合。特定の出現地点を示すものではない。",
+      "source_ids": [
+        "chiba-kujukuri-funayuurei-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "船幽霊",
+      "type": "伝承存在",
+      "description": "握り飯や柄杓を求め、船を沈めるとされた海の怪異。",
+      "source_ids": [
+        "chiba-kujukuri-funayuurei-src"
+      ]
+    }
+  ],
+  "themes": [
+    "船幽霊",
+    "底抜け柄杓",
+    "握り飯",
+    "海難"
+  ],
+  "story_type": [
+    "海の怪異",
+    "船幽霊伝承",
+    "対処法の伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "chiba-kujukuri-funayuurei-src",
+      "title": "船幽霊",
+      "publisher": "三元社（『旅と伝説』5巻6号・通巻54号）",
+      "publication_date": "1932-06-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230149",
+      "relevant_section": "掲載頁10",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。九十九里浜沖という広域表現を保ち、特定の海上地点を推定しない。"
+}
