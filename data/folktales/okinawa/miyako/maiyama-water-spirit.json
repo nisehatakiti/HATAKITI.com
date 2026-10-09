@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "okinawa-miyako-water-spirit",
+  "status": "draft",
+  "title": "宮古島・水辺の精霊伝承",
+  "title_normalized": "宮古島・水辺の精霊伝承",
+  "title_origin": "research_title",
+  "summary": {
+    "text": "沖縄県宮古島では、井戸や泉などの水場に関わる精霊・神への信仰が伝えられ、水の利用や集落の暮らしと結び付いている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "沖縄県宮古島では、井戸や泉などの水場に関わる精霊・神への信仰が伝えられ、水の利用や集落の暮らしと結び付いている。",
+  "story_content": "沖縄県宮古島では、井戸や泉などの水場に関わる精霊・神への信仰が伝えられ、水の利用や集落の暮らしと結び付いている。",
+  "region": {
+    "prefecture": "沖縄県",
+    "historical_province": null,
+    "municipality": "宮古島市",
+    "area_name": "井戸・泉・集落の水場"
+  },
+  "locations": [
+    {
+      "name": "井戸・泉・集落の水場",
+      "type": "伝承地域",
+      "description": "地域伝承と関係する地名・信仰地。現地地点の確定は後続調査で行う。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "水の精霊",
+      "type": "伝承存在・信仰対象",
+      "description": "水の精霊に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "水の精霊"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-reiju",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "全国の伝承候補として仮登録。個別の一次資料・伝承内容・正確な地点を確認するまで、確定済みの実例として扱わない。出典確認後にsummary、sources、confidenceを更新する。"
+}
