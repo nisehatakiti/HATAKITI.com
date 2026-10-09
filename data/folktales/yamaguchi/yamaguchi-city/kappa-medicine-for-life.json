@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamaguchi-yamaguchi-city-kappa-medicine-for-life",
+  "status": "draft",
+  "title": "阿東生雲・馬を引き込もうとした河童と薬の作り方",
+  "title_normalized": "阿東生雲・馬を引き込もうとした河童と薬の作り方",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山口市阿東生雲東分の伝承。河童が馬を川へ引き込もうとしたが失敗し、馬とともに厩の草の下へ隠れていたところを馬主に見つかった。河童は薬の作り方を教えることを条件に、命を助けてもらったという。",
+    "based_on_source_ids": [
+      "yamaguchi-yamaguchi-city-kappa-medicine-for-life-src"
+    ]
+  },
+  "story_summary": "馬を襲おうとして捕まった河童が、薬の作り方を教える代わりに命を助けられた話。",
+  "story_content": "小川五郎「防長河童譚」に記録された山口市阿東生雲東分の伝承。河童が馬を川へ引き込もうとしたものの失敗し、馬とともに厩の草の下に隠れていた。そこを馬の持ち主に見つけられたが、河童は薬の作り方を教えることを交換条件に命を助けてもらったという。河童を単なる水辺の危険な存在としてではなく、知識や技術を伝える存在として描く事例である。",
+  "region": {
+    "prefecture": "山口県",
+    "historical_province": "周防",
+    "municipality": "山口市阿東生雲東分",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "川",
+      "type": "川",
+      "description": "河童が馬を引き込もうとした場所。川の固有名は資料にない。",
+      "source_ids": [
+        "yamaguchi-yamaguchi-city-kappa-medicine-for-life-src"
+      ]
+    },
+    {
+      "name": "厩",
+      "type": "厩",
+      "description": "河童が馬とともに草の下へ隠れていた場所。",
+      "source_ids": [
+        "yamaguchi-yamaguchi-city-kappa-medicine-for-life-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "馬の持ち主",
+      "type": "人間",
+      "description": "厩で河童を見つけ、薬の作り方を教えるという条件で命を助けた。",
+      "source_ids": [
+        "yamaguchi-yamaguchi-city-kappa-medicine-for-life-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "馬を川へ引き込もうとするが失敗し、命乞いの代わりに薬の作り方を教える。",
+      "source_ids": [
+        "yamaguchi-yamaguchi-city-kappa-medicine-for-life-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "馬",
+    "薬",
+    "知識の伝授",
+    "命乞い"
+  ],
+  "story_type": [
+    "河童譚",
+    "知識授与譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamaguchi-yamaguchi-city-kappa-medicine-for-life-src",
+      "title": "防長河童譚",
+      "publisher": "岡書院（『ドルメン』2巻7号）",
+      "publication_date": "1933-07-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiCard/1520010.html",
+      "relevant_section": "掲載頁22",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。薬の具体的な処方は要約にないため補っていない。"
+}
