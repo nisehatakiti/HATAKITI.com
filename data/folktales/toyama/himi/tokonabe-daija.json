@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "toyama-himi-tokonabe-daija",
+  "status": "draft",
+  "title": "氷見・床鍋の池の主の大蛇",
+  "title_normalized": "氷見・床鍋の池の主の大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "富山県氷見市床鍋では、池の主である大蛇が村を守る自信を失い、娘に化けて別の池へ移ったという伝承がある。村人が雨乞いのため水を求めると、神から蛇はもういないと告げられた。",
+    "based_on_source_ids": [
+      "toyama-himi-tokonabe-daija-src"
+    ]
+  },
+  "story_summary": "富山県氷見市床鍋では、池の主である大蛇が村を守る自信を失い、娘に化けて別の池へ移ったという伝承がある。村人が雨乞いのため水を求めると、神から蛇はもういないと告げられた。",
+  "story_content": "富山県氷見市床鍋では、池の主である大蛇が村を守る自信を失い、娘に化けて別の池へ移ったという伝承がある。村人が雨乞いのため水を求めると、神から蛇はもういないと告げられた。",
+  "region": {
+    "prefecture": "富山県",
+    "historical_province": null,
+    "municipality": "氷見市床鍋",
+    "area_name": "床鍋の池"
+  },
+  "locations": [
+    {
+      "name": "床鍋の池",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。詳細な座標や現地案内は後続調査で補完する。",
+      "source_ids": [
+        "toyama-himi-tokonabe-daija-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "大蛇に関する地域伝承。",
+      "source_ids": [
+        "toyama-himi-tokonabe-daija-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "toyama-himi-tokonabe-daija-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1500105",
+      "relevant_section": "氷見・床鍋の池の主の大蛇",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく個別伝承。後段で原文・現在の地点・旅行者向け案内を補完する。"
+}
