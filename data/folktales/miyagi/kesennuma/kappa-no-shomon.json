@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyagi-kesennuma-motoyoshi-kappa-shomon",
+  "status": "draft",
+  "title": "本吉・河童の証文",
+  "title_normalized": "本吉・河童の証文",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "宮城県気仙沼市本吉町の伝承では、小泉川で馬を洗うと河童が馬の尾にいたずらをして驚かせた。河童を懲らしめると詫びとして水遁の術の巻物と証文の石を差し出したという。",
+    "based_on_source_ids": [
+      "miyagi-motoyoshi-kappa-shomon-src"
+    ]
+  },
+  "story_summary": "小泉川で馬を洗うたびに馬が暴れるため調べると、河童が尾にいたずらをしていた。河童を鞭で打つと謝罪し、詫びとして水遁の術の巻物と証文の石を差し出したと伝えられる。",
+  "story_content": "『宮城県史 民俗3』の「妖怪変化・幽霊：事例篇」に収録された伝承。小泉氏の家臣が小泉川で馬を洗うと、普段おとなしい馬が暴れることが数日続いた。調べると河童が馬の尾にいたずらをしていたため、鞭で打つと河童は謝り、水遁の術の巻物と詫びの証文として平たい石を差し出したという。その石は天気の観測や水に潜る際に役立つとも語られた。",
+  "region": {
+    "prefecture": "宮城県",
+    "historical_province": "陸前",
+    "municipality": "気仙沼市本吉町",
+    "area_name": "小泉川"
+  },
+  "locations": [
+    {
+      "name": "小泉川",
+      "type": "河川・伝承地",
+      "description": "馬を洗い河童に遭遇した場所として記録される。現地の具体的な地点は未確認。",
+      "source_ids": [
+        "miyagi-motoyoshi-kappa-shomon-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "小泉宝領館主・三条小太夫近春",
+      "type": "人物",
+      "description": "伝承で馬を洗い、河童を懲らしめた人物として記される。",
+      "source_ids": [
+        "miyagi-motoyoshi-kappa-shomon-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "馬の尾にいたずらし、詫びとして巻物と石の証文を渡したとされる。",
+      "source_ids": [
+        "miyagi-motoyoshi-kappa-shomon-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "馬",
+    "証文",
+    "水遁の術",
+    "川"
+  ],
+  "story_type": [
+    "地域伝承",
+    "河童伝承",
+    "恩返し・詫び譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyagi-motoyoshi-kappa-shomon-src",
+      "title": "妖怪変化・幽霊：事例篇",
+      "publisher": "宮城県史刊行会（『宮城県史 民俗3』）",
+      "publication_date": "1956-10-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0411188-000",
+      "relevant_section": "掲載頁490–491",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。証文とされる石の現存・所蔵状況は未確認。四万十川流域などの河童証文譚と統合せず個別記録を保持する。"
+}
