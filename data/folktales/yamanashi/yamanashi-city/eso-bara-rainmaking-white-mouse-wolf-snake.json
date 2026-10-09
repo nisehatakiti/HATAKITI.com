@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "record_id": "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake",
+  "status": "draft",
+  "title": "江曽原・七面山の雨乞いと白鼠・狼・大蛇",
+  "title_normalized": "江曽原・七面山の雨乞いと白鼠・狼・大蛇",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "山梨県江曽原の伝承。七面堂を出発した旅人が七面山を通ると夕立に遭い、井戸の中に隠れた。そこへ白鼠、狼、大蛇が現れたが、旅人が祈ると夕立も止み、三つの存在も消えた。麓に戻って霊験を語ったことから祭りが盛大に行われるようになったという。",
+    "based_on_source_ids": [
+      "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+    ]
+  },
+  "story_summary": "夕立の中で井戸に隠れた旅人の前に白鼠・狼・大蛇が現れ、祈りによって嵐とともに姿を消す。後にその体験が祭りの由来として語られた。",
+  "story_content": "池田俊平「甲州八幡聞書」に収録された江曽原の雨乞いの由来。七面山の麓には七面堂があり、旅人がそこを出発して七面山を通ったところ夕立に遭ったため、井戸の中に隠れた。すると白鼠、狼、大蛇が現れた。旅人が祈ると夕立は止み、三つの存在も消え失せたという。旅人が麓へ戻って霊験を語ったことから、それ以降、祭りが盛大に行われるようになったと伝えられる。",
+  "region": {
+    "prefecture": "山梨県",
+    "historical_province": "甲斐",
+    "municipality": null,
+    "area_name": "江曽原・七面山"
+  },
+  "locations": [
+    {
+      "name": "七面堂",
+      "type": "堂・信仰地",
+      "description": "旅人が出発した場所。七面山の麓にあると記録される。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    },
+    {
+      "name": "七面山",
+      "type": "山",
+      "description": "旅人が夕立に遭い、井戸に隠れた道中の山。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    },
+    {
+      "name": "井戸",
+      "type": "井戸",
+      "description": "旅人が夕立を避けるために隠れた場所。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "旅人",
+      "type": "人間",
+      "description": "夕立を避けて井戸に隠れ、祈りの後に起きた出来事を麓で語る。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "白鼠",
+      "type": "動物・怪異",
+      "description": "井戸に隠れた旅人の前に現れる。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    },
+    {
+      "name": "狼",
+      "type": "動物・怪異",
+      "description": "白鼠や大蛇とともに旅人の前に現れる。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    },
+    {
+      "name": "大蛇",
+      "type": "妖怪",
+      "description": "白鼠・狼とともに現れ、祈りの後に消えたとされる。",
+      "source_ids": [
+        "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src"
+      ]
+    }
+  ],
+  "themes": [
+    "雨乞い",
+    "白鼠",
+    "狼",
+    "大蛇",
+    "七面山",
+    "霊験",
+    "祭りの由来"
+  ],
+  "story_type": [
+    "雨乞い伝承",
+    "霊験譚",
+    "祭礼由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "yamanashi-eso-bara-rainmaking-white-mouse-wolf-snake-src",
+      "title": "甲州八幡聞書",
+      "publisher": "山梨民俗の会（『甲斐』通巻6号）",
+      "publication_date": "1957-08-01",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0440001",
+      "relevant_section": "掲載頁28",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。自治体の詳細が示されていないため、江曽原・七面山までの地域表記に留めた。"
+}
