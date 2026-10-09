@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "record_id": "mie-ise-tengu-stone-throw",
+  "status": "draft",
+  "title": "伊勢・天狗の石投げ",
+  "title_normalized": "伊勢・天狗の石投げ",
+  "title_origin": "research_candidate",
+  "summary": {
+    "text": "三重県では、山から石が飛んでくる怪異を天狗の仕業とする伝承が記録されている。山中の音や落石などを天狗と結び付ける山の怪異譚の一例である。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "三重県では、山から石が飛んでくる怪異を天狗の仕業とする伝承が記録されている。山中の音や落石などを天狗と結び付ける山の怪異譚の一例である。",
+  "story_content": "三重県では、山から石が飛んでくる怪異を天狗の仕業とする伝承が記録されている。山中の音や落石などを天狗と結び付ける山の怪異譚の一例である。",
+  "region": {
+    "prefecture": "三重県",
+    "historical_province": null,
+    "municipality": "伊勢地方",
+    "area_name": "山間部"
+  },
+  "locations": [
+    {
+      "name": "山間部",
+      "type": "伝承地域",
+      "description": "日文研の伝承検索で確認された地域情報。正確な個別地点・記録IDは追加確認が必要。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "天狗に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "天狗"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "source_record_verification_needed",
+  "research_notes": "伝承の概要は日文研データベースの検索結果に基づく候補。正確な個別カードURL・原資料・地点を照合してから確定扱いにする。"
+}
