@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-nakano-kitsune-candle-road-disappears",
+  "status": "draft",
+  "title": "中野・狐に消された蝋燭と帰り道",
+  "title_normalized": "中野・狐に消された蝋燭と帰り道",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "長野県中野市の伝承。呼ばれて出かけた帰りが遅くなり、提灯と蝋燭二本を借りて帰ろうとした人が狐に化かされた。蝋燭を一本投げると道がなくなり、もう一本も投げると道が現れて家に帰れたという。",
+    "based_on_source_ids": [
+      "nagano-nakano-kitsune-candle-road-disappears-src"
+    ]
+  },
+  "story_summary": "狐に道を惑わされた人が、蝋燭を一本ずつ投げることで道を見失い、最後に帰宅できたという話。",
+  "story_content": "安間清「狐にばかされた話（一）（長野県下高井郡）」に記録された中野市の伝承。人に呼ばれた帰りが遅くなり、提灯を借りて蝋燭を二本持って帰路についた。狐にお参りすると狐がついてきたため、蝋燭を一本投げたところ道がなくなった。困ってもう一本も投げると道が現れ、家に帰ることができたという。蝋燭と道の消失・出現が結びつく狐の化かし譚として記録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "中野市",
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "帰宅途中の人",
+      "type": "人間",
+      "description": "提灯と蝋燭を持って帰る途中、狐に道を惑わされた。",
+      "source_ids": [
+        "nagano-nakano-kitsune-candle-road-disappears-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "蝋燭を投げると道が消えたり現れたりする怪異を起こす。",
+      "source_ids": [
+        "nagano-nakano-kitsune-candle-road-disappears-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "狐に化かされる",
+    "蝋燭",
+    "道迷い",
+    "帰宅"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "道迷い譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-nakano-kitsune-candle-road-disappears-src",
+      "title": "狐にばかされた話（一）（長野県下高井郡）",
+      "publisher": "三元社（『旅と伝説』11巻8号・通巻128号）",
+      "publication_date": "1938-08-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230700",
+      "relevant_section": "掲載頁47",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。蝋燭を投げた際の詳しい状況や狐の姿は補っていない。"
+}
