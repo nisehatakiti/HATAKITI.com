@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nagano-saku-kagihikiishi-kappa",
+  "status": "draft",
+  "title": "長野・赤沼の鍵引石と河童",
+  "title_normalized": "長野・赤沼の鍵引石と河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "赤沼のほとりにある鍵引石の由来として、沼に住む河童が旅人に鍵引きを挑んでは水中へ引き込んでいたが、諏訪の頼遠に負け、沼を去る約束をしたという話が記録されている。河童は和田の山中に一夜で池を作り、そこへ移ったとされる。",
+    "based_on_source_ids": [
+      "nagano-saku-kagihikishi-kappa-src"
+    ]
+  },
+  "story_summary": "赤沼の河童は旅人に鍵引きを挑んで沼へ引きずり込んでいた。諏訪の頼遠に負けた河童は沼を去る約束をし、和田の山中に一夜で池を作って移ったという。",
+  "story_content": "手塚英雄「石の蘆田八ケ（北佐久郡）」に記録された伝承。赤沼のほとりにある鍵引石の由来として、沼の河童が旅人に鍵引きを挑み、勝つと水中へ引き込んでいたと語られる。諏訪の頼遠が河童を負かし、沼を去るよう約束させた。河童は和田の山中に一夜で池を作り、そこへ移ったという。石の由来と河童の移住譚が結び付いた地域伝承として登録する。",
+  "region": {
+    "prefecture": "長野県",
+    "historical_province": "信濃",
+    "municipality": "北佐久郡周辺",
+    "area_name": "赤沼・和田"
+  },
+  "locations": [
+    {
+      "name": "赤沼",
+      "type": "沼・伝承地",
+      "description": "河童が住んだとされる沼。現在の正確な位置は資料から未確定。",
+      "source_ids": [
+        "nagano-saku-kagihikishi-kappa-src"
+      ]
+    },
+    {
+      "name": "鍵引石",
+      "type": "石・伝承地",
+      "description": "赤沼のほとりにあるとされた石。現存・所在地は未確認。",
+      "source_ids": [
+        "nagano-saku-kagihikishi-kappa-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "諏訪の頼遠",
+      "type": "人物",
+      "description": "河童との鍵引きに勝ち、沼を去る約束をさせたとされる人物。",
+      "source_ids": [
+        "nagano-saku-kagihikishi-kappa-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "赤沼に住み、旅人に鍵引きを挑んだとされる。",
+      "source_ids": [
+        "nagano-saku-kagihikishi-kappa-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "鍵引石",
+    "沼",
+    "地名・石の由来"
+  ],
+  "story_type": [
+    "河童伝承",
+    "由来譚",
+    "水辺伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nagano-saku-kagihikishi-kappa-src",
+      "title": "石の蘆田八ケ（北佐久郡）",
+      "publisher": "郷土発行所（『郷土』2巻1・2・3号）",
+      "publication_date": "1932-07-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0610050",
+      "relevant_section": "掲載頁217–218",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。赤沼・鍵引石・和田の池の現地比定は追加確認が必要。"
+}
