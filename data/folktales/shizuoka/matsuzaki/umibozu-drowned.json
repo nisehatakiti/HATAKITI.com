@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shizuoka-matsuzaki-umibozu-drowned",
+  "status": "draft",
+  "title": "伊豆松崎・海坊主は海難者の霊",
+  "title_normalized": "伊豆松崎・海坊主は海難者の霊",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "静岡県賀茂郡松崎町岩地では、海坊主は海で遭難した人だとする俗信が記録されている。海の怪異を水難者の霊と結び付ける地域伝承である。",
+    "based_on_source_ids": [
+      "shizuoka-matsuzaki-umibozu-drowned-src"
+    ]
+  },
+  "story_summary": "静岡県賀茂郡松崎町岩地では、海坊主は海で遭難した人だとする俗信が記録されている。海の怪異を水難者の霊と結び付ける地域伝承である。",
+  "story_content": "静岡県賀茂郡松崎町岩地では、海坊主は海で遭難した人だとする俗信が記録されている。海の怪異を水難者の霊と結び付ける地域伝承である。",
+  "region": {
+    "prefecture": "静岡県",
+    "historical_province": null,
+    "municipality": "賀茂郡松崎町",
+    "area_name": "岩地"
+  },
+  "locations": [
+    {
+      "name": "岩地",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。",
+      "source_ids": [
+        "shizuoka-matsuzaki-umibozu-drowned-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主・水死者の霊",
+      "type": "伝承存在",
+      "description": "海坊主・水死者の霊に関する地域伝承。",
+      "source_ids": [
+        "shizuoka-matsuzaki-umibozu-drowned-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主・水死者の霊"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shizuoka-matsuzaki-umibozu-drowned-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載の年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1400057",
+      "relevant_section": "伊豆松崎・海坊主は海難者の霊",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく。後段で原資料の全文、現地地点の精度、旅行者向け情報を補完する。"
+}
