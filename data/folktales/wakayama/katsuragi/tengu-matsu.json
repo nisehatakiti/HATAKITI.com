@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "record_id": "wakayama-katsuragi-tengu-matsu",
+  "status": "draft",
+  "title": "かつらぎ町・天狗松",
+  "title_normalized": "かつらぎ町・天狗松",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "和歌山県伊都郡かつらぎ町では、大きな松の木に天狗が現れたとされ、その木を「天狗松」と呼んだ。星山橋の近くにも天狗がいたと伝える場所があったという。",
+    "based_on_source_ids": [
+      "wakayama-katsuragi-tengu-matsu-src"
+    ]
+  },
+  "story_summary": "大きな松の木に天狗が現れたため、その木を「天狗松」と呼んだという。また、星山橋の近くにも天狗がいたと伝える場所があったと記録されている。",
+  "story_content": "日文研の「口頭伝承」記録には、和歌山県伊都郡かつらぎ町の伝承として、大きな松の木に天狗が出たことから「天狗松」と呼ばれたという話がある。星山橋の近くにも天狗がいたとされる場所があったという。",
+  "region": {
+    "prefecture": "和歌山県",
+    "historical_province": null,
+    "municipality": "伊都郡かつらぎ町",
+    "area_name": "天狗松・星山橋周辺"
+  },
+  "locations": [
+    {
+      "name": "天狗松",
+      "type": "樹木・伝承地",
+      "description": "天狗が現れたとされる松の呼称。現存・所在地は追加確認が必要。",
+      "source_ids": [
+        "wakayama-katsuragi-tengu-matsu-src"
+      ]
+    },
+    {
+      "name": "星山橋周辺",
+      "type": "伝承地域",
+      "description": "天狗がいたと伝える場所として記録される。現在の地点との対応は未確認。",
+      "source_ids": [
+        "wakayama-katsuragi-tengu-matsu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "松の木に現れたとされる山の怪異。",
+      "source_ids": [
+        "wakayama-katsuragi-tengu-matsu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "天狗松",
+    "樹木伝承"
+  ],
+  "story_type": [
+    "地域伝承",
+    "樹木伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "wakayama-katsuragi-tengu-matsu-src",
+      "title": "口頭伝承",
+      "publisher": "近畿民俗学会（『近畿民俗』通巻84・85号）",
+      "publication_date": "1980-07-20",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0700250",
+      "relevant_section": "掲載頁60",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。天狗松と星山橋周辺の現在地、樹木の現存状況、公開・訪問可否は後段で確認する。"
+}
