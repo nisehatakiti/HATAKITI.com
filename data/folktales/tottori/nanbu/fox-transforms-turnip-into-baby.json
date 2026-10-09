@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tottori-nanbu-fox-transforms-turnip-into-baby",
+  "status": "draft",
+  "title": "南部・蕪を赤ん坊に見せた狐の化かし",
+  "title_normalized": "南部・蕪を赤ん坊に見せた狐の化かし",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "鳥取県西伯郡南部町の伝承。人の髪を取る狐に賞金がかけられ、若者が狐を探しに出かけた。狐は美しい娘に化け、蕪を赤ん坊に見せかけて家に入った。若者は家人に赤ん坊を囲炉裏へ投げ込ませたが、狐の化かしだったと気づいた後、寺へ逃げ込んだと思っていた自分が山中で木の根を叩いており、髪も切られていたと知る。",
+    "based_on_source_ids": [
+      "tottori-nanbu-fox-transforms-turnip-into-baby-src"
+    ]
+  },
+  "story_summary": "狐の化けた娘と蕪の赤ん坊に惑わされた若者が、最後には自分自身も化かされていたと気づく話。",
+  "story_content": "中央大学民俗研究会の調査報告書に記録された南部町の伝承。法勝寺川の「シオカラ土手」にいる狐が人を化かして髪を取るため、賞金がかけられた。賀祥村の若者が狐を探しに行くと、狐は美しい娘に化け、蕪を赤ん坊に見せかけて家に入った。若者は「化かされるな」と家人に言い、赤ん坊を囲炉裏に投げ込ませた。家人に追われた若者は寺に逃げ込み、頭を丸めて詫び、木魚を叩いているつもりだったが、気づくと山中で木の根を叩いており、髪も切られていた。狐を見破ったと思った若者自身が、最後まで化かされていたという構造に特徴がある。",
+  "region": {
+    "prefecture": "鳥取県",
+    "historical_province": "伯耆",
+    "municipality": "南部町",
+    "area_name": "法勝寺川・シオカラ土手、賀祥村"
+  },
+  "locations": [
+    {
+      "name": "法勝寺川のシオカラ土手",
+      "type": "土手",
+      "description": "人の髪を取る狐がいると伝えられた場所。",
+      "source_ids": [
+        "tottori-nanbu-fox-transforms-turnip-into-baby-src"
+      ]
+    },
+    {
+      "name": "山中",
+      "type": "山林",
+      "description": "若者が寺にいると思い込んでいたが、実際には木の根を叩いていた場所。",
+      "source_ids": [
+        "tottori-nanbu-fox-transforms-turnip-into-baby-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "若者",
+      "type": "人間",
+      "description": "狐を見破ったつもりだったが、自分も化かされていた。",
+      "source_ids": [
+        "tottori-nanbu-fox-transforms-turnip-into-baby-src"
+      ]
+    },
+    {
+      "name": "家人",
+      "type": "人間",
+      "description": "若者に言われて、赤ん坊だと思ったものを囲炉裏に投げ込んだ。",
+      "source_ids": [
+        "tottori-nanbu-fox-transforms-turnip-into-baby-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "娘に化け、蕪を赤ん坊に見せかけ、若者の認識を惑わせた。",
+      "source_ids": [
+        "tottori-nanbu-fox-transforms-turnip-into-baby-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "化かし",
+    "変身",
+    "蕪",
+    "髪を取る",
+    "認識の逆転"
+  ],
+  "story_type": [
+    "狐の化かし譚",
+    "変身譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tottori-nanbu-fox-transforms-turnip-into-baby-src",
+      "title": "鳥取県西伯郡西伯町 調査報告書",
+      "publisher": "中央大学民俗研究会（『常民』25号）",
+      "publication_date": "1989-02-01",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1070469",
+      "relevant_section": "掲載頁167–168",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の要約をもとに記録。囲炉裏の場面は伝承本文の出来事として記し、現実の出来事と混同しない。"
+}
