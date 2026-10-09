@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-kihoku-daija-rainmaking-promise",
+  "status": "draft",
+  "title": "鬼北町・大蛇と雨乞いの証文",
+  "title_normalized": "鬼北町・大蛇と雨乞いの証文",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県北宇和郡鬼北町の伝承では、庄屋の娘が大蛇に連れられて滝壺へ入り、帰れないことを示す証文を書いた。その証文を雨乞いのため滝壺に掲げて祈ると雨が降ったと記録されている。",
+    "based_on_source_ids": [
+      "ehime-kihoku-daija-rainmaking-promise-src"
+    ]
+  },
+  "story_summary": "庄屋の娘が大蛇に連れられて滝壺へ入り、戻れないと告げて証文を書いた。その証文を雨乞いの札として滝壺に掲げ、祈願すると雨が降ったという。記録では、証文が残り神官が保存していたとも述べられている。",
+  "story_content": "1944年の「雨乞伝説の一例」に記録された伝承。庄屋の娘は蛇に連れられて滝壺へ入り、帰ることはできないと告げて証文を書いた。旱魃の年、その証文を雨乞いのため滝壺に掲げて祈願すると、小さな蛇が降りてきて雨が降ったという。資料には、証文が残り神官が保存していたこと、他村の人が祈っても同じ結果にはならないとする伝承も記されている。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": null,
+    "municipality": "北宇和郡鬼北町",
+    "area_name": "滝壺（地点未詳）"
+  },
+  "locations": [
+    {
+      "name": "大蛇の滝壺（伝承地・名称未詳）",
+      "type": "滝壺・雨乞い伝承地",
+      "description": "日文研の記録では鬼北町の伝承として掲載されるが、滝の固有名は記載されていない。位置の特定は後続調査が必要。",
+      "source_ids": [
+        "ehime-kihoku-daija-rainmaking-promise-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "庄屋の娘",
+      "type": "人物",
+      "description": "大蛇に連れられ、証文を残したと語られる人物。",
+      "source_ids": [
+        "ehime-kihoku-daija-rainmaking-promise-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "伝承存在",
+      "description": "娘を滝壺へ連れていき、雨乞いの証文に関わる存在。",
+      "source_ids": [
+        "ehime-kihoku-daija-rainmaking-promise-src"
+      ]
+    }
+  ],
+  "themes": [
+    "大蛇",
+    "雨乞い",
+    "証文",
+    "滝壺"
+  ],
+  "story_type": [
+    "地域伝承",
+    "水辺伝承",
+    "雨乞い伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-tennyo-hagoromo",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-kihoku-daija-rainmaking-promise-src",
+      "title": "雨乞伝説の一例",
+      "publisher": "民間伝承の会（『民間伝承』10巻5号・通巻103号）",
+      "publication_date": "1944-05-05",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/YoukaiCard/2181819.html",
+      "relevant_section": "掲載頁8",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。滝壺の固有名と証文の現存状況は資料の追加確認が必要。地図上では現地特定前にピンを確定しない。"
+}
