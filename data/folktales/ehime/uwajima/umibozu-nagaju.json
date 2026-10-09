@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-uwajima-umibozu-nagaju",
+  "status": "draft",
+  "title": "愛媛・二神沖の海坊主と長寿",
+  "title_normalized": "愛媛・二神沖の海坊主と長寿",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県二神沖では、頭が坊主で赤銅色、手足と丸い目があり、短い尾を持つ海坊主が現れ、見た人は長寿するといわれたという記録がある。",
+    "based_on_source_ids": [
+      "ehime-uwajima-umibozu-nagaju-src"
+    ]
+  },
+  "story_summary": "愛媛県二神沖では、頭が坊主で赤銅色、手足と丸い目があり、短い尾を持つ海坊主が現れ、見た人は長寿するといわれたという記録がある。",
+  "story_content": "愛媛県二神沖では、頭が坊主で赤銅色、手足と丸い目があり、短い尾を持つ海坊主が現れ、見た人は長寿するといわれたという記録がある。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": null,
+    "municipality": "二神沖",
+    "area_name": "二神の沖合"
+  },
+  "locations": [
+    {
+      "name": "二神の沖合",
+      "type": "伝承地・地域",
+      "description": "日文研の個別記録に記載された地域・場所。",
+      "source_ids": [
+        "ehime-uwajima-umibozu-nagaju-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "海坊主に関する地域伝承。",
+      "source_ids": [
+        "ehime-uwajima-umibozu-nagaju-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-uwajima-umibozu-nagaju-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "原資料記載の年はリンク先参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=0080200",
+      "relevant_section": "愛媛・二神沖の海坊主と長寿",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別記録に基づく。後段で原資料の全文、現地地点の精度、旅行者向け情報を補完する。"
+}
