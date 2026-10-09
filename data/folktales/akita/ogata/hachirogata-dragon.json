@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "akita-ogata-hachirogata-dragon",
+  "status": "draft",
+  "title": "秋田・八郎潟の八郎と龍",
+  "title_normalized": "秋田・八郎潟の八郎と龍",
+  "title_origin": "research_title",
+  "summary": {
+    "text": "秋田県の八郎潟には、八郎が龍となって湖に住むようになったという伝承があり、湖の成り立ちや周辺の水辺信仰と結び付いて語られている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "秋田県の八郎潟には、八郎が龍となって湖に住むようになったという伝承があり、湖の成り立ちや周辺の水辺信仰と結び付いて語られている。",
+  "story_content": "秋田県の八郎潟には、八郎が龍となって湖に住むようになったという伝承があり、湖の成り立ちや周辺の水辺信仰と結び付いて語られている。",
+  "region": {
+    "prefecture": "秋田県",
+    "historical_province": null,
+    "municipality": "男鹿・八郎潟周辺",
+    "area_name": "八郎潟"
+  },
+  "locations": [
+    {
+      "name": "八郎潟",
+      "type": "伝承地域",
+      "description": "地域伝承と関係する地名・信仰地。現地地点の確定は後続調査で行う。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "龍",
+      "type": "伝承存在・信仰対象",
+      "description": "龍に関する地域伝承。"
+    }
+  ],
+  "themes": [
+    "龍"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "low",
+  "research_status": "candidate_hub_linked",
+  "research_notes": "全国の伝承候補として仮登録。個別の一次資料・伝承内容・正確な地点を確認するまで、確定済みの実例として扱わない。出典確認後にsummary、sources、confidenceを更新する。"
+}
