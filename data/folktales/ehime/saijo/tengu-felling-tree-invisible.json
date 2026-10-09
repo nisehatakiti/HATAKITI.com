@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ehime-saijo-tengu-felling-tree-invisible",
+  "status": "draft",
+  "title": "西条・天狗の止まり木と見えない倒し木",
+  "title_normalized": "西条・天狗の止まり木と見えない倒し木",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "愛媛県西条市などの伝承。天狗の止まり木を断りなく切ると、木を倒した際に跳ね飛ばされたり、木の下敷きになったりするとされた。また夜中に山が裂けるような音や木が倒れる音がしても、朝になると何も起きていない。これを「天狗の倒し木」と呼んだ。",
+    "based_on_source_ids": [
+      "ehime-saijo-tengu-felling-tree-invisible-src"
+    ]
+  },
+  "story_summary": "天狗の止まり木を無断で切る危険と、夜に聞こえるのに実際には何も倒れていない木の音を語る伝承。",
+  "story_content": "宮本常一「世間師」に記録された愛媛県西条市・上浮穴郡の伝承。天狗の止まり木を断りなく切ると、伐り倒した際に人が跳ね飛ばされたり、木の下敷きになったりするといわれた。また、夜半に山が裂けるような大きな音や、木が倒れる音が聞こえることがあったが、夜が明けて見ると何も起きていなかった。こうした現象は「天狗の倒し木」と呼ばれた。",
+  "region": {
+    "prefecture": "愛媛県",
+    "historical_province": "伊予",
+    "municipality": null,
+    "area_name": "西条市・上浮穴郡"
+  },
+  "locations": [
+    {
+      "name": "天狗の止まり木",
+      "type": "樹木",
+      "description": "天狗が止まる木とされ、無断で切ることが禁忌とされた。",
+      "source_ids": [
+        "ehime-saijo-tengu-felling-tree-invisible-src"
+      ]
+    },
+    {
+      "name": "山林",
+      "type": "山林",
+      "description": "夜中に山が裂ける音や木が倒れる音が聞こえるとされた場所。",
+      "source_ids": [
+        "ehime-saijo-tengu-felling-tree-invisible-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "止まり木を持つとされ、木を無断で切ることや夜間の怪音と結びついている。",
+      "source_ids": [
+        "ehime-saijo-tengu-felling-tree-invisible-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "止まり木",
+    "山林の禁忌",
+    "怪音",
+    "倒し木"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "山の禁忌",
+    "怪音伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ehime-saijo-tengu-felling-tree-invisible-src",
+      "title": "世間師",
+      "publisher": "未来社（『民話』通巻15号）",
+      "publication_date": "1959-12-10",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2440006",
+      "relevant_section": "掲載頁21",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。市町村名は複数地域を示すため、特定の一地点に絞っていない。"
+}
