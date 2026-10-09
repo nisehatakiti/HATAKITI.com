@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shimane-mihonoseki-umibozu-storm",
+  "status": "draft",
+  "title": "美保関・海坊主と船頭の答え",
+  "title_normalized": "美保関・海坊主と船頭の答え",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "島根県松江市美保関町では、暴風雨の船の舳先に海坊主が現れ、世の中で何が一番恐ろしいかと尋ねる。船頭が「商売」と答えると海坊主が消え、嵐も止んだという話が記録されている。",
+    "based_on_source_ids": [
+      "shimane-mihonoseki-umibozu-storm-src"
+    ]
+  },
+  "story_summary": "島根県松江市美保関町では、暴風雨の船の舳先に海坊主が現れ、世の中で何が一番恐ろしいかと尋ねる。船頭が「商売」と答えると海坊主が消え、嵐も止んだという話が記録されている。",
+  "story_content": "島根県松江市美保関町では、暴風雨の船の舳先に海坊主が現れ、世の中で何が一番恐ろしいかと尋ねる。船頭が「商売」と答えると海坊主が消え、嵐も止んだという話が記録されている。",
+  "region": {
+    "prefecture": "島根県",
+    "historical_province": null,
+    "municipality": "松江市美保関町",
+    "area_name": "海上・美保関周辺"
+  },
+  "locations": [
+    {
+      "name": "海上・美保関周辺",
+      "type": "伝承地域",
+      "description": "日文研データベースに記録された地域。正確な地点は今後の調査で補完する。",
+      "source_ids": [
+        "shimane-mihonoseki-umibozu-storm-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "海坊主",
+      "type": "伝承存在",
+      "description": "海坊主に関する地域伝承。",
+      "source_ids": [
+        "shimane-mihonoseki-umibozu-storm-src"
+      ]
+    }
+  ],
+  "themes": [
+    "海坊主"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shimane-mihonoseki-umibozu-storm-src",
+      "title": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publisher": "国際日本文化研究センター",
+      "publication_date": "記録年は原資料参照",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640030",
+      "relevant_section": "美保関・海坊主と船頭の答え",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別データベース記録に基づく全国展開用の個別伝承。具体的な座標・原文・現在の現地訪問情報は後段で補完する。"
+}
