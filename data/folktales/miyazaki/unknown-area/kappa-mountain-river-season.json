@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "record_id": "miyazaki-unknown-area-kappa-mountain-river-season",
+  "status": "draft",
+  "title": "宮崎・山と川を季節で移る河童",
+  "title_normalized": "宮崎・山と川を季節で移る河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "日文研怪異・妖怪伝承データベースのカード0640255「河童，山」に、山中での呼びかけに関する注意と、河童は冬には山、夏には川にいるという季節的な居場所の伝承が記録される。自治体の詳細は現時点で確定できないため、宮崎県内の個別地点としては扱わない。",
+    "based_on_source_ids": [
+      "miyazaki-kappa-mountain-river-season-src"
+    ]
+  },
+  "story_summary": "山中で友人を呼ぶときの呼びかけをめぐる注意と、河童が冬は山、夏は川にいるという季節的な居場所の伝承。河童の活動域を川だけに限らず、山と川の間を季節で移る存在として語る点が特徴である。",
+  "story_content": "日文研怪異・妖怪伝承データベースには「河童，山」と題するカード0640255が登録されている。伝承の要点として、山中で友人を呼ぶ際に不用意に呼びかけないようにする注意、および河童は冬には山に、夏には川にいるという季節的な居場所の違いが伝えられている。これは河童を水辺に固定された存在としてのみ描くのではなく、山と川の環境を季節に応じて移る存在として捉える伝承である。呼びかけに関する具体的な言葉や行動の細部、自治体名など、カードから確証を得られていない情報は追加していない。",
+  "region": {
+    "prefecture": "宮崎県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "冬は山、夏は川にいるとされる。山中での呼びかけをめぐる注意と結び付く。",
+      "source_ids": [
+        "miyazaki-kappa-mountain-river-season-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "山と川",
+    "季節移動",
+    "呼びかけの禁忌"
+  ],
+  "story_type": [
+    "妖怪伝承",
+    "季節伝承",
+    "禁忌・戒め"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "miyazaki-kappa-mountain-river-season-src",
+      "title": "河童，山",
+      "author": "柴野未樵",
+      "work_title": "報告",
+      "publisher": "郷土研究",
+      "volume_issue": "4巻3号",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640255",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion_source_card_identified",
+  "research_notes": "2026-10-09作成。日文研DBの個別カード番号0640255・呼称「河童，山」・執筆者・掲載誌情報をもとに整理。以前の検索結果に示された伝承要点を採用したが、自治体・詳細書誌・本文の全記述は再確認できていないため、所在地を宮崎県の特定自治体に絞らず、confidenceはmediumとした。"
+}
