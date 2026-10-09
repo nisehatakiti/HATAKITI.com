@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-tono-oshirasama-horse-girl",
+  "status": "draft",
+  "title": "遠野・娘と馬から生まれたオシラサマ",
+  "title_normalized": "遠野・娘と馬から生まれたオシラサマ",
+  "title_origin": "research_title",
+  "summary": {
+    "text": "岩手県遠野地方では、娘と馬の関係から生まれた神としてオシラサマを語る伝承が知られ、養蚕・家の守り・祭祀と結び付いている。",
+    "based_on_source_ids": []
+  },
+  "story_summary": "岩手県遠野地方では、娘と馬の関係から生まれた神としてオシラサマを語る伝承が知られ、養蚕・家の守り・祭祀と結び付いている。",
+  "story_content": "岩手県遠野地方では、娘と馬の関係から生まれた神としてオシラサマを語る伝承が知られ、養蚕・家の守り・祭祀と結び付いている。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": null,
+    "municipality": "遠野市周辺",
+    "area_name": "オシラサマを祀る家・地域"
+  },
+  "locations": [
+    {
+      "name": "オシラサマを祀る家・地域",
+      "type": "伝承地域",
+      "description": "地域レベルの伝承情報。個別地点の精度は今後補完する。",
+      "source_ids": []
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "オシラサマ",
+      "type": "伝承・信仰対象",
+      "description": "オシラサマに関する地域伝承候補。"
+    }
+  ],
+  "themes": [
+    "オシラサマ"
+  ],
+  "story_type": [
+    "地域伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-reiju",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [],
+  "confidence": "medium",
+  "research_status": "source_detail_followup",
+  "research_notes": "概要レベルで整理したレコード。確定前に個別の一次資料・出典URL・地点を照合し、内容を補完する。"
+}
