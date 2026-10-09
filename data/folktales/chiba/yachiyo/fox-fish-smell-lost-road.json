@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "record_id": "chiba-yachiyo-fox-fish-smell-lost-road",
+  "status": "draft",
+  "title": "八千代・魚の匂いに寄ってきた狐と迷い道",
+  "title_normalized": "八千代・魚の匂いに寄ってきた狐と迷い道",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "千葉県八千代市勝田の伝承。夜遅く魚を持って帰る人に、その匂いにつられて狐が寄ってきて化かした。帰り道が分からなくなり、同じ場所をぐるぐる回っていたという。",
+    "based_on_source_ids": [
+      "chiba-yachiyo-fox-fish-smell-lost-road-src"
+    ]
+  },
+  "story_summary": "魚を持って夜道を帰る人が、匂いにつられて来た狐に化かされ、同じ場所を回り続けた話。",
+  "story_content": "都留文科大学民俗学研究会による『勝田の民俗―千葉県八千代市勝田』に記録された伝承。夜遅く魚を持って帰っていると、その匂いで狐が寄ってきて人を化かし、家へ帰る道が分からなくなって同じところをぐるぐる回っていたという。食べ物の匂いが狐を引き寄せるきっかけとして語られている点を記録する。",
+  "region": {
+    "prefecture": "千葉県",
+    "historical_province": "下総",
+    "municipality": "八千代市",
+    "area_name": "勝田"
+  },
+  "locations": [
+    {
+      "name": "夜道",
+      "type": "道",
+      "description": "魚を持って帰る人が道に迷い、同じ場所を回ったとされる。",
+      "source_ids": [
+        "chiba-yachiyo-fox-fish-smell-lost-road-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "魚を持って帰る人",
+      "type": "人間",
+      "description": "夜遅く魚を持って帰る途中、狐に化かされた。",
+      "source_ids": [
+        "chiba-yachiyo-fox-fish-smell-lost-road-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "狐",
+      "type": "妖怪・動物",
+      "description": "魚の匂いにつられて現れ、人を化かして帰路を分からなくさせた。",
+      "source_ids": [
+        "chiba-yachiyo-fox-fish-smell-lost-road-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐",
+    "魚",
+    "匂い",
+    "迷い道",
+    "夜道"
+  ],
+  "story_type": [
+    "狐の化かし譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "chiba-yachiyo-fox-fish-smell-lost-road-src",
+      "title": "Ⅷ口承文芸 §3世間話",
+      "publisher": "都留文科大学民俗学研究会（『勝田の民俗―千葉県八千代市勝田』通巻8号）",
+      "publication_date": "1983-02-11",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1310104",
+      "relevant_section": "掲載頁57",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。"
+}
