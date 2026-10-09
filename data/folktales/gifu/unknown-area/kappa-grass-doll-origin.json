@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gifu-kappa-grass-doll-origin",
+  "status": "draft",
+  "title": "岐阜・草人形から生まれた河童",
+  "title_normalized": "岐阜・草人形から生まれた河童",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岐阜県の伝承として記録された話では、神々が戦をする際、人手不足を補うため草人形に棒を通して兵として用いた。用が済むと水に入り、周囲のものを食べてよいと告げられ、その中に子どもも含まれていたため、河童が子どもにいたずらをするようになったと説明される。",
+    "based_on_source_ids": [
+      "gifu-kappa-grass-doll-origin-src"
+    ]
+  },
+  "story_summary": "神々の戦に使われた草人形が、水に入って子どもも食べてよいと告げられたことを、河童のいたずらの由来として語る話。",
+  "story_content": "柳田国男「河童の話」に収録された岐阜県の記録。神様が戦をするとき、人手不足を補うため草人形を作り、一本の棒を通して手にしたという。用が済むと、水に入ってその辺にあるものを食べるように言われたが、その中には子どもも含まれていた。それが、河童が今もいたずらをする理由だと説明される。これは河童の行動を神々の戦と草人形に結び付ける由来譚であり、河童の姿や水難の具体的な場面を語る話とは異なる。記録上の地域は岐阜県までで、具体的な市町村は特定できない。",
+  "region": {
+    "prefecture": "岐阜県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [
+    {
+      "name": "神々",
+      "type": "神格",
+      "description": "戦の人手を補うため草人形を用いたとされる。",
+      "source_ids": [
+        "gifu-kappa-grass-doll-origin-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "伝承存在",
+      "description": "草人形が水に入り、子どもも食べてよいと告げられたことに由来すると説明される。",
+      "source_ids": [
+        "gifu-kappa-grass-doll-origin-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童の由来",
+    "草人形",
+    "神々の戦",
+    "子どもの水難",
+    "起源譚"
+  ],
+  "story_type": [
+    "妖怪起源譚",
+    "由来譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "gifu-kappa-grass-doll-origin-src",
+      "title": "河童の話",
+      "publisher": "実業之日本社（『日本民俗学』2巻2号）",
+      "publication_date": "1954-09-30",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1710007",
+      "relevant_section": "掲載頁4–5",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード1710007に基づく。記録上の地域は岐阜県までのため、市町村名は推定で補わない。"
+}
