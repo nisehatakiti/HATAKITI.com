@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kagawa-yamanba-golden-rope-children-escape",
+  "status": "draft",
+  "title": "讃岐山村・母に化けた山姥と金の綱",
+  "title_normalized": "讃岐山村・母に化けた山姥と金の綱",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "香川県の山村伝承。母親が買い物に出かけ、留守番をしていた二人の子どものもとへ山姥が母親のふりをしてやって来た。戸を開けてしまった子どもたちは逃げ、天から降りた金の綱を伝って天へ昇る。山姥も追いかけたが、腐れ縄が切れて落ち、石に頭を打って死んだという。",
+    "based_on_source_ids": [
+      "kagawa-yamanba-golden-rope-children-escape-src"
+    ]
+  },
+  "story_summary": "母親に化けた山姥から逃げる子どもたちが、天から降りた金の綱で救われる話。",
+  "story_content": "谷原博信「讃岐山村の伝説と昔話」に記録された香川県の伝承。母親が買い物に出ている間、二人の子どもが留守番をしていると、山姥が母親のふりをして訪れる。子どもたちは戸を開けてしまうが、その後逃げ、天から降りた金の綱を伝って天へ昇った。山姥も追って綱を上るが、腐れ縄が切れて落下し、石に頭を打って死んだという。子どもが危機から逃れる助けと、追跡者が落下する結末を備えた話として記録する。",
+  "region": {
+    "prefecture": "香川県",
+    "historical_province": "讃岐",
+    "municipality": null,
+    "area_name": "讃岐山村"
+  },
+  "locations": [
+    {
+      "name": "子どもたちの家",
+      "type": "家",
+      "description": "母親に化けた山姥が訪れた場所。",
+      "source_ids": [
+        "kagawa-yamanba-golden-rope-children-escape-src"
+      ]
+    },
+    {
+      "name": "天へ続く金の綱",
+      "type": "異界への道",
+      "description": "子どもたちが伝って天へ昇ったとされる綱。",
+      "source_ids": [
+        "kagawa-yamanba-golden-rope-children-escape-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "二人の子ども",
+      "type": "人間",
+      "description": "母親に化けた山姥から逃げ、金の綱で天へ昇った。",
+      "source_ids": [
+        "kagawa-yamanba-golden-rope-children-escape-src"
+      ]
+    },
+    {
+      "name": "母親",
+      "type": "人間",
+      "description": "子どもたちが留守番をしている間に買い物へ出ていた。",
+      "source_ids": [
+        "kagawa-yamanba-golden-rope-children-escape-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "山姥",
+      "type": "妖怪",
+      "description": "母親に化けて子どもたちに近づき、逃げた子どもを追って綱を上るが落下した。",
+      "source_ids": [
+        "kagawa-yamanba-golden-rope-children-escape-src"
+      ]
+    }
+  ],
+  "themes": [
+    "山姥",
+    "変身",
+    "子どもの逃走",
+    "金の綱",
+    "天上",
+    "追跡"
+  ],
+  "story_type": [
+    "山姥昔話",
+    "逃走譚",
+    "異界訪問譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-yamanba",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kagawa-yamanba-golden-rope-children-escape-src",
+      "title": "讃岐山村の伝説と昔話",
+      "publisher": "山村民俗の会（『あしなか』通巻221号）",
+      "publication_date": "1991-05",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030392",
+      "relevant_section": "掲載頁1–2",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。地域が県単位のため市町村名は特定していない。"
+}
