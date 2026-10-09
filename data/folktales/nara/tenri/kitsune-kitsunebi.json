@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "record_id": "nara-tenri-kitsune-fire",
+  "status": "draft",
+  "title": "大和・狐火の伝承",
+  "title_normalized": "大和・狐火の伝承",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "奈良県内の民俗記録には、夜道などで狐火を見たという伝承が収録されている。狐火の見え方や出現場所は採録ごとに異なるため、個別の語りを区別して整理する。",
+    "based_on_source_ids": [
+      "nara-kitsune-fire-src"
+    ]
+  },
+  "story_summary": "夜間に狐火が見えたという地域の語り。出現の場所や様子は個別記録に即して確認する必要がある。",
+  "story_content": "本レコードは狐火の地域伝承を登録するための記録だが、現時点で参照できる個別カードの物語本文と採録地を十分に確認できていない。特定の集落や具体的な出来事を推測で補わず、原資料を確認してから内容を確定する。",
+  "region": {
+    "prefecture": "奈良県",
+    "historical_province": "大和",
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異現象",
+      "description": "狐に結び付けられた火のような光として語られる現象。個別の目撃談は原資料確認待ち。",
+      "source_ids": [
+        "nara-kitsune-fire-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "狐",
+    "夜道",
+    "怪異現象"
+  ],
+  "story_type": [
+    "候補・要出典確認"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "nara-kitsune-fire-src",
+      "title": "狐火に関する個別伝承（出典確認待ち）",
+      "publisher": "未確認",
+      "source_type": "candidate_source",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/",
+      "language": "ja"
+    }
+  ],
+  "confidence": "low",
+  "research_status": "candidate_source_verification_needed",
+  "research_notes": "個別カードID・採録地・本文未確認の候補。確定記録として扱わず、具体的な語りは原資料確認後に追記する。"
+}
