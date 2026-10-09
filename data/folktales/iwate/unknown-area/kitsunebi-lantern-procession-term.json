@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "record_id": "iwate-unknown-area-kitsunebi-lantern-procession-term",
+  "status": "draft",
+  "title": "岩手・狐火を「提灯行列」と呼ぶ",
+  "title_normalized": "岩手・狐火を提灯行列と呼ぶ",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "1973年の岩手県の採録では、狐火を指して「提灯行列」という言い方もすると記録される。光の色や出現季節の説明ではなく、狐火をどのようなものとして呼び表すかに焦点がある。",
+    "based_on_source_ids": [
+      "iwate-kitsunebi-lantern-procession-term-src"
+    ]
+  },
+  "story_summary": "岩手県の1973年の採録では、狐火のことを「提灯行列」という言い方もするとされる。狐火を灯りの列に見立てる呼称の記録である。",
+  "story_content": "日文研怪異・妖怪伝承データベースの検索対象事例カード1460513には、1973年・岩手県の記録として、呼称「キツネビ，チョウチンギョゥレツ」、表記「狐火，提灯行列」が示され、「狐火のことを指して、提灯行列という言い方もする」と記されている。この記録は、狐火がどの色に見えたか、どの季節に現れるか、どの程度点滅するかといった観察の説明ではなく、狐火を「提灯行列」と呼ぶ言語的な見立てを示す。\n\n同じ1973年の岩手県の別カードには、秋から冬に山の方に行列が見え、提灯の明かりとは少し違うという記録（1460556）や、弓細工集落の山を麓から見た際に提灯とは色が異なるとする記録（1460577）がある。これらは共通して提灯行列のイメージに触れるが、採録内容が異なるため統合しない。呼称、色の違い、季節、目撃地点をそれぞれ独立した情報として保持する。",
+  "region": {
+    "prefecture": "岩手県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [],
+  "characters": [],
+  "beings": [
+    {
+      "name": "狐火",
+      "type": "怪異・伝承現象",
+      "description": "「提灯行列」と呼び表されることがある。",
+      "source_ids": [
+        "iwate-kitsunebi-lantern-procession-term-src"
+      ]
+    }
+  ],
+  "themes": [
+    "狐火",
+    "提灯行列",
+    "呼称",
+    "見立て"
+  ],
+  "story_type": [
+    "怪異伝承",
+    "呼称伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kitsune",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "iwate-ichinoseki-kitsunebi-autumn-winter-mountain-procession",
+      "relationship": "related_variant"
+    },
+    {
+      "record_id": "iwate-unknown-area-kitsunebi-yumizaiku-procession",
+      "relationship": "related_variant"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "iwate-kitsunebi-lantern-procession-term-src",
+      "title": "狐火，提灯行列",
+      "publisher": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "publication_year": 1973,
+      "source_type": "database_simsearch_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1460513",
+      "language": "ja"
+    }
+  ],
+  "confidence": "medium",
+  "research_status": "national_expansion_source_detail_pending",
+  "research_notes": "2026-10-09作成。カード1460513の検索対象事例に明記された呼称情報に限定。個別カードの書誌・採録者・自治体の詳細は未確認のため記載せず。カード1460556・1460577とは共通する「行列」表現があるが、同一の証言と断定せず別レコードで保持。"
+}
