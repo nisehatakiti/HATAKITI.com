@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "gifu-ibigawa-tengu-kifune-usu",
+  "status": "draft",
+  "title": "揖斐川町・天狗と貴船神社の臼",
+  "title_normalized": "揖斐川町・天狗と貴船神社の臼",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "岐阜県揖斐郡揖斐川町の伝承では、峠で人を追いかけたりいたずらをしたりする天狗を若者たちが松の木で縛った。天狗は貴船神社に仕返しに現れ、臼を池へ投げ入れたが、その臼は別の池から浮かび上がったという。",
+    "based_on_source_ids": [
+      "gifu-ibigawa-tengu-kifune-usu-src"
+    ]
+  },
+  "story_summary": "夜遅く峠を歩くと天狗が追いかけたりいたずらをしたりするという。若者たちが松の木に腰掛けた天狗を縛り上げると、天狗は貴船神社へ仕返しに現れ、池へ臼を投げ入れた。その臼は別の池から浮かび上がったとされる。",
+  "story_content": "日文研の「口承文芸」記録では、岐阜県揖斐郡揖斐川町で、夜遅く峠を歩くと天狗が現れて人を追いかけたりいたずらをしたりすると語られている。若者たちが松の木に腰掛けた天狗を縛り上げたところ、天狗は貴船神社へ仕返しに現れて池へ臼を投げ入れ、その臼は別の池から浮かび上がったという。",
+  "region": {
+    "prefecture": "岐阜県",
+    "historical_province": null,
+    "municipality": "揖斐郡揖斐川町",
+    "area_name": "峠・貴船神社・池（地点未詳）"
+  },
+  "locations": [
+    {
+      "name": "貴船神社",
+      "type": "神社・伝承地",
+      "description": "天狗が仕返しに現れた場所として記録される。該当する神社と池の比定は追加調査が必要。",
+      "source_ids": [
+        "gifu-ibigawa-tengu-kifune-usu-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "峠で人にいたずらし、縛られた後に神社へ仕返しをしたとされる。",
+      "source_ids": [
+        "gifu-ibigawa-tengu-kifune-usu-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "峠",
+    "貴船神社",
+    "臼の怪異"
+  ],
+  "story_type": [
+    "地域伝承",
+    "怪異伝承",
+    "神社伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-jumoku",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "gifu-ibigawa-tengu-kifune-usu-src",
+      "title": "口承文芸",
+      "publisher": "中京大学民俗学研究会（『中京民俗』通巻27号）",
+      "publication_date": "1990-12-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1260158",
+      "relevant_section": "掲載頁125–126",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。神社名の同定と池の場所は未確認であり、現地案内や地図ピンは追加調査後に設定する。"
+}
