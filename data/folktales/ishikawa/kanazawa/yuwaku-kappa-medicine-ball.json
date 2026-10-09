@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "record_id": "ishikawa-kanazawa-yuwaku-kappa-medicine-ball",
+  "status": "draft",
+  "title": "金沢・河童が授けた万病の玉",
+  "title_normalized": "金沢・河童が授けた万病の玉",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "石川県金沢市湯涌河内町の伝承。男が馬を川へ入れようとすると河童が現れ、馬を入れないよう懇願した。男がその願いを聞き入れると、河童は夢の中で約束したとおり、翌日に万病に効くという玉を持ってきたという。",
+    "based_on_source_ids": [
+      "ishikawa-kanazawa-yuwaku-kappa-medicine-ball-src"
+    ]
+  },
+  "story_summary": "馬を川へ入れないよう頼んだ河童の願いを男が聞き入れると、河童は約束のしるしとして万病に効くという玉を届けた。",
+  "story_content": "梅田和秀「金沢市山間部の『河童の薬』伝承」に記録された湯涌河内町の話。男が馬を川へ入れようとすると河童が現れ、それをやめるよう懇願した。男がその通りにすると、夢の中で約束したように、翌日、河童が万病に効くという玉を持ってきたと語られる。玉の効能は伝承上の説明として記録し、現実の医薬的効果を意味するものではない。",
+  "region": {
+    "prefecture": "石川県",
+    "historical_province": "加賀",
+    "municipality": "金沢市",
+    "area_name": "湯涌河内町"
+  },
+  "locations": [
+    {
+      "name": "湯涌河内町の川",
+      "type": "川",
+      "description": "男が馬を入れようとし、河童が現れた場所。",
+      "source_ids": [
+        "ishikawa-kanazawa-yuwaku-kappa-medicine-ball-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "男",
+      "type": "人間",
+      "description": "河童の願いを聞き入れ、馬を川へ入れるのをやめる。",
+      "source_ids": [
+        "ishikawa-kanazawa-yuwaku-kappa-medicine-ball-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "馬を川へ入れないよう頼み、翌日に万病に効くとされる玉を届ける。",
+      "source_ids": [
+        "ishikawa-kanazawa-yuwaku-kappa-medicine-ball-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "薬",
+    "玉",
+    "馬",
+    "約束"
+  ],
+  "story_type": [
+    "河童伝承",
+    "報恩譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ishikawa-kanazawa-yuwaku-kappa-medicine-ball-src",
+      "title": "金沢市山間部の「河童の薬」伝承",
+      "publisher": "加能民俗の会（『加能民俗研究』通巻10号）",
+      "publication_date": "1982-03-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0540001",
+      "relevant_section": "掲載頁212",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。「万病に効く」は伝承内での説明として扱った。"
+}
