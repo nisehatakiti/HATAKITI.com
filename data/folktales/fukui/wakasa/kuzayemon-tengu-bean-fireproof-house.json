@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukui-wakasa-kuzayemon-tengu-bean-fireproof-house",
+  "status": "draft",
+  "title": "若狭・久左衛門と天狗の豆一粒",
+  "title_normalized": "若狭・久左衛門と天狗の豆一粒",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福井県若狭町の伝承。手相のよい久左衛門のもとへ天狗が手の筋を借りに来て、礼として豆を一粒置いていった。その後、大火事で近隣が燃えたときも久左衛門の家だけは燃えなかったという。",
+    "based_on_source_ids": [
+      "fukui-wakasa-kuzayemon-tengu-bean-fireproof-house-src"
+    ]
+  },
+  "story_summary": "天狗に手相を貸した礼として豆を一粒もらい、その後の大火事で家が焼け残ったという伝承。",
+  "story_content": "玉岡松一郎「若狭神常小集」に記録された若狭町の伝承。手の筋がよい久左衛門のところへ、天狗が手の筋を借りに来た。天狗は礼として豆を一粒置いていった。ある年に大火事が起き、近隣は燃えたものの、久左衛門の家だけは燃えなかったという。豆と火災回避の関係について詳細な説明は要約にないため、授与と結果の連続として記録する。",
+  "region": {
+    "prefecture": "福井県",
+    "historical_province": "若狭",
+    "municipality": "若狭町",
+    "area_name": "三方郡西田村の伝承"
+  },
+  "locations": [
+    {
+      "name": "久左衛門の家",
+      "type": "家",
+      "description": "天狗から豆を受け取り、大火事の際に焼け残ったとされる家。",
+      "source_ids": [
+        "fukui-wakasa-kuzayemon-tengu-bean-fireproof-house-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "久左衛門",
+      "type": "人間",
+      "description": "手相がよいとされ、天狗に手の筋を貸した礼として豆を一粒受け取った。",
+      "source_ids": [
+        "fukui-wakasa-kuzayemon-tengu-bean-fireproof-house-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "妖怪",
+      "description": "久左衛門から手の筋を借り、礼として豆を一粒置いていった。",
+      "source_ids": [
+        "fukui-wakasa-kuzayemon-tengu-bean-fireproof-house-src"
+      ]
+    }
+  ],
+  "themes": [
+    "天狗",
+    "手相",
+    "豆",
+    "火災",
+    "家を守る",
+    "恩返し"
+  ],
+  "story_type": [
+    "天狗伝承",
+    "授与譚",
+    "火伏せ伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukui-wakasa-kuzayemon-tengu-bean-fireproof-house-src",
+      "title": "若狭神常小集（三方郡西田村）―十年九月末調査",
+      "publisher": "近畿民俗学会（『近畿民俗』1巻3号）",
+      "publication_date": "1936-06",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0700023",
+      "relevant_section": "掲載頁50",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。豆が火災を防いだと明示されてはいないため、因果関係を断定しない。"
+}
