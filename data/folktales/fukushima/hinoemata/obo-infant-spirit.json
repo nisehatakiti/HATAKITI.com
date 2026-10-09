@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "record_id": "fukushima-hinoemata-obo-infant-spirit",
+  "status": "draft",
+  "title": "檜枝岐・おぼと死産児の霊",
+  "title_normalized": "檜枝岐・おぼと死産児の霊",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "福島県南会津郡檜枝岐村の伝承では、妊娠したまま亡くなった女性が墓の中で子を産み、その死霊が育てた子を「おぼ」と呼ぶ。通りがかりの人に抱いてほしいと頼むが、普通に抱いてはいけないとされる。",
+    "based_on_source_ids": [
+      "fukushima-hinoemata-obo-src"
+    ]
+  },
+  "story_summary": "妊娠したまま亡くなった女性が墓の中で子を産み、死霊が育てた子を「おぼ」と呼ぶ。おぼは道行く人に抱いてほしいと頼むが、抱き方には注意が必要と伝えられる。",
+  "story_content": "『福島県史 第23巻 民俗1』の檜枝岐村民俗誌に記録された怪異。「おぼ」は、妊娠したまま亡くなった女性が墓の中で産んだ子を死霊が育てたものとされる。道行く人に抱いてほしいと頼むが、普通に抱いてはならないと記録されている。具体的な対処法や地域内の異伝は追加資料で補完する。",
+  "region": {
+    "prefecture": "福島県",
+    "historical_province": "陸奥",
+    "municipality": "南会津郡檜枝岐村",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "檜枝岐村（具体地点未詳）",
+      "type": "伝承地域",
+      "description": "村の民俗誌に記録された伝承。特定の墓や道の場所は記録からは確定できない。",
+      "source_ids": [
+        "fukushima-hinoemata-obo-src"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "おぼ",
+      "type": "霊的存在",
+      "description": "死霊が育てたとされる子。通行人に抱いてほしいと頼む。",
+      "source_ids": [
+        "fukushima-hinoemata-obo-src"
+      ]
+    }
+  ],
+  "themes": [
+    "おぼ",
+    "死霊",
+    "妊娠・出産",
+    "抱く禁忌"
+  ],
+  "story_type": [
+    "怪異伝承",
+    "死者・霊の伝承",
+    "俗信"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-ubume",
+      "relationship": "related_motif"
+    },
+    {
+      "record_id": "hub-motif-yuurei",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fukushima-hinoemata-obo-src",
+      "title": "第二編 第二章 一 会津檜枝岐村民俗誌：（一七）妖怪",
+      "publisher": "福島県（『福島県史 第23巻 民俗1』）",
+      "publication_date": "1964-03-31",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0730101-000",
+      "relevant_section": "掲載頁226",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。危険な抱き方とされる具体的な禁忌はカードの要約だけでは不明のため、補作していない。"
+}
