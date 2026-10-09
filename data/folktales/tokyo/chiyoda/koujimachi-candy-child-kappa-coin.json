@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "record_id": "tokyo-chiyoda-koujimachi-candy-child-kappa-coin",
+  "status": "draft",
+  "title": "麹町・飴を食べに来た童子と河童の銭",
+  "title_normalized": "麹町・飴を食べに来た童子と河童の銭",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "江戸の麹町で、正直者の飴屋のもとへ夕方になると童子が遊びに来るようになった。飴を与えているうちに毎夕来るようになり、後をつけると堀の中へ入っていった。河童かと驚いていると、ある日童子は見たことのない銭を一枚渡し、それきり来なくなったという。",
+    "based_on_source_ids": [
+      "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src"
+    ]
+  },
+  "story_summary": "飴屋へ毎夕来る童子の正体が河童かもしれないと気づいたところ、童子は不思議な銭を渡して姿を消したという話。",
+  "story_content": "大田南畝『一話一言』に記録された江戸・麹町の伝承。天明五年、心正直な飴屋のもとへ夕方、童子が来て遊ぶようになった。飴を与えると毎夕来るようになったため、飴屋が後をつけると、童子は堀の中へ入っていった。河童ではないかと驚いていると、ある日童子が見たことのない銭を一枚くれ、それ以来来なくなったという。飴の贈与と不思議な返礼、童子の正体への気づきを中心に記録する。",
+  "region": {
+    "prefecture": "東京都",
+    "historical_province": "武蔵",
+    "municipality": "千代田区",
+    "area_name": "麹町"
+  },
+  "locations": [
+    {
+      "name": "麹町の飴屋",
+      "type": "店",
+      "description": "童子が夕方に訪れて飴をもらっていた店。",
+      "source_ids": [
+        "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src"
+      ]
+    },
+    {
+      "name": "堀",
+      "type": "堀",
+      "description": "童子が後をつけられた際に入っていった場所。",
+      "source_ids": [
+        "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "飴屋",
+      "type": "人間",
+      "description": "童子に飴を与え、後をつけて堀へ入る様子を見た。",
+      "source_ids": [
+        "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src"
+      ]
+    },
+    {
+      "name": "童子",
+      "type": "謎の子ども",
+      "description": "毎夕飴屋へ来て遊び、最後に見たことのない銭を一枚渡して去った。",
+      "source_ids": [
+        "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "河童",
+      "type": "妖怪",
+      "description": "童子の正体ではないかと飴屋が考えた存在。伝承要約は正体を断定していない。",
+      "source_ids": [
+        "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src"
+      ]
+    }
+  ],
+  "themes": [
+    "河童",
+    "飴",
+    "童子",
+    "堀",
+    "不思議な銭",
+    "贈与と返礼"
+  ],
+  "story_type": [
+    "河童伝承",
+    "異類交流譚",
+    "返礼譚"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-kappa",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "tokyo-chiyoda-koujimachi-candy-child-kappa-coin-src",
+      "title": "一話一言",
+      "publisher": "吉川弘文館（『日本随筆大成別巻』1巻）",
+      "publication_date": "1978-08-30",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=5850006",
+      "relevant_section": "掲載頁113",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カード要約に基づく。童子が河童だったことは推測として伝えられているため、断定しない。"
+}
