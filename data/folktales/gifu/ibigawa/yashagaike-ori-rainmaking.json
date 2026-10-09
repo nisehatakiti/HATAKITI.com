@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "record_id": "shiga-maibara-yashagaike-ori-rainmaking",
+  "status": "draft",
+  "title": "夜叉ヶ池・お里の化粧道具で占う雨乞い",
+  "title_normalized": "夜叉ヶ池・お里の化粧道具で占う雨乞い",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "夜叉ヶ池の雨乞い祭りでは、大蛇の妻となったお里が喜びそうな白粉や縫い針を笹の葉舟に乗せ、池に浮かべて扇であおぐ。舟が沈めば雨が降り、岸へ吹き返されれば願いはかなわないとされた。",
+    "based_on_source_ids": [
+      "shiga-maibara-yashagaike-ori-rainmaking-src"
+    ]
+  },
+  "story_summary": "大蛇の妻となったお里への供物を笹の葉舟に乗せ、池に浮かべて雨乞いの成否を占う伝承。",
+  "story_content": "馬場杉右衛門「夜叉ヶ池伝説考」に記録された雨乞いの習俗。美濃の人々は夜叉ヶ池で雨乞い祭りを行う際、大蛇の妻となったお里が喜びそうな白粉や縫い針を笹の葉舟に乗せ、池の水に浮かべて扇であおいだ。舟が沈めば望みの雨が降り、吹き返されれば願いはかなわないと伝えられる。伝説の人物への供物と、水上の舟の動きによる占いを組み合わせた事例として記録する。",
+  "region": {
+    "prefecture": "滋賀県・岐阜県・福井県",
+    "historical_province": null,
+    "municipality": null,
+    "area_name": "夜叉ヶ池"
+  },
+  "locations": [
+    {
+      "name": "夜叉ヶ池",
+      "type": "池・信仰地",
+      "description": "お里に供物を捧げて雨乞いの成否を占う場所。",
+      "source_ids": [
+        "shiga-maibara-yashagaike-ori-rainmaking-src"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "お里",
+      "type": "伝説上の人物",
+      "description": "大蛇の妻となったとされ、雨乞いの際に喜びそうな品を供える対象となる。",
+      "source_ids": [
+        "shiga-maibara-yashagaike-ori-rainmaking-src"
+      ]
+    }
+  ],
+  "beings": [
+    {
+      "name": "大蛇",
+      "type": "妖怪・池の主",
+      "description": "お里の夫として夜叉ヶ池伝説に登場する。",
+      "source_ids": [
+        "shiga-maibara-yashagaike-ori-rainmaking-src"
+      ]
+    }
+  ],
+  "themes": [
+    "夜叉ヶ池",
+    "大蛇",
+    "雨乞い",
+    "供物",
+    "占い",
+    "笹の葉舟"
+  ],
+  "story_type": [
+    "雨乞い習俗",
+    "大蛇伝説",
+    "占い"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-daija",
+      "relationship": "related_motif"
+    },
+    {
+      "record_id": "hub-motif-ryu",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "shiga-maibara-yashagaike-ori-rainmaking-src",
+      "title": "夜叉ヶ池伝説考",
+      "publisher": "滋賀県民俗学会（『民俗文化』通巻462号）",
+      "publication_date": "2002-03-25",
+      "source_type": "database_record",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2410120",
+      "relevant_section": "掲載頁5277–5278",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研の個別カードに基づく。地域欄は滋賀・岐阜・福井の複数県にまたがるため、特定の自治体には割り当てていない。"
+}
