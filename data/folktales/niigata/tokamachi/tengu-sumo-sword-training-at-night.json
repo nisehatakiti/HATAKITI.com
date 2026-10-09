@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "record_id": "niigata-tokamachi-tengu-sumo-sword-training-at-night",
+  "status": "draft",
+  "title": "十日町・夜に相撲と剣術の稽古をする天狗",
+  "title_normalized": "十日町・夜に相撲と剣術の稽古をする天狗",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "新潟県十日町市の天狗伝承。村人が寝ていると天狗が現れ、別の天狗が空から飛来し、互いに相撲を取った。大きな土俵で人間離れした相撲をした後、剣術の稽古を行い、夜明けになると各地へ去ったと記録される。",
+    "based_on_source_ids": [
+      "0780203"
+    ]
+  },
+  "story_summary": "夜のあいだに天狗たちが相撲と剣術の稽古を行い、夜明けとともに去るという目撃譚。",
+  "story_content": "国際日本文化研究センター「怪異・妖怪伝承データベース」カード0780203に収録された新潟県十日町市の記録。村人が寝ていると天狗が現れ、さらに別の天狗が空から飛んできて、互いに相撲を取り始めた。大きな土俵を作り、人間離れした相撲を取った後、剣術の稽古をした。夜が明けると、天狗たちは方々へ去っていったという。\n\nこの話は人間が天狗にさらわれる型ではなく、人間のいない時間帯に天狗同士が武芸を行う場面を目撃する型である。相撲から剣術へと稽古が移り、夜明けが怪異の活動の終わりを区切る。ただし、村人がどのように目撃したか、天狗の人数や稽古の目的は資料要約にないため断定しない。",
+  "region": {
+    "prefecture": "新潟県",
+    "historical_province": "越後国",
+    "municipality": "十日町市",
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "十日町市（具体地点不詳）",
+      "type": "伝承地域",
+      "description": "カードには市名が記載されるが、集落名・目撃地点は特定できない。",
+      "source_ids": [
+        "0780203"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "村人",
+      "role": "天狗たちの行動が語られる場面に居合わせる人々"
+    }
+  ],
+  "beings": [
+    {
+      "name": "天狗",
+      "type": "伝承存在",
+      "description": "空から飛来し、夜のあいだ相撲と剣術の稽古を行い、夜明けに去る。",
+      "source_ids": [
+        "0780203"
+      ]
+    }
+  ],
+  "themes": [
+    "夜の怪異",
+    "天狗の相撲",
+    "武芸の稽古",
+    "夜明けによる境界"
+  ],
+  "story_type": [
+    "怪異目撃譚",
+    "天狗伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-tengu",
+      "relationship": "motif_hub"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "0780203",
+      "title": "妻有炉話（12）",
+      "author": "高柳正文",
+      "publisher": "新潟県民俗学会『高志路』8巻6号・通巻90号",
+      "publication_date": "1942-07-01",
+      "relevant_section": "掲載頁28",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0780203",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研カード0780203に基づく。相撲・剣術・夜明けの順序を保持し、天狗の人数や行為の目的など資料にない要素は加えない。"
+}
