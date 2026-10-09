@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "record_id": "kochi-unknown-area-yureisen-bottomless-ladle-glowing-hull",
+  "status": "draft",
+  "title": "高知・幽霊船の船底の光と底抜け杓",
+  "title_normalized": "高知・幽霊船の船底の光と底抜け杓",
+  "title_origin": "source_title",
+  "summary": {
+    "text": "高知県の幽霊船伝承。普段なら出会わない場所で船と行き会うと、それを幽霊船とみなす話があり、船の下半分がない、杓を借りて船を沈める、船底が光るといった複数の語りが記録されている。",
+    "based_on_source_ids": [
+      "kochi-yureisen-1480006"
+    ]
+  },
+  "story_summary": "高知県の聞き書き資料には、通常は船同士が出会わない場所で行き会う船を幽霊船とする語りがあり、船体の下半分が見えない話、杓を借りて船を沈める話、船底が光る話が記録されている。",
+  "story_content": "国際日本文化研究センター「怪異・妖怪伝承データベース」のカード1480006は、高知県の「幽霊船」伝承を収録する。要約によれば、普段は行き会うことのない場所で出会った船を幽霊船とする。関連する語りとして、船の下半分がなかったという話、杓を借りて船を沈める話、船の下が光るという話が挙げられている。\n\nこの記録では、幽霊船の異常さが一つの特徴だけでなく、①出会うはずのない場所で遭遇すること、②船体の見え方が通常と異なること、③道具を介して船を沈める危険、④船底の発光という複数の徴候に分かれている。ただし、資料の要約はこれらを個別の語りとして列挙しており、すべてが同じ出来事に含まれるとは断定できない。また、市町村名や具体的な海域はカードに記載されていないため、地域は高知県までにとどめる。",
+  "region": {
+    "prefecture": "高知県",
+    "historical_province": "土佐",
+    "municipality": null,
+    "area_name": null
+  },
+  "locations": [
+    {
+      "name": "高知県内（具体地点不詳）",
+      "type": "伝承地域",
+      "description": "資料カードには県名のみが記載され、具体的な市町村・海域は特定できない。",
+      "source_ids": [
+        "kochi-yureisen-1480006"
+      ]
+    }
+  ],
+  "characters": [],
+  "beings": [
+    {
+      "name": "幽霊船",
+      "type": "伝承存在",
+      "description": "通常なら出会わない場所で遭遇する船として語られ、船体の下半分がない、船底が光る、杓を借りて船を沈めるといった特徴が記録される。",
+      "source_ids": [
+        "kochi-yureisen-1480006"
+      ]
+    }
+  ],
+  "themes": [
+    "幽霊船",
+    "船体の異常",
+    "船底の発光",
+    "底抜け杓",
+    "海上の危険"
+  ],
+  "story_type": [
+    "海の怪異",
+    "怪異遭遇譚",
+    "禁忌・対処伝承"
+  ],
+  "related_records": [
+    {
+      "record_id": "hub-motif-funayurei",
+      "relationship": "motif_hub"
+    },
+    {
+      "record_id": "hub-motif-sea-bozu-traditions",
+      "relationship": "related_motif"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "kochi-yureisen-1480006",
+      "title": "海村漁老聞書",
+      "publisher": "土佐民俗学会『土佐民俗』通巻7号",
+      "publication_date": "1964-03-01",
+      "author": "浜田数義",
+      "informant": "野村豊馬",
+      "page": "掲載頁27（論文 pp.25–28）",
+      "source_type": "database_record",
+      "url": "https://sekiei.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1480006",
+      "language": "ja"
+    }
+  ],
+  "confidence": "high",
+  "research_status": "national_expansion",
+  "research_notes": "日文研カード1480006の要約に基づく。高知県より細かな地域は不詳。船体の下半分がない話、杓で船を沈める話、船底が光る話は同一の筋書きと決めつけず、資料が列挙する特徴として分けて記述した。"
+}
