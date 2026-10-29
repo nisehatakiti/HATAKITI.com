@@ -44,7 +44,9 @@ function hatakiti_hakatipedia_get_autolink_terms() {
     uksort(
         $terms,
         static function ( $a, $b ) {
-            return mb_strlen( $b, 'UTF-8' ) <=> mb_strlen( $a, 'UTF-8' );
+            $length_a = function_exists( 'mb_strlen' ) ? mb_strlen( $a, 'UTF-8' ) : strlen( $a );
+            $length_b = function_exists( 'mb_strlen' ) ? mb_strlen( $b, 'UTF-8' ) : strlen( $b );
+            return $length_b <=> $length_a;
         }
     );
 
