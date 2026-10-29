@@ -1371,7 +1371,7 @@ function hk_glossary_linked_text( $text, $current_slug, $terms ) {
         return $lb <=> $la;
     } );
     if ( empty( $names ) ) return esc_html( $text );
-    $pattern = '/(' . implode( '|', array_map( 'preg_quote', array_keys( $names ) ) ) . ')/u';
+    $pattern = '/(' . implode( '|', array_map( function( $name ) { return preg_quote( $name, '/' ); }, array_keys( $names ) ) ) . ')/u';
     $parts = preg_split( $pattern, $text, -1, PREG_SPLIT_DELIM_CAPTURE );
     if ( false === $parts ) return esc_html( $text );
     $html = '';
