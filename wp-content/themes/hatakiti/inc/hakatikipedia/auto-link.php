@@ -56,6 +56,55 @@ function hatakiti_hakatipedia_get_autolink_terms() {
 /**
  * Link terms in eligible text nodes only; never rewrite attributes or existing links.
  */
+/**
+ * Reject matches that are only a fragment of a Japanese word.
+ *
+ * Kanji-to-kanji boundaries usually indicate that a shorter glossary term was
+ * found inside a compound (人間 -> 間, 劇場 -> 場). A kanji term followed by
+ * kana is accepted only when the kana is a common particle, preventing links
+ * such as 歌 inside 歌う while preserving links such as 演劇の.
+ */
+function hatakiti_hakatipedia_is_partial_word_match( $text, $byte_offset, $term ) {
+    $before_text = substr( $text, 0, $byte_offset );
+    $after_text  = substr( $text, $byte_offset + strlen( $term ) );
+
+    $before_chars = preg_split( '//u', $before_text, -1, PREG_SPLIT_NO_EMPTY );
+    $term_chars   = preg_split( '//u', $term, -1, PREG_SPLIT_NO_EMPTY );
+    $after_chars  = preg_split( '//u', $after_text, -1, PREG_SPLIT_NO_EMPTY );
+
+    if ( empty( $term_chars ) ) {
+        return true;
+    }
+
+    $first = $term_chars[0];
+    $last  = $term_chars[ count( $term_chars ) - 1 ];
+    $prev  = empty( $before_chars ) ? '' : $before_chars[ count( $before_chars ) - 1 ];
+    $next  = empty( $after_chars ) ? '' : $after_chars[0];
+
+    $is_kanji = static function ( $char ) {
+        return '' !== $char && 1 === preg_match( '/^[\\p{Han}々〆ヵヶ]$/u', $char );
+    };
+    $is_kana = static function ( $char ) {
+        return '' !== $char && 1 === preg_match( '/^[\\p{Hiragana}\\p{Katakana}ー]$/u', $char );
+    };
+
+    if ( $is_kanji( $first ) && $is_kanji( $prev ) ) {
+        return true;
+    }
+    if ( $is_kanji( $last ) && $is_kanji( $next ) ) {
+        return true;
+    }
+
+    if ( $is_kanji( $last ) && $is_kana( $next ) ) {
+        $particles = preg_split( '//u', 'はがをにでとへもやのねよかぞさ', -1, PREG_SPLIT_NO_EMPTY );
+        if ( ! in_array( $next, $particles, true ) ) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 function hatakiti_hakatipedia_linkify_textbook_html( $html ) {
     if ( ! is_string( $html ) || false === strpos( $html, '<main' ) ) {
         return $html;
@@ -129,8 +178,13 @@ function hatakiti_hakatipedia_linkify_textbook_html( $html ) {
 
         $linked_html .= preg_replace_callback(
             $pattern,
-            static function ( $match ) use ( $terms ) {
-                $name = $match[1];
+            static function ( $match ) use ( $terms, $token ) {
+                $name   = $match[1][0];
+                $offset = $match[1][1];
+                if ( hatakiti_hakatipedia_is_partial_word_match( $token, $offset, $name ) ) {
+                    return $name;
+                }
+
                 $slug = $terms[ $name ] ?? '';
                 if ( '' === $slug ) {
                     return $name;
@@ -138,7 +192,9 @@ function hatakiti_hakatipedia_linkify_textbook_html( $html ) {
                 $url = home_url( '/theatre-textbook/hakatipedia/' . rawurlencode( $slug ) . '/' );
                 return '<a class="hk-hakatipedia-autolink" href="' . esc_url( $url ) . '" title="' . esc_attr( $name . '｜HATAKITIpedia' ) . '">' . $name . '</a>';
             },
-            $token
+            $token,
+            -1,
+            PREG_OFFSET_CAPTURE
         );
     }
 
