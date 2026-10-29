@@ -176,6 +176,7 @@ function hatakiti_hakatipedia_linkify_textbook_html( $html ) {
             continue;
         }
 
+        $match_count = 0;
         $linked_html .= preg_replace_callback(
             $pattern,
             static function ( $match ) use ( $terms, $token ) {
@@ -194,6 +195,7 @@ function hatakiti_hakatipedia_linkify_textbook_html( $html ) {
             },
             $token,
             -1,
+            $match_count,
             PREG_OFFSET_CAPTURE
         );
     }
