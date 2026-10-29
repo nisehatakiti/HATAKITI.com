@@ -69,6 +69,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/booklog.php';
 require_once get_template_directory() . '/inc/hakatikipedia/category-map.php';
+require_once get_template_directory() . '/inc/hakatikipedia/auto-link.php';
 require_once get_template_directory() . '/inc/hakatikipedia/admin.php';
 
 /**
